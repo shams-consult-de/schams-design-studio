@@ -37,7 +37,7 @@ export function SiteNav() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-4 lg:flex xl:gap-6">
           {links.map(({ to, label, Icon }) => (
             <li key={to}>
               <Link
