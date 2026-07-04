@@ -22,6 +22,7 @@ import { Route as GeschichteRouteImport } from './routes/geschichte'
 import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
 import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
@@ -91,6 +92,11 @@ const BueroRoute = BueroRouteImport.update({
   path: '/buero',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BarrierefreiheitRoute = BarrierefreiheitRouteImport.update({
   id: '/barrierefreiheit',
   path: '/barrierefreiheit',
@@ -111,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -223,6 +235,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitekturRoute: typeof ArchitekturRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
+  BlogRoute: typeof BlogRoute
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ForschungRoute: typeof ForschungRoute
@@ -331,6 +344,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BueroRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/barrierefreiheit': {
       id: '/barrierefreiheit'
       path: '/barrierefreiheit'
@@ -359,6 +379,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitekturRoute: ArchitekturRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
+  BlogRoute: BlogRoute,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
   ForschungRoute: ForschungRoute,

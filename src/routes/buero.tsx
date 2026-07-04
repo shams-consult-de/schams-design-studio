@@ -23,6 +23,8 @@ const team = [
   {
     name: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
     role: "Büroinhaber · Architekt und Stadtplaner",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/ia55f2812459ea3f9/version/1699526494/image.jpg",
     lines: [
       "Mitglied Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)",
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2008",
@@ -34,6 +36,8 @@ const team = [
   {
     name: "Hatice Erol Yeniyapan",
     role: "Dipl.-Ing. (FH) Architektin, M.A.",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/icb79642e76516419/version/1699526726/image.jpg",
     lines: [
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2009/10",
       "Masterstudium Architektur Hochschule Karlsruhe (HsKA) — Master of Arts (M.A.)",
@@ -42,34 +46,32 @@ const team = [
   {
     name: "Samuel Allaw (B.Eng.)",
     role: "Bauleitung / Projektsteuerung",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/ib6fda6bb7b931579/version/1706796646/image.png",
     lines: ["Bachelor of Engineering — Bauingenieurwesen, Hochschule Darmstadt"],
   },
   {
     name: "Yasmine Yagcioglu",
     role: "Dipl.-Ing. (FH) Architektur",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/i7331f586c4124995/version/1699526494/image.jpg",
     lines: ["Architekturstudium Hochschule Mainz — University of Applied Sciences, 2011"],
   },
   {
     name: "Ronak Namdari (M.A.)",
     role: "Master of Art in Architecture",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/i68f97b922cf2511c/version/1626304694/image.png",
     lines: ["Städelschule, Frankfurt am Main — Master of Arts (M.A.)"],
   },
   {
     name: "Farhad Minaei (B.Arch.)",
     role: "3D-Visualisierung",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/ic41a7cd7bb882aea/version/1626304685/image.png",
     lines: ["Bachelor of Architecture"],
   },
 ];
-
-function initials(name: string) {
-  return name
-    .replace(/\(.*?\)|Dipl\.-Ing\.|M\.Eng\.|M\.A\.|B\.Eng\.|B\.Arch\./g, "")
-    .trim()
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((n) => n[0])
-    .join("");
-}
 
 function BueroPage() {
   return (
