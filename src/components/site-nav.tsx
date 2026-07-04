@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star, BookOpen, Briefcase } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
@@ -18,12 +18,44 @@ const links = [
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let last = window.scrollY;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const y = window.scrollY;
+        setScrolled(y > 16);
+        // Hide on scroll down (past 120px), show on scroll up
+        if (y > 120 && y > last + 4) setHidden(true);
+        else if (y < last - 4 || y < 120) setHidden(false);
+        last = y;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <nav
       aria-label="Hauptnavigation"
-      className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/90 backdrop-blur-md"
+      className={`sticky top-0 z-40 w-full border-b transition-all duration-500 ease-out ${
+        scrolled
+          ? "border-border/70 bg-brand-white/85 shadow-[0_6px_24px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl"
+          : "border-transparent bg-brand-white/70 backdrop-blur-md"
+      } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-[padding] duration-500 ease-out lg:px-12 ${
+          scrolled ? "py-2" : "py-4"
+        }`}
+      >
         <Link to="/" className="group flex items-center gap-3" aria-label="Shams Consult — Startseite">
           <img
             src={LOGO_URL}
