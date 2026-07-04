@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star, BookOpen, Briefcase } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
@@ -18,19 +18,53 @@ const links = [
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let last = window.scrollY;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const y = window.scrollY;
+        setScrolled(y > 16);
+        // Hide on scroll down (past 120px), show on scroll up
+        if (y > 120 && y > last + 4) setHidden(true);
+        else if (y < last - 4 || y < 120) setHidden(false);
+        last = y;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <nav
       aria-label="Hauptnavigation"
-      className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/90 backdrop-blur-md"
+      className={`sticky top-0 z-40 w-full border-b transition-all duration-500 ease-out ${
+        scrolled
+          ? "border-border/70 bg-brand-white/85 shadow-[0_6px_24px_-18px_rgba(0,0,0,0.4)] backdrop-blur-xl"
+          : "border-transparent bg-brand-white/70 backdrop-blur-md"
+      } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-[padding] duration-500 ease-out lg:px-12 ${
+          scrolled ? "py-2" : "py-4"
+        }`}
+      >
         <Link to="/" className="group flex items-center gap-3" aria-label="Shams Consult — Startseite">
           <img
             src={LOGO_URL}
             alt="Shams Consult — Architektur & Stadtplanung"
             width={200}
             height={64}
-            className="h-11 w-auto transition-transform duration-500 group-hover:scale-[1.03] lg:h-14"
+            className={`w-auto transition-all duration-500 ease-out group-hover:scale-[1.03] ${
+              scrolled ? "h-9 lg:h-11" : "h-11 lg:h-14"
+            }`}
             decoding="async"
             fetchPriority="high"
             referrerPolicy="no-referrer"
@@ -44,15 +78,19 @@ export function SiteNav() {
                 to={to}
                 aria-label={label}
                 className="group relative flex h-10 w-14 items-center justify-center overflow-visible rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
-                activeProps={{ className: "text-brand-accent" }}
+                activeProps={{ className: "text-brand-accent [&_.nav-dot]:opacity-100 [&_.nav-dot]:scale-100" }}
                 activeOptions={{ exact: to === "/" }}
               >
                 <span className="absolute inset-0 flex h-10 w-14 items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-3">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  <Icon className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true" />
                 </span>
                 <span className="absolute inset-0 flex h-10 w-14 translate-y-6 items-center justify-center px-0.5 text-center text-xs font-medium opacity-0 transition-all duration-300 ease-out group-hover:translate-y-3 group-hover:opacity-100">
                   {label}
                 </span>
+                <span
+                  className="nav-dot pointer-events-none absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 scale-0 rounded-full bg-brand-accent opacity-0 transition-all duration-300 ease-out"
+                  aria-hidden="true"
+                />
               </Link>
             </li>
           ))}
@@ -61,9 +99,10 @@ export function SiteNav() {
               href={CONTACT.bookingHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" aria-hidden="true" />
+              <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
               Erstgespräch buchen
             </a>
           </li>
@@ -79,35 +118,43 @@ export function SiteNav() {
         </button>
       </div>
 
-      {open && (
-        <div className="border-t border-border lg:hidden">
-          <ul className="flex flex-col px-6 py-2">
-            {links.map(({ to, label, Icon }) => (
-              <li key={to}>
-                <Link
-                  to={to}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 py-3 text-base font-medium"
-                >
-                  <Icon className="h-4 w-4" aria-hidden="true" />
-                  {label}
-                </Link>
-              </li>
-            ))}
-            <li className="pt-2 pb-4">
-              <a
-                href={CONTACT.bookingHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white"
+      <div
+        className={`overflow-hidden border-t border-border transition-[max-height,opacity] duration-500 ease-out lg:hidden ${
+          open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col px-6 py-2">
+          {links.map(({ to, label, Icon }, i) => (
+            <li
+              key={to}
+              className={`transform transition-all duration-500 ease-out ${
+                open ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+              }`}
+              style={{ transitionDelay: open ? `${60 + i * 40}ms` : "0ms" }}
+            >
+              <Link
+                to={to}
+                onClick={() => setOpen(false)}
+                className="group flex items-center gap-3 py-3 text-base font-medium transition-colors hover:text-brand-accent"
               >
-                <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                Erstgespräch buchen
-              </a>
+                <Icon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                {label}
+              </Link>
             </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li className="pt-2 pb-4">
+            <a
+              href={CONTACT.bookingHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white transition-transform hover:scale-[1.02]"
+            >
+              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              Erstgespräch buchen
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
