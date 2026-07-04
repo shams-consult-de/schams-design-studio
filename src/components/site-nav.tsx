@@ -1,13 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck } from "lucide-react";
+import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Start", Icon: Home },
   { to: "/leistungen", label: "Leistungen", Icon: Layers },
+  { to: "/projekte", label: "Projekte", Icon: Building2 },
   { to: "/buero", label: "Über uns", Icon: Building2 },
   { to: "/forschung", label: "Forschung", Icon: FlaskConical },
+  { to: "/kundenfeedback", label: "Feedback", Icon: Star },
   { to: "/kontakt", label: "Kontakt", Icon: Mail },
 ] as const;
 
