@@ -1,14 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star } from "lucide-react";
+import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star, BookOpen, Briefcase } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Start", Icon: Home },
-  { to: "/leistungen", label: "Leistungen", Icon: Layers },
+  { to: "/architektur", label: "Architektur", Icon: Layers },
+  { to: "/stadtplanung", label: "Stadtplanung", Icon: Layers },
   { to: "/projekte", label: "Projekte", Icon: Building2 },
   { to: "/buero", label: "Über uns", Icon: Building2 },
   { to: "/forschung", label: "Forschung", Icon: FlaskConical },
+  { to: "/blog", label: "Blog", Icon: BookOpen },
+  { to: "/karriere", label: "Karriere", Icon: Briefcase },
   { to: "/kundenfeedback", label: "Feedback", Icon: Star },
   { to: "/kontakt", label: "Kontakt", Icon: Mail },
 ] as const;
@@ -34,7 +37,7 @@ export function SiteNav() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-4 lg:flex xl:gap-6">
           {links.map(({ to, label, Icon }) => (
             <li key={to}>
               <Link

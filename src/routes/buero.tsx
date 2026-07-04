@@ -23,6 +23,8 @@ const team = [
   {
     name: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
     role: "Büroinhaber · Architekt und Stadtplaner",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/ia55f2812459ea3f9/version/1699526494/image.jpg",
     lines: [
       "Mitglied Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)",
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2008",
@@ -34,6 +36,8 @@ const team = [
   {
     name: "Hatice Erol Yeniyapan",
     role: "Dipl.-Ing. (FH) Architektin, M.A.",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/icb79642e76516419/version/1699526726/image.jpg",
     lines: [
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2009/10",
       "Masterstudium Architektur Hochschule Karlsruhe (HsKA) — Master of Arts (M.A.)",
@@ -42,34 +46,32 @@ const team = [
   {
     name: "Samuel Allaw (B.Eng.)",
     role: "Bauleitung / Projektsteuerung",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/ib6fda6bb7b931579/version/1706796646/image.png",
     lines: ["Bachelor of Engineering — Bauingenieurwesen, Hochschule Darmstadt"],
   },
   {
     name: "Yasmine Yagcioglu",
     role: "Dipl.-Ing. (FH) Architektur",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=jpg/path/sc1699083d70b354e/image/i7331f586c4124995/version/1699526494/image.jpg",
     lines: ["Architekturstudium Hochschule Mainz — University of Applied Sciences, 2011"],
   },
   {
     name: "Ronak Namdari (M.A.)",
     role: "Master of Art in Architecture",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/i68f97b922cf2511c/version/1626304694/image.png",
     lines: ["Städelschule, Frankfurt am Main — Master of Arts (M.A.)"],
   },
   {
     name: "Farhad Minaei (B.Arch.)",
     role: "3D-Visualisierung",
+    image:
+      "https://image.jimcdn.com/app/cms/image/transf/dimension=400x1024:format=png/path/sc1699083d70b354e/image/ic41a7cd7bb882aea/version/1626304685/image.png",
     lines: ["Bachelor of Architecture"],
   },
 ];
-
-function initials(name: string) {
-  return name
-    .replace(/\(.*?\)|Dipl\.-Ing\.|M\.Eng\.|M\.A\.|B\.Eng\.|B\.Arch\./g, "")
-    .trim()
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((n) => n[0])
-    .join("");
-}
 
 function BueroPage() {
   return (
@@ -135,20 +137,26 @@ function BueroPage() {
 
           <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
-              <li key={m.name} className="flex flex-col rounded-2xl border border-border bg-brand-white p-8">
-                <div
-                  aria-hidden="true"
-                  className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-accent/10 font-serif text-2xl text-brand-accent"
-                >
-                  {initials(m.name)}
+              <li key={m.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white" data-reveal>
+                <div className="overflow-hidden bg-concrete">
+                  <img
+                    src={m.image}
+                    alt={`${m.name} — ${m.role}`}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
                 </div>
-                <h3 className="mt-6 font-serif text-xl">{m.name}</h3>
-                <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
-                <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
-                  {m.lines.map((l) => (
-                    <li key={l}>{l}</li>
-                  ))}
-                </ul>
+                <div className="flex flex-1 flex-col p-8">
+                  <h3 className="font-serif text-xl">{m.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
+                  <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
+                    {m.lines.map((l) => (
+                      <li key={l}>{l}</li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>

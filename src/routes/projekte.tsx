@@ -21,7 +21,7 @@ export const Route = createFileRoute("/projekte")({
 function ProjectsPage() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
-      <header className="border-t border-border pt-12">
+      <header className="border-t border-border pt-12" data-reveal>
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
           Portfolio
         </p>
@@ -33,6 +33,67 @@ function ProjectsPage() {
           und Bildungsbauten, die den Anspruch teilen, ihren Ort präziser zu machen.
         </p>
       </header>
+
+      {/* Referenzprojekt: Töpfenmühle */}
+      <div
+        className="mt-16 grid gap-10 rounded-2xl border border-border bg-brand-white p-6 lg:grid-cols-12 lg:p-12"
+        data-reveal
+      >
+        <div className="lg:col-span-6 overflow-hidden rounded-xl image-zoom">
+          <img
+            src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i8864e965b260b110/version/1701080364/image.jpg"
+            alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            className="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+        <div className="lg:col-span-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+            Referenzprojekt
+          </p>
+          <h2 className="mt-3 font-serif text-3xl md:text-4xl">
+            Bebauungsplan <span className="italic">„Töpfenmühle“</span>, Gersfeld (Rhön)
+          </h2>
+          <p className="mt-5 text-brand-black/75 leading-relaxed">
+            Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen Verfahrens
+            mit Artenschutzuntersuchung und Umweltprüfung (Umweltbericht) nach § 2 Abs. 4
+            BauGB aufgestellt. Es handelt sich um einen qualifizierten Bebauungsplan gemäß
+            § 30 Abs. 1 BauGB. Innerhalb des Geltungsbereiches sind Art und Maß der
+            baulichen Nutzung, die überbaubaren Grundstücksflächen und die örtlichen
+            Verkehrsflächen festgesetzt. Die Erschließung ist bereits gesichert.
+          </p>
+          <p className="mt-4 text-brand-black/75 leading-relaxed">
+            Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand zu
+            erhalten und die ländlich geprägte, historisch bedeutsame dörfliche
+            Siedlungsstruktur zu bewahren. Zeitgemäße Nutzungen und die energetische
+            Sanierung der Bestandsgebäude — inklusive erforderlicher Ersatzbauten — sollen
+            mit Planungssicherheit ermöglicht werden. Unbebaute Flächen innerhalb des
+            Planungsgebietes bleiben in ihrer natürlichen landschaftlichen Form erhalten.
+          </p>
+          <dl className="mt-6 grid grid-cols-3 gap-6 border-t border-border pt-6 text-xs uppercase tracking-widest text-brand-black/60">
+            <div>
+              <dt>Ort</dt>
+              <dd className="mt-1 font-serif text-base normal-case tracking-normal text-brand-black">
+                Gersfeld (Rhön)
+              </dd>
+            </div>
+            <div>
+              <dt>Jahr</dt>
+              <dd className="mt-1 font-serif text-base normal-case tracking-normal text-brand-black">
+                2023
+              </dd>
+            </div>
+            <div>
+              <dt>Kategorie</dt>
+              <dd className="mt-1 font-serif text-base normal-case tracking-normal text-brand-black">
+                Bauleitplanung
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
 
       <div className="mt-24 grid gap-x-12 gap-y-24 md:grid-cols-2">
         {projects.map((p, i) => (

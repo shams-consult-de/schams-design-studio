@@ -9,18 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StadtplanungRouteImport } from './routes/stadtplanung'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjekteRouteImport } from './routes/projekte'
+import { Route as PhilosophieRouteImport } from './routes/philosophie'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KundenfeedbackRouteImport } from './routes/kundenfeedback'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as KarriereRouteImport } from './routes/karriere'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as GeschichteRouteImport } from './routes/geschichte'
 import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
+import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StadtplanungRoute = StadtplanungRouteImport.update({
+  id: '/stadtplanung',
+  path: '/stadtplanung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -29,6 +40,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ProjekteRoute = ProjekteRouteImport.update({
   id: '/projekte',
   path: '/projekte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhilosophieRoute = PhilosophieRouteImport.update({
+  id: '/philosophie',
+  path: '/philosophie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LeistungenRoute = LeistungenRouteImport.update({
@@ -46,9 +62,19 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KarriereRoute = KarriereRouteImport.update({
+  id: '/karriere',
+  path: '/karriere',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImpressumRoute = ImpressumRouteImport.update({
   id: '/impressum',
   path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GeschichteRoute = GeschichteRouteImport.update({
+  id: '/geschichte',
+  path: '/geschichte',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ForschungRoute = ForschungRouteImport.update({
@@ -66,9 +92,19 @@ const BueroRoute = BueroRouteImport.update({
   path: '/buero',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BarrierefreiheitRoute = BarrierefreiheitRouteImport.update({
   id: '/barrierefreiheit',
   path: '/barrierefreiheit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchitekturRoute = ArchitekturRouteImport.update({
+  id: '/architektur',
+  path: '/architektur',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -79,102 +115,151 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
+  '/blog': typeof BlogRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   id:
     | '__root__'
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
+    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchitekturRoute: typeof ArchitekturRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
+  BlogRoute: typeof BlogRoute
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ForschungRoute: typeof ForschungRoute
+  GeschichteRoute: typeof GeschichteRoute
   ImpressumRoute: typeof ImpressumRoute
+  KarriereRoute: typeof KarriereRoute
   KontaktRoute: typeof KontaktRoute
   KundenfeedbackRoute: typeof KundenfeedbackRoute
   LeistungenRoute: typeof LeistungenRoute
+  PhilosophieRoute: typeof PhilosophieRoute
   ProjekteRoute: typeof ProjekteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StadtplanungRoute: typeof StadtplanungRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/stadtplanung': {
+      id: '/stadtplanung'
+      path: '/stadtplanung'
+      fullPath: '/stadtplanung'
+      preLoaderRoute: typeof StadtplanungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -187,6 +272,13 @@ declare module '@tanstack/react-router' {
       path: '/projekte'
       fullPath: '/projekte'
       preLoaderRoute: typeof ProjekteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/philosophie': {
+      id: '/philosophie'
+      path: '/philosophie'
+      fullPath: '/philosophie'
+      preLoaderRoute: typeof PhilosophieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/leistungen': {
@@ -210,11 +302,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/karriere': {
+      id: '/karriere'
+      path: '/karriere'
+      fullPath: '/karriere'
+      preLoaderRoute: typeof KarriereRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/impressum': {
       id: '/impressum'
       path: '/impressum'
       fullPath: '/impressum'
       preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/geschichte': {
+      id: '/geschichte'
+      path: '/geschichte'
+      fullPath: '/geschichte'
+      preLoaderRoute: typeof GeschichteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/forschung': {
@@ -238,11 +344,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BueroRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/barrierefreiheit': {
       id: '/barrierefreiheit'
       path: '/barrierefreiheit'
       fullPath: '/barrierefreiheit'
       preLoaderRoute: typeof BarrierefreiheitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/architektur': {
+      id: '/architektur'
+      path: '/architektur'
+      fullPath: '/architektur'
+      preLoaderRoute: typeof ArchitekturRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -257,16 +377,22 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchitekturRoute: ArchitekturRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
+  BlogRoute: BlogRoute,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
   ForschungRoute: ForschungRoute,
+  GeschichteRoute: GeschichteRoute,
   ImpressumRoute: ImpressumRoute,
+  KarriereRoute: KarriereRoute,
   KontaktRoute: KontaktRoute,
   KundenfeedbackRoute: KundenfeedbackRoute,
   LeistungenRoute: LeistungenRoute,
+  PhilosophieRoute: PhilosophieRoute,
   ProjekteRoute: ProjekteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StadtplanungRoute: StadtplanungRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
