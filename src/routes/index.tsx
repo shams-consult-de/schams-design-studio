@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
-import heroFacade from "@/assets/hero-facade.jpg";
+const heroFacade = "/images/hero-facade.jpg";
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
 
