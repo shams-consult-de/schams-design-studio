@@ -375,3 +375,86 @@ function HomePage() {
     </>
   );
 }
+
+const partners = [
+  {
+    name: "Adapteo",
+    tag: "Modulares & temporäres Bauen",
+    href: "https://www.adapteo.de",
+    body:
+      "Unser Geschäftspartner Adapteo aus Neu-Isenburg ist auf modulare und temporäre Gebäude spezialisiert. Gemeinsam realisieren wir 2025 ein Ausweichquartier für über 200 Mitarbeitende eines Behördenzentrums in Berlin — schnell umgesetzt, hoch funktional, nachhaltig gebaut. Wir begleiten Adapteo und die Bundesanstalt für Immobilienaufgaben in Planung und Umsetzung.",
+  },
+  {
+    name: "Stadtwerke Rodgau",
+    tag: "Kommunale Infrastruktur",
+    href: "https://www.stadtwerke-rodgau.de",
+    body:
+      "Die Stadtwerke Rodgau sind ein Eigenbetrieb der Stadt Rodgau und fördern ökologische, umweltfreundliche und klimafreundliche Projekte. Wir haben die Stadtwerke bei der Genehmigungsplanung für die Kompostierungsanlage unterstützt — und freuen uns auf weitere gemeinsame Projekte.",
+  },
+  {
+    name: "Frankfurt UAS",
+    tag: "Forschung & Lehre",
+    href: "https://www.frankfurt-university.de",
+    body:
+      "In Kooperation mit der Frankfurt University of Applied Sciences geben wir aktuelle Themen der Bau- und Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und Masterarbeiten am Fachbereich Architektur, Bauingenieurwesen und Geomatik.",
+  },
+  {
+    name: "INSTINKT Bauunternehmen",
+    tag: "Wohnungs- & Reihenhausbau",
+    href: "https://www.instinkt-wohnraumberater.de",
+    body:
+      "INSTINKT Bauunternehmen GmbH mit Sitz in Eschborn baut regional (Rhein-Main-Gebiet) und überregional Einfamilien-, Reihen- und Doppelhäuser sowie Bürobauten. Wir hatten die Ehre, die Firma bei der Planung und Realisierung von drei innovativen Häusern zu unterstützen.",
+  },
+  {
+    name: "SCHOOFS Immobilien",
+    tag: "Projektentwicklung Mischnutzung",
+    href: "https://www.schoofs-immobilien.de",
+    body:
+      "SCHOOFS Immobilien ist bundesweit im Bereich Projektentwicklung und Realisierung des Lebensmitteleinzelhandels in Kombination mit Wohnungsbau bekannt. Aktuell begleiten wir das Unternehmen bei einem Supermarkt, 22 Wohnungen, einer Bäckerei und den Außenanlagen.",
+  },
+];
+
+function PartnersSection() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
+      <header className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+            Kunden & Partner
+          </p>
+          <h2 className="mt-3 font-serif text-4xl md:text-5xl">
+            Vertrauen, das <span className="italic">verbindet</span>.
+          </h2>
+        </div>
+        <p className="max-w-md text-brand-black/70">
+          Wir arbeiten mit öffentlichen Auftraggebern, Projektentwicklern und
+          Bauunternehmen zusammen — von der Machbarkeitsstudie bis zur
+          schlüsselfertigen Realisierung.
+        </p>
+      </header>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {partners.map((p, i) => (
+          <a
+            key={p.name}
+            href={p.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style={{ transitionDelay: `${(i % 3) * 90}ms` }}
+            className="group flex flex-col rounded-2xl border border-border bg-brand-white p-8 transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:shadow-xl hover:shadow-brand-black/5"
+          >
+            <div className="flex items-center justify-between">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-brand-accent">
+                {p.tag}
+              </p>
+              <ArrowRight className="h-4 w-4 text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent" aria-hidden="true" />
+            </div>
+            <h3 className="mt-4 font-serif text-2xl">{p.name}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-brand-black/70">{p.body}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
