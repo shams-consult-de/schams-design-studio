@@ -137,13 +137,18 @@ function BueroPage() {
 
           <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
-              <li key={m.name} className="flex flex-col rounded-2xl border border-border bg-brand-white p-8">
-                <div
-                  aria-hidden="true"
-                  className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-accent/10 font-serif text-2xl text-brand-accent"
-                >
-                  {initials(m.name)}
+              <li key={m.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white" data-reveal>
+                <div className="overflow-hidden bg-concrete">
+                  <img
+                    src={m.image}
+                    alt={`${m.name} — ${m.role}`}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
                 </div>
+                <div className="flex flex-1 flex-col p-8">
                 <h3 className="mt-6 font-serif text-xl">{m.name}</h3>
                 <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
                 <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
