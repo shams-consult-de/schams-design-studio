@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-brand-white px-6 py-20 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <h2 className="font-serif text-4xl leading-tight md:text-5xl">
               Sprechen Sie <br /> uns an.
             </h2>
