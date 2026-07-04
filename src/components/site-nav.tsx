@@ -37,17 +37,24 @@ export function SiteNav() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-4 lg:flex xl:gap-6">
+        <ul className="hidden items-center gap-2 lg:flex xl:gap-3">
           {links.map(({ to, label, Icon }) => (
             <li key={to}>
               <Link
                 to={to}
-                className="group inline-flex items-center gap-2 text-sm font-medium text-brand-black/80 transition-colors hover:text-brand-accent"
+                aria-label={label}
+                className="group relative flex h-10 w-12 items-center justify-center overflow-hidden rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
                 activeProps={{ className: "text-brand-accent" }}
                 activeOptions={{ exact: to === "/" }}
               >
-                <Icon className="h-4 w-4" aria-hidden="true" />
-                <span>{label}</span>
+                <span className="flex flex-col items-center transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
+                  <span className="flex h-10 w-12 items-center justify-center">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <span className="flex h-10 w-12 items-center justify-center text-center text-[10px] leading-tight font-medium">
+                    {label}
+                  </span>
+                </span>
               </Link>
             </li>
           ))}
