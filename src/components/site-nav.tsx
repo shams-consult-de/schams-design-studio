@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck } from "lucide-react";
-import { CONTACT } from "@/lib/contact";
+import { CONTACT, LOGO_URL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Start", Icon: Home },
@@ -19,10 +19,17 @@ export function SiteNav() {
       className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/90 backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <Link to="/" className="group" aria-label="Shams Consult — Startseite">
-          <span className="font-serif text-2xl tracking-tight lg:text-[28px]">
-            Shams<span className="text-brand-accent">.</span>Consult
-          </span>
+        <Link to="/" className="group flex items-center gap-3" aria-label="Shams Consult — Startseite">
+          <img
+            src={LOGO_URL}
+            alt="Shams Consult — Architektur & Stadtplanung"
+            width={200}
+            height={64}
+            className="h-11 w-auto transition-transform duration-500 group-hover:scale-[1.03] lg:h-14"
+            decoding="async"
+            fetchPriority="high"
+            referrerPolicy="no-referrer"
+          />
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
