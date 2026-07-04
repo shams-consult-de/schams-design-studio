@@ -14,6 +14,7 @@ import { Route as ProjekteRouteImport } from './routes/projekte'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
@@ -44,6 +45,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ForschungRoute = ForschungRouteImport.update({
+  id: '/forschung',
+  path: '/forschung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DatenschutzRoute = DatenschutzRouteImport.update({
   id: '/datenschutz',
   path: '/datenschutz',
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
+    | '/forschung'
     | '/impressum'
     | '/kontakt'
     | '/leistungen'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
+    | '/forschung'
     | '/impressum'
     | '/kontakt'
     | '/leistungen'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
+    | '/forschung'
     | '/impressum'
     | '/kontakt'
     | '/leistungen'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
+  ForschungRoute: typeof ForschungRoute
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
   LeistungenRoute: typeof LeistungenRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/forschung': {
+      id: '/forschung'
+      path: '/forschung'
+      fullPath: '/forschung'
+      preLoaderRoute: typeof ForschungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/datenschutz': {
       id: '/datenschutz'
       path: '/datenschutz'
@@ -220,6 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   BarrierefreiheitRoute: BarrierefreiheitRoute,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
+  ForschungRoute: ForschungRoute,
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
   LeistungenRoute: LeistungenRoute,
