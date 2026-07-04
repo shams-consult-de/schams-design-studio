@@ -149,13 +149,14 @@ function BueroPage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-8">
-                <h3 className="mt-6 font-serif text-xl">{m.name}</h3>
-                <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
-                <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
-                  {m.lines.map((l) => (
-                    <li key={l}>{l}</li>
-                  ))}
-                </ul>
+                  <h3 className="font-serif text-xl">{m.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
+                  <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
+                    {m.lines.map((l) => (
+                      <li key={l}>{l}</li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>
