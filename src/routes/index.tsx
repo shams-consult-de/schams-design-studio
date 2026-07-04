@@ -175,7 +175,7 @@ function HomePage() {
       {/* Aktuelles Projekt / Portfolio */}
       <section className="bg-concrete/60 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
                 Portfolio
@@ -190,22 +190,28 @@ function HomePage() {
             </div>
             <Link
               to="/projekte"
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-black transition-colors hover:text-brand-accent"
+              className="link-sweep inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-black transition-colors hover:text-brand-accent"
             >
               Alle Projekte <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </header>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-            {featured.map((p) => (
-              <article key={p.slug} className="group">
+            {featured.map((p, i) => (
+              <article
+                key={p.slug}
+                className="group image-zoom"
+                data-reveal
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
                 <div className="overflow-hidden rounded-xl">
                   <img
                     src={p.image}
                     alt={p.imageAlt}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                    className="aspect-[3/4] w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-3 text-sm font-semibold text-brand-black">{p.title}</h3>
@@ -213,8 +219,51 @@ function HomePage() {
               </article>
             ))}
           </div>
+
+          {/* Aktuelles Projekt: Töpfenmühle */}
+          <div className="mt-24 grid gap-10 rounded-2xl border border-border bg-brand-white p-8 lg:grid-cols-12 lg:p-12" data-reveal>
+            <div className="lg:col-span-5 image-zoom overflow-hidden rounded-xl">
+              <img
+                src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i8864e965b260b110/version/1701080364/image.jpg"
+                alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+                Aktuelles Projekt
+              </p>
+              <h3 className="mt-3 font-serif text-3xl md:text-4xl">
+                Bebauungsplan <span className="italic">„Töpfenmühle“</span>, Gersfeld (Rhön)
+              </h3>
+              <p className="mt-5 text-brand-black/75 leading-relaxed">
+                Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen
+                Verfahrens mit Artenschutzuntersuchung und Umweltprüfung (Umweltbericht)
+                nach § 2 Abs. 4 BauGB aufgestellt. Es handelt sich um einen
+                qualifizierten Bebauungsplan gemäß § 30 Abs. 1 BauGB. Innerhalb des
+                Geltungsbereiches sind Art und Maß der baulichen Nutzung, die
+                überbaubaren Grundstücksflächen und die örtlichen Verkehrsflächen
+                festgesetzt. Die Erschließung ist bereits gesichert.
+              </p>
+              <p className="mt-4 text-brand-black/75 leading-relaxed">
+                Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand
+                zu erhalten und die ländlich geprägte, historisch bedeutsame dörfliche
+                Siedlungsstruktur zu bewahren. Zeitgemäße Nutzungen und die energetische
+                Sanierung der Bestandsgebäude — inklusive erforderlicher Ersatzbauten —
+                sollen mit Planungssicherheit ermöglicht werden. Unbebaute Flächen
+                innerhalb des Planungsgebietes bleiben in ihrer natürlichen
+                landschaftlichen Form erhalten.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Kunden & Partner */}
+      <PartnersSection />
 
       {/* Forschung & Lehre Teaser */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
