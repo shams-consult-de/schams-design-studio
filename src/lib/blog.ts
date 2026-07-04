@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Reduktion ist kein Verzicht, sondern Entscheidung. In diesem Beitrag zeigen wir, wie Klarheit, gezielte Akzente und gestalterische Zurückhaltung starke Räume schaffen.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/ic949eb8f5fd203af/version/1753019052/reduktion-in-der-architektur-klarheit-die-wirkt.png",
+      "/images/reduktion-in-der-architektur-klarheit-die-wirkt-.png",
     href: "https://www.shams-consult.de/reduktion-in-der-architektur-klarheit-die-wirkt/",
   },
   {
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Der Schlüssel zu wirtschaftlich nachhaltigem Bauen liegt nicht allein in der Materialwahl oder Technik, sondern in der strategischen Projektentwicklung.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/ie3b09ea40af7df72/version/1752403315/tipps-f%C3%BCr-die-wirtschaftliche-umsetzung-nachhaltiger-projekte.png",
+      "/images/tipps-f-r-die-wirtschaftliche-umsetzung-nachhaltiger-projekt-.png",
     href: "https://www.shams-consult.de/tipps-f%C3%BCr-die-wirtschaftliche-umsetzung-nachhaltiger-projekte/",
   },
   {
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Was macht einen Raum stimmig? Warum fühlt sich ein Gebäude „richtig“ an — lange bevor wir es bewusst analysieren? Die Antwort liegt oft in drei stillen, aber kraftvollen Prinzipien.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/if6da08ec415a657a/version/1751797332/proportion-rhythmus-ma%C3%9Fstab-gestaltungsprinzipien-aus-der-praxis.png",
+      "/images/proportion-rhythmus-ma-stab-gestaltungsprinzipien-aus-der-pr-.png",
     href: "https://www.shams-consult.de/proportion-rhythmus-ma%C3%9Fstab-gestaltungsprinzipien-aus-der-praxis/",
   },
   {
@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Nachhaltiges Bauen ist nicht nur eine technische oder ökologische Herausforderung — es ist auch eine soziale.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/i609f94defd48ad28/version/1751721532/fl%C3%A4cheneffizienz-und-soziale-nachhaltigkeit.png",
+      "/images/fl-cheneffizienz-und-soziale-nachhaltigkeit-.png",
     href: "https://www.shams-consult.de/fl%C3%A4cheneffizienz-und-soziale-nachhaltigkeit/",
   },
   {
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Material ist nie neutral. Es ist mehr als Oberfläche, mehr als Textur — Träger von Atmosphäre, Herkunft und Identität.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/ie6c7f3873bd67905/version/1751206080/material-spricht-wenn-man-es-l%C3%A4sst-wie-wir-materialien-bewusst-ausw%C3%A4hlen-und-inszenieren.png",
+      "/images/material-spricht-wenn-man-es-l-sst-wie-wir-materialien-bewus-.png",
     href: "https://www.shams-consult.de/material-spricht-wenn-man-es-l%C3%A4sst-wie-wir-materialien-bewusst-ausw%C3%A4hlen-und-inszenieren/",
   },
   {
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Energieeffizienz ist einer der zentralen Bausteine nachhaltigen Bauens — und weit mehr als eine Frage der Wärmedämmung.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/i2c8c831aeb3e5a4d/version/1751719417/energieeffizienz-in-der-praxis-mehr-als-nur-d%C3%A4mmung.png",
+      "/images/energieeffizienz-in-der-praxis-mehr-als-nur-d-mmung-.png",
     href: "https://www.shams-consult.de/energieeffizienz-in-der-praxis-%E2%80%93-mehr-als-nur-d%C3%A4mmung/",
   },
   {
@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Warum wir Licht nicht nur planen, sondern als aktiven Gestaltungsfaktor begreifen — für Räume, die im Tagesverlauf lebendig bleiben.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/id651d13a815f9bea/version/1749911756/licht-als-entwurfspartner-und-m%C3%A4chtiges-gestaltungsmittel-in-der-architektur.png",
+      "/images/licht-als-entwurfspartner-und-m-chtiges-gestaltungsmittel-in-.png",
     href: "https://www.shams-consult.de/licht-als-entwurfspartner-und-m%C3%A4chtiges-gestaltungsmittel-in-der-architektur/",
   },
   {
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Als Architekturbüro sehen wir darin eine zentrale Verantwortung: Räume so zu gestalten, dass sie nicht nur funktional erfüllen, sondern atmosphärisch und emotional positiv wirken.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/i2386c7fc88ee26ea/version/1749473613/raum-wirkt-ob-wir-wollen-oder-nicht-wie-architektur-emotionen-ausl%C3%B6st-und-verhalten-beeinflusst.png",
+      "/images/raum-wirkt-ob-wir-wollen-oder-nicht-wie-architektur-emotione-.png",
     href: "https://www.shams-consult.de/wie-architektur-emotionen-ausl%C3%B6st-und-verhalten-beeinflusst/",
   },
   {
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Gute Gestaltung ist weit mehr als eine Frage des Geschmacks — sie ist Haltung, Strategie und Verantwortung zugleich.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/i3631a94f4bc3fc1c/version/1749389277/was-wir-unter-guter-gestaltung-verstehen.png",
+      "/images/was-wir-unter-guter-gestaltung-verstehen-.png",
     href: "https://www.shams-consult.de/was-wir-unter-guter-gestaltung-verstehen/",
   },
   {
@@ -116,7 +116,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Welche Materialien sind wirklich nachhaltig? Ein Blick auf konventionelle und ökologische Baustoffe, Auswahlkriterien und innovative Lösungen.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/i63d95a7deeeb623c/version/1749387210/materialien-mit-verantwortung-baustoffe-der-zukunft.png",
+      "/images/materialien-mit-verantwortung-baustoffe-der-zukunft-.png",
     href: "https://www.shams-consult.de/materialien-mit-verantwortung-%E2%80%93-baustoffe-der-zukunft/",
   },
   {
@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Nachhaltigkeit beginnt lange vor dem Baustart. Die entscheidenden Weichen werden im Entwurfsprozess gestellt.",
     image:
-      "https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=png/path/sc1699083d70b354e/image/ic949eb8f5fd203af/version/1753019052/reduktion-in-der-architektur-klarheit-die-wirkt.png",
+      "/images/reduktion-in-der-architektur-klarheit-die-wirkt-.png",
     href: "https://www.shams-consult.de/nachhaltig-planen-%E2%80%93-der-schl%C3%BCssel-liegt-im-entwurf/",
   },
 ];

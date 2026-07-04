@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
-import heroFacade from "@/assets/hero-facade.jpg";
+const heroFacade = "/images/hero-facade.jpg";
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
 
@@ -211,7 +211,7 @@ function HomePage() {
           <div className="mt-24 grid gap-10 rounded-2xl border border-border bg-brand-white p-8 lg:grid-cols-12 lg:p-12" data-reveal>
             <div className="lg:col-span-5 image-zoom overflow-hidden rounded-xl">
               <img
-                src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i8864e965b260b110/version/1701080364/image.jpg"
+                src="/images/image-.jpg"
                 alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
                 loading="lazy"
                 decoding="async"

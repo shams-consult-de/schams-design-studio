@@ -13,7 +13,7 @@ export const Route = createFileRoute("/philosophie")({
       {
         property: "og:image",
         content:
-          "https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i3a38239f91355027/version/1707152085/architektenb%C3%BCro-shams-consult-architekt-und-stadtplaner.jpg",
+          "/images/architektenb-ro-shams-consult-architekt-und-stadtplaner-.jpg",
       },
       { property: "og:url", content: "/philosophie" },
     ],
@@ -100,7 +100,7 @@ function PhilosophiePage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12" data-reveal>
         <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
           <img
-            src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i3a38239f91355027/version/1707152085/architektenb%C3%BCro-shams-consult-architekt-und-stadtplaner.jpg"
+            src="/images/architektenb-ro-shams-consult-architekt-und-stadtplaner-.jpg"
             alt="Architekturbüro Shams Consult — Architekt und Stadtplaner"
             loading="lazy"
             decoding="async"
