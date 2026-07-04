@@ -43,7 +43,7 @@
 
   --brand-black: oklch(0.18 0.005 60);
   --brand-white: oklch(0.985 0.002 60);
-  --brand-accent: oklch(0.62 0.17 42);
+  --brand-accent: #9F3230;
   --concrete: oklch(0.95 0.004 60);
 
   --background: var(--brand-white);
