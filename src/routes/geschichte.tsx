@@ -17,7 +17,7 @@ export const Route = createFileRoute("/geschichte")({
       {
         property: "og:image",
         content:
-          "https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i2f58a7e76fe134ac/version/1691673000/from-nobody-to-somebody-to-help-and-share-experiences-with-everybody-vertrauen-ideen-und-expertise-f%C3%BCr-eine-verantwortungsvolle-gestaltung-die-reise-vom-traum-zum-erfolg.jpg",
+          "/images/from-nobody-to-somebody-to-help-and-share-experiences-with-e-.jpg",
       },
       { property: "og:url", content: "/geschichte" },
     ],
@@ -95,7 +95,7 @@ function GeschichtePage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12" data-reveal>
         <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
           <img
-            src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i2f58a7e76fe134ac/version/1691673000/from-nobody-to-somebody-to-help-and-share-experiences-with-everybody-vertrauen-ideen-und-expertise-f%C3%BCr-eine-verantwortungsvolle-gestaltung-die-reise-vom-traum-zum-erfolg.jpg"
+            src="/images/from-nobody-to-somebody-to-help-and-share-experiences-with-e-.jpg"
             alt="Erfolgsgeschichte von Majeed Shams, Rheinische Post, 30. August 2005"
             loading="lazy"
             decoding="async"

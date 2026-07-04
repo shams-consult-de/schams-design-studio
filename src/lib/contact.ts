@@ -1,6 +1,6 @@
 // Zentrale Kontakt- und CTA-Daten (1:1 aus schamsconsult.de / shams-consult.de).
 export const LOGO_URL =
-  "https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/ief5d33ea36864b5c/version/1699538039/image.gif";
+  "/images/image-.gif";
 
 export const CONTACT = {
   email: "office@shams-consult.de",

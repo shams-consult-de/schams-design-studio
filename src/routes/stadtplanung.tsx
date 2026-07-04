@@ -19,7 +19,7 @@ export const Route = createFileRoute("/stadtplanung")({
       {
         property: "og:image",
         content:
-          "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sc1699083d70b354e/image/ia59d02cfc9ed73b5/version/1592996685/image.jpg",
+          "/images/image-.jpg",
       },
       { property: "og:url", content: "/stadtplanung" },
     ],
@@ -102,7 +102,7 @@ function StadtplanungPage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12" data-reveal>
         <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
           <img
-            src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x800:format=jpg/path/sc1699083d70b354e/image/ia59d02cfc9ed73b5/version/1592996685/image.jpg"
+            src="/images/image-.jpg"
             alt="Städtebauliche Machbarkeitsstudien Reutlingen — Analyse und Konzeption"
             loading="lazy"
             decoding="async"

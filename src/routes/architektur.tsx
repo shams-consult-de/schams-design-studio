@@ -16,7 +16,7 @@ export const Route = createFileRoute("/architektur")({
       {
         property: "og:image",
         content:
-          "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sc1699083d70b354e/image/ic12655acbe06a3f9/version/1667207002/architektenleistung-leistungsphasen-1-9-hoai.jpg",
+          "/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg",
       },
       { property: "og:url", content: "/architektur" },
     ],
@@ -97,7 +97,7 @@ function ArchitekturPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
             <img
-              src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sc1699083d70b354e/image/ic12655acbe06a3f9/version/1667207002/architektenleistung-leistungsphasen-1-9-hoai.jpg"
+              src="/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg"
               alt="Architektenleistung: Leistungsphasen 1–9 HOAI"
               loading="lazy"
               decoding="async"
@@ -110,7 +110,7 @@ function ArchitekturPage() {
           </figure>
           <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
             <img
-              src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sc1699083d70b354e/image/i05760e0b4239fa9a/version/1626306790/architektenleistung-leistungsphasen-1-8-hoai.jpg"
+              src="/images/architektenleistung-leistungsphasen-1-8-hoai-.jpg"
               alt="Architektenleistung: Leistungsphasen 1–8 HOAI"
               loading="lazy"
               decoding="async"

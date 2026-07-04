@@ -41,7 +41,7 @@ function ProjectsPage() {
       >
         <div className="lg:col-span-6 overflow-hidden rounded-xl image-zoom">
           <img
-            src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i8864e965b260b110/version/1701080364/image.jpg"
+            src="/images/image-.jpg"
             alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
             loading="lazy"
             decoding="async"
