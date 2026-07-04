@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Home, Building2, Layers, Mail, Menu, X } from "lucide-react";
+import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck } from "lucide-react";
+import { CONTACT } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Start", Icon: Home },
   { to: "/leistungen", label: "Leistungen", Icon: Layers },
-  { to: "/buero", label: "Büro", Icon: Building2 },
+  { to: "/buero", label: "Über uns", Icon: Building2 },
+  { to: "/forschung", label: "Forschung", Icon: FlaskConical },
   { to: "/kontakt", label: "Kontakt", Icon: Mail },
 ] as const;
 
@@ -17,13 +19,13 @@ export function SiteNav() {
       className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/90 backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <Link to="/" className="group" aria-label="Schams Consult — Startseite">
+        <Link to="/" className="group" aria-label="Shams Consult — Startseite">
           <span className="font-serif text-2xl tracking-tight lg:text-[28px]">
-            Schams<span className="text-brand-accent">.</span>Consult
+            Shams<span className="text-brand-accent">.</span>Consult
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {links.map(({ to, label, Icon }) => (
             <li key={to}>
               <Link
@@ -37,10 +39,21 @@ export function SiteNav() {
               </Link>
             </li>
           ))}
+          <li>
+            <a
+              href={CONTACT.bookingHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+            >
+              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              Erstgespräch buchen
+            </a>
+          </li>
         </ul>
 
         <button
-          className="md:hidden"
+          className="lg:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
@@ -50,7 +63,7 @@ export function SiteNav() {
       </div>
 
       {open && (
-        <div className="border-t border-border md:hidden">
+        <div className="border-t border-border lg:hidden">
           <ul className="flex flex-col px-6 py-2">
             {links.map(({ to, label, Icon }) => (
               <li key={to}>
@@ -64,6 +77,17 @@ export function SiteNav() {
                 </Link>
               </li>
             ))}
+            <li className="pt-2 pb-4">
+              <a
+                href={CONTACT.bookingHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white"
+              >
+                <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+                Erstgespräch buchen
+              </a>
+            </li>
           </ul>
         </div>
       )}

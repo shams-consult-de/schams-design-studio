@@ -1,16 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MapPin, Clock, Compass, Building2, Users, PenTool, Ruler, Layers, MessageSquare } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Phone,
+  Mail,
+  CalendarCheck,
+  MessageCircle,
+  Building2,
+  Users,
+  Landmark,
+  GraduationCap,
+  Leaf,
+  Scale,
+} from "lucide-react";
 import heroFacade from "@/assets/hero-facade.jpg";
 import { projects } from "@/lib/projects";
+import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Schams Consult — Architektur & Stadtplanung" },
+      { title: "Shams Consult — Architektur & Stadtplanung Frankfurt / Rödermark" },
       {
         name: "description",
         content:
-          "Schams Consult ist ein Büro für Architektur und Stadtplanung. Wir gestalten Lebensräume, die Funktionalität mit ästhetischer Langlebigkeit verbinden.",
+          "Shams Consult — Planungsbüro für Architektur und Stadtplanung. Über 15 Jahre Erfahrung, über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -19,13 +33,32 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services = [
-  { Icon: Building2, title: "Architektur", price: "LP 1–9", body: "Ganzheitliche Planung von Wohn-, Kultur- und Gewerbebauten in allen HOAI-Leistungsphasen." },
-  { Icon: Compass, title: "Stadtplanung", price: "Konzept", body: "Nachhaltige Quartierskonzepte, städtebauliche Rahmenpläne und Freiraumstrategien." },
-  { Icon: PenTool, title: "Beratung", price: "Individuell", body: "Strategische Begleitung von Bauherren, Investoren und Kommunen." },
-  { Icon: Ruler, title: "Machbarkeitsstudien", price: "Analyse", body: "Standorte, Nutzungsszenarien und wirtschaftliche Potenziale fundiert bewerten." },
-  { Icon: Layers, title: "Bauleitplanung", price: "F- & B-Plan", body: "Flächennutzungs- und Bebauungspläne in enger Abstimmung mit Behörden." },
-  { Icon: MessageSquare, title: "Partizipation", price: "Moderation", body: "Beteiligungsprozesse — vom Bürgerworkshop bis zum Fachdialog." },
+const reasons = [
+  {
+    Icon: Building2,
+    title: "Über 15 Jahre Erfahrung & über 100 realisierte Projekte",
+    body: "Wir planen und realisieren seit mehr als einem Jahrzehnt hochwertige Architektur- und Bauprojekte – wirtschaftlich, gestalterisch überzeugend und funktional. Öffentliche wie private Bauherren profitieren von unserer Erfahrung.",
+  },
+  {
+    Icon: Scale,
+    title: "Bauanträge und Planungsrecht – Fachwissen aus der Praxis",
+    body: "Büroinhaber Dipl.-Ing. Majeed Shams hat über 100 Bauanträge geprüft – im Rahmen seiner Tätigkeit bei den Städten Dieburg, Weinstadt und Karlsruhe. Dieses Know-how fließt in unsere rechtssichere und fundierte Planungsarbeit ein.",
+  },
+  {
+    Icon: Leaf,
+    title: "Wirtschaftlich & nachhaltig denken – aus eigener Erfahrung",
+    body: "Durch unsere private Beteiligung an Immobilienunternehmen verstehen wir wirtschaftliche Anforderungen und ökologische Zielsetzungen unserer Kunden besonders gut. Wir planen lösungsorientiert – aus Sicht der Investoren.",
+  },
+  {
+    Icon: GraduationCap,
+    title: "Aktive Forschung & Lehre – am Puls der Baubranche",
+    body: "Seit 2020 betreut Majeed Shams Forschungsprojekte und Abschlussarbeiten an der Frankfurt UAS (University of Applied Sciences). So fließen aktuelle Erkenntnisse aus Architektur, Stadtplanung und Baumanagement direkt in unsere Projekte ein.",
+  },
+  {
+    Icon: Users,
+    title: "Ein leistungsstarkes Team für komplexe Planungsaufgaben",
+    body: "Shams Consult ist ein innovatives Planungsbüro mit einem festen Netzwerk aus 16 erfahrenen Architektinnen und Ingenieurinnen. Wir garantieren kreative Lösungen, Termin- und Kostensicherheit – auch bei anspruchsvollen Projekten.",
+  },
 ];
 
 function HomePage() {
@@ -33,7 +66,7 @@ function HomePage() {
 
   return (
     <>
-      {/* Hero — full-bleed image with overlay */}
+      {/* Hero */}
       <section className="relative min-h-[88vh] w-full overflow-hidden">
         <img
           src={heroFacade}
@@ -44,31 +77,40 @@ function HomePage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-brand-white/85 via-brand-white/50 to-transparent"
-        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/90 via-brand-white/55 to-transparent" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-7xl items-center px-6 py-24 lg:px-12">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
-              Architektur · Stadtplanung · Beratung
+              Architektur · Stadtplanung · Forschung
             </p>
             <h1 className="mt-6 text-5xl font-bold leading-[1.05] text-brand-black md:text-7xl lg:text-[5.5rem]">
               Ihr Raum — <br />
               <span className="font-serif italic font-normal">unsere Vision.</span>
             </h1>
             <p className="mt-8 max-w-lg text-lg font-light leading-relaxed text-brand-black/75">
-              Schams Consult gestaltet Lebensräume, die Funktionalität mit ästhetischer
-              Langlebigkeit verbinden — vom Einzelbau bis zum Quartier.
+              Shams Consult — Planungsbüro für Innovation und Kreativität. Über 15 Jahre
+              Erfahrung, über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                to="/kontakt"
+              <a
+                href={CONTACT.bookingHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-brand-accent px-8 py-4 text-base font-semibold text-brand-white shadow-lg shadow-brand-accent/25 transition-transform hover:-translate-y-0.5"
               >
-                Projekt anfragen
+                <CalendarCheck className="h-5 w-5" aria-hidden="true" />
+                Erstgespräch buchen
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </Link>
+              </a>
+              <a
+                href={CONTACT.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+              >
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                Über WhatsApp
+              </a>
               <Link
                 to="/projekte"
                 className="inline-flex items-center gap-2 rounded-full border border-brand-black/20 bg-brand-white/70 px-7 py-4 text-base font-medium text-brand-black backdrop-blur transition-colors hover:border-brand-black"
@@ -76,49 +118,59 @@ function HomePage() {
                 Projekte ansehen
               </Link>
             </div>
+            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-brand-black/70">
+              <a href={CONTACT.offices[0].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
+                <Phone className="h-4 w-4" aria-hidden="true" /> Frankfurt: {CONTACT.offices[0].phone}
+              </a>
+              <a href={CONTACT.offices[1].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
+                <Phone className="h-4 w-4" aria-hidden="true" /> Rödermark: {CONTACT.offices[1].phone}
+              </a>
+              <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 hover:text-brand-accent">
+                <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
+      {/* 5 gute Gründe */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
         <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
-              Leistungen
+              Warum Shams Consult
             </p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl">
-              Was wir für Sie <span className="italic">planen</span>.
+              5 gute Gründe für eine <span className="italic">Zusammenarbeit</span>.
             </h2>
           </div>
           <p className="max-w-md text-brand-black/70">
-            Sechs Disziplinen, die einander ergänzen — interdisziplinär, präzise
-            und mit Respekt vor dem Kontext.
+            Nehmen Sie gerne Kontakt mit uns auf. Wir freuen uns auf die Zusammenarbeit mit Ihnen.
           </p>
         </header>
 
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ Icon, title, price, body }) => (
+        <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {reasons.map(({ Icon, title, body }, i) => (
             <li
               key={title}
               className="group flex flex-col rounded-2xl border border-border bg-concrete/40 p-8 transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:bg-brand-white hover:shadow-xl hover:shadow-brand-black/5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent transition-colors group-hover:bg-brand-accent group-hover:text-brand-white">
-                <Icon className="h-5 w-5" aria-hidden="true" />
+              <div className="flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent transition-colors group-hover:bg-brand-accent group-hover:text-brand-white">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <span className="font-serif text-3xl text-brand-black/20">
+                  0{i + 1}
+                </span>
               </div>
-              <h3 className="mt-6 font-serif text-2xl">{title}</h3>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-widest text-brand-accent">
-                {price}
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-brand-black/70">
-                {body}
-              </p>
+              <h3 className="mt-6 font-serif text-xl leading-snug">{title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-brand-black/70">{body}</p>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
 
-      {/* Gallery — Projects */}
+      {/* Aktuelles Projekt / Portfolio */}
       <section className="bg-concrete/60 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -129,6 +181,10 @@ function HomePage() {
               <h2 className="mt-3 font-serif text-4xl md:text-5xl">
                 Ausgewählte <span className="italic">Projekte</span>.
               </h2>
+              <p className="mt-4 max-w-lg text-brand-black/70">
+                Vom Einfamilienhaus in Lingen (Ems) bis zum Bebauungsplan „Töpfenmühle“ in
+                Gersfeld (Rhön) — ein Auszug aus unserer Arbeit.
+              </p>
             </div>
             <Link
               to="/projekte"
@@ -158,35 +214,35 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Über uns / Team-Werte */}
+      {/* Forschung & Lehre Teaser */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
-              Über uns
+              Forschung & Lehre
             </p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl">
-              Ein Büro. <br />
-              <span className="italic">Drei Prinzipien.</span>
+              Am Puls der <span className="italic">Baubranche</span>.
             </h2>
             <p className="mt-6 max-w-md text-brand-black/70">
-              Schams Consult vereint Architektur, Städtebau und Beratung unter einem
-              Dach. Wir arbeiten interdisziplinär und im Dialog mit unseren Partnern.
+              In Kooperation mit der Frankfurt UAS geben wir aktuelle Themen der Bau- und
+              Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und
+              Masterarbeiten. Aktueller Fachbeitrag: „Stellplatzsatzung im Fokus — Zeit
+              für eine kritische Neubewertung“ von Majeed Shams und Leonie Ries.
             </p>
             <Link
-              to="/buero"
+              to="/forschung"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-black px-7 py-3.5 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-accent"
             >
-              Mehr über das Büro
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Zur Forschung <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
 
           <div className="grid gap-6 lg:col-span-7 md:grid-cols-3">
             {[
-              { Icon: Compass, title: "Strategie", body: "Nachhaltige Stadtentwicklung mit ökologischen Kreisläufen und sozialer Inklusion." },
-              { Icon: PenTool, title: "Gestaltung", body: "Materialität, Licht und präzise Detailplanung — von der Skizze bis zur Bauleitung." },
-              { Icon: Users, title: "Dialog", body: "Partizipative Planung mit Bauherren, Behörden und Bürgern auf Augenhöhe." },
+              { Icon: GraduationCap, title: "Frankfurt UAS", body: "Lehrbeauftragter seit 2020 — Fachbereich Architektur, Stadtplanung & Bauingenieurwesen." },
+              { Icon: Landmark, title: "Kommunale Praxis", body: "Über 100 geprüfte Bauanträge in Dieburg, Weinstadt und Karlsruhe." },
+              { Icon: Users, title: "16 Fachleute", body: "Festes Netzwerk aus Architekt:innen und Ingenieur:innen für komplexe Aufgaben." },
             ].map(({ Icon, title, body }) => (
               <div key={title} className="flex flex-col rounded-2xl bg-brand-black p-8 text-brand-white">
                 <Icon className="h-6 w-6 text-brand-accent" aria-hidden="true" />
@@ -198,55 +254,69 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Standort & Öffnungszeiten */}
+      {/* Standort & Kontakt */}
       <section className="bg-brand-black py-24 text-brand-white lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
-                Standort
+                Standorte
               </p>
               <h2 className="mt-3 font-serif text-4xl md:text-5xl">
                 Besuchen Sie <span className="italic">uns</span>.
               </h2>
-              <address className="mt-8 flex items-start gap-4 not-italic">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-brand-accent" aria-hidden="true" />
-                <div className="leading-relaxed">
-                  <strong className="block font-semibold">Schams Consult</strong>
-                  Architektur & Stadtplanung<br />
-                  Deutschland
-                </div>
-              </address>
-              <div className="mt-10">
-                <Link
-                  to="/kontakt"
-                  className="inline-flex items-center gap-3 rounded-full bg-brand-accent px-7 py-3.5 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
-                >
-                  Kontakt aufnehmen
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+              <div className="mt-10 grid gap-8 sm:grid-cols-2">
+                {CONTACT.offices.map((o) => (
+                  <address key={o.name} className="not-italic leading-relaxed">
+                    <MapPin className="mb-3 h-5 w-5 text-brand-accent" aria-hidden="true" />
+                    <strong className="block font-semibold">{o.name}</strong>
+                    {o.street}
+                    <br />
+                    {o.city}
+                    <br />
+                    <a href={o.phoneHref} className="mt-2 inline-flex items-center gap-2 text-brand-white/80 hover:text-brand-accent">
+                      <Phone className="h-4 w-4" aria-hidden="true" /> {o.phone}
+                    </a>
+                  </address>
+                ))}
               </div>
             </div>
 
             <div>
-              <div className="mb-6 inline-flex items-center gap-3">
-                <Clock className="h-5 w-5 text-brand-accent" aria-hidden="true" />
-                <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-white/70">
-                  Sprechzeiten
-                </h3>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+                Direkt kontaktieren
+              </p>
+              <h3 className="mt-3 font-serif text-3xl md:text-4xl">
+                Beratungstermin sichern.
+              </h3>
+              <p className="mt-4 max-w-md text-brand-white/70">
+                Sichern Sie sich einen unverbindlichen Beratungstermin — bequem online
+                buchbar oder direkt per WhatsApp.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={CONTACT.bookingHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+                >
+                  <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+                </a>
+                <a
+                  href={CONTACT.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp
+                </a>
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-brand-accent hover:text-brand-accent"
+                >
+                  <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+                </a>
               </div>
-              <dl className="divide-y divide-brand-white/10 rounded-2xl border border-brand-white/10">
-                {[
-                  ["Montag – Freitag", "09:00 – 18:00"],
-                  ["Samstag", "Nach Vereinbarung"],
-                  ["Sonntag", "Geschlossen"],
-                ].map(([day, hrs]) => (
-                  <div key={day} className="flex items-center justify-between px-6 py-5">
-                    <dt className="font-medium">{day}</dt>
-                    <dd className="text-brand-white/70">{hrs}</dd>
-                  </div>
-                ))}
-              </dl>
             </div>
           </div>
         </div>

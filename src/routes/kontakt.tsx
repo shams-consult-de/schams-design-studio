@@ -1,16 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { CalendarCheck, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt — Schams Consult" },
+      { title: "Kontakt — Shams Consult" },
       {
         name: "description",
         content:
-          "Kontaktieren Sie Schams Consult — Ihr Büro für Architektur und Stadtplanung. Wir freuen uns auf Ihr Projekt.",
+          "Kontakt Shams Consult — Büros Frankfurt am Main und Rödermark. Erstgespräch online buchen, WhatsApp, Telefon oder E-Mail.",
       },
-      { property: "og:title", content: "Kontakt — Schams Consult" },
+      { property: "og:title", content: "Kontakt — Shams Consult" },
       { property: "og:url", content: "/kontakt" },
     ],
     links: [{ rel: "canonical", href: "/kontakt" }],
@@ -28,36 +30,74 @@ function ContactPage() {
           Kontakt
         </p>
         <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
-          Sprechen wir über <br />
-          <span className="italic">Ihr Projekt</span>.
+          Sprechen Sie <br />
+          <span className="italic">uns an</span>.
         </h1>
+        <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-brand-black/70">
+          Sichern Sie sich einen unverbindlichen Beratungstermin — online buchbar, per
+          WhatsApp, Telefon oder E-Mail.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={CONTACT.bookingHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+          >
+            <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+          </a>
+          <a
+            href={CONTACT.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+          >
+            <MessageCircle className="h-4 w-4" aria-hidden="true" /> Über WhatsApp
+          </a>
+        </div>
       </header>
 
       <div className="mt-20 grid gap-16 lg:grid-cols-12">
         <aside className="space-y-10 lg:col-span-4">
+          {CONTACT.offices.map((o) => (
+            <div key={o.name}>
+              <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                {o.name}
+              </h2>
+              <address className="mt-4 not-italic leading-relaxed">
+                <MapPin className="mb-2 h-4 w-4 text-brand-accent" aria-hidden="true" />
+                {o.street}
+                <br />
+                {o.city}
+                <br />
+                <a
+                  href={o.phoneHref}
+                  className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" /> {o.phone}
+                </a>
+              </address>
+            </div>
+          ))}
           <div>
             <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
-              Büro
-            </h2>
-            <address className="mt-4 not-italic leading-relaxed">
-              Schams Consult
-              <br />
-              Architektur & Stadtplanung
-              <br />
-              Deutschland
-            </address>
-          </div>
-          <div>
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
-              Direkt
+              E-Mail
             </h2>
             <p className="mt-4 leading-relaxed">
               <a
-                href="mailto:office@schamsconsult.de"
-                className="border-b border-brand-black pb-0.5 italic hover:border-brand-accent hover:text-brand-accent"
+                href={`mailto:${CONTACT.email}`}
+                className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 italic hover:border-brand-accent hover:text-brand-accent"
               >
-                office@schamsconsult.de
+                <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
               </a>
+            </p>
+          </div>
+          <div>
+            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+              Kammer
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-brand-black/70">
+              Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886
             </p>
           </div>
         </aside>
@@ -143,20 +183,14 @@ function ContactPage() {
                 />
               </div>
               <div className="flex items-start gap-3">
-                <input
-                  id="privacy"
-                  name="privacy"
-                  type="checkbox"
-                  required
-                  className="mt-1"
-                />
+                <input id="privacy" name="privacy" type="checkbox" required className="mt-1" />
                 <label htmlFor="privacy" className="text-sm text-brand-black/70">
                   Ich habe die{" "}
                   <a href="/datenschutz" className="underline hover:text-brand-accent">
                     Datenschutzerklärung
                   </a>{" "}
-                  gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung
-                  meiner Anfrage zu.
+                  gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner
+                  Anfrage zu.
                 </label>
               </div>
               <div className="pt-4">
