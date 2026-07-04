@@ -135,7 +135,7 @@ function HomePage() {
 
       {/* 5 gute Gründe */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
-        <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
               Warum Shams Consult
@@ -153,6 +153,8 @@ function HomePage() {
           {reasons.map(({ Icon, title, body }, i) => (
             <li
               key={title}
+              data-reveal
+              style={{ transitionDelay: `${(i % 3) * 90}ms` }}
               className="group flex flex-col rounded-2xl border border-border bg-concrete/40 p-8 transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:bg-brand-white hover:shadow-xl hover:shadow-brand-black/5"
             >
               <div className="flex items-center justify-between">
