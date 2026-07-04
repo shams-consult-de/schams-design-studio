@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Icon } from "@/components/icon";
 import { useState } from "react";
-import { CalendarCheck, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/kontakt")({
@@ -44,7 +44,7 @@ function ContactPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
           >
-            <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+            <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
           </a>
           <a
             href={CONTACT.whatsappHref}
@@ -52,7 +52,7 @@ function ContactPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" /> Über WhatsApp
+            <Icon name="comment" className="text-base" /> Über WhatsApp
           </a>
         </div>
       </header>
@@ -65,7 +65,7 @@ function ContactPage() {
                 {o.name}
               </h2>
               <address className="mt-4 not-italic leading-relaxed">
-                <MapPin className="mb-2 h-4 w-4 text-brand-accent" aria-hidden="true" />
+                <Icon name="location-dot" className="mb-2 text-base text-brand-accent" />
                 {o.street}
                 <br />
                 {o.city}
@@ -74,7 +74,7 @@ function ContactPage() {
                   href={o.phoneHref}
                   className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent"
                 >
-                  <Phone className="h-4 w-4" aria-hidden="true" /> {o.phone}
+                  <Icon name="phone" className="text-base" /> {o.phone}
                 </a>
               </address>
             </div>
@@ -88,7 +88,7 @@ function ContactPage() {
                 href={`mailto:${CONTACT.email}`}
                 className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 italic hover:border-brand-accent hover:text-brand-accent"
               >
-                <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+                <Icon name="envelope" className="text-base" /> {CONTACT.email}
               </a>
             </p>
           </div>

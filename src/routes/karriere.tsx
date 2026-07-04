@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/karriere")({
@@ -123,7 +123,7 @@ function KarrierePage() {
                 </div>
                 <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                   Stellenanzeige lesen
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
                 </span>
               </a>
             ))}
@@ -140,7 +140,7 @@ function KarrierePage() {
             href={`mailto:${CONTACT.email}`}
             className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
           >
-            <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+            <Icon name="envelope" className="text-base" /> {CONTACT.email}
           </a>
         </div>
       </section>

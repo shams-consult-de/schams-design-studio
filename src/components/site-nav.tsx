@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { Icon } from "@/components/icon";
 import { useEffect, useState } from "react";
-import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star, BookOpen, Briefcase } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
 const links = [
@@ -102,7 +102,7 @@ export function SiteNav() {
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" aria-hidden="true" />
-              <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
+              <Icon name="calendar-check" className="text-base transition-transform duration-300 group-hover:rotate-[-8deg]" />
               Erstgespräch buchen
             </a>
           </li>
@@ -114,7 +114,7 @@ export function SiteNav() {
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <Icon name="xmark" className="text-2xl" /> : <Icon name="bars" className="text-2xl" />}
         </button>
       </div>
 
@@ -149,7 +149,7 @@ export function SiteNav() {
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white transition-transform hover:scale-[1.02]"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              <Icon name="calendar-check" className="text-base" />
               Erstgespräch buchen
             </a>
           </li>

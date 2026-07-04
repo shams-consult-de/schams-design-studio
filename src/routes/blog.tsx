@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { blogPosts } from "@/lib/blog";
 
 export const Route = createFileRoute("/blog")({
@@ -90,7 +90,7 @@ function BlogPage() {
               <p className="mt-4 text-brand-black/70 leading-relaxed">{featured.excerpt}</p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                 Mehr lesen
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
               </span>
             </div>
           </a>
@@ -126,7 +126,7 @@ function BlogPage() {
                 </p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                   Mehr lesen
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
                 </span>
               </a>
             </article>

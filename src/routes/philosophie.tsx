@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-
+import { Icon } from "@/components/icon";
 export const Route = createFileRoute("/philosophie")({
   head: () => ({
     meta: [
@@ -118,7 +117,7 @@ function PhilosophiePage() {
             to="/geschichte"
             className="inline-flex items-center gap-2 rounded-full bg-brand-black px-7 py-3.5 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-accent"
           >
-            Unsere Geschichte <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            Unsere Geschichte <Icon name="arrow-right" className="text-base" />
           </Link>
           <Link
             to="/karriere"

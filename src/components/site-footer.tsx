@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, CalendarCheck, Phone, Mail } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
 
 export function SiteFooter() {
@@ -15,7 +15,7 @@ export function SiteFooter() {
               href={`mailto:${CONTACT.email}`}
               className="mt-8 inline-flex items-center gap-2 border-b border-brand-black pb-1 text-xl italic transition-colors hover:border-brand-accent hover:text-brand-accent"
             >
-              <Mail className="h-5 w-5" aria-hidden="true" /> {CONTACT.email}
+              <Icon name="envelope" className="text-xl" /> {CONTACT.email}
             </a>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -24,7 +24,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-5 py-2.5 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
               >
-                <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+                <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
               </a>
               <a
                 href={CONTACT.whatsappHref}
@@ -32,7 +32,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <MessageCircle className="h-4 w-4" aria-hidden="true" /> Über WhatsApp
+                <Icon name="comment" className="text-base" /> Über WhatsApp
               </a>
             </div>
           </div>
@@ -49,7 +49,7 @@ export function SiteFooter() {
                   {o.city}
                   <br />
                   <a href={o.phoneHref} className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent">
-                    <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {o.phone}
+                    <Icon name="phone" className="text-sm" /> {o.phone}
                   </a>
                 </address>
               </div>
