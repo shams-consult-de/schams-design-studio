@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjekteRouteImport } from './routes/projekte'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
+import { Route as KundenfeedbackRouteImport } from './routes/kundenfeedback'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as ForschungRouteImport } from './routes/forschung'
@@ -33,6 +34,11 @@ const ProjekteRoute = ProjekteRouteImport.update({
 const LeistungenRoute = LeistungenRouteImport.update({
   id: '/leistungen',
   path: '/leistungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KundenfeedbackRoute = KundenfeedbackRouteImport.update({
+  id: '/kundenfeedback',
+  path: '/kundenfeedback',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/forschung': typeof ForschungRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/impressum'
     | '/kontakt'
+    | '/kundenfeedback'
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/impressum'
     | '/kontakt'
+    | '/kundenfeedback'
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/impressum'
     | '/kontakt'
+    | '/kundenfeedback'
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   ForschungRoute: typeof ForschungRoute
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
+  KundenfeedbackRoute: typeof KundenfeedbackRoute
   LeistungenRoute: typeof LeistungenRoute
   ProjekteRoute: typeof ProjekteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/leistungen'
       fullPath: '/leistungen'
       preLoaderRoute: typeof LeistungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kundenfeedback': {
+      id: '/kundenfeedback'
+      path: '/kundenfeedback'
+      fullPath: '/kundenfeedback'
+      preLoaderRoute: typeof KundenfeedbackRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   ForschungRoute: ForschungRoute,
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
+  KundenfeedbackRoute: KundenfeedbackRoute,
   LeistungenRoute: LeistungenRoute,
   ProjekteRoute: ProjekteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
