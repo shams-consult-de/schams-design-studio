@@ -47,13 +47,11 @@ export function SiteNav() {
                 activeProps={{ className: "text-brand-accent" }}
                 activeOptions={{ exact: to === "/" }}
               >
-                <span className="flex flex-col items-center transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                  <span className="flex h-10 w-14 items-center justify-center">
-                    <Icon className="h-5 w-5" aria-hidden="true" />
-                  </span>
-                  <span className="flex h-10 w-14 items-center justify-center px-0.5 text-center text-[10px] leading-tight font-medium">
-                    {label}
-                  </span>
+                <span className="absolute inset-0 flex h-10 w-14 items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-full">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="absolute inset-0 flex h-10 w-14 translate-y-full items-center justify-center px-0.5 text-center text-[10px] leading-tight font-medium transition-transform duration-300 ease-out group-hover:translate-y-0">
+                  {label}
                 </span>
               </Link>
             </li>
