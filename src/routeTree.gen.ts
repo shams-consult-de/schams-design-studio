@@ -16,6 +16,7 @@ import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KundenfeedbackRouteImport } from './routes/kundenfeedback'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as GeschichteRouteImport } from './routes/geschichte'
 import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
@@ -58,6 +59,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GeschichteRoute = GeschichteRouteImport.update({
+  id: '/geschichte',
+  path: '/geschichte',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ForschungRoute = ForschungRouteImport.update({
   id: '/forschung',
   path: '/forschung',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
@@ -127,6 +135,7 @@ export interface FileRoutesById {
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
+  '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
     | '/kontakt'
     | '/kundenfeedback'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
     | '/kontakt'
     | '/kundenfeedback'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/buero'
     | '/datenschutz'
     | '/forschung'
+    | '/geschichte'
     | '/impressum'
     | '/kontakt'
     | '/kundenfeedback'
@@ -190,6 +202,7 @@ export interface RootRouteChildren {
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ForschungRoute: typeof ForschungRoute
+  GeschichteRoute: typeof GeschichteRoute
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
   KundenfeedbackRoute: typeof KundenfeedbackRoute
@@ -250,6 +263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/geschichte': {
+      id: '/geschichte'
+      path: '/geschichte'
+      fullPath: '/geschichte'
+      preLoaderRoute: typeof GeschichteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/forschung': {
       id: '/forschung'
       path: '/forschung'
@@ -302,6 +322,7 @@ const rootRouteChildren: RootRouteChildren = {
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
   ForschungRoute: ForschungRoute,
+  GeschichteRoute: GeschichteRoute,
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
   KundenfeedbackRoute: KundenfeedbackRoute,
