@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { Home, Building2, Layers, Mail, Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/projekte", label: "Projekte" },
-  { to: "/buero", label: "Büro" },
-  { to: "/leistungen", label: "Leistungen" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/", label: "Start", Icon: Home },
+  { to: "/leistungen", label: "Leistungen", Icon: Layers },
+  { to: "/buero", label: "Büro", Icon: Building2 },
+  { to: "/kontakt", label: "Kontakt", Icon: Mail },
 ] as const;
 
 export function SiteNav() {
@@ -13,50 +14,53 @@ export function SiteNav() {
   return (
     <nav
       aria-label="Hauptnavigation"
-      className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/85 backdrop-blur-md"
+      className="sticky top-0 z-40 w-full border-b border-border bg-brand-white/90 backdrop-blur-md"
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
         <Link to="/" className="group" aria-label="Schams Consult — Startseite">
-          <span className="font-serif text-2xl tracking-tight lg:text-3xl">
-            Schams <span className="text-brand-accent">Consult</span>
+          <span className="font-serif text-2xl tracking-tight lg:text-[28px]">
+            Schams<span className="text-brand-accent">.</span>Consult
           </span>
         </Link>
 
-        <div className="hidden space-x-10 text-xs font-medium uppercase tracking-[0.2em] md:flex">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="transition-colors hover:text-brand-accent"
-              activeProps={{ className: "text-brand-accent" }}
-            >
-              {l.label}
-            </Link>
+        <ul className="hidden items-center gap-8 md:flex">
+          {links.map(({ to, label, Icon }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                className="group inline-flex items-center gap-2 text-sm font-medium text-brand-black/80 transition-colors hover:text-brand-accent"
+                activeProps={{ className: "text-brand-accent" }}
+                activeOptions={{ exact: to === "/" }}
+              >
+                <Icon className="h-4 w-4" aria-hidden="true" />
+                <span>{label}</span>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <button
-          className="flex flex-col gap-1.5 md:hidden"
+          className="md:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
         >
-          <span className="h-0.5 w-6 bg-current" />
-          <span className="h-0.5 w-6 bg-current" />
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
         <div className="border-t border-border md:hidden">
-          <ul className="flex flex-col px-6 py-4">
-            {links.map((l) => (
-              <li key={l.to}>
+          <ul className="flex flex-col px-6 py-2">
+            {links.map(({ to, label, Icon }) => (
+              <li key={to}>
                 <Link
-                  to={l.to}
+                  to={to}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-sm font-medium uppercase tracking-[0.2em]"
+                  className="flex items-center gap-3 py-3 text-base font-medium"
                 >
-                  {l.label}
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                  {label}
                 </Link>
               </li>
             ))}
