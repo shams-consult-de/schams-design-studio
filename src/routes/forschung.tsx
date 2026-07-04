@@ -10,9 +10,9 @@ export const Route = createFileRoute("/forschung")({
           "Forschung und Lehre bei Shams Consult — Fachbeiträge zur Stellplatzsatzung sowie betreute Bachelor- und Masterarbeiten an der Frankfurt UAS.",
       },
       { property: "og:title", content: "Forschung — Shams Consult" },
-      { property: "og:url", content: "/forschung" },
+      { property: "og:url", content: "https://shams-consult.de/forschung" },
     ],
-    links: [{ rel: "canonical", href: "/forschung" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/forschung" }],
   }),
   component: ForschungPage,
 });

@@ -17,9 +17,9 @@ export const Route = createFileRoute("/karriere")({
         content:
           "Werde Teil eines innovativen Architektur- und Stadtplanungsbüros in Frankfurt am Main.",
       },
-      { property: "og:url", content: "/karriere" },
+      { property: "og:url", content: "https://shams-consult.de/karriere" },
     ],
-    links: [{ rel: "canonical", href: "/karriere" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/karriere" }],
   }),
   component: KarrierePage,
 });

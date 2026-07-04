@@ -6,9 +6,9 @@ export const Route = createFileRoute("/datenschutz")({
       { title: "Datenschutz — Schams Consult" },
       { name: "description", content: "Datenschutzerklärung nach DSGVO." },
       { name: "robots", content: "noindex" },
-      { property: "og:url", content: "/datenschutz" },
+      { property: "og:url", content: "https://shams-consult.de/datenschutz" },
     ],
-    links: [{ rel: "canonical", href: "/datenschutz" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/datenschutz" }],
   }),
   component: DatenschutzPage,
 });

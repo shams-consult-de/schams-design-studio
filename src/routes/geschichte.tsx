@@ -17,11 +17,11 @@ export const Route = createFileRoute("/geschichte")({
       {
         property: "og:image",
         content:
-          "/images/from-nobody-to-somebody-to-help-and-share-experiences-with-e-.jpg",
+          "https://shams-consult.de/images/from-nobody-to-somebody-to-help-and-share-experiences-with-e-.jpg",
       },
-      { property: "og:url", content: "/geschichte" },
+      { property: "og:url", content: "https://shams-consult.de/geschichte" },
     ],
-    links: [{ rel: "canonical", href: "/geschichte" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/geschichte" }],
   }),
   component: GeschichtePage,
 });

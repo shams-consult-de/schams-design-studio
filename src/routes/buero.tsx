@@ -12,9 +12,9 @@ export const Route = createFileRoute("/buero")({
           "Über Shams Consult — Architektur, Stadtplanung und Forschung. Gegründet und geleitet von Dipl.-Ing. Majeed Shams. Team, Philosophie und Geschichte.",
       },
       { property: "og:title", content: "Über uns — Shams Consult" },
-      { property: "og:url", content: "/buero" },
+      { property: "og:url", content: "https://shams-consult.de/buero" },
     ],
-    links: [{ rel: "canonical", href: "/buero" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/buero" }],
   }),
   component: BueroPage,
 });

@@ -3,3 +3,5 @@ Allow: /
 
 Disallow: /impressum
 Disallow: /datenschutz
+
+Sitemap: https://shams-consult.de/sitemap.xml

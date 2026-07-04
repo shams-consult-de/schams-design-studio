@@ -17,9 +17,9 @@ export const Route = createFileRoute("/blog")({
         property: "og:image",
         content: blogPosts[0]?.image,
       },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://shams-consult.de/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/blog" }],
   }),
   component: BlogPage,
 });
