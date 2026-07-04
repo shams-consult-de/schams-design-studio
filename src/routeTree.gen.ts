@@ -16,6 +16,7 @@ import { Route as PhilosophieRouteImport } from './routes/philosophie'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KundenfeedbackRouteImport } from './routes/kundenfeedback'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as KarriereRouteImport } from './routes/karriere'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as GeschichteRouteImport } from './routes/geschichte'
 import { Route as ForschungRouteImport } from './routes/forschung'
@@ -58,6 +59,11 @@ const KundenfeedbackRoute = KundenfeedbackRouteImport.update({
 const KontaktRoute = KontaktRouteImport.update({
   id: '/kontakt',
   path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KarriereRoute = KarriereRouteImport.update({
+  id: '/karriere',
+  path: '/karriere',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImpressumRoute = ImpressumRouteImport.update({
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/forschung': typeof ForschungRoute
   '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
@@ -127,6 +134,7 @@ export interface FileRoutesByTo {
   '/forschung': typeof ForschungRoute
   '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
@@ -145,6 +153,7 @@ export interface FileRoutesById {
   '/forschung': typeof ForschungRoute
   '/geschichte': typeof GeschichteRoute
   '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
@@ -164,6 +173,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
@@ -181,6 +191,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
@@ -198,6 +209,7 @@ export interface FileRouteTypes {
     | '/forschung'
     | '/geschichte'
     | '/impressum'
+    | '/karriere'
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
@@ -216,6 +228,7 @@ export interface RootRouteChildren {
   ForschungRoute: typeof ForschungRoute
   GeschichteRoute: typeof GeschichteRoute
   ImpressumRoute: typeof ImpressumRoute
+  KarriereRoute: typeof KarriereRoute
   KontaktRoute: typeof KontaktRoute
   KundenfeedbackRoute: typeof KundenfeedbackRoute
   LeistungenRoute: typeof LeistungenRoute
@@ -274,6 +287,13 @@ declare module '@tanstack/react-router' {
       path: '/kontakt'
       fullPath: '/kontakt'
       preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere': {
+      id: '/karriere'
+      path: '/karriere'
+      fullPath: '/karriere'
+      preLoaderRoute: typeof KarriereRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/impressum': {
@@ -344,6 +364,7 @@ const rootRouteChildren: RootRouteChildren = {
   ForschungRoute: ForschungRoute,
   GeschichteRoute: GeschichteRoute,
   ImpressumRoute: ImpressumRoute,
+  KarriereRoute: KarriereRoute,
   KontaktRoute: KontaktRoute,
   KundenfeedbackRoute: KundenfeedbackRoute,
   LeistungenRoute: LeistungenRoute,
