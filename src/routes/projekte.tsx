@@ -63,6 +63,37 @@ function ProjectsPage() {
           </article>
         ))}
       </div>
+
+      <div className="mt-32 border-t border-border pt-16">
+        <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
+          Galerie
+        </p>
+        <h2 className="mt-4 font-serif text-3xl md:text-5xl">
+          Pläne, Baustellen & <span className="italic">Details</span>
+        </h2>
+        <p className="mt-4 max-w-xl text-brand-black/70">
+          Weitere Einblicke aus laufenden und realisierten Projekten — von
+          Ausführungsplänen über Bebauungspläne bis zur Baustellendokumentation.
+        </p>
+
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
+          {galleryImages.map((g) => (
+            <figure key={g.url} className="group overflow-hidden">
+              <img
+                src={g.url}
+                alt={g.alt}
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+              <figcaption className="mt-2 text-[11px] leading-snug text-brand-black/60">
+                {g.alt}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
