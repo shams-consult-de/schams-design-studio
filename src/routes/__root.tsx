@@ -14,10 +14,11 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "../components/site-nav";
 import { SiteFooter } from "../components/site-footer";
 import { CookieBanner } from "../components/cookie-banner";
+import { WhatsAppFab } from "../components/whatsapp-fab";
 
-const SITE_NAME = "Schams Consult";
+const SITE_NAME = "Shams Consult";
 const SITE_DESCRIPTION =
-  "Schams Consult — Büro für Architektur und Stadtplanung. Wir gestalten Lebensräume, die Funktionalität mit ästhetischer Langlebigkeit verbinden.";
+  "Shams Consult — Planungsbüro für Architektur und Stadtplanung. Über 15 Jahre Erfahrung, über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.";
 
 function NotFoundComponent() {
   return (
@@ -158,6 +159,7 @@ function RootComponent() {
         </main>
         <SiteFooter />
       </div>
+      <WhatsAppFab />
       <CookieBanner />
     </QueryClientProvider>
   );
