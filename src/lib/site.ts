@@ -1,6 +1,6 @@
 // Canonical site URL used for absolute canonical and Open Graph links.
 // Update once a custom domain is live.
-export const SITE_URL = "https://shamsconsult.de";
+export const SITE_URL = "https://shams-consult.de";
 
 /** Build an absolute URL for a given site-relative path. */
 export const absUrl = (path: string): string => {
