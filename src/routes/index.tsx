@@ -1,18 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  MapPin,
-  Phone,
-  Mail,
-  CalendarCheck,
-  MessageCircle,
-  Building2,
-  Users,
-  Landmark,
-  GraduationCap,
-  Leaf,
-  Scale,
-} from "lucide-react";
+import { Icon } from "@/components/icon";
 import heroFacade from "@/assets/hero-facade.jpg";
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
@@ -35,27 +22,27 @@ export const Route = createFileRoute("/")({
 
 const reasons = [
   {
-    Icon: Building2,
+    icon: "building",
     title: "Über 15 Jahre Erfahrung & über 100 realisierte Projekte",
     body: "Wir planen und realisieren seit mehr als einem Jahrzehnt hochwertige Architektur- und Bauprojekte – wirtschaftlich, gestalterisch überzeugend und funktional. Öffentliche wie private Bauherren profitieren von unserer Erfahrung.",
   },
   {
-    Icon: Scale,
+    icon: "scale-balanced",
     title: "Bauanträge und Planungsrecht – Fachwissen aus der Praxis",
     body: "Büroinhaber Dipl.-Ing. Majeed Shams hat über 100 Bauanträge geprüft – im Rahmen seiner Tätigkeit bei den Städten Dieburg, Weinstadt und Karlsruhe. Dieses Know-how fließt in unsere rechtssichere und fundierte Planungsarbeit ein.",
   },
   {
-    Icon: Leaf,
+    icon: "leaf",
     title: "Wirtschaftlich & nachhaltig denken – aus eigener Erfahrung",
     body: "Durch unsere private Beteiligung an Immobilienunternehmen verstehen wir wirtschaftliche Anforderungen und ökologische Zielsetzungen unserer Kunden besonders gut. Wir planen lösungsorientiert – aus Sicht der Investoren.",
   },
   {
-    Icon: GraduationCap,
+    icon: "graduation-cap",
     title: "Aktive Forschung & Lehre – am Puls der Baubranche",
     body: "Seit 2020 betreut Majeed Shams Forschungsprojekte und Abschlussarbeiten an der Frankfurt UAS (University of Applied Sciences). So fließen aktuelle Erkenntnisse aus Architektur, Stadtplanung und Baumanagement direkt in unsere Projekte ein.",
   },
   {
-    Icon: Users,
+    icon: "users",
     title: "Ein leistungsstarkes Team für komplexe Planungsaufgaben",
     body: "Shams Consult ist ein innovatives Planungsbüro mit einem festen Netzwerk aus 16 erfahrenen Architektinnen und Ingenieurinnen. Wir garantieren kreative Lösungen, Termin- und Kostensicherheit – auch bei anspruchsvollen Projekten.",
   },
@@ -98,9 +85,9 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-brand-accent px-8 py-4 text-base font-semibold text-brand-white shadow-lg shadow-brand-accent/25 transition-transform hover:-translate-y-0.5"
               >
-                <CalendarCheck className="h-5 w-5" aria-hidden="true" />
+                <Icon name="calendar-check" className="text-xl" />
                 Erstgespräch buchen
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                <Icon name="arrow-right" className="text-xl transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href={CONTACT.whatsappHref}
@@ -108,7 +95,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                <Icon name="comment" className="text-xl" />
                 Über WhatsApp
               </a>
               <Link
@@ -120,13 +107,13 @@ function HomePage() {
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-brand-black/70">
               <a href={CONTACT.offices[0].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Phone className="h-4 w-4" aria-hidden="true" /> Frankfurt: {CONTACT.offices[0].phone}
+                <Icon name="phone" className="text-base" /> Frankfurt: {CONTACT.offices[0].phone}
               </a>
               <a href={CONTACT.offices[1].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Phone className="h-4 w-4" aria-hidden="true" /> Rödermark: {CONTACT.offices[1].phone}
+                <Icon name="phone" className="text-base" /> Rödermark: {CONTACT.offices[1].phone}
               </a>
               <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+                <Icon name="envelope" className="text-base" /> {CONTACT.email}
               </a>
             </div>
           </div>
@@ -150,7 +137,7 @@ function HomePage() {
         </header>
 
         <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map(({ Icon, title, body }, i) => (
+          {reasons.map(({ icon, title, body }, i) => (
             <li
               key={title}
               data-reveal
@@ -159,7 +146,7 @@ function HomePage() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent transition-colors group-hover:bg-brand-accent group-hover:text-brand-white">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  <Icon name={icon} className="text-xl" />
                 </div>
                 <span className="font-serif text-3xl text-brand-black/20">
                   0{i + 1}
@@ -192,7 +179,7 @@ function HomePage() {
               to="/projekte"
               className="link-sweep inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-black transition-colors hover:text-brand-accent"
             >
-              Alle Projekte <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Alle Projekte <Icon name="arrow-right" className="text-base" />
             </Link>
           </header>
 
@@ -285,18 +272,18 @@ function HomePage() {
               to="/forschung"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-black px-7 py-3.5 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-accent"
             >
-              Zur Forschung <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Zur Forschung <Icon name="arrow-right" className="text-base" />
             </Link>
           </div>
 
           <div className="grid gap-6 lg:col-span-7 md:grid-cols-3">
             {[
-              { Icon: GraduationCap, title: "Frankfurt UAS", body: "Lehrbeauftragter seit 2020 — Fachbereich Architektur, Stadtplanung & Bauingenieurwesen." },
-              { Icon: Landmark, title: "Kommunale Praxis", body: "Über 100 geprüfte Bauanträge in Dieburg, Weinstadt und Karlsruhe." },
-              { Icon: Users, title: "16 Fachleute", body: "Festes Netzwerk aus Architekt:innen und Ingenieur:innen für komplexe Aufgaben." },
-            ].map(({ Icon, title, body }) => (
+              { icon: "graduation-cap", title: "Frankfurt UAS", body: "Lehrbeauftragter seit 2020 — Fachbereich Architektur, Stadtplanung & Bauingenieurwesen." },
+              { icon: "landmark", title: "Kommunale Praxis", body: "Über 100 geprüfte Bauanträge in Dieburg, Weinstadt und Karlsruhe." },
+              { icon: "users", title: "16 Fachleute", body: "Festes Netzwerk aus Architekt:innen und Ingenieur:innen für komplexe Aufgaben." },
+            ].map(({ icon, title, body }) => (
               <div key={title} className="flex flex-col rounded-2xl bg-brand-black p-8 text-brand-white">
-                <Icon className="h-6 w-6 text-brand-accent" aria-hidden="true" />
+                <Icon name={icon} className="text-2xl text-brand-accent" />
                 <h3 className="mt-6 font-serif text-2xl">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-white/70">{body}</p>
               </div>
@@ -319,14 +306,14 @@ function HomePage() {
               <div className="mt-10 grid gap-8 sm:grid-cols-2">
                 {CONTACT.offices.map((o) => (
                   <address key={o.name} className="not-italic leading-relaxed">
-                    <MapPin className="mb-3 h-5 w-5 text-brand-accent" aria-hidden="true" />
+                    <Icon name="location-dot" className="mb-3 text-xl text-brand-accent" />
                     <strong className="block font-semibold">{o.name}</strong>
                     {o.street}
                     <br />
                     {o.city}
                     <br />
                     <a href={o.phoneHref} className="mt-2 inline-flex items-center gap-2 text-brand-white/80 hover:text-brand-accent">
-                      <Phone className="h-4 w-4" aria-hidden="true" /> {o.phone}
+                      <Icon name="phone" className="text-base" /> {o.phone}
                     </a>
                   </address>
                 ))}
@@ -351,7 +338,7 @@ function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
                 >
-                  <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+                  <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
                 </a>
                 <a
                   href={CONTACT.whatsappHref}
@@ -359,13 +346,13 @@ function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp
+                  <Icon name="comment" className="text-base" /> WhatsApp
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-brand-accent hover:text-brand-accent"
                 >
-                  <Mail className="h-4 w-4" aria-hidden="true" /> {CONTACT.email}
+                  <Icon name="envelope" className="text-base" /> {CONTACT.email}
                 </a>
               </div>
             </div>
@@ -448,7 +435,7 @@ function PartnersSection() {
               <p className="text-[10px] font-semibold uppercase tracking-widest text-brand-accent">
                 {p.tag}
               </p>
-              <ArrowRight className="h-4 w-4 text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent" aria-hidden="true" />
+              <Icon name="arrow-right" className="text-base text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent" />
             </div>
             <h3 className="mt-4 font-serif text-2xl">{p.name}</h3>
             <p className="mt-3 text-sm leading-relaxed text-brand-black/70">{p.body}</p>

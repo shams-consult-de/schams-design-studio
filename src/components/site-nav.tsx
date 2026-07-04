@@ -1,19 +1,19 @@
 import { Link } from "@tanstack/react-router";
+import { Icon } from "@/components/icon";
 import { useEffect, useState } from "react";
-import { Home, Building2, Layers, Mail, Menu, X, FlaskConical, CalendarCheck, Star, BookOpen, Briefcase } from "lucide-react";
 import { CONTACT, LOGO_URL } from "@/lib/contact";
 
 const links = [
-  { to: "/", label: "Start", Icon: Home },
-  { to: "/architektur", label: "Architektur", Icon: Layers },
-  { to: "/stadtplanung", label: "Stadtplanung", Icon: Layers },
-  { to: "/projekte", label: "Projekte", Icon: Building2 },
-  { to: "/buero", label: "Über\u00A0uns", Icon: Building2 },
-  { to: "/forschung", label: "Forschung", Icon: FlaskConical },
-  { to: "/blog", label: "Blog", Icon: BookOpen },
-  { to: "/karriere", label: "Karriere", Icon: Briefcase },
-  { to: "/kundenfeedback", label: "Feedback", Icon: Star },
-  { to: "/kontakt", label: "Kontakt", Icon: Mail },
+  { to: "/", label: "Start", icon: "house" },
+  { to: "/architektur", label: "Architektur", icon: "layer-group" },
+  { to: "/stadtplanung", label: "Stadtplanung", icon: "layer-group" },
+  { to: "/projekte", label: "Projekte", icon: "building" },
+  { to: "/buero", label: "Über\u00A0uns", icon: "building" },
+  { to: "/forschung", label: "Forschung", icon: "flask" },
+  { to: "/blog", label: "Blog", icon: "book-open" },
+  { to: "/karriere", label: "Karriere", icon: "briefcase" },
+  { to: "/kundenfeedback", label: "Feedback", icon: "star" },
+  { to: "/kontakt", label: "Kontakt", icon: "envelope" },
 ] as const;
 
 export function SiteNav() {
@@ -72,7 +72,7 @@ export function SiteNav() {
         </Link>
 
         <ul className="hidden items-center gap-2 lg:flex xl:gap-3">
-          {links.map(({ to, label, Icon }) => (
+          {links.map(({ to, label, icon }) => (
             <li key={to}>
               <Link
                 to={to}
@@ -82,7 +82,7 @@ export function SiteNav() {
                 activeOptions={{ exact: to === "/" }}
               >
                 <span className="absolute inset-0 flex h-10 w-14 items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-3">
-                  <Icon className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true" />
+                  <Icon name={icon} className="text-xl transition-transform duration-300 ease-out group-hover:scale-110" />
                 </span>
                 <span className="absolute inset-0 flex h-10 w-14 translate-y-6 items-center justify-center px-0.5 text-center text-xs font-medium opacity-0 transition-all duration-300 ease-out group-hover:translate-y-3 group-hover:opacity-100">
                   {label}
@@ -102,7 +102,7 @@ export function SiteNav() {
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" aria-hidden="true" />
-              <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
+              <Icon name="calendar-check" className="text-base transition-transform duration-300 group-hover:rotate-[-8deg]" />
               Erstgespräch buchen
             </a>
           </li>
@@ -114,7 +114,7 @@ export function SiteNav() {
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <Icon name="xmark" className="text-2xl" /> : <Icon name="bars" className="text-2xl" />}
         </button>
       </div>
 
@@ -124,7 +124,7 @@ export function SiteNav() {
         }`}
       >
         <ul className="flex flex-col px-6 py-2">
-          {links.map(({ to, label, Icon }, i) => (
+          {links.map(({ to, label, icon }, i) => (
             <li
               key={to}
               className={`transform transition-all duration-500 ease-out ${
@@ -137,7 +137,7 @@ export function SiteNav() {
                 onClick={() => setOpen(false)}
                 className="group flex items-center gap-3 py-3 text-base font-medium transition-colors hover:text-brand-accent"
               >
-                <Icon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                <Icon name={icon} className="text-base transition-transform duration-300 group-hover:translate-x-1" />
                 {label}
               </Link>
             </li>
@@ -149,7 +149,7 @@ export function SiteNav() {
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white transition-transform hover:scale-[1.02]"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              <Icon name="calendar-check" className="text-base" />
               Erstgespräch buchen
             </a>
           </li>

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CalendarCheck, MessageCircle } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
 
 const services = [
@@ -115,7 +115,7 @@ function ServicesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+              <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
             </a>
             <a
               href={CONTACT.whatsappHref}
@@ -123,7 +123,7 @@ function ServicesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" /> Über WhatsApp
+              <Icon name="comment" className="text-base" /> Über WhatsApp
             </a>
           </div>
         </div>

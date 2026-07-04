@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FileDown, GraduationCap, ExternalLink } from "lucide-react";
-
+import { Icon } from "@/components/icon";
 export const Route = createFileRoute("/forschung")({
   head: () => ({
     meta: [
@@ -141,7 +140,7 @@ function ForschungPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-accent"
             >
-              <FileDown className="h-4 w-4" aria-hidden="true" /> Vollständiger Beitrag (PDF, 163 KB)
+              <Icon name="file-arrow-down" className="text-base" /> Vollständiger Beitrag (PDF, 163 KB)
             </a>
           </div>
 
@@ -174,7 +173,7 @@ function ForschungPage() {
                 className="rounded-2xl border border-border bg-brand-white p-8"
               >
                 <div className="flex items-center gap-2">
-                  <GraduationCap className="h-4 w-4 text-brand-accent" aria-hidden="true" />
+                  <Icon name="graduation-cap" className="text-base text-brand-accent" />
                   <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
                     {a.typ}
                   </span>
@@ -200,7 +199,7 @@ function ForschungPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 border-b border-brand-black hover:border-brand-accent hover:text-brand-accent"
             >
-              Frankfurt University of Applied Sciences <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              Frankfurt University of Applied Sciences <Icon name="up-right-from-square" className="text-xs" />
             </a>
           </p>
         </div>

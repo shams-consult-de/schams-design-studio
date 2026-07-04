@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Quote, Star } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/kundenfeedback")({
@@ -105,10 +105,10 @@ function FeedbackPage() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-0.5 text-brand-accent">
                   {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="h-4 w-4 fill-current" aria-hidden="true" />
+                    <Icon name="star" key={s} className="text-base fill-current" />
                   ))}
                 </div>
-                <Quote className="h-6 w-6 text-brand-black/15" aria-hidden="true" />
+                <Icon name="quote-left" className="text-2xl text-brand-black/15" />
               </div>
               <p className="mt-6 flex-1 text-sm leading-relaxed text-brand-black/75">
                 {r.text}

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/architektur")({
@@ -141,13 +141,13 @@ function ArchitekturPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" /> Erstgespräch buchen
+              <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
             </a>
             <Link
               to="/projekte"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold hover:border-brand-accent hover:text-brand-accent"
             >
-              Projekte ansehen <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Projekte ansehen <Icon name="arrow-right" className="text-base" />
             </Link>
           </div>
         </div>
