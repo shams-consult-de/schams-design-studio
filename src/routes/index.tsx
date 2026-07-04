@@ -79,8 +79,8 @@ function HomePage() {
         />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/90 via-brand-white/55 to-transparent" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-7xl items-center px-6 py-24 lg:px-12">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+          <div className="max-w-2xl" data-reveal="left">
+            <p className="shams-float text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
               Architektur · Stadtplanung · Forschung
             </p>
             <h1 className="mt-6 text-5xl font-bold leading-[1.05] text-brand-black md:text-7xl lg:text-[5.5rem]">
