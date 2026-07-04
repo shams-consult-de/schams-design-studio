@@ -43,15 +43,15 @@ export function SiteNav() {
               <Link
                 to={to}
                 aria-label={label}
-                className="group relative flex h-10 w-12 items-center justify-center overflow-hidden rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
+                className="group relative flex h-10 w-14 items-center justify-center overflow-hidden rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
                 activeProps={{ className: "text-brand-accent" }}
                 activeOptions={{ exact: to === "/" }}
               >
                 <span className="flex flex-col items-center transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                  <span className="flex h-10 w-12 items-center justify-center">
+                  <span className="flex h-10 w-14 items-center justify-center">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
-                  <span className="flex h-10 w-12 items-center justify-center text-center text-[10px] leading-tight font-medium">
+                  <span className="flex h-10 w-14 items-center justify-center px-0.5 text-center text-[10px] leading-tight font-medium">
                     {label}
                   </span>
                 </span>
