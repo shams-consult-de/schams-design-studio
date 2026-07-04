@@ -16,10 +16,16 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "monthly", priority: "1.0" },
+          { path: "/architektur", changefreq: "yearly", priority: "0.8" },
+          { path: "/stadtplanung", changefreq: "yearly", priority: "0.8" },
           { path: "/projekte", changefreq: "monthly", priority: "0.9" },
-          { path: "/leistungen", changefreq: "yearly", priority: "0.8" },
+          { path: "/leistungen", changefreq: "yearly", priority: "0.7" },
           { path: "/forschung", changefreq: "monthly", priority: "0.7" },
           { path: "/buero", changefreq: "yearly", priority: "0.7" },
+          { path: "/geschichte", changefreq: "yearly", priority: "0.5" },
+          { path: "/philosophie", changefreq: "yearly", priority: "0.5" },
+          { path: "/karriere", changefreq: "weekly", priority: "0.6" },
+          { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/kundenfeedback", changefreq: "monthly", priority: "0.7" },
           { path: "/kontakt", changefreq: "yearly", priority: "0.7" },
           { path: "/barrierefreiheit", changefreq: "yearly", priority: "0.3" },
