@@ -37,7 +37,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-5">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-4">
             {CONTACT.offices.map((o) => (
               <div key={o.name}>
                 <h3 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
