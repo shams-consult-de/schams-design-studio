@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as StadtplanungRouteImport } from './routes/stadtplanung'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjekteRouteImport } from './routes/projekte'
+import { Route as PhilosophieRouteImport } from './routes/philosophie'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KundenfeedbackRouteImport } from './routes/kundenfeedback'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -37,6 +38,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ProjekteRoute = ProjekteRouteImport.update({
   id: '/projekte',
   path: '/projekte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhilosophieRoute = PhilosophieRouteImport.update({
+  id: '/philosophie',
+  path: '/philosophie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LeistungenRoute = LeistungenRouteImport.update({
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
@@ -123,6 +130,7 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/kundenfeedback': typeof KundenfeedbackRoute
   '/leistungen': typeof LeistungenRoute
+  '/philosophie': typeof PhilosophieRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/kundenfeedback'
     | '/leistungen'
+    | '/philosophie'
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
@@ -207,6 +219,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   KundenfeedbackRoute: typeof KundenfeedbackRoute
   LeistungenRoute: typeof LeistungenRoute
+  PhilosophieRoute: typeof PhilosophieRoute
   ProjekteRoute: typeof ProjekteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StadtplanungRoute: typeof StadtplanungRoute
@@ -233,6 +246,13 @@ declare module '@tanstack/react-router' {
       path: '/projekte'
       fullPath: '/projekte'
       preLoaderRoute: typeof ProjekteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/philosophie': {
+      id: '/philosophie'
+      path: '/philosophie'
+      fullPath: '/philosophie'
+      preLoaderRoute: typeof PhilosophieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/leistungen': {
@@ -327,6 +347,7 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   KundenfeedbackRoute: KundenfeedbackRoute,
   LeistungenRoute: LeistungenRoute,
+  PhilosophieRoute: PhilosophieRoute,
   ProjekteRoute: ProjekteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StadtplanungRoute: StadtplanungRoute,
