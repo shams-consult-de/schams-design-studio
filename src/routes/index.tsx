@@ -79,8 +79,8 @@ function HomePage() {
         />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/90 via-brand-white/55 to-transparent" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-7xl items-center px-6 py-24 lg:px-12">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+          <div className="max-w-2xl" data-reveal="left">
+            <p className="shams-float text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
               Architektur · Stadtplanung · Forschung
             </p>
             <h1 className="mt-6 text-5xl font-bold leading-[1.05] text-brand-black md:text-7xl lg:text-[5.5rem]">
@@ -135,7 +135,7 @@ function HomePage() {
 
       {/* 5 gute Gründe */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
-        <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
               Warum Shams Consult
@@ -153,6 +153,8 @@ function HomePage() {
           {reasons.map(({ Icon, title, body }, i) => (
             <li
               key={title}
+              data-reveal
+              style={{ transitionDelay: `${(i % 3) * 90}ms` }}
               className="group flex flex-col rounded-2xl border border-border bg-concrete/40 p-8 transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:bg-brand-white hover:shadow-xl hover:shadow-brand-black/5"
             >
               <div className="flex items-center justify-between">
@@ -173,7 +175,7 @@ function HomePage() {
       {/* Aktuelles Projekt / Portfolio */}
       <section className="bg-concrete/60 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
                 Portfolio
@@ -188,22 +190,28 @@ function HomePage() {
             </div>
             <Link
               to="/projekte"
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-black transition-colors hover:text-brand-accent"
+              className="link-sweep inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-black transition-colors hover:text-brand-accent"
             >
               Alle Projekte <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </header>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-            {featured.map((p) => (
-              <article key={p.slug} className="group">
+            {featured.map((p, i) => (
+              <article
+                key={p.slug}
+                className="group image-zoom"
+                data-reveal
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
                 <div className="overflow-hidden rounded-xl">
                   <img
                     src={p.image}
                     alt={p.imageAlt}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                    className="aspect-[3/4] w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-3 text-sm font-semibold text-brand-black">{p.title}</h3>
@@ -211,8 +219,51 @@ function HomePage() {
               </article>
             ))}
           </div>
+
+          {/* Aktuelles Projekt: Töpfenmühle */}
+          <div className="mt-24 grid gap-10 rounded-2xl border border-border bg-brand-white p-8 lg:grid-cols-12 lg:p-12" data-reveal>
+            <div className="lg:col-span-5 image-zoom overflow-hidden rounded-xl">
+              <img
+                src="https://image.jimcdn.com/app/cms/image/transf/none/path/sc1699083d70b354e/image/i8864e965b260b110/version/1701080364/image.jpg"
+                alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+                Aktuelles Projekt
+              </p>
+              <h3 className="mt-3 font-serif text-3xl md:text-4xl">
+                Bebauungsplan <span className="italic">„Töpfenmühle“</span>, Gersfeld (Rhön)
+              </h3>
+              <p className="mt-5 text-brand-black/75 leading-relaxed">
+                Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen
+                Verfahrens mit Artenschutzuntersuchung und Umweltprüfung (Umweltbericht)
+                nach § 2 Abs. 4 BauGB aufgestellt. Es handelt sich um einen
+                qualifizierten Bebauungsplan gemäß § 30 Abs. 1 BauGB. Innerhalb des
+                Geltungsbereiches sind Art und Maß der baulichen Nutzung, die
+                überbaubaren Grundstücksflächen und die örtlichen Verkehrsflächen
+                festgesetzt. Die Erschließung ist bereits gesichert.
+              </p>
+              <p className="mt-4 text-brand-black/75 leading-relaxed">
+                Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand
+                zu erhalten und die ländlich geprägte, historisch bedeutsame dörfliche
+                Siedlungsstruktur zu bewahren. Zeitgemäße Nutzungen und die energetische
+                Sanierung der Bestandsgebäude — inklusive erforderlicher Ersatzbauten —
+                sollen mit Planungssicherheit ermöglicht werden. Unbebaute Flächen
+                innerhalb des Planungsgebietes bleiben in ihrer natürlichen
+                landschaftlichen Form erhalten.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Kunden & Partner */}
+      <PartnersSection />
 
       {/* Forschung & Lehre Teaser */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
@@ -322,5 +373,88 @@ function HomePage() {
         </div>
       </section>
     </>
+  );
+}
+
+const partners = [
+  {
+    name: "Adapteo",
+    tag: "Modulares & temporäres Bauen",
+    href: "https://www.adapteo.de",
+    body:
+      "Unser Geschäftspartner Adapteo aus Neu-Isenburg ist auf modulare und temporäre Gebäude spezialisiert. Gemeinsam realisieren wir 2025 ein Ausweichquartier für über 200 Mitarbeitende eines Behördenzentrums in Berlin — schnell umgesetzt, hoch funktional, nachhaltig gebaut. Wir begleiten Adapteo und die Bundesanstalt für Immobilienaufgaben in Planung und Umsetzung.",
+  },
+  {
+    name: "Stadtwerke Rodgau",
+    tag: "Kommunale Infrastruktur",
+    href: "https://www.stadtwerke-rodgau.de",
+    body:
+      "Die Stadtwerke Rodgau sind ein Eigenbetrieb der Stadt Rodgau und fördern ökologische, umweltfreundliche und klimafreundliche Projekte. Wir haben die Stadtwerke bei der Genehmigungsplanung für die Kompostierungsanlage unterstützt — und freuen uns auf weitere gemeinsame Projekte.",
+  },
+  {
+    name: "Frankfurt UAS",
+    tag: "Forschung & Lehre",
+    href: "https://www.frankfurt-university.de",
+    body:
+      "In Kooperation mit der Frankfurt University of Applied Sciences geben wir aktuelle Themen der Bau- und Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und Masterarbeiten am Fachbereich Architektur, Bauingenieurwesen und Geomatik.",
+  },
+  {
+    name: "INSTINKT Bauunternehmen",
+    tag: "Wohnungs- & Reihenhausbau",
+    href: "https://www.instinkt-wohnraumberater.de",
+    body:
+      "INSTINKT Bauunternehmen GmbH mit Sitz in Eschborn baut regional (Rhein-Main-Gebiet) und überregional Einfamilien-, Reihen- und Doppelhäuser sowie Bürobauten. Wir hatten die Ehre, die Firma bei der Planung und Realisierung von drei innovativen Häusern zu unterstützen.",
+  },
+  {
+    name: "SCHOOFS Immobilien",
+    tag: "Projektentwicklung Mischnutzung",
+    href: "https://www.schoofs-immobilien.de",
+    body:
+      "SCHOOFS Immobilien ist bundesweit im Bereich Projektentwicklung und Realisierung des Lebensmitteleinzelhandels in Kombination mit Wohnungsbau bekannt. Aktuell begleiten wir das Unternehmen bei einem Supermarkt, 22 Wohnungen, einer Bäckerei und den Außenanlagen.",
+  },
+];
+
+function PartnersSection() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
+      <header className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+            Kunden & Partner
+          </p>
+          <h2 className="mt-3 font-serif text-4xl md:text-5xl">
+            Vertrauen, das <span className="italic">verbindet</span>.
+          </h2>
+        </div>
+        <p className="max-w-md text-brand-black/70">
+          Wir arbeiten mit öffentlichen Auftraggebern, Projektentwicklern und
+          Bauunternehmen zusammen — von der Machbarkeitsstudie bis zur
+          schlüsselfertigen Realisierung.
+        </p>
+      </header>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {partners.map((p, i) => (
+          <a
+            key={p.name}
+            href={p.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style={{ transitionDelay: `${(i % 3) * 90}ms` }}
+            className="group flex flex-col rounded-2xl border border-border bg-brand-white p-8 transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:shadow-xl hover:shadow-brand-black/5"
+          >
+            <div className="flex items-center justify-between">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-brand-accent">
+                {p.tag}
+              </p>
+              <ArrowRight className="h-4 w-4 text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent" aria-hidden="true" />
+            </div>
+            <h3 className="mt-4 font-serif text-2xl">{p.name}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-brand-black/70">{p.body}</p>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }

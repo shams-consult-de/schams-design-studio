@@ -15,6 +15,7 @@ import { SiteNav } from "../components/site-nav";
 import { SiteFooter } from "../components/site-footer";
 import { CookieBanner } from "../components/cookie-banner";
 import { WhatsAppFab } from "../components/whatsapp-fab";
+import { ScrollReveal } from "../components/scroll-reveal";
 
 const SITE_NAME = "Shams Consult";
 const SITE_DESCRIPTION =
@@ -161,6 +162,7 @@ function RootComponent() {
       </div>
       <WhatsAppFab />
       <CookieBanner />
+      <ScrollReveal />
     </QueryClientProvider>
   );
 }
