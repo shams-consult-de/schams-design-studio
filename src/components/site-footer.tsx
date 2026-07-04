@@ -58,6 +58,21 @@ export function SiteFooter() {
 
           <div className="lg:col-span-2">
             <h3 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+              Themen
+            </h3>
+            <ul className="mt-4 flex flex-col space-y-2 text-sm">
+              <li><Link to="/architektur" className="hover:text-brand-accent">Architektur</Link></li>
+              <li><Link to="/stadtplanung" className="hover:text-brand-accent">Stadtplanung</Link></li>
+              <li><Link to="/forschung" className="hover:text-brand-accent">Forschung</Link></li>
+              <li><Link to="/blog" className="hover:text-brand-accent">Blog</Link></li>
+              <li><Link to="/karriere" className="hover:text-brand-accent">Karriere</Link></li>
+              <li><Link to="/geschichte" className="hover:text-brand-accent">Geschichte</Link></li>
+              <li><Link to="/philosophie" className="hover:text-brand-accent">Philosophie</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <h3 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
               Rechtliches
             </h3>
             <ul className="mt-4 flex flex-col space-y-2 text-sm">
