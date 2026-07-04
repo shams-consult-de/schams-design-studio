@@ -19,6 +19,7 @@ import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
+import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -71,6 +72,11 @@ const BarrierefreiheitRoute = BarrierefreiheitRouteImport.update({
   path: '/barrierefreiheit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchitekturRoute = ArchitekturRouteImport.update({
+  id: '/architektur',
+  path: '/architektur',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -79,6 +85,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -92,6 +99,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -106,6 +114,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -134,6 +144,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -147,6 +158,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/architektur'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -161,6 +173,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchitekturRoute: typeof ArchitekturRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
@@ -245,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BarrierefreiheitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/architektur': {
+      id: '/architektur'
+      path: '/architektur'
+      fullPath: '/architektur'
+      preLoaderRoute: typeof ArchitekturRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -257,6 +277,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchitekturRoute: ArchitekturRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
