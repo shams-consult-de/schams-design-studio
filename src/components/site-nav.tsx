@@ -99,9 +99,10 @@ export function SiteNav() {
               href={CONTACT.bookingHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30"
             >
-              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" aria-hidden="true" />
+              <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
               Erstgespräch buchen
             </a>
           </li>
