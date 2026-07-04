@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StadtplanungRouteImport } from './routes/stadtplanung'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjekteRouteImport } from './routes/projekte'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
@@ -22,6 +23,11 @@ import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
 import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StadtplanungRoute = StadtplanungRouteImport.update({
+  id: '/stadtplanung',
+  path: '/stadtplanung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/leistungen': typeof LeistungenRoute
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stadtplanung': typeof StadtplanungRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/projekte'
     | '/sitemap.xml'
+    | '/stadtplanung'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,10 +196,18 @@ export interface RootRouteChildren {
   LeistungenRoute: typeof LeistungenRoute
   ProjekteRoute: typeof ProjekteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StadtplanungRoute: typeof StadtplanungRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/stadtplanung': {
+      id: '/stadtplanung'
+      path: '/stadtplanung'
+      fullPath: '/stadtplanung'
+      preLoaderRoute: typeof StadtplanungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -288,6 +308,7 @@ const rootRouteChildren: RootRouteChildren = {
   LeistungenRoute: LeistungenRoute,
   ProjekteRoute: ProjekteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StadtplanungRoute: StadtplanungRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
