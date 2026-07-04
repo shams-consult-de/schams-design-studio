@@ -8,7 +8,7 @@ const links = [
   { to: "/architektur", label: "Architektur", Icon: Layers },
   { to: "/stadtplanung", label: "Stadtplanung", Icon: Layers },
   { to: "/projekte", label: "Projekte", Icon: Building2 },
-  { to: "/buero", label: "Über uns", Icon: Building2 },
+  { to: "/buero", label: "Über\u00A0uns", Icon: Building2 },
   { to: "/forschung", label: "Forschung", Icon: FlaskConical },
   { to: "/blog", label: "Blog", Icon: BookOpen },
   { to: "/karriere", label: "Karriere", Icon: Briefcase },
