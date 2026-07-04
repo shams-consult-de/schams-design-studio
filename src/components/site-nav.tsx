@@ -118,35 +118,43 @@ export function SiteNav() {
         </button>
       </div>
 
-      {open && (
-        <div className="border-t border-border lg:hidden">
-          <ul className="flex flex-col px-6 py-2">
-            {links.map(({ to, label, Icon }) => (
-              <li key={to}>
-                <Link
-                  to={to}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 py-3 text-base font-medium"
-                >
-                  <Icon className="h-4 w-4" aria-hidden="true" />
-                  {label}
-                </Link>
-              </li>
-            ))}
-            <li className="pt-2 pb-4">
-              <a
-                href={CONTACT.bookingHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white"
+      <div
+        className={`overflow-hidden border-t border-border transition-[max-height,opacity] duration-500 ease-out lg:hidden ${
+          open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col px-6 py-2">
+          {links.map(({ to, label, Icon }, i) => (
+            <li
+              key={to}
+              className={`transform transition-all duration-500 ease-out ${
+                open ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+              }`}
+              style={{ transitionDelay: open ? `${60 + i * 40}ms` : "0ms" }}
+            >
+              <Link
+                to={to}
+                onClick={() => setOpen(false)}
+                className="group flex items-center gap-3 py-3 text-base font-medium transition-colors hover:text-brand-accent"
               >
-                <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                Erstgespräch buchen
-              </a>
+                <Icon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                {label}
+              </Link>
             </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li className="pt-2 pb-4">
+            <a
+              href={CONTACT.bookingHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-accent px-4 py-3 text-sm font-semibold text-brand-white transition-transform hover:scale-[1.02]"
+            >
+              <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+              Erstgespräch buchen
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
