@@ -62,7 +62,9 @@ export function SiteNav() {
             alt="Shams Consult — Architektur & Stadtplanung"
             width={200}
             height={64}
-            className="h-11 w-auto transition-transform duration-500 group-hover:scale-[1.03] lg:h-14"
+            className={`w-auto transition-all duration-500 ease-out group-hover:scale-[1.03] ${
+              scrolled ? "h-9 lg:h-11" : "h-11 lg:h-14"
+            }`}
             decoding="async"
             fetchPriority="high"
             referrerPolicy="no-referrer"
@@ -76,15 +78,19 @@ export function SiteNav() {
                 to={to}
                 aria-label={label}
                 className="group relative flex h-10 w-14 items-center justify-center overflow-visible rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
-                activeProps={{ className: "text-brand-accent" }}
+                activeProps={{ className: "text-brand-accent [&_.nav-dot]:opacity-100 [&_.nav-dot]:scale-100" }}
                 activeOptions={{ exact: to === "/" }}
               >
                 <span className="absolute inset-0 flex h-10 w-14 items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-3">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  <Icon className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true" />
                 </span>
                 <span className="absolute inset-0 flex h-10 w-14 translate-y-6 items-center justify-center px-0.5 text-center text-xs font-medium opacity-0 transition-all duration-300 ease-out group-hover:translate-y-3 group-hover:opacity-100">
                   {label}
                 </span>
+                <span
+                  className="nav-dot pointer-events-none absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 scale-0 rounded-full bg-brand-accent opacity-0 transition-all duration-300 ease-out"
+                  aria-hidden="true"
+                />
               </Link>
             </li>
           ))}
