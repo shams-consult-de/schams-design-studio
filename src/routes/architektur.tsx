@@ -16,11 +16,11 @@ export const Route = createFileRoute("/architektur")({
       {
         property: "og:image",
         content:
-          "/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg",
+          "https://shams-consult.de/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg",
       },
-      { property: "og:url", content: "/architektur" },
+      { property: "og:url", content: "https://shams-consult.de/architektur" },
     ],
-    links: [{ rel: "canonical", href: "/architektur" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/architektur" }],
   }),
   component: ArchitekturPage,
 });

@@ -19,11 +19,11 @@ export const Route = createFileRoute("/stadtplanung")({
       {
         property: "og:image",
         content:
-          "/images/image-.jpg",
+          "https://shams-consult.de/images/image-.jpg",
       },
-      { property: "og:url", content: "/stadtplanung" },
+      { property: "og:url", content: "https://shams-consult.de/stadtplanung" },
     ],
-    links: [{ rel: "canonical", href: "/stadtplanung" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/stadtplanung" }],
   }),
   component: StadtplanungPage,
 });

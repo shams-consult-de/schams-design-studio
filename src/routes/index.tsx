@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
         content:
           "Shams Consult — Planungsbüro für Architektur und Stadtplanung. Über 15 Jahre Erfahrung, über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://shams-consult.de/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/" }],
   }),
   component: HomePage,
 });

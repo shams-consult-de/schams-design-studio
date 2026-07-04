@@ -12,9 +12,9 @@ export const Route = createFileRoute("/kundenfeedback")({
           "Google-Rezensionen unserer Kundinnen und Kunden über die Zusammenarbeit mit Shams Consult — Architektur, Stadtplanung und Baugenehmigungen.",
       },
       { property: "og:title", content: "Kundenfeedback — Shams Consult" },
-      { property: "og:url", content: "/kundenfeedback" },
+      { property: "og:url", content: "https://shams-consult.de/kundenfeedback" },
     ],
-    links: [{ rel: "canonical", href: "/kundenfeedback" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/kundenfeedback" }],
   }),
   component: FeedbackPage,
 });

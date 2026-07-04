@@ -6,9 +6,9 @@ export const Route = createFileRoute("/impressum")({
       { title: "Impressum — Schams Consult" },
       { name: "description", content: "Impressum und Angaben gemäß § 5 TMG." },
       { name: "robots", content: "noindex" },
-      { property: "og:url", content: "/impressum" },
+      { property: "og:url", content: "https://shams-consult.de/impressum" },
     ],
-    links: [{ rel: "canonical", href: "/impressum" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/impressum" }],
   }),
   component: ImpressumPage,
 });

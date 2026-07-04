@@ -13,11 +13,11 @@ export const Route = createFileRoute("/philosophie")({
       {
         property: "og:image",
         content:
-          "/images/architektenb-ro-shams-consult-architekt-und-stadtplaner-.jpg",
+          "https://shams-consult.de/images/architektenb-ro-shams-consult-architekt-und-stadtplaner-.jpg",
       },
-      { property: "og:url", content: "/philosophie" },
+      { property: "og:url", content: "https://shams-consult.de/philosophie" },
     ],
-    links: [{ rel: "canonical", href: "/philosophie" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/philosophie" }],
   }),
   component: PhilosophiePage,
 });

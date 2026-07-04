@@ -9,9 +9,9 @@ export const Route = createFileRoute("/barrierefreiheit")({
         content:
           "Erklärung zur Barrierefreiheit dieser Website nach BFSG und WCAG 2.1 AA.",
       },
-      { property: "og:url", content: "/barrierefreiheit" },
+      { property: "og:url", content: "https://shams-consult.de/barrierefreiheit" },
     ],
-    links: [{ rel: "canonical", href: "/barrierefreiheit" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/barrierefreiheit" }],
   }),
   component: A11yPage,
 });

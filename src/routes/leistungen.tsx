@@ -55,9 +55,9 @@ export const Route = createFileRoute("/leistungen")({
           "Leistungen von Shams Consult: Architektur, Stadtplanung & Städtebau, Bauleitplanung, Stadtentwicklungskonzepte, Bauberatung und Bürgerbeteiligung.",
       },
       { property: "og:title", content: "Leistungen — Shams Consult" },
-      { property: "og:url", content: "/leistungen" },
+      { property: "og:url", content: "https://shams-consult.de/leistungen" },
     ],
-    links: [{ rel: "canonical", href: "/leistungen" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/leistungen" }],
   }),
   component: ServicesPage,
 });

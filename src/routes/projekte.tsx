@@ -11,9 +11,9 @@ export const Route = createFileRoute("/projekte")({
           "Ausgewählte Projekte von Schams Consult: Wohnungsbau, Stadtplanung, Kultur- und Bildungsbauten in Deutschland.",
       },
       { property: "og:title", content: "Projekte — Schams Consult" },
-      { property: "og:url", content: "/projekte" },
+      { property: "og:url", content: "https://shams-consult.de/projekte" },
     ],
-    links: [{ rel: "canonical", href: "/projekte" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/projekte" }],
   }),
   component: ProjectsPage,
 });

@@ -13,9 +13,9 @@ export const Route = createFileRoute("/kontakt")({
           "Kontakt Shams Consult — Büros Frankfurt am Main und Rödermark. Erstgespräch online buchen, WhatsApp, Telefon oder E-Mail.",
       },
       { property: "og:title", content: "Kontakt — Shams Consult" },
-      { property: "og:url", content: "/kontakt" },
+      { property: "og:url", content: "https://shams-consult.de/kontakt" },
     ],
-    links: [{ rel: "canonical", href: "/kontakt" }],
+    links: [{ rel: "canonical", href: "https://shams-consult.de/kontakt" }],
   }),
   component: ContactPage,
 });
