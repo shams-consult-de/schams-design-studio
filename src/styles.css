@@ -155,4 +155,78 @@
   transform-origin: left;
 }
 
+/* ============ Interaction Animations ============ */
+
+/* Card lift + shadow on hover */
+.card-lift {
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 500ms ease;
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -24px color-mix(in oklab, var(--color-brand-black) 35%, transparent);
+}
+
+/* Button press feedback */
+.press {
+  transition: transform 150ms ease-out;
+}
+.press:active { transform: scale(0.97); }
+
+/* Shimmer sweep across a button/pill */
+.shimmer { position: relative; overflow: hidden; }
+.shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, white 35%, transparent),
+    transparent
+  );
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.shimmer:hover::before { transform: translateX(100%); }
+
+/* Slow drift for hero backgrounds — parallax feel without JS */
+@keyframes shams-drift {
+  0%, 100% { transform: scale(1.05) translate3d(0, 0, 0); }
+  50%      { transform: scale(1.08) translate3d(-1.5%, -1%, 0); }
+}
+.bg-drift { animation: shams-drift 22s ease-in-out infinite; }
+
+/* Subtle gradient shift on accent surfaces */
+@keyframes shams-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.gradient-shift {
+  background-size: 200% 200%;
+  animation: shams-gradient-shift 12s ease-in-out infinite;
+}
+
+/* Staggered children reveal helper — pair with data-reveal on children */
+.stagger > [data-reveal]:nth-child(1) { transition-delay: 60ms; }
+.stagger > [data-reveal]:nth-child(2) { transition-delay: 140ms; }
+.stagger > [data-reveal]:nth-child(3) { transition-delay: 220ms; }
+.stagger > [data-reveal]:nth-child(4) { transition-delay: 300ms; }
+.stagger > [data-reveal]:nth-child(5) { transition-delay: 380ms; }
+.stagger > [data-reveal]:nth-child(6) { transition-delay: 460ms; }
+.stagger > [data-reveal]:nth-child(7) { transition-delay: 540ms; }
+.stagger > [data-reveal]:nth-child(8) { transition-delay: 620ms; }
+
+/* Smooth in-page scrolling for hash anchors */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bg-drift, .gradient-shift, .shams-float { animation: none !important; }
+}
+
+
 

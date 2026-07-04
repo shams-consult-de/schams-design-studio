@@ -16,6 +16,7 @@ import { SiteFooter } from "../components/site-footer";
 import { CookieBanner } from "../components/cookie-banner";
 import { WhatsAppFab } from "../components/whatsapp-fab";
 import { ScrollReveal } from "../components/scroll-reveal";
+import { ScrollProgress } from "../components/scroll-progress";
 
 const SITE_NAME = "Shams Consult";
 const SITE_DESCRIPTION =
@@ -147,6 +148,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollProgress />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-brand-accent focus:px-4 focus:py-2 focus:text-brand-white"
