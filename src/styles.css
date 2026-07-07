@@ -1,6 +1,5 @@
 @import "tailwindcss" source(none);
 @source "../src";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -270,10 +269,6 @@
   transition-delay: 620ms;
 }
 
-/* Smooth in-page scrolling for hash anchors */
-html {
-  scroll-behavior: smooth;
-}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
