@@ -6,11 +6,17 @@ export function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    try {
-      if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-    } catch {
-      // ignore
-    }
+    const check = () => {
+      try {
+        if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
+      } catch {
+        // ignore
+      }
+    };
+    // Defer to idle time so we don't block initial rendering / LCP.
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
+    if (typeof w.requestIdleCallback === "function") w.requestIdleCallback(check);
+    else setTimeout(check, 800);
   }, []);
 
   const decide = (value: "accepted" | "declined") => {
