@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
-const heroFacade = "/images/hero-facade.jpg";
+import heroAsset from "@/assets/stadtvilla_mfa_rödermark.jpg.asset.json";
+const heroFacade = heroAsset.url;
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
 
@@ -57,7 +58,7 @@ function HomePage() {
       <section className="relative min-h-[88vh] w-full overflow-hidden">
         <img
           src={heroFacade}
-          alt="Detailaufnahme einer Betonfassade mit klaren geometrischen Schatten"
+          alt="Visualisierung einer modernen Stadtvilla mit Garten und Pool"
           width={1920}
           height={1200}
           fetchPriority="high"
