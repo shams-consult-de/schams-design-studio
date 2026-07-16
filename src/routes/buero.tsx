@@ -217,8 +217,17 @@ function BueroPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-brand-black py-20 text-brand-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
+      <section className="relative overflow-hidden bg-brand-black py-20 text-brand-white">
+        <img
+          src={ctaBg}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-brand-black/40" />
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
           <h2 className="font-serif text-3xl md:text-4xl">
             Lernen Sie uns persönlich <span className="italic">kennen</span>.
           </h2>
