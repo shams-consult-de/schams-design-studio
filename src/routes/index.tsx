@@ -310,7 +310,7 @@ function HomePage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/85 to-brand-black/50" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black/80 via-brand-black/50 to-brand-black/25" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
