@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
+import heroBgAsset from "@/assets/team-planning.png.asset.json";
+import ctaBgAsset from "@/assets/team-meeting.png.asset.json";
+
+const heroBg = heroBgAsset.url;
+const ctaBg = ctaBgAsset.url;
 
 export const Route = createFileRoute("/buero")({
   head: () => ({
