@@ -82,18 +82,29 @@ function BueroPage() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-12 lg:pt-32">
-        <header className="border-t border-border pt-12">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
-            Über uns
-          </p>
-          <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
-            Über <span className="italic">Shams Consult</span>.
-          </h1>
-          <p className="mt-6 max-w-2xl font-serif text-2xl leading-relaxed text-brand-black/80">
-            Erfahrung, Verantwortung und Gestaltungsanspruch.
-          </p>
-        </header>
+      <section className="relative min-h-[70vh] w-full overflow-hidden">
+        <img
+          src={heroBg}
+          alt="Team von Shams Consult bei der Planungsarbeit mit Blick auf die Frankfurter Skyline"
+          width={1600}
+          height={1200}
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/92 via-brand-white/70 to-brand-white/30" />
+        <div className="relative mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-24 lg:px-12">
+          <header className="max-w-2xl" data-reveal="left">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
+              Über uns
+            </p>
+            <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
+              Über <span className="italic">Shams Consult</span>.
+            </h1>
+            <p className="mt-6 max-w-2xl font-serif text-2xl leading-relaxed text-brand-black/80">
+              Erfahrung, Verantwortung und Gestaltungsanspruch.
+            </p>
+          </header>
+        </div>
       </section>
 
       {/* Intro */}
