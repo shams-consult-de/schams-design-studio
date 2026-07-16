@@ -226,7 +226,7 @@ function BueroPage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-brand-black/40" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black/75 via-brand-black/45 to-brand-black/20" />
         <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
           <h2 className="font-serif text-3xl md:text-4xl">
             Lernen Sie uns persönlich <span className="italic">kennen</span>.
