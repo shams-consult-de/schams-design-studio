@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
+import heroBgAsset from "@/assets/team-planning.png.asset.json";
+import ctaBgAsset from "@/assets/team-meeting.png.asset.json";
+
+const heroBg = heroBgAsset.url;
+const ctaBg = ctaBgAsset.url;
 
 export const Route = createFileRoute("/buero")({
   head: () => ({
@@ -77,18 +82,29 @@ function BueroPage() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-12 lg:pt-32">
-        <header className="border-t border-border pt-12">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
-            Über uns
-          </p>
-          <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
-            Über <span className="italic">Shams Consult</span>.
-          </h1>
-          <p className="mt-6 max-w-2xl font-serif text-2xl leading-relaxed text-brand-black/80">
-            Erfahrung, Verantwortung und Gestaltungsanspruch.
-          </p>
-        </header>
+      <section className="relative min-h-[70vh] w-full overflow-hidden">
+        <img
+          src={heroBg}
+          alt="Team von Shams Consult bei der Planungsarbeit mit Blick auf die Frankfurter Skyline"
+          width={1600}
+          height={1200}
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/92 via-brand-white/70 to-brand-white/30" />
+        <div className="relative mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-24 lg:px-12">
+          <header className="max-w-2xl" data-reveal="left">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
+              Über uns
+            </p>
+            <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
+              Über <span className="italic">Shams Consult</span>.
+            </h1>
+            <p className="mt-6 max-w-2xl font-serif text-2xl leading-relaxed text-brand-black/80">
+              Erfahrung, Verantwortung und Gestaltungsanspruch.
+            </p>
+          </header>
+        </div>
       </section>
 
       {/* Intro */}
@@ -201,8 +217,17 @@ function BueroPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-brand-black py-20 text-brand-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
+      <section className="relative overflow-hidden bg-brand-black py-20 text-brand-white">
+        <img
+          src={ctaBg}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-brand-black/40" />
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
           <h2 className="font-serif text-3xl md:text-4xl">
             Lernen Sie uns persönlich <span className="italic">kennen</span>.
           </h2>

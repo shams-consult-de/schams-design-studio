@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import heroAsset from "@/assets/stadtvilla_mfa_rödermark.jpg.asset.json";
+import contactBgAsset from "@/assets/team-frankfurt-skyline.png.asset.json";
 const heroFacade = heroAsset.url;
+const contactBg = contactBgAsset.url;
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
 
@@ -299,8 +301,17 @@ function HomePage() {
       </section>
 
       {/* Standort & Kontakt */}
-      <section className="bg-brand-black py-24 text-brand-white lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+      <section className="relative overflow-hidden bg-brand-black py-24 text-brand-white lg:py-32">
+        <img
+          src={contactBg}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/85 to-brand-black/50" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
