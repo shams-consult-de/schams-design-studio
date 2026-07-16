@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import heroAsset from "@/assets/stadtvilla_mfa_rödermark.jpg.asset.json";
+import contactBgAsset from "@/assets/team-frankfurt-skyline.png.asset.json";
 const heroFacade = heroAsset.url;
+const contactBg = contactBgAsset.url;
 import { projects } from "@/lib/projects";
 import { CONTACT } from "@/lib/contact";
 
