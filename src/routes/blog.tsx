@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import { blogPosts } from "@/lib/blog";
+
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -64,10 +65,9 @@ function BlogPage() {
 
       {featured && (
         <section className="mx-auto max-w-7xl px-6 py-16 lg:px-12" data-reveal>
-          <a
-            href={featured.href}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/$slug"
+            params={{ slug: featured.slug }}
             className="group grid gap-10 rounded-2xl border border-border bg-brand-white p-6 lg:grid-cols-12 lg:p-10"
           >
             <div className="lg:col-span-7 overflow-hidden rounded-xl image-zoom">
@@ -90,21 +90,21 @@ function BlogPage() {
               <p className="mt-4 text-brand-black/70 leading-relaxed">{featured.excerpt}</p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                 Mehr lesen
-                <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
+                <Icon name="arrow-right" className="text-base transition-transform group-hover:translate-x-0.5" />
               </span>
             </div>
-          </a>
+          </Link>
         </section>
       )}
+
 
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12 lg:pb-32">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {rest.map((p) => (
             <article key={p.slug} data-reveal>
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/$slug"
+                params={{ slug: p.slug }}
                 className="group flex h-full flex-col"
               >
                 <div className="overflow-hidden rounded-xl border border-border image-zoom">
@@ -126,13 +126,14 @@ function BlogPage() {
                 </p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                   Mehr lesen
-                  <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
+                  <Icon name="arrow-right" className="text-base transition-transform group-hover:translate-x-0.5" />
                 </span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>
       </section>
+
     </>
   );
 }
