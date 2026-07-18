@@ -103,11 +103,12 @@ function BlogPostPage() {
         </div>
 
         <div
-          className="prose prose-neutral mx-auto mt-16 max-w-3xl px-6 pb-16 prose-headings:font-serif prose-headings:text-brand-black prose-h2:mt-12 prose-h2:text-3xl prose-p:leading-relaxed prose-p:text-brand-black/80 prose-a:text-brand-accent prose-strong:text-brand-black prose-li:text-brand-black/80"
+          className="mx-auto mt-16 max-w-3xl px-6 pb-16 text-[17px] leading-relaxed text-brand-black/85 [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:font-serif [&_h2]:text-3xl [&_h2]:text-brand-black [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:font-serif [&_h3]:text-2xl [&_p]:my-5 [&_ul]:my-5 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:my-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:my-1.5 [&_strong]:font-semibold [&_strong]:text-brand-black [&_a]:text-brand-accent [&_a]:underline"
           data-reveal
         >
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
         </div>
+
       </article>
 
       <BlogComments postSlug={post.slug} />
