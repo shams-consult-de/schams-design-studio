@@ -26,6 +26,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
 import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const StadtplanungRoute = StadtplanungRouteImport.update({
   id: '/stadtplanung',
@@ -112,12 +113,17 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -131,12 +137,13 @@ export interface FileRoutesByFullPath {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -150,13 +157,14 @@ export interface FileRoutesByTo {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -170,6 +178,7 @@ export interface FileRoutesById {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -210,6 +220,7 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/blog/$slug'
   id:
     | '__root__'
     | '/'
@@ -229,13 +240,14 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitekturRoute: typeof ArchitekturRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ForschungRoute: typeof ForschungRoute
@@ -372,14 +384,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitekturRoute: ArchitekturRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
   ForschungRoute: ForschungRoute,
