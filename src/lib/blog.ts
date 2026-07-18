@@ -163,7 +163,7 @@ Bei Shams Consult begleiten wir Sie ganzheitlich – von der ersten Idee bis zur
     date: "06. Juli 2025",
     category: "Design und Ästhetik",
     excerpt:
-      "Was macht einen Raum stimmig? Warum fühlt sich ein Gebäude „richtig" an — lange bevor wir es bewusst analysieren? Die Antwort liegt oft in drei stillen, aber kraftvollen Prinzipien.",
+      'Was macht einen Raum stimmig? Warum fühlt sich ein Gebäude „richtig" an — lange bevor wir es bewusst analysieren? Die Antwort liegt oft in drei stillen, aber kraftvollen Prinzipien.',
     image: "/images/proportion-rhythmus-ma-stab-gestaltungsprinzipien-aus-der-pr-.png",
     body: `**Warum Ordnung und Klarheit die Grundlage guter Räume sind.** Was macht einen Raum stimmig? Warum fühlt sich ein Gebäude „richtig" an – lange bevor wir es bewusst analysieren? Die Antwort liegt oft in drei stillen, aber kraftvollen Prinzipien der Gestaltung: Proportion, Rhythmus und Maßstab.
 
