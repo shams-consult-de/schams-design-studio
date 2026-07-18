@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://shams-consult.de";
+
 
 interface SitemapEntry {
   path: string;
@@ -28,7 +30,13 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/kundenfeedback", changefreq: "monthly", priority: "0.7" },
           { path: "/kontakt", changefreq: "yearly", priority: "0.7" },
           { path: "/barrierefreiheit", changefreq: "yearly", priority: "0.3" },
+          ...blogPosts.map<SitemapEntry>((p) => ({
+            path: `/blog/${p.slug}`,
+            changefreq: "monthly",
+            priority: "0.6",
+          })),
         ];
+
 
         const urls = entries.map((e) =>
           [
