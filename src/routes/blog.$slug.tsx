@@ -94,7 +94,7 @@ function BlogPostPage() {
           <div className="overflow-hidden rounded-2xl border border-border">
             <img
               src={post.image}
-              alt={post.title}
+              alt={post.imageAlt}
               loading="eager"
               decoding="async"
               className="aspect-[16/9] w-full object-cover"
@@ -128,7 +128,7 @@ function BlogPostPage() {
                   <div className="overflow-hidden rounded-xl border border-border image-zoom">
                     <img
                       src={p.image}
-                      alt={p.title}
+                      alt={p.imageAlt}
                       loading="lazy"
                       decoding="async"
                       className="aspect-[4/3] w-full object-cover"

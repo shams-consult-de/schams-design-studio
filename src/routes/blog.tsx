@@ -73,7 +73,7 @@ function BlogPage() {
             <div className="lg:col-span-7 overflow-hidden rounded-xl image-zoom">
               <img
                 src={featured.image}
-                alt={featured.title}
+                alt={featured.imageAlt}
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
@@ -110,7 +110,7 @@ function BlogPage() {
                 <div className="overflow-hidden rounded-xl border border-border image-zoom">
                   <img
                     src={p.image}
-                    alt={p.title}
+                    alt={p.imageAlt}
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
