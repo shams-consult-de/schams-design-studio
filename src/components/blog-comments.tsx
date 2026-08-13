@@ -40,6 +40,10 @@ function formatDate(iso: string): string {
   }
 }
 
+const MIN_FILL_MS = 4000;
+const MIN_INTERVAL_MS = 60_000;
+const LAST_SENT_KEY = "blog-comment-last-sent";
+
 export function BlogComments({ postSlug }: { postSlug: string }) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
@@ -47,6 +51,8 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", content: "" });
+  const [honeypot, setHoneypot] = useState("");
+  const mountedAt = useRef<number>(Date.now());
 
   useEffect(() => {
     let cancelled = false;
