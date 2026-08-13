@@ -151,3 +151,28 @@ export const blogPosts: BlogPost[] = [
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
+
+const MONTHS: Record<string, string> = {
+  Januar: "01",
+  Februar: "02",
+  März: "03",
+  April: "04",
+  Mai: "05",
+  Juni: "06",
+  Juli: "07",
+  August: "08",
+  September: "09",
+  Oktober: "10",
+  November: "11",
+  Dezember: "12",
+};
+
+/** Wandelt "20. Juli 2025" in "2025-07-20" (ISO 8601) um. */
+export function toIsoDate(date: string): string {
+  const m = /^(\d{1,2})\.\s*([A-Za-zÄÖÜäöü]+)\s+(\d{4})$/.exec(date.trim());
+  if (!m) return date;
+  const month = MONTHS[m[2]!];
+  if (!month) return date;
+  return `${m[3]}-${month}-${m[1]!.padStart(2, "0")}`;
+}
+
