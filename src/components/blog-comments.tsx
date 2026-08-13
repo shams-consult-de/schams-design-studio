@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { z } from "zod";
+import { useServerFn } from "@tanstack/react-start";
 import { supabase } from "@/integrations/supabase/client";
+import { submitComment } from "@/lib/comments.functions";
+import { commentSchema } from "@/lib/comments-schema";
 import { Icon } from "@/components/icon";
 
 interface Comment {
@@ -10,23 +12,6 @@ interface Comment {
   created_at: string;
 }
 
-const commentSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Bitte geben Sie Ihren Namen an.")
-    .max(80, "Der Name darf höchstens 80 Zeichen lang sein."),
-  email: z
-    .string()
-    .trim()
-    .email("Bitte geben Sie eine gültige E-Mail-Adresse an.")
-    .max(254),
-  content: z
-    .string()
-    .trim()
-    .min(2, "Der Kommentar ist zu kurz.")
-    .max(2000, "Der Kommentar darf höchstens 2000 Zeichen lang sein."),
-});
 
 function formatDate(iso: string): string {
   try {
