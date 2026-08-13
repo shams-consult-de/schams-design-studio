@@ -4,7 +4,7 @@ import { blogPosts, toIsoDate } from "@/lib/blog";
 import { absUrl } from "@/lib/site";
 
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog — Shams Consult" },
