@@ -81,6 +81,27 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
     setError(null);
     setSuccess(false);
 
+    // Honeypot: nur Bots füllen dieses versteckte Feld aus.
+    if (honeypot.trim() !== "") {
+      setSuccess(true);
+      setForm({ name: "", email: "", content: "" });
+      return;
+    }
+
+    if (Date.now() - mountedAt.current < MIN_FILL_MS) {
+      setError("Bitte nehmen Sie sich einen Moment Zeit und senden Sie erneut.");
+      return;
+    }
+
+    const last = Number(
+      (typeof window !== "undefined" && window.localStorage.getItem(LAST_SENT_KEY)) || 0,
+    );
+    if (last && Date.now() - last < MIN_INTERVAL_MS) {
+      const wait = Math.ceil((MIN_INTERVAL_MS - (Date.now() - last)) / 1000);
+      setError(`Bitte warten Sie noch ${wait} Sekunden, bevor Sie erneut kommentieren.`);
+      return;
+    }
+
     const parsed = commentSchema.safeParse(form);
     if (!parsed.success) {
       setError(parsed.error.issues[0]?.message ?? "Bitte prüfen Sie Ihre Eingaben.");
