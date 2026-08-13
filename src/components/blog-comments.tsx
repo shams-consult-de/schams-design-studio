@@ -200,6 +200,20 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
           </label>
         </div>
 
+        {/* Honeypot – für Menschen unsichtbar, von Screenreadern ignoriert */}
+        <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+          <label>
+            Website (bitte leer lassen)
+            <input
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </label>
+        </div>
+
         <label className="mt-4 block text-sm">
           <span className="mb-1 block font-medium text-brand-black">Kommentar *</span>
           <textarea
