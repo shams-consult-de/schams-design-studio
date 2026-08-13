@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { z } from "zod";
+import { useServerFn } from "@tanstack/react-start";
 import { supabase } from "@/integrations/supabase/client";
+import { submitComment } from "@/lib/comments.functions";
+import { commentSchema } from "@/lib/comments-schema";
 import { Icon } from "@/components/icon";
 
 interface Comment {
@@ -10,23 +12,6 @@ interface Comment {
   created_at: string;
 }
 
-const commentSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Bitte geben Sie Ihren Namen an.")
-    .max(80, "Der Name darf höchstens 80 Zeichen lang sein."),
-  email: z
-    .string()
-    .trim()
-    .email("Bitte geben Sie eine gültige E-Mail-Adresse an.")
-    .max(254),
-  content: z
-    .string()
-    .trim()
-    .min(2, "Der Kommentar ist zu kurz.")
-    .max(2000, "Der Kommentar darf höchstens 2000 Zeichen lang sein."),
-});
 
 function formatDate(iso: string): string {
   try {
@@ -45,6 +30,7 @@ const MIN_INTERVAL_MS = 60_000;
 const LAST_SENT_KEY = "blog-comment-last-sent";
 
 export function BlogComments({ postSlug }: { postSlug: string }) {
+  const send = useServerFn(submitComment);
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -81,13 +67,6 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
     setError(null);
     setSuccess(false);
 
-    // Honeypot: nur Bots füllen dieses versteckte Feld aus.
-    if (honeypot.trim() !== "") {
-      setSuccess(true);
-      setForm({ name: "", email: "", content: "" });
-      return;
-    }
-
     if (Date.now() - mountedAt.current < MIN_FILL_MS) {
       setError("Bitte nehmen Sie sich einen Moment Zeit und senden Sie erneut.");
       return;
@@ -102,26 +81,25 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
       return;
     }
 
-    const parsed = commentSchema.safeParse(form);
+    const parsed = commentSchema.safeParse({ ...form, postSlug, website: honeypot });
     if (!parsed.success) {
       setError(parsed.error.issues[0]?.message ?? "Bitte prüfen Sie Ihre Eingaben.");
       return;
     }
 
     setSubmitting(true);
-    const { error: insertError } = await supabase.from("blog_comments").insert({
-      post_slug: postSlug,
-      author_name: parsed.data.name,
-      author_email: parsed.data.email,
-      content: parsed.data.content,
-      approved: false,
-    });
-    setSubmitting(false);
-
-    if (insertError) {
-      console.error(insertError);
+    try {
+      const result = await send({ data: parsed.data });
+      if (!result.ok) {
+        setError(result.error ?? "Ihr Kommentar konnte nicht gespeichert werden.");
+        return;
+      }
+    } catch (err) {
+      console.error(err);
       setError("Ihr Kommentar konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.");
       return;
+    } finally {
+      setSubmitting(false);
     }
 
     if (typeof window !== "undefined") {
@@ -130,7 +108,9 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
     mountedAt.current = Date.now();
     setSuccess(true);
     setForm({ name: "", email: "", content: "" });
+    setHoneypot("");
   }
+
 
   return (
     <section className="mx-auto max-w-3xl px-6 pb-24 lg:px-0" aria-labelledby="kommentare">

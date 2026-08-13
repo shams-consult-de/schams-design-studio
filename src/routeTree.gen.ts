@@ -23,10 +23,13 @@ import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ArchitekturRouteImport } from './routes/architektur'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AuthenticatedModerationRouteImport } from './routes/_authenticated/moderation'
 
 const StadtplanungRoute = StadtplanungRouteImport.update({
   id: '/stadtplanung',
@@ -98,9 +101,18 @@ const BarrierefreiheitRoute = BarrierefreiheitRouteImport.update({
   path: '/barrierefreiheit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArchitekturRoute = ArchitekturRouteImport.update({
   id: '/architektur',
   path: '/architektur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -118,10 +130,16 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedModerationRoute = AuthenticatedModerationRouteImport.update({
+  id: '/moderation',
+  path: '/moderation',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
+  '/auth': typeof AuthRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -136,12 +154,14 @@ export interface FileRoutesByFullPath {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/moderation': typeof AuthenticatedModerationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
+  '/auth': typeof AuthRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -156,13 +176,16 @@ export interface FileRoutesByTo {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/moderation': typeof AuthenticatedModerationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/architektur': typeof ArchitekturRoute
+  '/auth': typeof AuthRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
@@ -177,6 +200,7 @@ export interface FileRoutesById {
   '/projekte': typeof ProjekteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
+  '/_authenticated/moderation': typeof AuthenticatedModerationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -185,6 +209,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/architektur'
+    | '/auth'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -199,12 +224,14 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/moderation'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/architektur'
+    | '/auth'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -219,12 +246,15 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/moderation'
     | '/blog/$slug'
     | '/blog'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/architektur'
+    | '/auth'
     | '/barrierefreiheit'
     | '/buero'
     | '/datenschutz'
@@ -239,13 +269,16 @@ export interface FileRouteTypes {
     | '/projekte'
     | '/sitemap.xml'
     | '/stadtplanung'
+    | '/_authenticated/moderation'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   ArchitekturRoute: typeof ArchitekturRoute
+  AuthRoute: typeof AuthRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
@@ -364,11 +397,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BarrierefreiheitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/architektur': {
       id: '/architektur'
       path: '/architektur'
       fullPath: '/architektur'
       preLoaderRoute: typeof ArchitekturRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -392,12 +439,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/moderation': {
+      id: '/_authenticated/moderation'
+      path: '/moderation'
+      fullPath: '/moderation'
+      preLoaderRoute: typeof AuthenticatedModerationRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedModerationRoute: typeof AuthenticatedModerationRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedModerationRoute: AuthenticatedModerationRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   ArchitekturRoute: ArchitekturRoute,
+  AuthRoute: AuthRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
