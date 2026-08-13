@@ -22,10 +22,10 @@ import { Route as GeschichteRouteImport } from './routes/geschichte'
 import { Route as ForschungRouteImport } from './routes/forschung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as BueroRouteImport } from './routes/buero'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BarrierefreiheitRouteImport } from './routes/barrierefreiheit'
 import { Route as ArchitekturRouteImport } from './routes/architektur'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const StadtplanungRoute = StadtplanungRouteImport.update({
@@ -93,11 +93,6 @@ const BueroRoute = BueroRouteImport.update({
   path: '/buero',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BarrierefreiheitRoute = BarrierefreiheitRouteImport.update({
   id: '/barrierefreiheit',
   path: '/barrierefreiheit',
@@ -113,17 +108,21 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -138,12 +137,12 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -158,13 +157,13 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/architektur': typeof ArchitekturRoute
   '/barrierefreiheit': typeof BarrierefreiheitRoute
-  '/blog': typeof BlogRouteWithChildren
   '/buero': typeof BueroRoute
   '/datenschutz': typeof DatenschutzRoute
   '/forschung': typeof ForschungRoute
@@ -179,6 +178,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stadtplanung': typeof StadtplanungRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -186,7 +186,6 @@ export interface FileRouteTypes {
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
-    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -201,12 +200,12 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/stadtplanung'
     | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
-    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -221,12 +220,12 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/stadtplanung'
     | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
     | '/architektur'
     | '/barrierefreiheit'
-    | '/blog'
     | '/buero'
     | '/datenschutz'
     | '/forschung'
@@ -241,13 +240,13 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/stadtplanung'
     | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitekturRoute: typeof ArchitekturRoute
   BarrierefreiheitRoute: typeof BarrierefreiheitRoute
-  BlogRoute: typeof BlogRouteWithChildren
   BueroRoute: typeof BueroRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ForschungRoute: typeof ForschungRoute
@@ -261,6 +260,8 @@ export interface RootRouteChildren {
   ProjekteRoute: typeof ProjekteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StadtplanungRoute: typeof StadtplanungRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -356,13 +357,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BueroRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/barrierefreiheit': {
       id: '/barrierefreiheit'
       path: '/barrierefreiheit'
@@ -384,31 +378,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
-      path: '/$slug'
+      path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface BlogRouteChildren {
-  BlogSlugRoute: typeof BlogSlugRoute
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
-  BlogSlugRoute: BlogSlugRoute,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitekturRoute: ArchitekturRoute,
   BarrierefreiheitRoute: BarrierefreiheitRoute,
-  BlogRoute: BlogRouteWithChildren,
   BueroRoute: BueroRoute,
   DatenschutzRoute: DatenschutzRoute,
   ForschungRoute: ForschungRoute,
@@ -422,6 +412,8 @@ const rootRouteChildren: RootRouteChildren = {
   ProjekteRoute: ProjekteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StadtplanungRoute: StadtplanungRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
