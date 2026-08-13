@@ -5,6 +5,7 @@ import { getBlogPost, blogPosts, toIsoDate } from "@/lib/blog";
 import { BlogComments } from "@/components/blog-comments";
 import { Icon } from "@/components/icon";
 import { absUrl } from "@/lib/site";
+import { LOGO_URL } from "@/lib/contact";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -59,7 +60,7 @@ export const Route = createFileRoute("/blog/$slug")({
             publisher: {
               "@type": "Organization",
               name: "Shams Consult",
-              logo: { "@type": "ImageObject", url: absUrl("/images/logo.png") },
+              logo: { "@type": "ImageObject", url: LOGO_URL },
             },
           }),
         },
