@@ -1,10 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getBlogPost, blogPosts } from "@/lib/blog";
+import { getBlogPost, blogPosts, toIsoDate } from "@/lib/blog";
 import { BlogComments } from "@/components/blog-comments";
 import { Icon } from "@/components/icon";
 import { absUrl } from "@/lib/site";
+import { LOGO_URL } from "@/lib/contact";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -41,6 +42,41 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "twitter:image", content: image },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            image: [image],
+            datePublished: toIsoDate(post.date),
+            dateModified: toIsoDate(post.date),
+            articleSection: post.category,
+            inLanguage: "de-DE",
+            mainEntityOfPage: { "@type": "WebPage", "@id": url },
+            author: { "@type": "Organization", name: "Shams Consult" },
+            publisher: {
+              "@type": "Organization",
+              name: "Shams Consult",
+              logo: { "@type": "ImageObject", url: LOGO_URL },
+            },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Startseite", item: absUrl("/") },
+              { "@type": "ListItem", position: 2, name: "Blog", item: absUrl("/blog") },
+              { "@type": "ListItem", position: 3, name: post.title, item: url },
+            ],
+          }),
+        },
+      ],
     };
   },
   errorComponent: ({ error }) => (
@@ -82,7 +118,8 @@ function BlogPostPage() {
             Zurück zum Blog
           </Link>
           <p className="mt-8 text-[11px] font-semibold uppercase tracking-widest text-brand-accent">
-            {post.category} · {post.date}
+            {post.category} ·{" "}
+            <time dateTime={toIsoDate(post.date)}>{post.date}</time>
           </p>
           <h1 className="mt-4 font-serif text-4xl leading-tight md:text-6xl">{post.title}</h1>
           <p className="mt-6 text-lg font-light leading-relaxed text-brand-black/70">
@@ -135,7 +172,7 @@ function BlogPostPage() {
                     />
                   </div>
                   <p className="mt-4 text-[11px] font-semibold uppercase tracking-widest text-brand-accent">
-                    {p.category} · {p.date}
+                    {p.category} · <time dateTime={toIsoDate(p.date)}>{p.date}</time>
                   </p>
                   <h3 className="mt-2 font-serif text-lg leading-snug transition-colors group-hover:text-brand-accent">
                     {p.title}
