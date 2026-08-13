@@ -124,6 +124,10 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
       return;
     }
 
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
+    }
+    mountedAt.current = Date.now();
     setSuccess(true);
     setForm({ name: "", email: "", content: "" });
   }
