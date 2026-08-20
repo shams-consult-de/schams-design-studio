@@ -37,9 +37,9 @@ function ImpressumPage() {
         <p>Schams Consult, Inhaberin/Inhaber (bitte ergänzen)</p>
         <h2 className="font-serif text-2xl">Haftungsausschluss</h2>
         <p className="text-sm">
-          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für
-          die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind
-          ausschließlich deren Betreiber verantwortlich.
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte
+          externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
+          verantwortlich.
         </p>
       </div>
     </section>

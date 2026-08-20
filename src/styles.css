@@ -206,7 +206,12 @@
   position: absolute;
   inset: 0;
   transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, color-mix(in oklab, white 35%, transparent), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, white 35%, transparent),
+    transparent
+  );
   transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
 }

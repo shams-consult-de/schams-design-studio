@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/icon";
 import { CONTACT } from "@/lib/contact";
 
-
 const heroBg = "/images/team-planning.png";
 const ctaBg = "/images/team-meeting.png";
 
@@ -27,8 +26,7 @@ const team = [
   {
     name: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
     role: "Büroinhaber · Architekt und Stadtplaner",
-    image:
-      "/images/image-.jpg",
+    image: "/images/image-.jpg",
     lines: [
       "Mitglied Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)",
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2008",
@@ -40,8 +38,7 @@ const team = [
   {
     name: "Hatice Erol Yeniyapan",
     role: "Dipl.-Ing. (FH) Architektin, M.A.",
-    image:
-      "/images/image-.jpg",
+    image: "/images/image-.jpg",
     lines: [
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2009/10",
       "Masterstudium Architektur Hochschule Karlsruhe (HsKA) — Master of Arts (M.A.)",
@@ -50,29 +47,25 @@ const team = [
   {
     name: "Samuel Allaw (B.Eng.)",
     role: "Bauleitung / Projektsteuerung",
-    image:
-      "/images/image-.png",
+    image: "/images/image-.png",
     lines: ["Bachelor of Engineering — Bauingenieurwesen, Hochschule Darmstadt"],
   },
   {
     name: "Yasmine Yagcioglu",
     role: "Dipl.-Ing. (FH) Architektur",
-    image:
-      "/images/image-.jpg",
+    image: "/images/image-.jpg",
     lines: ["Architekturstudium Hochschule Mainz — University of Applied Sciences, 2011"],
   },
   {
     name: "Ronak Namdari (M.A.)",
     role: "Master of Art in Architecture",
-    image:
-      "/images/image-.png",
+    image: "/images/image-.png",
     lines: ["Städelschule, Frankfurt am Main — Master of Arts (M.A.)"],
   },
   {
     name: "Farhad Minaei (B.Arch.)",
     role: "3D-Visualisierung",
-    image:
-      "/images/image-.png",
+    image: "/images/image-.png",
     lines: ["Bachelor of Architecture"],
   },
 ];
@@ -90,7 +83,10 @@ function BueroPage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/92 via-brand-white/70 to-brand-white/30" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-brand-white/92 via-brand-white/70 to-brand-white/30"
+        />
         <div className="relative mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-24 lg:px-12">
           <header className="max-w-2xl" data-reveal="left">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
@@ -116,23 +112,23 @@ function BueroPage() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
-              Shams Consult steht für anspruchsvolle Architektur, integrierte Stadtplanung
-              und anwendungsorientierte Forschung. Gegründet und geleitet von Dipl.-Ing.
-              Majeed Shams, verbinden wir über 15 Jahre Praxiserfahrung im Bau- und
-              Planungsrecht mit Innovationsfreude, interdisziplinärem Denken und einem
-              klaren gesellschaftlichen Anspruch.
+              Shams Consult steht für anspruchsvolle Architektur, integrierte Stadtplanung und
+              anwendungsorientierte Forschung. Gegründet und geleitet von Dipl.-Ing. Majeed Shams,
+              verbinden wir über 15 Jahre Praxiserfahrung im Bau- und Planungsrecht mit
+              Innovationsfreude, interdisziplinärem Denken und einem klaren gesellschaftlichen
+              Anspruch.
             </p>
             <p>
-              Für uns bedeutet Architektur und Bauberatung weit mehr als nur die Planung
-              von Gebäuden. Es ist eine Zusammenarbeit des Vertrauens, in der wir Ihre
-              individuellen Wünsche mit unserer langjährigen Erfahrung und Expertise
-              kombinieren — im Einklang mit den technischen, rechtlichen und
-              wirtschaftlichen Möglichkeiten, für eine nachhaltige Zukunft.
+              Für uns bedeutet Architektur und Bauberatung weit mehr als nur die Planung von
+              Gebäuden. Es ist eine Zusammenarbeit des Vertrauens, in der wir Ihre individuellen
+              Wünsche mit unserer langjährigen Erfahrung und Expertise kombinieren — im Einklang mit
+              den technischen, rechtlichen und wirtschaftlichen Möglichkeiten, für eine nachhaltige
+              Zukunft.
             </p>
             <p>
-              Bereits zahlreiche Kunden und Partner haben uns ihr Vertrauen geschenkt. Wir
-              haben Architektur- und Städtebauprojekte mit Budgets von 1.000 Euro bis
-              13,5 Mio. Euro erfolgreich betreut.
+              Bereits zahlreiche Kunden und Partner haben uns ihr Vertrauen geschenkt. Wir haben
+              Architektur- und Städtebauprojekte mit Budgets von 1.000 Euro bis 13,5 Mio. Euro
+              erfolgreich betreut.
             </p>
           </div>
         </div>
@@ -152,7 +148,11 @@ function BueroPage() {
 
           <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
-              <li key={m.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white" data-reveal>
+              <li
+                key={m.name}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white"
+                data-reveal
+              >
                 <div className="overflow-hidden bg-concrete">
                   <img
                     src={m.image}
@@ -197,8 +197,8 @@ function BueroPage() {
             </span>
             <h3 className="mt-6 font-serif text-2xl">Gestaltungswille</h3>
             <p className="mt-4 text-sm leading-relaxed text-brand-black/70">
-              Verantwortung und Gestaltungswille leiten unser tägliches Handeln — im
-              Einklang mit technischen, rechtlichen und wirtschaftlichen Möglichkeiten.
+              Verantwortung und Gestaltungswille leiten unser tägliches Handeln — im Einklang mit
+              technischen, rechtlichen und wirtschaftlichen Möglichkeiten.
             </p>
           </div>
           <div>
@@ -208,8 +208,8 @@ function BueroPage() {
             <h3 className="mt-6 font-serif text-2xl">Die Reise vom Traum zum Erfolg</h3>
             <p className="mt-4 text-sm leading-relaxed text-brand-black/70">
               Majeed Shams kam 2005 mit null Euro aus Afghanistan nach Deutschland. Aus
-              Architekturstudium in Karlsruhe und Masterstudium in Stuttgart wurde ein
-              Büro mit über 15 Jahren Berufserfahrung.
+              Architekturstudium in Karlsruhe und Masterstudium in Stuttgart wurde ein Büro mit über
+              15 Jahren Berufserfahrung.
             </p>
           </div>
         </div>
@@ -225,7 +225,10 @@ function BueroPage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black/75 via-brand-black/45 to-brand-black/20" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-brand-black/75 via-brand-black/45 to-brand-black/20"
+        />
         <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-12">
           <h2 className="font-serif text-3xl md:text-4xl">
             Lernen Sie uns persönlich <span className="italic">kennen</span>.

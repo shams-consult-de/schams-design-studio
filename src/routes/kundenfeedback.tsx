@@ -93,8 +93,8 @@ function FeedbackPage() {
           Kunden<span className="italic">feedback</span>
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-brand-black/70">
-          Auszüge aus den Google-Rezensionen unserer Kundinnen und Kunden — von
-          Bauanträgen über Genehmigungsplanung bis zu komplexen Mehrfamilienhäusern.
+          Auszüge aus den Google-Rezensionen unserer Kundinnen und Kunden — von Bauanträgen über
+          Genehmigungsplanung bis zu komplexen Mehrfamilienhäusern.
         </p>
       </header>
 
@@ -110,9 +110,7 @@ function FeedbackPage() {
                 </div>
                 <Icon name="quote-left" className="text-2xl text-brand-black/15" />
               </div>
-              <p className="mt-6 flex-1 text-sm leading-relaxed text-brand-black/75">
-                {r.text}
-              </p>
+              <p className="mt-6 flex-1 text-sm leading-relaxed text-brand-black/75">{r.text}</p>
               <footer className="mt-6 border-t border-border pt-4">
                 <p className="text-sm font-semibold text-brand-black">{r.name}</p>
                 <p className="text-xs text-brand-black/50">{r.when}</p>

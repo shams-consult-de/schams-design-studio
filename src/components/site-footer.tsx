@@ -4,7 +4,7 @@ import { CONTACT } from "@/lib/contact";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-brand-white px-6 py-20 lg:px-12">
+    <footer className="border-t border-border bg-brand-white px-6 pt-20 pb-28 sm:pb-20 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -48,7 +48,10 @@ export function SiteFooter() {
                   <br />
                   {o.city}
                   <br />
-                  <a href={o.phoneHref} className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent">
+                  <a
+                    href={o.phoneHref}
+                    className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent"
+                  >
                     <Icon name="phone" className="text-sm" /> {o.phone}
                   </a>
                 </address>
@@ -61,13 +64,41 @@ export function SiteFooter() {
               Themen
             </h3>
             <ul className="mt-4 flex flex-col space-y-2 text-sm">
-              <li><Link to="/architektur" className="hover:text-brand-accent">Architektur</Link></li>
-              <li><Link to="/stadtplanung" className="hover:text-brand-accent">Stadtplanung</Link></li>
-              <li><Link to="/forschung" className="hover:text-brand-accent">Forschung</Link></li>
-              <li><Link to="/blog" className="hover:text-brand-accent">Blog</Link></li>
-              <li><Link to="/karriere" className="hover:text-brand-accent">Karriere</Link></li>
-              <li><Link to="/geschichte" className="hover:text-brand-accent">Geschichte</Link></li>
-              <li><Link to="/philosophie" className="hover:text-brand-accent">Philosophie</Link></li>
+              <li>
+                <Link to="/architektur" className="hover:text-brand-accent">
+                  Architektur
+                </Link>
+              </li>
+              <li>
+                <Link to="/stadtplanung" className="hover:text-brand-accent">
+                  Stadtplanung
+                </Link>
+              </li>
+              <li>
+                <Link to="/forschung" className="hover:text-brand-accent">
+                  Forschung
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-brand-accent">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/karriere" className="hover:text-brand-accent">
+                  Karriere
+                </Link>
+              </li>
+              <li>
+                <Link to="/geschichte" className="hover:text-brand-accent">
+                  Geschichte
+                </Link>
+              </li>
+              <li>
+                <Link to="/philosophie" className="hover:text-brand-accent">
+                  Philosophie
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -96,8 +127,13 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-20 flex flex-col justify-between gap-4 border-t border-border pt-8 text-[9px] font-medium uppercase tracking-wider text-muted-foreground md:flex-row md:items-center">
-          <p className="md:whitespace-nowrap">© {new Date().getFullYear()} Shams Consult — Architektur & Stadtplanung. Alle Rechte vorbehalten.</p>
-          <p className="md:whitespace-nowrap">Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886</p>
+          <p className="md:whitespace-nowrap">
+            © {new Date().getFullYear()} Shams Consult — Architektur & Stadtplanung. Alle Rechte
+            vorbehalten.
+          </p>
+          <p className="md:whitespace-nowrap">
+            Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886
+          </p>
           <p className="md:whitespace-nowrap">
             Dev Partner{" "}
             <a

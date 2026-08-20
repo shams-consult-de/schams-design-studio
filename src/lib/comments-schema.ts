@@ -7,11 +7,7 @@ export const commentSchema = z.object({
     .trim()
     .min(1, "Bitte geben Sie Ihren Namen an.")
     .max(80, "Der Name darf höchstens 80 Zeichen lang sein."),
-  email: z
-    .string()
-    .trim()
-    .email("Bitte geben Sie eine gültige E-Mail-Adresse an.")
-    .max(254),
+  email: z.string().trim().email("Bitte geben Sie eine gültige E-Mail-Adresse an.").max(254),
   content: z
     .string()
     .trim()

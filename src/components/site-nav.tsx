@@ -56,7 +56,11 @@ export function SiteNav() {
           scrolled ? "py-2" : "py-4"
         }`}
       >
-        <Link to="/" className="group flex items-center gap-3" aria-label="Shams Consult — Startseite">
+        <Link
+          to="/"
+          className="group flex items-center gap-3"
+          aria-label="Shams Consult — Startseite"
+        >
           <img
             src={LOGO_URL}
             alt="Shams Consult — Architektur & Stadtplanung"
@@ -71,39 +75,42 @@ export function SiteNav() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-2 lg:flex xl:gap-3">
-          {links.map(({ to, label, icon }) => (
+        <ul className="hidden items-center gap-1.5 lg:flex xl:gap-4">
+          {links.map(({ to, label }) => (
             <li key={to}>
               <Link
                 to={to}
-                aria-label={label}
-                className="group relative flex h-10 w-14 items-center justify-center overflow-visible rounded-lg text-brand-black/80 transition-colors hover:text-brand-accent"
-                activeProps={{ className: "text-brand-accent [&_.nav-dot]:opacity-100 [&_.nav-dot]:scale-100" }}
+                className="group relative px-2 py-1.5 text-xs font-medium text-brand-black/75 transition-colors hover:text-brand-accent xl:text-sm"
+                activeProps={{
+                  className:
+                    "text-brand-accent font-semibold [&_.nav-indicator]:scale-x-100 [&_.nav-indicator]:opacity-100",
+                }}
                 activeOptions={{ exact: to === "/" }}
               >
-                <span className="absolute inset-0 flex h-10 w-14 items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-3">
-                  <Icon name={icon} className="text-xl transition-transform duration-300 ease-out group-hover:scale-110" />
-                </span>
-                <span className="absolute inset-0 flex h-10 w-14 translate-y-6 items-center justify-center px-0.5 text-center text-xs font-medium opacity-0 transition-all duration-300 ease-out group-hover:translate-y-3 group-hover:opacity-100">
-                  {label}
-                </span>
+                <span>{label}</span>
                 <span
-                  className="nav-dot pointer-events-none absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 scale-0 rounded-full bg-brand-accent opacity-0 transition-all duration-300 ease-out"
+                  className="nav-indicator pointer-events-none absolute bottom-0 left-2 right-2 h-0.5 scale-x-0 rounded-full bg-brand-accent opacity-0 transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:opacity-100"
                   aria-hidden="true"
                 />
               </Link>
             </li>
           ))}
-          <li>
+          <li className="ml-1 xl:ml-2">
             <a
               href={CONTACT.bookingHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-accent px-4 py-2 text-xs font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30 xl:text-sm"
             >
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" aria-hidden="true" />
-              <Icon name="calendar-check" className="text-base transition-transform duration-300 group-hover:rotate-[-8deg]" />
-              Erstgespräch buchen
+              <span
+                className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+                aria-hidden="true"
+              />
+              <Icon
+                name="calendar-check"
+                className="text-sm transition-transform duration-300 group-hover:rotate-[-8deg]"
+              />
+              <span className="whitespace-nowrap">Erstgespräch buchen</span>
             </a>
           </li>
         </ul>
@@ -114,7 +121,11 @@ export function SiteNav() {
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
         >
-          {open ? <Icon name="xmark" className="text-2xl" /> : <Icon name="bars" className="text-2xl" />}
+          {open ? (
+            <Icon name="xmark" className="text-2xl" />
+          ) : (
+            <Icon name="bars" className="text-2xl" />
+          )}
         </button>
       </div>
 
@@ -137,7 +148,10 @@ export function SiteNav() {
                 onClick={() => setOpen(false)}
                 className="group flex items-center gap-3 py-3 text-base font-medium transition-colors hover:text-brand-accent"
               >
-                <Icon name={icon} className="text-base transition-transform duration-300 group-hover:translate-x-1" />
+                <Icon
+                  name={icon}
+                  className="text-base transition-transform duration-300 group-hover:translate-x-1"
+                />
                 {label}
               </Link>
             </li>

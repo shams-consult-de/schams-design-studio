@@ -57,10 +57,10 @@ export function Reveal({
     direction === "up"
       ? "translate3d(0, 28px, 0)"
       : direction === "left"
-      ? "translate3d(-28px, 0, 0)"
-      : direction === "right"
-      ? "translate3d(28px, 0, 0)"
-      : "none";
+        ? "translate3d(-28px, 0, 0)"
+        : direction === "right"
+          ? "translate3d(28px, 0, 0)"
+          : "none";
 
   const style: React.CSSProperties = {
     opacity: visible ? 1 : 0,

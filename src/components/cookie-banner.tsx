@@ -39,8 +39,8 @@ export function CookieBanner() {
     >
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p className="max-w-md text-sm leading-relaxed text-brand-black/80">
-          Diese Website verwendet ausschließlich technisch notwendige Cookies. Es
-          werden keine Daten an Dritte weitergegeben.
+          Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Daten
+          an Dritte weitergegeben.
         </p>
         <div className="flex shrink-0 gap-2">
           <button

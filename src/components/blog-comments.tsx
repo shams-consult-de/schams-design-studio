@@ -12,7 +12,6 @@ interface Comment {
   created_at: string;
 }
 
-
 function formatDate(iso: string): string {
   try {
     return new Intl.DateTimeFormat("de-DE", {
@@ -111,7 +110,6 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
     setHoneypot("");
   }
 
-
   return (
     <section className="mx-auto max-w-3xl px-6 pb-24 lg:px-0" aria-labelledby="kommentare">
       <div className="border-t border-border pt-12">
@@ -148,11 +146,13 @@ export function BlogComments({ postSlug }: { postSlug: string }) {
         )}
       </div>
 
-      <form onSubmit={handleSubmit} className="mt-12 rounded-2xl border border-border bg-brand-white p-6 lg:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="mt-12 rounded-2xl border border-border bg-brand-white p-6 lg:p-8"
+      >
         <h3 className="font-serif text-2xl">Kommentar schreiben</h3>
         <p className="mt-2 text-sm text-brand-black/60">
-          Ihre E-Mail-Adresse wird nicht veröffentlicht. Kommentare erscheinen nach kurzer
-          Prüfung.
+          Ihre E-Mail-Adresse wird nicht veröffentlicht. Kommentare erscheinen nach kurzer Prüfung.
         </p>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">

@@ -4,7 +4,6 @@ import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://shams-consult.de";
 
-
 interface SitemapEntry {
   path: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -36,7 +35,6 @@ export const Route = createFileRoute("/sitemap.xml")({
             priority: "0.6",
           })),
         ];
-
 
         const urls = entries.map((e) =>
           [

@@ -118,8 +118,7 @@ function BlogPostPage() {
             Zurück zum Blog
           </Link>
           <p className="mt-8 text-[11px] font-semibold uppercase tracking-widest text-brand-accent">
-            {post.category} ·{" "}
-            <time dateTime={toIsoDate(post.date)}>{post.date}</time>
+            {post.category} · <time dateTime={toIsoDate(post.date)}>{post.date}</time>
           </p>
           <h1 className="mt-4 font-serif text-4xl leading-tight md:text-6xl">{post.title}</h1>
           <p className="mt-6 text-lg font-light leading-relaxed text-brand-black/70">
@@ -145,7 +144,6 @@ function BlogPostPage() {
         >
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
         </div>
-
       </article>
 
       <BlogComments postSlug={post.slug} />

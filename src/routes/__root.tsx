@@ -54,7 +54,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-serif text-3xl text-foreground">Diese Seite konnte nicht geladen werden</h1>
+        <h1 className="font-serif text-3xl text-foreground">
+          Diese Seite konnte nicht geladen werden
+        </h1>
         <p className="mt-3 text-sm text-muted-foreground">
           Bitte versuchen Sie es erneut oder kehren Sie zur Startseite zurück.
         </p>

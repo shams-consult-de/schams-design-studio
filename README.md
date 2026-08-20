@@ -1,6 +1,6 @@
 # Schams Consult Elevated
 
-Baue mir eine Website für mein  Architektur- und Stadtplanungsbüro namens Schams Consult. Ich hab schon bereits eine Website namens schamsconsult.de gemacht und über Jimdo und ich möchte gerne, dass meine Website die Motive von Ringschild.com und anderen sehr guten Websites hat. Zudem möchte ich auch noch eine gute SEO-Optimierung haben, gute Performance in der Website Best Practices mit Cookies und anderen Daten und allgemeine Accessibility. Das heißt, dass auch behinderte oder beeinträchtigte Menschen meine Website ohne Probleme verwenden können.
+Baue mir eine Website für mein Architektur- und Stadtplanungsbüro namens Schams Consult. Ich hab schon bereits eine Website namens schamsconsult.de gemacht und über Jimdo und ich möchte gerne, dass meine Website die Motive von Ringschild.com und anderen sehr guten Websites hat. Zudem möchte ich auch noch eine gute SEO-Optimierung haben, gute Performance in der Website Best Practices mit Cookies und anderen Daten und allgemeine Accessibility. Das heißt, dass auch behinderte oder beeinträchtigte Menschen meine Website ohne Probleme verwenden können.
 
 This project was built with [Lovable](https://lovable.dev).
 

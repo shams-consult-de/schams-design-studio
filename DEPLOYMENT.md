@@ -5,14 +5,14 @@ This document describes how to run **Shams Consult** independently of Lovable
 
 ## Tech stack
 
-| Layer | Technology |
-| --- | --- |
-| Framework | TanStack Start v1 (React 19, SSR + server functions) |
-| Build | Vite 8 + Nitro (edge/serverless output) |
-| Styling | Tailwind CSS v4 (`src/styles.css`) |
-| Data / Auth | Supabase (Postgres, Auth, RLS) |
-| Content | Static TS modules (`src/lib/blog.ts`, `src/lib/projects.ts`) |
-| Images | Local files in `public/images/` |
+| Layer       | Technology                                                   |
+| ----------- | ------------------------------------------------------------ |
+| Framework   | TanStack Start v1 (React 19, SSR + server functions)         |
+| Build       | Vite 8 + Nitro (edge/serverless output)                      |
+| Styling     | Tailwind CSS v4 (`src/styles.css`)                           |
+| Data / Auth | Supabase (Postgres, Auth, RLS)                               |
+| Content     | Static TS modules (`src/lib/blog.ts`, `src/lib/projects.ts`) |
+| Images      | Local files in `public/images/`                              |
 
 Only the **comments + moderation** feature needs a backend. Everything else
 (all pages, blog posts, projects, images) is static and runs anywhere.
@@ -69,14 +69,14 @@ plain CSV import works.
 Set these in Vercel (Project → Settings → Environment Variables) for
 Production **and** Preview:
 
-| Variable | Value | Scope |
-| --- | --- | --- |
-| `VITE_SUPABASE_URL` | `https://<ref>.supabase.co` | client |
-| `VITE_SUPABASE_PUBLISHABLE_KEY` | publishable / anon key | client |
-| `VITE_SUPABASE_PROJECT_ID` | `<ref>` | client |
-| `SUPABASE_URL` | same as above | server |
-| `SUPABASE_PUBLISHABLE_KEY` | same as above | server |
-| `SUPABASE_SERVICE_ROLE_KEY` | **service role key from your own project** | server only |
+| Variable                        | Value                                      | Scope       |
+| ------------------------------- | ------------------------------------------ | ----------- |
+| `VITE_SUPABASE_URL`             | `https://<ref>.supabase.co`                | client      |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | publishable / anon key                     | client      |
+| `VITE_SUPABASE_PROJECT_ID`      | `<ref>`                                    | client      |
+| `SUPABASE_URL`                  | same as above                              | server      |
+| `SUPABASE_PUBLISHABLE_KEY`      | same as above                              | server      |
+| `SUPABASE_SERVICE_ROLE_KEY`     | **service role key from your own project** | server only |
 
 The service role key is required by `src/integrations/supabase/client.server.ts`,
 which the comment insert in `src/lib/comments.functions.ts` uses. It must never
@@ -103,7 +103,6 @@ Vercel needs no manual configuration:
 
 Copy `.env.example` to `.env` for local runs and add the same variables in
 Vercel before the first deploy.
-
 
 Cloudflare Pages/Workers is the alternative — that preset already works with no
 config change.

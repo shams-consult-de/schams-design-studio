@@ -74,9 +74,9 @@ function ServicesPage() {
             Unsere <span className="italic">Leistungen</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-brand-black/70">
-            Shams Consult deckt das gesamte Leistungsspektrum von Architektur, Städtebau
-            und Stadtplanung ab — interdisziplinär, praxisnah und mit über 15 Jahren
-            Erfahrung im Bau- und Planungsrecht.
+            Shams Consult deckt das gesamte Leistungsspektrum von Architektur, Städtebau und
+            Stadtplanung ab — interdisziplinär, praxisnah und mit über 15 Jahren Erfahrung im Bau-
+            und Planungsrecht.
           </p>
         </header>
       </section>
@@ -104,8 +104,8 @@ function ServicesPage() {
               Gemeinsam Stadt <span className="italic">weiterdenken</span>.
             </h2>
             <p className="mt-3 max-w-xl text-brand-white/70">
-              Sie planen ein Entwicklungsprojekt oder benötigen Unterstützung bei einer
-              kommunalen Planung? Wir begleiten Sie von der ersten Idee bis zur Umsetzung.
+              Sie planen ein Entwicklungsprojekt oder benötigen Unterstützung bei einer kommunalen
+              Planung? Wir begleiten Sie von der ersten Idee bis zur Umsetzung.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

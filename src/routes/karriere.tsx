@@ -55,8 +55,8 @@ function KarrierePage() {
             Arbeiten bei <span className="italic">Shams Consult</span>
           </h1>
           <p className="mt-6 max-w-2xl font-serif text-2xl leading-relaxed text-brand-black/80">
-            Werden Sie Teil eines interdisziplinären Teams an der Schnittstelle von
-            Architektur, Stadtplanung und Forschung.
+            Werden Sie Teil eines interdisziplinären Teams an der Schnittstelle von Architektur,
+            Stadtplanung und Forschung.
           </p>
         </header>
       </section>
@@ -70,15 +70,13 @@ function KarrierePage() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
-              Wir bieten Ihnen ein Umfeld, in dem Sie Verantwortung übernehmen und mit
-              erfahrenen Architekt:innen und Stadtplaner:innen an anspruchsvollen Vorhaben
-              arbeiten. Unser Büro ist geprägt von flachen Hierarchien, offener
-              Kommunikation und dem gemeinsamen Anspruch, Räume zu schaffen, die Bestand
-              haben.
+              Wir bieten Ihnen ein Umfeld, in dem Sie Verantwortung übernehmen und mit erfahrenen
+              Architekt:innen und Stadtplaner:innen an anspruchsvollen Vorhaben arbeiten. Unser Büro
+              ist geprägt von flachen Hierarchien, offener Kommunikation und dem gemeinsamen
+              Anspruch, Räume zu schaffen, die Bestand haben.
             </p>
             <p>
-              Sie finden aktuell keine passende Stelle? Wir freuen uns über
-              Initiativbewerbungen an{" "}
+              Sie finden aktuell keine passende Stelle? Wir freuen uns über Initiativbewerbungen an{" "}
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="underline decoration-brand-accent underline-offset-4 hover:text-brand-accent"
@@ -123,7 +121,10 @@ function KarrierePage() {
                 </div>
                 <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                   Stellenanzeige lesen
-                  <Icon name="up-right-from-square" className="text-base transition-transform group-hover:translate-x-0.5" />
+                  <Icon
+                    name="up-right-from-square"
+                    className="text-base transition-transform group-hover:translate-x-0.5"
+                  />
                 </span>
               </a>
             ))}

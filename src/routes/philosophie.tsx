@@ -48,50 +48,49 @@ function PhilosophiePage() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
-              Die Welt der Architektur ist außerordentlich vielseitig. Für uns bedeutet
-              Architektur und Bauberatung weit mehr als nur die Planung von Gebäuden. Es
-              ist eine Zusammenarbeit des Vertrauens, in der wir Ihre individuellen
-              Wünsche und Vorstellungen mit unserer langjährigen Erfahrung und Expertise
-              kombinieren, um gemeinsam im Einklang mit den technischen, rechtlichen und
-              wirtschaftlichen Möglichkeiten eine nachhaltige Zukunft für kommende
-              Generationen zu gestalten.
+              Die Welt der Architektur ist außerordentlich vielseitig. Für uns bedeutet Architektur
+              und Bauberatung weit mehr als nur die Planung von Gebäuden. Es ist eine Zusammenarbeit
+              des Vertrauens, in der wir Ihre individuellen Wünsche und Vorstellungen mit unserer
+              langjährigen Erfahrung und Expertise kombinieren, um gemeinsam im Einklang mit den
+              technischen, rechtlichen und wirtschaftlichen Möglichkeiten eine nachhaltige Zukunft
+              für kommende Generationen zu gestalten.
             </p>
             <p>
-              Unser Weg vom „Niemand“ zum „Jemand“, vom Unbekannten zum etablierten
-              Architekten und Stadtplaner, hat uns gelehrt, dass Vertrauen eine essenzielle
-              Grundlage für erfolgreiche Zusammenarbeit ist. Nun möchten wir unsere
-              erlangte Erfahrung und Expertise mit jedem teilen —{" "}
-              <Link to="/geschichte" className="underline decoration-brand-accent underline-offset-4 hover:text-brand-accent">
+              Unser Weg vom „Niemand“ zum „Jemand“, vom Unbekannten zum etablierten Architekten und
+              Stadtplaner, hat uns gelehrt, dass Vertrauen eine essenzielle Grundlage für
+              erfolgreiche Zusammenarbeit ist. Nun möchten wir unsere erlangte Erfahrung und
+              Expertise mit jedem teilen —{" "}
+              <Link
+                to="/geschichte"
+                className="underline decoration-brand-accent underline-offset-4 hover:text-brand-accent"
+              >
                 wie Herr Shams in seinem Storytelling verdeutlicht
-              </Link>.
+              </Link>
+              .
             </p>
             <p>
-              Bereits zahlreiche Kunden und Partner haben uns ihr Vertrauen geschenkt, und
-              wir haben eine breite Palette von Architektur- und Städtebauprojekten mit
-              unterschiedlichen Budgets von 1.000 Euro bis 13,5 Mio. Euro erfolgreich
-              betreut. Unsere umfassenden Kompetenzen in beiden Disziplinen — Architektur
-              und Stadtplanung — ermöglichen es uns, Ihnen optimale Ergebnisse zu liefern
-              und Ihre Zufriedenheit zu gewährleisten.
+              Bereits zahlreiche Kunden und Partner haben uns ihr Vertrauen geschenkt, und wir haben
+              eine breite Palette von Architektur- und Städtebauprojekten mit unterschiedlichen
+              Budgets von 1.000 Euro bis 13,5 Mio. Euro erfolgreich betreut. Unsere umfassenden
+              Kompetenzen in beiden Disziplinen — Architektur und Stadtplanung — ermöglichen es uns,
+              Ihnen optimale Ergebnisse zu liefern und Ihre Zufriedenheit zu gewährleisten.
             </p>
             <p>
-              Was uns von anderen unterscheidet, sind unsere umfassenden Kompetenzen in
-              den untrennbaren Fachdisziplinen Architektur und Stadtplanung. Die
-              Symbolisierung dieser Eigenschaft erfolgt durch unser elegantes Logo in Form
-              eines Barcodes.
+              Was uns von anderen unterscheidet, sind unsere umfassenden Kompetenzen in den
+              untrennbaren Fachdisziplinen Architektur und Stadtplanung. Die Symbolisierung dieser
+              Eigenschaft erfolgt durch unser elegantes Logo in Form eines Barcodes.
             </p>
             <p>
-              Die Leidenschaft für Architektur und Stadtplanung begleitet uns seit über 15
-              Jahren — für uns ist es mehr als nur ein Beruf, es ist unsere Berufung.
-              Shams Consult verfügt über ein hochqualifiziertes und eingespieltes Team,
-              das an Ihrer Seite steht, um Ihre Projekte und Investitionen erfolgreich zu
-              verwirklichen.
+              Die Leidenschaft für Architektur und Stadtplanung begleitet uns seit über 15 Jahren —
+              für uns ist es mehr als nur ein Beruf, es ist unsere Berufung. Shams Consult verfügt
+              über ein hochqualifiziertes und eingespieltes Team, das an Ihrer Seite steht, um Ihre
+              Projekte und Investitionen erfolgreich zu verwirklichen.
             </p>
             <p>
-              Shams Consult ist mittlerweile ein Synonym für Architekten und Stadtplaner,
-              die sich für kreative, innovative und vertrauensvolle Planungen für ihre
-              Kunden einsetzen. Wir stehen für Vertrauen, Qualität und Leidenschaft in der
-              Architektur — und freuen uns darauf, Ihre Visionen gemeinsam in die Realität
-              umzusetzen.
+              Shams Consult ist mittlerweile ein Synonym für Architekten und Stadtplaner, die sich
+              für kreative, innovative und vertrauensvolle Planungen für ihre Kunden einsetzen. Wir
+              stehen für Vertrauen, Qualität und Leidenschaft in der Architektur — und freuen uns
+              darauf, Ihre Visionen gemeinsam in die Realität umzusetzen.
             </p>
           </div>
         </div>

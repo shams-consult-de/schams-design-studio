@@ -22,27 +22,51 @@ export const Route = createFileRoute("/kontakt")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submittedData, setSubmittedData] = useState<{
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  } | null>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const subject = (formData.get("subject") as string) || "Anfrage über Website";
+    const message = (formData.get("message") as string) || "";
+
+    const payload = { name, email, subject, message };
+    setSubmittedData(payload);
+    setSent(true);
+
+    const bodyText = `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`;
+    const mailtoUrl = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+    window.location.href = mailtoUrl;
+  };
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
       <header className="border-t border-border pt-12">
-        <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
           Kontakt
         </p>
         <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
           Sprechen Sie <br />
           <span className="italic">uns an</span>.
         </h1>
-        <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-brand-black/70">
-          Sichern Sie sich einen unverbindlichen Beratungstermin — online buchbar, per
-          WhatsApp, Telefon oder E-Mail.
+        <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-brand-black/80">
+          Sichern Sie sich einen unverbindlichen Beratungstermin — online buchbar, per WhatsApp,
+          Telefon oder E-Mail.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href={CONTACT.bookingHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-brand-white shadow-md shadow-brand-accent/20 transition-transform hover:-translate-y-0.5"
           >
             <Icon name="calendar-check" className="text-base" /> Erstgespräch buchen
           </a>
@@ -61,18 +85,19 @@ function ContactPage() {
         <aside className="space-y-10 lg:col-span-4">
           {CONTACT.offices.map((o) => (
             <div key={o.name}>
-              <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {o.name}
               </h2>
-              <address className="mt-4 not-italic leading-relaxed">
+              <address className="mt-3 not-italic leading-relaxed text-sm text-brand-black/90">
                 <Icon name="location-dot" className="mb-2 text-base text-brand-accent" />
+                <br />
                 {o.street}
                 <br />
                 {o.city}
                 <br />
                 <a
                   href={o.phoneHref}
-                  className="mt-2 inline-flex items-center gap-2 hover:text-brand-accent"
+                  className="mt-2 inline-flex items-center gap-2 font-medium hover:text-brand-accent"
                 >
                   <Icon name="phone" className="text-base" /> {o.phone}
                 </a>
@@ -80,23 +105,23 @@ function ContactPage() {
             </div>
           ))}
           <div>
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               E-Mail
             </h2>
-            <p className="mt-4 leading-relaxed">
+            <p className="mt-3 leading-relaxed">
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 italic hover:border-brand-accent hover:text-brand-accent"
+                className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 text-sm font-medium italic hover:border-brand-accent hover:text-brand-accent"
               >
                 <Icon name="envelope" className="text-base" /> {CONTACT.email}
               </a>
             </p>
           </div>
           <div>
-            <h2 className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Kammer
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-xs leading-relaxed text-brand-black/75">
               Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886
             </p>
           </div>
@@ -104,59 +129,93 @@ function ContactPage() {
 
         <div className="lg:col-span-8">
           {sent ? (
-            <div className="rounded-sm border border-border bg-concrete p-10">
-              <h2 className="font-serif text-3xl">Vielen Dank.</h2>
-              <p className="mt-4 text-brand-black/70">
-                Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen.
+            <div className="rounded-lg border border-border bg-concrete p-8 md:p-10">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/15 text-brand-accent">
+                <Icon name="calendar-check" className="text-2xl" />
+              </span>
+              <h2 className="mt-4 font-serif text-3xl">Vielen Dank für Ihre Anfrage!</h2>
+              <p className="mt-3 text-base text-brand-black/80">
+                Ihr E-Mail-Programm sollte sich soeben mit Ihrem Anfrage-Entwurf geöffnet haben.
               </p>
+              {submittedData && (
+                <div className="mt-6 rounded border border-border bg-brand-white p-4 text-sm text-brand-black/75">
+                  <p>
+                    <strong>Betreff:</strong> {submittedData.subject}
+                  </p>
+                  <p className="mt-1">
+                    <strong>Absender:</strong> {submittedData.name} ({submittedData.email})
+                  </p>
+                </div>
+              )}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(submittedData?.subject || "Anfrage")}&body=${encodeURIComponent(submittedData?.message || "")}`}
+                  className="inline-flex items-center gap-2 rounded-sm bg-brand-black px-6 py-3 text-xs font-semibold uppercase tracking-widest text-brand-white transition-colors hover:bg-brand-accent"
+                >
+                  <Icon name="envelope" className="text-sm" /> E-Mail manuell öffnen
+                </a>
+                <a
+                  href={CONTACT.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white transition-opacity hover:opacity-90"
+                >
+                  <Icon name="comment" className="text-sm" /> Über WhatsApp schreiben
+                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSent(false);
+                    setSubmittedData(null);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-sm border border-border px-6 py-3 text-xs font-semibold uppercase tracking-widest text-brand-black hover:bg-brand-white"
+                >
+                  Weiteres Formular senden
+                </button>
+              </div>
             </div>
           ) : (
-            <form
-              className="grid gap-6"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSent(true);
-              }}
-              noValidate
-            >
+            <form className="grid gap-6" onSubmit={handleSubmit}>
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-xs font-medium uppercase tracking-widest text-muted-foreground"
+                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
                   >
-                    Name
+                    Name <span className="text-brand-accent">*</span>
                   </label>
                   <input
                     id="name"
                     name="name"
                     type="text"
                     required
+                    placeholder="Ihr vollständiger Name"
                     autoComplete="name"
-                    className="w-full border-b border-input bg-transparent py-3 text-base outline-none focus:border-brand-accent"
+                    className="w-full border-b border-input bg-transparent py-3 text-base outline-none transition-colors focus:border-brand-accent"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-xs font-medium uppercase tracking-widest text-muted-foreground"
+                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
                   >
-                    E-Mail
+                    E-Mail <span className="text-brand-accent">*</span>
                   </label>
                   <input
                     id="email"
                     name="email"
                     type="email"
                     required
+                    placeholder="ihre.adresse@beispiel.de"
                     autoComplete="email"
-                    className="w-full border-b border-input bg-transparent py-3 text-base outline-none focus:border-brand-accent"
+                    className="w-full border-b border-input bg-transparent py-3 text-base outline-none transition-colors focus:border-brand-accent"
                   />
                 </div>
               </div>
               <div>
                 <label
                   htmlFor="subject"
-                  className="mb-2 block text-xs font-medium uppercase tracking-widest text-muted-foreground"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
                 >
                   Betreff
                 </label>
@@ -164,41 +223,44 @@ function ContactPage() {
                   id="subject"
                   name="subject"
                   type="text"
-                  className="w-full border-b border-input bg-transparent py-3 text-base outline-none focus:border-brand-accent"
+                  placeholder="z.B. Neubau EFH / Bauantrag / Stadtplanung"
+                  className="w-full border-b border-input bg-transparent py-3 text-base outline-none transition-colors focus:border-brand-accent"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-xs font-medium uppercase tracking-widest text-muted-foreground"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
                 >
-                  Nachricht
+                  Nachricht <span className="text-brand-accent">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={6}
+                  rows={5}
                   required
-                  className="w-full resize-none border-b border-input bg-transparent py-3 text-base outline-none focus:border-brand-accent"
+                  placeholder="Beschreiben Sie kurz Ihr Vorhaben oder Ihre Fragen..."
+                  className="w-full resize-none border-b border-input bg-transparent py-3 text-base outline-none transition-colors focus:border-brand-accent"
                 />
               </div>
               <div className="flex items-start gap-3">
                 <input id="privacy" name="privacy" type="checkbox" required className="mt-1" />
-                <label htmlFor="privacy" className="text-sm text-brand-black/70">
+                <label htmlFor="privacy" className="text-xs text-brand-black/75">
                   Ich habe die{" "}
                   <a href="/datenschutz" className="underline hover:text-brand-accent">
                     Datenschutzerklärung
                   </a>{" "}
-                  gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner
-                  Anfrage zu.
+                  gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage
+                  zu.
                 </label>
               </div>
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-sm bg-brand-black px-8 py-3 text-xs font-medium uppercase tracking-widest text-brand-white transition-colors hover:bg-brand-accent"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-black px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-brand-white transition-all hover:bg-brand-accent hover:shadow-lg hover:shadow-brand-accent/20"
                 >
-                  Nachricht senden
+                  <span>Nachricht absenden</span>
+                  <Icon name="arrow-right" className="text-sm" />
                 </button>
               </div>
             </form>

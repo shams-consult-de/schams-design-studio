@@ -70,7 +70,10 @@ function HomePage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white/90 via-brand-white/55 to-transparent" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-brand-white/95 via-brand-white/85 to-brand-white/30 lg:to-transparent"
+        />
         <div className="relative mx-auto flex min-h-[88vh] max-w-7xl items-center px-6 py-24 lg:px-12">
           <div className="max-w-2xl" data-reveal="left">
             <p className="shams-float text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
@@ -80,9 +83,9 @@ function HomePage() {
               Ihr Raum — <br />
               <span className="font-serif italic font-normal">unsere Vision.</span>
             </h1>
-            <p className="mt-8 max-w-lg text-lg font-light leading-relaxed text-brand-black/75">
-              Shams Consult — Planungsbüro für Innovation und Kreativität. Über 15 Jahre
-              Erfahrung, über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.
+            <p className="mt-8 max-w-lg text-lg font-light leading-relaxed text-brand-black/85">
+              Shams Consult — Planungsbüro für Innovation und Kreativität. Über 15 Jahre Erfahrung,
+              über 100 realisierte Projekte. Büros in Frankfurt am Main und Rödermark.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -93,33 +96,48 @@ function HomePage() {
               >
                 <Icon name="calendar-check" className="text-xl" />
                 Erstgespräch buchen
-                <Icon name="arrow-right" className="text-xl transition-transform group-hover:translate-x-1" />
+                <Icon
+                  name="arrow-right"
+                  className="text-xl transition-transform group-hover:translate-x-1"
+                />
               </a>
               <a
                 href={CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-base font-semibold text-white shadow-md shadow-[#25D366]/20 transition-transform hover:-translate-y-0.5"
               >
                 <Icon name="comment" className="text-xl" />
                 Über WhatsApp
               </a>
               <Link
                 to="/projekte"
-                className="inline-flex items-center gap-2 rounded-full border border-brand-black/20 bg-brand-white/70 px-7 py-4 text-base font-medium text-brand-black backdrop-blur transition-colors hover:border-brand-black"
+                className="inline-flex items-center gap-2 rounded-full border border-brand-black/20 bg-brand-white/80 px-7 py-4 text-base font-medium text-brand-black backdrop-blur transition-colors hover:border-brand-black"
               >
                 Projekte ansehen
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-brand-black/70">
-              <a href={CONTACT.offices[0].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Icon name="phone" className="text-base" /> Frankfurt: {CONTACT.offices[0].phone}
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-brand-black/75">
+              <span className="inline-flex items-center gap-1.5">
+                <Icon name="location-dot" className="text-brand-accent" /> Frankfurt & Rödermark
+              </span>
+              <span aria-hidden="true" className="hidden sm:inline text-brand-black/30">
+                ·
+              </span>
+              <a
+                href={CONTACT.offices[0].phoneHref}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-brand-accent"
+              >
+                <Icon name="phone" className="text-brand-accent" /> {CONTACT.offices[0].phone}
               </a>
-              <a href={CONTACT.offices[1].phoneHref} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Icon name="phone" className="text-base" /> Rödermark: {CONTACT.offices[1].phone}
-              </a>
-              <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 hover:text-brand-accent">
-                <Icon name="envelope" className="text-base" /> {CONTACT.email}
+              <span aria-hidden="true" className="hidden sm:inline text-brand-black/30">
+                ·
+              </span>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-brand-accent"
+              >
+                <Icon name="envelope" className="text-brand-accent" /> {CONTACT.email}
               </a>
             </div>
           </div>
@@ -128,7 +146,10 @@ function HomePage() {
 
       {/* 5 gute Gründe */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
-        <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
+        <header
+          className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+          data-reveal
+        >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
               Warum Shams Consult
@@ -154,9 +175,7 @@ function HomePage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent transition-colors group-hover:bg-brand-accent group-hover:text-brand-white">
                   <Icon name={icon} className="text-xl" />
                 </div>
-                <span className="font-serif text-3xl text-brand-black/20">
-                  0{i + 1}
-                </span>
+                <span className="font-serif text-3xl text-brand-black/20">0{i + 1}</span>
               </div>
               <h3 className="mt-6 font-serif text-xl leading-snug">{title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-brand-black/70">{body}</p>
@@ -168,7 +187,10 @@ function HomePage() {
       {/* Aktuelles Projekt / Portfolio */}
       <section className="bg-concrete/60 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <header className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
+          <header
+            className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+            data-reveal
+          >
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
                 Portfolio
@@ -177,8 +199,8 @@ function HomePage() {
                 Ausgewählte <span className="italic">Projekte</span>.
               </h2>
               <p className="mt-4 max-w-lg text-brand-black/70">
-                Vom Einfamilienhaus in Lingen (Ems) bis zum Bebauungsplan „Töpfenmühle“ in
-                Gersfeld (Rhön) — ein Auszug aus unserer Arbeit.
+                Vom Einfamilienhaus in Lingen (Ems) bis zum Bebauungsplan „Töpfenmühle“ in Gersfeld
+                (Rhön) — ein Auszug aus unserer Arbeit.
               </p>
             </div>
             <Link
@@ -208,13 +230,18 @@ function HomePage() {
                   />
                 </div>
                 <h3 className="mt-3 text-sm font-semibold text-brand-black">{p.title}</h3>
-                <p className="text-xs text-brand-black/60">{p.location} · {p.year}</p>
+                <p className="text-xs text-brand-black/60">
+                  {p.location} · {p.year}
+                </p>
               </article>
             ))}
           </div>
 
           {/* Aktuelles Projekt: Töpfenmühle */}
-          <div className="mt-24 grid gap-10 rounded-2xl border border-border bg-brand-white p-8 lg:grid-cols-12 lg:p-12" data-reveal>
+          <div
+            className="mt-24 grid gap-10 rounded-2xl border border-border bg-brand-white p-8 lg:grid-cols-12 lg:p-12"
+            data-reveal
+          >
             <div className="lg:col-span-5 image-zoom overflow-hidden rounded-xl">
               <img
                 src="/images/image-.jpg"
@@ -233,22 +260,20 @@ function HomePage() {
                 Bebauungsplan <span className="italic">„Töpfenmühle“</span>, Gersfeld (Rhön)
               </h3>
               <p className="mt-5 text-brand-black/75 leading-relaxed">
-                Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen
-                Verfahrens mit Artenschutzuntersuchung und Umweltprüfung (Umweltbericht)
-                nach § 2 Abs. 4 BauGB aufgestellt. Es handelt sich um einen
-                qualifizierten Bebauungsplan gemäß § 30 Abs. 1 BauGB. Innerhalb des
-                Geltungsbereiches sind Art und Maß der baulichen Nutzung, die
-                überbaubaren Grundstücksflächen und die örtlichen Verkehrsflächen
-                festgesetzt. Die Erschließung ist bereits gesichert.
+                Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen Verfahrens mit
+                Artenschutzuntersuchung und Umweltprüfung (Umweltbericht) nach § 2 Abs. 4 BauGB
+                aufgestellt. Es handelt sich um einen qualifizierten Bebauungsplan gemäß § 30 Abs. 1
+                BauGB. Innerhalb des Geltungsbereiches sind Art und Maß der baulichen Nutzung, die
+                überbaubaren Grundstücksflächen und die örtlichen Verkehrsflächen festgesetzt. Die
+                Erschließung ist bereits gesichert.
               </p>
               <p className="mt-4 text-brand-black/75 leading-relaxed">
-                Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand
-                zu erhalten und die ländlich geprägte, historisch bedeutsame dörfliche
-                Siedlungsstruktur zu bewahren. Zeitgemäße Nutzungen und die energetische
-                Sanierung der Bestandsgebäude — inklusive erforderlicher Ersatzbauten —
-                sollen mit Planungssicherheit ermöglicht werden. Unbebaute Flächen
-                innerhalb des Planungsgebietes bleiben in ihrer natürlichen
-                landschaftlichen Form erhalten.
+                Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand zu erhalten
+                und die ländlich geprägte, historisch bedeutsame dörfliche Siedlungsstruktur zu
+                bewahren. Zeitgemäße Nutzungen und die energetische Sanierung der Bestandsgebäude —
+                inklusive erforderlicher Ersatzbauten — sollen mit Planungssicherheit ermöglicht
+                werden. Unbebaute Flächen innerhalb des Planungsgebietes bleiben in ihrer
+                natürlichen landschaftlichen Form erhalten.
               </p>
             </div>
           </div>
@@ -270,9 +295,9 @@ function HomePage() {
             </h2>
             <p className="mt-6 max-w-md text-brand-black/70">
               In Kooperation mit der Frankfurt UAS geben wir aktuelle Themen der Bau- und
-              Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und
-              Masterarbeiten. Aktueller Fachbeitrag: „Stellplatzsatzung im Fokus — Zeit
-              für eine kritische Neubewertung“ von Majeed Shams und Leonie Ries.
+              Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und Masterarbeiten.
+              Aktueller Fachbeitrag: „Stellplatzsatzung im Fokus — Zeit für eine kritische
+              Neubewertung“ von Majeed Shams und Leonie Ries.
             </p>
             <Link
               to="/forschung"
@@ -284,11 +309,26 @@ function HomePage() {
 
           <div className="grid gap-6 lg:col-span-7 md:grid-cols-3">
             {[
-              { icon: "graduation-cap", title: "Frankfurt UAS", body: "Lehrbeauftragter seit 2020 — Fachbereich Architektur, Stadtplanung & Bauingenieurwesen." },
-              { icon: "landmark", title: "Kommunale Praxis", body: "Über 100 geprüfte Bauanträge in Dieburg, Weinstadt und Karlsruhe." },
-              { icon: "users", title: "16 Fachleute", body: "Festes Netzwerk aus Architekt:innen und Ingenieur:innen für komplexe Aufgaben." },
+              {
+                icon: "graduation-cap",
+                title: "Frankfurt UAS",
+                body: "Lehrbeauftragter seit 2020 — Fachbereich Architektur, Stadtplanung & Bauingenieurwesen.",
+              },
+              {
+                icon: "landmark",
+                title: "Kommunale Praxis",
+                body: "Über 100 geprüfte Bauanträge in Dieburg, Weinstadt und Karlsruhe.",
+              },
+              {
+                icon: "users",
+                title: "16 Fachleute",
+                body: "Festes Netzwerk aus Architekt:innen und Ingenieur:innen für komplexe Aufgaben.",
+              },
             ].map(({ icon, title, body }) => (
-              <div key={title} className="flex flex-col rounded-2xl bg-brand-black p-8 text-brand-white">
+              <div
+                key={title}
+                className="flex flex-col rounded-2xl bg-brand-black p-8 text-brand-white"
+              >
                 <Icon name={icon} className="text-2xl text-brand-accent" />
                 <h3 className="mt-6 font-serif text-2xl">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-white/70">{body}</p>
@@ -308,7 +348,10 @@ function HomePage() {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-black/80 via-brand-black/50 to-brand-black/25" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-brand-black/80 via-brand-black/50 to-brand-black/25"
+        />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
@@ -327,7 +370,10 @@ function HomePage() {
                     <br />
                     {o.city}
                     <br />
-                    <a href={o.phoneHref} className="mt-2 inline-flex items-center gap-2 text-brand-white/80 hover:text-brand-accent">
+                    <a
+                      href={o.phoneHref}
+                      className="mt-2 inline-flex items-center gap-2 text-brand-white/80 hover:text-brand-accent"
+                    >
                       <Icon name="phone" className="text-base" /> {o.phone}
                     </a>
                   </address>
@@ -339,12 +385,10 @@ function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
                 Direkt kontaktieren
               </p>
-              <h3 className="mt-3 font-serif text-3xl md:text-4xl">
-                Beratungstermin sichern.
-              </h3>
+              <h3 className="mt-3 font-serif text-3xl md:text-4xl">Beratungstermin sichern.</h3>
               <p className="mt-4 max-w-md text-brand-white/70">
-                Sichern Sie sich einen unverbindlichen Beratungstermin — bequem online
-                buchbar oder direkt per WhatsApp.
+                Sichern Sie sich einen unverbindlichen Beratungstermin — bequem online buchbar oder
+                direkt per WhatsApp.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -383,43 +427,41 @@ const partners = [
     name: "Adapteo",
     tag: "Modulares & temporäres Bauen",
     href: "https://www.adapteo.de",
-    body:
-      "Unser Geschäftspartner Adapteo aus Neu-Isenburg ist auf modulare und temporäre Gebäude spezialisiert. Gemeinsam realisieren wir 2025 ein Ausweichquartier für über 200 Mitarbeitende eines Behördenzentrums in Berlin — schnell umgesetzt, hoch funktional, nachhaltig gebaut. Wir begleiten Adapteo und die Bundesanstalt für Immobilienaufgaben in Planung und Umsetzung.",
+    body: "Unser Geschäftspartner Adapteo aus Neu-Isenburg ist auf modulare und temporäre Gebäude spezialisiert. Gemeinsam realisieren wir 2025 ein Ausweichquartier für über 200 Mitarbeitende eines Behördenzentrums in Berlin — schnell umgesetzt, hoch funktional, nachhaltig gebaut. Wir begleiten Adapteo und die Bundesanstalt für Immobilienaufgaben in Planung und Umsetzung.",
   },
   {
     name: "Stadtwerke Rodgau",
     tag: "Kommunale Infrastruktur",
     href: "https://www.stadtwerke-rodgau.de",
-    body:
-      "Die Stadtwerke Rodgau sind ein Eigenbetrieb der Stadt Rodgau und fördern ökologische, umweltfreundliche und klimafreundliche Projekte. Wir haben die Stadtwerke bei der Genehmigungsplanung für die Kompostierungsanlage unterstützt — und freuen uns auf weitere gemeinsame Projekte.",
+    body: "Die Stadtwerke Rodgau sind ein Eigenbetrieb der Stadt Rodgau und fördern ökologische, umweltfreundliche und klimafreundliche Projekte. Wir haben die Stadtwerke bei der Genehmigungsplanung für die Kompostierungsanlage unterstützt — und freuen uns auf weitere gemeinsame Projekte.",
   },
   {
     name: "Frankfurt UAS",
     tag: "Forschung & Lehre",
     href: "https://www.frankfurt-university.de",
-    body:
-      "In Kooperation mit der Frankfurt University of Applied Sciences geben wir aktuelle Themen der Bau- und Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und Masterarbeiten am Fachbereich Architektur, Bauingenieurwesen und Geomatik.",
+    body: "In Kooperation mit der Frankfurt University of Applied Sciences geben wir aktuelle Themen der Bau- und Stadtplanung als Forschungsprojekte heraus und betreuen Bachelor- und Masterarbeiten am Fachbereich Architektur, Bauingenieurwesen und Geomatik.",
   },
   {
     name: "INSTINKT Bauunternehmen",
     tag: "Wohnungs- & Reihenhausbau",
     href: "https://www.instinkt-wohnraumberater.de",
-    body:
-      "INSTINKT Bauunternehmen GmbH mit Sitz in Eschborn baut regional (Rhein-Main-Gebiet) und überregional Einfamilien-, Reihen- und Doppelhäuser sowie Bürobauten. Wir hatten die Ehre, die Firma bei der Planung und Realisierung von drei innovativen Häusern zu unterstützen.",
+    body: "INSTINKT Bauunternehmen GmbH mit Sitz in Eschborn baut regional (Rhein-Main-Gebiet) und überregional Einfamilien-, Reihen- und Doppelhäuser sowie Bürobauten. Wir hatten die Ehre, die Firma bei der Planung und Realisierung von drei innovativen Häusern zu unterstützen.",
   },
   {
     name: "SCHOOFS Immobilien",
     tag: "Projektentwicklung Mischnutzung",
     href: "https://www.schoofs-immobilien.de",
-    body:
-      "SCHOOFS Immobilien ist bundesweit im Bereich Projektentwicklung und Realisierung des Lebensmitteleinzelhandels in Kombination mit Wohnungsbau bekannt. Aktuell begleiten wir das Unternehmen bei einem Supermarkt, 22 Wohnungen, einer Bäckerei und den Außenanlagen.",
+    body: "SCHOOFS Immobilien ist bundesweit im Bereich Projektentwicklung und Realisierung des Lebensmitteleinzelhandels in Kombination mit Wohnungsbau bekannt. Aktuell begleiten wir das Unternehmen bei einem Supermarkt, 22 Wohnungen, einer Bäckerei und den Außenanlagen.",
   },
 ];
 
 function PartnersSection() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-32">
-      <header className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end" data-reveal>
+      <header
+        className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+        data-reveal
+      >
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
             Kunden & Partner
@@ -429,9 +471,8 @@ function PartnersSection() {
           </h2>
         </div>
         <p className="max-w-md text-brand-black/70">
-          Wir arbeiten mit öffentlichen Auftraggebern, Projektentwicklern und
-          Bauunternehmen zusammen — von der Machbarkeitsstudie bis zur
-          schlüsselfertigen Realisierung.
+          Wir arbeiten mit öffentlichen Auftraggebern, Projektentwicklern und Bauunternehmen
+          zusammen — von der Machbarkeitsstudie bis zur schlüsselfertigen Realisierung.
         </p>
       </header>
 
@@ -450,7 +491,10 @@ function PartnersSection() {
               <p className="text-[10px] font-semibold uppercase tracking-widest text-brand-accent">
                 {p.tag}
               </p>
-              <Icon name="arrow-right" className="text-base text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent" />
+              <Icon
+                name="arrow-right"
+                className="text-base text-brand-black/30 transition-all group-hover:translate-x-1 group-hover:text-brand-accent"
+              />
             </div>
             <h3 className="mt-4 font-serif text-2xl">{p.name}</h3>
             <p className="mt-3 text-sm leading-relaxed text-brand-black/70">{p.body}</p>

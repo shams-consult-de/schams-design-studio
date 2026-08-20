@@ -29,8 +29,8 @@ function ProjectsPage() {
           Ausgewählte <span className="italic">Projekte</span>
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-brand-black/70">
-          Ein Ausschnitt aus unserer Arbeit — Wohnbauten, öffentliche Räume, Kultur-
-          und Bildungsbauten, die den Anspruch teilen, ihren Ort präziser zu machen.
+          Ein Ausschnitt aus unserer Arbeit — Wohnbauten, öffentliche Räume, Kultur- und
+          Bildungsbauten, die den Anspruch teilen, ihren Ort präziser zu machen.
         </p>
       </header>
 
@@ -57,20 +57,20 @@ function ProjectsPage() {
             Bebauungsplan <span className="italic">„Töpfenmühle“</span>, Gersfeld (Rhön)
           </h2>
           <p className="mt-5 text-brand-black/75 leading-relaxed">
-            Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen Verfahrens
-            mit Artenschutzuntersuchung und Umweltprüfung (Umweltbericht) nach § 2 Abs. 4
-            BauGB aufgestellt. Es handelt sich um einen qualifizierten Bebauungsplan gemäß
-            § 30 Abs. 1 BauGB. Innerhalb des Geltungsbereiches sind Art und Maß der
-            baulichen Nutzung, die überbaubaren Grundstücksflächen und die örtlichen
-            Verkehrsflächen festgesetzt. Die Erschließung ist bereits gesichert.
+            Der Bebauungsplan „Töpfenmühle“ wurde im Rahmen eines zweistufigen Verfahrens mit
+            Artenschutzuntersuchung und Umweltprüfung (Umweltbericht) nach § 2 Abs. 4 BauGB
+            aufgestellt. Es handelt sich um einen qualifizierten Bebauungsplan gemäß § 30 Abs. 1
+            BauGB. Innerhalb des Geltungsbereiches sind Art und Maß der baulichen Nutzung, die
+            überbaubaren Grundstücksflächen und die örtlichen Verkehrsflächen festgesetzt. Die
+            Erschließung ist bereits gesichert.
           </p>
           <p className="mt-4 text-brand-black/75 leading-relaxed">
-            Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand zu
-            erhalten und die ländlich geprägte, historisch bedeutsame dörfliche
-            Siedlungsstruktur zu bewahren. Zeitgemäße Nutzungen und die energetische
-            Sanierung der Bestandsgebäude — inklusive erforderlicher Ersatzbauten — sollen
-            mit Planungssicherheit ermöglicht werden. Unbebaute Flächen innerhalb des
-            Planungsgebietes bleiben in ihrer natürlichen landschaftlichen Form erhalten.
+            Ziel ist es, Baurecht für den Geltungsbereich zu schaffen, den Bestand zu erhalten und
+            die ländlich geprägte, historisch bedeutsame dörfliche Siedlungsstruktur zu bewahren.
+            Zeitgemäße Nutzungen und die energetische Sanierung der Bestandsgebäude — inklusive
+            erforderlicher Ersatzbauten — sollen mit Planungssicherheit ermöglicht werden. Unbebaute
+            Flächen innerhalb des Planungsgebietes bleiben in ihrer natürlichen landschaftlichen
+            Form erhalten.
           </p>
           <dl className="mt-6 grid grid-cols-3 gap-6 border-t border-border pt-6 text-xs uppercase tracking-widest text-brand-black/60">
             <div>
@@ -126,15 +126,13 @@ function ProjectsPage() {
       </div>
 
       <div className="mt-32 border-t border-border pt-16">
-        <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
-          Galerie
-        </p>
+        <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">Galerie</p>
         <h2 className="mt-4 font-serif text-3xl md:text-5xl">
           Pläne, Baustellen & <span className="italic">Details</span>
         </h2>
         <p className="mt-4 max-w-xl text-brand-black/70">
-          Weitere Einblicke aus laufenden und realisierten Projekten — von
-          Ausführungsplänen über Bebauungspläne bis zur Baustellendokumentation.
+          Weitere Einblicke aus laufenden und realisierten Projekten — von Ausführungsplänen über
+          Bebauungspläne bis zur Baustellendokumentation.
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4">

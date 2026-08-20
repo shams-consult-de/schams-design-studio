@@ -14,12 +14,12 @@ export const Route = createFileRoute("/stadtplanung")({
       { property: "og:title", content: "Stadtplanung & Städtebau — Shams Consult" },
       {
         property: "og:description",
-        content: "Wir gestalten zukunftsfähige Räume — von einzelnen Quartieren bis zur Stadtregion.",
+        content:
+          "Wir gestalten zukunftsfähige Räume — von einzelnen Quartieren bis zur Stadtregion.",
       },
       {
         property: "og:image",
-        content:
-          "https://shams-consult.de/images/image-.jpg",
+        content: "https://shams-consult.de/images/image-.jpg",
       },
       { property: "og:url", content: "https://shams-consult.de/stadtplanung" },
     ],
@@ -64,17 +64,15 @@ function StadtplanungPage() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
-              Shams Consult steht für integrierte Stadtplanung, die soziale, wirtschaftliche
-              und ökologische Anforderungen miteinander verbindet. Unsere Arbeit reicht von
-              der Entwicklung einzelner Quartiere bis hin zur strategischen Planung ganzer
-              Stadtregionen — immer im rechtlichen Rahmen und mit Beteiligung der Akteure
-              vor Ort.
+              Shams Consult steht für integrierte Stadtplanung, die soziale, wirtschaftliche und
+              ökologische Anforderungen miteinander verbindet. Unsere Arbeit reicht von der
+              Entwicklung einzelner Quartiere bis hin zur strategischen Planung ganzer Stadtregionen
+              — immer im rechtlichen Rahmen und mit Beteiligung der Akteure vor Ort.
             </p>
             <p>
-              Unser Büro deckt das gesamte Leistungsspektrum des Städtebaus und der
-              Stadtplanung ab. Unsere Planung basiert auf umfassender Praxiserfahrung und
-              laufender Forschung — z. B. im Bereich Mobilitätswende, Defektmanagement und
-              Baukosteneffizienz.
+              Unser Büro deckt das gesamte Leistungsspektrum des Städtebaus und der Stadtplanung ab.
+              Unsere Planung basiert auf umfassender Praxiserfahrung und laufender Forschung — z. B.
+              im Bereich Mobilitätswende, Defektmanagement und Baukosteneffizienz.
             </p>
           </div>
         </div>

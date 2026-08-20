@@ -55,38 +55,35 @@ function GeschichtePage() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
-              Vertraut haben mir das schönste Land der Welt (Deutschland) und seine
-              Mitmenschen, als ich im Jahr 2005 <strong>mit null Euro</strong> und meinen
-              wenigen mitgenommenen Erinnerungsstücken aus Afghanistan am Düsseldorfer
-              Flughafen ankam. (Siehe den Zeitungsausschnitt vom 30.08.2005, Rheinische
-              Post.)
+              Vertraut haben mir das schönste Land der Welt (Deutschland) und seine Mitmenschen, als
+              ich im Jahr 2005 <strong>mit null Euro</strong> und meinen wenigen mitgenommenen
+              Erinnerungsstücken aus Afghanistan am Düsseldorfer Flughafen ankam. (Siehe den
+              Zeitungsausschnitt vom 30.08.2005, Rheinische Post.)
             </p>
             <p>
-              Knapp 20 Jahre sind seitdem vergangen, in denen ich meine Vision Wirklichkeit
-              werden ließ. Vier Jahre meines Lebens widmete ich dem Architekturstudium in
-              Karlsruhe, gefolgt von weiteren zwei Jahren, in denen ich das Masterstudium
-              in Stadtplanung in Stuttgart berufsbegleitend absolvierte. Mit gut 15 Jahren
-              Berufs- und Lebenserfahrung stehe ich heute als verantwortungsbewusster
-              Architekt und Stadtplaner da, bereit, dem Land und den liebevollen Menschen
-              etwas zurückzugeben.
+              Knapp 20 Jahre sind seitdem vergangen, in denen ich meine Vision Wirklichkeit werden
+              ließ. Vier Jahre meines Lebens widmete ich dem Architekturstudium in Karlsruhe,
+              gefolgt von weiteren zwei Jahren, in denen ich das Masterstudium in Stadtplanung in
+              Stuttgart berufsbegleitend absolvierte. Mit gut 15 Jahren Berufs- und Lebenserfahrung
+              stehe ich heute als verantwortungsbewusster Architekt und Stadtplaner da, bereit, dem
+              Land und den liebevollen Menschen etwas zurückzugeben.
             </p>
             <p>Aus diesem Grund bedeutet für mich Architektur und Bauberatung Vertrauen.</p>
             <p>
-              Zahlreiche Kunden und Partner haben bereits Vertrauen in mich und mein Team
-              gesetzt. Unterschiedliche Architektur- und Städtebauprojekte mit
-              verschiedenen Budgets haben wir erfolgreich betreut — von 1.000 Euro bis hin
-              zu 13,5 Mio. Euro.
+              Zahlreiche Kunden und Partner haben bereits Vertrauen in mich und mein Team gesetzt.
+              Unterschiedliche Architektur- und Städtebauprojekte mit verschiedenen Budgets haben
+              wir erfolgreich betreut — von 1.000 Euro bis hin zu 13,5 Mio. Euro.
             </p>
             <p>
-              Meine umfassenden Kompetenzen in beiden Disziplinen, Architektur und
-              Stadtplanung, ermöglichen es mir, Ihnen optimale Ergebnisse zu liefern. Denn
-              Architektur und Stadtplanung sind für mich mehr als nur Beruf — es ist eine
-              Berufung, die ich seit über 15 Jahren leidenschaftlich praktiziere.
+              Meine umfassenden Kompetenzen in beiden Disziplinen, Architektur und Stadtplanung,
+              ermöglichen es mir, Ihnen optimale Ergebnisse zu liefern. Denn Architektur und
+              Stadtplanung sind für mich mehr als nur Beruf — es ist eine Berufung, die ich seit
+              über 15 Jahren leidenschaftlich praktiziere.
             </p>
             <p>
-              Lassen Sie uns gemeinsam Ihre Visionen in die Realität umsetzen und so etwas
-              Schönes für die Zukunft schaffen — etwas, das Ihnen, dem Land und den
-              Menschen etwas zurückgibt.
+              Lassen Sie uns gemeinsam Ihre Visionen in die Realität umsetzen und so etwas Schönes
+              für die Zukunft schaffen — etwas, das Ihnen, dem Land und den Menschen etwas
+              zurückgibt.
             </p>
           </div>
         </div>
@@ -103,9 +100,9 @@ function GeschichtePage() {
             className="w-full object-cover"
           />
           <figcaption className="p-4 text-sm text-brand-black/70">
-            Erfolgsgeschichte von Majeed Shams — Rheinische Post, Ausgabe 30. August 2005.
-            Der Reisekoffer samt Erinnerungsstücken, Fotos, Bücher und Wertsachen gingen in
-            New-Delhi verloren.
+            Erfolgsgeschichte von Majeed Shams — Rheinische Post, Ausgabe 30. August 2005. Der
+            Reisekoffer samt Erinnerungsstücken, Fotos, Bücher und Wertsachen gingen in New-Delhi
+            verloren.
           </figcaption>
         </figure>
 

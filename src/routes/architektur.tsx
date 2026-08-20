@@ -12,7 +12,10 @@ export const Route = createFileRoute("/architektur")({
           "Architektur mit Weitblick: Planung für Lebensqualität und Funktion. Entwurf, Genehmigung und Realisierung — vom Wohnbau bis zum Sonderbau.",
       },
       { property: "og:title", content: "Architektur — Shams Consult" },
-      { property: "og:description", content: "Ganzheitlich gedachte Lösungen — vom Entwurf bis zur Realisierung." },
+      {
+        property: "og:description",
+        content: "Ganzheitlich gedachte Lösungen — vom Entwurf bis zur Realisierung.",
+      },
       {
         property: "og:image",
         content:
@@ -60,15 +63,13 @@ function ArchitekturPage() {
           <div className="space-y-6 text-base leading-relaxed text-brand-black/75 lg:col-span-6 lg:col-start-7">
             <p>
               Bei Shams Consult steht Architektur nicht nur für gutes Design, sondern für
-              ganzheitlich gedachte Lösungen, die sich an den Bedürfnissen von Nutzern,
-              Städten und Investoren orientieren. Wir entwickeln wirtschaftlich tragfähige,
-              rechtssichere und gestalterisch hochwertige Gebäude — vom Entwurf bis zur
-              Realisierung.
+              ganzheitlich gedachte Lösungen, die sich an den Bedürfnissen von Nutzern, Städten und
+              Investoren orientieren. Wir entwickeln wirtschaftlich tragfähige, rechtssichere und
+              gestalterisch hochwertige Gebäude — vom Entwurf bis zur Realisierung.
             </p>
             <p>
-              Mit über 15 Jahren Erfahrung und fundiertem Wissen im Bau- und Planungsrecht
-              begleiten wir Bauvorhaben in jeder Leistungsphase — kompetent, kreativ und
-              zuverlässig.
+              Mit über 15 Jahren Erfahrung und fundiertem Wissen im Bau- und Planungsrecht begleiten
+              wir Bauvorhaben in jeder Leistungsphase — kompetent, kreativ und zuverlässig.
             </p>
           </div>
         </div>

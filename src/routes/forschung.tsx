@@ -78,10 +78,10 @@ function ForschungPage() {
             Forschung bei <span className="italic">Shams Consult</span>.
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-brand-black/70">
-            Das Planungsbüro Shams Consult gibt aktuelle Themen der Bau- und Stadtplanung
-            als „Forschungsprojekte“ heraus und unterstützt Studierende und Professor:innen
-            bei der Betreuung der Abschlussarbeiten (Master & Bachelor) an der Frankfurt
-            University of Applied Sciences (UAS).
+            Das Planungsbüro Shams Consult gibt aktuelle Themen der Bau- und Stadtplanung als
+            „Forschungsprojekte“ heraus und unterstützt Studierende und Professor:innen bei der
+            Betreuung der Abschlussarbeiten (Master & Bachelor) an der Frankfurt University of
+            Applied Sciences (UAS).
           </p>
         </header>
       </section>
@@ -104,32 +104,30 @@ function ForschungPage() {
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-brand-black/80">
             <p>
-              Die Debatte um die Stellplatzsatzung hat in den letzten Jahren an Bedeutung
-              gewonnen. Als Architekt und Planverfasser von Bauanträgen sowie ehemaliger
-              Prüfer in der Bauverwaltung erlebten wir die Auswirkungen dieses Instruments
-              sehr intensiv. Starre Vorgaben können erheblichen volkswirtschaftlichen
-              Schaden verursachen — betroffen sind Bauwillige ebenso wie
-              Genehmigungsbehörden.
+              Die Debatte um die Stellplatzsatzung hat in den letzten Jahren an Bedeutung gewonnen.
+              Als Architekt und Planverfasser von Bauanträgen sowie ehemaliger Prüfer in der
+              Bauverwaltung erlebten wir die Auswirkungen dieses Instruments sehr intensiv. Starre
+              Vorgaben können erheblichen volkswirtschaftlichen Schaden verursachen — betroffen sind
+              Bauwillige ebenso wie Genehmigungsbehörden.
             </p>
             <p>
-              Viele hessische Gemeinden regeln die Parkierung über eine „Stellplatzsatzung“
-              mit stark variierenden Anforderungen (typisch 1,5 – 2,0 Stellplätze pro
-              Wohneinheit). Diese Zahlen basieren häufig auf Erfahrungswerten statt auf
-              belastbaren Prognosen und weichen vom tatsächlichen Bedarf ab.
+              Viele hessische Gemeinden regeln die Parkierung über eine „Stellplatzsatzung“ mit
+              stark variierenden Anforderungen (typisch 1,5 – 2,0 Stellplätze pro Wohneinheit).
+              Diese Zahlen basieren häufig auf Erfahrungswerten statt auf belastbaren Prognosen und
+              weichen vom tatsächlichen Bedarf ab.
             </p>
             <p>
-              Die Stellplatzproblematik erzwingt oft eine „umgekehrte Planung“ — die Anzahl
-              der Wohneinheiten wird an nachweisbare Stellplätze angepasst. Das führt zu
-              nicht marktgerechten Wohnungsgrößen, verhindert Nachverdichtung und
-              verteuert Mieten durch Tiefgaragen. Alternative Konzepte wie Zonen mit
-              qualitativ hochwertiger ÖPNV-Erschließung, Quartiers-Mobilitätskonzepte mit
-              Fahrrad- und Sharing-Fokus oder Stellplatzobergrenzen sind zeitgemäßer.
+              Die Stellplatzproblematik erzwingt oft eine „umgekehrte Planung“ — die Anzahl der
+              Wohneinheiten wird an nachweisbare Stellplätze angepasst. Das führt zu nicht
+              marktgerechten Wohnungsgrößen, verhindert Nachverdichtung und verteuert Mieten durch
+              Tiefgaragen. Alternative Konzepte wie Zonen mit qualitativ hochwertiger
+              ÖPNV-Erschließung, Quartiers-Mobilitätskonzepte mit Fahrrad- und Sharing-Fokus oder
+              Stellplatzobergrenzen sind zeitgemäßer.
             </p>
             <p>
-              Wir plädieren dafür, die Stellplatzsatzung nicht als statisches Instrument
-              zu betrachten, sondern als dynamische Regelung, die sich zeitgemäßem
-              Mobilitätsverhalten anpasst — im Interesse der Wohnraumschaffung und einer
-              nachhaltigen Verkehrswende.
+              Wir plädieren dafür, die Stellplatzsatzung nicht als statisches Instrument zu
+              betrachten, sondern als dynamische Regelung, die sich zeitgemäßem Mobilitätsverhalten
+              anpasst — im Interesse der Wohnraumschaffung und einer nachhaltigen Verkehrswende.
             </p>
           </div>
 
@@ -140,13 +138,14 @@ function ForschungPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-accent"
             >
-              <Icon name="file-arrow-down" className="text-base" /> Vollständiger Beitrag (PDF, 163 KB)
+              <Icon name="file-arrow-down" className="text-base" /> Vollständiger Beitrag (PDF, 163
+              KB)
             </a>
           </div>
 
           <p className="mt-6 text-xs text-brand-black/50">
-            #Bauplanung #Baugenehmigung #Stellplatzsatzung #Städtebau #Baupolitik
-            #Immobilien #Wohnungsbau #Verkehrsplanung · © 2024 Majeed Shams
+            #Bauplanung #Baugenehmigung #Stellplatzsatzung #Städtebau #Baupolitik #Immobilien
+            #Wohnungsbau #Verkehrsplanung · © 2024 Majeed Shams
           </p>
         </article>
       </section>
@@ -168,10 +167,7 @@ function ForschungPage() {
 
           <ul className="grid gap-6 md:grid-cols-2">
             {arbeiten.map((a) => (
-              <li
-                key={a.thema}
-                className="rounded-2xl border border-border bg-brand-white p-8"
-              >
+              <li key={a.thema} className="rounded-2xl border border-border bg-brand-white p-8">
                 <div className="flex items-center gap-2">
                   <Icon name="graduation-cap" className="text-base text-brand-accent" />
                   <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
@@ -199,7 +195,8 @@ function ForschungPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 border-b border-brand-black hover:border-brand-accent hover:text-brand-accent"
             >
-              Frankfurt University of Applied Sciences <Icon name="up-right-from-square" className="text-xs" />
+              Frankfurt University of Applied Sciences{" "}
+              <Icon name="up-right-from-square" className="text-xs" />
             </a>
           </p>
         </div>

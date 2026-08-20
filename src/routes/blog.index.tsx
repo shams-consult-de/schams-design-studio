@@ -3,7 +3,6 @@ import { Icon } from "@/components/icon";
 import { blogPosts, toIsoDate } from "@/lib/blog";
 import { absUrl } from "@/lib/site";
 
-
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
@@ -14,7 +13,10 @@ export const Route = createFileRoute("/blog/")({
           "Fachbeiträge zu nachhaltigem Bauen, Design und Ästhetik sowie zum Qualitätssiegel Nachhaltiges Bauen (QNG) aus der Praxis von Shams Consult.",
       },
       { property: "og:title", content: "Blog — Shams Consult" },
-      { property: "og:description", content: "Nachhaltiges Bauen, Design und Ästhetik — aus der Praxis." },
+      {
+        property: "og:description",
+        content: "Nachhaltiges Bauen, Design und Ästhetik — aus der Praxis.",
+      },
       {
         property: "og:image",
         content: blogPosts[0] ? absUrl(blogPosts[0].image) : undefined,
@@ -59,16 +61,13 @@ function BlogPage() {
     <>
       <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-12 lg:pt-32" data-reveal>
         <header className="border-t border-border pt-12">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
-            Blog
-          </p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">Blog</p>
           <h1 className="mt-4 font-serif text-5xl leading-tight md:text-7xl">
             Gedanken zu <span className="italic">Architektur</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-brand-black/70">
-            Beobachtungen, Prinzipien und Erfahrungen aus unserer täglichen Arbeit — zu
-            nachhaltigem Bauen, Design und Ästhetik sowie dem Qualitätssiegel Nachhaltiges
-            Bauen (QNG).
+            Beobachtungen, Prinzipien und Erfahrungen aus unserer täglichen Arbeit — zu nachhaltigem
+            Bauen, Design und Ästhetik sowie dem Qualitätssiegel Nachhaltiges Bauen (QNG).
           </p>
         </header>
 
@@ -112,13 +111,15 @@ function BlogPage() {
               <p className="mt-4 text-brand-black/70 leading-relaxed">{featured.excerpt}</p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                 Mehr lesen
-                <Icon name="arrow-right" className="text-base transition-transform group-hover:translate-x-0.5" />
+                <Icon
+                  name="arrow-right"
+                  className="text-base transition-transform group-hover:translate-x-0.5"
+                />
               </span>
             </div>
           </Link>
         </section>
       )}
-
 
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12 lg:pb-32">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -145,19 +146,19 @@ function BlogPage() {
                 <h3 id={`post-${p.slug}`} className="mt-2 font-serif text-xl leading-snug">
                   {p.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-brand-black/70">
-                  {p.excerpt}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-brand-black/70">{p.excerpt}</p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
                   Mehr lesen
-                  <Icon name="arrow-right" className="text-base transition-transform group-hover:translate-x-0.5" />
+                  <Icon
+                    name="arrow-right"
+                    className="text-base transition-transform group-hover:translate-x-0.5"
+                  />
                 </span>
               </Link>
             </article>
           ))}
         </div>
       </section>
-
     </>
   );
 }

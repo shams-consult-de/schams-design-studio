@@ -6,8 +6,7 @@ export const Route = createFileRoute("/barrierefreiheit")({
       { title: "Barrierefreiheit — Schams Consult" },
       {
         name: "description",
-        content:
-          "Erklärung zur Barrierefreiheit dieser Website nach BFSG und WCAG 2.1 AA.",
+        content: "Erklärung zur Barrierefreiheit dieser Website nach BFSG und WCAG 2.1 AA.",
       },
       { property: "og:url", content: "https://shams-consult.de/barrierefreiheit" },
     ],
@@ -23,8 +22,8 @@ function A11yPage() {
       <div className="mt-10 space-y-6 text-brand-black/80">
         <p>
           Wir sind bemüht, unsere Website gemäß den Anforderungen des
-          Barrierefreiheitsstärkungsgesetzes (BFSG) sowie der WCAG 2.1 auf Stufe AA
-          zugänglich zu gestalten.
+          Barrierefreiheitsstärkungsgesetzes (BFSG) sowie der WCAG 2.1 auf Stufe AA zugänglich zu
+          gestalten.
         </p>
         <h2 className="font-serif text-2xl">Umgesetzte Maßnahmen</h2>
         <ul className="list-inside list-disc space-y-2 text-base">
@@ -38,8 +37,7 @@ function A11yPage() {
         </ul>
         <h2 className="font-serif text-2xl">Rückmeldung</h2>
         <p>
-          Sollten Sie auf Barrieren stoßen oder Fragen haben, schreiben Sie uns bitte
-          an{" "}
+          Sollten Sie auf Barrieren stoßen oder Fragen haben, schreiben Sie uns bitte an{" "}
           <a href="mailto:office@schamsconsult.de" className="underline">
             office@schamsconsult.de
           </a>
