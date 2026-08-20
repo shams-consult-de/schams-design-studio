@@ -99,6 +99,20 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Shams Consult — Architektur & Stadtplanung. Alle Rechte vorbehalten.</p>
           <p>Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886</p>
         </div>
+
+        <div className="mt-6 text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+          <p>
+            Entwickelt von{" "}
+            <a
+              href="https://nordible.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 transition-colors hover:text-brand-accent hover:underline"
+            >
+              nordible.co
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
