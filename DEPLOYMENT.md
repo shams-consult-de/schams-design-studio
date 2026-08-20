@@ -82,26 +82,28 @@ The service role key is required by `src/integrations/supabase/client.server.ts`
 which the comment insert in `src/lib/comments.functions.ts` uses. It must never
 be prefixed with `VITE_`.
 
-## Step 4 — Build target
+## Step 4 — Build target (already configured)
 
-The build currently produces a Cloudflare Worker bundle. For Vercel, switch the
-Nitro preset in `vite.config.ts`:
+`vite.config.ts` picks the deploy target automatically:
 
-```ts
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+- On Lovable, the platform pins the Cloudflare preset (unchanged).
+- On Vercel, the `VERCEL` env var is present during the build, so the `vercel`
+  Nitro preset is used and the Build Output API bundle is written to
+  `.vercel/output`.
+- Anywhere else you can force a target with `NITRO_PRESET=<preset>`.
 
-export default defineConfig({
-  tanstackStart: { server: { entry: "server" } },
-  nitro: { preset: "vercel" },
-});
-```
+`vercel.json` is committed with the matching settings, so importing the repo in
+Vercel needs no manual configuration:
 
-Vercel project settings:
-
-- Framework preset: **Other**
+- Framework preset: **Other** (`"framework": null`)
 - Build command: `npm run build`
-- Output: leave default (Nitro writes the Vercel build output)
-- Node version: 20 or newer
+- Output directory: `.vercel/output`
+- Region: `fra1` (change if you prefer another region)
+- Node version: 20 or newer (Vercel Project → Settings → General)
+
+Copy `.env.example` to `.env` for local runs and add the same variables in
+Vercel before the first deploy.
+
 
 Cloudflare Pages/Workers is the alternative — that preset already works with no
 config change.
