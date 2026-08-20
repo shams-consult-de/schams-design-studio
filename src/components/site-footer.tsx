@@ -95,14 +95,11 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col justify-between gap-4 border-t border-border pt-8 text-[10px] font-medium uppercase tracking-widest text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Shams Consult — Architektur & Stadtplanung. Alle Rechte vorbehalten.</p>
-          <p>Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886</p>
-        </div>
-
-        <div className="mt-6 text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
-          <p>
-            Entwickelt von{" "}
+        <div className="mt-20 flex flex-col justify-between gap-4 border-t border-border pt-8 text-[9px] font-medium uppercase tracking-wider text-muted-foreground md:flex-row md:items-center">
+          <p className="md:whitespace-nowrap">© {new Date().getFullYear()} Shams Consult — Architektur & Stadtplanung. Alle Rechte vorbehalten.</p>
+          <p className="md:whitespace-nowrap">Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886</p>
+          <p className="md:whitespace-nowrap">
+            Dev Partner{" "}
             <a
               href="https://nordible.co"
               target="_blank"
