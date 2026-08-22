@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: "npm"
 
       - name: Install Dependencies
@@ -33,12 +33,13 @@ jobs:
       - name: Build Static Site & Prerender Pages
         run: npm run build
 
-      - name: Deploy Static Files to IONOS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy Static Files to IONOS via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.IONOS_FTP_SERVER }}
           username: ${{ secrets.IONOS_FTP_USERNAME }}
           password: ${{ secrets.IONOS_FTP_PASSWORD }}
-          local-dir: .output/public/
-          server-dir: ${{ secrets.IONOS_FTP_DIR || './' }}
-          dangerous-clean-slate: false
+          port: 22
+          local_path: '.output/public/*'
+          remote_path: '${{ secrets.IONOS_FTP_DIR || ''website-folder'' }}'
+          sftp_only: true
