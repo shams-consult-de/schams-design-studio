@@ -1,7 +1,31 @@
 # Deployment & Migration Guide
 
-This document describes how to run **Shams Consult** independently of Lovable
-(own Supabase project + own hosting, e.g. Vercel).
+This document describes how **Shams Consult** is built and deployed as a **completely static website** on **IONOS Webhosting** (via automated GitHub Actions), as well as on Vercel or Lovable.
+
+---
+
+## 🚀 Automated Static Deployment to IONOS
+
+Whenever changes are made (either edited directly in Lovable or committed to the `main` branch on GitHub), a GitHub Action automatically builds the static HTML files and uploads them to your IONOS web space.
+
+### 1. Prerendering Architecture
+
+- Running `npm run build` generates pre-rendered static HTML files for every route (Home, Services, Architecture, Urban Planning, Projects, Blog posts, Imprint, Privacy, etc.) into `.output/public/`.
+- A `.htaccess` file is automatically placed in `.output/public/` to configure Apache on IONOS with HTTPS redirection, clean URL routing, security headers, and compression.
+
+### 2. GitHub Secrets Configuration for IONOS
+
+To enable automatic deployment, go to your GitHub repository:
+**Settings → Secrets and variables → Actions → New repository secret** and add:
+
+| Secret Name          | Description                            | Example                                               |
+| :------------------- | :------------------------------------- | :---------------------------------------------------- |
+| `IONOS_FTP_SERVER`   | Your IONOS FTP / SFTP host address     | `home123456789.1and1-data.host` or `access.ionos.com` |
+| `IONOS_FTP_USERNAME` | Your IONOS FTP username                | `u12345678`                                           |
+| `IONOS_FTP_PASSWORD` | Your IONOS FTP password                | `YourStrongPassword`                                  |
+| `IONOS_FTP_DIR`      | _(Optional)_ Remote directory on IONOS | `./` or `/`                                           |
+
+---
 
 ## Tech stack
 
