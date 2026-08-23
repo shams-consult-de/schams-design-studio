@@ -4,8 +4,15 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
-const outputPublicDir = path.join(rootDir, "dist", "client");
-const serverEntryPath = path.join(rootDir, "dist", "server", "index.mjs");
+// Nitro writes either to .output/ (older config) or dist/ (newer). Detect it.
+const candidates = [
+  { server: path.join(rootDir, ".output", "server", "index.mjs"), public: path.join(rootDir, ".output", "public") },
+  { server: path.join(rootDir, "dist", "server", "index.mjs"), public: path.join(rootDir, "dist", "client") },
+];
+const detected = candidates.find((c) => fs.existsSync(c.server)) ?? candidates[0];
+const outputPublicDir = detected.public;
+const serverEntryPath = detected.server;
+const staticDir = path.join(rootDir, "build-static");
 
 // List of all static routes to pre-render
 const staticRoutes = [
@@ -191,6 +198,11 @@ ErrorDocument 404 /404.html
   // Also copy .htaccess to public/.htaccess so it stays in source control
   fs.writeFileSync(path.join(rootDir, "public", ".htaccess"), htaccessContent, "utf-8");
   console.log("  ✓ .htaccess created for IONOS Apache hosting");
+
+  // Mirror everything into a stable folder the deploy step can always upload.
+  fs.rmSync(staticDir, { recursive: true, force: true });
+  fs.cpSync(outputPublicDir, staticDir, { recursive: true });
+  console.log(`  ✓ static site mirrored to build-static/`);
 
   console.log(
     `\n🎉 Static export complete! ${renderedCount} pages ready in dist/client/ for IONOS deployment.\n`,
