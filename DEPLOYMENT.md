@@ -10,8 +10,8 @@ Whenever changes are made (either edited directly in Lovable or committed to the
 
 ### 1. Prerendering Architecture
 
-- Running `npm run build` generates pre-rendered static HTML files for every route (Home, Services, Architecture, Urban Planning, Projects, Blog posts, Imprint, Privacy, etc.) into `.output/public/`.
-- A `.htaccess` file is automatically placed in `.output/public/` to configure Apache on IONOS with HTTPS redirection, clean URL routing, security headers, and compression.
+- Running `npm run build:static` generates pre-rendered static HTML files for every route (Home, Services, Architecture, Urban Planning, Projects, Blog posts, Imprint, Privacy, etc.) into `dist/client/`.
+- A `.htaccess` file is automatically placed in `dist/client/` to configure Apache on IONOS with HTTPS redirection, clean URL routing, security headers, and compression.
 
 ### 2. GitHub Secrets Configuration for IONOS
 
