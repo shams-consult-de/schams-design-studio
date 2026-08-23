@@ -147,33 +147,42 @@ function BueroPage() {
           </header>
 
           <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {team.map((m) => (
-              <li
-                key={m.name}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white"
-                data-reveal
-              >
-                <div className="overflow-hidden bg-concrete">
-                  <img
-                    src={m.image}
-                    alt={`${m.name} — ${m.role}`}
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                    className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-8">
-                  <h3 className="font-serif text-xl">{m.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
-                  <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
-                    {m.lines.map((l) => (
-                      <li key={l}>{l}</li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
+            {team.map((m) => {
+              const initials = m.name
+                .replace(/(Dipl\.-Ing\.|M\.Eng\.|M\.A\.|B\.Eng\.|B\.Arch\.|\(FH\)|\(|\))/gi, "")
+                .trim()
+                .split(/\s+/)
+                .slice(0, 2)
+                .map((p) => p[0])
+                .join("");
+
+              return (
+                <li
+                  key={m.name}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:shadow-xl hover:shadow-brand-black/5"
+                  data-reveal
+                >
+                  <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-brand-black/90 to-brand-black/75 p-6 text-brand-white">
+                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                    <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-brand-accent/40 bg-brand-white/10 font-serif text-2xl font-bold text-brand-accent shadow-inner">
+                      {initials}
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h3 className="font-serif text-xl">{m.name}</h3>
+                    <p className="mt-1 text-sm font-medium text-brand-accent">{m.role}</p>
+                    <ul className="mt-4 space-y-1.5 text-sm leading-relaxed text-brand-black/70">
+                      {m.lines.map((l) => (
+                        <li key={l} className="flex gap-2">
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-accent" />
+                          <span>{l}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>

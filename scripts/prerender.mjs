@@ -6,8 +6,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 // Nitro writes either to .output/ (older config) or dist/ (newer). Detect it.
 const candidates = [
-  { server: path.join(rootDir, ".output", "server", "index.mjs"), public: path.join(rootDir, ".output", "public") },
-  { server: path.join(rootDir, "dist", "server", "index.mjs"), public: path.join(rootDir, "dist", "client") },
+  {
+    server: path.join(rootDir, ".output", "server", "index.mjs"),
+    public: path.join(rootDir, ".output", "public"),
+  },
+  {
+    server: path.join(rootDir, "dist", "server", "index.mjs"),
+    public: path.join(rootDir, "dist", "client"),
+  },
 ];
 const detected = candidates.find((c) => fs.existsSync(c.server)) ?? candidates[0];
 const outputPublicDir = detected.public;

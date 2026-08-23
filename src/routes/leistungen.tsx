@@ -43,6 +43,11 @@ const services = [
     title: "Öffentlichkeitsarbeit & Bürgerbeteiligung",
     body: "Moderation und Gestaltung von Beteiligungsprozessen — vom Bürgerworkshop bis zum Fachdialog mit Trägern öffentlicher Belange. Aktivierende Planung mit den Menschen vor Ort.",
   },
+  {
+    n: "09",
+    title: "Qualitätssiegel Nachhaltiges Gebäude (QNG) & Förderberatung",
+    body: "Zertifizierte Nachhaltigkeitsberatung und Ökobilanzierung (LCA) für Bundesförderprogramme (z. B. KfW KFN 297/298, WEF 300). Wir sichern die Förderfähigkeit Ihrer Bauvorhaben von der ersten Entwurfsphase an.",
+  },
 ];
 
 export const Route = createFileRoute("/leistungen")({

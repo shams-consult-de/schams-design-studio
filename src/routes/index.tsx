@@ -184,6 +184,39 @@ function HomePage() {
         </ol>
       </section>
 
+      {/* Video Einblick */}
+      <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-12">
+        <div
+          className="relative overflow-hidden rounded-3xl border border-border bg-brand-black p-6 md:p-12 text-brand-white shadow-2xl"
+          data-reveal
+        >
+          <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-accent">
+                Einblick & Vision
+              </p>
+              <h2 className="mt-2 font-serif text-3xl md:text-4xl">
+                Shams Consult im <span className="italic">Porträt</span>
+              </h2>
+            </div>
+            <p className="max-w-md text-sm text-brand-white/70">
+              Erfahren Sie mehr über unsere Arbeitsweise, Haltung und den Anspruch an moderne
+              Architektur und nachhaltige Stadtplanung.
+            </p>
+          </div>
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-brand-black/80 shadow-inner">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/ckiYAh2j4Zc?rel=0"
+              title="Shams Consult Architektur und Stadtplanung"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 h-full w-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Aktuelles Projekt / Portfolio */}
       <section className="bg-concrete/60 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -244,7 +277,7 @@ function HomePage() {
           >
             <div className="lg:col-span-5 image-zoom overflow-hidden rounded-xl">
               <img
-                src="/images/image-.jpg"
+                src="/images/image-f22e9f.jpg"
                 alt="Begründung Bebauungsplan Töpfenmühle Gersfeld (Rhön), Verfahrensstand: Auslegung"
                 loading="lazy"
                 decoding="async"

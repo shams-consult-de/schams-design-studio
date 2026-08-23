@@ -19,7 +19,7 @@ export const Route = createFileRoute("/stadtplanung")({
       },
       {
         property: "og:image",
-        content: "https://shams-consult.de/images/image-.jpg",
+        content: "https://shams-consult.de/images/image-a8071d.jpg",
       },
       { property: "og:url", content: "https://shams-consult.de/stadtplanung" },
     ],
@@ -100,7 +100,7 @@ function StadtplanungPage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12" data-reveal>
         <figure className="overflow-hidden rounded-2xl border border-border image-zoom">
           <img
-            src="/images/image-.jpg"
+            src="/images/image-a8071d.jpg"
             alt="Städtebauliche Machbarkeitsstudien Reutlingen — Analyse und Konzeption"
             loading="lazy"
             decoding="async"

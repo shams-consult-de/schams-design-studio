@@ -84,44 +84,83 @@ function ContactPage() {
       <div className="mt-20 grid gap-16 lg:grid-cols-12">
         <aside className="space-y-10 lg:col-span-4">
           {CONTACT.offices.map((o) => (
-            <div key={o.name}>
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            <div
+              key={o.name}
+              className="rounded-xl border border-border bg-brand-white p-5 shadow-sm"
+            >
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-brand-accent">
                 {o.name}
               </h2>
               <address className="mt-3 not-italic leading-relaxed text-sm text-brand-black/90">
-                <Icon name="location-dot" className="mb-2 text-base text-brand-accent" />
-                <br />
-                {o.street}
-                <br />
-                {o.city}
-                <br />
-                <a
-                  href={o.phoneHref}
-                  className="mt-2 inline-flex items-center gap-2 font-medium hover:text-brand-accent"
-                >
-                  <Icon name="phone" className="text-base" /> {o.phone}
-                </a>
+                <div className="flex items-start gap-2">
+                  <Icon name="location-dot" className="mt-1 text-base text-brand-accent shrink-0" />
+                  <div>
+                    {o.street}
+                    <br />
+                    {o.city}
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-3 pt-3 border-t border-border">
+                  <a
+                    href={o.phoneHref}
+                    className="inline-flex items-center gap-1.5 font-medium hover:text-brand-accent"
+                  >
+                    <Icon name="phone" className="text-sm text-brand-accent" /> {o.phone}
+                  </a>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${o.street}, ${o.city}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-brand-black/60 hover:text-brand-accent"
+                  >
+                    <Icon name="arrow-up-right-from-square" className="text-xs" />
+                    <span>In Maps öffnen</span>
+                  </a>
+                </div>
               </address>
             </div>
           ))}
-          <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              E-Mail
-            </h2>
-            <p className="mt-3 leading-relaxed">
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 text-sm font-medium italic hover:border-brand-accent hover:text-brand-accent"
+          <div className="rounded-xl border border-border bg-brand-white p-5 shadow-sm space-y-4">
+            <div>
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                E-Mail
+              </h2>
+              <p className="mt-2 leading-relaxed">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="inline-flex items-center gap-2 border-b border-brand-black pb-0.5 text-sm font-medium italic hover:border-brand-accent hover:text-brand-accent"
+                >
+                  <Icon name="envelope" className="text-base text-brand-accent" /> {CONTACT.email}
+                </a>
+              </p>
+            </div>
+            <div className="pt-3 border-t border-border">
+              <button
+                type="button"
+                onClick={() => {
+                  const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:Shams;Majeed;;Dipl.-Ing. (FH) M.Eng.;\nFN:Dipl.-Ing. Majeed Shams - Shams Consult\nORG:Shams Consult Architektur und Stadtplanung\nTITLE:Büroinhaber, Architekt und Stadtplaner\nTEL;TYPE=WORK,VOICE:06974223777\nTEL;TYPE=CELL,VOICE:+4915151864090\nEMAIL;TYPE=PREF,INTERNET:office@shams-consult.de\nURL:https://shams-consult.de\nADR;TYPE=WORK:;;Carl-von-Noorden-Platz 5;Frankfurt am Main;;60596;Deutschland\nADR;TYPE=WORK:;;Carl-Zeiss-Str. 43;Rödermark;;63322;Deutschland\nEND:VCARD`;
+                  const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8;" });
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement("a");
+                  link.href = url;
+                  link.setAttribute("download", "Shams-Consult.vcf");
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+                }}
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-black hover:text-brand-accent"
               >
-                <Icon name="envelope" className="text-base" /> {CONTACT.email}
-              </a>
-            </p>
+                <Icon name="address-card" className="text-sm text-brand-accent" />
+                <span>Digitale Visitenkarte (VCF) laden</span>
+              </button>
+            </div>
           </div>
-          <div>
+          <div className="rounded-xl border border-border bg-brand-white p-5 shadow-sm">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Kammer
             </h2>
-            <p className="mt-3 text-xs leading-relaxed text-brand-black/75">
+            <p className="mt-2 text-xs leading-relaxed text-brand-black/75">
               Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886
             </p>
           </div>
