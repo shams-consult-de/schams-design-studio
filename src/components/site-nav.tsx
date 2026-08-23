@@ -207,7 +207,7 @@ export function SiteNav() {
                     className:
                       "text-brand-accent font-semibold [&_.nav-indicator]:scale-x-100 [&_.nav-indicator]:opacity-100",
                   }}
-                  activeOptions={{ exact: section.to === "/" }}
+                  activeOptions={{ exact: false }}
                 >
                   <span>{section.label}</span>
                   <span

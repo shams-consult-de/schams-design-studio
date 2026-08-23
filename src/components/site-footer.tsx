@@ -135,7 +135,7 @@ export function SiteFooter() {
             Mitglied Architekten- und Stadtplanerkammer Hessen · AKH Nr. 21886
           </p>
           <p className="md:whitespace-nowrap">
-            Dev Partner{" "}
+            Tech Partner{" "}
             <a
               href="https://nordible.co"
               target="_blank"
