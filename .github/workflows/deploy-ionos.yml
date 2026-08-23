@@ -31,7 +31,9 @@ jobs:
         run: npm ci
 
       - name: Build Static Site & Prerender Pages
-        run: npm run build
+        env:
+          NITRO_PRESET: static
+        run: npm run build:static
 
       - name: Deploy Static Files to IONOS via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
