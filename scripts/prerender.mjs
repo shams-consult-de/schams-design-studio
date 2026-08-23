@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
-const outputPublicDir = path.join(rootDir, ".output", "public");
-const serverEntryPath = path.join(rootDir, ".output", "server", "index.mjs");
+const outputPublicDir = path.join(rootDir, "dist", "client");
+const serverEntryPath = path.join(rootDir, "dist", "server", "index.mjs");
 
 // List of all static routes to pre-render
 const staticRoutes = [
@@ -109,7 +109,7 @@ async function prerender() {
     const res = await handler.fetch(req, {}, dummyCtx);
     const html404 = await res.text();
     fs.writeFileSync(path.join(outputPublicDir, "404.html"), html404, "utf-8");
-    console.log("  ✓ /404 -> .output/public/404.html");
+    console.log("  ✓ /404 -> dist/client/404.html");
   } catch (err) {
     console.warn("Could not generate 404.html:", err);
   }
@@ -193,7 +193,7 @@ ErrorDocument 404 /404.html
   console.log("  ✓ .htaccess created for IONOS Apache hosting");
 
   console.log(
-    `\n🎉 Static export complete! ${renderedCount} pages ready in .output/public/ for IONOS deployment.\n`,
+    `\n🎉 Static export complete! ${renderedCount} pages ready in dist/client/ for IONOS deployment.\n`,
   );
 }
 
