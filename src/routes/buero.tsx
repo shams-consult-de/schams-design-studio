@@ -26,7 +26,7 @@ const team = [
   {
     name: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
     role: "Büroinhaber · Architekt und Stadtplaner",
-    image: "/images/image-.jpg",
+    image: "/images/team/Majeed-Shams.jpg",
     lines: [
       "Mitglied Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)",
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2008",
@@ -38,7 +38,7 @@ const team = [
   {
     name: "Hatice Erol Yeniyapan",
     role: "Dipl.-Ing. (FH) Architektin, M.A.",
-    image: "/images/image-.jpg",
+    image: "/images/team/Hatice-Erol-Yeniyapan.jpg",
     lines: [
       "Architekturstudium Hochschule Karlsruhe (HsKA) — Diplom mit Auszeichnung 2009/10",
       "Masterstudium Architektur Hochschule Karlsruhe (HsKA) — Master of Arts (M.A.)",
@@ -47,25 +47,25 @@ const team = [
   {
     name: "Samuel Allaw (B.Eng.)",
     role: "Bauleitung / Projektsteuerung",
-    image: "/images/image-.png",
+    image: "/images/team/Samuel-Allaw.png",
     lines: ["Bachelor of Engineering — Bauingenieurwesen, Hochschule Darmstadt"],
   },
   {
     name: "Yasmine Yagcioglu",
     role: "Dipl.-Ing. (FH) Architektur",
-    image: "/images/image-.jpg",
+    image: "/images/team/Yasmine-Yagcioglu.jpg",
     lines: ["Architekturstudium Hochschule Mainz — University of Applied Sciences, 2011"],
   },
   {
     name: "Ronak Namdari (M.A.)",
     role: "Master of Art in Architecture",
-    image: "/images/image-.png",
+    image: "/images/team/Ronak-Namdari.png",
     lines: ["Städelschule, Frankfurt am Main — Master of Arts (M.A.)"],
   },
   {
     name: "Farhad Minaei (B.Arch.)",
     role: "3D-Visualisierung",
-    image: "/images/image-.png",
+    image: "/images/team/Farhad-Minaei.png",
     lines: ["Bachelor of Architecture"],
   },
 ];
@@ -162,11 +162,25 @@ function BueroPage() {
                   className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-brand-white transition-all hover:-translate-y-1 hover:border-brand-accent/50 hover:shadow-xl hover:shadow-brand-black/5"
                   data-reveal
                 >
-                  <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-brand-black/90 to-brand-black/75 p-6 text-brand-white">
-                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
-                    <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-brand-accent/40 bg-brand-white/10 font-serif text-2xl font-bold text-brand-accent shadow-inner">
-                      {initials}
-                    </div>
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-gradient-to-br from-brand-black/90 to-brand-black/75">
+                    {m.image ? (
+                      <img
+                        src={m.image}
+                        alt={m.name}
+                        width={400}
+                        height={533}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center p-6 text-brand-white">
+                        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                        <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-brand-accent/40 bg-brand-white/10 font-serif text-2xl font-bold text-brand-accent shadow-inner">
+                          {initials}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="flex flex-1 flex-col p-8">
                     <h3 className="font-serif text-xl">{m.name}</h3>
