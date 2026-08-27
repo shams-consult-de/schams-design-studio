@@ -1,6 +1,6 @@
 import { CONTACT } from "../lib/contact";
 import { Language } from "../lib/i18n";
-import { Icon } from "./Icon";
+import { Icon } from "./icon";
 
 export type LegalPageType = "impressum" | "datenschutz" | "barrierefreiheit" | "widerruf";
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Icon } from "./Icon";
+import { Icon } from "./icon";
 import { CONTACT } from "../lib/contact";
 import { Language } from "../lib/i18n";
 
