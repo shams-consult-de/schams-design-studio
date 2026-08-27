@@ -4,12 +4,14 @@ import { partnersData, PartnerItem } from "../lib/partners";
 interface ClientsPageProps {
   t: Translations["clients"];
   onBack: () => void;
+  onNavigateSiteVisits?: () => void;
   onBookConsultation: () => void;
 }
 
 export function ClientsPage({
   t,
   onBack,
+  onNavigateSiteVisits,
   onBookConsultation,
 }: ClientsPageProps) {
   return (
@@ -123,6 +125,81 @@ export function ClientsPage({
             </div>
           ))}
         </div>
+
+        {/* On-Site Presence & Hands-On Client Partnership Spotlight */}
+        <section className="p-8 sm:p-10 rounded-2xl bg-zinc-50 border border-zinc-200/90 space-y-8">
+          <div className="space-y-2 max-w-3xl">
+            <div className="inline-flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#DC2626]">
+                {t.siteVisitsBadge}
+              </span>
+            </div>
+            <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
+              {t.siteVisitsTitle}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+              {t.siteVisitsSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Photo 1: On-Site Consultation */}
+            <div className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+                <img
+                  src="/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg"
+                  alt={t.siteVisit1Title}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 space-y-2">
+                <h3 className="font-sans text-base font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                  {t.siteVisit1Title}
+                </h3>
+                <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                  {t.siteVisit1Desc}
+                </p>
+              </div>
+            </div>
+
+            {/* Photo 2: Technical Building Survey / Measurement */}
+            <div className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+                <img
+                  src="/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg"
+                  alt={t.siteVisit2Title}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 space-y-2">
+                <h3 className="font-sans text-base font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                  {t.siteVisit2Title}
+                </h3>
+                <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                  {t.siteVisit2Desc}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-2 flex justify-end">
+            <a
+              href="/site-visits"
+              onClick={(e) => {
+                e.preventDefault();
+                if (onNavigateSiteVisits) onNavigateSiteVisits();
+                else window.location.href = "/site-visits";
+              }}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors cursor-pointer group"
+            >
+              <span>Vollständige Vor-Ort-Fotodokumentation & Baustelleneinblicke ansehen</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </section>
 
         {/* Bottom CTA Block */}
         <section className="p-8 sm:p-10 rounded-2xl bg-zinc-950 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl border border-white/10">

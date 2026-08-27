@@ -20,6 +20,9 @@ import { TeamSection } from "./components/TeamSection";
 import { VobSection } from "./components/VobSection";
 import { ClientsMovingSection } from "./components/ClientsMovingSection";
 import { ClientsPage } from "./components/ClientsPage";
+import { SiteVisitsMovingSection } from "./components/SiteVisitsMovingSection";
+import { SiteVisitsPage } from "./components/SiteVisitsPage";
+import { MobileStickyActionBar } from "./components/MobileStickyActionBar";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LegalModal, LegalModalType } from "./components/LegalModal";
@@ -41,6 +44,7 @@ export function App() {
   const [isFounderPage, setIsFounderPage] = useState<boolean>(false);
   const [isAboutPage, setIsAboutPage] = useState<boolean>(false);
   const [isClientsPage, setIsClientsPage] = useState<boolean>(false);
+  const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
 
@@ -48,8 +52,24 @@ export function App() {
   const syncRoute = useCallback(() => {
     const pathname = window.location.pathname;
 
+    if (pathname === "/site-visits" || pathname === "/site-visits/" || pathname === "/album" || pathname === "/album/" || pathname === "/einblicke" || pathname === "/einblicke/") {
+      setIsSiteVisitsPage(true);
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     if (pathname === "/clients" || pathname === "/clients/" || pathname === "/kunden" || pathname === "/kunden/" || pathname === "/partners" || pathname === "/partners/") {
       setIsClientsPage(true);
+      setIsSiteVisitsPage(false);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
@@ -246,6 +266,8 @@ export function App() {
     setIsAboutPage(false);
     setIsFounderPage(false);
     setIsProjectsPage(false);
+    setIsClientsPage(false);
+    setIsSiteVisitsPage(false);
     setIsBlogPage(false);
     setIsResearchPage(false);
     setActiveProject(null);
@@ -325,7 +347,7 @@ export function App() {
   const t = content[language];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-zinc-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-zinc-900 font-sans pb-16 md:pb-0">
       {/* 1. Header Navigation */}
       <Header
         t={t.nav}
@@ -349,6 +371,14 @@ export function App() {
           <ClientsPage
             t={t.clients}
             onBack={handleBackToHome}
+            onNavigateSiteVisits={() => navigateTo("/site-visits")}
+            onBookConsultation={handleBookConsultation}
+          />
+        ) : isSiteVisitsPage ? (
+          /* Dedicated On-Site Visits & Field Proof Album Page */
+          <SiteVisitsPage
+            t={t.siteVisitsPage}
+            onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
           />
         ) : isAboutPage ? (
@@ -359,6 +389,7 @@ export function App() {
             language={language}
             onBack={handleBackToHome}
             onNavigateFounder={handleNavigateFounder}
+            onNavigateSiteVisits={() => navigateTo("/site-visits")}
             onBookConsultation={handleBookConsultation}
           />
         ) : isFounderPage ? (
@@ -460,7 +491,13 @@ export function App() {
             {/* 7. Dedicated Subtle VOB Compliance Section */}
             <VobSection t={t.vob} />
 
-            {/* 8. Verified 5-Star Google Reviews & Moving Track */}
+            {/* 8. On-Site Visits & Field Proof Moving Photo Carousel */}
+            <SiteVisitsMovingSection
+              t={t.siteVisitsPage}
+              onNavigateSiteVisits={() => navigateTo("/site-visits")}
+            />
+
+            {/* 9. Verified 5-Star Google Reviews & Moving Track */}
             <div id="case-studies">
               <CaseStudiesSection
                 language={language}
@@ -510,6 +547,13 @@ export function App() {
 
       {/* 9. Frictionless Legal Modals */}
       <LegalModal type={legalModal} language={language} onClose={() => setLegalModal(null)} />
+
+      {/* 10. Science-Backed Mobile Sticky Quick-Action Bar (Thumb Zone) */}
+      <MobileStickyActionBar
+        t={t.mobileActionBar}
+        contactT={t.contact}
+        onBookConsultation={handleBookConsultation}
+      />
     </div>
   );
 }

@@ -6,6 +6,7 @@ interface AboutPageProps {
   language: Language;
   onBack: () => void;
   onNavigateFounder: () => void;
+  onNavigateSiteVisits?: () => void;
   onBookConsultation: () => void;
 }
 
@@ -15,6 +16,7 @@ export function AboutPage({
   language,
   onBack,
   onNavigateFounder,
+  onNavigateSiteVisits,
   onBookConsultation,
 }: AboutPageProps) {
   const isDe = language === "de";
@@ -159,6 +161,36 @@ export function AboutPage({
               <span className="text-[11px] text-zinc-500 font-medium">
                 {isDe ? "Mitglied Nr. 21886" : "Member #21886"}
               </span>
+            </div>
+          </div>
+
+          {/* Link to Dedicated Site Visits & Field Proof Album */}
+          <div className="pt-4 border-t border-zinc-200/80">
+            <div className="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+              <div className="space-y-1 text-left">
+                <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#DC2626]">
+                  <span>📷</span>
+                  <span>{t.siteVisitsCtaBadge}</span>
+                </div>
+                <h3 className="font-sans text-base font-bold text-zinc-950">
+                  {t.siteVisitsCtaTitle}
+                </h3>
+                <p className="text-xs text-zinc-600 font-light max-w-xl">
+                  {t.siteVisitsCtaDesc}
+                </p>
+              </div>
+
+              <a
+                href="/site-visits"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (onNavigateSiteVisits) onNavigateSiteVisits();
+                  else window.location.href = "/site-visits";
+                }}
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-white text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-xs shrink-0 cursor-pointer"
+              >
+                <span>{t.siteVisitsCtaButton}</span>
+              </a>
             </div>
           </div>
         </section>

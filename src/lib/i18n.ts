@@ -72,6 +72,13 @@ export interface Translations {
       tendering: string;
       landscape: string;
     };
+    siteVisitsBadge: string;
+    siteVisitsTitle: string;
+    siteVisitsSubtitle: string;
+    siteVisit1Title: string;
+    siteVisit1Desc: string;
+    siteVisit2Title: string;
+    siteVisit2Desc: string;
   };
   services: {
     badge: string;
@@ -216,10 +223,35 @@ export interface Translations {
     teamBadge: string;
     teamTitle: string;
     teamSubtitle: string;
+    siteVisitsCtaBadge: string;
+    siteVisitsCtaTitle: string;
+    siteVisitsCtaDesc: string;
+    siteVisitsCtaButton: string;
     founderStoryBadge: string;
     founderStoryTitle: string;
     founderStoryDesc: string;
     founderStoryButton: string;
+  };
+  siteVisitsPage: {
+    backToHome: string;
+    badge: string;
+    title: string;
+    subtitle: string;
+    proofNotice: string;
+    viewHighRes: string;
+    viewAlbum: string;
+    closeLightbox: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
+    items: Array<{
+      id: string;
+      image: string;
+      tag: string;
+      phase: string;
+      title: string;
+      desc: string;
+    }>;
   };
   blog: {
     badge: string;
@@ -273,6 +305,11 @@ export interface Translations {
     officesTitle: string;
     officesSubtitle: string;
     insuranceReassurance: string;
+  };
+  mobileActionBar: {
+    call: string;
+    whatsapp: string;
+    book: string;
   };
   legal: {
     backToHome: string;
@@ -384,6 +421,16 @@ export const content: Record<Language, Translations> = {
         tendering: "VOB-Massenermittlung & Ausschreibung",
         landscape: "Freianlagen & Landschaftsplanung",
       },
+      siteVisitsBadge: "VOR-ORT-PRÄSENZ & PARTNERSCHAFT",
+      siteVisitsTitle: "Persönliche Bauherrenberatung & Bestandsaufnahmen vor Ort",
+      siteVisitsSubtitle:
+        "Architektur entsteht nicht nur am Schreibtisch. Dipl.-Ing. Majeed Shams begleitet Bauherren persönlich vor Ort – von der millimetergenauen Bestandsaufnahme bis zur fundierten baurechtlichen Erstberatung.",
+      siteVisit1Title: "Persönliche Beratung & Vertrauensaufbau",
+      siteVisit1Desc:
+        "Direkter Dialog auf Augenhöhe: Verständnis für individuelle Bauwünsche, Kostenrahmen und baurechtliche Spielräume.",
+      siteVisit2Title: "Präzises Bauaufmaß & Technische Vermessung",
+      siteVisit2Desc:
+        "Exakte digitale und manuelle Erfassung der Bausubstanz als rechtssichere Planungsgrundlage für HOAI Phasen 1–4.",
     },
     services: {
       badge: "Unsere Leistungen",
@@ -573,10 +620,88 @@ export const content: Record<Language, Translations> = {
       teamBadge: "UNSER EXPERTENTEAM",
       teamTitle: "Lernen Sie unser Team kennen",
       teamSubtitle: "Unser Büro vereint erfahrene Architekten, Stadtplaner, Bauingenieure und Visualisierungsspezialisten für integrale Projekterfolge.",
+      siteVisitsCtaBadge: "PRAXIS-EINBLICKE & VOR-ORT-DOKUMENTATION",
+      siteVisitsCtaTitle: "Echte Vor-Ort-Präsenz & Baustellennachweise",
+      siteVisitsCtaDesc:
+        "Sehen Sie ungestellte fotografische Dokumentationen aus der Praxis: von präzisen Bauaufmaßen und millimetergenauer Lasermessung bis zur persönlichen Vor-Ort-Bauleitung nach HOAI.",
+      siteVisitsCtaButton: "Vor-Ort-Dokumentation ansehen →",
       founderStoryBadge: "DIE PERSÖNLICHE GESCHICHTE DES GRÜNDERS",
       founderStoryTitle: "Möchten Sie den persönlichen Lebensweg von Majeed Shams erfahren?",
       founderStoryDesc: "Vom Geflüchteten zum erfolgreichen Architekten, Stadtplaner und Hochschuldozenten in Deutschland.",
       founderStoryButton: "Gründer-Biografie lesen →",
+    },
+    siteVisitsPage: {
+      backToHome: "Zurück zur Startseite",
+      badge: "VOR-ORT-EINBLICKE & PRAXIS-DOKUMENTATION",
+      title: "Authentische Baustelleneinblicke & Vor-Ort-Nachweise",
+      subtitle:
+        "Architektur erfordert echte Vor-Ort-Präsenz. Sehen Sie hier ungestellte Eindrücke aus der täglichen Planungspraxis: von der Bestandsaufnahme bis zur Bauüberwachung nach HOAI.",
+      proofNotice: "Unbearbeitete Originalaufnahmen aus laufenden Projekten und Ortsterminen.",
+      viewHighRes: "Originalbild vergrößern",
+      viewAlbum: "Fotodokumentation & Album ansehen",
+      closeLightbox: "Schließen",
+      ctaTitle: "Planen Sie ein Bauvorhaben vor Ort?",
+      ctaSubtitle:
+        "Gerne besichtigen wir Ihr Grundstück oder Bestandsgebäude persönlich für ein fundiertes Aufmaß und die baurechtliche Ersteinschätzung.",
+      ctaButton: "Vor-Ort-Termin vereinbaren →",
+      items: [
+        {
+          id: "residential-excavation",
+          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
+          tag: "Wohnungsbau",
+          phase: "HOAI Phase 8: Objektüberwachung & Außenanlagen",
+          title: "Außenanlagen & Objektüberwachung im Wohnungsbau",
+          desc: "Vor-Ort-Koordination der Erdarbeiten und Pflasterflächen vor dem Mehrfamilienhaus: Direkte Abstimmung mit den ausführenden Gewerken und Baumaschinenführern.",
+        },
+        {
+          id: "client-dialogue",
+          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg",
+          tag: "Vor-Ort-Beratung",
+          phase: "HOAI Phase 1",
+          title: "Persönliche Bauherrenberatung & Vertrauensaufbau",
+          desc: "Direkter Dialog auf Augenhöhe während einer Objektbegehung im Treppenhaus: Klärung erster Bauabsichten und baurechtlicher Möglichkeiten.",
+        },
+        {
+          id: "industrial-safety",
+          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.jpg",
+          tag: "Gewerbebau",
+          phase: "HOAI Phase 8: Bauüberwachung & Bestandsanalyse",
+          title: "Gewerbehalle: Technische Bestandsanalyse & Arbeitssicherheit",
+          desc: "Dipl.-Ing. Majeed Shams bei der Begutachtung von Hallentoren, baulichen Zugängen und Bestandsstrukturen vor Ort mit Schutzhelm und Warnweste.",
+        },
+        {
+          id: "building-survey",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg",
+          tag: "Bestandsaufnahme",
+          phase: "HOAI Phase 1: Grundlagenermittlung",
+          title: "Technisches Bauaufmaß & Laser-Vermessung",
+          desc: "Präzise manuelle und lasergestützte Erfassung der Raumgeometrie und Bausubstanz vor Ort zur Erstellung verlässlicher Bestandspläne.",
+        },
+        {
+          id: "project-strategy",
+          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.jpg",
+          tag: "Strategiegespräch",
+          phase: "HOAI Phase 2 & 3: Entwurfsplanung",
+          title: "Projektbesprechung & Planprüfung im Team",
+          desc: "Gemeinsame Durchsprache der Entwurfs- und Bauleitpläne mit Bauherren und Investoren bei einer persönlichen Besprechung.",
+        },
+        {
+          id: "commercial-handshake",
+          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.png",
+          tag: "Gewerbebau",
+          phase: "HOAI Phase 1 & 8",
+          title: "Vertrauensvoller Handschlag vor Gewerbeliegenschaft",
+          desc: "Dipl.-Ing. Majeed Shams bei der erfolgreichen Abstimmung und Objektbegehung mit dem Geschäftsführer vor der Logistikhalle.",
+        },
+        {
+          id: "site-supervision",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.png",
+          tag: "Objektüberwachung",
+          phase: "HOAI Phase 8: Bauüberwachung & VOB",
+          title: "Baustellenbegehung mit Sicherheitsausrüstung",
+          desc: "Qualitäts- und Sicherheitskontrolle vor Ort mit Warnweste und Schutzhelm: Bautechnische Prüfung der Hallenzugänge und Lagerräume.",
+        },
+      ],
     },
     blog: {
       badge: "MAGAZIN & FACHARTIKEL",
@@ -634,6 +759,11 @@ export const content: Record<Language, Translations> = {
       officesTitle: "Unsere Bürostandorte",
       officesSubtitle: "Frankfurt am Main & Rödermark",
       insuranceReassurance: "Berufshaftpflichtversichert (§ 16 HASG) · 100% Planungssicherheit",
+    },
+    mobileActionBar: {
+      call: "Anrufen",
+      whatsapp: "WhatsApp",
+      book: "Termin buchen",
     },
     legal: {
       backToHome: "Zurück zur Startseite",
@@ -744,6 +874,16 @@ export const content: Record<Language, Translations> = {
         tendering: "VOB Cost & Tendering",
         landscape: "Landscape Architecture",
       },
+      siteVisitsBadge: "ON-SITE COMMITMENT & PARTNERSHIP",
+      siteVisitsTitle: "Hands-On Client Consultation & Technical Building Surveys",
+      siteVisitsSubtitle:
+        "Architecture is not crafted solely behind desks. Dipl.-Ing. Majeed Shams personally attends to clients on site—from millimeter-precise building surveys to strategic zoning consultations.",
+      siteVisit1Title: "Personal Client Dialogue & Trust",
+      siteVisit1Desc:
+        "Direct eye-level collaboration: in-depth understanding of your building ambitions, budget parameters, and statutory options.",
+      siteVisit2Title: "Accurate Building Survey & On-Site Measurement",
+      siteVisit2Desc:
+        "Exact digital and manual survey of existing structures, establishing a reliable technical foundation for HOAI phases 1–4.",
     },
     services: {
       badge: "Our Services",
@@ -933,10 +1073,88 @@ export const content: Record<Language, Translations> = {
       teamBadge: "OUR EXPERT TEAM",
       teamTitle: "Meet Our Team of Professionals",
       teamSubtitle: "Our practice unifies experienced architects, urban planners, civil engineers, and computational specialists for integrated project delivery.",
+      siteVisitsCtaBadge: "ON-SITE PRACTICE & FIELD EVIDENCE",
+      siteVisitsCtaTitle: "Genuine On-Site Presence & Field Documentation",
+      siteVisitsCtaDesc:
+        "View authentic photographic proof of our practice: from millimeter-precise laser building surveys to hands-on site supervision under HOAI.",
+      siteVisitsCtaButton: "View Field Documentation Album →",
       founderStoryBadge: "THE FOUNDER'S PERSONAL JOURNEY",
       founderStoryTitle: "Would you like to read Majeed Shams' personal story?",
       founderStoryDesc: "From refugee to successful architect, urban planner, and university lecturer in Germany.",
       founderStoryButton: "Read Founder Biography →",
+    },
+    siteVisitsPage: {
+      backToHome: "Back to Home",
+      badge: "ON-SITE PRACTICE & FIELD PROOF",
+      title: "Authentic Site Visits & Real-World Documentation",
+      subtitle:
+        "Architecture requires true on-site presence. Explore unedited photographic records from our daily practice—from initial building surveys to HOAI site supervision.",
+      proofNotice: "Unedited original field photographs from ongoing building sites and client walkthroughs.",
+      viewHighRes: "View Full Resolution",
+      viewAlbum: "View Photo Documentation & Album",
+      closeLightbox: "Close",
+      ctaTitle: "Planning an On-Site Project or Development?",
+      ctaSubtitle:
+        "We are pleased to survey your plot or building in person for accurate measurements and early zoning appraisals.",
+      ctaButton: "Schedule On-Site Consultation →",
+      items: [
+        {
+          id: "residential-excavation",
+          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
+          tag: "Residential Complex",
+          phase: "HOAI Phase 8: Site Supervision & Landscape",
+          title: "Site Supervision & Landscape Works for Housing Complex",
+          desc: "On-site coordination of earthworks and paving for a multi-family housing development: direct technical alignment with contractors.",
+        },
+        {
+          id: "client-dialogue",
+          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg",
+          tag: "On-Site Consultation",
+          phase: "HOAI Phase 1",
+          title: "Personal Client Dialogue & Trust Building",
+          desc: "Direct eye-level dialogue during an on-site property walkthrough: reviewing building intentions and zoning potential.",
+        },
+        {
+          id: "industrial-safety",
+          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.jpg",
+          tag: "Commercial Project",
+          phase: "HOAI Phase 8: Site Supervision & Structural Survey",
+          title: "Commercial Facility: Technical Survey & Safety Inspection",
+          desc: "Dipl.-Ing. Majeed Shams surveying industrial facility doors, structural access, and building condition with helmet and high-vis vest.",
+        },
+        {
+          id: "building-survey",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg",
+          tag: "Building Survey",
+          phase: "HOAI Phase 1: Inception & Briefing",
+          title: "Technical Building Survey & Laser Measurement",
+          desc: "Accurate manual and laser measurement of room geometry and existing structures to generate reliable as-built drawings.",
+        },
+        {
+          id: "project-strategy",
+          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.jpg",
+          tag: "Project Strategy",
+          phase: "HOAI Phase 2 & 3: Developed Design",
+          title: "Project Consultation & Plan Review",
+          desc: "In-depth review of architectural and zoning drawings with clients and investors in a dedicated planning meeting.",
+        },
+        {
+          id: "commercial-handshake",
+          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.png",
+          tag: "Commercial Project",
+          phase: "HOAI Phase 1 & 8",
+          title: "Trusted Handshake at Commercial Facility",
+          desc: "Dipl.-Ing. Majeed Shams concluding an on-site inspection and strategic alignment outside the logistics facility.",
+        },
+        {
+          id: "site-supervision",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.png",
+          tag: "Site Supervision",
+          phase: "HOAI Phase 8: Site Supervision & VOB",
+          title: "On-Site Inspection with Safety Equipment",
+          desc: "On-site quality and safety control with high-vis vest and helmet: technical inspection of facility access and storage areas.",
+        },
+      ],
     },
     blog: {
       badge: "MAGAZINE & ARTICLES",
@@ -994,6 +1212,11 @@ export const content: Record<Language, Translations> = {
       officesTitle: "Our Practice Offices",
       officesSubtitle: "Frankfurt am Main & Rödermark",
       insuranceReassurance: "Statutory Professional Indemnity (§ 16 HASG) · Full Safety",
+    },
+    mobileActionBar: {
+      call: "Call",
+      whatsapp: "WhatsApp",
+      book: "Book Consultation",
     },
     legal: {
       backToHome: "Back to Home",
