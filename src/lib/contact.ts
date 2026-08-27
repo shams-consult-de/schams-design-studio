@@ -1,31 +1,55 @@
-// Zentrale Kontakt- und CTA-Daten (1:1 aus schamsconsult.de / shams-consult.de).
-export const LOGO_URL = "/images/logo.webp";
-
 export const CONTACT = {
+  companyName: "Shams Consult",
+  legalName: "Architekturbüro Shams Consult",
+  founder: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
+  chamber: "Mitglied Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)",
   email: "office@shams-consult.de",
   phoneFrankfurt: "069 74 22 3 777",
   phoneFrankfurtHref: "tel:+4969742237770",
   phoneRoedermark: "060 74 23 98 782",
   phoneRoedermarkHref: "tel:+49607423987820",
   whatsappNumber: "+49 151 51864090",
-  whatsappHref:
-    "https://wa.me/4915151864090?text=Hallo%20Shams%20Consult%20Team,%20ich%20habe%20eine%20Frage.",
-  bookingHref:
-    "https://outlook.office365.com/owa/calendar/TerminvereinbarungBauundPlanungsberatungmitShamsConsult@shams-consult.de/bookings/",
+  whatsappDisplay: "+49 151 51864090",
+  whatsappHref: "https://wa.me/4915151864090?text=Hallo%20Herr%20Shams,%20ich%20m%C3%B6chte%20ein%20unverbindliches%20Erstgespr%C3%A4ch%20f%C3%BCr%20mein%20Bauvorhaben%20anfragen.",
+  bookingHref: "https://outlook.office365.com/owa/calendar/TerminvereinbarungBauundPlanungsberatungmitShamsConsult@shams-consult.de/bookings/",
+  linkedin: "https://www.linkedin.com/company/architekturb%C3%BCro-shams-consult/",
+  instagram: "https://www.instagram.com/shams_consult/",
+  facebook: "https://www.facebook.com/profile.php?id=100057398741769",
+  xing: "https://www.xing.com/profile/Majeed_ShamsArchitektundStadtplaner/portfolio",
   offices: [
     {
-      name: "Büro Frankfurt am Main",
+      id: "frankfurt",
+      name: {
+        de: "Büro Frankfurt am Main",
+        en: "Frankfurt am Main Office",
+      },
+      tagline: {
+        de: "Finanzmetropole & Rhein-Main Zentrale",
+        en: "Financial Hub & Regional Headquarters",
+      },
       street: "Carl-von-Noorden-Platz 5",
       city: "60596 Frankfurt am Main",
       phone: "069 74 22 3 777",
       phoneHref: "tel:+4969742237770",
+      mapQuery: "Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed",
     },
     {
-      name: "Büro Rödermark",
+      id: "roedermark",
+      name: {
+        de: "Büro Rödermark",
+        en: "Rödermark Office",
+      },
+      tagline: {
+        de: "Planungs- & Entwicklungsstudio",
+        en: "Planning & Architectural Design Studio",
+      },
       street: "Carl-Zeiss-Str. 43",
       city: "63322 Rödermark",
       phone: "060 74 23 98 782",
       phoneHref: "tel:+49607423987820",
+      mapQuery: "Carl-Zeiss-Str. 43, 63322 Rödermark",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-Zeiss-Str.+43,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed",
     },
   ],
 } as const;
