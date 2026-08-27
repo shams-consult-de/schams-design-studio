@@ -1,6 +1,8 @@
-import { Language } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 
 interface AboutPageProps {
+  t: Translations["about"];
+  clientsT: Translations["clients"];
   language: Language;
   onBack: () => void;
   onNavigateFounder: () => void;
@@ -8,6 +10,8 @@ interface AboutPageProps {
 }
 
 export function AboutPage({
+  t,
+  clientsT,
   language,
   onBack,
   onNavigateFounder,
@@ -77,11 +81,11 @@ export function AboutPage({
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-600 hover:text-[#DC2626] transition-colors cursor-pointer"
           >
             <span>←</span>
-            <span>{isDe ? "Zurück zur Startseite" : "Back to Home"}</span>
+            <span>{t.backToHome}</span>
           </button>
 
           <span className="text-xs font-mono text-zinc-400">
-            Shams Consult · {isDe ? "Unternehmensprofil" : "Company Profile"}
+            Shams Consult · {t.badge}
           </span>
         </div>
 
@@ -90,82 +94,71 @@ export function AboutPage({
           <div className="inline-flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-              {isDe ? "ÜBER DAS ARCHITEKTURBÜRO" : "ABOUT THE ARCHITECTURAL PRACTICE"}
+              {t.badge}
             </span>
           </div>
 
           <h1 className="font-sans text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight leading-[1.12]">
-            {isDe
-              ? "Architekturbüro Shams Consult."
-              : "Shams Consult Architectural Practice."}
+            {t.title}
           </h1>
 
-          <p className="font-sans text-lg sm:text-xl text-zinc-700 font-normal leading-relaxed">
-            {isDe
-              ? "Planungsbüro für Innovation, Kreativität, Bau- und Planungsrecht mit Sitz in der Metropolregion Frankfurt / Rhein-Main."
-              : "Planning practice for innovation, architectural design, and zoning law based in the Frankfurt / Rhine-Main metropolitan area."}
+          <p className="font-sans text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+            {t.subtitle}
           </p>
         </div>
 
-        {/* 1. Core Profile & Mission */}
+        {/* 1. Core Practice Profile & Values */}
         <section className="p-8 sm:p-10 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
-              {isDe ? "UNSERE IDENTITÄT & ANSPRUCH" : "OUR IDENTITY & MISSION"}
+              {t.profileBadge}
             </span>
-            <h2 className="font-sans text-2xl font-bold text-zinc-950">
-              {isDe
-                ? "Erfahrung, Verantwortung und Gestaltungsanspruch"
-                : "Experience, Responsibility, and Architectural Rigor"}
+            <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950">
+              {t.profileTitle}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-zinc-700 font-light leading-relaxed">
-            <p>
-              {isDe
-                ? "Shams Consult steht für anspruchsvolle Architektur, integrierte Stadtplanung und anwendungsorientierte Forschung. Wir verbinden über 15 Jahre fundierte Praxiserfahrung im Bau- und Planungsrecht mit Innovationsfreude, interdisziplinärem Denken und einem klaren gesellschaftlichen Anspruch."
-                : "Shams Consult stands for sophisticated architecture, integrated urban planning, and applied research. We combine over 15 years of proven practical experience in building and planning law with interdisciplinary rigor and clear societal responsibility."}
-            </p>
-            <p>
-              {isDe
-                ? "Für uns bedeutet Architektur und Bauberatung weit mehr als nur die Planung von Gebäuden: Es ist eine vertrauensvolle Partnerschaft, in der wir individuelle Vorstellungen mit technischen, rechtlichen und wirtschaftlichen Möglichkeiten in Einklang bringen."
-                : "For us, architecture and planning consultancy extend far beyond blueprints: it is a partnership of trust, aligning individual aspirations with technical, regulatory, and financial feasibility."}
-            </p>
+          <div className="space-y-4 text-xs sm:text-sm text-zinc-700 font-light leading-relaxed">
+            <p>{t.profileText1}</p>
+            <p>{t.profileText2}</p>
           </div>
 
-          {/* Key Facts Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-200 text-xs">
-            <div>
-              <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Praxiserfahrung" : "Experience"}
+          {/* Quick Facts Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-200/80">
+            <div className="p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+              <span className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 block">
+                15+
               </span>
-              <strong className="text-zinc-950 text-base font-extrabold block mt-0.5">
-                15+ Jahre
-              </strong>
+              <span className="text-[11px] text-zinc-500 font-medium">
+                {isDe ? "Jahre Büroerfahrung" : "Years Experience"}
+              </span>
             </div>
-            <div>
-              <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Experten-Team" : "Team Scale"}
+
+            <div className="p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+              <span className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 block">
+                100+
               </span>
-              <strong className="text-zinc-950 text-base font-extrabold block mt-0.5">
-                16 Fachkräfte
-              </strong>
+              <span className="text-[11px] text-zinc-500 font-medium">
+                {isDe ? "Realisierte Projekte" : "Built Projects"}
+              </span>
             </div>
-            <div>
-              <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Kammerzulassung" : "Chamber Reg."}
+
+            <div className="p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+              <span className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 block">
+                13,5 M€
               </span>
-              <strong className="text-zinc-950 text-base font-extrabold block mt-0.5">
-                AKH Nr. 21886
-              </strong>
+              <span className="text-[11px] text-zinc-500 font-medium">
+                {isDe ? "Größtes Einzelprojekt" : "Largest Project"}
+              </span>
             </div>
-            <div>
-              <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Arbeitsweise" : "Workflow"}
+
+            <div className="p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+              <span className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 block">
+                AKH
               </span>
-              <strong className="text-[#DC2626] text-base font-extrabold block mt-0.5">
-                100% Digital
-              </strong>
+              <span className="text-[11px] text-zinc-500 font-medium">
+                {isDe ? "Mitglied Nr. 21886" : "Member #21886"}
+              </span>
             </div>
           </div>
         </section>
@@ -174,44 +167,38 @@ export function AboutPage({
         <section className="space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
-              {isDe ? "QUALIFIKATIONEN & BEHÖRDLICHE ANERKENNUNG" : "QUALIFICATIONS & REGULATORY ACCREDITATIONS"}
+              {t.qualificationsBadge}
             </span>
             <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
-              {isDe ? "Behördliche Expertise & Bundesweite Zertifizierungen" : "Regulatory Authority & Federal Certifications"}
+              {t.qualificationsTitle}
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
-                {isDe ? "AKH Kammerzulassung" : "Chamber Registration"}
+                {t.akhRegistrationTitle}
               </h3>
               <p className="text-xs text-zinc-600 font-light leading-relaxed">
-                {isDe
-                  ? "Eingetragenes Mitglied der Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886) für Hochbau und Stadtplanung."
-                  : "Officially registered with the Hessian Chamber of Architects and Urban Planners (AKH #21886)."}
+                {t.akhRegistrationDesc}
               </p>
             </div>
 
             <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
-                {isDe ? "QNG & dena Energieeffizienz" : "QNG & Federal LCA Expert"}
+                {t.qngTitle}
               </h3>
               <p className="text-xs text-zinc-600 font-light leading-relaxed">
-                {isDe
-                  ? "Gelistet in der Energieeffizienz-Expertenliste des Bundes für „Klimafreundlicher Neubau – Lebenszyklusanalyse (LCA) für Wohngebäude & QNG-Zertifizierung“."
-                  : "Listed in the official Federal Energy Efficiency Expert Registry for Life Cycle Assessment (LCA) and QNG green building certification."}
+                {t.qngDesc}
               </p>
             </div>
 
             <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
-                {isDe ? "Forschung & Lehre" : "Academia & Teaching"}
+                {t.academiaTitle}
               </h3>
               <p className="text-xs text-zinc-600 font-light leading-relaxed">
-                {isDe
-                  ? "Lehrauftrag an der Frankfurt University of Applied Sciences (Frankfurt UAS) im Fachbereich Architektur, Bauingenieurwesen und Geomatik."
-                  : "Official academic lectureship at Frankfurt University of Applied Sciences in Architecture and Urban Planning."}
+                {t.academiaDesc}
               </p>
             </div>
           </div>
@@ -221,15 +208,13 @@ export function AboutPage({
         <section className="space-y-8">
           <div className="space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
-              {isDe ? "UNSER EXPERTENTEAM" : "OUR EXPERT TEAM"}
+              {t.teamBadge}
             </span>
             <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
-              {isDe ? "Lernen Sie unser Team kennen" : "Meet Our Team of Professionals"}
+              {t.teamTitle}
             </h2>
             <p className="text-xs sm:text-sm text-zinc-600 font-light max-w-2xl">
-              {isDe
-                ? "Unser Büro vereint erfahrene Architekten, Stadtplaner, Bauingenieure und Visualisierungsspezialisten für integrale Projekterfolge."
-                : "Our practice unifies experienced architects, urban planners, civil engineers, and computational specialists for integrated project delivery."}
+              {t.teamSubtitle}
             </p>
           </div>
 
@@ -268,53 +253,49 @@ export function AboutPage({
             ))}
           </div>
 
-          {/* Subtle 16+ Interdisciplinary Specialist Network Indicator */}
+          {/* 16+ Interdisciplinary Specialist Network Indicator */}
           <div className="p-6 sm:p-8 rounded-2xl bg-zinc-50 border border-zinc-200/90 space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200/80 pb-4">
               <div className="space-y-1 text-left">
                 <div className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#DC2626]">
-                    {isDe ? "16+ EXPERTEN IM FESTEN PLANERVERBUND" : "16+ EXPERTS IN COLLABORATIVE NETWORK"}
+                    {clientsT.networkBadge}
                   </span>
                 </div>
                 <h3 className="font-sans text-lg font-bold text-zinc-950">
-                  {isDe
-                    ? "Kernteam & erweitertes interdisziplinäres Ingenieurnetzwerk"
-                    : "Core Practice & Extended Multi-Disciplinary Engineering Network"}
+                  {clientsT.networkTitle}
                 </h3>
               </div>
 
               <div className="px-3.5 py-1.5 rounded-lg bg-zinc-950 text-white font-mono text-xs font-bold shrink-0 self-start sm:self-auto">
-                {isDe ? "16+ Fachkräfte gesamt" : "16+ Total Specialists"}
+                {clientsT.networkCount}
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-3xl">
-              {isDe
-                ? "Unser 6-köpfiges Leitungs- und Planungsteam wird bei komplexen Bauvorhaben durch 10+ fest assoziierte Statiker, TGA-Fachplaner, Energieberater und Bauphysiker nahtlos verstärkt. So garantieren wir maximale Fachkompetenz und termintreue Abwicklung für Projekte jeder Größenordnung (bis 13,5 Mio. €)."
-                : "Our 6-person core leadership is seamlessly augmented on complex commissions by 10+ permanently associated structural engineers, MEP consultants, certified energy auditors, and fire safety specialists — ensuring seamless full-service delivery for projects up to €13.5M."}
+              {clientsT.networkDesc}
             </p>
 
             {/* Specialist Discipline Tags */}
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                🏗️ {isDe ? "Tragwerksplanung & Statik" : "Structural Engineering"}
+                🏗️ {clientsT.disciplines.structural}
               </span>
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                ⚡ {isDe ? "TGA & Gebäudetechnik" : "MEP Engineering"}
+                ⚡ {clientsT.disciplines.mep}
               </span>
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                🌿 {isDe ? "Energieeffizienz & QNG/LCA" : "Energy & Sustainability"}
+                🌿 {clientsT.disciplines.energy}
               </span>
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                🛡️ {isDe ? "Brandschutz & Bauphysik" : "Fire Safety & Building Physics"}
+                🛡️ {clientsT.disciplines.fireSafety}
               </span>
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                📋 {isDe ? "VOB-Massenermittlung & Ausschreibung" : "VOB Cost & Tendering"}
+                📋 {clientsT.disciplines.tendering}
               </span>
               <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
-                🌳 {isDe ? "Freianlagen & Landschaftsplanung" : "Landscape Architecture"}
+                🌳 {clientsT.disciplines.landscape}
               </span>
             </div>
           </div>
@@ -324,51 +305,48 @@ export function AboutPage({
         <section className="p-8 rounded-2xl bg-zinc-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-zinc-800">
           <div className="space-y-2 text-left">
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#DC2626] block">
-              {isDe ? "DIE PERSÖNLICHE GESCHICHTE DES GRÜNDERS" : "THE FOUNDER'S PERSONAL JOURNEY"}
+              {t.founderStoryBadge}
             </span>
             <h3 className="font-sans text-xl font-bold text-white">
-              {isDe
-                ? "Möchten Sie den persönlichen Lebensweg von Majeed Shams erfahren?"
-                : "Would you like to read Majeed Shams' personal story?"}
+              {t.founderStoryTitle}
             </h3>
-            <p className="text-xs text-zinc-300 font-light max-w-xl">
-              {isDe
-                ? "Die bewegende Geschichte der Ankunft im Jahr 2005 mit null Euro, der Pressebericht der Rheinischen Post und das persönliche Lebensmotto."
-                : "The true story of arriving in Germany in 2005 with zero Euros, the 2005 Rheinische Post newspaper feature, and the motto that drives him."}
+            <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+              {t.founderStoryDesc}
             </p>
           </div>
 
           <button
             type="button"
             onClick={onNavigateFounder}
-            className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 cursor-pointer shrink-0"
+            className="inline-flex items-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-md cursor-pointer shrink-0"
           >
-            {isDe ? "Zur Gründergeschichte →" : "Read Founder's Story →"}
+            <span>{t.founderStoryButton}</span>
           </button>
         </section>
 
-        {/* 5. Bottom Consultation Booking */}
-        <div className="text-center space-y-4 pt-4 border-t border-zinc-100">
-          <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-zinc-950">
-            {isDe
-              ? "Lassen Sie uns über Ihr nächstes Bauvorhaben sprechen."
-              : "Let's Discuss Your Next Development Project."}
-          </h2>
-          <p className="text-xs sm:text-sm text-zinc-600 font-light max-w-lg mx-auto">
-            {isDe
-              ? "Persönliche, fundierte baurechtliche und gestalterische Erstberatung direkt mit unserem Team."
-              : "Personal, authoritative regulatory and architectural consultation directly with our practice team."}
-          </p>
-          <div className="pt-2">
-            <button
-              type="button"
-              onClick={onBookConsultation}
-              className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-7 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 cursor-pointer shadow-md"
-            >
-              {isDe ? "Erstgespräch vereinbaren →" : "Book Consultation →"}
-            </button>
+        {/* 5. Bottom Consultation CTA */}
+        <section className="p-8 sm:p-10 rounded-2xl bg-zinc-950 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl border border-white/10">
+          <div className="space-y-2 text-left">
+            <h3 className="font-sans text-xl sm:text-2xl font-bold text-white">
+              {isDe
+                ? "Möchten Sie ein konkretes Bauvorhaben besprechen?"
+                : "Would you like to discuss your building project?"}
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+              {isDe
+                ? "Vereinbaren Sie eine verbindliche Fachberatung mit unserem Büroinhaber für fundierte Planungssicherheit."
+                : "Book a consultation with our principal for clear statutory direction and planning safety."}
+            </p>
           </div>
-        </div>
+
+          <button
+            type="button"
+            onClick={onBookConsultation}
+            className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg cursor-pointer shrink-0"
+          >
+            {isDe ? "Erstgespräch anfragen →" : "Book Consultation →"}
+          </button>
+        </section>
       </div>
     </article>
   );

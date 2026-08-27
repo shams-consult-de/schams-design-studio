@@ -167,7 +167,7 @@ export const partnersData: PartnerItem[] = [
   {
     id: "stadt-gersfeld",
     name: "Stadt Gersfeld (Rhön)",
-    logo: "/images/partners/stadt-gersfeld.svg",
+    logo: "/images/partners/stadt-gersfeld.png",
     websiteUrl: "https://www.gersfeld.de",
     tagline: "Qualifizierte Bebauungspläne",
     title: "Stadt Gersfeld – Bebauungsplan „Töpfenmühle“",

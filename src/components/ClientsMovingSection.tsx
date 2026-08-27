@@ -1,17 +1,15 @@
-import { Language } from "../lib/i18n";
+import { Translations } from "../lib/i18n";
 import { partnersData } from "../lib/partners";
 
 interface ClientsMovingSectionProps {
-  language: Language;
+  t: Translations["clients"];
   onNavigateClients?: () => void;
 }
 
 export function ClientsMovingSection({
-  language,
+  t,
   onNavigateClients,
 }: ClientsMovingSectionProps) {
-  const isDe = language === "de";
-
   const handleClientsClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigateClients) {
@@ -31,7 +29,7 @@ export function ClientsMovingSection({
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
             <h2 className="text-xs font-extrabold uppercase tracking-[0.2em] text-zinc-900">
-              {isDe ? "Ausgewählte Kunden & Partner" : "Selected Clients & Partners"}
+              {t.badge}
             </h2>
           </div>
 
@@ -40,7 +38,7 @@ export function ClientsMovingSection({
             onClick={handleClientsClick}
             className="text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] flex items-center gap-1 transition-colors cursor-pointer group"
           >
-            <span>{isDe ? "Alle Kunden ansehen" : "View All Clients"}</span>
+            <span>{t.viewAll}</span>
             <span className="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>
         </div>

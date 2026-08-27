@@ -206,6 +206,58 @@ export function FounderPage({
           </div>
         </div>
 
+        {/* Heartfelt Emotional Tribute to Germany & German Trust */}
+        <section className="p-7 sm:p-9 rounded-2xl bg-gradient-to-r from-zinc-900 via-zinc-950 to-zinc-900 text-white border border-white/15 shadow-2xl relative overflow-hidden space-y-4">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#DC2626]/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3">
+              {/* Bright Vivid German Flag Emblem */}
+              <div className="p-1.5 rounded-lg bg-black/60 border border-white/20 shadow-md shrink-0">
+                <svg
+                  viewBox="0 0 5 3"
+                  className="h-6 w-9 sm:h-7 sm:w-10 rounded-[3px] overflow-hidden shadow-xs ring-1 ring-white/30"
+                  aria-label="Bundesrepublik Deutschland Flagge"
+                >
+                  <rect width="5" height="1" y="0" fill="#000000" />
+                  <rect width="5" height="1" y="1" fill="#FF0000" />
+                  <rect width="5" height="1" y="2" fill="#FFD700" />
+                </svg>
+              </div>
+
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#DC2626] font-bold block">
+                  {isDe ? "DANKBARKEIT & DEUTSCHES INGENIEURVERSPRECHEN" : "GRATITUDE & GERMAN ENGINEERING CALLING"}
+                </span>
+                <h3 className="font-sans text-base sm:text-lg font-bold text-white leading-snug">
+                  {isDe
+                    ? "Deutschland – Eine Heimat des Vertrauens und der neuen Lebenschancen"
+                    : "Germany – A Homeland of Trust, Education, and Life-Changing Opportunity"}
+                </h3>
+              </div>
+            </div>
+
+            <span className="text-xs font-mono text-zinc-400 shrink-0 self-start sm:self-auto">
+              AKH Hessen · Nr. 21886
+            </span>
+          </div>
+
+          <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed italic">
+            {isDe
+              ? "„Als ich 2005 mit nichts als der Hoffnung auf Bildung nach Deutschland kam, schenkte mir diese Gesellschaft ihr Vertrauen. Heute ist es mein größtes Lebensanliegen, dieses Vertrauen durch redliche deutsche Planungsdisziplin, kompromisslose Zuverlässigkeit nach DIN & VOB und den Bau nachhaltiger Werte für Menschen und Städte von Herzen zurückzugeben.“"
+              : "“When I arrived in Germany in 2005 with nothing but the hope for education, this society placed its unconditional trust in me. Today, my highest life’s calling is to repay that trust through honest German planning discipline, uncompromising reliability under DIN & VOB, and building enduring architectural value for people and communities.”"}
+          </p>
+
+          <div className="pt-2 flex items-center justify-between text-xs text-zinc-400">
+            <span className="font-semibold text-zinc-200">
+              – Dipl.-Ing. (FH) Majeed Shams M.Eng.
+            </span>
+            <span className="font-mono text-[11px] text-zinc-400">
+              {isDe ? "Dozent Frankfurt UAS · Gründer Shams Consult" : "Lecturer Frankfurt UAS · Founder Shams Consult"}
+            </span>
+          </div>
+        </section>
+
         {/* Historical Newspaper Article Documentation */}
         <section className="pt-6 space-y-4">
           <div className="space-y-2">

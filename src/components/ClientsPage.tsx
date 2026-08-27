@@ -1,19 +1,17 @@
-import { Language } from "../lib/i18n";
+import { Translations } from "../lib/i18n";
 import { partnersData, PartnerItem } from "../lib/partners";
 
 interface ClientsPageProps {
-  language: Language;
+  t: Translations["clients"];
   onBack: () => void;
   onBookConsultation: () => void;
 }
 
 export function ClientsPage({
-  language,
+  t,
   onBack,
   onBookConsultation,
 }: ClientsPageProps) {
-  const isDe = language === "de";
-
   return (
     <article className="min-h-screen bg-white text-zinc-900 pt-28 pb-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-12">
@@ -25,11 +23,11 @@ export function ClientsPage({
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-600 hover:text-[#DC2626] transition-colors cursor-pointer"
           >
             <span>←</span>
-            <span>{isDe ? "Zurück zur Startseite" : "Back to Home"}</span>
+            <span>{t.backToHome}</span>
           </button>
 
           <span className="text-xs font-mono text-zinc-400">
-            Shams Consult · {isDe ? "Kunden & Partner" : "Clients & Partners"}
+            Shams Consult · {t.pageTag}
           </span>
         </div>
 
@@ -38,20 +36,16 @@ export function ClientsPage({
           <div className="inline-flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-              {isDe ? "REFERENZEN & PROJEKTPARTNER" : "CLIENTS & PROJECT PARTNERS"}
+              {t.badge}
             </span>
           </div>
 
           <h1 className="font-sans text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight leading-[1.12]">
-            {isDe
-              ? "Vertrauen aus Wirtschaft, Kommunen & Wissenschaft."
-              : "Trusted by Industry Leaders, Municipalities & Academia."}
+            {t.heading}
           </h1>
 
           <p className="font-sans text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
-            {isDe
-              ? "Ausgewählte institutionelle Auftraggeber, Projektentwickler und Partner, mit denen wir gemeinsam anspruchsvolle Bau- und Planungsprojekte realisieren."
-              : "Selected institutional clients, developers, and partners with whom we deliver high-standard architectural and urban planning projects."}
+            {t.subtitle}
           </p>
         </div>
 
@@ -104,7 +98,7 @@ export function ClientsPage({
                       href={`/project/${partner.projectSlug}`}
                       className="inline-flex items-center gap-1 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors group/link"
                     >
-                      <span>{isDe ? "Projektdetails ansehen" : "View Project Case Study"}</span>
+                      <span>{t.viewCaseStudy}</span>
                       <span className="group-hover/link:translate-x-0.5 transition-transform">→</span>
                     </a>
                   )}
@@ -115,7 +109,7 @@ export function ClientsPage({
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-600 hover:text-zinc-950 transition-colors"
                   >
-                    <span>{isDe ? "Website" : "Website"}</span>
+                    <span>{t.visitWebsite}</span>
                     <span>↗</span>
                   </a>
                 </div>
@@ -134,14 +128,10 @@ export function ClientsPage({
         <section className="p-8 sm:p-10 rounded-2xl bg-zinc-950 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl border border-white/10">
           <div className="space-y-2 text-left">
             <h3 className="font-sans text-xl sm:text-2xl font-bold text-white">
-              {isDe
-                ? "Planen Sie ein gemeinsames Projekt?"
-                : "Planning a joint project or development?"}
+              {t.ctaHeading}
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
-              {isDe
-                ? "Lassen Sie uns unverbindlich über Ihr Bauvorhaben, Machbarkeiten und Planungsrecht sprechen."
-                : "Let's discuss your building project, feasibility, and statutory permitting in a confidential consultation."}
+              {t.ctaSubtitle}
             </p>
           </div>
 
@@ -150,7 +140,7 @@ export function ClientsPage({
             onClick={onBookConsultation}
             className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg cursor-pointer shrink-0"
           >
-            {isDe ? "Termin vereinbaren →" : "Book Consultation →"}
+            {t.ctaButton}
           </button>
         </section>
       </div>

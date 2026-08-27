@@ -347,13 +347,15 @@ export function App() {
         ) : isClientsPage ? (
           /* Dedicated Clients & Project Partners Page */
           <ClientsPage
-            language={language}
+            t={t.clients}
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
           />
         ) : isAboutPage ? (
           /* Dedicated Company About Page (Business & Practice) */
           <AboutPage
+            t={t.about}
+            clientsT={t.clients}
             language={language}
             onBack={handleBackToHome}
             onNavigateFounder={handleNavigateFounder}
@@ -369,6 +371,7 @@ export function App() {
         ) : isResearchPage ? (
           /* Dedicated Research & Theses Page */
           <ResearchPage
+            t={t.research}
             language={language}
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
@@ -396,6 +399,7 @@ export function App() {
           /* Dedicated Single Project Detail Page */
           <ProjectDetail
             project={activeProject}
+            t={t.projectDetail}
             language={language}
             onBack={handleBackToProjects}
             onBookConsultation={handleBookConsultation}
@@ -403,6 +407,7 @@ export function App() {
         ) : isProjectsPage ? (
           /* Dedicated Projects Hub Landing Page */
           <ProjectsPage
+            t={t.projectsPage}
             language={language}
             onSelectProject={handleSelectProject}
             onBack={handleBackToHome}
@@ -429,7 +434,7 @@ export function App() {
 
             {/* 2. Team of 16 Architecture Experts (Subtle Authority Section immediately under Hero) */}
             <TeamSection
-              language={language}
+              t={t.team}
               onNavigateAbout={() => navigateTo("/about")}
             />
 
@@ -437,12 +442,12 @@ export function App() {
             <MetricsBar t={t.metrics} />
 
             {/* 4. Official AKH Hessen Chamber Registration Authority (Registered German Architect & Planner) */}
-            <AkhRegistrationSection language={language} />
+            <AkhRegistrationSection t={t.akhRegistration} />
 
             {/* 5. Selected Clients & Partners Moving Logos Track (Positioned above HOAI phases) */}
             <div id="clients">
               <ClientsMovingSection
-                language={language}
+                t={t.clients}
                 onNavigateClients={() => navigateTo("/clients")}
               />
             </div>
@@ -453,7 +458,7 @@ export function App() {
             </div>
 
             {/* 7. Dedicated Subtle VOB Compliance Section */}
-            <VobSection language={language} />
+            <VobSection t={t.vob} />
 
             {/* 8. Verified 5-Star Google Reviews & Moving Track */}
             <div id="case-studies">
@@ -474,7 +479,7 @@ export function App() {
             {/* 6. Academic Research & Teaching (Frankfurt UAS Lecturer in Urban Architecture) */}
             <div id="research">
               <ResearchSection
-                language={language}
+                t={t.research}
                 onNavigateResearch={handleNavigateResearch}
               />
             </div>

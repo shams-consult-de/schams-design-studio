@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { projects, Project } from "../data/projects";
-import { Language } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 
 interface ProjectsPageProps {
+  t: Translations["projectsPage"];
   language: Language;
   onSelectProject: (project: Project) => void;
   onBack: () => void;
@@ -10,6 +11,7 @@ interface ProjectsPageProps {
 }
 
 export function ProjectsPage({
+  t,
   language,
   onSelectProject,
   onBack,
@@ -19,12 +21,12 @@ export function ProjectsPage({
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", label: isDe ? "Alle Projekte" : "All Projects" },
-    { id: "urban-planning", label: isDe ? "Bebauungspläne & Städtebau" : "Zoning & Master Planning" },
-    { id: "residential", label: isDe ? "Wohnungsbau" : "Residential" },
-    { id: "commercial", label: isDe ? "Gewerbe & Mischnutzung" : "Commercial & Mixed-Use" },
-    { id: "education", label: isDe ? "Bildungsbau" : "Education" },
-    { id: "sustainability", label: isDe ? "Nachhaltigkeit & QNG" : "Sustainability & QNG" },
+    { id: "all", label: t.filterAll },
+    { id: "urban-planning", label: t.filterUrban },
+    { id: "residential", label: t.filterResidential },
+    { id: "commercial", label: t.filterCommercial },
+    { id: "education", label: t.filterEducation },
+    { id: "sustainability", label: t.filterSustainability },
   ];
 
   const filteredProjects =
@@ -43,11 +45,11 @@ export function ProjectsPage({
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-600 hover:text-[#DC2626] transition-colors cursor-pointer"
           >
             <span>←</span>
-            <span>{isDe ? "Zurück zur Startseite" : "Back to Home"}</span>
+            <span>{t.backToHome}</span>
           </button>
 
           <span className="text-xs font-mono text-zinc-400">
-            Shams Consult · {isDe ? "Verifizierte Projektreferenzen" : "Verified Project References"}
+            Shams Consult · {t.badge}
           </span>
         </div>
 
@@ -56,135 +58,129 @@ export function ProjectsPage({
           <div className="inline-flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-              {isDe ? "PROJEKTÜBERSICHT & REFERENZEN" : "PROJECT PORTFOLIO & REFERENCES"}
+              {t.badge}
             </span>
           </div>
 
           <h1 className="font-sans text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight leading-[1.12]">
-            {isDe
-              ? "Realisierte Bauvorhaben & Städtebauliche Entwicklungen."
-              : "Completed Developments & Urban Master Plans."}
+            {t.title}
           </h1>
 
-          <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
-            {isDe
-              ? "Vom vorhabenbezogenen Bebauungsplan bis zum energieeffizienten Wohnungs- und Gewerbebau — authentische Referenzen und baurechtliche Erfolge."
-              : "From project-based zoning plans to energy-efficient residential and commercial architecture — authentic references and regulatory successes."}
+          <p className="font-sans text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+            {t.subtitle}
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-2 border-b border-zinc-100 pb-6">
+        {/* Filter Bar */}
+        <div className="flex flex-wrap items-center gap-2 border-b border-zinc-200 pb-6">
           {categories.map((cat) => (
             <button
               key={cat.id}
               type="button"
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? "bg-zinc-950 text-white shadow-xs font-extrabold"
-                  : "bg-zinc-100 hover:bg-zinc-200 text-zinc-700 font-medium"
+                  ? "bg-zinc-950 text-white shadow-xs"
+                  : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
               }`}
             >
               {cat.label}
             </button>
           ))}
+          <span className="ml-auto text-xs font-mono text-zinc-400">
+            {filteredProjects.length} / {projects.length}
+          </span>
         </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proj) => (
-            <article
-              key={proj.id}
-              onClick={() => onSelectProject(proj)}
-              className="bg-white rounded-2xl border border-zinc-200/80 hover:border-zinc-400 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer card-lift"
-            >
-              {/* Card Image Thumbnail */}
-              {proj.image && (
-                <div className="relative aspect-[16/10] overflow-hidden bg-zinc-950">
-                  <img
-                    src={proj.image}
-                    alt={proj.imageAlt}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[10px] font-bold text-zinc-900 uppercase tracking-wider shadow-xs">
-                      <span className="text-[#DC2626]">●</span>
-                      <span>{proj.categoryLabel[language]}</span>
-                    </span>
-                  </div>
-                  {proj.year && (
-                    <div className="absolute top-3 right-3">
-                      <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-xs text-[10px] font-bold text-white font-mono">
-                        {proj.year}
-                      </span>
+          {filteredProjects.map((p) => {
+            const title = isDe ? p.title.de : p.title.en;
+            const subtitle = isDe ? p.subtitle.de : p.subtitle.en;
+            const location = isDe ? p.location.de : p.location.en;
+            const categoryLabel = isDe ? p.categoryLabel.de : p.categoryLabel.en;
+
+            return (
+              <div
+                key={p.id}
+                onClick={() => onSelectProject(p)}
+                className="group flex flex-col justify-between bg-white border border-zinc-200 hover:border-zinc-400 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <div>
+                  {/* Image Container */}
+                  <div className="relative aspect-[16/10] bg-zinc-100 overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.imageAlt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur-md text-white text-[10px] font-mono px-2.5 py-1 rounded-md">
+                      {categoryLabel}
                     </div>
+                    {p.year && (
+                      <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-zinc-900 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md shadow-2xs">
+                        {p.year}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Body Content */}
+                  <div className="p-6 space-y-3">
+                    <div className="flex items-center gap-1.5 text-xs text-zinc-500">
+                      <svg className="w-3.5 h-3.5 text-[#DC2626]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                        <circle cx="12" cy="9" r="2.5" />
+                      </svg>
+                      <span>{location}</span>
+                    </div>
+
+                    <h2 className="font-sans text-lg font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors leading-snug">
+                      {title}
+                    </h2>
+
+                    <p className="font-sans text-xs text-zinc-600 font-light line-clamp-2 leading-relaxed">
+                      {subtitle}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card Footer */}
+                <div className="px-6 py-4 border-t border-zinc-100 bg-zinc-50/50 flex items-center justify-between">
+                  <span className="text-xs font-bold text-zinc-900 group-hover:text-[#DC2626] transition-colors flex items-center gap-1">
+                    <span>{t.viewDetails}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                  {p.documents && p.documents.length > 0 && (
+                    <span className="text-[10px] font-mono text-zinc-400 bg-zinc-200/60 px-2 py-0.5 rounded">
+                      PDF ({p.documents.length})
+                    </span>
                   )}
                 </div>
-              )}
-
-              <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between">
-                <div className="space-y-3">
-                  {/* Project Title */}
-                  <h2 className="font-sans text-base sm:text-lg font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors leading-snug">
-                    {proj.title[language]}
-                  </h2>
-
-                  {/* Subtitle / Overview */}
-                  <p className="text-xs text-zinc-600 font-light leading-relaxed line-clamp-3">
-                    {proj.overview[language]}
-                  </p>
-                </div>
-
-                {/* Key Highlights & Bottom Link */}
-                <div className="pt-3 border-t border-zinc-100 space-y-3">
-                  <div className="space-y-1">
-                    {proj.keyFacts[language].slice(0, 2).map((fact, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-[11px] text-zinc-700 font-medium">
-                        <span className="text-[#DC2626] font-bold">✓</span>
-                        <span className="line-clamp-1">{fact}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-2 border-t border-zinc-50 flex items-center justify-between">
-                    <span className="text-[11px] font-semibold text-zinc-500 line-clamp-1">
-                      {proj.location[language]}
-                    </span>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 shrink-0">
-                      <span>{isDe ? "Projekt ansehen" : "View Project"}</span>
-                      <span>→</span>
-                    </span>
-                  </div>
-                </div>
               </div>
-            </article>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Consultation Call to Action */}
-        <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-12 text-center space-y-5 shadow-2xl">
-          <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-white">
-            {isDe
-              ? "Haben Sie ein konkretes Grundstück oder Bauvorhaben?"
-              : "Do You Have a Development Plot or Construction Project?"}
-          </h2>
-          <p className="text-xs sm:text-sm text-zinc-300 font-light max-w-xl mx-auto leading-relaxed">
-            {isDe
-              ? "Wir prüfen Ihr Vorhaben baurechtlich und städtebaulich auf Umsetzbarkeit, Nachverdichtungspotenzial und Wirtschaftlichkeit."
-              : "We assess your project from regulatory, urban planning, and feasibility standpoints to maximize value and legal certainty."}
-          </p>
-          <div className="pt-2 flex flex-wrap justify-center gap-4">
-            <button
-              type="button"
-              onClick={onBookConsultation}
-              className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 cursor-pointer"
-            >
-              {isDe ? "Erstgespräch vereinbaren →" : "Book Consultation →"}
-            </button>
+        {/* Bottom Consultation CTA */}
+        <section className="p-8 sm:p-10 rounded-2xl bg-zinc-950 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl border border-white/10">
+          <div className="space-y-2 text-left">
+            <h3 className="font-sans text-xl sm:text-2xl font-bold text-white">
+              {t.ctaTitle}
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+              {t.ctaSubtitle}
+            </p>
           </div>
-        </div>
+
+          <button
+            type="button"
+            onClick={onBookConsultation}
+            className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg cursor-pointer shrink-0"
+          >
+            {t.ctaButton}
+          </button>
+        </section>
       </div>
     </article>
   );

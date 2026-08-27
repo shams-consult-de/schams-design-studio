@@ -1,13 +1,11 @@
-import { Language } from "../lib/i18n";
+import { Translations } from "../lib/i18n";
 
 interface TeamSectionProps {
-  language: Language;
+  t: Translations["team"];
   onNavigateAbout?: () => void;
 }
 
-export function TeamSection({ language, onNavigateAbout }: TeamSectionProps) {
-  const isDe = language === "de";
-
+export function TeamSection({ t, onNavigateAbout }: TeamSectionProps) {
   const handleTeamClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigateAbout) {
@@ -52,23 +50,21 @@ export function TeamSection({ language, onNavigateAbout }: TeamSectionProps) {
               {/* +12 additional specialists badge (total 16+) */}
               <div
                 className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#DC2626] text-white flex items-center justify-center font-bold text-xs sm:text-sm border-2 border-white ring-1 ring-zinc-200 shadow-xs shrink-0 select-none"
-                title={isDe ? "16+ Architekten & Fachplaner im Team" : "16+ Architecture & Engineering Specialists"}
+                title={t.title}
               >
-                +12
+                {t.expertCountBadge}
               </div>
             </div>
 
             {/* Description & Core Details */}
             <div className="space-y-1 text-left max-w-2xl">
               <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 tracking-tight flex items-center gap-2">
-                <span>{isDe ? "Team aus 16 Architekten & Fachplanern" : "Team of 16 Architecture Experts"}</span>
+                <span>{t.title}</span>
                 <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626] animate-pulse" />
               </h3>
 
               <p className="text-xs text-zinc-600 font-light leading-relaxed">
-                {isDe
-                  ? "Interdisziplinäres Planungs- und Baumanagement-Team aus Architekten, Bauleitern und BIM-Spezialisten unter Leitung von Dipl.-Ing. Majeed Shams."
-                  : "Interdisciplinary design & construction management team of architects, site supervisors, and BIM specialists led by Dipl.-Ing. Majeed Shams."}
+                {t.description}
               </p>
             </div>
           </div>
@@ -80,7 +76,7 @@ export function TeamSection({ language, onNavigateAbout }: TeamSectionProps) {
               onClick={handleTeamClick}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-800 text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md cursor-pointer text-center"
             >
-              <span>{isDe ? "Team & Gründer kennenlernen" : "Meet Founder & Team"}</span>
+              <span>{t.ctaButton}</span>
               <span className="text-sm">→</span>
             </a>
           </div>

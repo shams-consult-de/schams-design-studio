@@ -1,13 +1,11 @@
-import { Language } from "../lib/i18n";
+import { Translations } from "../lib/i18n";
 import { AkhLogo } from "./AkhLogo";
 
 interface AkhRegistrationSectionProps {
-  language: Language;
+  t: Translations["akhRegistration"];
 }
 
-export function AkhRegistrationSection({ language }: AkhRegistrationSectionProps) {
-  const isDe = language === "de";
-
+export function AkhRegistrationSection({ t }: AkhRegistrationSectionProps) {
   return (
     <section className="py-7 lg:py-9 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -21,15 +19,11 @@ export function AkhRegistrationSection({ language }: AkhRegistrationSectionProps
           {/* Title & Statutory Seal */}
           <div className="space-y-1 text-left">
             <h2 className="text-sm sm:text-base font-extrabold text-zinc-950 tracking-tight">
-              {isDe
-                ? "Eingetragener Architekt & Stadtplaner (AKH Hessen · KdöR)"
-                : "Registered German Architect & Urban Planner (AKH Hessen)"}
+              {t.title}
             </h2>
 
             <p className="text-xs text-zinc-600 font-light max-w-3xl leading-relaxed">
-              {isDe
-                ? "Staatlich geschützte Berufsbezeichnung mit uneingeschränkter Bauvorlageberechtigung in allen Bundesländern · Gesetzlich vollumfänglich berufshaftpflichtversichert (§ 16 HASG)."
-                : "Protected statutory title under German law with full building permit authority across all federal states · Fully insured under statutory professional indemnity (§ 16 HASG)."}
+              {t.description}
             </p>
           </div>
 

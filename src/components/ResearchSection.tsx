@@ -1,17 +1,15 @@
-import { Language } from "../lib/i18n";
+import { Translations } from "../lib/i18n";
 import { FrankfurtUasLogo } from "./FrankfurtUasLogo";
 
 interface ResearchSectionProps {
-  language: Language;
+  t: Translations["research"];
   onNavigateResearch?: () => void;
 }
 
 export function ResearchSection({
-  language,
+  t,
   onNavigateResearch,
 }: ResearchSectionProps) {
-  const isDe = language === "de";
-
   const handleCtaClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigateResearch) {
@@ -47,28 +45,23 @@ export function ResearchSection({
 
             <div className="space-y-1 text-left max-w-2xl">
               <h2 className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">
-                {isDe
-                  ? "Frankfurt UAS · Dozent für Städtebau & Architektur"
-                  : "Frankfurt UAS · Lecturer in Urban Architecture"}
+                {t.title}
               </h2>
 
               <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
-                {isDe
-                  ? "Wissenschaftliche Fundierung trifft praktische Bauerfahrung. Dipl.-Ing. Majeed Shams forscht und lehrt an der Frankfurt UAS zu Baukostensteuerung, Mängelprävention und Baurecht."
-                  : "Scientific rigor meets real-world construction experience. Dipl.-Ing. Majeed Shams lectures at Frankfurt UAS and supervises research on cost control, defect prevention, and urban law."}
+                {t.subtitle}
               </p>
             </div>
           </div>
 
-          {/* Right: Clean Direct CTA to Secondary Research Landing Page */}
-          <div className="w-full lg:w-auto shrink-0 flex flex-col items-start lg:items-end justify-center pt-2 lg:pt-0 border-t lg:border-t-0 border-white/10">
+          {/* Right: Direct CTA to Dedicated Research Page */}
+          <div className="w-full lg:w-auto shrink-0 flex flex-col items-start lg:items-end justify-center pt-4 lg:pt-0 border-t lg:border-t-0 border-white/10">
             <a
               href="/research"
               onClick={handleCtaClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white px-7 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl shadow-lg cursor-pointer text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-red-950/50 cursor-pointer text-center group/btn"
             >
-              <span>{isDe ? "Forschungsarbeiten ansehen" : "Explore Research Papers"}</span>
-              <span className="text-sm">→</span>
+              <span>{t.viewTheses}</span>
             </a>
           </div>
 

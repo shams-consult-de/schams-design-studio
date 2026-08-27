@@ -1,8 +1,9 @@
 import { Project } from "../data/projects";
-import { Language } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 
 interface ProjectDetailProps {
   project: Project;
+  t: Translations["projectDetail"];
   language: Language;
   onBack: () => void;
   onBookConsultation: () => void;
@@ -10,12 +11,11 @@ interface ProjectDetailProps {
 
 export function ProjectDetail({
   project,
+  t,
   language,
   onBack,
   onBookConsultation,
 }: ProjectDetailProps) {
-  const isDe = language === "de";
-
   return (
     <article className="min-h-screen bg-[#FFFFFF] text-zinc-900 pt-28 pb-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
@@ -27,7 +27,7 @@ export function ProjectDetail({
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-600 hover:text-[#DC2626] transition-colors cursor-pointer"
           >
             <span>←</span>
-            <span>{isDe ? "Zurück zur Projektübersicht" : "Back to Projects"}</span>
+            <span>{t.backToProjects}</span>
           </button>
 
           <span className="text-xs font-mono text-zinc-400">
@@ -56,18 +56,18 @@ export function ProjectDetail({
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-xl bg-zinc-50 border border-zinc-200 text-xs mt-4">
             <div>
               <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Standort" : "Location"}
+                {t.locationLabel}
               </span>
-              <strong className="text-zinc-900 block font-semibold mt-0.5">
+              <span className="font-semibold text-zinc-900 mt-1 block">
                 {project.location[language]}
-              </strong>
+              </span>
             </div>
 
             <div>
               <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                {isDe ? "Auftraggeber" : "Client"}
+                {t.clientLabel}
               </span>
-              <span className="text-zinc-900 block font-medium mt-0.5 line-clamp-2">
+              <span className="font-semibold text-zinc-900 mt-1 block">
                 {project.client[language]}
               </span>
             </div>
@@ -75,9 +75,9 @@ export function ProjectDetail({
             {project.legalBasis && (
               <div>
                 <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                  {isDe ? "Rechtsgrundlage" : "Legal Basis"}
+                  {t.legalBasisLabel}
                 </span>
-                <span className="text-zinc-900 block font-medium mt-0.5">
+                <span className="font-semibold text-zinc-900 mt-1 block font-mono text-[11px]">
                   {project.legalBasis}
                 </span>
               </div>
@@ -86,9 +86,9 @@ export function ProjectDetail({
             {project.year && (
               <div>
                 <span className="text-zinc-400 uppercase tracking-wider block text-[10px] font-bold">
-                  {isDe ? "Jahr / Status" : "Year / Status"}
+                  {t.yearLabel}
                 </span>
-                <span className="text-[#DC2626] block font-bold mt-0.5">
+                <span className="font-semibold text-zinc-900 mt-1 block font-mono">
                   {project.year}
                 </span>
               </div>
@@ -96,161 +96,154 @@ export function ProjectDetail({
           </div>
         </div>
 
-        {/* Authentic Plan / Architecture Drawing Image */}
-        {project.image && (
-          <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-900 shadow-md">
-            <img
-              src={project.image}
-              alt={project.imageAlt}
-              className="w-full h-auto max-h-[500px] object-contain mx-auto bg-zinc-950"
-              loading="lazy"
-            />
-            <figcaption className="p-3.5 sm:p-4 text-xs text-zinc-500 bg-zinc-50 border-t border-zinc-200">
-              <strong>{isDe ? "Plandokumentation:" : "Architectural Plan:"}</strong> {project.imageAlt}
-            </figcaption>
-          </figure>
+        {/* Featured Project Image */}
+        <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-xl border border-zinc-200 bg-zinc-100">
+          <img
+            src={project.image}
+            alt={project.imageAlt}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Project Overview */}
+        <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-4">
+          <h2 className="font-sans text-xl font-bold text-zinc-950">
+            {t.scopeLabel}
+          </h2>
+          <p className="font-sans text-sm sm:text-base text-zinc-700 font-light leading-relaxed">
+            {project.overview[language]}
+          </p>
+        </div>
+
+        {/* Key Highlights Section */}
+        {project.keyFacts && project.keyFacts[language].length > 0 && (
+          <div className="space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
+              {t.highlightsTitle}
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {project.keyFacts[language].map((fact, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-start gap-3 p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs"
+                >
+                  <span className="h-5 w-5 rounded-full bg-red-100 text-[#DC2626] flex items-center justify-center text-xs shrink-0 font-bold mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-zinc-800 font-light">
+                    {fact}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         )}
 
-        {/* Project Key Highlights */}
-        <div className="p-6 rounded-2xl bg-[#111111] text-white space-y-4 shadow-xl">
-          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#DC2626] block">
-            {isDe ? "PROJEKT-HIGHLIGHTS" : "KEY PROJECT HIGHLIGHTS"}
-          </span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {project.keyFacts[language].map((fact, idx) => (
-              <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-200">
-                <span className="text-[#DC2626] font-bold text-sm">✓</span>
-                <span>{fact}</span>
-              </div>
-            ))}
-          </div>
+        {/* Deep Dive: Challenge, Objective, Concept, Outcome */}
+        <div className="space-y-8 pt-4">
+          {project.challenge && (
+            <section className="space-y-2">
+              <h3 className="font-sans text-lg font-bold text-zinc-950">
+                {t.challengeTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                {project.challenge[language]}
+              </p>
+            </section>
+          )}
+
+          {project.concept && (
+            <section className="space-y-2">
+              <h3 className="font-sans text-lg font-bold text-zinc-950">
+                {t.conceptTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                {project.concept[language]}
+              </p>
+            </section>
+          )}
+
+          {project.outcome && (
+            <section className="space-y-2">
+              <h3 className="font-sans text-lg font-bold text-zinc-950">
+                {t.outcomeTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                {project.outcome[language]}
+              </p>
+            </section>
+          )}
         </div>
 
-        {/* Detailed Project Narrative */}
-        <div className="space-y-10 text-zinc-700 leading-relaxed pt-2">
-          {/* 1. Ausgangslage */}
-          <section className="space-y-3">
-            <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 border-l-4 border-[#DC2626] pl-3.5">
-              {isDe ? "1. Ausgangslage & Projektbeteiligte" : "1. Context & Stakeholders"}
-            </h2>
-            <p className="text-sm sm:text-base font-light text-zinc-700">
-              {project.overview[language]}
-            </p>
-          </section>
-
-          {/* 2. Herausforderung */}
-          <section className="space-y-3">
-            <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 border-l-4 border-[#DC2626] pl-3.5">
-              {isDe ? "2. Zielsetzung & Problemstellung" : "2. Objectives & Challenges"}
-            </h2>
-            <p className="text-sm sm:text-base font-light text-zinc-700">
-              {project.challenge[language]}
-            </p>
-          </section>
-
-          {/* 3. Konzept & Umsetzung */}
-          <section className="space-y-3">
-            <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 border-l-4 border-[#DC2626] pl-3.5">
-              {isDe ? "3. Städtebauliches Konzept & Architektur" : "3. Urban Concept & Architecture"}
-            </h2>
-            <p className="text-sm sm:text-base font-light text-zinc-700">
-              {project.concept[language]}
-            </p>
-          </section>
-
-          {/* 4. Ergebnis */}
-          <section className="space-y-3">
-            <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 border-l-4 border-[#DC2626] pl-3.5">
-              {isDe ? "4. Ergebnis & Genehmigungserfolg" : "4. Results & Permitting Success"}
-            </h2>
-            <p className="text-sm sm:text-base font-light text-zinc-700">
-              {project.outcome[language]}
-            </p>
-          </section>
-        </div>
-
-        {/* Official Documents & Downloads (if available, e.g. Maienweg 2 Ulm) */}
+        {/* Official Statutory Documents */}
         {project.documents && project.documents.length > 0 && (
-          <section className="p-6 sm:p-8 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-4">
-            <div className="flex items-center justify-between">
-              <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
-                  {isDe ? "AMTLICHE DOKUMENTE & DOWNLOADS" : "OFFICIAL DOCUMENTS & DOWNLOADS"}
-                </span>
-                <h3 className="font-sans text-base sm:text-lg font-bold text-zinc-950">
-                  {isDe ? "Rechtskräftige Satzungsunterlagen" : "Legally Enacted Statutes"}
-                </h3>
-              </div>
-
-              {project.externalReferenceUrl && (
-                <a
-                  href={project.externalReferenceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-bold text-[#DC2626] hover:underline hidden sm:inline"
-                >
-                  {isDe ? "Stadtportal ansehen ↗" : "City Portal ↗"}
-                </a>
-              )}
+          <section className="p-6 rounded-2xl bg-zinc-900 text-white space-y-4 shadow-xl">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#DC2626] block">
+                {t.officialDocsTitle}
+              </span>
+              <h3 className="font-sans text-base font-bold text-white">
+                {t.bindingNotice}
+              </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="space-y-2 pt-2">
               {project.documents.map((doc, idx) => (
                 <a
                   key={idx}
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-white border border-zinc-200 hover:border-zinc-400 shadow-xs hover:shadow-md transition-all flex items-center justify-between gap-3 group"
+                  className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors group cursor-pointer"
                 >
-                  <div className="space-y-0.5">
-                    <span className="text-xs font-bold text-zinc-900 group-hover:text-[#DC2626] transition-colors block line-clamp-2">
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-[#DC2626]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <span className="text-xs text-zinc-200 group-hover:text-white font-medium">
                       {doc.title}
                     </span>
-                    {doc.size && (
-                      <span className="text-[10px] text-zinc-400 font-mono block">
-                        {doc.size}
-                      </span>
-                    )}
                   </div>
-                  <span className="text-xs text-zinc-400 group-hover:text-[#DC2626] shrink-0 font-bold">
-                    ↗
-                  </span>
+                  {doc.size && (
+                    <span className="text-[10px] font-mono text-zinc-400">
+                      {doc.size}
+                    </span>
+                  )}
                 </a>
               ))}
             </div>
           </section>
         )}
 
-        {/* Consultation Call to Action */}
-        <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-12 text-center space-y-5 shadow-2xl">
-          <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-white">
-            {isDe
-              ? "Planen Sie ein ähnliches Bau- oder Bebauungsplanvorhaben?"
-              : "Planning a Similar Development or Zoning Project?"}
-          </h2>
-          <p className="text-xs sm:text-sm text-zinc-300 font-light max-w-xl mx-auto leading-relaxed">
-            {isDe
-              ? "Lassen Sie Ihr Vorhaben unverbindlich baurechtlich und städtebaulich von unserem Gründer & Büroinhaber prüfen."
-              : "Have your project evaluated from a regulatory, urban planning, and architectural standpoint by our founder & principal architect."}
-          </p>
-          <div className="pt-2 flex flex-wrap justify-center gap-4">
+        {/* Bottom Consultation CTA */}
+        <section className="p-8 sm:p-10 rounded-2xl bg-zinc-950 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl border border-white/10">
+          <div className="space-y-2 text-left">
+            <h3 className="font-sans text-xl sm:text-2xl font-bold text-white">
+              {t.inquiryHeading}
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+              {t.inquirySub}
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <button
               type="button"
               onClick={onBookConsultation}
-              className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg cursor-pointer text-center"
             >
-              {isDe ? "Projekt-Erstgespräch anfragen →" : "Request Consultation →"}
+              {t.inquiryButton}
             </button>
             <button
               type="button"
               onClick={onBack}
-              className="bg-transparent border border-zinc-600 hover:border-white text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
+              className="bg-white/10 hover:bg-white/20 text-zinc-200 px-5 py-3.5 rounded-xl text-xs font-semibold transition-all cursor-pointer text-center"
             >
-              {isDe ? "Alle Projekte ansehen" : "View All Projects"}
+              {t.allProjectsButton}
             </button>
           </div>
-        </div>
+        </section>
       </div>
     </article>
   );
