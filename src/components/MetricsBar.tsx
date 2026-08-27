@@ -28,18 +28,6 @@ export function MetricsBar({ t }: MetricsBarProps) {
       ),
     },
     {
-      value: t.experts.value,
-      label: t.experts.label,
-      icon: (
-        <svg viewBox="0 0 32 32" fill="none" className="h-7 w-7 sm:h-8 sm:w-8 text-[#DC2626]" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="11" r="4" />
-          <circle cx="21" cy="13" r="3.5" />
-          <path d="M5 26C5 21.5817 8.58172 18 13 18H14C17.3137 18 20 20.6863 20 24V26" strokeLinecap="round" />
-          <path d="M18 21.5C19.5 20.5 21.5 20.5 23 21.5C25 23 26 24.5 26 26" strokeLinecap="round" />
-        </svg>
-      ),
-    },
-    {
       value: t.largestProject.value,
       label: t.largestProject.label,
       icon: (
@@ -50,20 +38,37 @@ export function MetricsBar({ t }: MetricsBarProps) {
         </svg>
       ),
     },
+    {
+      value: "100% DIN & VOB",
+      label: "Deutsche Planungs- & Qualitätsstandards",
+      icon: (
+        <div className="shrink-0 p-1 rounded bg-black/50 border border-white/20 shadow-md">
+          <svg
+            viewBox="0 0 5 3"
+            className="h-5 w-7.5 sm:h-6 sm:w-9 rounded-[2px] overflow-hidden shadow-xs"
+            aria-label="Bundesrepublik Deutschland Flagge"
+          >
+            <rect width="5" height="1" y="0" fill="#000000" />
+            <rect width="5" height="1" y="1" fill="#FF0000" />
+            <rect width="5" height="1" y="2" fill="#FFD700" />
+          </svg>
+        </div>
+      ),
+    },
   ];
 
   return (
     <section className="bg-[#0f1012] text-white py-8 sm:py-10 lg:py-12 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 lg:divide-x lg:divide-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 lg:divide-x lg:divide-white/10">
           {metrics.map((m, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-3 sm:gap-4 px-2 sm:px-6 lg:px-8 first:pl-0 last:pr-0 justify-start lg:justify-center"
+              className="flex items-center gap-3 sm:gap-4 px-2 sm:px-4 lg:px-6 first:pl-0 last:pr-0 justify-start lg:justify-center"
             >
               <div className="shrink-0">{m.icon}</div>
               <div>
-                <p className="font-sans text-xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-none">
+                <p className="font-sans text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-none">
                   {m.value}
                 </p>
                 <p className="text-[11px] sm:text-xs text-zinc-400 font-light mt-1 sm:mt-1.5 leading-snug">

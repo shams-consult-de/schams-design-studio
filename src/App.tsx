@@ -15,6 +15,11 @@ import { BlogPage } from "./components/BlogPage";
 import { BlogDetail } from "./components/BlogDetail";
 import { ResearchSection } from "./components/ResearchSection";
 import { ResearchPage } from "./components/ResearchPage";
+import { AkhRegistrationSection } from "./components/AkhRegistrationSection";
+import { TeamSection } from "./components/TeamSection";
+import { VobSection } from "./components/VobSection";
+import { ClientsMovingSection } from "./components/ClientsMovingSection";
+import { ClientsPage } from "./components/ClientsPage";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LegalModal, LegalModalType } from "./components/LegalModal";
@@ -35,6 +40,7 @@ export function App() {
   const [isProjectsPage, setIsProjectsPage] = useState<boolean>(false);
   const [isFounderPage, setIsFounderPage] = useState<boolean>(false);
   const [isAboutPage, setIsAboutPage] = useState<boolean>(false);
+  const [isClientsPage, setIsClientsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
 
@@ -42,11 +48,26 @@ export function App() {
   const syncRoute = useCallback(() => {
     const pathname = window.location.pathname;
 
+    if (pathname === "/clients" || pathname === "/clients/" || pathname === "/kunden" || pathname === "/kunden/" || pathname === "/partners" || pathname === "/partners/") {
+      setIsClientsPage(true);
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     if (pathname === "/research" || pathname === "/research/") {
       setIsResearchPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
+      setIsClientsPage(false);
       setIsBlogPage(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
@@ -55,10 +76,11 @@ export function App() {
       return;
     }
 
-    if (pathname === "/about" || pathname === "/about/") {
+    if (pathname === "/about" || pathname === "/about/" || pathname === "/team" || pathname === "/team/") {
       setIsAboutPage(true);
       setIsFounderPage(false);
       setIsProjectsPage(false);
+      setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
       setActiveProject(null);
@@ -72,6 +94,7 @@ export function App() {
       setIsFounderPage(true);
       setIsAboutPage(false);
       setIsProjectsPage(false);
+      setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
       setActiveProject(null);
@@ -85,6 +108,7 @@ export function App() {
       setIsProjectsPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
+      setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
       setActiveProject(null);
@@ -99,6 +123,7 @@ export function App() {
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
+      setIsClientsPage(false);
       setIsResearchPage(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
@@ -116,6 +141,7 @@ export function App() {
         setIsProjectsPage(false);
         setIsAboutPage(false);
         setIsFounderPage(false);
+        setIsClientsPage(false);
         setIsResearchPage(false);
         setActiveCaseStudy(null);
         setActiveProject(null);
@@ -132,6 +158,7 @@ export function App() {
         setIsProjectsPage(false);
         setIsAboutPage(false);
         setIsFounderPage(false);
+        setIsClientsPage(false);
         setIsBlogPage(false);
         setIsResearchPage(false);
         setActiveCaseStudy(null);
@@ -149,6 +176,7 @@ export function App() {
         setIsProjectsPage(false);
         setIsAboutPage(false);
         setIsFounderPage(false);
+        setIsClientsPage(false);
         setIsBlogPage(false);
         setIsResearchPage(false);
         setActiveProject(null);
@@ -316,6 +344,13 @@ export function App() {
             language={language}
             onNavigateHome={handleBackToHome}
           />
+        ) : isClientsPage ? (
+          /* Dedicated Clients & Project Partners Page */
+          <ClientsPage
+            language={language}
+            onBack={handleBackToHome}
+            onBookConsultation={handleBookConsultation}
+          />
         ) : isAboutPage ? (
           /* Dedicated Company About Page (Business & Practice) */
           <AboutPage
@@ -392,15 +427,35 @@ export function App() {
               onNavigateFounder={() => navigateTo("/founder")}
             />
 
-            {/* 2. Metrics Strip (Immediately below Hero) */}
+            {/* 2. Team of 16 Architecture Experts (Subtle Authority Section immediately under Hero) */}
+            <TeamSection
+              language={language}
+              onNavigateAbout={() => navigateTo("/about")}
+            />
+
+            {/* 3. Metrics Strip */}
             <MetricsBar t={t.metrics} />
 
-            {/* 3. Unified Services & 9 HOAI Leistungsphasen Section */}
+            {/* 4. Official AKH Hessen Chamber Registration Authority (Registered German Architect & Planner) */}
+            <AkhRegistrationSection language={language} />
+
+            {/* 5. Selected Clients & Partners Moving Logos Track (Positioned above HOAI phases) */}
+            <div id="clients">
+              <ClientsMovingSection
+                language={language}
+                onNavigateClients={() => navigateTo("/clients")}
+              />
+            </div>
+
+            {/* 6. Unified Services & 9 HOAI Leistungsphasen Section */}
             <div id="services">
               <ServicesSection t={t.services} processT={t.process} />
             </div>
 
-            {/* 4. Verified 5-Star Google Reviews & Moving Track */}
+            {/* 7. Dedicated Subtle VOB Compliance Section */}
+            <VobSection language={language} />
+
+            {/* 8. Verified 5-Star Google Reviews & Moving Track */}
             <div id="case-studies">
               <CaseStudiesSection
                 language={language}
@@ -408,7 +463,7 @@ export function App() {
               />
             </div>
 
-            {/* 5. Featured Projects Section (Moving Track) */}
+            {/* 9. Featured Projects Section (Moving Track) */}
             <FeaturedProjectsSection
               t={t.projects}
               language={language}

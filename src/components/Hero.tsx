@@ -56,28 +56,6 @@ export function Hero({
                 {t.viewProjects}
               </button>
             </div>
-
-            {/* German Architecture & Statutory Engineering Trust Strip */}
-            {t.trustBadges && t.trustBadges.length > 0 && (
-              <div className="pt-4 border-t border-zinc-100 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                {t.trustBadges.map((badge, idx) => (
-                  <div
-                    key={idx}
-                    className="p-2.5 rounded-lg bg-zinc-50/80 border border-zinc-200/80 hover:border-zinc-300 transition-colors"
-                  >
-                    <div className="flex items-center gap-1.5">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626] shrink-0" />
-                      <span className="text-[11px] font-bold text-zinc-950 truncate">
-                        {badge.label}
-                      </span>
-                    </div>
-                    <p className="text-[10px] text-zinc-500 font-light mt-0.5 leading-tight line-clamp-1">
-                      {badge.detail}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Center/Right Column (5 cols): Centered Portrait & Clickable Founder Badge */}

@@ -12,149 +12,66 @@ export function ResearchSection({
 }: ResearchSectionProps) {
   const isDe = language === "de";
 
-  const pillars = [
-    {
-      badge: isDe ? "Kostenforschung (DIN 276)" : "Cost Research (DIN 276)",
-      title: isDe ? "Baukosten- & Risikomanagement" : "Construction Cost Management",
-      desc: isDe
-        ? "Analysen zu Baupreisschwankungen und dynamischer Pufferplanung — schützt Investoren vor unkontrollierten Nachträgen."
-        : "In-depth research on material volatility and dynamic contingency buffers protecting investors from budget overruns.",
-      stat: "8–15%",
-      statLabel: isDe ? "Kostenersparnis durch Mängelprävention" : "Cost savings via defect prevention",
-    },
-    {
-      badge: isDe ? "Bauleitung & VOB" : "Site Supervision & VOB",
-      title: isDe ? "Mängelprävention & Qualitätssicherung" : "Defect Prevention & Quality Control",
-      desc: isDe
-        ? "Praxiserprobte Leitfäden zur frühzeitigen Fehlervermeidung auf Baustellen im Rhein-Main-Gebiet."
-        : "Field-tested protocols for early error elimination on construction sites across the Rhine-Main metropolitan area.",
-      stat: "100%",
-      statLabel: isDe ? "DIN- & Normenkonformität" : "DIN & statutory standard compliance",
-    },
-    {
-      badge: isDe ? "Kommunaler Städtebau" : "Urban Planning & Policy",
-      title: isDe ? "Stellplatzsatzung & Innenentwicklung" : "Zoning Bylaws & Urban Masterplans",
-      desc: isDe
-        ? "Wissenschaftliche Fachbeiträge zur Reform starrer Stellplatzschlüssel und Quartierstransformation."
-        : "Authoritative policy papers on parking statute reforms and sustainable urban neighborhood transformations.",
-      stat: "7+",
-      statLabel: isDe ? "Publikationen & betreute Thesen" : "Published papers & supervised theses",
-    },
-  ];
+  const handleCtaClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onNavigateResearch) {
+      onNavigateResearch();
+    } else {
+      window.location.href = "/research";
+    }
+  };
 
   return (
-    <section id="research" className="py-20 lg:py-28 bg-[#0c0d0e] text-white border-b border-white/10 relative overflow-hidden">
-      {/* Background glow accents */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#DC2626]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="research" className="py-12 lg:py-16 bg-[#090A0C] text-white border-b border-white/10 relative overflow-hidden">
+      {/* Subtle Ambient Glows */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#008dc7]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-[#DC2626]/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
-        {/* Section Header with Frankfurt UAS Logo and Lecturer Credentials */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end justify-between border-b border-white/10 pb-8">
-          <div className="lg:col-span-8 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#DC2626]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#12141A] via-[#161822] to-[#12141A] border border-white/10 hover:border-white/20 transition-all duration-300 shadow-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 group">
+          
+          {/* Left: Official University Logo with Ambient Backlight Glow & Credentials */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-7">
+            {/* Luminous Logo Container with Continuous Breathing & Revolving Aura */}
+            <div className="relative shrink-0 group/logo">
+              {/* Dynamic Revolving Colored Aura Halo */}
+              <div className="absolute -inset-3 bg-[conic-gradient(from_0deg,#008dc7,#92c4e0,#dc2626,#008dc7)] rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-aura-spin pointer-events-none" />
+              {/* Soft Pulsing Ambient Diffuser */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#008dc7] via-[#38bdf8] to-[#dc2626] rounded-2xl blur-lg opacity-60 animate-aura-breathe pointer-events-none" />
+
+              {/* Main Crisp White Container */}
+              <div className="relative p-4 sm:p-5 rounded-2xl bg-white/95 backdrop-blur-md shadow-[0_0_30px_rgba(0,141,199,0.4)] border border-white/50 ring-1 ring-[#008dc7]/40 hover:scale-105 transition-transform duration-300">
+                <FrankfurtUasLogo className="h-10 sm:h-12 w-auto" variant="dark" />
+              </div>
+            </div>
+
+            <div className="space-y-1 text-left max-w-2xl">
+              <h2 className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">
                 {isDe
-                  ? "Forschung & Lehre · Frankfurt University of Applied Sciences"
-                  : "Research & Academia · Frankfurt University of Applied Sciences"}
-              </span>
+                  ? "Frankfurt UAS · Dozent für Städtebau & Architektur"
+                  : "Frankfurt UAS · Lecturer in Urban Architecture"}
+              </h2>
+
+              <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
+                {isDe
+                  ? "Wissenschaftliche Fundierung trifft praktische Bauerfahrung. Dipl.-Ing. Majeed Shams forscht und lehrt an der Frankfurt UAS zu Baukostensteuerung, Mängelprävention und Baurecht."
+                  : "Scientific rigor meets real-world construction experience. Dipl.-Ing. Majeed Shams lectures at Frankfurt UAS and supervises research on cost control, defect prevention, and urban law."}
+              </p>
             </div>
-
-            <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              <span>{isDe ? "Frankfurt UAS · " : "Frankfurt UAS · "}</span>
-              <span className="text-[#DC2626]">
-                {isDe ? "Dozent für Städtebau & Architektur" : "Lecturer in Urban Architecture"}
-              </span>
-            </h2>
-
-            <p className="text-sm sm:text-base text-zinc-300 font-light leading-relaxed max-w-3xl">
-              {isDe
-                ? "Wissenschaftliche Fundierung trifft 15+ Jahre behördliche und praktische Bauerfahrung. Dipl.-Ing. Majeed Shams forscht und lehrt an der Frankfurt UAS zu Themen wie Baukostenmanagement (DIN 276), Mängelvermeidung und zukunftsfähigen Stellplatzsatzungen."
-                : "Scientific rigor meets 15+ years of municipal authority and practical construction expertise. Dipl.-Ing. Majeed Shams lectures and supervises research at Frankfurt UAS on construction cost management (DIN 276), defect prevention, and urban mobility statutes."}
-            </p>
           </div>
 
-          {/* Logo & Direct CTA Link */}
-          <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-between gap-4">
-            <div className="p-3 px-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-xs flex items-center gap-3">
-              <FrankfurtUasLogo className="h-9 w-auto" variant="light" />
-            </div>
-
-            <button
-              type="button"
-              onClick={onNavigateResearch}
-              className="inline-flex items-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white px-5 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-md cursor-pointer"
+          {/* Right: Clean Direct CTA to Secondary Research Landing Page */}
+          <div className="w-full lg:w-auto shrink-0 flex flex-col items-start lg:items-end justify-center pt-2 lg:pt-0 border-t lg:border-t-0 border-white/10">
+            <a
+              href="/research"
+              onClick={handleCtaClick}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white px-7 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl shadow-lg cursor-pointer text-center"
             >
-              <span>{isDe ? "Thesen & Publikationen ansehen" : "Explore Theses & Research"}</span>
+              <span>{isDe ? "Forschungsarbeiten ansehen" : "Explore Research Papers"}</span>
               <span className="text-sm">→</span>
-            </button>
-          </div>
-        </div>
-
-        {/* 3 Core Research Pillar Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pillars.map((pillar, idx) => (
-            <div
-              key={idx}
-              onClick={onNavigateResearch}
-              className="bg-[#16171b] p-7 rounded-2xl border border-white/10 hover:border-[#DC2626]/70 shadow-lg hover:shadow-2xl transition-all duration-300 space-y-5 flex flex-col justify-between group cursor-pointer card-lift"
-            >
-              <div className="space-y-3">
-                <span className="font-mono text-[11px] font-bold text-[#DC2626] bg-red-950/60 border border-red-800/60 px-2.5 py-1 rounded-md inline-block">
-                  {pillar.badge}
-                </span>
-
-                <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#DC2626] transition-colors leading-snug">
-                  {pillar.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed">
-                  {pillar.desc}
-                </p>
-              </div>
-
-              {/* Bottom Stat Highlight */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <div>
-                  <span className="font-sans text-xl font-extrabold text-white block">
-                    {pillar.stat}
-                  </span>
-                  <span className="text-[10px] text-zinc-400 font-light">
-                    {pillar.statLabel}
-                  </span>
-                </div>
-                <span className="text-zinc-500 group-hover:text-[#DC2626] group-hover:translate-x-1 transition-all text-xs font-bold font-mono">
-                  Details →
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Banner Callout */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-zinc-900 via-[#1a1b20] to-zinc-900 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div className="space-y-1">
-            <h4 className="font-sans text-base font-bold text-white">
-              {isDe
-                ? "Akademische Betreuung & Forschungsarbeiten einsehen"
-                : "Review Academic Theses & Supervised Research"}
-            </h4>
-            <p className="text-xs text-zinc-400 font-light max-w-2xl">
-              {isDe
-                ? "Erfahren Sie, wie unsere universitären Erkenntnisse direkt in die Kostenoptimierung und Genehmigungssicherheit Ihres Bauvorhabens einfließen."
-                : "Discover how scientific insights directly enhance cost efficiency, structural safety, and rapid approvals for your project."}
-            </p>
+            </a>
           </div>
 
-          <button
-            type="button"
-            onClick={onNavigateResearch}
-            className="shrink-0 inline-flex items-center gap-2 border border-white/20 hover:border-white text-white hover:text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-white/5 hover:bg-white/10"
-          >
-            <span>{isDe ? "Alle 7 Arbeiten ansehen" : "View All 7 Theses"}</span>
-            <span>→</span>
-          </button>
         </div>
       </div>
     </section>

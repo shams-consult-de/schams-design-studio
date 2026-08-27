@@ -100,9 +100,6 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
         <div className="space-y-10">
           {/* Section Header */}
           <div className="max-w-3xl space-y-2">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#DC2626] block">
-              {t.badge}
-            </span>
             <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight leading-tight">
               {t.title}
             </h2>
@@ -133,142 +130,16 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
         {/* PART 2: CONTINUOUS AUTO-MOVING 9 HOAI PHASES TIMELINE             */}
         {/* ================================================================= */}
         <div id="process" className="pt-12 border-t border-zinc-100 space-y-8">
-          {/* Process Header & Enhanced 4 Stage + Playback Controls Bar */}
-          <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6">
-            <div className="max-w-3xl space-y-2.5">
-              <div className="inline-flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#DC2626]">
-                  {processT.badge}
-                </span>
-              </div>
+          {/* Process Header */}
+          <div className="max-w-3xl space-y-2.5">
+            <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
+              <span>{processT.titlePart1} </span>
+              <span className="text-[#DC2626]">{processT.titlePart2}</span>
+            </h3>
 
-              <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-                <span>{processT.titlePart1} </span>
-                <span className="text-[#DC2626]">{processT.titlePart2}</span>
-              </h3>
-
-              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-2xl">
-                {processT.subtitle}
-              </p>
-            </div>
-
-            {/* Enhanced Controls Toolbar: 4 Stage Filters + Play/Pause & Step Controls */}
-            <div className="flex flex-wrap items-center gap-2.5 self-start xl:self-end">
-              {/* 4 Improved Segmented Stage Filter Pills */}
-              <div className="flex items-center p-1 bg-zinc-100/90 rounded-xl border border-zinc-200 shadow-2xs text-xs font-medium overflow-x-auto no-scrollbar">
-                {/* 1. All 9 Phases */}
-                <button
-                  type="button"
-                  onClick={() => { setActiveStage("all"); setSelectedStep(null); }}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
-                    activeStage === "all"
-                      ? "bg-white text-zinc-950 font-bold shadow-xs border border-zinc-200/80"
-                      : "text-zinc-600 hover:text-zinc-950"
-                  }`}
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626]" />
-                  <span>Alle 9 Phasen</span>
-                </button>
-
-                {/* 2. Planning LPH 1-4 */}
-                <button
-                  type="button"
-                  onClick={() => { setActiveStage("planning"); setSelectedStep(null); }}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
-                    activeStage === "planning"
-                      ? "bg-white text-blue-950 font-bold shadow-xs border border-blue-200/80"
-                      : "text-zinc-600 hover:text-zinc-950"
-                  }`}
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
-                  <span>LPH 1–4 · Planung</span>
-                </button>
-
-                {/* 3. Tendering LPH 5-7 */}
-                <button
-                  type="button"
-                  onClick={() => { setActiveStage("tendering"); setSelectedStep(null); }}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
-                    activeStage === "tendering"
-                      ? "bg-white text-amber-950 font-bold shadow-xs border border-amber-200/80"
-                      : "text-zinc-600 hover:text-zinc-950"
-                  }`}
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
-                  <span>LPH 5–7 · Vergabe</span>
-                </button>
-
-                {/* 4. Construction LPH 8-9 */}
-                <button
-                  type="button"
-                  onClick={() => { setActiveStage("construction"); setSelectedStep(null); }}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
-                    activeStage === "construction"
-                      ? "bg-white text-emerald-950 font-bold shadow-xs border border-emerald-200/80"
-                      : "text-zinc-600 hover:text-zinc-950"
-                  }`}
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
-                  <span>LPH 8–9 · Bauleitung</span>
-                </button>
-              </div>
-
-              {/* Playback & Manual Navigation Controls */}
-              <div className="flex items-center gap-1 bg-zinc-100/90 p-1 rounded-xl border border-zinc-200 shadow-2xs">
-                {/* Play/Pause Button */}
-                <button
-                  type="button"
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  aria-label={isPlaying ? "Pause timeline motion" : "Start timeline motion"}
-                  title={isPlaying ? "Auto-Lauf anhalten" : "Auto-Lauf starten"}
-                  className="p-1.5 px-2.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
-                >
-                  {isPlaying ? (
-                    <>
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-[#DC2626]">
-                        <rect x="6" y="4" width="4" height="16" rx="1" />
-                        <rect x="14" y="4" width="4" height="16" rx="1" />
-                      </svg>
-                      <span className="font-mono text-[11px]">Pause</span>
-                    </>
-                  ) : (
-                    <>
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-emerald-600">
-                        <polygon points="5,3 19,12 5,21" />
-                      </svg>
-                      <span className="font-mono text-[11px]">Start</span>
-                    </>
-                  )}
-                </button>
-
-                {/* Left Step Arrow */}
-                <button
-                  type="button"
-                  onClick={() => handleScroll("left")}
-                  aria-label="Scroll left"
-                  title="Nach links bewegen"
-                  className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
-                    <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-
-                {/* Right Step Arrow */}
-                <button
-                  type="button"
-                  onClick={() => handleScroll("right")}
-                  aria-label="Scroll right"
-                  title="Nach rechts bewegen"
-                  className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
-                    <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-2xl">
+              {processT.subtitle}
+            </p>
           </div>
 
           {/* Continuous Auto-Moving Marquee Track with Side Fade Gradients */}
@@ -368,6 +239,123 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
                   );
                 })}
               </div>
+            </div>
+          </div>
+
+          {/* Enhanced Controls Toolbar: 4 Stage Filters + Play/Pause & Step Controls (Positioned Below Moving Track) */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
+            {/* 4 Improved Segmented Stage Filter Pills */}
+            <div className="flex items-center p-1 bg-zinc-100/90 rounded-xl border border-zinc-200 shadow-2xs text-xs font-medium overflow-x-auto no-scrollbar max-w-full">
+              {/* 1. All 9 Phases */}
+              <button
+                type="button"
+                onClick={() => { setActiveStage("all"); setSelectedStep(null); }}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                  activeStage === "all"
+                    ? "bg-white text-zinc-950 font-bold shadow-xs border border-zinc-200/80"
+                    : "text-zinc-600 hover:text-zinc-950"
+                }`}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626]" />
+                <span>Alle 9 Phasen</span>
+              </button>
+
+              {/* 2. Planning LPH 1-4 */}
+              <button
+                type="button"
+                onClick={() => { setActiveStage("planning"); setSelectedStep(null); }}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                  activeStage === "planning"
+                    ? "bg-white text-blue-950 font-bold shadow-xs border border-blue-200/80"
+                    : "text-zinc-600 hover:text-zinc-950"
+                }`}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                <span>LPH 1–4 · Planung</span>
+              </button>
+
+              {/* 3. Tendering LPH 5-7 */}
+              <button
+                type="button"
+                onClick={() => { setActiveStage("tendering"); setSelectedStep(null); }}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                  activeStage === "tendering"
+                    ? "bg-white text-amber-950 font-bold shadow-xs border border-amber-200/80"
+                    : "text-zinc-600 hover:text-zinc-950"
+                }`}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
+                <span>LPH 5–7 · Vergabe</span>
+              </button>
+
+              {/* 4. Construction LPH 8-9 */}
+              <button
+                type="button"
+                onClick={() => { setActiveStage("construction"); setSelectedStep(null); }}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                  activeStage === "construction"
+                    ? "bg-white text-emerald-950 font-bold shadow-xs border border-emerald-200/80"
+                    : "text-zinc-600 hover:text-zinc-950"
+                }`}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                <span>LPH 8–9 · Bauleitung</span>
+              </button>
+            </div>
+
+            {/* Playback & Manual Navigation Controls */}
+            <div className="flex items-center gap-1 bg-zinc-100/90 p-1 rounded-xl border border-zinc-200 shadow-2xs shrink-0">
+              {/* Play/Pause Button */}
+              <button
+                type="button"
+                onClick={() => setIsPlaying(!isPlaying)}
+                aria-label={isPlaying ? "Pause timeline motion" : "Start timeline motion"}
+                title={isPlaying ? "Auto-Lauf anhalten" : "Auto-Lauf starten"}
+                className="p-1.5 px-2.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+              >
+                {isPlaying ? (
+                  <>
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-[#DC2626]">
+                      <rect x="6" y="4" width="4" height="16" rx="1" />
+                      <rect x="14" y="4" width="4" height="16" rx="1" />
+                    </svg>
+                    <span className="font-mono text-[11px]">Pause</span>
+                  </>
+                ) : (
+                  <>
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-emerald-600">
+                      <polygon points="5,3 19,12 5,21" />
+                    </svg>
+                    <span className="font-mono text-[11px]">Start</span>
+                  </>
+                )}
+              </button>
+
+              {/* Left Step Arrow */}
+              <button
+                type="button"
+                onClick={() => handleScroll("left")}
+                aria-label="Scroll left"
+                title="Nach links bewegen"
+                className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
+                  <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+
+              {/* Right Step Arrow */}
+              <button
+                type="button"
+                onClick={() => handleScroll("right")}
+                aria-label="Scroll right"
+                title="Nach rechts bewegen"
+                className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
+                  <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

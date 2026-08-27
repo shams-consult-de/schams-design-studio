@@ -463,7 +463,7 @@ export const content: Record<Language, Translations> = {
         { label: "AKH Chamber Reg.", detail: "Registered German Architect & Planner" },
         { label: "HOAI 1–9 & VOB", detail: "Full Statutory Tariff Compliance" },
         { label: "DIN 276 Standards", detail: "German Cost & Precision Control" },
-        { label: "Frankfurt UAS", detail: "Lecturer in Urban Architecture" },
+        { label: "Frankfurt University of Applied Sciences", detail: "Lecturer in Urban Architecture" },
       ],
     },
     metrics: {

@@ -182,8 +182,7 @@ export function AboutPage({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-3">
-              <div className="text-2xl">🏛️</div>
+            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
                 {isDe ? "AKH Kammerzulassung" : "Chamber Registration"}
               </h3>
@@ -194,8 +193,7 @@ export function AboutPage({
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-3">
-              <div className="text-2xl">🌿</div>
+            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
                 {isDe ? "QNG & dena Energieeffizienz" : "QNG & Federal LCA Expert"}
               </h3>
@@ -206,8 +204,7 @@ export function AboutPage({
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-3">
-              <div className="text-2xl">🎓</div>
+            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
               <h3 className="font-sans text-base font-bold text-zinc-950">
                 {isDe ? "Forschung & Lehre" : "Academia & Teaching"}
               </h3>
@@ -242,15 +239,15 @@ export function AboutPage({
                 key={idx}
                 className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                {/* Team Portrait Image Container */}
-                <div className="relative aspect-[4/3] bg-zinc-100 overflow-hidden">
+                {/* Team Portrait Image Container (Portrait 3:4 for full body/torso framing) */}
+                <div className="relative aspect-[3/4] bg-zinc-100 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
 
                 <div className="p-5 sm:p-6 space-y-3 flex-1 flex flex-col justify-between">
@@ -269,6 +266,57 @@ export function AboutPage({
                 </div>
               </article>
             ))}
+          </div>
+
+          {/* Subtle 16+ Interdisciplinary Specialist Network Indicator */}
+          <div className="p-6 sm:p-8 rounded-2xl bg-zinc-50 border border-zinc-200/90 space-y-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200/80 pb-4">
+              <div className="space-y-1 text-left">
+                <div className="inline-flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#DC2626]">
+                    {isDe ? "16+ EXPERTEN IM FESTEN PLANERVERBUND" : "16+ EXPERTS IN COLLABORATIVE NETWORK"}
+                  </span>
+                </div>
+                <h3 className="font-sans text-lg font-bold text-zinc-950">
+                  {isDe
+                    ? "Kernteam & erweitertes interdisziplinäres Ingenieurnetzwerk"
+                    : "Core Practice & Extended Multi-Disciplinary Engineering Network"}
+                </h3>
+              </div>
+
+              <div className="px-3.5 py-1.5 rounded-lg bg-zinc-950 text-white font-mono text-xs font-bold shrink-0 self-start sm:self-auto">
+                {isDe ? "16+ Fachkräfte gesamt" : "16+ Total Specialists"}
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-3xl">
+              {isDe
+                ? "Unser 6-köpfiges Leitungs- und Planungsteam wird bei komplexen Bauvorhaben durch 10+ fest assoziierte Statiker, TGA-Fachplaner, Energieberater und Bauphysiker nahtlos verstärkt. So garantieren wir maximale Fachkompetenz und termintreue Abwicklung für Projekte jeder Größenordnung (bis 13,5 Mio. €)."
+                : "Our 6-person core leadership is seamlessly augmented on complex commissions by 10+ permanently associated structural engineers, MEP consultants, certified energy auditors, and fire safety specialists — ensuring seamless full-service delivery for projects up to €13.5M."}
+            </p>
+
+            {/* Specialist Discipline Tags */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                🏗️ {isDe ? "Tragwerksplanung & Statik" : "Structural Engineering"}
+              </span>
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                ⚡ {isDe ? "TGA & Gebäudetechnik" : "MEP Engineering"}
+              </span>
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                🌿 {isDe ? "Energieeffizienz & QNG/LCA" : "Energy & Sustainability"}
+              </span>
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                🛡️ {isDe ? "Brandschutz & Bauphysik" : "Fire Safety & Building Physics"}
+              </span>
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                📋 {isDe ? "VOB-Massenermittlung & Ausschreibung" : "VOB Cost & Tendering"}
+              </span>
+              <span className="px-3 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-mono text-zinc-700">
+                🌳 {isDe ? "Freianlagen & Landschaftsplanung" : "Landscape Architecture"}
+              </span>
+            </div>
           </div>
         </section>
 

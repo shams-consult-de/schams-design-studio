@@ -45,12 +45,6 @@ export function ContactSection({
 
         {/* 1. Primary Conversion Hub: Microsoft 365 Direct Calendar Booking */}
         <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-[#16171b] border border-white/15 hover:border-red-500/50 transition-all rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8">
-          <div className="flex items-center justify-between border-b border-white/10 pb-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-extrabold tracking-widest uppercase">
-              <Icon name="calendar-days" /> {t.calendarCardTitle}
-            </span>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <h3 className="font-sans text-2xl sm:text-4xl font-bold text-white leading-tight">
@@ -90,6 +84,15 @@ export function ContactSection({
               >
                 <span>{t.emailCardButton}</span>
               </a>
+
+              <div className="pt-1 flex items-center justify-center gap-1.5 text-[11px] font-mono text-zinc-400 text-center">
+                <span className="text-emerald-400">🔒</span>
+                <span>
+                  {language === "de"
+                    ? "Berufshaftpflichtversichert (§ 16 HASG) · 100% Planungssicherheit"
+                    : "Statutory Professional Indemnity (§ 16 HASG) · Full Safety"}
+                </span>
+              </div>
             </div>
           </div>
         </div>
