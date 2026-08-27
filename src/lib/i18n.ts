@@ -6,6 +6,8 @@ export interface Translations {
     about: string;
     services: string;
     projects: string;
+    siteVisits: string;
+    akhBadge: string;
     caseStudies: string;
     process: string;
     blog: string;
@@ -347,6 +349,8 @@ export const content: Record<Language, Translations> = {
       about: "Über uns",
       services: "Leistungen",
       projects: "Projekte",
+      siteVisits: "Praxis-Einblicke",
+      akhBadge: "AKH Hessen #21886 · Frankfurt UAS",
       caseStudies: "Fallstudien",
       process: "Prozess",
       blog: "Magazin",
@@ -800,6 +804,8 @@ export const content: Record<Language, Translations> = {
       about: "About Us",
       services: "Services",
       projects: "Projects",
+      siteVisits: "On-Site Proof",
+      akhBadge: "AKH Hessen #21886 · Frankfurt UAS",
       caseStudies: "Case Studies",
       process: "Process",
       blog: "Magazine",

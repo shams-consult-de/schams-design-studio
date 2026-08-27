@@ -32,12 +32,14 @@ export function Header({
     { label: t.about, path: "/about", sectionId: undefined },
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
+    { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
   ];
 
   const mobileNavLinks = [
     { label: t.about, path: "/about", sectionId: undefined },
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
+    { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
     { label: t.caseStudies, path: "/case-studies", sectionId: "case-studies" },
     { label: t.blog, path: "/blog", sectionId: undefined },
     { label: t.contact, path: "/contact", sectionId: "contact" },
