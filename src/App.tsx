@@ -23,6 +23,7 @@ import { ClientsPage } from "./components/ClientsPage";
 import { SiteVisitsMovingSection } from "./components/SiteVisitsMovingSection";
 import { SiteVisitsPage } from "./components/SiteVisitsPage";
 import { MobileStickyActionBar } from "./components/MobileStickyActionBar";
+import { DesktopStickyActionBar } from "./components/DesktopStickyActionBar";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LegalModal, LegalModalType } from "./components/LegalModal";
@@ -550,6 +551,13 @@ export function App() {
 
       {/* 10. Science-Backed Mobile Sticky Quick-Action Bar (Thumb Zone) */}
       <MobileStickyActionBar
+        t={t.mobileActionBar}
+        contactT={t.contact}
+        onBookConsultation={handleBookConsultation}
+      />
+
+      {/* 11. Subtle Desktop Floating Quick-Action Dock (Zero Clutter, 1-Click Access) */}
+      <DesktopStickyActionBar
         t={t.mobileActionBar}
         contactT={t.contact}
         onBookConsultation={handleBookConsultation}

@@ -29,7 +29,12 @@ export function Header({
   }, []);
 
   const navLinks = [
-    { label: t.home, path: "/", sectionId: undefined },
+    { label: t.about, path: "/about", sectionId: undefined },
+    { label: t.services, path: "/services", sectionId: "services" },
+    { label: t.projects, path: "/projects", sectionId: undefined },
+  ];
+
+  const mobileNavLinks = [
     { label: t.about, path: "/about", sectionId: undefined },
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
@@ -157,6 +162,40 @@ export function Header({
             </button>
           </div>
 
+          {/* Direct Phone & WhatsApp subtle icon links for desktop */}
+          <div className="hidden md:flex items-center gap-0.5">
+            <a
+              href="tel:+4960748056262"
+              className="p-2 rounded-full hover:bg-zinc-100 text-zinc-600 hover:text-zinc-950 transition-colors"
+              title="Telefon: +49 (0) 6074 8056262"
+              aria-label="Telefon"
+            >
+              <svg
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/4960748056262"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-zinc-100 text-[#25D366] transition-colors"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.394-10.416c-4.288 0-7.777 3.489-7.777 7.778 0 1.374.359 2.664.984 3.784l-1.044 3.82 3.916-1.027c1.077.587 2.316.923 3.921.923 4.287 0 7.776-3.488 7.776-7.778 0-4.288-3.489-7.778-7.776-7.778z" />
+              </svg>
+            </a>
+          </div>
+
           <button
             type="button"
             onClick={handleConsultationClick}
@@ -182,7 +221,7 @@ export function Header({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
           <div className="flex flex-col space-y-1">
-            {navLinks.map((link) => (
+            {mobileNavLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.path}
