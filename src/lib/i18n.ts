@@ -338,6 +338,7 @@ export interface Translations {
     legalDatenschutz: string;
     legalBarrierefreiheit: string;
     legalWiderruf: string;
+    developedBy: string;
     rights: string;
   };
 }
@@ -795,6 +796,7 @@ export const content: Record<Language, Translations> = {
       legalDatenschutz: "Datenschutz",
       legalBarrierefreiheit: "Barrierefreiheit",
       legalWiderruf: "Widerruf",
+      developedBy: "Mit ❤️ in Deutschland entwickelt von",
       rights: "Alle Rechte vorbehalten.",
     },
   },
@@ -1250,6 +1252,7 @@ export const content: Record<Language, Translations> = {
       legalDatenschutz: "Privacy Policy",
       legalBarrierefreiheit: "Accessibility",
       legalWiderruf: "Withdrawal",
+      developedBy: "Developed with ❤️ in Germany by",
       rights: "All rights reserved.",
     },
   },

@@ -140,7 +140,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
           <p>© {currentYear} Shams Consult. {t.rights}</p>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <a
               href="/impressum"
               onClick={(e) => handleNav(e, "/impressum")}
@@ -176,13 +176,42 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
         </div>
       </div>
 
-      {/* Signature Animated Emblem Watermark at Absolute Bottom */}
+      {/* Signature Animated Emblem Watermark */}
       <div className="w-full pt-10 sm:pt-14 pb-4 flex items-center justify-center select-none overflow-hidden group px-6">
         <img
           src="/images/animated-logo.webp"
           alt="Shams Consult Emblem"
           className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
         />
+      </div>
+
+      {/* Developed with Love in Germany Credit (Centered at very bottom) */}
+      <div className="w-full pb-8 pt-2 flex items-center justify-center text-center px-4">
+        <p className="inline-flex flex-wrap items-center justify-center gap-1.5 text-[11px] font-mono text-zinc-500">
+          <span>{t.developedBy}</span>
+          <span className="inline-flex items-center gap-1.5 text-zinc-400">
+            {/* Crisp German Flag SVG for universal rendering on Windows, Mac, iOS & Android */}
+            <span
+              className="inline-flex items-center justify-center w-4 h-2.5 rounded-2xs overflow-hidden shadow-2xs border border-white/20 shrink-0"
+              title="Deutschland"
+              aria-label="Deutschland"
+            >
+              <svg viewBox="0 0 5 3" className="w-full h-full" aria-hidden="true">
+                <rect width="5" height="1" y="0" fill="#000000" />
+                <rect width="5" height="1" y="1" fill="#DD0000" />
+                <rect width="5" height="1" y="2" fill="#FFCE00" />
+              </svg>
+            </span>
+            <a
+              href="https://nordible.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-zinc-300 hover:text-white underline decoration-zinc-600 hover:decoration-white transition-colors cursor-pointer"
+            >
+              nordible.co ↗
+            </a>
+          </span>
+        </p>
       </div>
     </footer>
   );
