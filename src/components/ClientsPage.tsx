@@ -1,8 +1,9 @@
-import { Translations } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 import { partnersData, PartnerItem } from "../lib/partners";
 
 interface ClientsPageProps {
   t: Translations["clients"];
+  language: Language;
   onBack: () => void;
   onNavigateSiteVisits?: () => void;
   onBookConsultation: () => void;
@@ -10,6 +11,7 @@ interface ClientsPageProps {
 
 export function ClientsPage({
   t,
+  language,
   onBack,
   onNavigateSiteVisits,
   onBookConsultation,
@@ -71,7 +73,7 @@ export function ClientsPage({
 
                 {partner.location && (
                   <span className="text-[11px] font-mono font-medium text-zinc-500 bg-white px-2.5 py-1 rounded-md border border-zinc-200 shrink-0">
-                    📍 {partner.location}
+                    📍 {partner.location[language]}
                   </span>
                 )}
               </div>
@@ -80,15 +82,15 @@ export function ClientsPage({
               <div className="space-y-3 flex-1">
                 <div>
                   <span className="text-xs font-bold text-[#DC2626] uppercase tracking-wider block">
-                    {partner.tagline}
+                    {partner.tagline[language]}
                   </span>
                   <h2 className="font-sans text-lg sm:text-xl font-bold text-zinc-950 mt-1 leading-snug">
-                    {partner.name}
+                    {partner.title[language]}
                   </h2>
                 </div>
 
                 <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
-                  {partner.jointProject}
+                  {partner.jointProject[language]}
                 </p>
               </div>
 
@@ -114,6 +116,18 @@ export function ClientsPage({
                     <span>{t.visitWebsite}</span>
                     <span>↗</span>
                   </a>
+
+                  {partner.newsUrl && (
+                    <a
+                      href={partner.newsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#DC2626] hover:text-[#B91C1C] transition-colors"
+                    >
+                      <span>📰 {partner.newsTitle?.[language] || t.pressBadge}</span>
+                      <span>↗</span>
+                    </a>
+                  )}
                 </div>
 
                 {partner.projectYear && (
@@ -195,7 +209,7 @@ export function ClientsPage({
               }}
               className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors cursor-pointer group"
             >
-              <span>Vollständige Vor-Ort-Fotodokumentation & Baustelleneinblicke ansehen</span>
+              <span>{t.viewAllSiteVisits}</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </div>

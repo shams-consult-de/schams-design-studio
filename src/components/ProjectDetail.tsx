@@ -175,6 +175,96 @@ export function ProjectDetail({
           )}
         </div>
 
+        {/* On-Site Construction & Technical Photo Documentation Gallery */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="space-y-6 pt-2">
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
+                {language === "de" ? "BAUAUSFÜHRUNG & FOTODOKUMENTATION" : "CONSTRUCTION & PHOTO DOCUMENTATION"}
+              </span>
+              <h3 className="font-sans text-xl font-bold text-zinc-950">
+                {language === "de" ? "Vor-Ort-Einblicke & Technische Montage" : "On-Site Field Records & Technical Assembly"}
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {project.gallery.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+                    <img
+                      src={item.image}
+                      alt={item.title[language]}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 text-white text-[10px] font-mono">
+                      Phase 0{idx + 1}
+                    </div>
+                  </div>
+
+                  <div className="p-5 space-y-1.5 bg-white">
+                    <h4 className="font-sans text-sm font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                      {item.title[language]}
+                    </h4>
+                    <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                      {item.desc[language]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related Press / Blog Reference Card */}
+        {(project.externalReferenceUrl || project.blogSlug) && (
+          <section className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#DC2626]">
+                {language === "de" ? "FACHBEITRAG & PRESSEBERICHT" : "RELATED ARTICLE & PRESS COVERAGE"}
+              </span>
+              <h4 className="font-sans text-base font-bold text-zinc-950">
+                {project.externalReferenceTitle
+                  ? project.externalReferenceTitle[language]
+                  : language === "de"
+                  ? "Tipps für die wirtschaftliche Umsetzung nachhaltiger Projekte"
+                  : "Tips for the Cost-Effective Execution of Sustainable Projects"}
+              </h4>
+              <p className="text-xs text-zinc-600 font-light">
+                {language === "de"
+                  ? "Erfahren Sie mehr über zukunftsfähige Projektsteuerung, QNG-Zertifizierung und Fördermittel in unserem Fachmagazin."
+                  : "Learn more about sustainable project management, QNG certification, and public funding programs."}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0">
+              {project.blogSlug && (
+                <a
+                  href={`/blog/${project.blogSlug}`}
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
+                >
+                  <span>{language === "de" ? "Fachartikel lesen" : "Read Article"}</span>
+                  <span>→</span>
+                </a>
+              )}
+              {project.externalReferenceUrl && (
+                <a
+                  href={project.externalReferenceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-zinc-100 text-zinc-900 border border-zinc-200 text-xs font-bold transition-all shadow-xs"
+                >
+                  <span>{language === "de" ? "Pressebericht" : "Press Article"}</span>
+                  <span>↗</span>
+                </a>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* Official Statutory Documents */}
         {project.documents && project.documents.length > 0 && (
           <section className="p-6 rounded-2xl bg-zinc-900 text-white space-y-4 shadow-xl">

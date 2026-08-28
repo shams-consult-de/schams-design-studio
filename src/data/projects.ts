@@ -54,9 +54,139 @@ export interface Project {
   };
   documents?: ProjectDocument[];
   externalReferenceUrl?: string;
+  externalReferenceTitle?: {
+    de: string;
+    en: string;
+  };
+  blogSlug?: string;
+  gallery?: Array<{
+    image: string;
+    title: {
+      de: string;
+      en: string;
+    };
+    desc: {
+      de: string;
+      en: string;
+    };
+  }>;
 }
 
 export const projects: Project[] = [
+  {
+    id: "regenwasser-rigole-wohnanlage",
+    slug: "regenwasser-rigole-wohnanlage",
+    category: "sustainability",
+    categoryLabel: {
+      de: "Nachhaltiges Bauen & Außenanlagen",
+      en: "Sustainable Drainage & Landscape",
+    },
+    title: {
+      de: "Modulare Versickerungsrigole & Außenanlagen für Wohnanlage",
+      en: "Modular Stormwater Infiltration Rigole & Residential Infrastructure",
+    },
+    subtitle: {
+      de: "Dezentrales Regenwassermanagement (Schwammstadt), Retentionsrigole & Hofneugestaltung gem. DIN 1986-100 & DWA-A 138",
+      en: "Decentralized stormwater management (Sponge City), mineral infiltration rigole & courtyard redevelopment under DIN 1986-100 & DWA-A 138",
+    },
+    location: {
+      de: "Rhein-Main-Gebiet (Hessen)",
+      en: "Rhine-Main Region (Hesse)",
+    },
+    client: {
+      de: "Wohnungsbaugesellschaft & Private Bauträgergesellschaft",
+      en: "Residential Housing Developer & Property Management",
+    },
+    legalBasis: "DIN 1986-100, DWA-A 138 & HOAI LPH 1–8 (Objektüberwachung)",
+    year: "2024–2025",
+    image: "/images/projects/shams-versickerungsrigole-regenwasser-aushub.jpg",
+    imageAlt: "Modulare Versickerungsrigole mit Retentionsblöcken im Wohnungsbau, Architekturbüro Shams Consult",
+    gallery: [
+      {
+        image: "/images/projects/shams-versickerungsrigole-regenwasser-aushub.jpg",
+        title: {
+          de: "Erdaushub & Rigolen-Unterbau",
+          en: "Excavation Pit & Sub-base Preparation",
+        },
+        desc: {
+          de: "Präziser maschineller Aushub der Baugrube und Einbau der ersten Lage mineralischer Retentions- und Sickerblöcke.",
+          en: "Precision mechanical excavation and placement of high-capacity modular mineral retention blocks.",
+        },
+      },
+      {
+        image: "/images/projects/shams-rigolenversickerung-anschluss-leitungen.jpg",
+        title: {
+          de: "Zulaufverrohrung & Kanalanschlüsse",
+          en: "Inflow Conduits & Pipework Interconnection",
+        },
+        desc: {
+          de: "Verlegung und luftdichter Anschluss der grünen KG-Zufluss- und Überlaufrohre an den Rigolenkörper für Starkregenereignisse.",
+          en: "Installation and sealed connection of drainage and overflow pipes directly to the attenuation core.",
+        },
+      },
+      {
+        image: "/images/projects/shams-retentionsbloecke-mineralwolle-rigole.jpg",
+        title: {
+          de: "Modulare Retentionsblöcke vor Ort",
+          en: "Modular Mineral Retention Blocks On-Site",
+        },
+        desc: {
+          de: "Hochverdichtete Steinwolle-Rigolenkörper mit werkseitigen Rohrdurchführungen für maximale Wasserspeicherkapazität.",
+          en: "Dense mineral-based infiltration blocks with pre-drilled conduit channels providing maximum water absorption.",
+        },
+      },
+      {
+        image: "/images/projects/shams-wohnanlage-aussenanlagen-pflasterbau.jpg",
+        title: {
+          de: "Baugrubensicherung & Oberflächenherstellung",
+          en: "Site Safety & Surface Reinstatement",
+        },
+        desc: {
+          de: "Bauzaunsicherung, Schottertragschichtverdichtung mit Baumaschinen und Vorbereitung der Pflaster- und Hofzufahrten.",
+          en: "Perimeter safety fencing, mechanized gravel compaction, and subgrade preparation for residential paving.",
+        },
+      },
+    ],
+    overview: {
+      de: "Planung, Dimensionierung und bauleitende Begleitung einer hochmodernen, modularen Rigolenversickerungsanlage für ein Mehrfamilienhaus-Ensemble im Rhein-Main-Gebiet. Ziel des Projekts war die vollständige dezentrale Versickerung des anfallenden Niederschlagswassers direkt auf dem Grundstück nach dem Schwammstadt-Prinzip, um das öffentliche Kanalnetz bei Starkregenereignissen zu 100 % zu entlasten und dauerhaft Niederschlagswassergebühren einzusparen.",
+      en: "Planning, hydraulic sizing, and full on-site construction supervision for an advanced modular stormwater infiltration rigole serving a residential multi-family complex in the Rhine-Main region. Guided by the Sponge City principle, the system ensures 100% on-site rainwater infiltration, decoupling the property from municipal sewers during extreme weather and sustainably reducing stormwater fees.",
+    },
+    challenge: {
+      de: "Begrenzter Raum im Innenhof- und Garagenbereich bei gleichzeitig hohen Spitzenabflussmengen durch großflächige Dach- und Zufahrtsflächen. Zudem erforderte der anstehende Boden eine exakte bodenmechanische und hydrogeologische Berechnung der Versickerungsleistung gem. DWA-A 138 sowie eine statisch hochbelastbare Überfahrbarkeit durch Pkw und Lieferverkehr.",
+      en: "Tight spatial constraints between garages and courtyard access combined with high peak runoff from roof and paved surfaces. The site demanded precise hydrogeological percolation calculations under DWA-A 138 and a heavy-duty structural load capacity for vehicle traffic.",
+    },
+    concept: {
+      de: "Einbau eines hocheffizienten, modularen Rigolensystems aus mineralischen Retentionsblöcken mit extrem hoher Hohlraumquote (> 95 %). Die vorkonfektionierten Blöcke nehmen Niederschlagswasser schlagartig auf und geben es zeitverzögert und gefiltert an das umliegende Erdreich ab. Ein mehrstufiges Filtersystem mit Schlammfängen verhindert das Zusetzen der Sickerporen.",
+      en: "Installation of a modular mineral retention rigole offering over 95% void volume for instantaneous water uptake and controlled, filtered subsoil percolation. Upstream silt traps and multi-stage sediment filters prevent pore clogging and guarantee decades of maintenance-free operation.",
+    },
+    outcome: {
+      de: "Erfolgreiche technische Abnahme und mängelfreie Inbetriebnahme der Anlage. Vollständige Abkopplung der Hofflächen vom Mischwasserkanal, nachhaltige Grundwasserneubildung vor Ort und deutliche Reduzierung der laufenden kommunalen Entwässerungsgebühren für die Eigentümergemeinschaft.",
+      en: "Successful technical handover with zero defects. Complete decoupling of paved areas from the municipal combined sewer, on-site groundwater replenishment, and significant long-term municipal drainage fee savings for the owners.",
+    },
+    keyFacts: {
+      de: [
+        "100% dezentrale Regenwasserversickerung (Schwammstadt-Prinzip)",
+        "Modulare mineralische Retentionsblöcke mit > 95% Hohlraumvolumen",
+        "Vollständige Entlastung des kommunalen Kanalnetzes bei Starkregen",
+        "HOAI Leistungsphasen 1–8 inkl. Vor-Ort-Bauüberwachung & Abnahme",
+        "Dauerhafte Ersparnis bei kommunalen Niederschlagswassergebühren",
+      ],
+      en: [
+        "100% decentralized on-site stormwater infiltration (Sponge City principle)",
+        "Modular mineral infiltration blocks with > 95% void capacity",
+        "Complete relief of municipal sewer infrastructure during heavy storms",
+        "HOAI project phases 1–8 including full on-site supervision & certification",
+        "Permanent operational savings on municipal rainwater drainage fees",
+      ],
+    },
+    externalReferenceUrl:
+      "https://www.hna.de/lokales/rotenburg-bebra/bebra-ort46578/bebra-it-rechenzentrum-bau-projekt-plan-konzept-idee-investition-news-94362529.html",
+    externalReferenceTitle: {
+      de: "HNA-Pressebericht: Rechenzentrum & Bau-Projekt Bebra",
+      en: "HNA Press Article: Data Center & Construction Project Bebra",
+    },
+    blogSlug: "wirtschaftliche-umsetzung-nachhaltiger-projekte",
+  },
   {
     id: "vep-maienweg-ulm",
     slug: "vep-maienweg-ulm",

@@ -28,6 +28,7 @@ import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LegalModal, LegalModalType } from "./components/LegalModal";
 import { LegalPage, LegalPageType } from "./components/LegalPage";
+import { NotFoundPage } from "./components/NotFoundPage";
 import { Language, content } from "./lib/i18n";
 import { caseStudies, CaseStudy } from "./data/caseStudies";
 import { projects, Project } from "./data/projects";
@@ -48,12 +49,34 @@ export function App() {
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
+  const [isNotFound, setIsNotFound] = useState<boolean>(false);
+  const [requestedPath, setRequestedPath] = useState<string>("");
 
-  // Synchronize state with standard HTML5 URL paths only (no hashes)
+  // Synchronize state with standard HTML5 URL paths safely handling encodings, legacy German aliases, and broken links
   const syncRoute = useCallback(() => {
-    const pathname = window.location.pathname;
+    const rawPath = window.location.pathname;
+    let path = rawPath;
+    try {
+      path = decodeURIComponent(rawPath);
+    } catch {
+      path = rawPath;
+    }
+    // Collapse duplicate slashes (e.g. //über-uns -> /über-uns)
+    path = path.replace(/\/+/g, "/").trim().toLowerCase();
+    if (path.length > 1 && path.endsWith("/")) {
+      path = path.slice(0, -1);
+    }
 
-    if (pathname === "/site-visits" || pathname === "/site-visits/" || pathname === "/album" || pathname === "/album/" || pathname === "/einblicke" || pathname === "/einblicke/") {
+    setRequestedPath(rawPath);
+
+    // 1. Site visits / Album / Baustelleneinblicke
+    if (
+      path === "/site-visits" ||
+      path === "/album" ||
+      path === "/einblicke" ||
+      path === "/vor-ort" ||
+      path === "/baustellen"
+    ) {
       setIsSiteVisitsPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
@@ -61,14 +84,24 @@ export function App() {
       setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/clients" || pathname === "/clients/" || pathname === "/kunden" || pathname === "/kunden/" || pathname === "/partners" || pathname === "/partners/") {
+    // 2. Clients / Partner / Referenzen
+    if (
+      path === "/clients" ||
+      path === "/kunden" ||
+      path === "/partners" ||
+      path === "/partner" ||
+      path === "/referenzen" ||
+      path === "/auftraggeber"
+    ) {
       setIsClientsPage(true);
       setIsSiteVisitsPage(false);
       setIsAboutPage(false);
@@ -76,85 +109,145 @@ export function App() {
       setIsProjectsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/research" || pathname === "/research/") {
+    // 3. Research / Forschung & Lehre
+    if (
+      path === "/research" ||
+      path === "/forschung" ||
+      path === "/lehre" ||
+      path === "/thesen" ||
+      path === "/publikationen"
+    ) {
       setIsResearchPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
       setIsBlogPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/about" || pathname === "/about/" || pathname === "/team" || pathname === "/team/") {
+    // 4. About / Team / Über uns / Büro
+    if (
+      path === "/about" ||
+      path === "/team" ||
+      path === "/über-uns" ||
+      path === "/ueber-uns" ||
+      path === "/uber-uns" ||
+      path === "/wir-ueber-uns" ||
+      path === "/buero" ||
+      path === "/büro" ||
+      path === "/profil" ||
+      path === "/agentur"
+    ) {
       setIsAboutPage(true);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/founder" || pathname === "/founder/") {
+    // 5. Founder / Inhaber / Vita
+    if (
+      path === "/founder" ||
+      path === "/gruender" ||
+      path === "/gründer" ||
+      path === "/inhaber" ||
+      path === "/vita" ||
+      path === "/architekt"
+    ) {
       setIsFounderPage(true);
       setIsAboutPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/projects" || pathname === "/projects/") {
+    // 6. Projects Overview
+    if (
+      path === "/projects" ||
+      path === "/projekte" ||
+      path === "/portfolio" ||
+      path === "/bauten" ||
+      path === "/arbeiten"
+    ) {
       setIsProjectsPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsClientsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname === "/blog" || pathname === "/blog/") {
+    // 7. Blog Overview
+    if (
+      path === "/blog" ||
+      path === "/magazin" ||
+      path === "/news" ||
+      path === "/aktuelles" ||
+      path === "/artikel" ||
+      path === "/beitraege"
+    ) {
       setIsBlogPage(true);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
       setIsResearchPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
+      setActiveLegalPage(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    if (pathname.startsWith("/blog/")) {
-      const slug = pathname.replace(/^\/blog\//, "").replace(/\/$/, "");
+    // 8. Blog Detail
+    if (
+      path.startsWith("/blog/") ||
+      path.startsWith("/magazin/") ||
+      path.startsWith("/news/") ||
+      path.startsWith("/artikel/")
+    ) {
+      const slug = path.replace(/^\/(blog|magazin|news|artikel)\//, "").replace(/\/$/, "");
       const found = getBlogPostBySlug(slug);
       if (found) {
         setActiveBlogPost(found);
@@ -164,15 +257,22 @@ export function App() {
         setIsFounderPage(false);
         setIsClientsPage(false);
         setIsResearchPage(false);
+        setIsNotFound(false);
         setActiveCaseStudy(null);
         setActiveProject(null);
+        setActiveLegalPage(null);
         window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
     }
 
-    if (pathname.startsWith("/project/")) {
-      const id = pathname.replace(/^\/project\//, "").replace(/\/$/, "");
+    // 9. Project Detail
+    if (
+      path.startsWith("/project/") ||
+      path.startsWith("/projekt/") ||
+      path.startsWith("/projekte/")
+    ) {
+      const id = path.replace(/^\/(project|projekt|projekte)\//, "").replace(/\/$/, "");
       const found = projects.find((p) => p.id === id || p.slug === id);
       if (found) {
         setActiveProject(found);
@@ -182,15 +282,22 @@ export function App() {
         setIsClientsPage(false);
         setIsBlogPage(false);
         setIsResearchPage(false);
+        setIsNotFound(false);
         setActiveCaseStudy(null);
         setActiveBlogPost(null);
+        setActiveLegalPage(null);
         window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
     }
 
-    if (pathname.startsWith("/case-study/")) {
-      const id = pathname.replace(/^\/case-study\//, "").replace(/\/$/, "");
+    // 10. Case Study Detail
+    if (
+      path.startsWith("/case-study/") ||
+      path.startsWith("/fallstudie/") ||
+      path.startsWith("/referenz/")
+    ) {
+      const id = path.replace(/^\/(case-study|fallstudie|referenz)\//, "").replace(/\/$/, "");
       const found = caseStudies.find((c) => c.id === id);
       if (found) {
         setActiveCaseStudy(found);
@@ -200,20 +307,26 @@ export function App() {
         setIsClientsPage(false);
         setIsBlogPage(false);
         setIsResearchPage(false);
+        setIsNotFound(false);
         setActiveProject(null);
         setActiveBlogPost(null);
+        setActiveLegalPage(null);
         window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
     }
 
-    if (pathname === "/impressum" || pathname === "/impressum/") {
+    // 11. Legal Pages
+    if (path === "/impressum" || path === "/imprint") {
       setActiveLegalPage("impressum");
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
@@ -221,13 +334,21 @@ export function App() {
       return;
     }
 
-    if (pathname === "/datenschutz" || pathname === "/datenschutz/") {
+    if (
+      path === "/datenschutz" ||
+      path === "/privacy" ||
+      path === "/datenschutzerklaerung" ||
+      path === "/datenschutzerklärung"
+    ) {
       setActiveLegalPage("datenschutz");
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
@@ -235,13 +356,16 @@ export function App() {
       return;
     }
 
-    if (pathname === "/barrierefreiheit" || pathname === "/barrierefreiheit/") {
+    if (path === "/barrierefreiheit" || path === "/accessibility") {
       setActiveLegalPage("barrierefreiheit");
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
@@ -249,13 +373,16 @@ export function App() {
       return;
     }
 
-    if (pathname === "/widerruf" || pathname === "/widerruf/") {
+    if (path === "/widerruf" || path === "/widerrufsbelehrung") {
       setActiveLegalPage("widerruf");
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
       setIsBlogPage(false);
       setIsResearchPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsNotFound(false);
       setActiveProject(null);
       setActiveCaseStudy(null);
       setActiveBlogPost(null);
@@ -263,7 +390,66 @@ export function App() {
       return;
     }
 
-    // Default Home view (/)
+    // 12. Direct Home Shortcuts & Scroll Targets
+    if (path === "/kontakt" || path === "/contact" || path === "/beratung" || path === "/termin") {
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveBlogPost(null);
+      setActiveCaseStudy(null);
+      setActiveLegalPage(null);
+      setTimeout(() => {
+        const el = document.getElementById("contact");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      return;
+    }
+
+    if (path === "/services" || path === "/leistungen" || path === "/hoai") {
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveBlogPost(null);
+      setActiveCaseStudy(null);
+      setActiveLegalPage(null);
+      setTimeout(() => {
+        const el = document.getElementById("services");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      return;
+    }
+
+    // 13. Default Home view
+    if (path === "" || path === "/" || path === "/home" || path === "/index.html" || path === "/start") {
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveBlogPost(null);
+      setActiveCaseStudy(null);
+      setActiveLegalPage(null);
+      return;
+    }
+
+    // 14. Unknown Path -> Graceful 404
+    setIsNotFound(true);
     setIsAboutPage(false);
     setIsFounderPage(false);
     setIsProjectsPage(false);
@@ -275,6 +461,7 @@ export function App() {
     setActiveBlogPost(null);
     setActiveCaseStudy(null);
     setActiveLegalPage(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   useEffect(() => {
@@ -371,6 +558,7 @@ export function App() {
           /* Dedicated Clients & Project Partners Page */
           <ClientsPage
             t={t.clients}
+            language={language}
             onBack={handleBackToHome}
             onNavigateSiteVisits={() => navigateTo("/site-visits")}
             onBookConsultation={handleBookConsultation}
@@ -453,6 +641,16 @@ export function App() {
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
           />
+        ) : isNotFound ? (
+          /* Graceful 404 Not Found Fallback */
+          <NotFoundPage
+            t={t.notFound}
+            requestedPath={requestedPath}
+            onNavigateHome={handleBackToHome}
+            onNavigateProjects={() => navigateTo("/projects")}
+            onNavigateAbout={() => navigateTo("/about")}
+            onBookConsultation={handleBookConsultation}
+          />
         ) : (
           /* Full Homepage */
           <>
@@ -480,6 +678,7 @@ export function App() {
             <div id="clients">
               <ClientsMovingSection
                 t={t.clients}
+                language={language}
                 onNavigateClients={() => navigateTo("/clients")}
               />
             </div>

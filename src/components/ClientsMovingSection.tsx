@@ -1,13 +1,15 @@
-import { Translations } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 import { partnersData } from "../lib/partners";
 
 interface ClientsMovingSectionProps {
   t: Translations["clients"];
+  language?: Language;
   onNavigateClients?: () => void;
 }
 
 export function ClientsMovingSection({
   t,
+  language = "de",
   onNavigateClients,
 }: ClientsMovingSectionProps) {
   const handleClientsClick = (e: React.MouseEvent) => {
@@ -55,7 +57,7 @@ export function ClientsMovingSection({
               key={`${partner.id}-${idx}`}
               href="/clients"
               onClick={handleClientsClick}
-              title={`${partner.name} – ${partner.tagline}`}
+              title={`${partner.name} – ${partner.tagline[language]}`}
               className="flex items-center justify-center h-16 sm:h-20 w-44 sm:w-52 px-5 py-3 rounded-xl bg-white border border-zinc-200/90 hover:border-zinc-400 transition-all duration-300 shrink-0 shadow-xs hover:shadow-md group cursor-pointer"
             >
               <img

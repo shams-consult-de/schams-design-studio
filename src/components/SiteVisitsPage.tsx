@@ -124,7 +124,7 @@ export function SiteVisitsPage({
 
                 <div className="pt-3 border-t border-zinc-100 flex items-center justify-between">
                   <span className="text-[11px] font-mono text-zinc-400">
-                    Foto-Nachweis 0{idx + 1} / 0{t.items.length}
+                    {t.photoRecordLabel} 0{idx + 1} / 0{t.items.length}
                   </span>
                   <button
                     type="button"
@@ -215,7 +215,7 @@ export function SiteVisitsPage({
                   }
                   className="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors cursor-pointer"
                 >
-                  ← Vorheriges
+                  {t.prev}
                 </button>
                 <button
                   type="button"
@@ -224,7 +224,7 @@ export function SiteVisitsPage({
                   }
                   className="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors cursor-pointer"
                 >
-                  Nächstes →
+                  {t.next}
                 </button>
               </div>
             </div>

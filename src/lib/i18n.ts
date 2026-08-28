@@ -81,6 +81,8 @@ export interface Translations {
     siteVisit1Desc: string;
     siteVisit2Title: string;
     siteVisit2Desc: string;
+    viewAllSiteVisits: string;
+    pressBadge: string;
   };
   services: {
     badge: string;
@@ -243,6 +245,9 @@ export interface Translations {
     viewHighRes: string;
     viewAlbum: string;
     closeLightbox: string;
+    photoRecordLabel: string;
+    prev: string;
+    next: string;
     ctaTitle: string;
     ctaSubtitle: string;
     ctaButton: string;
@@ -341,6 +346,17 @@ export interface Translations {
     developedBy: string;
     rights: string;
   };
+  notFound: {
+    badge: string;
+    title: string;
+    message: string;
+    requestedPathLabel: string;
+    backHome: string;
+    exploreProjects: string;
+    aboutUs: string;
+    contactUs: string;
+    needAssistance: string;
+  };
 }
 
 export const content: Record<Language, Translations> = {
@@ -436,6 +452,8 @@ export const content: Record<Language, Translations> = {
       siteVisit2Title: "Präzises Bauaufmaß & Technische Vermessung",
       siteVisit2Desc:
         "Exakte digitale und manuelle Erfassung der Bausubstanz als rechtssichere Planungsgrundlage für HOAI Phasen 1–4.",
+      viewAllSiteVisits: "Vollständige Vor-Ort-Fotodokumentation & Baustelleneinblicke ansehen",
+      pressBadge: "Pressebericht",
     },
     services: {
       badge: "Unsere Leistungen",
@@ -645,6 +663,9 @@ export const content: Record<Language, Translations> = {
       viewHighRes: "Originalbild vergrößern",
       viewAlbum: "Fotodokumentation & Album ansehen",
       closeLightbox: "Schließen",
+      photoRecordLabel: "Foto-Nachweis",
+      prev: "← Vorheriges",
+      next: "Nächstes →",
       ctaTitle: "Planen Sie ein Bauvorhaben vor Ort?",
       ctaSubtitle:
         "Gerne besichtigen wir Ihr Grundstück oder Bestandsgebäude persönlich für ein fundiertes Aufmaß und die baurechtliche Ersteinschätzung.",
@@ -705,6 +726,22 @@ export const content: Record<Language, Translations> = {
           phase: "HOAI Phase 8: Bauüberwachung & VOB",
           title: "Baustellenbegehung mit Sicherheitsausrüstung",
           desc: "Qualitäts- und Sicherheitskontrolle vor Ort mit Warnweste und Schutzhelm: Bautechnische Prüfung der Hallenzugänge und Lagerräume.",
+        },
+        {
+          id: "ground-measurement",
+          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.jpg",
+          tag: "Außenanlagen & Erdarbeiten",
+          phase: "HOAI Phase 8: Bauüberwachung",
+          title: "Präzise Höhenkontrolle & Vermessung der Hofflächen",
+          desc: "Dipl.-Ing. Majeed Shams bei der lasergenauen Gefälle- und Höhenprüfung neu asphaltierter Hof- und Garagenzufahrten direkt vor Ort mit dem Ausführenden.",
+        },
+        {
+          id: "site-coordination-residential",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.jpg",
+          tag: "Wohnungsbau & Koordination",
+          phase: "HOAI Phase 8: Objektüberwachung",
+          title: "Baustellenkoordination & Bauherrenabstimmung im Wohnungsbau",
+          desc: "Direkte Abstimmung der Ausführungsdetails und Erdbaumaßnahmen vor dem Mehrfamilienhaus mit dem Bauherrn und den Erdbau-Teams vor Ort.",
         },
       ],
     },
@@ -799,6 +836,18 @@ export const content: Record<Language, Translations> = {
       developedBy: "Mit ❤️ in Deutschland entwickelt von",
       rights: "Alle Rechte vorbehalten.",
     },
+    notFound: {
+      badge: "404 Fehler",
+      title: "Seite nicht gefunden",
+      message:
+        "Die von Ihnen aufgerufene Seite existiert leider nicht oder wurde im Rahmen unserer Neugestaltung verschoben.",
+      requestedPathLabel: "Aufgerufener Pfad:",
+      backHome: "Zur Startseite",
+      exploreProjects: "Projekte ansehen",
+      aboutUs: "Über Shams Consult",
+      contactUs: "Kontakt & Beratung",
+      needAssistance: "Haben Sie Fragen oder suchen Sie ein bestimmtes Projekt? Wir helfen Ihnen gerne weiter.",
+    },
   },
   en: {
     nav: {
@@ -892,6 +941,8 @@ export const content: Record<Language, Translations> = {
       siteVisit2Title: "Accurate Building Survey & On-Site Measurement",
       siteVisit2Desc:
         "Exact digital and manual survey of existing structures, establishing a reliable technical foundation for HOAI phases 1–4.",
+      viewAllSiteVisits: "View Full On-Site Photo Documentation & Project Records",
+      pressBadge: "Press Article",
     },
     services: {
       badge: "Our Services",
@@ -1101,6 +1152,9 @@ export const content: Record<Language, Translations> = {
       viewHighRes: "View Full Resolution",
       viewAlbum: "View Photo Documentation & Album",
       closeLightbox: "Close",
+      photoRecordLabel: "Photo Record",
+      prev: "← Previous",
+      next: "Next →",
       ctaTitle: "Planning an On-Site Project or Development?",
       ctaSubtitle:
         "We are pleased to survey your plot or building in person for accurate measurements and early zoning appraisals.",
@@ -1161,6 +1215,22 @@ export const content: Record<Language, Translations> = {
           phase: "HOAI Phase 8: Site Supervision & VOB",
           title: "On-Site Inspection with Safety Equipment",
           desc: "On-site quality and safety control with high-vis vest and helmet: technical inspection of facility access and storage areas.",
+        },
+        {
+          id: "ground-measurement",
+          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.jpg",
+          tag: "Site Works & Paving",
+          phase: "HOAI Phase 8: Site Supervision",
+          title: "Precision Level Inspection & Courtyard Paving Survey",
+          desc: "Dipl.-Ing. Majeed Shams conducting on-site elevation and slope checks for newly asphalted access ways with the site contractor.",
+        },
+        {
+          id: "site-coordination-residential",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.jpg",
+          tag: "Residential Coordination",
+          phase: "HOAI Phase 8: Site Supervision",
+          title: "On-Site Construction Coordination for Housing Complex",
+          desc: "Direct technical coordination of construction sequencing and earthworks on-site in front of the multi-family apartment building.",
         },
       ],
     },
@@ -1254,6 +1324,18 @@ export const content: Record<Language, Translations> = {
       legalWiderruf: "Withdrawal",
       developedBy: "Developed with ❤️ in Germany by",
       rights: "All rights reserved.",
+    },
+    notFound: {
+      badge: "404 Error",
+      title: "Page Not Found",
+      message:
+        "The page you requested does not exist or may have been moved as part of our recent website update.",
+      requestedPathLabel: "Requested URL path:",
+      backHome: "Back to Home",
+      exploreProjects: "Explore Projects",
+      aboutUs: "About Shams Consult",
+      contactUs: "Contact & Consultation",
+      needAssistance: "Have questions or looking for a specific project? We are happy to assist you.",
     },
   },
 };
