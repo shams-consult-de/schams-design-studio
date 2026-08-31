@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Icon } from "./icon";
 import { CONTACT } from "../lib/contact";
 import { Language } from "../lib/i18n";
+import { openCookieSettings } from "../lib/analytics";
 
 export type LegalModalType = "impressum" | "datenschutz" | "barrierefreiheit" | "widerruf" | null;
 
@@ -211,7 +212,52 @@ export function LegalModal({ type, language = "de", onClose }: LegalModalProps) 
 
               <div>
                 <h4 className="font-bold text-zinc-900 text-base mb-1">
-                  {isDe ? "5. Ihre gesetzlichen Betroffenenrechte" : "5. Your Statutory Rights"}
+                  {isDe ? "5. Cookies & Einwilligungsmanagement" : "5. Cookies & Consent Management"}
+                </h4>
+                <p>
+                  {isDe
+                    ? "Unsere Website verwendet Cookies. Technisch notwendige Cookies gewährleisten Basisfunktionen der Website. Optionale Analyse-Cookies werden ausschließlich nach Ihrer vorherigen ausdrücklichen Einwilligung (Opt-In gemäß § 25 Abs. 1 TDDDG i. V. m. Art. 6 Abs. 1 lit. a DSGVO) aktiviert."
+                    : "Our website uses cookies. Strictly necessary cookies ensure essential website operations. Optional analytics cookies are only activated upon your explicit prior consent (Opt-In pursuant to § 25 para. 1 TDDDG and Art. 6 para. 1 lit. a GDPR)."}
+                </p>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onClose();
+                      openCookieSettings();
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold border border-zinc-300 transition-colors cursor-pointer"
+                  >
+                    <Icon name="shield-check" className="text-[#DC2626]" />
+                    <span>{isDe ? "Cookie-Einstellungen anpassen" : "Adjust Cookie Settings"}</span>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-zinc-900 text-base mb-1">
+                  {isDe ? "6. Webanalyse mit Google Analytics 4" : "6. Web Analytics with Google Analytics 4"}
+                </h4>
+                <p>
+                  {isDe
+                    ? "Diese Website nutzt bei erteilter Einwilligung Google Analytics 4 (Mess-ID: G-X68PRZMTEE), einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland."
+                    : "Subject to prior consent, this website utilizes Google Analytics 4 (Measurement ID: G-X68PRZMTEE), a web analytics service by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland."}
+                </p>
+                <p className="mt-1">
+                  {isDe
+                    ? "Google Analytics 4 arbeitet standardmäßig mit aktivierter IP-Anonymisierung. Die Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Datenübertragungen in die USA sind über die EU-Standardvertragsklauseln sowie das EU-US Data Privacy Framework abgesichert."
+                    : "Google Analytics 4 operates with automated IP anonymization. The legal basis is your explicit consent (Art. 6 para. 1 lit. a GDPR, § 25 para. 1 TDDDG). Data transfers to the USA are safeguarded by EU Standard Contractual Clauses and the EU-US Data Privacy Framework."}
+                </p>
+                <p className="mt-1 text-zinc-500">
+                  {isDe
+                    ? "Sie können Ihre Einwilligung jederzeit widerrufen oder das Google Browser-Add-on zur Deaktivierung installieren: https://tools.google.com/dlpage/gaoptout"
+                    : "You can revoke your consent at any time or install the Google opt-out browser add-on: https://tools.google.com/dlpage/gaoptout"}
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-zinc-900 text-base mb-1">
+                  {isDe ? "7. Ihre gesetzlichen Betroffenenrechte" : "7. Your Statutory Rights"}
                 </h4>
                 <p>
                   {isDe

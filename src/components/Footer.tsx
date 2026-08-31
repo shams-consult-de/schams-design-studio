@@ -2,6 +2,7 @@ import { MouseEvent } from "react";
 import { Icon } from "./icon";
 import { CONTACT } from "../lib/contact";
 import { Translations } from "../lib/i18n";
+import { openCookieSettings } from "../lib/analytics";
 
 interface FooterProps {
   t: Translations["footer"];
@@ -172,6 +173,14 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
             >
               {t.legalWiderruf}
             </a>
+            <span>•</span>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-white underline transition-colors cursor-pointer"
+            >
+              {t.cookieSettings}
+            </button>
           </div>
         </div>
       </div>

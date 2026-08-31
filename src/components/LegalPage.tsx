@@ -1,6 +1,7 @@
 import { CONTACT } from "../lib/contact";
 import { Language } from "../lib/i18n";
 import { Icon } from "./icon";
+import { openCookieSettings } from "../lib/analytics";
 
 export type LegalPageType = "impressum" | "datenschutz" | "barrierefreiheit" | "widerruf";
 
@@ -206,7 +207,49 @@ export function LegalPage({ type, language = "de", onNavigateHome }: LegalPagePr
 
               <section className="space-y-2 border-t border-white/10 pt-6">
                 <h2 className="font-bold text-white text-base sm:text-lg">
-                  {isDe ? "5. Ihre gesetzlichen Betroffenenrechte" : "5. Your Statutory Rights"}
+                  {isDe ? "5. Cookies & Einwilligungsmanagement" : "5. Cookies & Consent Management"}
+                </h2>
+                <p>
+                  {isDe
+                    ? "Unsere Website verwendet Cookies. Technisch notwendige Cookies gewährleisten fundamentale Funktionen wie Seitennavigation und die Speicherung Ihrer Datenschutzauswahl. Optionale Cookies zu Analyse- und Statistikzwecken werden nur nach Ihrer ausdrücklichen Einwilligung (Opt-In gemäß § 25 Abs. 1 TDDDG i. V. m. Art. 6 Abs. 1 lit. a DSGVO) gesetzt."
+                    : "Our website uses cookies. Strictly necessary cookies enable core features such as page navigation and storage of your privacy choices. Optional analytics cookies are only set after your explicit consent (Opt-In pursuant to § 25 para. 1 TDDDG and Art. 6 para. 1 lit. a GDPR)."}
+                </p>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={openCookieSettings}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/15 transition-all cursor-pointer"
+                  >
+                    <Icon name="shield-check" className="text-[#DC2626]" />
+                    <span>{isDe ? "Cookie-Einstellungen anpassen" : "Adjust Cookie Settings"}</span>
+                  </button>
+                </div>
+              </section>
+
+              <section className="space-y-2 border-t border-white/10 pt-6">
+                <h2 className="font-bold text-white text-base sm:text-lg">
+                  {isDe ? "6. Webanalyse mit Google Analytics 4" : "6. Web Analytics with Google Analytics 4"}
+                </h2>
+                <p>
+                  {isDe
+                    ? "Diese Website nutzt bei erteilter Einwilligung Funktionen des Webanalysedienstes Google Analytics 4 (Mess-ID: G-X68PRZMTEE). Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland."
+                    : "Subject to your prior consent, this website uses Google Analytics 4 (Measurement ID: G-X68PRZMTEE), provided by Google Ireland Limited ('Google'), Gordon House, Barrow Street, Dublin 4, Ireland."}
+                </p>
+                <p>
+                  {isDe
+                    ? "Google Analytics verwendet Cookies, die eine pseudonymisierte Analyse der Benutzung der Website ermöglichen. Die IP-Anonymisierung ist in Google Analytics 4 standardmäßig aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU gekürzt wird. Die Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG). Die Datenübertragung in die USA stützt sich auf die Standardvertragsklauseln der EU-Kommission sowie das EU-US Data Privacy Framework."
+                    : "Google Analytics uses cookies enabling pseudonymized analysis of website traffic. IP anonymization is permanently activated by default in GA4, ensuring your IP address is truncated within the EU. The legal basis is your explicit consent (Art. 6 para. 1 lit. a GDPR and § 25 para. 1 TDDDG). Data transfers to the USA rely on EU Standard Contractual Clauses and the EU-US Data Privacy Framework."}
+                </p>
+                <p className="text-zinc-400">
+                  {isDe
+                    ? "Sie können Ihre Einwilligung jederzeit über unsere Cookie-Einstellungen oder über das offizielle Google Browser-Add-on zur Deaktivierung von Google Analytics (https://tools.google.com/dlpage/gaoptout) widerrufen."
+                    : "You can revoke your consent at any time via our Cookie Settings or by installing the Google Analytics opt-out browser add-on (https://tools.google.com/dlpage/gaoptout)."}
+                </p>
+              </section>
+
+              <section className="space-y-2 border-t border-white/10 pt-6">
+                <h2 className="font-bold text-white text-base sm:text-lg">
+                  {isDe ? "7. Ihre gesetzlichen Betroffenenrechte" : "7. Your Statutory Rights"}
                 </h2>
                 <p>
                   {isDe

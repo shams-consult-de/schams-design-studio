@@ -29,10 +29,12 @@ import { Footer } from "./components/Footer";
 import { LegalModal, LegalModalType } from "./components/LegalModal";
 import { LegalPage, LegalPageType } from "./components/LegalPage";
 import { NotFoundPage } from "./components/NotFoundPage";
+import { CookieBanner } from "./components/CookieBanner";
 import { Language, content } from "./lib/i18n";
 import { caseStudies, CaseStudy } from "./data/caseStudies";
 import { projects, Project } from "./data/projects";
 import { BlogPost, getBlogPostBySlug } from "./data/blog";
+import { initGA4, getConsent, trackPageView } from "./lib/analytics";
 
 export function App() {
   const [language, setLanguage] = useState<Language>("de");
@@ -68,6 +70,7 @@ export function App() {
     }
 
     setRequestedPath(rawPath);
+    trackPageView(rawPath);
 
     // 1. Site visits / Album / Baustelleneinblicke
     if (
@@ -465,6 +468,9 @@ export function App() {
   }, []);
 
   useEffect(() => {
+    if (getConsent() === "all") {
+      initGA4();
+    }
     syncRoute();
     window.addEventListener("popstate", syncRoute);
     return () => window.removeEventListener("popstate", syncRoute);
@@ -760,6 +766,13 @@ export function App() {
         t={t.mobileActionBar}
         contactT={t.contact}
         onBookConsultation={handleBookConsultation}
+      />
+
+      {/* 12. GDPR & TDDDG Compliant Cookie Banner */}
+      <CookieBanner
+        language={language}
+        onOpenPrivacy={() => navigateTo("/datenschutz")}
+        onOpenImpressum={() => navigateTo("/impressum")}
       />
     </div>
   );
