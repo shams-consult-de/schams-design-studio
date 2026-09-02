@@ -39,6 +39,67 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "rechenzentrum-bebra-nachhaltigkeit-artenschutz",
+    category: {
+      de: "Nachhaltiges Bauen",
+      en: "Sustainable Construction",
+    },
+    date: {
+      de: "1. September 2026",
+      en: "September 1, 2026",
+    },
+    isoDate: "2026-09-01",
+    readTime: {
+      de: "3 Min. Lesezeit",
+      en: "3 min read",
+    },
+    title: {
+      de: "Digitale Zukunft im Einklang mit Mensch & Natur: Das Rechenzentrum Bebra",
+      en: "Digital Future in Harmony with Nature: The Bebra Data Center",
+    },
+    excerpt: {
+      de: "Wie zukunftssichere Infrastruktur aussieht: Abwärmenutzung für Gewächshäuser, CO₂-neutrale Energiekonzepte und lokaler Artenschutz im direkten Dialog mit der Betreiberseite.",
+      en: "Future-proof infrastructure in action: Greenhouse waste-heat recovery, carbon-neutral energy concepts, and local wildlife protection in direct operator dialogue.",
+    },
+    image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+    imageAlt: {
+      de: "Fachabstimmung in den Räumen von Shams Consult zwischen Dipl.-Ing. Majeed Shams und Dipl.-Ing. Eigenbrodt zum nachhaltigen Rechenzentrum Bebra.",
+      en: "Technical consultation at Shams Consult offices between Dipl.-Ing. Majeed Shams and Dipl.-Ing. Eigenbrodt regarding the sustainable Bebra data center.",
+    },
+    body: {
+      de: `Das neue Rechenzentrum in Bebra zeigt eindrucksvoll, wie zukunftssichere und verantwortungsvolle Infrastruktur heute gedacht und realisiert werden muss: Mit intelligenter Abwärmenutzung für angrenzende Gewächshäuser, CO₂-neutralen Energiekonzepten und einem ganzheitlichen architektonischen Ansatz.
+
+Technologischer Fortschritt und Umwelt- bzw. Tierschutz müssen kein Widerspruch sein – im Gegenteil: Sie bedingen einander, wenn moderne Großprojekte von Beginn an sorgfältig und vorausschauend geplant werden.
+
+## Produktive Abstimmung in den Räumen von Shams Consult
+
+In einem intensiven und partnerschaftlichen Arbeitsgespräch in den Räumlichkeiten von Shams Consult haben wir uns gemeinsam mit **Dipl.-Ing. Eigenbrodt** – in seiner Rolle als Vertreter der Betreiber- bzw. Kundenseite – vertiefend mit den architektonischen und städtebaulichen Details des Vorhabens auseinandergesetzt.
+
+### Schwerpunkte des Fachdialogs:
+- **Intelligente Sektorenkopplung:** Nachhaltige Nutzung der Server-Abwärme zur Beheizung landwirtschaftlicher Gewächshausanlagen.
+- **CO₂-neutrale Energiekonzepte:** Maximierung von Energieeffizienz und Eigenstromversorgung.
+- **Konsequenter Artenschutz:** Wie sichern wir den Schutz und Lebensraum der lokalen Tierwelt sowohl während der Bauphase als auch im dauerhaften Betrieb?
+- **Architektonische Einbindung:** Harmonische landschaftliche und städtebauliche Integration des Baukörpers.
+
+Vielen Dank an Herrn Dipl.-Ing. Eigenbrodt für den großartigen fachlichen Austausch und das gemeinsame Engagement für ein wegweisendes, nachhaltiges Bauprojekt!`,
+      en: `The new data center in Bebra demonstrates what future-proof and ecologically responsible digital infrastructure looks like: utilizing server waste heat for adjacent commercial greenhouses, implementing carbon-neutral energy concepts, and applying a holistic architectural methodology.
+
+Technological progress, environmental protection, and wildlife preservation do not have to be contradictory—on the contrary, they complement each other when major modern developments are planned rigorously from day one.
+
+## Productive Alignment at Shams Consult Offices
+
+During an intensive technical session at the offices of Shams Consult, we met with **Dipl.-Ing. Eigenbrodt**—representing the operator and client side—to deeply examine the architectural, statutory, and urban design parameters of the development.
+
+### Core Topics of the Technical Consultation:
+- **Smart Sector Coupling:** Sustainable redirection of server waste heat to supply local agricultural greenhouses.
+- **Carbon-Neutral Energy Architecture:** Optimizing thermal efficiency, insulation, and on-site clean energy.
+- **Active Wildlife Conservation:** How to guarantee the protection and habitats of local fauna during both the construction phase and subsequent continuous operation.
+- **Urban & Landscape Integration:** Seamless aesthetic embedding of high-tech infrastructure into its natural surroundings.
+
+Our sincere thanks go to Mr. Eigenbrodt for the exceptional expert exchange and the shared commitment to delivering a truly sustainable landmark project!`,
+    },
+  },
+  {
     slug: "reduktion-in-der-architektur",
     category: {
       de: "Design und Ästhetik",

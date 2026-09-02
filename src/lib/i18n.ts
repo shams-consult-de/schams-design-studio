@@ -673,6 +673,14 @@ export const content: Record<Language, Translations> = {
       ctaButton: "Vor-Ort-Termin vereinbaren →",
       items: [
         {
+          id: "datacenter-bebra-ecology",
+          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+          tag: "Rechenzentrum & Ökologie",
+          phase: "HOAI Phase 1–3: Nachhaltigkeitskonzept & Artenschutz",
+          title: "Fachabstimmung Rechenzentrum Bebra: Artenschutz & Abwärmenutzung",
+          desc: "Gemeinsame Detailabstimmung in den Räumen von Shams Consult mit Dipl.-Ing. Eigenbrodt (Betreiber-/Kundenseite): Architektonische Detailplanung, Abwärmenutzung für Gewächshäuser und Schutz der lokalen Tierwelt.",
+        },
+        {
           id: "residential-excavation",
           image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
           tag: "Wohnungsbau",
@@ -1162,6 +1170,14 @@ export const content: Record<Language, Translations> = {
         "We are pleased to survey your plot or building in person for accurate measurements and early zoning appraisals.",
       ctaButton: "Schedule On-Site Consultation →",
       items: [
+        {
+          id: "datacenter-bebra-ecology",
+          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+          tag: "Data Center & Ecology",
+          phase: "HOAI Phase 1–3: Sustainability & Wildlife Protection",
+          title: "Data Center Bebra Consultation: Wildlife Protection & Heat Recovery",
+          desc: "In-depth technical consultation at Shams Consult offices with Dipl.-Ing. Eigenbrodt (client & operator representative): Architectural detailing, greenhouse waste-heat recovery, and local wildlife conservation.",
+        },
         {
           id: "residential-excavation",
           image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
