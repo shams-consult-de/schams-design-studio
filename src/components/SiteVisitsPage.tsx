@@ -76,9 +76,7 @@ export function SiteVisitsPage({
           {t.items.map((item, idx) => (
             <div
               key={item.id}
-              className={`bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${
-                idx === 0 ? "md:col-span-2" : ""
-              }`}
+              className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               {/* Photo Container */}
               <div
