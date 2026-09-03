@@ -59,11 +59,13 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ArchitecturalService",
-        "name": "Shams Consult - Architektur und Stadtplanung",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://shams-consult.de/#localbusiness",
+        "name": "Shams Consult — Architektur & Stadtplanung",
         "alternateName": "Architekturbüro Shams Consult",
+        "description": "Staatlich anerkanntes Planungsbüro für Architektur, Baugenehmigungen, Hochbau und Stadtplanung in Frankfurt am Main & Rhein-Main. AKH Hessen Mitglied Nr. 21886.",
         "image": "https://shams-consult.de/images/stadtvilla_mfa_roedermark.jpg",
-        "logo": "https://shams-consult.de/images/logo.webp",
+        "logo": "https://shams-consult.de/logo.png",
         "telephone": "+4969742237770",
         "email": "office@shams-consult.de",
         "url": "https://shams-consult.de",
@@ -77,22 +79,76 @@
             "name": "Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)"
           }
         },
-        "address": [
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carl-von-Noorden-Platz 5",
+          "addressLocality": "Frankfurt am Main",
+          "postalCode": "60596",
+          "addressRegion": "Hessen",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.0967,
+          "longitude": 8.6757
+        },
+        "openingHours": [
+          "Mo-Fr 08:30-18:00"
+        ],
+        "openingHoursSpecification": [
           {
-            "@type": "PostalAddress",
-            "streetAddress": "Carl-von-Noorden-Platz 5",
-            "addressLocality": "Frankfurt am Main",
-            "postalCode": "60596",
-            "addressCountry": "DE"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Carl-Zeiss-Str. 43",
-            "addressLocality": "Rödermark",
-            "postalCode": "63322",
-            "addressCountry": "DE"
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:30",
+            "closes": "18:00"
           }
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Architektur- & Stadtplanungsleistungen",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Architektur & Hochbau (HOAI LPH 1–9)",
+                "description": "Ganzheitliche Gebäudeplanung, Entwurfs- und Ausführungsplanung für Wohn- und Gewerbebau in Frankfurt und Hessen."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Baugenehmigungen & Bauantragsservice",
+                "description": "Rechtssichere Bauanträge, Bauvoranfragen und zügige Genehmigungsverfahren nach HBO mit uneingeschränkter Bauvorlageberechtigung."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Stadt- & Bauleitplanung",
+                "description": "Erstellung rechtssicherer Bebauungspläne, städtebaulicher Machbarkeitsstudien und Flächennutzungsanalysen im Rhein-Main-Gebiet."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Projektentwicklung & Machbarkeitsstudien",
+                "description": "Strategische Baurechts-, Kosten- und Flächenpotenzialprüfungen zur Risikominimierung vor Grundstücksinvestitionen."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Baurechtliche Due Diligence & Bestandsbewertung",
+                "description": "Prüfung von Baurecht, Denkmalschutzauflagen, Umnutzungspotenzialen und Bausubstanz für Investoren und Bauherren."
+              }
+            }
+          ]
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
@@ -107,6 +163,29 @@
           "Rödermark",
           "Dreieich",
           "Hessen"
+        ],
+        "department": [
+          {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "name": "Shams Consult — Planungsbüro Rödermark",
+            "telephone": "+49607423987820",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Carl-Zeiss-Str. 43",
+              "addressLocality": "Rödermark",
+              "postalCode": "63322",
+              "addressRegion": "Hessen",
+              "addressCountry": "DE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 50.0028,
+              "longitude": 8.8286
+            },
+            "openingHours": [
+              "Mo-Fr 08:30-18:00"
+            ]
+          }
         ]
       }
     </script>
