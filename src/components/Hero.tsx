@@ -14,8 +14,15 @@ export function Hero({
   onNavigateFounder,
 }: HeroProps) {
   return (
-    <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 text-zinc-900 border-b border-zinc-200 overflow-hidden">
+      {/* Background image with fixed attachment and decent opacity */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
+        style={{ backgroundImage: "url('/images/hero-background-bild-4.png')" }}
+      />
+      <div className="absolute inset-0 bg-white/80" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-left">
