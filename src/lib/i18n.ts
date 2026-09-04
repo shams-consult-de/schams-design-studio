@@ -657,7 +657,7 @@ export const content: Record<Language, Translations> = {
     siteVisitsPage: {
       backToHome: "Zurück zur Startseite",
       badge: "VOR-ORT-EINBLICKE & PRAXIS-DOKUMENTATION",
-      title: "Authentische Baustelleneinblicke & Vor-Ort-Nachweise",
+      title: "Baustelleneinblicke & Vor-Ort-Nachweise",
       subtitle:
         "Architektur erfordert echte Vor-Ort-Präsenz. Sehen Sie hier ungestellte Eindrücke aus der täglichen Planungspraxis: von der Bestandsaufnahme bis zur Bauüberwachung nach HOAI.",
       proofNotice: "Unbearbeitete Originalaufnahmen aus laufenden Projekten und Ortsterminen.",
