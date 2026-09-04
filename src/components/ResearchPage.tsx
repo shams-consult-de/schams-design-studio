@@ -262,31 +262,19 @@ export function ResearchPage({
                   )}
                 </div>
 
-                {/* Topics Tag List */}
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-                  <div className="flex flex-wrap gap-1.5">
-                    {item.topics.map((tItem, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="px-2.5 py-0.5 rounded-md bg-zinc-100 text-zinc-600 font-mono text-[10px]"
-                      >
-                        #{tItem}
-                      </span>
-                    ))}
+                  {/* Topics Tag List */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                    <div className="flex flex-wrap gap-1.5">
+                      {item.topics.map((tItem, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="px-2.5 py-0.5 rounded-md bg-zinc-100 text-zinc-600 font-mono text-[10px]"
+                        >
+                          #{tItem}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-
-                  {item.pdfUrl && (
-                    <a
-                      href={item.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors"
-                    >
-                      <span>{t.downloadPdf}</span>
-                      <span>↗</span>
-                    </a>
-                  )}
-                </div>
               </article>
             );
           })}
