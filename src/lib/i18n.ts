@@ -402,7 +402,7 @@ export const content: Record<Language, Translations> = {
       description:
         "Interdisziplinäres Planungs- und Baumanagement-Team aus Architekten, Bauleitern und BIM-Spezialisten unter Leitung von Dipl.-Ing. Majeed Shams.",
       expertCountBadge: "+12",
-      ctaButton: "Team & Gründer kennenlernen",
+      ctaButton: "Fotodokumentation & Album ansehen",
     },
     metrics: {
       yearsExp: { value: "15+", label: "Jahre Erfahrung" },
@@ -662,7 +662,7 @@ export const content: Record<Language, Translations> = {
         "Architektur erfordert echte Vor-Ort-Präsenz. Sehen Sie hier ungestellte Eindrücke aus der täglichen Planungspraxis: von der Bestandsaufnahme bis zur Bauüberwachung nach HOAI.",
       proofNotice: "Unbearbeitete Originalaufnahmen aus laufenden Projekten und Ortsterminen.",
       viewHighRes: "Originalbild vergrößern",
-      viewAlbum: "Fotodokumentation & Album ansehen",
+      viewAlbum: "Team & Gründer kennenlernen",
       closeLightbox: "Schließen",
       photoRecordLabel: "Foto-Nachweis",
       prev: "← Vorheriges",
@@ -900,7 +900,7 @@ export const content: Record<Language, Translations> = {
       description:
         "Interdisciplinary design & construction management team of architects, site supervisors, and BIM specialists led by Dipl.-Ing. Majeed Shams.",
       expertCountBadge: "+12",
-      ctaButton: "Meet Founder & Team",
+      ctaButton: "View Photo Documentation & Album",
     },
     metrics: {
       yearsExp: { value: "15+", label: "Years of Experience" },
@@ -1160,7 +1160,7 @@ export const content: Record<Language, Translations> = {
         "Architecture requires true on-site presence. Explore unedited photographic records from our daily practice—from initial building surveys to HOAI site supervision.",
       proofNotice: "Unedited original field photographs from ongoing building sites and client walkthroughs.",
       viewHighRes: "View Full Resolution",
-      viewAlbum: "View Photo Documentation & Album",
+      viewAlbum: "Meet Founder & Team",
       closeLightbox: "Close",
       photoRecordLabel: "Photo Record",
       prev: "← Previous",
