@@ -17,8 +17,12 @@ export function Hero({
     <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 text-zinc-900 border-b border-zinc-200 overflow-hidden">
       {/* Background image with fixed attachment and decent opacity */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
-        style={{ backgroundImage: "url('/images/hero-background-bild-4.png')" }}
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/images/hero-background-bild-4.png')",
+          opacity: 0.6,
+          filter: "blur(3px)",
+        }}
       />
       <div className="absolute inset-0 bg-white/80" />
 
