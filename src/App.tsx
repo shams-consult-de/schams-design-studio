@@ -697,10 +697,10 @@ export function App() {
             {/* 7. Dedicated Subtle VOB Compliance Section */}
             <VobSection t={t.vob} />
 
-            {/* 8. On-Site Visits & Field Proof Moving Photo Carousel */}
-            <SiteVisitsMovingSection
-              t={t.siteVisitsPage}
-              onNavigateSiteVisits={() => navigateTo("/site-visits")}
+            {/* 8. Team of 16 Architecture Experts (Subtle Authority Section before case studies) */}
+            <TeamSection
+              t={t.team}
+              onNavigateAbout={() => navigateTo("/about")}
             />
 
             {/* 9. Verified 5-Star Google Reviews & Moving Track */}
