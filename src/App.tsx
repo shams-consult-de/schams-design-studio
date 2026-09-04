@@ -668,10 +668,10 @@ export function App() {
               onNavigateFounder={() => navigateTo("/founder")}
             />
 
-            {/* 2. Team of 16 Architecture Experts (Subtle Authority Section immediately under Hero) */}
-            <TeamSection
-              t={t.team}
-              onNavigateAbout={() => navigateTo("/about")}
+            {/* 2. On-Site Visits & Field Proof Moving Photo Carousel */}
+            <SiteVisitsMovingSection
+              t={t.siteVisitsPage}
+              onNavigateSiteVisits={() => navigateTo("/site-visits")}
             />
 
             {/* 3. Metrics Strip */}
