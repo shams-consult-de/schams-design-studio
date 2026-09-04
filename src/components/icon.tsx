@@ -5,7 +5,7 @@ interface IconProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export function Icon({ name, className = "", ...props }: IconProps) {
+export function Icon({ name, className = "" }: IconProps) {
   // Brand icon name list
   const brandIcons = ["linkedin", "linkedin-in", "instagram", "x-twitter", "twitter", "whatsapp", "facebook", "youtube", "github"];
 
