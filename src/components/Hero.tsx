@@ -21,8 +21,8 @@ export function Hero({
         style={{
           backgroundImage: "url('/images/hero-background-bild-4.png')",
           filter: "blur(3px)",
-          maskImage: "linear-gradient(90deg, #000, #0000)",
-          WebkitMaskImage: "linear-gradient(90deg, #000, #0000)",
+          maskImage: "linear-gradient(90deg, #000, #0000004d)",
+          WebkitMaskImage: "linear-gradient(90deg, #000, #0000004d)",
         }}
       />
       <div className="absolute inset-0 bg-white/80" />
