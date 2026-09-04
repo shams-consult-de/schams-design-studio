@@ -20,7 +20,6 @@ export function Hero({
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: "url('/images/hero-background-bild-4.png')",
-          opacity: 0.6,
           filter: "blur(3px)",
         }}
       />
