@@ -94,8 +94,8 @@ export function Header({
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-zinc-200 py-3.5 shadow-sm text-zinc-900"
-          : "bg-white/90 backdrop-blur-xs py-4 text-zinc-900 border-b border-zinc-100"
+          ? "bg-white/75 backdrop-blur-xl border-b border-white/20 py-3.5 shadow-sm text-zinc-900"
+          : "bg-white/60 backdrop-blur-lg py-4 text-zinc-900 border-b border-white/15"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
