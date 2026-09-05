@@ -1,4 +1,5 @@
 import { Translations } from "../lib/i18n";
+import { Icon } from "./icon";
 
 interface FounderSectionProps {
   t: Translations["founder"];
@@ -6,34 +7,7 @@ interface FounderSectionProps {
 }
 
 export function FounderSection({ t, onNavigateFounder }: FounderSectionProps) {
-  const icons = [
-    (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="8" r="5" />
-        <path d="M9 13L7 21L12 18.5L17 21L15 13" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.5">
-        <rect x="4" y="6" width="9" height="14" rx="1" />
-        <rect x="13" y="3" width="7" height="17" rx="1" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="4" width="18" height="12" rx="1" />
-        <path d="M8 20H16M12 16V20" strokeLinecap="round" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="9" cy="8" r="3.5" />
-        <circle cx="17" cy="9.5" r="2.5" />
-        <path d="M3 19C3 15.5 6 13.5 9 13.5C12 13.5 15 15.5 15 19" strokeLinecap="round" />
-        <path d="M15 15C17 15 20 16 20 19" strokeLinecap="round" />
-      </svg>
-    ),
-  ];
+  const icons = ["award", "drafting-compass", "desktop", "users"];
 
   return (
     <section id="about" className="py-20 lg:py-24 bg-[#0c0d0e] text-white border-b border-white/10">
@@ -87,7 +61,7 @@ export function FounderSection({ t, onNavigateFounder }: FounderSectionProps) {
               {t.stats.map((stat, idx) => (
                 <div key={idx} className="flex items-center gap-4">
                   <div className="shrink-0 h-10 w-10 rounded-sm bg-[#22242a] text-[#DC2626] flex items-center justify-center">
-                    {icons[idx]}
+                    <Icon name={icons[idx] ?? "circle-check"} className="text-lg" />
                   </div>
                   <div>
                     <h3 className="font-sans text-sm font-bold text-white leading-tight">

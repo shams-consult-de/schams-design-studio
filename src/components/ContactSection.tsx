@@ -103,7 +103,7 @@ export function ContactSection({
             <div className="space-y-2 max-w-2xl">
               <div className="flex items-center gap-3">
                 <span className="h-8 w-8 rounded-xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center text-lg shrink-0">
-                  <Icon name="whatsapp" />
+                  <Icon name="whatsapp" className="text-2xl" />
                 </span>
                 <h4 className="font-bold text-lg text-white">
                   {t.whatsappTitle}
@@ -121,7 +121,7 @@ export function ContactSection({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-zinc-950 font-bold py-3.5 px-6 rounded-xl text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95 cursor-pointer text-center"
               >
-                <Icon name="whatsapp" className="text-base" />
+                <Icon name="whatsapp" className="text-xl" />
                 <span>{t.whatsappButton}</span>
               </a>
             </div>

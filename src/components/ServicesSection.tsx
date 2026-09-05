@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Translations } from "../lib/i18n";
+import { Icon } from "./icon";
 
 interface ServicesSectionProps {
   t: Translations["services"];
@@ -14,36 +15,7 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const timelineScrollRef = useRef<HTMLDivElement>(null);
 
-  const icons = [
-    (
-      <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8 text-[#DC2626]" stroke="currentColor" strokeWidth="1.5">
-        <path d="M16 4L28 10V22L16 28L4 22V10L16 4Z" />
-        <path d="M16 4V28M4 10L16 16L28 10" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8 text-[#DC2626]" stroke="currentColor" strokeWidth="1.5">
-        <path d="M4 28V12L12 6V28" />
-        <path d="M12 16L20 10V28" />
-        <path d="M20 20L28 14V28" />
-        <path d="M2 28H30" strokeLinecap="round" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8 text-[#DC2626]" stroke="currentColor" strokeWidth="1.5">
-        <path d="M16 6L28 12L16 18L4 12L16 6Z" />
-        <path d="M4 17L16 23L28 17" />
-        <path d="M4 22L16 28L28 22" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8 text-[#DC2626]" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="14" cy="14" r="9" />
-        <path d="M20.5 20.5L28 28" strokeLinecap="round" />
-        <path d="M10 14H18M14 10V18" strokeLinecap="round" />
-      </svg>
-    ),
-  ];
+  const icons = ["cube", "building", "layer-group", "magnifying-glass-plus"];
 
   // Stage classification for the 9 HOAI phases
   const getStageInfo = (idx: number) => {
@@ -113,7 +85,7 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
                 className="bg-white p-7 rounded-2xl border border-zinc-200 hover:border-zinc-400 shadow-xs flex flex-col justify-between space-y-5 hover:shadow-xl transition-all duration-300 card-lift"
               >
                 <div>
-                  <div className="mb-6">{icons[idx]}</div>
+                  <Icon name={icons[idx] ?? "building"} className="mb-6 text-3xl text-[#DC2626]" />
                   <h3 className="font-sans text-lg font-bold text-zinc-950 leading-snug">
                     {svc.title}
                   </h3>
@@ -315,17 +287,12 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
               >
                 {isPlaying ? (
                   <>
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-[#DC2626]">
-                      <rect x="6" y="4" width="4" height="16" rx="1" />
-                      <rect x="14" y="4" width="4" height="16" rx="1" />
-                    </svg>
+                    <Icon name="pause" className="text-sm text-[#DC2626]" />
                     <span className="font-mono text-[11px]">Pause</span>
                   </>
                 ) : (
                   <>
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-emerald-600">
-                      <polygon points="5,3 19,12 5,21" />
-                    </svg>
+                    <Icon name="play" className="text-sm text-emerald-600" />
                     <span className="font-mono text-[11px]">Start</span>
                   </>
                 )}
@@ -339,9 +306,7 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
                 title="Nach links bewegen"
                 className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
-                  <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Icon name="chevron-left" className="text-sm" />
               </button>
 
               {/* Right Step Arrow */}
@@ -352,9 +317,7 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
                 title="Nach rechts bewegen"
                 className="p-1.5 rounded-lg bg-white border border-zinc-200/80 hover:border-zinc-300 text-zinc-700 hover:text-zinc-950 transition-all shadow-2xs cursor-pointer"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
-                  <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Icon name="chevron-right" className="text-sm" />
               </button>
             </div>
           </div>

@@ -39,7 +39,7 @@ export function MobileStickyActionBar({
           className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 active:scale-95 text-[#25D366] font-medium text-xs border border-[#25D366]/30 transition-all text-center select-none cursor-pointer"
           aria-label={t.whatsapp}
         >
-          <Icon name="whatsapp" className="text-base shrink-0" />
+          <Icon name="whatsapp" className="text-xl shrink-0" />
           <span className="truncate">{t.whatsapp}</span>
         </a>
 

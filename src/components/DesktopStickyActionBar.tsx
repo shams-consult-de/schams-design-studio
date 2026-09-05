@@ -39,7 +39,7 @@ export function DesktopStickyActionBar({
         title={t.whatsapp}
         aria-label={t.whatsapp}
       >
-        <Icon name="whatsapp" className="text-base" />
+        <Icon name="whatsapp" className="text-xl" />
       </a>
 
       <span className="h-4 w-px bg-white/20 my-auto" />
