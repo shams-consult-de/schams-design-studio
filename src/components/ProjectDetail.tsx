@@ -1,5 +1,6 @@
 import { Project } from "../data/projects";
 import { Language, Translations } from "../lib/i18n";
+import { Icon } from "./icon";
 
 interface ProjectDetailProps {
   project: Project;
@@ -287,10 +288,7 @@ export function ProjectDetail({
                   className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors group cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-[#DC2626]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                      <polyline points="14 2 14 8 20 8" />
-                    </svg>
+                    <Icon name="file-lines" className="text-xl text-[#DC2626]" />
                     <span className="text-xs text-zinc-200 group-hover:text-white font-medium">
                       {doc.title}
                     </span>
