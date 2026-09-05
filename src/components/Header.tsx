@@ -207,6 +207,7 @@ export function Header({
           </button>
         </div>
       </div>
+      </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
