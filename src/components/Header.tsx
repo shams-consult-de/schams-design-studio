@@ -209,7 +209,7 @@ export function Header({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
+        <div className="lg:hidden bg-white/80 backdrop-blur-xl border-b border-white/20 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
           <div className="flex flex-col space-y-1">
             {mobileNavLinks.map((link) => (
               <a
