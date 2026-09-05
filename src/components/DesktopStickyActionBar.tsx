@@ -20,7 +20,7 @@ export function DesktopStickyActionBar({
   return (
     <aside
       aria-label="Direktkontakt"
-      className="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-1.5 p-1.5 rounded-full bg-zinc-950/90 text-white backdrop-blur-md border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-red-950/20"
+      className="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-1.5 py-1.5 px-3 rounded-full bg-zinc-950/90 text-white backdrop-blur-md border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-red-950/20"
     >
       <a
         href={`tel:${phone}`}
