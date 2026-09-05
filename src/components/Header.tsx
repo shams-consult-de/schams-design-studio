@@ -91,13 +91,14 @@ export function Header({
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/75 backdrop-blur-xl border-b border-white/20 py-3.5 shadow-sm text-zinc-900"
-          : "bg-white/60 backdrop-blur-lg py-4 text-zinc-900 border-b border-white/15"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 text-zinc-900">
+      <div
+        className={`transition-all duration-300 ${
+          scrolled
+            ? "bg-white/75 backdrop-blur-xl border-b border-white/20 py-3.5 shadow-sm"
+            : "bg-white/60 backdrop-blur-lg py-4 border-b border-white/15"
+        }`}
+      >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Official Brand Logo */}
         <a
@@ -206,10 +207,11 @@ export function Header({
           </button>
         </div>
       </div>
+      </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/75 backdrop-blur-xl border-b border-white/20 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
+        <div className="lg:hidden bg-white/40 backdrop-blur-xl border-t border-white/20 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
           <div className="flex flex-col space-y-1">
             {mobileNavLinks.map((link) => (
               <a
