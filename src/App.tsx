@@ -35,6 +35,7 @@ import { caseStudies, CaseStudy } from "./data/caseStudies";
 import { projects, Project } from "./data/projects";
 import { BlogPost, getBlogPostBySlug } from "./data/blog";
 import { initGA4, getConsent, trackPageView } from "./lib/analytics";
+import { updatePageSeo, getProjectSeo, getBlogPostSeo, getCaseStudySeo } from "./lib/seo";
 
 export function App() {
   const [language, setLanguage] = useState<Language>("de");
@@ -475,6 +476,207 @@ export function App() {
     window.addEventListener("popstate", syncRoute);
     return () => window.removeEventListener("popstate", syncRoute);
   }, [syncRoute]);
+
+  // Dynamic SEO meta tags and JSON-LD schema update on route or language change
+  useEffect(() => {
+    if (activeProject) {
+      updatePageSeo(getProjectSeo(activeProject, language));
+    } else if (activeBlogPost) {
+      updatePageSeo(getBlogPostSeo(activeBlogPost, language));
+    } else if (activeCaseStudy) {
+      updatePageSeo(getCaseStudySeo(activeCaseStudy, language));
+    } else if (isProjectsPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Realized Projects & Architecture Portfolio | Shams Consult"
+            : "Realisierte Projekte & Bauten — Portfolio | Shams Consult",
+        description:
+          language === "en"
+            ? "Explore our architectural references: residential complexes, commercial developments, and urban master plans in Frankfurt & Rhine-Main."
+            : "Entdecken Sie unsere Referenzen: Wohnungsbau, Gewerbeimmobilien, Baugenehmigungen und Stadtplanung in Frankfurt am Main & Rhein-Main.",
+        canonicalUrl: "https://shams-consult.de/projects",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Projects" : "Projekte", item: "/projects" },
+        ],
+      });
+    } else if (isBlogPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Architecture Journal & Insights | Shams Consult Frankfurt"
+            : "Fachmagazin für Architektur & Baurecht | Shams Consult",
+        description:
+          language === "en"
+            ? "Expert articles on German building codes (HBO), sustainability, and urban planning by Dipl.-Ing. Majeed Shams."
+            : "Fachartikel zu Architektur, Bauordnungsrecht Hessen, HBO, nachhaltigem Bauen und Städtebau von Architekt Dipl.-Ing. Majeed Shams.",
+        canonicalUrl: "https://shams-consult.de/blog",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Journal" : "Magazin", item: "/blog" },
+        ],
+      });
+    } else if (isAboutPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "About the Practice — Shams Consult Architecture"
+            : "Über uns — Architekturbüro Shams Consult | Frankfurt & Rhein-Main",
+        description:
+          language === "en"
+            ? "Learn about Shams Consult: Licensed architectural practice & urban planning consultancy (AKH Hessen No. 21886) in Frankfurt am Main."
+            : "Erfahren Sie mehr über Shams Consult: Staatlich anerkanntes Planungsbüro für Architektur & Stadtplanung (AKH Hessen Nr. 21886) in Frankfurt am Main.",
+        canonicalUrl: "https://shams-consult.de/about",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "About Us" : "Über uns", item: "/about" },
+        ],
+      });
+    } else if (isFounderPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Dipl.-Ing. Majeed Shams — Architect & Urban Planner"
+            : "Dipl.-Ing. Majeed Shams — Freier Architekt & Stadtplaner | Shams Consult",
+        description:
+          language === "en"
+            ? "Professional profile of Dipl.-Ing. (FH) Majeed Shams M.Eng.: Licensed German Architect & Urban Planner, AKH Hesse Member No. 21886."
+            : "Profil von Dipl.-Ing. (FH) Majeed Shams M.Eng.: Freier Architekt & Stadtplaner, AKH Hessen Mitglied (Nr. 21886), 15+ Jahre Planungserfahrung.",
+        canonicalUrl: "https://shams-consult.de/founder",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Founder" : "Gründer", item: "/founder" },
+        ],
+      });
+    } else if (isResearchPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Research, Academic Theses & Teaching | Shams Consult"
+            : "Forschung, Thesen & Lehre | Shams Consult Architektur",
+        description:
+          language === "en"
+            ? "Scientific theses and urban planning research by Shams Consult at the intersection of architecture and urbanism."
+            : "Wissenschaftliche Thesen und städtebauliche Forschungsschwerpunkte von Shams Consult an der Schnittstelle von Architektur und Urbanistik.",
+        canonicalUrl: "https://shams-consult.de/research",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Research" : "Forschung", item: "/research" },
+        ],
+      });
+    } else if (isClientsPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Clients, Partners & References | Shams Consult"
+            : "Auftraggeber, Partner & Referenzen | Shams Consult",
+        description:
+          language === "en"
+            ? "Successful collaborations with institutional clients, developers, municipalities, and private builders in Germany."
+            : "Erfolgreiche Zusammenarbeiten mit institutionellen Bauherren, Bauträgern, Kommunen und privaten Auftraggebern in Hessen.",
+        canonicalUrl: "https://shams-consult.de/clients",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Partners" : "Partner", item: "/clients" },
+        ],
+      });
+    } else if (isSiteVisitsPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Site Visits & Construction Insights | Shams Consult"
+            : "Baustelleneinblicke & Vor-Ort-Impressionen | Shams Consult",
+        description:
+          language === "en"
+            ? "On-site construction supervision, German VOB compliance, and progress updates from projects across Rhine-Main."
+            : "Direkte Einblicke von der Baustelle: Qualitätskontrolle, VOB-konforme Bauüberwachung und Baufortschritte in Frankfurt und Rhein-Main.",
+        canonicalUrl: "https://shams-consult.de/site-visits",
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Site Visits" : "Baustelleneinblicke", item: "/site-visits" },
+        ],
+      });
+    } else if (activeLegalPage === "impressum") {
+      updatePageSeo({
+        title: "Impressum & Rechtliche Angaben | Shams Consult",
+        description: "Impressum und berufsrechtliche Angaben des Architekturbüros Shams Consult in Frankfurt am Main.",
+        canonicalUrl: "https://shams-consult.de/impressum",
+        noIndex: true,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: "Impressum", item: "/impressum" },
+        ],
+      });
+    } else if (activeLegalPage === "datenschutz") {
+      updatePageSeo({
+        title: "Datenschutzerklärung | Shams Consult",
+        description: "Datenschutzerklärung der Shams Consult gemäß DSGVO.",
+        canonicalUrl: "https://shams-consult.de/datenschutz",
+        noIndex: true,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: "Datenschutz", item: "/datenschutz" },
+        ],
+      });
+    } else if (activeLegalPage === "widerruf") {
+      updatePageSeo({
+        title: "Widerrufsbelehrung | Shams Consult",
+        description: "Widerrufsbelehrung für Verbraucher gemäß Fernabsatzrecht.",
+        canonicalUrl: "https://shams-consult.de/widerruf",
+        noIndex: true,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: "Widerruf", item: "/widerruf" },
+        ],
+      });
+    } else if (activeLegalPage === "barrierefreiheit") {
+      updatePageSeo({
+        title: "Erklärung zur Barrierefreiheit | Shams Consult",
+        description: "Erklärung zur digitalen Barrierefreiheit gemäß BITV 2.0 und WCAG 2.1 AA.",
+        canonicalUrl: "https://shams-consult.de/barrierefreiheit",
+        noIndex: true,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: "Barrierefreiheit", item: "/barrierefreiheit" },
+        ],
+      });
+    } else if (isNotFound) {
+      updatePageSeo({
+        title: "Seite nicht gefunden (404) | Shams Consult",
+        description: "Die angeforderte Seite konnte leider nicht gefunden werden.",
+        canonicalUrl: `https://shams-consult.de${requestedPath}`,
+        noIndex: true,
+      });
+    } else {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Shams Consult — Architecture & Urban Planning | Frankfurt & Rhine-Main"
+            : "Shams Consult — Architektur & Stadtplanung | Frankfurt & Rhein-Main",
+        description:
+          language === "en"
+            ? "Shams Consult — Architectural practice for design, building permits & urban planning in Frankfurt & Rhine-Main. AKH Hessen Member (No. 21886). 15+ years experience."
+            : "Shams Consult — Planungsbüro für Architektur, Baugenehmigungen & Stadtplanung in Frankfurt am Main & Rödermark. AKH Hessen Mitglied (Nr. 21886). 15+ Jahre Erfahrung, 100+ Bauanträge geprüft. Jetzt kostenloses Erstgespräch anfordern!",
+        canonicalUrl: "https://shams-consult.de/",
+      });
+    }
+  }, [
+    language,
+    requestedPath,
+    activeProject,
+    activeBlogPost,
+    activeCaseStudy,
+    isProjectsPage,
+    isBlogPage,
+    isAboutPage,
+    isFounderPage,
+    isResearchPage,
+    isClientsPage,
+    isSiteVisitsPage,
+    activeLegalPage,
+    isNotFound,
+  ]);
 
   const navigateTo = (path: string) => {
     if (window.location.pathname !== path) {

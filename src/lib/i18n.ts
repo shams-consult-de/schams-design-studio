@@ -400,9 +400,9 @@ export const content: Record<Language, Translations> = {
       badge: "UNSER EXPERTENTEAM",
       title: "Team aus 16 Architekten & Fachplanern",
       description:
-        "Interdisziplinäres Planungs- und Baumanagement-Team aus Architekten, Bauleitern und BIM-Spezialisten unter Leitung von Dipl.-Ing. Majeed Shams.",
+        "Planungs- & Baumanagement-Team unter Leitung von Dipl.-Ing. Majeed Shams.",
       expertCountBadge: "+12",
-      ctaButton: "Fotodokumentation & Album ansehen",
+      ctaButton: "Team kennenlernen",
     },
     metrics: {
       yearsExp: { value: "15+", label: "Jahre Erfahrung" },
@@ -656,13 +656,13 @@ export const content: Record<Language, Translations> = {
     },
     siteVisitsPage: {
       backToHome: "Zurück zur Startseite",
-      badge: "VOR-ORT-EINBLICKE & PRAXIS-DOKUMENTATION",
+      badge: "BAUSTELLENEINBLICKE",
       title: "Baustelleneinblicke & Vor-Ort-Nachweise",
       subtitle:
         "Architektur erfordert echte Vor-Ort-Präsenz. Sehen Sie hier ungestellte Eindrücke aus der täglichen Planungspraxis: von der Bestandsaufnahme bis zur Bauüberwachung nach HOAI.",
       proofNotice: "Unbearbeitete Originalaufnahmen aus laufenden Projekten und Ortsterminen.",
       viewHighRes: "Originalbild vergrößern",
-      viewAlbum: "Team & Gründer kennenlernen",
+      viewAlbum: "Album ansehen",
       closeLightbox: "Schließen",
       photoRecordLabel: "Foto-Nachweis",
       prev: "← Vorheriges",
@@ -898,9 +898,9 @@ export const content: Record<Language, Translations> = {
       badge: "OUR EXPERT TEAM",
       title: "Team of 16 Architecture Experts",
       description:
-        "Interdisciplinary design & construction management team of architects, site supervisors, and BIM specialists led by Dipl.-Ing. Majeed Shams.",
+        "Planning and construction management team led by Dipl.-Ing. Majeed Shams.",
       expertCountBadge: "+12",
-      ctaButton: "View Photo Documentation & Album",
+      ctaButton: "Meet Team",
     },
     metrics: {
       yearsExp: { value: "15+", label: "Years of Experience" },
@@ -1154,13 +1154,13 @@ export const content: Record<Language, Translations> = {
     },
     siteVisitsPage: {
       backToHome: "Back to Home",
-      badge: "ON-SITE PRACTICE & FIELD PROOF",
+      badge: "FIELD VISITS",
       title: "Authentic Site Visits & Real-World Documentation",
       subtitle:
         "Architecture requires true on-site presence. Explore unedited photographic records from our daily practice—from initial building surveys to HOAI site supervision.",
       proofNotice: "Unedited original field photographs from ongoing building sites and client walkthroughs.",
       viewHighRes: "View Full Resolution",
-      viewAlbum: "Meet Founder & Team",
+      viewAlbum: "View Album",
       closeLightbox: "Close",
       photoRecordLabel: "Photo Record",
       prev: "← Previous",

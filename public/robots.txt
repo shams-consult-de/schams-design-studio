@@ -1,9 +1,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /impressum
-Disallow: /datenschutz
-
 # AI & LLM Search Crawlers (GEO Optimization)
 User-agent: GPTBot
 Allow: /

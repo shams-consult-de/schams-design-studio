@@ -14,19 +14,7 @@ export function Hero({
   onNavigateFounder,
 }: HeroProps) {
   return (
-    <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 text-zinc-900 border-b border-zinc-200 overflow-hidden">
-      {/* Background image with fixed attachment and decent opacity */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: "url('/images/hero-background-bild-4.png')",
-          filter: "blur(3px)",
-          maskImage: "linear-gradient(90deg, #000, #00000030)",
-          WebkitMaskImage: "linear-gradient(90deg, #000, #00000030)",
-        }}
-      />
-      <div className="absolute inset-0 bg-white/80" />
-
+    <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 bg-white text-zinc-900 border-b border-zinc-200 overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
