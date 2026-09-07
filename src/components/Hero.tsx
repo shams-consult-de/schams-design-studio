@@ -1,4 +1,5 @@
 import { Translations } from "../lib/i18n";
+import { ArchitecturalHeroBackground } from "./ArchitecturalHeroBackground";
 
 interface HeroProps {
   t: Translations["hero"];
@@ -15,6 +16,9 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 bg-white text-zinc-900 border-b border-zinc-200 overflow-hidden">
+      {/* Architectural Line Art & Skyline Background */}
+      <ArchitecturalHeroBackground />
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
@@ -58,11 +62,23 @@ export function Hero({
             </div>
           </div>
 
-          {/* Center/Right Column (5 cols): Centered Portrait & Clickable Founder Badge */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center pt-2 lg:pt-0">
+          {/* Center/Right Column (5 cols): Centered Portrait with Architectural Crimson Accent & Founder Badge */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center pt-2 lg:pt-0 relative">
+            {/* Crimson Red Architectural Circle & Concentric Accent Ring */}
+            <div
+              className="absolute -right-6 sm:-right-10 lg:-right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0"
+              aria-hidden="true"
+            >
+              {/* Outer Thin Concentric Accent Ring */}
+              <div className="w-[320px] h-[320px] sm:w-[390px] sm:h-[390px] lg:w-[460px] lg:h-[460px] rounded-full border border-[#DC2626]/40 flex items-center justify-center">
+                {/* Solid Crimson Architectural Circle */}
+                <div className="w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] lg:w-[370px] lg:h-[370px] rounded-full bg-[#DC2626] shadow-xl shadow-red-600/20" />
+              </div>
+            </div>
+
             <div
               onClick={onNavigateFounder}
-              className="group relative w-full max-w-sm flex flex-col items-center justify-center cursor-pointer block"
+              className="group relative z-10 w-full max-w-sm flex flex-col items-center justify-center cursor-pointer block"
               title="Geschichte des Gründers lesen"
             >
               {/* Majeed Shams Portrait */}
@@ -70,10 +86,11 @@ export function Hero({
                 <img
                   src="/images/team/shams-majeed-main-image.png"
                   alt="Dipl.-Ing. Majeed Shams"
-                  className="w-auto h-auto max-h-[280px] sm:max-h-[360px] lg:max-h-[430px] object-contain filter contrast-105 group-hover:scale-102 transition-transform duration-500"
+                  className="w-auto h-auto max-h-[280px] sm:max-h-[360px] lg:max-h-[430px] object-contain filter contrast-105 group-hover:scale-102 transition-transform duration-500 relative z-10"
                   width="440"
                   height="520"
                   loading="eager"
+                  fetchPriority="high"
                 />
               </div>
 
