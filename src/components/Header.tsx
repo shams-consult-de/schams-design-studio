@@ -146,7 +146,7 @@ export function Header({
                   ? "bg-white text-zinc-950 shadow-xs font-extrabold"
                   : "text-zinc-500 hover:text-zinc-900"
               }`}
-              aria-label="Auf Deutsch umschalten"
+              aria-label="DE - Auf Deutsch umschalten"
             >
               DE
             </button>
@@ -159,7 +159,7 @@ export function Header({
                   ? "bg-white text-zinc-950 shadow-xs font-extrabold"
                   : "text-zinc-500 hover:text-zinc-900"
               }`}
-              aria-label="Switch to English"
+              aria-label="EN - Switch to English"
             >
               EN
             </button>

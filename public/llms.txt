@@ -53,9 +53,9 @@
 - **Öffnungszeiten:** Montag bis Freitag: 08:30 – 18:00 Uhr
 
 ## Wichtige Website-Ressourcen
-- Startseite & Übersicht: https://shams-consult.de
-- Architekturleistungen & HOAI: https://shams-consult.de/services
-- Realisierte Projekte & Referenzen: https://shams-consult.de/projects
-- Fallstudien & Machbarkeiten: https://shams-consult.de/clients
-- Über das Büro & Inhaber Dipl.-Ing. Majeed Shams: https://shams-consult.de/founder
-- Direkter Erstberatungstermin: https://shams-consult.de/contact
+- [Startseite & Übersicht](https://shams-consult.de): Architekturbüro für Frankfurt & Rhein-Main
+- [Architekturleistungen & HOAI](https://shams-consult.de/services): HOAI Leistungsphasen 1–9, Hochbau & Genehmigungsplanung
+- [Realisierte Projekte & Referenzen](https://shams-consult.de/projects): Mehrfamilienhäuser, Gewerbe- & Wohnbauten
+- [Fallstudien & Machbarkeiten](https://shams-consult.de/clients): Projektentwicklungen, Baurecht & Machbarkeitsstudien
+- [Über das Büro & Inhaber Dipl.-Ing. Majeed Shams](https://shams-consult.de/founder): Werdegang, Philosophie & Auszeichnungen
+- [Direkter Erstberatungstermin](https://shams-consult.de/contact): Kostenlose Erstberatung anfragen

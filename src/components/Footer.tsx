@@ -201,6 +201,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
           <span className="inline-flex items-center gap-1.5 text-zinc-400">
             {/* Crisp German Flag SVG for universal rendering on Windows, Mac, iOS & Android */}
             <span
+              role="img"
               className="inline-flex items-center justify-center w-4 h-2.5 rounded-2xs overflow-hidden shadow-2xs border border-white/20 shrink-0"
               title="Deutschland"
               aria-label="Deutschland"
