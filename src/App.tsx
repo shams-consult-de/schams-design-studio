@@ -34,7 +34,7 @@ import { Language, content } from "./lib/i18n";
 import { caseStudies, CaseStudy } from "./data/caseStudies";
 import { projects, Project } from "./data/projects";
 import { BlogPost, getBlogPostBySlug } from "./data/blog";
-import { initGA4, getConsent, trackPageView } from "./lib/analytics";
+import { trackPageView } from "./lib/analytics";
 import { updatePageSeo, getProjectSeo, getBlogPostSeo, getCaseStudySeo } from "./lib/seo";
 
 export function App() {
@@ -469,9 +469,6 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    if (getConsent() === "all") {
-      initGA4();
-    }
     syncRoute();
     window.addEventListener("popstate", syncRoute);
     return () => window.removeEventListener("popstate", syncRoute);
@@ -652,12 +649,12 @@ export function App() {
       updatePageSeo({
         title:
           language === "en"
-            ? "Shams Consult — Architecture & Urban Planning | Frankfurt & Rhine-Main"
-            : "Shams Consult — Architektur & Stadtplanung | Frankfurt & Rhein-Main",
+            ? "Shams Consult — Architecture, Urban Planning & Project Development | Frankfurt & Rödermark"
+            : "Shams Consult — Architekturbüro für Architektur, Stadtplanung & Projektentwicklung | Frankfurt & Rödermark",
         description:
           language === "en"
-            ? "Shams Consult — Architectural practice for design, building permits & urban planning in Frankfurt & Rhine-Main. AKH Hessen Member (No. 21886). 15+ years experience."
-            : "Shams Consult — Planungsbüro für Architektur, Baugenehmigungen & Stadtplanung in Frankfurt am Main & Rödermark. AKH Hessen Mitglied (Nr. 21886). 15+ Jahre Erfahrung, 100+ Bauanträge geprüft. Jetzt kostenloses Erstgespräch anfordern!",
+            ? "Shams Consult — Architectural practice for architecture, urban planning & project development in Frankfurt & Rödermark (Rhine-Main). AKH Hessen Member (No. 21886). 15+ years experience."
+            : "Shams Consult — Architekturbüro für Architektur, Stadtplanung und Projektentwicklung in Frankfurt am Main & Rödermark (Rhein-Main). AKH Hessen Mitglied (Nr. 21886). 15+ Jahre Erfahrung, 100+ Bauanträge geprüft. Jetzt kostenloses Erstgespräch anfordern!",
         canonicalUrl: "https://shams-consult.de/",
       });
     }

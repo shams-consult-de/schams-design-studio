@@ -15,6 +15,7 @@ export interface Translations {
     bookConsultation: string;
   };
   hero: {
+    eyebrow: string;
     titlePart1: string;
     titleHighlight: string;
     subtitle: string;
@@ -376,10 +377,11 @@ export const content: Record<Language, Translations> = {
       bookConsultation: "Erstgespräch anfragen",
     },
     hero: {
+      eyebrow: "Architekturbüro für Architektur, Stadtplanung & Projektentwicklung",
       titlePart1: "Die Beziehungen, die wir aufbauen, sind genauso wichtig",
       titleHighlight: "wie die Gebäude, die wir entwerfen.",
       subtitle:
-        "Architektur, Stadtplanung und Projektentwicklung für öffentliche Auftraggeber, Investoren und private Bauherren.",
+        "Architektur, Stadtplanung und Projektentwicklung für öffentliche Auftraggeber, Investoren und private Bauherren in Frankfurt am Main, Rödermark & Rhein-Main.",
       philosophyStatement:
         "Die Beziehungen, die wir aufbauen, sind genauso wichtig wie die Gebäude, die wir entwerfen.",
       bookConsultation: "Erstgespräch anfragen",
@@ -874,10 +876,11 @@ export const content: Record<Language, Translations> = {
       bookConsultation: "Book Consultation",
     },
     hero: {
+      eyebrow: "Architectural Practice for Architecture, Urban Planning & Project Development",
       titlePart1: "The relationships we build are just as important",
       titleHighlight: "as the buildings we design.",
       subtitle:
-        "Architecture, urban planning, and project development for public authorities, investors, and private clients.",
+        "Architecture, urban planning, and project development for public authorities, investors, and private clients in Frankfurt am Main, Rödermark, and Rhine-Main.",
       philosophyStatement:
         "The relationships we build are just as important as the buildings we design.",
       bookConsultation: "Book Consultation",

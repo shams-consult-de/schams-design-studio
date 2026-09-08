@@ -11,8 +11,6 @@ declare global {
   }
 }
 
-let isInitialized = false;
-
 export function getConsent(): CookieConsent | null {
   if (typeof window === "undefined") return null;
   try {
@@ -28,39 +26,11 @@ export function getConsent(): CookieConsent | null {
 }
 
 export function initGA4(): void {
-  if (typeof window === "undefined" || isInitialized) return;
-
-  // Unset GA disable flag
-  window[`ga-disable-${GA_MEASUREMENT_ID}`] = false;
-
-  // Prepare dataLayer and gtag
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function (...args: unknown[]) {
-    window.dataLayer?.push(args);
-  };
-
-  window.gtag("js", new Date());
-  window.gtag("config", GA_MEASUREMENT_ID, {
-    anonymize_ip: true,
-    send_page_view: true,
-  });
-
-  // Inject Google Tag Manager script
-  const existingScript = document.getElementById("google-analytics-script");
-  if (!existingScript) {
-    const script = document.createElement("script");
-    script.id = "google-analytics-script";
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-  }
-
-  isInitialized = true;
+  // Initialized directly in index.html via Google tag (gtag.js)
 }
 
 export function disableGA4(): void {
-  if (typeof window === "undefined") return;
-  window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+  // No-op
 }
 
 export function setConsent(consent: CookieConsent): void {
@@ -69,12 +39,6 @@ export function setConsent(consent: CookieConsent): void {
     localStorage.setItem(CONSENT_STORAGE_KEY, consent);
   } catch {
     // LocalStorage quota or access issue
-  }
-
-  if (consent === "all") {
-    initGA4();
-  } else {
-    disableGA4();
   }
 
   window.dispatchEvent(new CustomEvent("shams_consent_changed", { detail: consent }));
@@ -86,7 +50,7 @@ export function openCookieSettings(): void {
 }
 
 export function trackPageView(path: string, title?: string): void {
-  if (typeof window === "undefined" || getConsent() !== "all") return;
+  if (typeof window === "undefined") return;
   if (typeof window.gtag === "function") {
     window.gtag("event", "page_view", {
       page_path: path,

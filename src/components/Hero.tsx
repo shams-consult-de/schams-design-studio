@@ -23,18 +23,16 @@ export function Hero({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-left">
-            {/* Top Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#DC2626]">
-                Shams Consult · Architektur & Stadtplanung
+            {/* Main Headline: Unified semantic H1 including targeted service triad & philosophy statement */}
+            <h1 className="space-y-2.5">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#DC2626]">
+                <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+                {t.eyebrow}
               </span>
-            </div>
-
-            {/* Main Headline: Complete Philosophy Statement */}
-            <h1 className="font-sans text-2xl sm:text-4xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 uppercase leading-[1.15]">
-              <span>{t.titlePart1} </span>
-              <span className="text-[#DC2626] block sm:inline">{t.titleHighlight}</span>
+              <span className="block font-sans text-2xl sm:text-4xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 uppercase leading-[1.15]">
+                <span>{t.titlePart1} </span>
+                <span className="text-[#DC2626] block sm:inline">{t.titleHighlight}</span>
+              </span>
             </h1>
 
             {/* Sub-headline */}
