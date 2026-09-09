@@ -75,15 +75,17 @@ export function ComparisonPage({
           aria-hidden="true"
         />
 
-        {/* Floating Peripheral Ambient Halo in Far-Right Margin */}
+        {/* Bold Architectural Crimson Circle Accent in Far-Right Margin */}
         <div
-          className="absolute -right-24 top-12 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-60"
+          className="absolute -right-12 sm:right-4 lg:right-10 top-12 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
           aria-hidden="true"
         >
           <div className="relative flex items-center justify-center animate-couch-settle">
-            <div className="absolute w-72 h-72 rounded-full border border-[#DC2626]/30" />
-            <div className="w-52 h-52 rounded-full bg-[#DC2626]/10 blur-xl" />
-            <div className="w-24 h-24 rounded-full bg-[#DC2626] opacity-35 shadow-lg shadow-red-600/25" />
+            {/* Concentric Outer Accent Ring */}
+            <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
+
+            {/* Solid Bold Crimson Architectural Circle */}
+            <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
           </div>
         </div>
 
@@ -298,13 +300,15 @@ export function ComparisonPage({
       {/* 7. Bottom Conversion Banner */}
       <section className="py-16 bg-[#0e0f11] text-white relative overflow-hidden">
         <div
-          className="absolute -left-20 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-60"
+          className="absolute -left-12 sm:-left-6 lg:left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
           aria-hidden="true"
         >
           <div className="relative flex items-center justify-center animate-couch-settle">
-            <div className="absolute w-64 h-64 rounded-full border border-[#DC2626]/30" />
-            <div className="w-44 h-44 rounded-full bg-[#DC2626]/10 blur-xl" />
-            <div className="w-20 h-20 rounded-full bg-[#DC2626] opacity-35 shadow-lg shadow-red-600/20" />
+            {/* Concentric Outer Accent Ring */}
+            <div className="absolute w-[210px] h-[210px] lg:w-[240px] lg:h-[240px] rounded-full border-2 border-[#DC2626]/30" />
+
+            {/* Solid Bold Crimson Architectural Circle */}
+            <div className="w-[150px] h-[150px] lg:w-[170px] lg:h-[170px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
           </div>
         </div>
 

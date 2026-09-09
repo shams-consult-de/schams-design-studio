@@ -397,6 +397,30 @@ export interface Translations {
     faqSubtitle: string;
     faqActionPrompt: string;
     faqActionCta: string;
+    serviceTriadBadge: string;
+    serviceTriadHeading: string;
+    serviceTriadSubtitlePrefix: string;
+    serviceTriadSubtitleSuffix: string;
+    pillar1Tag: string;
+    pillar1Title: string;
+    pillar1Subtitle: string;
+    pillar1Desc: string;
+    pillar1Bullets: string[];
+    pillar2Tag: string;
+    pillar2Title: string;
+    pillar2Subtitle: string;
+    pillar2Desc: string;
+    pillar2Bullets: string[];
+    pillar3Tag: string;
+    pillar3Title: string;
+    pillar3Subtitle: string;
+    pillar3Desc: string;
+    pillar3Bullets: string[];
+    learnMore: string;
+    referencesBadge: string;
+    referencesHeading: string;
+    referencesSubtitlePrefix: string;
+    referencesSubtitleSuffix: string;
   };
   faqSection: {
     badge: string;
@@ -948,6 +972,42 @@ export const content: Record<Language, Translations> = {
       faqSubtitle: "Transparente Orientierung für Bauherren zu HOAI-Honoraren, Behördenfristen und Genehmigungsschritten.",
       faqActionPrompt: "Haben Sie eine spezifische Frage zu Ihrem Grundstück oder Bauvorhaben?",
       faqActionCta: "Jetzt Erstgespräch mit dem Architekten vereinbaren",
+      serviceTriadBadge: "Ganzheitliche Fachkompetenz",
+      serviceTriadHeading: "Architektur, Stadtplanung & Baurecht aus einer Hand",
+      serviceTriadSubtitlePrefix: "Wir bieten Ihnen in",
+      serviceTriadSubtitleSuffix: "das vollständige Leistungsspektrum: von der städtebaulichen Machbarkeit über rechtssichere Bauanträge bis zur schlüsselfertigen Bauleitung (HOAI 1–9).",
+      pillar1Tag: "01 // HOAI 1–9",
+      pillar1Title: "Architektur & Hochbau",
+      pillar1Subtitle: "Neubau · Sanierung · Bauüberwachung",
+      pillar1Desc: "Vom ersten Konzept über detaillierte Werkpläne (1:50) bis zur Qualitätsbauleitung vor Ort. Anspruchsvolle Wohn- und Gewerbeimmobilien mit strikter Kostendisziplin nach DIN 276.",
+      pillar1Bullets: [
+        "Individuelle Entwurfs- & Ausführungsplanung",
+        "Ausschreibungen & Vergabe nach VOB",
+        "Präsenz auf der Baustelle (LPH 8)",
+      ],
+      pillar2Tag: "02 // Urbanistik",
+      pillar2Title: "Stadtplanung & Baurecht",
+      pillar2Subtitle: "Bebauungspläne · Nachverdichtung · Quartiere",
+      pillar2Desc: "Eingetragene Stadtplaner in der AKH Hessen. Wir entwickeln städtebauliche Rahmenpläne, prüfen Nachverdichtungspotenziale und begleiten vorhabenbezogene Bebauungspläne nach BauGB.",
+      pillar2Bullets: [
+        "Städtebauliche Machbarkeitsstudien",
+        "Nachverdichtung & Konversion",
+        "Bebauungspläne (§ 12 & § 30 BauGB)",
+      ],
+      pillar3Tag: "03 // Genehmigung",
+      pillar3Title: "Bauantrag & Baurecht",
+      pillar3Subtitle: "HBO · Bauaufsicht · Voranfragen",
+      pillar3Desc: "Uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886). Wir erstellen prüffähige Bauanträge, Bauvoranfragen zur Absicherung von Baurecht und erwirken Befreiungen bei der Bauaufsicht.",
+      pillar3Bullets: [
+        "Rechtskonforme Bauanträge nach HBO",
+        "Bauvoranfragen (§ 34 BauGB Einfügung)",
+        "Abstimmung Denkmalamt & Umweltamt",
+      ],
+      learnMore: "Mehr erfahren",
+      referencesBadge: "Referenzen & Einzugsgebiet",
+      referencesHeading: "Ausgewählte Referenzen aus der Metropolregion Frankfurt / Rhein-Main",
+      referencesSubtitlePrefix: "Repräsentative Bauten und Planungen aus unserem Portfolio. Wir planen für Bauherren in",
+      referencesSubtitleSuffix: "und im gesamten Rhein-Main-Gebiet mit derselben bewährten Sorgfalt und Genehmigungssicherheit.",
     },
     faqSection: {
       badge: "Häufige Fragen & Antworten",
@@ -1519,6 +1579,42 @@ export const content: Record<Language, Translations> = {
       faqSubtitle: "Transparent orientation for developers and homeowners regarding HOAI fees, authority milestones, and approvals.",
       faqActionPrompt: "Have a specific question regarding your building site or project?",
       faqActionCta: "Schedule a Consultation with the Architect",
+      serviceTriadBadge: "Integrated Disciplines",
+      serviceTriadHeading: "Architecture, Urban Planning & Permitting from One Source",
+      serviceTriadSubtitlePrefix: "We provide property owners and developers in",
+      serviceTriadSubtitleSuffix: "with comprehensive planning: from urban feasibility and HBO permits to turnkey construction supervision (HOAI 1–9).",
+      pillar1Tag: "01 // HOAI 1–9",
+      pillar1Title: "Building Architecture",
+      pillar1Subtitle: "New Builds · Retrofits · Supervision",
+      pillar1Desc: "From initial concept to detailed working drawings (1:50) and on-site construction supervision. High-standard residential and commercial architecture with strict DIN 276 budget control.",
+      pillar1Bullets: [
+        "Bespoke design & working drawings",
+        "Tenders & BoQs under VOB",
+        "Daily site clerk of works (HOAI 8)",
+      ],
+      pillar2Tag: "02 // Urbanistik",
+      pillar2Title: "Urban Planning & Zoning",
+      pillar2Subtitle: "Master Planning · Infill · Districts",
+      pillar2Desc: "Officially registered urban planners with AKH Hesse. We develop urban master plans, evaluate infill potentials, and draft project-based zoning plans under German BauGB.",
+      pillar2Bullets: [
+        "Urban feasibility studies",
+        "Densification & brownfield conversion",
+        "Zoning bylaws (§ 12 & § 30 BauGB)",
+      ],
+      pillar3Tag: "03 // Genehmigung",
+      pillar3Title: "Permits & Building Law",
+      pillar3Subtitle: "HBO Code · Building Dept · Variances",
+      pillar3Desc: "Full unrestricted building permit filing privileges (AKH Hesse No. 21886). We prepare bulletproof applications, preliminary permit queries, and negotiate statutory variances.",
+      pillar3Bullets: [
+        "Legally compliant HBO applications",
+        "Preliminary permit inquiries (§ 34 BauGB)",
+        "Heritage & environmental clearance",
+      ],
+      learnMore: "Learn more",
+      referencesBadge: "References & Catchment",
+      referencesHeading: "Selected References across Frankfurt & Rhine-Main Region",
+      referencesSubtitlePrefix: "Representative completed buildings and planning projects from our portfolio. We plan for clients in",
+      referencesSubtitleSuffix: "and the wider Rhine-Main area with the same dedication and regulatory rigor.",
     },
     faqSection: {
       badge: "Frequently Asked Questions",

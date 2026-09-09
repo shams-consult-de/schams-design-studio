@@ -57,11 +57,16 @@ export function FounderPage({
         {/* Emotional Guiding Quote Banner */}
         <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-10 shadow-2xl relative overflow-hidden space-y-4">
           <div
-            className="absolute -right-12 -bottom-12 w-64 h-64 pointer-events-none select-none z-0 flex items-center justify-center opacity-70 animate-couch-settle"
+            className="absolute -right-8 -bottom-8 pointer-events-none select-none z-0 flex items-center justify-center"
             aria-hidden="true"
           >
-            <div className="absolute w-64 h-64 rounded-full border border-[#DC2626]/30" />
-            <div className="w-48 h-48 rounded-full bg-[#DC2626]/20 blur-2xl" />
+            <div className="relative flex items-center justify-center animate-couch-settle">
+              {/* Concentric Outer Accent Ring */}
+              <div className="absolute w-[210px] h-[210px] rounded-full border-2 border-[#DC2626]/30" />
+
+              {/* Solid Bold Crimson Architectural Circle */}
+              <div className="w-[150px] h-[150px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/40" />
+            </div>
           </div>
 
           <p className="font-sans text-2xl sm:text-3xl text-zinc-100 font-medium italic leading-snug">

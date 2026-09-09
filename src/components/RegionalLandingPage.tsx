@@ -80,14 +80,17 @@ export function RegionalLandingPage({
           aria-hidden="true"
         />
 
-        {/* Subtle Regional Architectural Coordinate Ring Accent */}
+        {/* Bold Architectural Crimson Circle Accent */}
         <div
-          className="absolute -right-20 top-1/2 -translate-y-1/2 w-80 h-80 pointer-events-none select-none z-0 hidden md:flex items-center justify-center opacity-30"
+          className="absolute -right-10 sm:right-4 lg:right-12 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden md:flex items-center justify-center"
           aria-hidden="true"
         >
           <div className="relative flex items-center justify-center animate-couch-settle">
-            <div className="absolute w-80 h-80 rounded-full border border-[#DC2626]/30" />
-            <div className="w-56 h-56 rounded-full bg-[#DC2626]/10 blur-xl" />
+            {/* Concentric Outer Accent Ring */}
+            <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
+
+            {/* Solid Bold Crimson Architectural Circle */}
+            <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
           </div>
         </div>
 
@@ -156,15 +159,13 @@ export function RegionalLandingPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left space-y-2 mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626]">
-              {language === "de" ? "Ganzheitliche Fachkompetenz" : "Integrated Disciplines"}
+              {t.serviceTriadBadge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
-              {language === "de" ? "Architektur, Stadtplanung & Baurecht aus einer Hand" : "Architecture, Urban Planning & Permitting from One Source"}
+              {t.serviceTriadHeading}
             </h2>
             <p className="text-sm text-zinc-600 font-light">
-              {language === "de"
-                ? `Wir bieten Ihnen in ${cityName} das vollständige Leistungsspektrum: von der städtebaulichen Machbarkeit über rechtssichere Bauanträge bis zur schlüsselfertigen Bauleitung (HOAI 1–9).`
-                : `We provide property owners and developers in ${cityName} with comprehensive planning: from urban feasibility and HBO permits to turnkey construction supervision (HOAI 1–9).`}
+              {t.serviceTriadSubtitlePrefix} {cityName} {t.serviceTriadSubtitleSuffix}
             </p>
           </div>
 
@@ -172,75 +173,78 @@ export function RegionalLandingPage({
             {/* Pillar 1: Architektur & Hochbau */}
             <div className="bg-white border border-zinc-200 rounded-xl p-7 text-left space-y-4 hover:border-zinc-950 transition-colors">
               <span className="font-mono text-xs font-bold tracking-widest text-[#DC2626] uppercase block">
-                01 // HOAI 1–9
+                {t.pillar1Tag}
               </span>
               <div>
                 <h3 className="text-lg font-bold text-zinc-950 tracking-tight">
-                  {language === "de" ? "Architektur & Hochbau" : "Building Architecture"}
+                  {t.pillar1Title}
                 </h3>
                 <p className="text-xs text-zinc-500 font-medium mt-0.5">
-                  {language === "de" ? "Neubau · Sanierung · Bauüberwachung" : "New Builds · Retrofits · Supervision"}
+                  {t.pillar1Subtitle}
                 </p>
               </div>
               <p className="text-xs text-zinc-600 leading-relaxed font-light">
-                {language === "de"
-                  ? "Vom ersten Konzept über detaillierte Werkpläne (1:50) bis zur Qualitätsbauleitung vor Ort. Anspruchsvolle Wohn- und Gewerbeimmobilien mit strikter Kostendisziplin nach DIN 276."
-                  : "From initial concept to detailed working drawings (1:50) and on-site construction supervision. High-standard residential and commercial architecture with strict DIN 276 budget control."}
+                {t.pillar1Desc}
               </p>
               <ul className="text-xs text-zinc-700 space-y-1.5 pt-3 border-t border-zinc-100 font-light">
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Individuelle Entwurfs- & Ausführungsplanung" : "Bespoke design & working drawings"}</li>
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Ausschreibungen & Vergabe nach VOB" : "Tenders & BoQs under VOB"}</li>
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Präsenz auf der Baustelle (LPH 8)" : "Daily site clerk of works (HOAI 8)"}</li>
+                {t.pillar1Bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <span className="text-[#DC2626] font-bold">✓</span>
+                    {bullet}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Pillar 2: Stadtplanung & B-Pläne */}
             <div className="bg-white border border-zinc-200 rounded-xl p-7 text-left space-y-4 hover:border-zinc-950 transition-colors">
               <span className="font-mono text-xs font-bold tracking-widest text-zinc-400 uppercase block">
-                02 // Urbanistik
+                {t.pillar2Tag}
               </span>
               <div>
                 <h3 className="text-lg font-bold text-zinc-950 tracking-tight">
-                  {language === "de" ? "Stadtplanung & Baurecht" : "Urban Planning & Zoning"}
+                  {t.pillar2Title}
                 </h3>
                 <p className="text-xs text-zinc-500 font-medium mt-0.5">
-                  {language === "de" ? "Bebauungspläne · Nachverdichtung · Quartiere" : "Master Planning · Infill · Districts"}
+                  {t.pillar2Subtitle}
                 </p>
               </div>
               <p className="text-xs text-zinc-600 leading-relaxed font-light">
-                {language === "de"
-                  ? "Eingetragene Stadtplaner in der AKH Hessen. Wir entwickeln städtebauliche Rahmenpläne, prüfen Nachverdichtungspotenziale und begleiten vorhabenbezogene Bebauungspläne nach BauGB."
-                  : "Officially registered urban planners with AKH Hesse. We develop urban master plans, evaluate infill potentials, and draft project-based zoning plans under German BauGB."}
+                {t.pillar2Desc}
               </p>
               <ul className="text-xs text-zinc-700 space-y-1.5 pt-3 border-t border-zinc-100 font-light">
-                <li className="flex items-center gap-2"><span className="text-zinc-950 font-bold">✓</span>{language === "de" ? "Städtebauliche Machbarkeitsstudien" : "Urban feasibility studies"}</li>
-                <li className="flex items-center gap-2"><span className="text-zinc-950 font-bold">✓</span>{language === "de" ? "Nachverdichtung & Konversion" : "Densification & brownfield conversion"}</li>
-                <li className="flex items-center gap-2"><span className="text-zinc-950 font-bold">✓</span>{language === "de" ? "Bebauungspläne (§ 12 & § 30 BauGB)" : "Zoning bylaws (§ 12 & § 30 BauGB)"}</li>
+                {t.pillar2Bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <span className="text-zinc-950 font-bold">✓</span>
+                    {bullet}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Pillar 3: Genehmigungen & Baurecht */}
             <div className="bg-white border border-zinc-200 rounded-xl p-7 text-left space-y-4 hover:border-zinc-950 transition-colors">
               <span className="font-mono text-xs font-bold tracking-widest text-[#DC2626] uppercase block">
-                03 // Genehmigung
+                {t.pillar3Tag}
               </span>
               <div>
                 <h3 className="text-lg font-bold text-zinc-950 tracking-tight">
-                  {language === "de" ? "Bauantrag & Baurecht" : "Permits & Building Law"}
+                  {t.pillar3Title}
                 </h3>
                 <p className="text-xs text-zinc-500 font-medium mt-0.5">
-                  {language === "de" ? "HBO · Bauaufsicht · Voranfragen" : "HBO Code · Building Dept · Variances"}
+                  {t.pillar3Subtitle}
                 </p>
               </div>
               <p className="text-xs text-zinc-600 leading-relaxed font-light">
-                {language === "de"
-                  ? "Uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886). Wir erstellen prüffähige Bauanträge, Bauvoranfragen zur Absicherung von Baurecht und erwirken Befreiungen bei der Bauaufsicht."
-                  : "Full unrestricted building permit filing privileges (AKH Hesse No. 21886). We prepare bulletproof applications, preliminary permit queries, and negotiate statutory variances."}
+                {t.pillar3Desc}
               </p>
               <ul className="text-xs text-zinc-700 space-y-1.5 pt-3 border-t border-zinc-100 font-light">
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Rechtskonforme Bauanträge nach HBO" : "Legally compliant HBO applications"}</li>
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Bauvoranfragen (§ 34 BauGB Einfügung)" : "Preliminary permit inquiries (§ 34 BauGB)"}</li>
-                <li className="flex items-center gap-2"><span className="text-[#DC2626] font-bold">✓</span>{language === "de" ? "Abstimmung Denkmalamt & Umweltamt" : "Heritage & environmental clearance"}</li>
+                {t.pillar3Bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <span className="text-[#DC2626] font-bold">✓</span>
+                    {bullet}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -361,7 +365,7 @@ export function RegionalLandingPage({
                         href={activeDistrict.path}
                         className="bg-zinc-950 hover:bg-zinc-800 text-white px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-all min-h-[44px] inline-flex items-center gap-2 shadow-xs"
                       >
-                        <span>{language === "de" ? "Mehr erfahren" : "Learn more"}</span>
+                        <span>{t.learnMore}</span>
                         <span aria-hidden="true">→</span>
                       </a>
                     )}
@@ -430,7 +434,7 @@ export function RegionalLandingPage({
                         href={activeDistrict.path}
                         className="text-xs font-bold text-zinc-950 hover:text-[#DC2626] transition-colors min-h-[36px] flex items-center gap-1 underline underline-offset-4"
                       >
-                        <span>{language === "de" ? "Mehr erfahren" : "Learn more"}</span>
+                        <span>{t.learnMore}</span>
                         <span aria-hidden="true">→</span>
                       </a>
                     )}
@@ -457,17 +461,13 @@ export function RegionalLandingPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left space-y-3 mb-10">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626]">
-              {language === "de" ? "Referenzen & Einzugsgebiet" : "References & Catchment"}
+              {t.referencesBadge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
-              {language === "de"
-                ? "Ausgewählte Referenzen aus der Metropolregion Frankfurt / Rhein-Main"
-                : "Selected References across Frankfurt & Rhine-Main Region"}
+              {t.referencesHeading}
             </h2>
             <p className="text-sm text-zinc-600 font-light">
-              {language === "de"
-                ? `Repräsentative Bauten und Planungen aus unserem Portfolio. Wir planen für Bauherren in ${cityName} und im gesamten Rhein-Main-Gebiet mit derselben bewährten Sorgfalt und Genehmigungssicherheit.`
-                : `Representative completed buildings and planning projects from our portfolio. We plan for clients in ${cityName} and the wider Rhine-Main area with the same dedication and regulatory rigor.`}
+              {t.referencesSubtitlePrefix} {cityName} {t.referencesSubtitleSuffix}
             </p>
           </div>
 

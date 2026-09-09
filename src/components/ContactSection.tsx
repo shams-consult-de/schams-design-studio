@@ -27,15 +27,17 @@ export function ContactSection({
     <section id="contact" className="py-20 lg:py-28 bg-[#0a0a0b] text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Architectural Edge Circle Accent in Far-Right Negative Margin */}
+      {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Margin */}
       <div
-        className="absolute -right-24 top-20 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-70"
+        className="absolute -right-12 sm:right-4 lg:right-10 top-20 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
         aria-hidden="true"
       >
         <div className="relative flex items-center justify-center animate-couch-settle">
-          <div className="absolute w-80 h-80 rounded-full border border-[#DC2626]/35" />
-          <div className="w-56 h-56 rounded-full bg-[#DC2626]/10 blur-xl" />
-          <div className="w-28 h-28 rounded-full bg-[#DC2626] opacity-50 shadow-xl shadow-red-600/30" />
+          {/* Concentric Outer Accent Ring */}
+          <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/35" />
+
+          {/* Solid Bold Crimson Architectural Circle */}
+          <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
         </div>
       </div>
 
