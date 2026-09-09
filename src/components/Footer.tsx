@@ -203,13 +203,25 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
         </div>
       </div>
 
-      {/* Signature Animated Emblem Watermark */}
-      <div className="w-full pt-10 sm:pt-14 pb-4 flex items-center justify-center select-none overflow-hidden group px-6">
-        <img
-          src="/images/animated-logo.webp"
-          alt="Shams Consult Emblem"
-          className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-        />
+      {/* Monumental Architectural Brand Footer with Official Logo */}
+      <div className="w-full pt-12 sm:pt-16 pb-6 overflow-hidden select-none border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <a
+            href="/"
+            onClick={(e) => handleNav(e, "/")}
+            className="group block transition-all duration-300 hover:scale-[1.015] focus:outline-none"
+            aria-label="Shams Consult Startseite"
+          >
+            <img
+              src="/logo-white.png"
+              alt="Shams Consult — Architektur & Stadtplanung"
+              className="w-full max-w-[280px] sm:max-w-[420px] md:max-w-[560px] lg:max-w-[700px] xl:max-w-[800px] h-auto object-contain mx-auto opacity-90 group-hover:opacity-100 transition-opacity drop-shadow-2xl"
+              width="800"
+              height="355"
+              loading="lazy"
+            />
+          </a>
+        </div>
       </div>
 
       {/* Developed with Love in Germany Credit (Centered at very bottom) */}
