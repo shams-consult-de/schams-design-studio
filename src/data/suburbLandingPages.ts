@@ -2545,4 +2545,798 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       }
     ]
   }
+,
+
+  "architektur-wiesbaden-kurviertel": {
+    slug: "architektur-wiesbaden-kurviertel",
+    path: "/architektur-wiesbaden-kurviertel",
+    parentPath: "/architektur-wiesbaden",
+    parentName: { de: "Wiesbaden", en: "Wiesbaden" },
+    h1: {
+      de: "Architektur, Stadtplanung & Denkmalbau im Kurviertel Wiesbaden",
+      en: "Architecture, Urban Planning & Heritage Restoration in Wiesbaden Kurviertel"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Wiesbaden-Kurviertel",
+      en: "Architecture · Urban Planning · Permitting | Wiesbaden Kurviertel"
+    },
+    subtitle: {
+      de: "Das historische Wiesbadener Kurviertel, Kureck, die Wilhelmstraße und das Dambachtal sind Meisterwerke des Klassizismus und Historismus. Wir realisieren hochwertige Altbausanierungen, exklusive Dachausbauten und rechtssichere Bauanträge im engen Einklang mit dem Hessischen Denkmalschutzgesetz.",
+      en: "Wiesbaden's historic spa district, Kureck, Wilhelmstraße, and Dambachtal represent grand classicism and historicist architecture. We deliver prime heritage retrofits, luxury attic conversions, and bulletproof permit filings aligned with Hessian conservation law."
+    },
+    targetKeywords: [
+      "Architekt Wiesbaden Kurviertel",
+      "Denkmalschutz Wiesbaden",
+      "Bauantrag Wiesbaden Wilhelmstraße",
+      "Altbausanierung Wiesbaden",
+      "Architekturbüro Kureck Wiesbaden",
+      "HOAI Leistungsphasen Wiesbaden"
+    ],
+    metaTitle: {
+      de: "Architektur & Denkmalschutz im Kurviertel Wiesbaden | Shams Consult",
+      en: "Architecture & Heritage Conservation in Wiesbaden Kurviertel | Shams Consult"
+    },
+    metaDescription: {
+      de: "AKH-eingetragenes Architekturbüro für das Wiesbadener Kurviertel & Wilhelmstraße. Denkmalgerechte Sanierung, Dachgeschossausbau, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Licensed architect studio for Wiesbaden Kurviertel & Wilhelmstraße. Heritage restoration, attic additions, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Kurhaus, Wilhelmstraße, Taunusstraße, Parkstraße, Nerotal & Kureck",
+        en: "Catchment Area: Kurhaus, Wilhelmstraße, Taunusstraße, Parkstraße, Nerotal & Kureck"
+      },
+      {
+        de: "Uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886)",
+        en: "Full building permit filing privileges (AKH Hesse No. 21886)"
+      },
+      {
+        de: "Expertise in Denkmalschutz & Ensemblesatzungen nach HDSchG",
+        en: "Heritage conservation & ensemble preservation under HDSchG"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Bauen im Kurviertel Wiesbaden: Bäderarchitektur, Denkmalschutz & Ensembles",
+      en: "Building in Wiesbaden Kurviertel: Spa Architecture, Heritage & Ensembles"
+    },
+    localFocusDescription: {
+      de: "Das Wiesbadener Kurviertel ist geprägt von prachtvollen Gründerzeit- und Jugendstilfassaden. Umbauten, energetische Ertüchtigungen und Dachgauben verlangen Fingerspitzengefühl mit der Unteren Denkmalschutzbehörde Wiesbaden und präzise Abstimmung von GEG-Ausnahmetatbeständen.",
+      en: "The Wiesbaden spa quarter is characterized by magnificent Wilhelminian and Art Nouveau facades. Structural renovations, energetic retrofits, and dormers demand fine diplomacy with the heritage office and precise GEG statutory exemptions."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
+      street: "Carl-von-Noorden-Platz 5",
+      city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
+      phone: "069 74 22 3 777",
+      phoneHref: "tel:+4969742237770",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Ensembleschutz nach § 2 HDSchG", en: "Ensembleschutz nach § 2 HDSchG" },
+        description: { de: "Rechtssichere Abstimmung von Fassadensanierungen, Fensterteilungen und Dachgauben im geschützten Ensemblebereich.", en: "Rechtssichere Abstimmung von Fassadensanierungen, Fensterteilungen und Dachgauben im geschützten Ensemblebereich." }
+      },
+      {
+        title: { de: "Gestaltungssatzung Innenstadt & Kurviertel", en: "Gestaltungssatzung Innenstadt & Kurviertel" },
+        description: { de: "Exakte Einhaltung der Vorgaben zu Materialität, Farbkonzepten und historischen Schmuckelementen.", en: "Exakte Einhaltung der Vorgaben zu Materialität, Farbkonzepten und historischen Schmuckelementen." }
+      },
+      {
+        title: { de: "Stellplatzablösesatzung Wiesbaden", en: "Stellplatzablösesatzung Wiesbaden" },
+        description: { de: "Pragmatische Lösungen und Ablöseverhandlungen bei Nachverdichtungen und Dachausbauten ohne Hofstellplätze.", en: "Pragmatische Lösungen und Ablöseverhandlungen bei Nachverdichtungen und Dachausbauten ohne Hofstellplätze." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Kurviertel?", en: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Kurviertel?" },
+        answer: { de: "Im Kurviertel stehen die meisten Gebäude unter Ensembleschutz oder sind Einzelkulturdenkmäler. Alle Maßnahmen an Fassade, Fenstern oder Dächern müssen vorab genehmigt werden. Wir führen die Abstimmung direkt mit dem Denkmalamt Wiesbaden.", en: "Im Kurviertel stehen die meisten Gebäude unter Ensembleschutz oder sind Einzelkulturdenkmäler. Alle Maßnahmen an Fassade, Fenstern oder Dächern müssen vorab genehmigt werden. Wir führen die Abstimmung direkt mit dem Denkmalamt Wiesbaden." }
+      },
+      {
+        question: { de: "Sind Dachgeschossausbauten im Kurviertel realisierbar?", en: "Sind Dachgeschossausbauten im Kurviertel realisierbar?" },
+        answer: { de: "Ja. Bei denkmalgerechter Gaubengestaltung und schlüssigem Brandschutzkonzept (2. Rettungsweg nach HBO) erwirken wir verlässliche Baugenehmigungen.", en: "Ja. Bei denkmalgerechter Gaubengestaltung und schlüssigem Brandschutzkonzept (2. Rettungsweg nach HBO) erwirken wir verlässliche Baugenehmigungen." }
+      },
+      {
+        question: { de: "Wie gelingt die energetische Sanierung historischer Altbauten?", en: "Wie gelingt die energetische Sanierung historischer Altbauten?" },
+        answer: { de: "Wir kombinieren hocheffiziente Innendämmungen, denkmalgerechte Kasten- oder Isolierglasfenster und moderne Wärmepumpenkonzepte mit steuerlicher Denkmal-AfA (§ 7i EStG).", en: "Wir kombinieren hocheffiziente Innendämmungen, denkmalgerechte Kasten- oder Isolierglasfenster und moderne Wärmepumpenkonzepte mit steuerlicher Denkmal-AfA (§ 7i EStG)." }
+      }
+    ]
+  },
+
+  "architektur-wiesbaden-dotzheim": {
+    slug: "architektur-wiesbaden-dotzheim",
+    path: "/architektur-wiesbaden-dotzheim",
+    parentPath: "/architektur-wiesbaden",
+    parentName: { de: "Wiesbaden", en: "Wiesbaden" },
+    h1: {
+      de: "Architektur, Neubau & Bauanträge in Wiesbaden-Dotzheim & Kohlheck",
+      en: "Architecture, New Builds & Building Permits in Wiesbaden Dotzheim & Kohlheck"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Wiesbaden-Dotzheim",
+      en: "Architecture · Urban Planning · Permitting | Wiesbaden Dotzheim"
+    },
+    subtitle: {
+      de: "Dotzheim, der Kohlheck und Klarenthal bieten erstklassige Wohnlagen am Taunushang. Wir entwerfen moderne Architektenvillen, effiziente Mehrfamilienhäuser und begleiten Nachverdichtungen sowie KfW-40-Sanierungen mit voller Genehmigungssicherheit.",
+      en: "Dotzheim, Kohlheck, and Klarenthal offer prime hillside residential enclaves on the edge of the Taunus. We design contemporary architect villas, efficient multi-family residences, and steer infill developments with full HBO permit compliance."
+    },
+    targetKeywords: [
+      "Architekt Wiesbaden Dotzheim",
+      "Bauantrag Kohlheck Wiesbaden",
+      "Hausbau Wiesbaden Dotzheim",
+      "Baugenehmigung Klarenthal",
+      "Architekturbüro Dotzheim",
+      "KfW 40 Wiesbaden"
+    ],
+    metaTitle: {
+      de: "Architektur & Bauanträge in Wiesbaden-Dotzheim & Kohlheck | Shams Consult",
+      en: "Architecture & Building Permits in Wiesbaden Dotzheim & Kohlheck | Shams Consult"
+    },
+    metaDescription: {
+      de: "Architekturbüro (AKH Nr. 21886) für Wiesbaden-Dotzheim, Kohlheck & Klarenthal. Neubau Stadtvillen, Nachverdichtung, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Registered architect studio for Wiesbaden Dotzheim, Kohlheck & Klarenthal. Contemporary villas, urban infill, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Kohlheck, Dotzheim-Mitte, Freudenberg, Klarenthal, Sauerland",
+        en: "Catchment Area: Kohlheck, Central Dotzheim, Freudenberg, Klarenthal, Sauerland"
+      },
+      {
+        de: "Hangbebauung & Baugrundoptimierung am Taunushang",
+        en: "Hillside engineering & geotechnical foundation optimization"
+      },
+      {
+        de: "Vollumfängliche HOAI Leistungsphasen 1–9 aus einer Hand",
+        en: "Comprehensive architectural services from concept to handover (HOAI 1–9)"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Wohnungsbau in Dotzheim & Kohlheck: Hanglagen, Nachverdichtung & Energieeffizienz",
+      en: "Residential Planning in Dotzheim & Kohlheck: Slopes, Infill & Energy Efficiency"
+    },
+    localFocusDescription: {
+      de: "Großzügige Gartengrundstücke in Kohlheck und am Freudenberg bergen erhebliches Nachverdichtungspotenzial nach § 34 BauGB. Wir berechnen präzise Grundflächenzahlen, entwickeln ansprechende Terrassen- und Hangarchitektur und sichern schnelle Baugenehmigungen bei der Bauaufsicht Wiesbaden.",
+      en: "Expansive residential plots in Kohlheck and Freudenberg offer significant infill potential under § 34 BauGB. We calculate precise coverage metrics, design elegant hillside terrace architecture, and secure rapid approvals from the Wiesbaden building department."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
+      street: "Carl-von-Noorden-Platz 5",
+      city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
+      phone: "069 74 22 3 777",
+      phoneHref: "tel:+4969742237770",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Bebauungspläne Kohlheck & Dotzheim", en: "Bebauungspläne Kohlheck & Dotzheim" },
+        description: { de: "Konforme Umsetzung von Festsetzungen zu Dachneigungen, Traufhöhen und Baugrenzen.", en: "Konforme Umsetzung von Festsetzungen zu Dachneigungen, Traufhöhen und Baugrenzen." }
+      },
+      {
+        title: { de: "§ 34 BauGB Nachverdichtung & Einfügung", en: "§ 34 BauGB Nachverdichtung & Einfügung" },
+        description: { de: "Ausschöpfung maximaler Baurechte bei Grundstücksteilungen und Gartenbebauungen.", en: "Ausschöpfung maximaler Baurechte bei Grundstücksteilungen und Gartenbebauungen." }
+      },
+      {
+        title: { de: "Versickerungssatzung Wiesbaden", en: "Versickerungssatzung Wiesbaden" },
+        description: { de: "Planung modularer Rigolen und Retentionszisternen zur Vermeidung von Einleitungsgebühren.", en: "Planung modularer Rigolen und Retentionszisternen zur Vermeidung von Einleitungsgebühren." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welche Herausforderungen stellen Hanggrundstücke in Kohlheck?", en: "Welche Herausforderungen stellen Hanggrundstücke in Kohlheck?" },
+        answer: { de: "Hanglagen erfordern fundierte geotechnische Berechnungen, wirtschaftliche Stützwandkonstruktionen und intelligente Grundrisse mit hangseitiger Belichtung. Wir optimieren Aushub und Rohbaukosten gezielt.", en: "Hanglagen erfordern fundierte geotechnische Berechnungen, wirtschaftliche Stützwandkonstruktionen und intelligente Grundrisse mit hangseitiger Belichtung. Wir optimieren Aushub und Rohbaukosten gezielt." }
+      },
+      {
+        question: { de: "Wie lange dauert ein Bauantrag bei der Bauaufsicht Wiesbaden?", en: "Wie lange dauert ein Bauantrag bei der Bauaufsicht Wiesbaden?" },
+        answer: { de: "Im vereinfachten Verfahren nach § 65 HBO dauert die Genehmigung bei vollständigen Unterlagen im Schnitt 3 Monate. Wir verhindern Rückfragen durch vollständige Einreichung.", en: "Im vereinfachten Verfahren nach § 65 HBO dauert die Genehmigung bei vollständigen Unterlagen im Schnitt 3 Monate. Wir verhindern Rückfragen durch vollständige Einreichung." }
+      },
+      {
+        question: { de: "Lohnt sich die KfW-Effizienzhaus-40-Förderung bei Neubauten?", en: "Lohnt sich die KfW-Effizienzhaus-40-Förderung bei Neubauten?" },
+        answer: { de: "Ja, zinsgünstige KfW-Kredite und QNG-Nachhaltigkeitszertifikate senken die Finanzierungskosten spürbar. Wir binden die Fördermittel direkt in die Entwurfsplanung ein.", en: "Ja, zinsgünstige KfW-Kredite und QNG-Nachhaltigkeitszertifikate senken die Finanzierungskosten spürbar. Wir binden die Fördermittel direkt in die Entwurfsplanung ein." }
+      }
+    ]
+  },
+
+  "architektur-bad-homburg-gonzenheim": {
+    slug: "architektur-bad-homburg-gonzenheim",
+    path: "/architektur-bad-homburg-gonzenheim",
+    parentPath: "/architektur-bad-homburg",
+    parentName: { de: "Bad Homburg v. d. Höhe", en: "Bad Homburg" },
+    h1: {
+      de: "Architektur, Villenbau & Bauanträge in Bad Homburg-Gonzenheim & Kirdorf",
+      en: "Architecture, Villa Construction & Building Permits in Bad Homburg Gonzenheim & Kirdorf"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Bad Homburg-Gonzenheim",
+      en: "Architecture · Urban Planning · Permitting | Bad Homburg Gonzenheim"
+    },
+    subtitle: {
+      de: "Gonzenheim, Kirdorf und Dornholzhausen vereinen gehobene Taunus-Wohnkultur mit exzellenter Frankfurter Anbindung. Wir planen anspruchsvolle Einfamilienvillen, Doppelhäuser und nachhaltige Geschosswohnungsbauten mit lückenloser Kostensicherheit nach DIN 276.",
+      en: "Gonzenheim, Kirdorf, and Dornholzhausen blend upscale Taunus residential living with rapid Frankfurt connections. We design prestigious private villas, semi-detached residences, and sustainable apartments with rigorous DIN 276 budget certainty."
+    },
+    targetKeywords: [
+      "Architekt Bad Homburg Gonzenheim",
+      "Villenbau Kirdorf",
+      "Bauantrag Dornholzhausen",
+      "Baugenehmigung Bad Homburg",
+      "Architekturbüro Gonzenheim",
+      "HOAI Bad Homburg"
+    ],
+    metaTitle: {
+      de: "Architektur & Villenbau in Bad Homburg-Gonzenheim | Shams Consult",
+      en: "Architecture & Villa Design in Bad Homburg Gonzenheim | Shams Consult"
+    },
+    metaDescription: {
+      de: "Planungsbüro (AKH Hessen) für Bad Homburg-Gonzenheim, Kirdorf & Dornholzhausen. Exklusive Villen, Nachverdichtung, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Licensed studio (AKH Hesse) for Bad Homburg Gonzenheim, Kirdorf & Dornholzhausen. Luxury villas, infill, HOAI 1–9, and HBO building permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Gonzenheim, Kirdorf, Dornholzhausen, Ober-Erlenbach, Ober-Eschbach",
+        en: "Catchment Area: Gonzenheim, Kirdorf, Dornholzhausen, Ober-Erlenbach, Ober-Eschbach"
+      },
+      {
+        de: "Uneingeschränkte Bauvorlageberechtigung vor der Bauaufsicht Hochtaunuskreis",
+        en: "Full building permit filing authorization with Hochtaunus Building Authority"
+      },
+      {
+        de: "Spezialisiert auf hochwertige Villen & barrierefreie Mehrfamilienhäuser",
+        en: "Specialized in high-end villas & barrier-free multi-family residences"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Gehobener Wohnungsbau in Bad Homburg: Villen, Erhaltungssatzungen & Nachverdichtung",
+      en: "Upscale Residential Living in Bad Homburg: Villas, Preservation & Infill"
+    },
+    localFocusDescription: {
+      de: "Zwischen dem historischen Kirdorfer Dorfkern und den großzügigen Villengrundstücken in Gonzenheim und Dornholzhausen navigieren wir örtliche Gestaltungssatzungen, Baumschutzauflagen und B-Plan-Vorgaben mit höchster Präzision.",
+      en: "Between historic Kirdorf village core and expansive villa estates in Gonzenheim and Dornholzhausen, we navigate municipal design bylaws, tree conservation statutes, and B-Plan parameters with proven precision."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
+      street: "Carl-von-Noorden-Platz 5",
+      city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
+      phone: "069 74 22 3 777",
+      phoneHref: "tel:+4969742237770",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Erhaltungssatzung Ortskern Kirdorf", en: "Erhaltungssatzung Ortskern Kirdorf" },
+        description: { de: "Behutsame Einpassung in historische Gassen und Abstimmung von Fassaden- und Dachformen.", en: "Behutsame Einpassung in historische Gassen und Abstimmung von Fassaden- und Dachformen." }
+      },
+      {
+        title: { de: "Bebauungspläne Bad Homburg Süd & Gonzenheim", en: "Bebauungspläne Bad Homburg Süd & Gonzenheim" },
+        description: { de: "Verbindliche Umsetzung von Vorgaben zu Firsthöhen, Vollgeschossen und Baulinien.", en: "Verbindliche Umsetzung von Vorgaben zu Firsthöhen, Vollgeschossen und Baulinien." }
+      },
+      {
+        title: { de: "Baumschutzsatzung der Stadt Bad Homburg", en: "Baumschutzsatzung der Stadt Bad Homburg" },
+        description: { de: "Schonung prägender Solitärbäume und Erstellung qualifizierter Freiflächengestaltungspläne.", en: "Schonung prägender Solitärbäume und Erstellung qualifizierter Freiflächengestaltungspläne." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Wer entscheidet über Bauanträge in Gonzenheim und Kirdorf?", en: "Wer entscheidet über Bauanträge in Gonzenheim und Kirdorf?" },
+        answer: { de: "Zuständig ist die Bauaufsicht der Stadt Bad Homburg v. d. Höhe bzw. des Hochtaunuskreises. Durch unsere langjährige regionale Präsenz pflegen wir lösungsorientierte Kontakte zu den Baubehörden.", en: "Zuständig ist die Bauaufsicht der Stadt Bad Homburg v. d. Höhe bzw. des Hochtaunuskreises. Durch unsere langjährige regionale Präsenz pflegen wir lösungsorientierte Kontakte zu den Baubehörden." }
+      },
+      {
+        question: { de: "Welche Bauten sind in Gonzenheim besonders gefragt?", en: "Welche Bauten sind in Gonzenheim besonders gefragt?" },
+        answer: { de: "Gefragt sind moderne Bauhaus-Stadtvillen, energieeffiziente KfW-40-Einfamilienhäuser sowie anspruchsvolle Mehrfamilienhäuser mit Tiefgaragen für Investoren.", en: "Gefragt sind moderne Bauhaus-Stadtvillen, energieeffiziente KfW-40-Einfamilienhäuser sowie anspruchsvolle Mehrfamilienhäuser mit Tiefgaragen für Investoren." }
+      },
+      {
+        question: { de: "Übernehmen Sie auch die Bauleitung (LPH 8) vor Ort?", en: "Übernehmen Sie auch die Bauleitung (LPH 8) vor Ort?" },
+        answer: { de: "Ja, wir stellen durch tägliche oder engmaschige Baustellenpräsenz höchste Ausführungsqualität nach VOB sicher und wahren Termine und Budgets.", en: "Ja, wir stellen durch tägliche oder engmaschige Baustellenpräsenz höchste Ausführungsqualität nach VOB sicher und wahren Termine und Budgets." }
+      }
+    ]
+  },
+
+  "architektur-darmstadt-arheilgen": {
+    slug: "architektur-darmstadt-arheilgen",
+    path: "/architektur-darmstadt-arheilgen",
+    parentPath: "/architektur-darmstadt",
+    parentName: { de: "Darmstadt", en: "Darmstadt" },
+    h1: {
+      de: "Architektur, Wohnungsbau & Bauanträge in Darmstadt-Arheilgen & Martinsviertel",
+      en: "Architecture, Residential Planning & Building Permits in Darmstadt Arheilgen & Martinsviertel"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Darmstadt-Arheilgen",
+      en: "Architecture · Urban Planning · Permitting | Darmstadt Arheilgen"
+    },
+    subtitle: {
+      de: "Darmstadt-Arheilgen, das Martinsviertel und Kranichstein vereinen lebendige Gründerzeitstrukturen mit florierenden Neubaugebieten. Wir realisieren urbane Baulückenschließungen, energieeffiziente KfW-40-Wohngebäude und rechtssichere Bauanträge bei der Bauaufsicht Darmstadt.",
+      en: "Darmstadt-Arheilgen, Martinsviertel, and Kranichstein combine vibrant Wilhelminian quarters with expanding residential developments. We deliver urban infill gap closures, energy-efficient KfW 40 residential projects, and compliant permit dossiers for the Darmstadt building department."
+    },
+    targetKeywords: [
+      "Architekt Darmstadt Arheilgen",
+      "Bauantrag Martinsviertel Darmstadt",
+      "Baugenehmigung Kranichstein",
+      "Hausbau Arheilgen",
+      "Architekturbüro Darmstadt Nord",
+      "HOAI Darmstadt"
+    ],
+    metaTitle: {
+      de: "Architektur & Bauanträge in Darmstadt-Arheilgen & Martinsviertel | Shams Consult",
+      en: "Architecture & Permits in Darmstadt Arheilgen & Martinsviertel | Shams Consult"
+    },
+    metaDescription: {
+      de: "Staatlich anerkanntes Architekturbüro (AKH Nr. 21886) für Darmstadt-Arheilgen, Martinsviertel & Kranichstein. Neubau, Nachverdichtung, HOAI 1–9 und HBO-Bauanträge.",
+      en: "State-recognized architect practice (AKH No. 21886) for Darmstadt Arheilgen, Martinsviertel & Kranichstein. Infill, multi-family, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Arheilgen, Martinsviertel, Johannesviertel, Kranichstein, Bürgerpark",
+        en: "Catchment Area: Arheilgen, Martinsviertel, Johannesviertel, Kranichstein, Bürgerpark"
+      },
+      {
+        de: "Uneingeschränkte Bauvorlageberechtigung vor der Bauaufsicht Darmstadt",
+        en: "Full building permit filing privileges with Darmstadt Building Authority"
+      },
+      {
+        de: "Urbane Baulückenschließungen & Brandschutzkonzepte nach HBO",
+        en: "Urban infill gap closures & certified fire protection concepts per HBO"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Wohnbau in Darmstadt-Nord: Martinsviertel, Arheilgen & Nachverdichtung",
+      en: "Residential Architecture in North Darmstadt: Martinsviertel, Arheilgen & Infill"
+    },
+    localFocusDescription: {
+      de: "Das dichte Martinsviertel verlangt akkurate Brandschutz- und Abstandsflächennachweise im Blockrand, während in Arheilgen und Kranichstein großzügige Familienhäuser und modulare Geschosswohnungsbauten gefragt sind.",
+      en: "The dense Martinsviertel requires stringent fire safety and setback calculations in dense perimeter blocks, whereas Arheilgen and Kranichstein emphasize modern family residences and modular multi-family buildings."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
+      street: "Dieburger Str. 14",
+      city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
+      phone: "06074 91 99 555",
+      phoneHref: "tel:+4960749199555",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Dieburger+Str.+14,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "§ 34 BauGB Einfügungsgebot im Martinsviertel", en: "§ 34 BauGB Einfügungsgebot im Martinsviertel" },
+        description: { de: "Harmonische Einfügung in historische Fluchtlinien, Geschoßhöhen und Hofbebauungsstrukturen.", en: "Harmonische Einfügung in historische Fluchtlinien, Geschoßhöhen und Hofbebauungsstrukturen." }
+      },
+      {
+        title: { de: "Bebauungspläne Arheilgen & Kranichstein", en: "Bebauungspläne Arheilgen & Kranichstein" },
+        description: { de: "Präzise Berücksichtigung von GFZ/GRZ und Grünordnungsplänen.", en: "Präzise Berücksichtigung von GFZ/GRZ und Grünordnungsplänen." }
+      },
+      {
+        title: { de: "Baumschutz- und Stellplatzsatzung Darmstadt", en: "Baumschutz- und Stellplatzsatzung Darmstadt" },
+        description: { de: "Erstellung prüffähiger Nachweise zu KFZ- und Fahrradabstellplätzen nach städtischem Schlüssel.", en: "Erstellung prüffähiger Nachweise zu KFZ- und Fahrradabstellplätzen nach städtischem Schlüssel." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Wie werden Baulücken im Martinsviertel genehmigt?", en: "Wie werden Baulücken im Martinsviertel genehmigt?" },
+        answer: { de: "Über das Einfügungsgebot nach § 34 BauGB. Wir berechnen die maßgebliche Umgebungsbebauung exakt und sichern die Planung über eine qualifizierte Bauvoranfrage ab.", en: "Über das Einfügungsgebot nach § 34 BauGB. Wir berechnen die maßgebliche Umgebungsbebauung exakt und sichern die Planung über eine qualifizierte Bauvoranfrage ab." }
+      },
+      {
+        question: { de: "Bauen Sie auch energieeffiziente KfW-40-Häuser in Arheilgen?", en: "Bauen Sie auch energieeffiziente KfW-40-Häuser in Arheilgen?" },
+        answer: { de: "Ja, wir planen standardmäßig nach KfW-Effizienzhaus-40-Standards mit Geothermie, Luft-Wasser-Wärmepumpen und Photovoltaik.", en: "Ja, wir planen standardmäßig nach KfW-Effizienzhaus-40-Standards mit Geothermie, Luft-Wasser-Wärmepumpen und Photovoltaik." }
+      },
+      {
+        question: { de: "Wie lange dauert ein Bauantrag bei der Wissenschaftsstadt Darmstadt?", en: "Wie lange dauert ein Bauantrag bei der Wissenschaftsstadt Darmstadt?" },
+        answer: { de: "In der Regel zwischen 3 und 4 Monaten. Durch vollständige statische und brandschutztechnische Vorprüfung vermeiden wir zeitintensive Nachforderungen.", en: "In der Regel zwischen 3 und 4 Monaten. Durch vollständige statische und brandschutztechnische Vorprüfung vermeiden wir zeitintensive Nachforderungen." }
+      }
+    ]
+  },
+
+  "architektur-darmstadt-griesheim-weiterstadt": {
+    slug: "architektur-darmstadt-griesheim-weiterstadt",
+    path: "/architektur-darmstadt-griesheim-weiterstadt",
+    parentPath: "/architektur-darmstadt",
+    parentName: { de: "Darmstadt & Kreis Darmstadt-Dieburg", en: "Darmstadt & District" },
+    h1: {
+      de: "Architektur, Gewerbebau & Wohnen in Griesheim, Weiterstadt & Pfungstadt",
+      en: "Architecture, Commercial & Residential Planning in Griesheim, Weiterstadt & Pfungstadt"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Griesheim-Weiterstadt",
+      en: "Architecture · Urban Planning · Permitting | Griesheim Weiterstadt"
+    },
+    subtitle: {
+      de: "Entlang der dynamischen Achsen A5/A67 und der Bergstraße entwickeln wir moderne Wohnungsbauten, repräsentative Gewerbehallen und gemischt genutzte Liegenschaften. Wir sichern schnelle Genehmigungsverfahren bei der Bauaufsicht Landkreis Darmstadt-Dieburg.",
+      en: "Along the dynamic A5/A67 transport corridors and Bergstraße, we design contemporary residential schemes, commercial corporate facilities, and mixed-use properties, ensuring rapid building permits from the Darmstadt-Dieburg district authority."
+    },
+    targetKeywords: [
+      "Architekt Griesheim",
+      "Architekt Weiterstadt",
+      "Gewerbebau Pfungstadt",
+      "Bauantrag Landkreis Darmstadt-Dieburg",
+      "Baugenehmigung Weiterstadt",
+      "HOAI Griesheim"
+    ],
+    metaTitle: {
+      de: "Architektur & Gewerbebau in Griesheim, Weiterstadt & Pfungstadt | Shams Consult",
+      en: "Architecture & Commercial Planning in Griesheim & Weiterstadt | Shams Consult"
+    },
+    metaDescription: {
+      de: "Architekturbüro (AKH Hessen Nr. 21886) für Griesheim, Weiterstadt, Pfungstadt & Bergstraße. Wohnbau, Gewerbe- und Logistikbauten, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Licensed architect practice (AKH Hesse No. 21886) for Griesheim, Weiterstadt, Pfungstadt & Bergstraße. Residential and commercial architecture, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Griesheim, Weiterstadt, Pfungstadt, Riedstadt, Seeheim-Jugenheim",
+        en: "Catchment Area: Griesheim, Weiterstadt, Pfungstadt, Riedstadt, Seeheim-Jugenheim"
+      },
+      {
+        de: "Bauvorlageberechtigung vor der Bauaufsicht Darmstadt-Dieburg in Dieburg",
+        en: "Full permit filing privileges with Darmstadt-Dieburg District Building Authority"
+      },
+      {
+        de: "Gewerbe- & Geschosswohnungsbau mit DIN 276 Kostenkontrolle",
+        en: "Commercial & multi-family residential delivery under DIN 276 budget control"
+      },
+      {
+        de: "B-Plan-Erstellung & städtebauliche Rahmenplanung (AKH Stadtplaner)",
+        en: "Master planning & statutory zoning procedures by registered urban planners"
+      }
+    ],
+    localFocusTitle: {
+      de: "Wirtschaftsachse Darmstadt-West: Gewerbe, Wohnungsbau & B-Plan-Verfahren",
+      en: "Darmstadt West Growth Axis: Commercial, Housing & Zoning Procedures"
+    },
+    localFocusDescription: {
+      de: "In Weiterstadt und Griesheim kombinieren wir gewerbliche Funktionalität (LKW-Logistik, Schallkontingente, Immissionsschutz) mit hochwertiger Corporate Architecture und energieeffizientem Wohnungsbau.",
+      en: "In Weiterstadt and Griesheim, we merge commercial functionality (freight logistics, acoustic quotas, environmental emissions) with distinguished corporate architecture and energy-efficient housing."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
+      street: "Dieburger Str. 14",
+      city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
+      phone: "06074 91 99 555",
+      phoneHref: "tel:+4960749199555",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Dieburger+Str.+14,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Bauaufsicht Landkreis Darmstadt-Dieburg", en: "Bauaufsicht Landkreis Darmstadt-Dieburg" },
+        description: { de: "Erprobte Genehmigungsbegleitung im Kreishaus Dieburg für Vorhaben im Kreisgebiet.", en: "Erprobte Genehmigungsbegleitung im Kreishaus Dieburg für Vorhaben im Kreisgebiet." }
+      },
+      {
+        title: { de: "Gewerbegebietsfestsetzungen nach BauNVO", en: "Gewerbegebietsfestsetzungen nach BauNVO" },
+        description: { de: "Einhaltung von Emissionskontingenten nach DIN 45691 und TA Lärm.", en: "Einhaltung von Emissionskontingenten nach DIN 45691 und TA Lärm." }
+      },
+      {
+        title: { de: "Regenwasserretention & Löschwasserversorgung", en: "Regenwasserretention & Löschwasserversorgung" },
+        description: { de: "Ingenieurmäßige Berechnung von Retentionsräumen und Brandschutznachweisen für Hallenbauten.", en: "Ingenieurmäßige Berechnung von Retentionsräumen und Brandschutznachweisen für Hallenbauten." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welche Bauämter sind in Weiterstadt und Griesheim zuständig?", en: "Welche Bauämter sind in Weiterstadt und Griesheim zuständig?" },
+        answer: { de: "Zuständig ist die Untere Bauaufsicht des Landkreises Darmstadt-Dieburg mit Sitz in Dieburg. Wir kennen die behördlichen Anforderungen im Landkreis seit vielen Jahren.", en: "Zuständig ist die Untere Bauaufsicht des Landkreises Darmstadt-Dieburg mit Sitz in Dieburg. Wir kennen die behördlichen Anforderungen im Landkreis seit vielen Jahren." }
+      },
+      {
+        question: { de: "Planen Sie auch Gewerbehallen und Bürokomplexe?", en: "Planen Sie auch Gewerbehallen und Bürokomplexe?" },
+        answer: { de: "Ja, wir planen schlüsselfertige Hallenbauten, Logistikstützpunkte, Werkstätten und moderne Bürogebäude nach VOB und HOAI 1–9.", en: "Ja, wir planen schlüsselfertige Hallenbauten, Logistikstützpunkte, Werkstätten und moderne Bürogebäude nach VOB und HOAI 1–9." }
+      },
+      {
+        question: { de: "Können Sie Bebauungspläne für Investoren aufstellen?", en: "Können Sie Bebauungspläne für Investoren aufstellen?" },
+        answer: { de: "Als eingetragene Stadtplaner in der AKH Hessen begleiten wir vorhabenbezogene Bebauungspläne (§ 12 BauGB) und städtebauliche Verträge mit den Kommunen.", en: "Als eingetragene Stadtplaner in der AKH Hessen begleiten wir vorhabenbezogene Bebauungspläne (§ 12 BauGB) und städtebauliche Verträge mit den Kommunen." }
+      }
+    ]
+  },
+
+  "architektur-hanau-innenstadt": {
+    slug: "architektur-hanau-innenstadt",
+    path: "/architektur-hanau-innenstadt",
+    parentPath: "/architektur-hanau",
+    parentName: { de: "Hanau", en: "Hanau" },
+    h1: {
+      de: "Architektur, Konversion & Wohnungsbau in Hanau-Innenstadt & Pioneer Park",
+      en: "Architecture, Urban Conversion & Housing in Hanau Center & Pioneer Park"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Hanau-Innenstadt",
+      en: "Architecture · Urban Planning · Permitting | Hanau City Center"
+    },
+    subtitle: {
+      de: "Hanau setzt mit dem Pioneer Park und der Konversion ehemaliger Militär- und Bahnflächen bundesweit Maßstäbe. Wir entwerfen zukunftsweisende Geschosswohnungsbauten, nachhaltige Holz-Hybrid-Gebäude und gewerbliche Liegenschaften mit strikter DIN 276 Kostendisziplin.",
+      en: "Hanau sets national benchmarks with the Pioneer Park and urban conversion schemes. We design visionary multi-family apartment buildings, sustainable timber-hybrid architecture, and commercial facilities with strict DIN 276 cost discipline."
+    },
+    targetKeywords: [
+      "Architekt Hanau Innenstadt",
+      "Pioneer Park Hanau Architekt",
+      "Bauantrag Hanau Lamboy",
+      "Baugenehmigung Hanau",
+      "Geschosswohnungsbau Hanau",
+      "HOAI Hanau"
+    ],
+    metaTitle: {
+      de: "Architektur & Wohnungsbau in Hanau-Innenstadt & Pioneer Park | Shams Consult",
+      en: "Architecture & Urban Housing in Hanau Center & Pioneer Park | Shams Consult"
+    },
+    metaDescription: {
+      de: "Staatlich anerkanntes Planungsbüro (AKH Nr. 21886) für Hanau-Innenstadt, Lamboy & Pioneer Park. Moderner Wohnungsbau, Konversion, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Registered architectural studio (AKH No. 21886) for Hanau Center, Lamboy & Pioneer Park. Modern residential buildings, urban conversion, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Innenstadt, Lamboy, Pioneer Park, Campo Pond, Kinzigbogen",
+        en: "Catchment Area: City Center, Lamboy, Pioneer Park, Campo Pond, Kinzigbogen"
+      },
+      {
+        de: "Bauvorlageberechtigung bei der Bauaufsicht der Stadt Hanau",
+        en: "Full permit filing privileges with City of Hanau Building Authority"
+      },
+      {
+        de: "Spezialisiert auf zukunftsfähige KfW-40-Wohnanlagen & Konversionen",
+        en: "Specialized in future-proof KfW 40 apartment complexes & brownfield conversions"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Moderne Stadtentwicklung in Hanau: Pioneer Park, Konversion & urbane Dichte",
+      en: "Modern Urban Development in Hanau: Pioneer Park, Conversion & Urban Density"
+    },
+    localFocusDescription: {
+      de: "Hanaus dynamischer Wandel erfordert innovative Wohnkonzepte, ressourcenschonende Bauweisen und zügige Genehmigungsverfahren im vereinfachten Baugenehmigungsverfahren nach § 65 HBO.",
+      en: "Hanau's dynamic transformation demands innovative housing typologies, resource-saving construction techniques, and streamlined approvals under § 65 HBO simplified permit procedures."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
+      street: "Carl-von-Noorden-Platz 5",
+      city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
+      phone: "069 74 22 3 777",
+      phoneHref: "tel:+4969742237770",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Bebauungspläne Pioneer Park & Lamboy", en: "Bebauungspläne Pioneer Park & Lamboy" },
+        description: { de: "Konforme Auslegung moderner Quartiersbebauungspläne mit hohen Nachhaltigkeitskriterien.", en: "Konforme Auslegung moderner Quartiersbebauungspläne mit hohen Nachhaltigkeitskriterien." }
+      },
+      {
+        title: { de: "Mobilitätssatzung der Stadt Hanau", en: "Mobilitätssatzung der Stadt Hanau" },
+        description: { de: "Integrierte Mobilitätskonzepte zur Stellplatzreduktion durch Car-Sharing und Bike-Infrastruktur.", en: "Integrierte Mobilitätskonzepte zur Stellplatzreduktion durch Car-Sharing und Bike-Infrastruktur." }
+      },
+      {
+        title: { de: "Immissionsschutz & Lärmkontingentierung", en: "Immissionsschutz & Lärmkontingentierung" },
+        description: { de: "Schalltechnische Dimensionierung von Wohnfassaden an Bahntrassen und Hauptachsen.", en: "Schalltechnische Dimensionierung von Wohnfassaden an Bahntrassen und Hauptachsen." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welche Bauweisen eignen sich für Neubauten im Pioneer Park?", en: "Welche Bauweisen eignen sich für Neubauten im Pioneer Park?" },
+        answer: { de: "Vor allem ressourcenschonende Holz-Hybrid- und Massivbauten mit KfW-40-Standard, begrünten Dächern und dezentralen Nahwärmeanschlüssen.", en: "Vor allem ressourcenschonende Holz-Hybrid- und Massivbauten mit KfW-40-Standard, begrünten Dächern und dezentralen Nahwärmeanschlüssen." }
+      },
+      {
+        question: { de: "Wie schnell erteilt die Bauaufsicht Hanau Genehmigungen?", en: "Wie schnell erteilt die Bauaufsicht Hanau Genehmigungen?" },
+        answer: { de: "Im vereinfachten Verfahren nach HBO liegt die Bearbeitungszeit bei rund 3 bis 4 Monaten. Durch digitale und vollständige Einreichung sichern wir termingerechte Freigaben.", en: "Im vereinfachten Verfahren nach HBO liegt die Bearbeitungszeit bei rund 3 bis 4 Monaten. Durch digitale und vollständige Einreichung sichern wir termingerechte Freigaben." }
+      },
+      {
+        question: { de: "Begleiten Sie auch Konversionsprojekte für Investoren?", en: "Begleiten Sie auch Konversionsprojekte für Investoren?" },
+        answer: { de: "Ja, als freie Stadtplaner (AKH Hessen) erstellen wir Machbarkeitsstudien, Nutzungskonzepte und begleiten städtebauliche Rahmenverhandlungen.", en: "Ja, als freie Stadtplaner (AKH Hessen) erstellen wir Machbarkeitsstudien, Nutzungskonzepte und begleiten städtebauliche Rahmenverhandlungen." }
+      }
+    ]
+  },
+
+  "architektur-maintal-bruchkoebel": {
+    slug: "architektur-maintal-bruchkoebel",
+    path: "/architektur-maintal-bruchkoebel",
+    parentPath: "/architektur-hanau",
+    parentName: { de: "Hanau & Main-Kinzig-Kreis", en: "Hanau & Main-Kinzig District" },
+    h1: {
+      de: "Architektur, Neubau & Gewerbebau in Maintal, Bruchköbel & Main-Kinzig-West",
+      en: "Architecture, New Builds & Commercial in Maintal, Bruchköbel & Main-Kinzig West"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Maintal-Bruchköbel",
+      en: "Architecture · Urban Planning · Permitting | Maintal Bruchköbel"
+    },
+    subtitle: {
+      de: "Direkt zwischen Frankfurt am Main und Hanau bieten Maintal und Bruchköbel florierende Wohnlagen und Gewerbestandorte. Wir planen hochwertige Mehrfamilienhäuser, moderne Doppelhäuser und Gewerbebauten mit reibungsloser Genehmigung beim Main-Kinzig-Kreis.",
+      en: "Positioned directly between Frankfurt and Hanau, Maintal and Bruchköbel provide thriving residential enclaves and corporate parks. We design high-standard apartment buildings, modern duplexes, and commercial halls with seamless approvals from the Main-Kinzig district."
+    },
+    targetKeywords: [
+      "Architekt Maintal",
+      "Architekt Bruchköbel",
+      "Bauantrag Dörnigheim",
+      "Baugenehmigung Main-Kinzig-Kreis",
+      "Gewerbebau Maintal",
+      "HOAI Bruchköbel"
+    ],
+    metaTitle: {
+      de: "Architektur & Bauanträge in Maintal & Bruchköbel | Shams Consult",
+      en: "Architecture & Building Permits in Maintal & Bruchköbel | Shams Consult"
+    },
+    metaDescription: {
+      de: "Architekturbüro (AKH Hessen Nr. 21886) für Maintal (Dörnigheim, Bischofsheim), Bruchköbel & Main-Kinzig-West. Neubau, Gewerbebau, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Architect practice (AKH Hesse No. 21886) for Maintal (Dörnigheim, Bischofsheim), Bruchköbel & West Main-Kinzig. Residential & commercial architecture, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Maintal (Dörnigheim, Bischofsheim, Hochstadt), Bruchköbel, Erlensee, Schöneck",
+        en: "Catchment Area: Maintal (Dörnigheim, Bischofsheim, Hochstadt), Bruchköbel, Erlensee, Schöneck"
+      },
+      {
+        de: "Bauvorlageberechtigung vor der Bauaufsicht Main-Kinzig-Kreis & Stadt Maintal",
+        en: "Full permit filing privileges with Main-Kinzig Building Authority & City of Maintal"
+      },
+      {
+        de: "Wohnungs- & Gewerbebau mit garantierter Kostendisziplin nach DIN 276",
+        en: "Residential and commercial building delivery under guaranteed DIN 276 budget control"
+      },
+      {
+        de: "100% Termintreue und transparente LPH 1–9 Steuerung",
+        en: "100% on-time milestone delivery and transparent HOAI 1–9 management"
+      }
+    ],
+    localFocusTitle: {
+      de: "Bauen im westlichen Main-Kinzig-Kreis: Frankfurter Nähe, Wohnen & Gewerbe",
+      en: "Building in Western Main-Kinzig: Frankfurt Proximity, Residential & Commercial"
+    },
+    localFocusDescription: {
+      de: "Die unmittelbare Nachbarschaft zu Frankfurt macht Maintal und Bruchköbel zu Top-Standorten für Pendlerwohnungen und Gewerbeflächen. Wir stimmen Hochwasserschutz an der Mainachse und lokale Entwässerungssatzungen professionell ab.",
+      en: "Immediate proximity to Frankfurt makes Maintal and Bruchköbel prime locations for commuter residences and business facilities. We coordinate river flood management along the Main axis and municipal drainage statutes with seasoned professionalism."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
+      street: "Carl-von-Noorden-Platz 5",
+      city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
+      phone: "069 74 22 3 777",
+      phoneHref: "tel:+4969742237770",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Bauaufsichten Main-Kinzig & Stadt Maintal", en: "Bauaufsichten Main-Kinzig & Stadt Maintal" },
+        description: { de: "Erprobte Bauantragskoordination vor den zuständigen Bauaufsichtsämtern.", en: "Erprobte Bauantragskoordination vor den zuständigen Bauaufsichtsämtern." }
+      },
+      {
+        title: { de: "Hochwasserschutzverordnungen am Main (HQ 100)", en: "Hochwasserschutzverordnungen am Main (HQ 100)" },
+        description: { de: "Druckwasserdichte Wannenkonstruktionen und Retentionsnachweise in Mainnähe.", en: "Druckwasserdichte Wannenkonstruktionen und Retentionsnachweise in Mainnähe." }
+      },
+      {
+        title: { de: "Kommunale Entwässerungssatzungen", en: "Kommunale Entwässerungssatzungen" },
+        description: { de: "Hydraulische Berechnung von Rigolensystemen und Zisternen nach DWA-A 138.", en: "Hydraulische Berechnung von Rigolensystemen und Zisternen nach DWA-A 138." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welche Bauprojekte betreuen Sie in Maintal und Bruchköbel?", en: "Welche Bauprojekte betreuen Sie in Maintal und Bruchköbel?" },
+        answer: { de: "Vom modernen Einfamilien- und Doppelhaus über Mehrfamilienhausanlagen bis hin zu Handwerksbetrieben und Logistikhallen.", en: "Vom modernen Einfamilien- und Doppelhaus über Mehrfamilienhausanlagen bis hin zu Handwerksbetrieben und Logistikhallen." }
+      },
+      {
+        question: { de: "Sind Bauanträge im Mainuferbereich von Maintal-Dörnigheim komplexer?", en: "Sind Bauanträge im Mainuferbereich von Maintal-Dörnigheim komplexer?" },
+        answer: { de: "Ja, wegen des Hochwasserschutzes. Wir erstellen alle Nachweise zur Auftriebssicherheit und wasserdichten Ausführung direkt mit den Behörden.", en: "Ja, wegen des Hochwasserschutzes. Wir erstellen alle Nachweise zur Auftriebssicherheit und wasserdichten Ausführung direkt mit den Behörden." }
+      },
+      {
+        question: { de: "Übernehmen Sie die Ausschreibung und Vergabe nach VOB?", en: "Übernehmen Sie die Ausschreibung und Vergabe nach VOB?" },
+        answer: { de: "Ja, in den Leistungsphasen 6 und 7 erstellen wir detaillierte Leistungsverzeichnisse, holen Handwerkerangebote ein und verhandeln Festpreise.", en: "Ja, in den Leistungsphasen 6 und 7 erstellen wir detaillierte Leistungsverzeichnisse, holen Handwerkerangebote ein und verhandeln Festpreise." }
+      }
+    ]
+  },
+
+  "architektur-dietzenbach": {
+    slug: "architektur-dietzenbach",
+    path: "/architektur-dietzenbach",
+    parentPath: "/architektur-roedermark",
+    parentName: { de: "Rödermark & Kreis Offenbach", en: "Rödermark & Offenbach District" },
+    h1: {
+      de: "Architektur, Gewerbe- & Wohnungsbau in Dietzenbach & Kreis Offenbach-Mitte",
+      en: "Architecture, Commercial & Residential Planning in Dietzenbach & Central Offenbach District"
+    },
+    eyebrow: {
+      de: "Architektur · Stadtplanung · Baurecht | Dietzenbach",
+      en: "Architecture · Urban Planning · Permitting | Dietzenbach"
+    },
+    subtitle: {
+      de: "Als Kreisstadt des Landkreises Offenbach verbindet Dietzenbach florierende Gewerbegebiete mit attraktiven Wohnlagen am Steinberg und Hexenberg. Mit unserem Planungsbüro im benachbarten Rödermark sichern wir Ihnen kürzeste Abstimmungswege zum Kreishaus Dietzenbach.",
+      en: "As the administrative seat of the Offenbach district, Dietzenbach combines bustling commercial zones with attractive residential areas at Steinberg and Hexenberg. From our nearby studio in Rödermark, we ensure the shortest coordination paths to the Dietzenbach district building authority."
+    },
+    targetKeywords: [
+      "Architekt Dietzenbach",
+      "Bauamt Kreishaus Dietzenbach",
+      "Baugenehmigung Kreis Offenbach",
+      "Gewerbebau Dietzenbach",
+      "Wohnungsbau Steinberg Dietzenbach",
+      "HOAI Dietzenbach"
+    ],
+    metaTitle: {
+      de: "Architektur, Gewerbe- & Wohnungsbau in Dietzenbach | Shams Consult",
+      en: "Architecture, Commercial & Residential in Dietzenbach | Shams Consult"
+    },
+    metaDescription: {
+      de: "Lokales Planungsbüro (AKH Hessen Nr. 21886) für Dietzenbach, Steinberg & Kreis Offenbach. Direkte Nähe zum Kreishaus, Wohnungs- & Gewerbebau, HOAI 1–9 und HBO-Bauanträge.",
+      en: "Local planning studio (AKH Hesse No. 21886) for Dietzenbach, Steinberg & Offenbach district. Immediate proximity to the district hall, residential & commercial builds, full HOAI 1–9, and HBO permits."
+    },
+    heroHighlights: [
+      {
+        de: "Einzugsgebiet: Steinberg, Hexenberg, Alt-Dietzenbach, Gewerbegebiet Nord",
+        en: "Catchment Area: Steinberg, Hexenberg, Old Town Dietzenbach, Commercial Zone North"
+      },
+      {
+        de: "Kürzeste Wege zur Unteren Bauaufsichtsbehörde des Kreises Offenbach im Kreishaus",
+        en: "Shortest paths to the Lower Building Authority of Offenbach District in Dietzenbach"
+      },
+      {
+        de: "Gewerbe- & Geschosswohnungsbau mit DIN 276 Kostenkontrolle",
+        en: "Commercial & multi-family residential delivery under DIN 276 budget control"
+      },
+      {
+        de: "100% Kostensicherheit nach DIN 276 & Bauzeitengarantie",
+        en: "Strict DIN 276 cost discipline and reliable milestone delivery"
+      }
+    ],
+    localFocusTitle: {
+      de: "Planen in der Kreisstadt: Kurze Wege zum Bauamt & integrale Architektur",
+      en: "Planning in the District Capital: Direct Authority Access & Integrated Architecture"
+    },
+    localFocusDescription: {
+      de: "Nur wenige Autominuten von unserem Büro in der Carl-Zeiss-Straße in Rödermark entfernt, betreuen wir Projekte in Dietzenbach persönlich vor Ort. Ob gewerbliche Umnutzung, Neubau von KfW-40-Wohnanlagen oder Baugenehmigungen im Bestand: Wir garantieren reibungslose Abläufe.",
+      en: "Only minutes away from our studio at Carl-Zeiss-Straße in Rödermark, we oversee projects in Dietzenbach personally on-site. Whether commercial conversions, new KfW 40 apartment complexes, or building permits for existing properties: we guarantee smooth workflows."
+    },
+    localProjects: SHARED_PROJECTS,
+    hoaiPhases: SHARED_HOAI,
+    office: {
+      name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
+      street: "Dieburger Str. 14",
+      city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
+      phone: "06074 91 99 555",
+      phoneHref: "tel:+4960749199555",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Dieburger+Str.+14,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    },
+    localRegulations: [
+      {
+        title: { de: "Untere Bauaufsichtsbehörde Kreis Offenbach", en: "Untere Bauaufsichtsbehörde Kreis Offenbach" },
+        description: { de: "Direkte persönliche Abstimmung im Kreishaus Dietzenbach zur Verkürzung der Genehmigungsfristen.", en: "Direkte persönliche Abstimmung im Kreishaus Dietzenbach zur Verkürzung der Genehmigungsfristen." }
+      },
+      {
+        title: { de: "Bebauungspläne Dietzenbach-Steinberg & Gewerbe", en: "Bebauungspläne Dietzenbach-Steinberg & Gewerbe" },
+        description: { de: "Optimale Ausnutzung von Geschossflächen- und Grundflächenzahlen (GFZ/GRZ).", en: "Optimale Ausnutzung von Geschossflächen- und Grundflächenzahlen (GFZ/GRZ)." }
+      },
+      {
+        title: { de: "Stellplatzsatzung der Kreisstadt Dietzenbach", en: "Stellplatzsatzung der Kreisstadt Dietzenbach" },
+        description: { de: "Prüffähige Nachweise für Tiefgaragen, Carports und oberirdische Kundenstellplätze.", en: "Prüffähige Nachweise für Tiefgaragen, Carports und oberirdische Kundenstellplätze." }
+      }
+    ],
+    faqs: [
+      {
+        question: { de: "Welchen Vorteil hat die Nähe von Shams Consult zu Dietzenbach?", en: "Welchen Vorteil hat die Nähe von Shams Consult zu Dietzenbach?" },
+        answer: { de: "Unser Rödermarker Standort liegt unmittelbar neben Dietzenbach. Wir kennen die Sachbearbeiter und Prüfingenieure im Kreishaus persönlich, was Abstimmungen und Voranfragen deutlich beschleunigt.", en: "Unser Rödermarker Standort liegt unmittelbar neben Dietzenbach. Wir kennen die Sachbearbeiter und Prüfingenieure im Kreishaus persönlich, was Abstimmungen und Voranfragen deutlich beschleunigt." }
+      },
+      {
+        question: { de: "Planen Sie auch Gewerbehallen und Betriebsstätten in Dietzenbach?", en: "Planen Sie auch Gewerbehallen und Betriebsstätten in Dietzenbach?" },
+        answer: { de: "Ja, wir betreuen mittelständische Unternehmen bei Neubau, Erweiterung und Nutzungsänderung gewerblicher Hallen und Büros im Gewerbegebiet Dietzenbach.", en: "Ja, wir betreuen mittelständische Unternehmen bei Neubau, Erweiterung und Nutzungsänderung gewerblicher Hallen und Büros im Gewerbegebiet Dietzenbach." }
+      },
+      {
+        question: { de: "Unterstützen Sie private Bauherren am Steinberg oder Hexenberg?", en: "Unterstützen Sie private Bauherren am Steinberg oder Hexenberg?" },
+        answer: { de: "Ja, wir planen individuelle Einfamilienvillen, Doppelhäuser sowie energetische Kernsanierungen mit KfW-Förderbegleitung.", en: "Ja, wir planen individuelle Einfamilienvillen, Doppelhäuser sowie energetische Kernsanierungen mit KfW-Förderbegleitung." }
+      }
+    ]
+  }
 };
+

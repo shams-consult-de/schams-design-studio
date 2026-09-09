@@ -613,6 +613,54 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         ],
       },
       {
+        id: "offenbach-mainufer",
+        path: "/architektur-offenbach",
+        name: {
+          de: "Offenbach am Main, Kaiserlei & Hafen",
+          en: "Offenbach am Main, Kaiserlei & Harbor",
+        },
+        suburbs: {
+          de: "Kaiserlei, Hafen Offenbach, Westend, Senefelderquartier",
+          en: "Kaiserlei, Offenbach Harbor, Westend, Senefelder Quarter",
+        },
+        badge: {
+          de: "Hafenviertel & Kaiserlei-Transformation",
+          en: "Harbor Quarter & Kaiserlei Regeneration",
+        },
+        summary: {
+          de: "Direkt gegenüber unserem Büro am Frankfurter Südufer: Dynamischer Wandel von Gewerbebrachen zu modernen Mainufer-Quartieren und Gründerzeitmodernisierungen im Westend.",
+          en: "Directly opposite our studio at Frankfurt South: Dynamic transition of industrial sites into riverside quarters and Wilhelminian restorations in the Westend.",
+        },
+        focusAreas: [
+          {
+            de: "Moderne Mainufer-Wohnbauten und gewerbliche Konversionen",
+            en: "Modern riverside apartments and commercial conversions",
+          },
+          {
+            de: "Sanierung denkmalgeschützter Altbauten im Offenbacher Westend",
+            en: "Restoration of listed buildings in Offenbach Westend",
+          },
+          {
+            de: "Bauanträge und Brandschutzkonzepte nach HBO",
+            en: "HBO building permits and fire safety concepts",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Bauaufsichtsamt der Stadt Offenbach am Main",
+            en: "City of Offenbach Building Authority",
+          },
+          {
+            de: "Bebauungspläne Hafen Offenbach & Kaiserlei",
+            en: "Offenbach Harbor & Kaiserlei zoning master plans",
+          },
+          {
+            de: "Erhaltungssatzungen im Westend und Senefelderquartier",
+            en: "Preservation bylaws in Westend and Senefelder quarters",
+          },
+        ],
+      },
+      {
         id: "speckguertel-taunus",
         path: "/architektur-bad-homburg",
         name: {
@@ -960,6 +1008,200 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         },
       },
     ],
+    districts: [
+      {
+        id: "roedermark-ober-roden",
+        path: "/architektur-roedermark-ober-roden",
+        name: {
+          de: "Ober-Roden & Waldacker",
+          en: "Ober-Roden & Waldacker",
+        },
+        suburbs: {
+          de: "Ober-Roden Ortskern, Breidert, Waldacker, Messenhausen",
+          en: "Ober-Roden Old Town, Breidert, Waldacker, Messenhausen",
+        },
+        badge: {
+          de: "Stadtvillen & Nachverdichtung",
+          en: "Urban Villas & Infill",
+        },
+        summary: {
+          de: "Beliebte Wohnlagen in Rödermark mit bester Anbindung nach Frankfurt und Darmstadt. Wir planen hochwertige Stadtvillen, Doppelhäuser und energieeffiziente Nachverdichtungen.",
+          en: "Sought-after residential enclaves in Rödermark with fast links to Frankfurt and Darmstadt. We design bespoke villas, duplexes, and sustainable infill.",
+        },
+        focusAreas: [
+          {
+            de: "Moderne Architektenvillen und energieeffiziente KfW-40-Häuser",
+            en: "Modern bespoke architect villas and KfW 40 low-energy homes",
+          },
+          {
+            de: "Wohnraumerweiterungen, Aufstockungen & barrierefreie Umbauten",
+            en: "Storey extensions, vertical additions & accessible barrier-free redesigns",
+          },
+          {
+            de: "Bebauungspläne Rödermark und Nachverdichtung nach § 34 BauGB",
+            en: "Municipal master plans and residential infill under Section 34 BauGB",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Bauaufsicht Kreis Offenbach (Kreishaus Dietzenbach)",
+            en: "Offenbach District Building Authority in Dietzenbach",
+          },
+          {
+            de: "Bebauungspläne Breidert & Ober-Roden West",
+            en: "Breidert & Ober-Roden West statutory zoning bylaws",
+          },
+          {
+            de: "Abstandsflächenberechnung nach HBO",
+            en: "Hesse building code setback evaluations",
+          },
+        ],
+      },
+      {
+        id: "roedermark-urberach",
+        path: "/architektur-roedermark-urberach",
+        name: {
+          de: "Urberach & Messenhausen",
+          en: "Urberach & Messenhausen",
+        },
+        suburbs: {
+          de: "Urberach Ortskern, Traminerweg, Bienengarten, Messenhausen",
+          en: "Urberach center, Traminerweg, Bienengarten, Messenhausen",
+        },
+        badge: {
+          de: "Historischer Ortskern & Villenlagen",
+          en: "Historic Center & Villa Enclaves",
+        },
+        summary: {
+          de: "Reizvolle Kombination aus historischem Ortskern und ruhigen Wohngebieten im Grünen. Wir begleiten sensible Sanierungen, Neubauten und Baugenehmigungen.",
+          en: "Charming blend of historic village core and tranquil green residential neighborhoods. We steer sensitive restorations, new builds, and permits.",
+        },
+        focusAreas: [
+          {
+            de: "Behutsame Kernsanierung & Denkmalschutz im Ortskern",
+            en: "Sensitive restorations & heritage conservation in the town center",
+          },
+          {
+            de: "Neubau von Mehrfamilienhäusern mit Tiefgaragen",
+            en: "New multi-family residential complexes with underground parking",
+          },
+          {
+            de: "Retentions- und Regenwassermanagement nach kommunalen Satzungen",
+            en: "Rainwater retention engineering per municipal drainage statutes",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Einfügungsgebot § 34 BauGB im gewachsenen Ortskern",
+            en: "Contextual insertion requirement (§ 34 BauGB) in historical quarters",
+          },
+          {
+            de: "HBO-konforme Brandschutz- & Stellplatznachweise",
+            en: "HBO compliant fire protection & municipal parking verifications",
+          },
+          {
+            de: "Kurze Wege zur Unteren Bauaufsichtsbehörde",
+            en: "Direct access to the Lower Building Authority Dietzenbach",
+          },
+        ],
+      },
+      {
+        id: "rodgau",
+        path: "/architektur-rodgau",
+        name: {
+          de: "Rodgau (Jügesheim, Dudenhofen, Nieder-Roden)",
+          en: "Rodgau (Jügesheim, Dudenhofen, Nieder-Roden)",
+        },
+        suburbs: {
+          de: "Jügesheim, Dudenhofen, Nieder-Roden, Weiskirchen, Hainhausen",
+          en: "Jügesheim, Dudenhofen, Nieder-Roden, Weiskirchen, Hainhausen",
+        },
+        badge: {
+          de: "Wachstumsachse & Familienwohnen",
+          en: "Growth Corridor & Family Living",
+        },
+        summary: {
+          de: "Größte Stadt im Kreis Offenbach mit hoher Nachfrage nach Familienwohnraum und Gewerbeflächen. Wir planen moderne Wohnanlagen, Reihenhäuser und Gewerbebauten.",
+          en: "Largest municipality in Offenbach district with strong demand for family housing and commercial space. We design modern apartments, townhouses, and corporate halls.",
+        },
+        focusAreas: [
+          {
+            de: "Geschosswohnungsbau und KfW-40-Wohnquartiere",
+            en: "Multi-story apartment buildings and KfW 40 residential quarters",
+          },
+          {
+            de: "Gewerbliche Hallen und Bürogebäude im Gewerbegebiet Rodgau",
+            en: "Commercial warehouses and corporate offices in Rodgau business park",
+          },
+          {
+            de: "Grundstücksteilungen und Baurechtsschaffung nach § 34 BauGB",
+            en: "Parcel subdivision and formal building rights creation under § 34 BauGB",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Bebauungspläne Stadt Rodgau & Kreis Offenbach",
+            en: "City of Rodgau master plans & Offenbach district regulations",
+          },
+          {
+            de: "Kanal- und Entwässerungssatzungen Rodgau",
+            en: "Rodgau municipal drainage and stormwater bylaws",
+          },
+          {
+            de: "Stellplatzsatzung der Stadt Rodgau",
+            en: "Municipal parking requirement ordinance",
+          },
+        ],
+      },
+      {
+        id: "dietzenbach",
+        path: "/architektur-dietzenbach",
+        name: {
+          de: "Dietzenbach & Steinberg",
+          en: "Dietzenbach & Steinberg",
+        },
+        suburbs: {
+          de: "Steinberg, Hexenberg, Alt-Dietzenbach, Gewerbegebiet Nord",
+          en: "Steinberg, Hexenberg, Old Town Dietzenbach, Commercial North",
+        },
+        badge: {
+          de: "Kreisstadt & Behördennähe",
+          en: "District Seat & Authority Proximity",
+        },
+        summary: {
+          de: "Kreisstadt des Landkreises Offenbach. Kurze Wege zur Bauaufsicht im Kreishaus Dietzenbach für beschleunigte Baugenehmigungen von Wohn- und Gewerbeprojekten.",
+          en: "Administrative capital of Offenbach district. Immediate proximity to the building department in the district hall for fast-track permit approvals.",
+        },
+        focusAreas: [
+          {
+            de: "Gewerbebauten, Logistikhallen und Handwerksbetriebe",
+            en: "Commercial halls, logistics facilities, and trade company premises",
+          },
+          {
+            de: "Neubau von Stadtvillen und Mehrfamilienhäusern am Steinberg",
+            en: "New urban villas and multi-family residences at Steinberg",
+          },
+          {
+            de: "Bauvoranfragen und rechtssichere Klärung von Baurecht",
+            en: "Preliminary zoning inquiries and binding legal clarification",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Untere Bauaufsichtsbehörde Kreis Offenbach im Kreishaus",
+            en: "Offenbach District Lower Building Authority in Dietzenbach",
+          },
+          {
+            de: "Gewerbegebietsfestsetzungen nach BauNVO",
+            en: "Commercial zoning parameters per federal building ordinance",
+          },
+          {
+            de: "Hessische Bauordnung (HBO) & Stellplatzsatzung",
+            en: "Hesse building code (HBO) & municipal parking ordinance",
+          },
+        ],
+      },
+    ],
     faqs: [
       {
         question: {
@@ -1237,6 +1479,200 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
           de: "Erstellung aller Nachweise für staatliche Tilgungszuschüsse und zinsvergünstigte Baudarlehen.",
           en: "Filing all audited sustainability proofs to unlock low-interest public financing and non-repayable grants.",
         },
+      },
+    ],
+    districts: [
+      {
+        id: "dreieich-buchschlag",
+        path: "/architektur-dreieich-buchschlag",
+        name: {
+          de: "Buchschlag & Dreieichenhain",
+          en: "Buchschlag & Dreieichenhain",
+        },
+        suburbs: {
+          de: "Villenkolonie Buchschlag, Burg Dreieichenhain, Altstadt",
+          en: "Buchschlag Villa Colony, Dreieichenhain Castle, Historic Quarter",
+        },
+        badge: {
+          de: "Jugendstil-Villen & Ensembleschutz",
+          en: "Art Nouveau Villas & Ensemble Conservation",
+        },
+        summary: {
+          de: "Buchschlag beherbergt eine der bedeutendsten Jugendstil-Villenkolonien Deutschlands, während Dreieichenhain durch historische Fachwerkarchitektur besticht. Strenge Denkmalschutzanforderungen.",
+          en: "Buchschlag hosts one of Germany's most celebrated Art Nouveau villa colonies, while Dreieichenhain boasts timber-frame heritage. Demands rigorous preservation expertise.",
+        },
+        focusAreas: [
+          {
+            de: "Denkmalgerechte Sanierung von Jugendstil- & Historismus-Villen",
+            en: "Heritage restoration of Art Nouveau & historicist mansions",
+          },
+          {
+            de: "Enge Abstimmung mit der Denkmalbehörde & Erhaltungssatzung Buchschlag",
+            en: "Close coordination with the conservation authority and Buchschlag bylaws",
+          },
+          {
+            de: "Behutsame energetische Modernisierung im Bestand",
+            en: "Sensitive energy retrofits within historic building fabric",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Ensembleschutz nach Hessischem Denkmalschutzgesetz (HDSchG)",
+            en: "Ensemble conservation under Hessian Heritage Act (HDSchG)",
+          },
+          {
+            de: "Gestaltungssatzung der Villenkolonie Buchschlag",
+            en: "Buchschlag Villa Colony aesthetic design statute",
+          },
+          {
+            de: "Baumschutzsatzung der Stadt Dreieich",
+            en: "City of Dreieich tree preservation statute",
+          },
+        ],
+      },
+      {
+        id: "dreieich-sprendlingen",
+        path: "/architektur-dreieich-sprendlingen",
+        name: {
+          de: "Sprendlingen, Götzenhain & Offenthal",
+          en: "Sprendlingen, Götzenhain & Offenthal",
+        },
+        suburbs: {
+          de: "Sprendlingen, Götzenhain, Philippseich, Offenthal",
+          en: "Sprendlingen, Götzenhain, Philippseich, Offenthal",
+        },
+        badge: {
+          de: "Geschosswohnungsbau & QNG-Nachhaltigkeit",
+          en: "Multi-Family Housing & QNG Sustainability",
+        },
+        summary: {
+          de: "Lebendige Stadtteile mit starker Wohnungsbaunachfrage. Shams Consult hat hier ein Mehrfamilienhaus mit 6 Wohneinheiten und QNG-Nachhaltigkeitszertifikat erfolgreich realisiert.",
+          en: "Vibrant quarters with strong housing demand. Shams Consult successfully realized a 6-unit apartment complex with QNG green certification here.",
+        },
+        focusAreas: [
+          {
+            de: "Neubau von modernen Mehrfamilienhäusern und Eigentumswohnungen",
+            en: "Construction of modern multi-family residences and condominiums",
+          },
+          {
+            de: "QNG-Nachhaltigkeitszertifizierung für maximale KfW-Förderung",
+            en: "QNG sustainability certification unlocking top KfW subsidies",
+          },
+          {
+            de: "Nachverdichtung und Baulückenschließungen nach § 34 BauGB",
+            en: "Urban infill and gap closures under Section 34 BauGB",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Bebauungspläne Stadt Dreieich (Sprendlingen & Götzenhain)",
+            en: "Dreieich master plans (Sprendlingen & Götzenhain)",
+          },
+          {
+            de: "Bauaufsicht Kreis Offenbach",
+            en: "Offenbach District Building Department",
+          },
+          {
+            de: "DIN 276 Kosten- & Termingarantie",
+            en: "DIN 276 cost discipline and schedule compliance",
+          },
+        ],
+      },
+      {
+        id: "neu-isenburg",
+        path: "/architektur-neu-isenburg",
+        name: {
+          de: "Neu-Isenburg & Gravenbruch",
+          en: "Neu-Isenburg & Gravenbruch",
+        },
+        suburbs: {
+          de: "Hugenottenallee, Buchenbusch, Gravenbruch, Gewerbegebiet Süd",
+          en: "Hugenottenallee, Buchenbusch, Gravenbruch, Commercial South",
+        },
+        badge: {
+          de: "Frankfurter Stadtrand & Gewerbestandort",
+          en: "Frankfurt Border & Business Hub",
+        },
+        summary: {
+          de: "Direkt an der Frankfurter Stadtgrenze: Höchste Nachfrage nach urbanem Wohnen, Gewerbe- und Bürokonversionen sowie exklusiven Stadtvillen im Buchenbusch.",
+          en: "Directly on the Frankfurt municipal border: High demand for urban apartments, office-to-residential conversions, and bespoke villas in Buchenbusch.",
+        },
+        focusAreas: [
+          {
+            de: "Umnutzung von Büro- und Gewerbebauten zu modernen Wohnungen",
+            en: "Adaptive reuse converting offices into contemporary apartments",
+          },
+          {
+            de: "Exklusive Architektenvillen im Buchenbusch",
+            en: "Exclusive bespoke architect villas in leafy Buchenbusch",
+          },
+          {
+            de: "Bauanträge und Abstimmungen vor der Bauaufsicht Neu-Isenburg",
+            en: "Permit applications with Neu-Isenburg Building Authority",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Eigene Bauaufsichtsbehörde der Stadt Neu-Isenburg",
+            en: "Independent municipal building authority of Neu-Isenburg",
+          },
+          {
+            de: "Erhaltungssatzung für das Hugenottenviertel",
+            en: "Conservation bylaws for the historic Huguenot Quarter",
+          },
+          {
+            de: "Schallschutzgutachten für den Frankfurter Flughafenbereich",
+            en: "Acoustic insulation assessments for Frankfurt Airport noise contours",
+          },
+        ],
+      },
+      {
+        id: "langen",
+        path: "/architektur-langen",
+        name: {
+          de: "Langen (Hessen) & Egelsbach",
+          en: "Langen (Hesse) & Egelsbach",
+        },
+        suburbs: {
+          de: "Langen Altstadt, Steinberg, Neurott, Egelsbach",
+          en: "Langen Old Town, Steinberg, Neurott, Egelsbach",
+        },
+        badge: {
+          de: "Wissenschaftsstandort & Familienwohnen",
+          en: "Science Hub & Family Living",
+        },
+        summary: {
+          de: "Zentral zwischen Frankfurt und Darmstadt. Standort von Paul-Ehrlich-Institut und Flugsicherung (DFS). Starker Bedarf an Wohn- und Gewerbebau.",
+          en: "Centrally positioned between Frankfurt and Darmstadt. Home to the Paul Ehrlich Institute and DFS. Strong demand for housing and commercial builds.",
+        },
+        focusAreas: [
+          {
+            de: "Mehrfamilienhaus-Neubauten und KfW-40-Wohnquartiere",
+            en: "New multi-family complexes and KfW 40 residential quarters",
+          },
+          {
+            de: "Gewerbliche Praxis- und Laborbauten sowie Büroflächen",
+            en: "Commercial medical clinics, laboratory spaces, and corporate suites",
+          },
+          {
+            de: "Fachwerk- und Altbausanierungen im Langener Ortskern",
+            en: "Historic timber-frame retrofits in Langen historic core",
+          },
+        ],
+        zoningHighlights: [
+          {
+            de: "Bebauungspläne Stadt Langen & Gemeinde Egelsbach",
+            en: "Langen city & Egelsbach municipal zoning master plans",
+          },
+          {
+            de: "Bauaufsicht Kreis Offenbach",
+            en: "Offenbach District Building Department",
+          },
+          {
+            de: "Klimaschutz- und Regenwasserversickerungsauflagen",
+            en: "Climate resilience and rainwater infiltration mandates",
+          },
+        ],
       },
     ],
     faqs: [
@@ -1890,7 +2326,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "kurviertel-city-ost",
-        path: "/architektur-wiesbaden",
+        path: "/architektur-wiesbaden-kurviertel",
         name: {
           de: "Kurviertel, City-Ost & Nordost",
           en: "Kurviertel, City-Ost & Nordost",
@@ -1986,7 +2422,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "dotzheim-kohlheck",
-        path: "/architektur-wiesbaden",
+        path: "/architektur-wiesbaden-dotzheim",
         name: {
           de: "Dotzheim, Kohlheck & Klarenthal",
           en: "Dotzheim, Kohlheck & Klarenthal",
@@ -2416,7 +2852,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "gonzenheim-kirdorf",
-        path: "/architektur-bad-homburg",
+        path: "/architektur-bad-homburg-gonzenheim",
         name: {
           de: "Gonzenheim, Kirdorf & Dornholzhausen",
           en: "Gonzenheim, Kirdorf & Dornholzhausen",
@@ -2990,7 +3426,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "arheilgen-kranichstein",
-        path: "/architektur-darmstadt",
+        path: "/architektur-darmstadt-arheilgen",
         name: {
           de: "Arheilgen, Kranichstein & Martinsviertel",
           en: "Arheilgen, Kranichstein & Martinsviertel",
@@ -3038,7 +3474,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "weiterstadt-griesheim-bergstrasse",
-        path: "/architektur-darmstadt",
+        path: "/architektur-darmstadt-griesheim-weiterstadt",
         name: {
           de: "Weiterstadt, Griesheim & Bergstraße",
           en: "Weiterstadt, Griesheim & Bergstraße",
@@ -3468,7 +3904,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "innenstadt-lamboy",
-        path: "/architektur-hanau",
+        path: "/architektur-hanau-innenstadt",
         name: {
           de: "Innenstadt, Lamboy & Pioneer Park",
           en: "City Center, Lamboy & Pioneer Park",
@@ -3564,7 +4000,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       },
       {
         id: "maintal-bruchkoebel",
-        path: "/architektur-hanau",
+        path: "/architektur-maintal-bruchkoebel",
         name: {
           de: "Maintal, Bruchköbel & Main-Kinzig-West",
           en: "Maintal, Bruchköbel & Main-Kinzig West",
