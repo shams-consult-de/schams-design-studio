@@ -140,6 +140,8 @@ async function generateStaticRoutes() {
   const { projects } = await import(pathToFileURL(path.join(rootDir, "src", "data", "projects.ts")).href);
   const { blogPosts } = await import(pathToFileURL(path.join(rootDir, "src", "data", "blog.ts")).href);
   const { caseStudies } = await import(pathToFileURL(path.join(rootDir, "src", "data", "caseStudies.ts")).href);
+  const { regionalLandingPages } = await import(pathToFileURL(path.join(rootDir, "src", "data", "regionalLandingPages.ts")).href);
+  const { comparisonTopics } = await import(pathToFileURL(path.join(rootDir, "src", "data", "comparisons.ts")).href);
 
   // Route definition map
   const routeConfigs = new Map();
@@ -225,6 +227,89 @@ async function generateStaticRoutes() {
     priority: "0.8",
     changefreq: "monthly",
   });
+
+  // 1.05 Comparison & Decision Guide Routes
+  routeConfigs.set("/vergleich", {
+    title: "Architektur-Vergleich & Entscheidungshilfe für Bauherren | Shams Consult",
+    description: "Boutique-Architekturbüro vs. Großbüro, Freier Architekt vs. Bauträger, Vollarchitektur vs. reiner Entwurf: Objektiver Leitfaden für Bauherren in Hessen.",
+    canonicalUrl: `${SITE_URL}/vergleich`,
+    breadcrumbs: [{ name: "Home", item: "/" }, { name: "Vergleiche", item: "/vergleich" }],
+    priority: "0.8",
+    changefreq: "monthly",
+  });
+
+  for (const comp of comparisonTopics) {
+    const meta = {
+      title: comp.metaTitle.de,
+      description: comp.metaDescription.de,
+      canonicalUrl: `${SITE_URL}/vergleich/${comp.slug}`,
+      breadcrumbs: [
+        { name: "Home", item: "/" },
+        { name: "Vergleiche", item: "/vergleich" },
+        { name: comp.badge.de, item: `/vergleich/${comp.slug}` },
+      ],
+      priority: "0.8",
+      changefreq: "monthly",
+    };
+    routeConfigs.set(`/vergleich/${comp.slug}`, meta);
+    routeConfigs.set(`/${comp.slug}`, meta);
+  }
+
+  // 1.1 City-Specific Hub-and-Spoke Regional Landing Pages
+  for (const page of Object.values(regionalLandingPages)) {
+    const metaTitle = typeof page.metaTitle === "string" ? page.metaTitle : (page.metaTitle?.de || "");
+    const metaDescription = typeof page.metaDescription === "string" ? page.metaDescription : (page.metaDescription?.de || "");
+    const eyebrow = typeof page.eyebrow === "string" ? page.eyebrow : (page.eyebrow?.de || "");
+    const h1 = typeof page.h1 === "string" ? page.h1 : (page.h1?.de || "");
+    const cityName = typeof page.office?.city === "string" ? page.office.city : (page.office?.city?.de || "");
+
+    const localBusinessSchema = {
+      "@type": ["LocalBusiness", "ProfessionalService", "ArchitecturalService"],
+      name: `Shams Consult — ${h1}`,
+      description: metaDescription,
+      url: `${SITE_URL}${page.path}`,
+      telephone: page.office.phoneHref.replace("tel:", ""),
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: page.office.street,
+        addressLocality: cityName.replace(/^\d+\s*/, "").replace(/\(.*?\)/, "").trim(),
+        postalCode: cityName.match(/\d{5}/)?.[0] || "60596",
+        addressCountry: "DE",
+      },
+    };
+
+    const graph = [localBusinessSchema];
+
+    if (page.faqs && page.faqs.length > 0) {
+      graph.push({
+        "@type": "FAQPage",
+        mainEntity: page.faqs.map((faq) => ({
+          "@type": "Question",
+          name: typeof faq.question === "string" ? faq.question : (faq.question?.de || ""),
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: typeof faq.answer === "string" ? faq.answer : (faq.answer?.de || ""),
+          },
+        })),
+      });
+    }
+
+    routeConfigs.set(page.path, {
+      title: metaTitle,
+      description: metaDescription,
+      canonicalUrl: `${SITE_URL}${page.path}`,
+      breadcrumbs: [
+        { name: "Home", item: "/" },
+        { name: eyebrow, item: page.path },
+      ],
+      priority: "0.9",
+      changefreq: "weekly",
+      customJsonLd: {
+        "@context": "https://schema.org",
+        "@graph": graph,
+      },
+    });
+  }
 
   // Legal Pages (noindex, follow)
   const legalConfigs = [

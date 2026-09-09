@@ -19,6 +19,20 @@ export function Hero({
       {/* Architectural Line Art & Skyline Background */}
       <ArchitecturalHeroBackground />
 
+      {/* Bold Architectural Crimson Circle Accent - Positioned at Right Section Edge */}
+      <div
+        className="absolute -right-10 sm:right-4 lg:right-12 xl:right-24 top-1/3 -translate-y-1/2 pointer-events-none select-none z-0 hidden sm:flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <div className="relative flex items-center justify-center animate-couch-settle">
+          {/* Concentric Outer Accent Ring */}
+          <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
+
+          {/* Solid Bold Crimson Architectural Circle */}
+          <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
+        </div>
+      </div>
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
@@ -62,25 +76,13 @@ export function Hero({
 
           {/* Center/Right Column (5 cols): Centered Portrait with Architectural Crimson Accent & Founder Badge */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center pt-2 lg:pt-0 relative">
-            {/* Crimson Red Architectural Circle & Concentric Accent Ring */}
-            <div
-              className="absolute -right-6 sm:-right-10 lg:-right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0"
-              aria-hidden="true"
-            >
-              {/* Outer Thin Concentric Accent Ring */}
-              <div className="w-[320px] h-[320px] sm:w-[390px] sm:h-[390px] lg:w-[460px] lg:h-[460px] rounded-full border border-[#DC2626]/40 flex items-center justify-center">
-                {/* Solid Crimson Architectural Circle */}
-                <div className="w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] lg:w-[370px] lg:h-[370px] rounded-full bg-[#DC2626] shadow-xl shadow-red-600/20" />
-              </div>
-            </div>
-
             <div
               onClick={onNavigateFounder}
               className="group relative z-10 w-full max-w-sm flex flex-col items-center justify-center cursor-pointer block"
               title="Geschichte des Gründers lesen"
             >
               {/* Majeed Shams Portrait */}
-              <div className="w-full flex justify-center overflow-hidden">
+              <div className="relative flex justify-center">
                 <img
                   src="/images/team/majeed-shams-authentic.png"
                   alt="Dipl.-Ing. Majeed Shams"

@@ -118,3 +118,28 @@
   animation: aura-breathe 4s ease-in-out infinite;
 }
 
+@keyframes couch-settle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  38% {
+    transform: translateY(-12px) scale(1.04);
+  }
+  74% {
+    transform: translateY(7px) scale(0.98);
+  }
+}
+
+.animate-couch-settle {
+  animation: couch-settle 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-couch-settle,
+  .animate-aura-spin,
+  .animate-aura-breathe,
+  .animate-marquee-smooth {
+    animation: none !important;
+  }
+}
+

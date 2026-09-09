@@ -64,8 +64,20 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
   const loopedSteps = [...processT.steps, ...processT.steps];
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20">
+    <section id="services" className="py-20 lg:py-28 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 overflow-hidden relative">
+      {/* Architectural Edge Circle Accent in Far-Right Negative Space */}
+      <div
+        className="absolute -right-20 top-28 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-70"
+        aria-hidden="true"
+      >
+        <div className="relative flex items-center justify-center animate-couch-settle">
+          <div className="absolute w-72 h-72 rounded-full border border-[#DC2626]/30" />
+          <div className="w-48 h-48 rounded-full bg-[#DC2626]/10 blur-xl" />
+          <div className="w-24 h-24 rounded-full bg-[#DC2626] opacity-40 shadow-lg shadow-red-600/25" />
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
         {/* ================================================================= */}
         {/* PART 1: CORE SERVICES & DISCIPLINES                               */}
         {/* ================================================================= */}

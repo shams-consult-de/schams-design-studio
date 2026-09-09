@@ -26,6 +26,19 @@ export function ContactSection({
   return (
     <section id="contact" className="py-20 lg:py-28 bg-[#0a0a0b] text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Architectural Edge Circle Accent in Far-Right Negative Margin */}
+      <div
+        className="absolute -right-24 top-20 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-70"
+        aria-hidden="true"
+      >
+        <div className="relative flex items-center justify-center animate-couch-settle">
+          <div className="absolute w-80 h-80 rounded-full border border-[#DC2626]/35" />
+          <div className="w-56 h-56 rounded-full bg-[#DC2626]/10 blur-xl" />
+          <div className="w-28 h-28 rounded-full bg-[#DC2626] opacity-50 shadow-xl shadow-red-600/30" />
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">

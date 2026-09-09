@@ -22,6 +22,7 @@ import { ClientsMovingSection } from "./components/ClientsMovingSection";
 import { ClientsPage } from "./components/ClientsPage";
 import { SiteVisitsMovingSection } from "./components/SiteVisitsMovingSection";
 import { SiteVisitsPage } from "./components/SiteVisitsPage";
+import { FaqSection } from "./components/FaqSection";
 import { MobileStickyActionBar } from "./components/MobileStickyActionBar";
 import { DesktopStickyActionBar } from "./components/DesktopStickyActionBar";
 import { ContactSection } from "./components/ContactSection";
@@ -34,13 +35,19 @@ import { Language, content } from "./lib/i18n";
 import { caseStudies, CaseStudy } from "./data/caseStudies";
 import { projects, Project } from "./data/projects";
 import { BlogPost, getBlogPostBySlug } from "./data/blog";
+import { RegionalLandingPage } from "./components/RegionalLandingPage";
+import { regionalLandingPages, RegionalLandingPageData } from "./data/regionalLandingPages";
+import { ComparisonPage } from "./components/ComparisonPage";
+import { comparisonTopics } from "./data/comparisons";
 import { trackPageView } from "./lib/analytics";
 import { updatePageSeo, getProjectSeo, getBlogPostSeo, getCaseStudySeo } from "./lib/seo";
 
 export function App() {
   const [language, setLanguage] = useState<Language>("de");
+  const t = content[language];
   const [legalModal, setLegalModal] = useState<LegalModalType>(null);
   const [activeLegalPage, setActiveLegalPage] = useState<LegalPageType | null>(null);
+  const [activeRegionalPage, setActiveRegionalPage] = useState<RegionalLandingPageData | null>(null);
   const [leadMessage] = useState<string>("");
   const [activeCaseStudy, setActiveCaseStudy] = useState<CaseStudy | null>(null);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -52,6 +59,8 @@ export function App() {
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
+  const [isComparisonPage, setIsComparisonPage] = useState<boolean>(false);
+  const [activeComparisonTopicId, setActiveComparisonTopicId] = useState<string>("boutique-vs-grossbuero");
   const [isNotFound, setIsNotFound] = useState<boolean>(false);
   const [requestedPath, setRequestedPath] = useState<string>("");
 
@@ -72,6 +81,68 @@ export function App() {
 
     setRequestedPath(rawPath);
     trackPageView(rawPath);
+    setActiveRegionalPage(null);
+
+    // 0. Regional Hub-and-Spoke Landing Pages (/architektur-frankfurt, /architektur-roedermark, /architektur-dreieich, /stadtplanung-hessen)
+    const regionalKey = path.replace(/^\//, "");
+    if (regionalLandingPages[regionalKey]) {
+      const pageData = regionalLandingPages[regionalKey];
+      setActiveRegionalPage(pageData);
+      setIsComparisonPage(false);
+      setIsSiteVisitsPage(false);
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      setActiveLegalPage(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // 0.1 Comparison & Decision Guide Pages (/vergleich, /boutique-vs-grossbuero, /architekt-oder-bautraeger, /vollarchitektur-vs-entwurf)
+    if (
+      path === "/vergleich" ||
+      path === "/vergleiche" ||
+      path === "/comparison" ||
+      path === "/comparisons" ||
+      path.startsWith("/vergleich/") ||
+      path === "/boutique-vs-grossbuero" ||
+      path === "/architekt-oder-bautraeger" ||
+      path === "/architekt-vs-bautraeger" ||
+      path === "/vollarchitektur-vs-entwurf" ||
+      path === "/vollarchitektur-vs-reiner-entwurf"
+    ) {
+      let topicId = "boutique-vs-grossbuero";
+      if (path.includes("bautraeger")) topicId = "architekt-vs-bautraeger";
+      else if (path.includes("entwurf")) topicId = "vollarchitektur-vs-reiner-entwurf";
+      else if (path.startsWith("/vergleich/")) {
+        const sub = path.replace(/^\/vergleich\//, "").trim();
+        if (sub) topicId = sub;
+      }
+      setIsComparisonPage(true);
+      setActiveComparisonTopicId(topicId);
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      setActiveLegalPage(null);
+      setActiveRegionalPage(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
 
     // 1. Site visits / Album / Baustelleneinblicke
     if (
@@ -437,6 +508,7 @@ export function App() {
 
     // 13. Default Home view
     if (path === "" || path === "/" || path === "/home" || path === "/index.html" || path === "/start") {
+      setIsComparisonPage(false);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
@@ -454,6 +526,7 @@ export function App() {
 
     // 14. Unknown Path -> Graceful 404
     setIsNotFound(true);
+    setIsComparisonPage(false);
     setIsAboutPage(false);
     setIsFounderPage(false);
     setIsProjectsPage(false);
@@ -476,7 +549,53 @@ export function App() {
 
   // Dynamic SEO meta tags and JSON-LD schema update on route or language change
   useEffect(() => {
-    if (activeProject) {
+    if (activeRegionalPage) {
+      const regCity = activeRegionalPage.office.city[language] ?? activeRegionalPage.office.city.de;
+      const graph: Record<string, unknown>[] = [
+        {
+          "@type": ["LocalBusiness", "ProfessionalService", "ArchitecturalService"],
+          name: `Shams Consult — ${activeRegionalPage.h1[language] ?? activeRegionalPage.h1.de}`,
+          description: activeRegionalPage.metaDescription[language] ?? activeRegionalPage.metaDescription.de,
+          url: `https://shams-consult.de${activeRegionalPage.path}`,
+          telephone: activeRegionalPage.office.phoneHref.replace("tel:", ""),
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: activeRegionalPage.office.street,
+            addressLocality: regCity.replace(/^\d+\s*/, "").replace(/\(.*?\)/, "").trim(),
+            postalCode: regCity.match(/\d{5}/)?.[0] || "60596",
+            addressCountry: "DE",
+          },
+        },
+      ];
+
+      if (activeRegionalPage.faqs && activeRegionalPage.faqs.length > 0) {
+        graph.push({
+          "@type": "FAQPage",
+          mainEntity: activeRegionalPage.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question[language] ?? faq.question.de,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer[language] ?? faq.answer.de,
+            },
+          })),
+        });
+      }
+
+      updatePageSeo({
+        title: activeRegionalPage.metaTitle[language] ?? activeRegionalPage.metaTitle.de,
+        description: activeRegionalPage.metaDescription[language] ?? activeRegionalPage.metaDescription.de,
+        canonicalUrl: `https://shams-consult.de${activeRegionalPage.path}`,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: activeRegionalPage.eyebrow[language] ?? activeRegionalPage.eyebrow.de, item: activeRegionalPage.path },
+        ],
+        customJsonLd: {
+          "@context": "https://schema.org",
+          "@graph": graph,
+        },
+      });
+    } else if (activeProject) {
       updatePageSeo(getProjectSeo(activeProject, language));
     } else if (activeBlogPost) {
       updatePageSeo(getBlogPostSeo(activeBlogPost, language));
@@ -638,6 +757,22 @@ export function App() {
           { name: "Barrierefreiheit", item: "/barrierefreiheit" },
         ],
       });
+    } else if (isComparisonPage) {
+      const topic =
+        comparisonTopics.find((t) => t.id === activeComparisonTopicId || t.slug === activeComparisonTopicId) ||
+        comparisonTopics[0];
+      const topicTitle = topic.metaTitle[language] ?? topic.metaTitle.de;
+      const topicDesc = topic.metaDescription[language] ?? topic.metaDescription.de;
+      updatePageSeo({
+        title: topicTitle,
+        description: topicDesc,
+        canonicalUrl: `https://shams-consult.de/vergleich/${topic.slug}`,
+        breadcrumbs: [
+          { name: "Home", item: "/" },
+          { name: language === "en" ? "Comparisons" : "Vergleiche", item: "/vergleich" },
+          { name: topic.badge[language] ?? topic.badge.de, item: `/vergleich/${topic.slug}` },
+        ],
+      });
     } else if (isNotFound) {
       updatePageSeo({
         title: "Seite nicht gefunden (404) | Shams Consult",
@@ -654,8 +789,20 @@ export function App() {
         description:
           language === "en"
             ? "Shams Consult — Architectural practice for architecture, urban planning & project development in Frankfurt & Rödermark (Rhine-Main). AKH Hessen Member (No. 21886). 15+ years experience."
-            : "Shams Consult — Architekturbüro für Architektur, Stadtplanung und Projektentwicklung in Frankfurt am Main & Rödermark (Rhein-Main). AKH Hessen Mitglied (Nr. 21886). 15+ Jahre Erfahrung, 100+ Bauanträge geprüft. Jetzt kostenloses Erstgespräch anfordern!",
+            : "Shams Consult — Architekturbüro für Architektur, Stadtplanung und Projektentwicklung in Frankfurt am Main & Rödermark (Rhein-Main). AKH Hessen Mitglied (Nr. 21886). 15+ Jahre Erfahrung. Jetzt Erstgespräch vereinbaren.",
         canonicalUrl: "https://shams-consult.de/",
+        customJsonLd: {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: t.faqSection.items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        },
       });
     }
   }, [
@@ -671,8 +818,12 @@ export function App() {
     isResearchPage,
     isClientsPage,
     isSiteVisitsPage,
+    isComparisonPage,
+    activeComparisonTopicId,
+    activeRegionalPage,
     activeLegalPage,
     isNotFound,
+    t.faqSection.items,
   ]);
 
   const navigateTo = (path: string) => {
@@ -690,6 +841,10 @@ export function App() {
 
   const handleSelectProject = (proj: Project) => {
     navigateTo(`/project/${proj.id}`);
+  };
+
+  const handleSelectProjectById = (projectId: string) => {
+    navigateTo(`/project/${projectId}`);
   };
 
   const handleSelectBlogPost = (post: BlogPost) => {
@@ -737,8 +892,6 @@ export function App() {
     }
   };
 
-  const t = content[language];
-
   return (
     <div className="min-h-screen flex flex-col bg-white text-zinc-900 font-sans pb-16 md:pb-0">
       {/* 1. Header Navigation */}
@@ -758,6 +911,25 @@ export function App() {
             type={activeLegalPage}
             language={language}
             onNavigateHome={handleBackToHome}
+          />
+        ) : activeRegionalPage ? (
+          /* Dedicated Regional Hub-and-Spoke Landing Page */
+          <RegionalLandingPage
+            data={activeRegionalPage}
+            language={language}
+            t={t.regionalLandingPage}
+            onBookConsultation={handleBookConsultation}
+            onNavigateHome={handleBackToHome}
+            onNavigateProject={handleSelectProjectById}
+          />
+        ) : isComparisonPage ? (
+          /* Dedicated Comparison & Decision Guide Page */
+          <ComparisonPage
+            initialTopicId={activeComparisonTopicId}
+            language={language}
+            onNavigateHome={handleBackToHome}
+            onBookConsultation={handleBookConsultation}
+            onNavigateTopic={(slug) => navigateTo(`/vergleich/${slug}`)}
           />
         ) : isClientsPage ? (
           /* Dedicated Clients & Project Partners Page */
@@ -934,7 +1106,13 @@ export function App() {
               onViewAll={handleViewAllBlog}
             />
 
-            {/* 8. Contact & Consultation Booking Section */}
+            {/* 8. Science-Backed FAQ Accordion Section with FAQPage Schema */}
+            <FaqSection
+              t={t.faqSection}
+              onBookConsultation={handleBookConsultation}
+            />
+
+            {/* 9. Contact & Consultation Booking Section */}
             <div id="contact" className="bg-[#121316]">
               <ContactSection t={t.contact} language={language} initialMessage={leadMessage} />
             </div>

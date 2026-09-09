@@ -29,9 +29,12 @@ export function ProcessSection({ t }: ProcessSectionProps) {
                 key={step.num}
                 className="flex flex-col items-center text-center space-y-2.5 p-2"
               >
-                {/* Circular Step Badge */}
-                <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-[#18191d] border border-white/20 shadow-xs flex items-center justify-center hover:border-[#DC2626] transition-all">
-                  <Icon name={icons[idx] ?? "circle-check"} className="text-xl text-white" />
+                {/* Circular Step Badge with Architectural Red Ring */}
+                <div className="relative group/step cursor-pointer">
+                  <div className="absolute -inset-1.5 rounded-full border border-[#DC2626]/0 group-hover/step:border-[#DC2626]/60 transition-all duration-300 pointer-events-none" />
+                  <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-[#18191d] border border-white/20 shadow-xs flex items-center justify-center group-hover/step:border-[#DC2626] group-hover/step:bg-[#DC2626]/10 group-hover/step:animate-couch-settle transition-all">
+                    <Icon name={icons[idx] ?? "circle-check"} className="text-xl text-white group-hover/step:text-[#DC2626] transition-colors" />
+                  </div>
                 </div>
 
                 {/* Step Number & Label */}

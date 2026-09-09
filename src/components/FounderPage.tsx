@@ -56,7 +56,13 @@ export function FounderPage({
 
         {/* Emotional Guiding Quote Banner */}
         <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-10 shadow-2xl relative overflow-hidden space-y-4">
-          <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#DC2626]/15 rounded-full blur-3xl pointer-events-none" />
+          <div
+            className="absolute -right-12 -bottom-12 w-64 h-64 pointer-events-none select-none z-0 flex items-center justify-center opacity-70 animate-couch-settle"
+            aria-hidden="true"
+          >
+            <div className="absolute w-64 h-64 rounded-full border border-[#DC2626]/30" />
+            <div className="w-48 h-48 rounded-full bg-[#DC2626]/20 blur-2xl" />
+          </div>
 
           <p className="font-sans text-2xl sm:text-3xl text-zinc-100 font-medium italic leading-snug">
             „From nobody to somebody, to help and share experiences with everybody.“

@@ -41,8 +41,8 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#0a0a0b] text-white pt-16 pb-12 border-t border-white/10 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* 3-Column Navigation, Services & Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10 items-start">
+        {/* 4-Column Navigation, Services, Regional Hubs & Contact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-white/10 items-start">
           {/* Column 1: Quick Links */}
           <div className="space-y-3">
             <h4 className="font-bold text-xs uppercase tracking-widest text-zinc-300">
@@ -52,6 +52,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
               <li><a href="/about" onClick={(e) => handleNav(e, "/about")} className="hover:text-white transition-colors">{navT.about}</a></li>
               <li><a href="/services" onClick={(e) => handleNav(e, "/services", "services")} className="hover:text-white transition-colors">{navT.services}</a></li>
               <li><a href="/projects" onClick={(e) => handleNav(e, "/projects")} className="hover:text-white transition-colors">{navT.projects}</a></li>
+              <li><a href="/vergleich" onClick={(e) => handleNav(e, "/vergleich")} className="hover:text-white text-[#DC2626] font-semibold transition-colors">Entscheidungshilfe & Vergleiche</a></li>
               <li><a href="/research" onClick={(e) => handleNav(e, "/research")} className="hover:text-white transition-colors">Frankfurt UAS · Forschung & Thesen</a></li>
               <li><a href="/blog" onClick={(e) => handleNav(e, "/blog")} className="hover:text-white transition-colors">{navT.blog}</a></li>
               <li><a href="/contact" onClick={(e) => handleNav(e, "/contact", "contact")} className="hover:text-white transition-colors">{navT.contact}</a></li>
@@ -74,7 +75,24 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Contact & Connect */}
+          {/* Column 3: Regionale Schwerpunkte */}
+          <div className="space-y-3">
+            <h4 className="font-bold text-xs uppercase tracking-widest text-zinc-300">
+              Standorte & Regionen
+            </h4>
+            <ul className="space-y-2 text-xs text-zinc-400">
+              <li><a href="/architektur-frankfurt" onClick={(e) => handleNav(e, "/architektur-frankfurt")} className="hover:text-white transition-colors">Architektur Frankfurt</a></li>
+              <li><a href="/architektur-bad-homburg" onClick={(e) => handleNav(e, "/architektur-bad-homburg")} className="hover:text-white transition-colors">Architektur Bad Homburg & Taunus</a></li>
+              <li><a href="/architektur-wiesbaden" onClick={(e) => handleNav(e, "/architektur-wiesbaden")} className="hover:text-white transition-colors">Architektur Wiesbaden</a></li>
+              <li><a href="/architektur-darmstadt" onClick={(e) => handleNav(e, "/architektur-darmstadt")} className="hover:text-white transition-colors">Architektur Darmstadt & Südhessen</a></li>
+              <li><a href="/architektur-hanau" onClick={(e) => handleNav(e, "/architektur-hanau")} className="hover:text-white transition-colors">Architektur Hanau & Main-Kinzig</a></li>
+              <li><a href="/architektur-roedermark" onClick={(e) => handleNav(e, "/architektur-roedermark")} className="hover:text-white transition-colors">Architektur Rödermark & Offenbach</a></li>
+              <li><a href="/architektur-dreieich" onClick={(e) => handleNav(e, "/architektur-dreieich")} className="hover:text-white transition-colors">Architektur Dreieich</a></li>
+              <li><a href="/stadtplanung-hessen" onClick={(e) => handleNav(e, "/stadtplanung-hessen")} className="hover:text-white transition-colors">Bebauungsplan & Stadtplanung</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Connect */}
           <div className="space-y-4">
             <h4 className="font-bold text-xs uppercase tracking-widest text-zinc-300">
               {t.contactTitle}

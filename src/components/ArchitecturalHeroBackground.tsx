@@ -7,21 +7,21 @@ export function ArchitecturalHeroBackground({
 }: ArchitecturalHeroBackgroundProps) {
   return (
     <div className={className} aria-hidden="true">
-      {/* Complete Frankfurt Architectural Skyline Sketch */}
+      {/* Complete Frankfurt Architectural Skyline Sketch with prominent Commerzbank Tower */}
       <img
         src="/images/frankfurt-skyline-sketch.png"
         alt=""
-        className="w-full h-full object-cover object-[62%_bottom] lg:object-[68%_bottom] opacity-30 lg:opacity-35 filter contrast-125 select-none"
+        className="absolute top-0 h-full w-[112%] max-w-none left-[-2%] sm:left-[0%] lg:left-[1%] object-cover object-[50%_top] opacity-40 lg:opacity-50 filter contrast-125 select-none"
         loading="eager"
         width="3189"
         height="1450"
       />
 
-      {/* Horizontal Gradient: 100% solid white on text column (WCAG AAA contrast), fading to reveal the skyline across center & right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-40% sm:via-45% lg:via-42% to-white/10" />
+      {/* Horizontal Gradient: solid white on text column (WCAG AAA contrast), fading to reveal the Commerzbank Tower & skyline */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-36% sm:via-38% lg:via-36% to-transparent" />
 
       {/* Top soft blend to protect header navigation */}
-      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-white/80 to-transparent" />
 
       {/* Subtle bottom grounding fade */}
       <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent" />

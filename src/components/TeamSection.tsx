@@ -26,6 +26,18 @@ export function TeamSection({ t, onNavigateAbout }: TeamSectionProps) {
 
   return (
     <section className="py-7 lg:py-9 bg-[#F8F9FA] text-zinc-900 border-b border-zinc-200 relative overflow-hidden">
+      {/* Architectural Edge Circle Accent in Far-Left Negative Margin */}
+      <div
+        className="absolute -left-20 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center opacity-60"
+        aria-hidden="true"
+      >
+        <div className="relative flex items-center justify-center animate-couch-settle">
+          <div className="absolute w-64 h-64 rounded-full border border-[#DC2626]/30" />
+          <div className="w-44 h-44 rounded-full bg-[#DC2626]/10 blur-xl" />
+          <div className="w-20 h-20 rounded-full bg-[#DC2626] opacity-35 shadow-lg shadow-red-600/20" />
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="p-5 sm:p-7 rounded-2xl bg-white border border-zinc-200/90 hover:border-zinc-300 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 group">
           

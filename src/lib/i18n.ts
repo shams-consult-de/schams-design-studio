@@ -359,6 +359,56 @@ export interface Translations {
     contactUs: string;
     needAssistance: string;
   };
+  regionalLandingPage: {
+    homeBreadcrumb: string;
+    akhRegistrationBadge: string;
+    experienceBadge: string;
+    requestConsultation: string;
+    callDirectly: string;
+    regionalExpertiseBadge: string;
+    realReferencesBadge: string;
+    realizedProjectsHeading: string;
+    realizedProjectsSubtitle: string;
+    viewProjectDetails: string;
+    structuredWorkflowBadge: string;
+    hoaiPhasesHeading: string;
+    hoaiPhasesSubtitle: string;
+    deliverablesLabel: string;
+    officeAvailableBadge: string;
+    addressLabel: string;
+    phoneLabel: string;
+    scheduleOfficeAppointment: string;
+    startProjectBadge: string;
+    ctaSubtitle: string;
+    districtsBadge: string;
+    districtsHeading: string;
+    districtsSubtitle: string;
+    selectDistrictAria: string;
+    coveredMicroLocationsLabel: string;
+    inquireProjectButton: string;
+    callOfficeButton: string;
+    architecturalFocusHeading: string;
+    zoningRequirementsHeading: string;
+    districtActionPrompt: string;
+    inquireDistrictAction: string;
+    readyForProjectPrefix: string;
+    faqBadge: string;
+    faqHeading: string;
+    faqSubtitle: string;
+    faqActionPrompt: string;
+    faqActionCta: string;
+  };
+  faqSection: {
+    badge: string;
+    heading: string;
+    subtitle: string;
+    actionPrompt: string;
+    actionCta: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
 }
 
 export const content: Record<Language, Translations> = {
@@ -860,6 +910,78 @@ export const content: Record<Language, Translations> = {
       contactUs: "Kontakt & Beratung",
       needAssistance: "Haben Sie Fragen oder suchen Sie ein bestimmtes Projekt? Wir helfen Ihnen gerne weiter.",
     },
+    regionalLandingPage: {
+      homeBreadcrumb: "Home",
+      akhRegistrationBadge: "AKH Hessen Nr. 21886",
+      experienceBadge: "15+ Jahre Erfahrung",
+      requestConsultation: "Erstgespräch anfragen",
+      callDirectly: "Direkt anrufen:",
+      regionalExpertiseBadge: "Regionale Expertise & Baurecht",
+      realReferencesBadge: "Reale Referenzen",
+      realizedProjectsHeading: "Realisierte Projekte im regionalen Umfeld",
+      realizedProjectsSubtitle: "Ausgewählte Bau- und Planungsprojekte mit konkreten Kennzahlen, Bauvolumina und architektonischen Spezifikationen.",
+      viewProjectDetails: "Projektdetails ansehen",
+      structuredWorkflowBadge: "Strukturierter Projektablauf",
+      hoaiPhasesHeading: "HOAI Leistungsphasen 1–9 im Detail",
+      hoaiPhasesSubtitle: "Transparenz von der ersten Skizze bis zur finalen Bauabnahme. Wir übernehmen die vollumfängliche Koordination aller Fachplaner und Behörden.",
+      deliverablesLabel: "Ergebnisse & Deliverables:",
+      officeAvailableBadge: "Vor Ort für Sie erreichbar",
+      addressLabel: "Adresse",
+      phoneLabel: "Telefonkontakt",
+      scheduleOfficeAppointment: "Termin im Büro anfragen",
+      startProjectBadge: "Starten Sie Ihr Projekt",
+      ctaSubtitle: "Sichern Sie sich fundierte Beratung, absolute Kostendisziplin und reibungslose Baugenehmigungsverfahren mit Dipl.-Ing. Majeed Shams.",
+      districtsBadge: "Stadtteile & Mikrolagen",
+      districtsHeading: "Architektur & Baugenehmigungen nach Stadtteilen in",
+      districtsSubtitle: "Jeder Stadtteil hat spezifische baurechtliche Herausforderungen — von Milieuschutz und Denkmalschutz bis hin zu B-Plan-Vorgaben und Nachverdichtung. Wählen Sie Ihre Lage:",
+      selectDistrictAria: "Stadtteile auswählen",
+      coveredMicroLocationsLabel: "Erfasste Lagen & Quartiere:",
+      inquireProjectButton: "Projekt anfragen",
+      callOfficeButton: "Anrufen:",
+      architecturalFocusHeading: "Architektonische Schwerpunkte",
+      zoningRequirementsHeading: "Baurecht & Behördliche Auflagen",
+      districtActionPrompt: "Sie planen ein Bauvorhaben in diesem Stadtteil? Wir prüfen die Machbarkeit und Baurechtslage vorab.",
+      inquireDistrictAction: "Erstgespräch anfragen",
+      readyForProjectPrefix: "Bereit für Ihr Bauvorhaben in",
+      faqBadge: "Häufige Fragen & Baurecht",
+      faqHeading: "Wichtige Fragen zu Kosten, Genehmigung & Ablauf",
+      faqSubtitle: "Transparente Orientierung für Bauherren zu HOAI-Honoraren, Behördenfristen und Genehmigungsschritten.",
+      faqActionPrompt: "Haben Sie eine spezifische Frage zu Ihrem Grundstück oder Bauvorhaben?",
+      faqActionCta: "Jetzt Erstgespräch mit dem Architekten vereinbaren",
+    },
+    faqSection: {
+      badge: "Häufige Fragen & Antworten",
+      heading: "Wichtige Fragen zu Architektenleistungen, Kosten & Genehmigungen",
+      subtitle: "Fundierte Antworten zu HOAI-Honoraren, Genehmigungsfristen der Bauaufsicht, KfW-Förderungen und dem Planungsablauf.",
+      actionPrompt: "Haben Sie eine konkrete Frage zu Ihrem Grundstück oder Projekt?",
+      actionCta: "Erstgespräch mit dem Architekten vereinbaren",
+      items: [
+        {
+          question: "Wie berechnen sich die Honorare für Architektenleistungen nach der HOAI?",
+          answer: "Die Architektenhonorare richten sich nach den offiziellen Leistungsphasen (1 bis 9) der Honorarordnung für Architekten und Ingenieure (HOAI). Die Berechnung basiert auf den anrechenbaren Baukosten und der Einstufung des Gebäudes in eine Honorarzone (z.B. Honorarzone III oder IV bei anspruchsvollem Wohnungs- oder Gewerbebau). Shams Consult erstellt für Sie vor Projektbeginn eine transparente, nach Einzelschritten aufgeschlüsselte Honorarvereinbarung.",
+        },
+        {
+          question: "Wie lange dauert ein Baugenehmigungsverfahren in Hessen (HBO)?",
+          answer: "Im vereinfachten Genehmigungsverfahren nach § 65 HBO (üblich für Ein- und Mehrfamilienhäuser) liegt die Bearbeitungszeit bei den hessischen Bauaufsichtsämtern (z.B. Frankfurt, Offenbach, Wiesbaden, Darmstadt) meist zwischen 3 und 5 Monaten. Durch lückenlose, prüffähige Bauanträge mit vollständigen Fachnachweisen (Standsicherheit, Brandschutz, Entwässerung) verhindern wir Rückfragen und beschleunigen die Genehmigung.",
+        },
+        {
+          question: "Übernimmt Shams Consult die vollständige Betreuung von Entwurf bis Bauüberwachung?",
+          answer: "Ja, wir begleiten Bauvorhaben ganzheitlich durch alle 9 HOAI-Leistungsphasen: von der ersten Grundlagenermittlung und Vorplanung (LPH 1–2) über die Entwurfs- und Genehmigungsplanung (LPH 3–4) bis hin zur detaillierten Werk- und Ausführungsplanung (LPH 5), Ausschreibung (LPH 6–7) und der täglichen Bauleitung vor Ort bis zur Endabnahme (LPH 8–9).",
+        },
+        {
+          question: "Welche Fördermittel stehen für KfW-Effizienzhäuser und QNG-Nachhaltigkeitszertifikate bereit?",
+          answer: "Über die Bundesförderung für effiziente Gebäude (BEG) und das KfW-Programm 'Klimafreundlicher Neubau' (KFN / Programme 297/298) können Bauherren zinsverbilligte Förderkredite von bis zu 150.000 € pro Wohneinheit sowie attraktive Tilgungszuschüsse beantragen. Bei Erreichung des staatlichen QNG-Siegels (Qualitätssiegel Nachhaltiges Gebäude) steigen die Förderquoten signifikant. Wir integrieren diese Standards von Beginn an in die Gebäudeplanung.",
+        },
+        {
+          question: "Was geschieht in einem ersten Beratungsgespräch mit dem Architekten?",
+          answer: "Im Erstgespräch analysieren wir Ihre Projektziele, die baurechtlichen Rahmenbedingungen Ihres Grundstücks (Bebauungsplan oder § 34 BauGB) sowie den baulichen Bestand. Sie erhalten eine erste realistische Einschätzung zu Machbarkeit, Genehmigungschancen, Kostenrahmen und Zeitplan für die Realisierung.",
+        },
+        {
+          question: "Was ist der Unterschied zwischen einem Bebauungsplan (B-Plan) und § 34 BauGB (Innenbereich)?",
+          answer: "Liegt ein qualifizierter Bebauungsplan (B-Plan) vor, regelt dieser detailliert Geschossflächenzahl (GFZ), Grundflächenzahl (GRZ), Dachformen und Bauhöhen. Gibt es keinen B-Plan, greift § 34 BauGB: Das Bauvorhaben muss sich nach Art und Maß der baulichen Nutzung, der Bauweise und der Grundstücksfläche harmonisch in die Eigenart der näheren Umgebung einfügen. Wir klären das Baurecht vorab verlässlich mit der zuständigen Bauaufsicht.",
+        },
+      ],
+    },
   },
   en: {
     nav: {
@@ -1358,6 +1480,78 @@ export const content: Record<Language, Translations> = {
       aboutUs: "About Shams Consult",
       contactUs: "Contact & Consultation",
       needAssistance: "Have questions or looking for a specific project? We are happy to assist you.",
+    },
+    regionalLandingPage: {
+      homeBreadcrumb: "Home",
+      akhRegistrationBadge: "AKH Hesse No. 21886",
+      experienceBadge: "15+ Years Experience",
+      requestConsultation: "Request Consultation",
+      callDirectly: "Call directly:",
+      regionalExpertiseBadge: "Regional Expertise & Building Law",
+      realReferencesBadge: "Real References",
+      realizedProjectsHeading: "Realized Projects in the Regional Area",
+      realizedProjectsSubtitle: "Selected construction and planning projects with concrete metrics, construction volumes, and architectural specifications.",
+      viewProjectDetails: "View project details",
+      structuredWorkflowBadge: "Structured Project Workflow",
+      hoaiPhasesHeading: "HOAI Work Phases 1–9 in Detail",
+      hoaiPhasesSubtitle: "Transparency from the initial sketch to final building acceptance. We oversee end-to-end coordination of all specialist engineers and municipal authorities.",
+      deliverablesLabel: "Deliverables & Outcomes:",
+      officeAvailableBadge: "Locally Accessible for You",
+      addressLabel: "Address",
+      phoneLabel: "Telephone Contact",
+      scheduleOfficeAppointment: "Schedule Office Appointment",
+      startProjectBadge: "Start Your Project",
+      ctaSubtitle: "Secure expert architectural guidance, rigorous cost discipline, and streamlined building permit approvals with Dipl.-Ing. Majeed Shams.",
+      districtsBadge: "Districts & Micro-Locations",
+      districtsHeading: "Architecture & Permits by District in",
+      districtsSubtitle: "Every quarter brings distinct regulatory hurdles — from historic conservation and social preservation to master plan mandates and infill. Select your area:",
+      selectDistrictAria: "Select district",
+      coveredMicroLocationsLabel: "Covered micro-locations:",
+      inquireProjectButton: "Inquire Project",
+      callOfficeButton: "Call:",
+      architecturalFocusHeading: "Architectural Focus Areas",
+      zoningRequirementsHeading: "Zoning & Statutory Requirements",
+      districtActionPrompt: "Planning a project in this district? We review feasibility and planning laws in advance.",
+      inquireDistrictAction: "Request Consultation",
+      readyForProjectPrefix: "Ready for Your Architecture Project in",
+      faqBadge: "FAQ & Planning Regulations",
+      faqHeading: "Key Questions on Costs, Permits & Timeline",
+      faqSubtitle: "Transparent orientation for developers and homeowners regarding HOAI fees, authority milestones, and approvals.",
+      faqActionPrompt: "Have a specific question regarding your building site or project?",
+      faqActionCta: "Schedule a Consultation with the Architect",
+    },
+    faqSection: {
+      badge: "Frequently Asked Questions",
+      heading: "Key Questions on Architectural Services, Costs & Building Permits",
+      subtitle: "Authoritative answers regarding HOAI fee structures, municipal permit durations across Hesse, KfW subsidies, and workflow milestones.",
+      actionPrompt: "Do you have a specific inquiry regarding your property or upcoming project?",
+      actionCta: "Schedule a Consultation with the Architect",
+      items: [
+        {
+          question: "How are architectural fees calculated under the German HOAI?",
+          answer: "Architectural fees in Germany are structured per official Work Phases (1 through 9) under the statutory HOAI framework. The fee calculation is based on verified net construction expenditures and the building's complexity zone (typically Zone III or IV for custom residential or commercial builds). Shams Consult provides itemized, transparent phase proposals before contract commencement.",
+        },
+        {
+          question: "How long does a building permit procedure take in Hesse (HBO)?",
+          answer: "Under simplified permit procedures (§ 65 HBO), review times across Hessian building authorities (Frankfurt, Offenbach, Wiesbaden, Darmstadt) typically take between 3 and 5 months. As state-registered architects with unlimited submission authority, we submit meticulous, verified documentation covering structural, fire safety, and civil drainage engineering to eliminate administrative delays.",
+        },
+        {
+          question: "Does Shams Consult manage full architectural delivery from design through site supervision?",
+          answer: "Yes, we direct projects holistically across all 9 HOAI phases: from site assessment and preliminary designs (Phases 1–2), detailed design and permit submission (Phases 3–4), to precision working drawings (Phase 5), contractor tendering (Phases 6–7), and rigorous daily on-site supervision through final building handover (Phases 8–9).",
+        },
+        {
+          question: "What federal subsidies are available for KfW efficiency homes and QNG green certifications?",
+          answer: "Under federal energy-efficiency programs (BEG) and KfW Climate-Friendly New Construction guidelines (KFN 297/298), developers can access low-interest loans of up to €150,000 per dwelling unit with repayment subsidies. Achieving the federal QNG (Quality Seal for Sustainable Buildings) unlocks maximum subsidy caps. We engineer these standards directly into our architectural concepts.",
+        },
+        {
+          question: "What can I expect during an initial architectural consultation?",
+          answer: "During our consultation, we review your project vision, property zoning parameters (municipal master plan or § 34 BauGB infill context), and any existing structures. You receive an initial expert appraisal regarding legal feasibility, municipal approval probability, realistic budgets, and project milestones.",
+        },
+        {
+          question: "What is the difference between a municipal master plan (B-Plan) and § 34 BauGB infill?",
+          answer: "Where an active master plan (B-Plan) exists, it strictly defines site occupancy (GRZ), floor area ratios (GFZ), eaves heights, and roof geometries. In areas without a B-Plan, Section 34 BauGB applies: new construction must blend harmoniously into the character of the immediate neighborhood. We clarify statutory zoning with local planning authorities.",
+        },
+      ],
     },
   },
 };
