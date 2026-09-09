@@ -82,11 +82,11 @@ export function Hero({
               {/* Majeed Shams Portrait */}
               <div className="w-full flex justify-center overflow-hidden">
                 <img
-                  src="/images/team/shams-majeed-main-image.png"
+                  src="/images/team/majeed-shams-authentic.png"
                   alt="Dipl.-Ing. Majeed Shams"
-                  className="w-auto h-auto max-h-[280px] sm:max-h-[360px] lg:max-h-[430px] object-contain filter contrast-105 group-hover:scale-102 transition-transform duration-500 relative z-10"
+                  className="w-auto h-auto max-h-[280px] sm:max-h-[360px] lg:max-h-[430px] object-contain group-hover:scale-102 transition-transform duration-500 relative z-10"
                   width="440"
-                  height="520"
+                  height="660"
                   loading="eager"
                   fetchPriority="high"
                 />

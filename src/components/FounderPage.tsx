@@ -65,7 +65,7 @@ export function FounderPage({
           <div className="pt-2 flex items-center justify-between border-t border-zinc-800">
             <div className="flex items-center gap-3">
               <img
-                src="/images/team/shams-majeed-main-image.png"
+                src="/images/team/majeed-shams-authentic.png"
                 alt="Dipl.-Ing. Majeed Shams"
                 className="h-11 w-11 rounded-full object-cover object-top border border-[#DC2626]"
               />
@@ -91,9 +91,9 @@ export function FounderPage({
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200 shadow-sm">
               <img
-                src="/images/team/shams-majeed-main-image.png"
+                src="/images/team/Image.jpg"
                 alt="Dipl.-Ing. Majeed Shams Portrait"
-                className="w-full h-auto object-cover filter contrast-105"
+                className="w-full h-auto object-cover"
               />
             </div>
 

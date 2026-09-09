@@ -57,7 +57,7 @@ export function CaseStudyDetail({
 
           <div className="flex items-center gap-3 shrink-0">
             <img
-              src="/images/team/shams-majeed-main-image.png"
+              src="/images/team/majeed-shams-authentic.png"
               alt="Dipl.-Ing. Majeed Shams"
               className="h-11 w-11 rounded-full object-cover object-top border border-[#DC2626]"
             />

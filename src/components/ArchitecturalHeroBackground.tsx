@@ -7,21 +7,24 @@ export function ArchitecturalHeroBackground({
 }: ArchitecturalHeroBackgroundProps) {
   return (
     <div className={className} aria-hidden="true">
-      {/* Real Frankfurt am Main Landmark Skyline Photo */}
+      {/* Complete Frankfurt Architectural Skyline Sketch */}
       <img
-        src="/images/frankfurt-skyline-hero.jpg"
+        src="/images/frankfurt-skyline-sketch.png"
         alt=""
-        className="w-full h-full object-cover object-[72%_32%] lg:object-[78%_36%] opacity-40 lg:opacity-45 filter contrast-[1.05] brightness-[1.02]"
+        className="w-full h-full object-cover object-[62%_bottom] lg:object-[68%_bottom] opacity-30 lg:opacity-35 filter contrast-125 select-none"
         loading="eager"
-        width="1920"
-        height="1440"
+        width="3189"
+        height="1450"
       />
 
-      {/* Left-to-Right Pure White Gradient to ensure 100% WCAG contrast on hero typography */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-40% sm:via-48% lg:via-45% to-transparent" />
+      {/* Horizontal Gradient: 100% solid white on text column (WCAG AAA contrast), fading to reveal the skyline across center & right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-40% sm:via-45% lg:via-42% to-white/10" />
 
-      {/* Soft Bottom Fade into section divider */}
-      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent" />
+      {/* Top soft blend to protect header navigation */}
+      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white to-transparent" />
+
+      {/* Subtle bottom grounding fade */}
+      <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent" />
     </div>
   );
 }
