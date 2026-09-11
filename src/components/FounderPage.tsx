@@ -14,8 +14,22 @@ export function FounderPage({
   const isDe = language === "de";
 
   return (
-    <article className="min-h-screen bg-[#FFFFFF] text-zinc-900 pt-28 pb-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
+    <article className="min-h-screen bg-[#FFFFFF] text-zinc-900 pt-28 pb-20 relative overflow-hidden">
+      {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Margin */}
+      <div
+        className="absolute -right-12 xl:right-8 2xl:right-24 top-40 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <div className="relative flex items-center justify-center animate-couch-settle">
+          {/* Concentric Outer Accent Ring */}
+          <div className="absolute w-[210px] h-[210px] rounded-full border-2 border-[#DC2626]/30" />
+
+          {/* Solid Bold Crimson Architectural Circle */}
+          <div className="w-[150px] h-[150px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/40" />
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Top Back Navigation */}
         <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
           <button
@@ -55,20 +69,7 @@ export function FounderPage({
         </div>
 
         {/* Emotional Guiding Quote Banner */}
-        <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-10 shadow-2xl relative overflow-hidden space-y-4">
-          <div
-            className="absolute -right-8 -bottom-8 pointer-events-none select-none z-0 flex items-center justify-center"
-            aria-hidden="true"
-          >
-            <div className="relative flex items-center justify-center animate-couch-settle">
-              {/* Concentric Outer Accent Ring */}
-              <div className="absolute w-[210px] h-[210px] rounded-full border-2 border-[#DC2626]/30" />
-
-              {/* Solid Bold Crimson Architectural Circle */}
-              <div className="w-[150px] h-[150px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/40" />
-            </div>
-          </div>
-
+        <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-10 shadow-2xl space-y-4">
           <p className="font-sans text-2xl sm:text-3xl text-zinc-100 font-medium italic leading-snug">
             „From nobody to somebody, to help and share experiences with everybody.“
           </p>

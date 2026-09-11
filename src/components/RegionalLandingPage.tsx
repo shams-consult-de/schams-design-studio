@@ -82,7 +82,7 @@ export function RegionalLandingPage({
 
         {/* Bold Architectural Crimson Circle Accent */}
         <div
-          className="absolute -right-10 sm:right-4 lg:right-12 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden md:flex items-center justify-center"
+          className="absolute xl:right-10 2xl:right-20 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
           aria-hidden="true"
         >
           <div className="relative flex items-center justify-center animate-couch-settle">

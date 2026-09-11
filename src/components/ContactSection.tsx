@@ -29,7 +29,7 @@ export function ContactSection({
 
       {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Margin */}
       <div
-        className="absolute -right-12 sm:right-4 lg:right-10 top-20 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
+        className="absolute xl:right-10 2xl:right-20 top-20 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
         aria-hidden="true"
       >
         <div className="relative flex items-center justify-center animate-couch-settle">

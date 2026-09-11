@@ -28,7 +28,7 @@ export function TeamSection({ t, onNavigateAbout }: TeamSectionProps) {
     <section className="py-7 lg:py-9 bg-[#F8F9FA] text-zinc-900 border-b border-zinc-200 relative overflow-hidden">
       {/* Bold Architectural Crimson Circle Accent in Far-Left Negative Margin */}
       <div
-        className="absolute -left-12 sm:-left-6 lg:left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
+        className="absolute xl:-left-12 2xl:left-6 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
         aria-hidden="true"
       >
         <div className="relative flex items-center justify-center animate-couch-settle">

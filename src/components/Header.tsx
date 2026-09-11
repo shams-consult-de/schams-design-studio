@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Icon } from "./icon";
 import { Language, Translations } from "../lib/i18n";
+import { getLocalizedPath } from "../lib/i18nRouting";
 
 interface HeaderProps {
   t: Translations["nav"];
@@ -50,14 +51,15 @@ export function Header({
     setMobileMenuOpen(false);
 
     if (link.sectionId) {
-      if (window.location.pathname === "/") {
+      const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
+      if (isHome) {
         const el = document.getElementById(link.sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
         }
       } else {
         if (onNavigate) {
-          onNavigate("/");
+          onNavigate(language === "en" ? "/en" : "/");
           setTimeout(() => {
             const el = document.getElementById(link.sectionId!);
             if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -65,12 +67,13 @@ export function Header({
         }
       }
     } else {
+      const targetPath = getLocalizedPath(link.path, language);
       if (link.path === "/" && onNavigateHome) {
         onNavigateHome();
       } else if (onNavigate) {
-        onNavigate(link.path);
+        onNavigate(targetPath);
       } else {
-        window.location.href = link.path;
+        window.location.href = targetPath;
       }
     }
   };
@@ -78,11 +81,12 @@ export function Header({
   const handleConsultationClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    if (window.location.pathname === "/") {
+    const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
+    if (isHome) {
       const el = document.getElementById("contact");
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else if (onNavigate) {
-      onNavigate("/");
+      onNavigate(language === "en" ? "/en" : "/");
       setTimeout(() => {
         const el = document.getElementById("contact");
         if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -102,11 +106,11 @@ export function Header({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Official Brand Logo */}
         <a
-          href="/"
+          href={language === "en" ? "/en" : "/"}
           onClick={(e) => {
             e.preventDefault();
             if (onNavigateHome) onNavigateHome();
-            else if (onNavigate) onNavigate("/");
+            else if (onNavigate) onNavigate(language === "en" ? "/en" : "/");
           }}
           className="flex items-center group focus:outline-none"
         >
@@ -125,7 +129,7 @@ export function Header({
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={link.path}
+              href={link.sectionId ? (language === "en" ? `/en#${link.sectionId}` : `/#${link.sectionId}`) : getLocalizedPath(link.path, language)}
               onClick={(e) => handleLinkClick(e, link)}
               className="hover:text-[#DC2626] transition-colors uppercase relative py-1 text-zinc-600"
             >
@@ -216,7 +220,7 @@ export function Header({
             {mobileNavLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.path}
+                href={link.sectionId ? (language === "en" ? `/en#${link.sectionId}` : `/#${link.sectionId}`) : getLocalizedPath(link.path, language)}
                 onClick={(e) => handleLinkClick(e, link)}
                 className="text-zinc-900 hover:text-[#DC2626] font-bold text-sm tracking-wider uppercase py-3 border-b border-zinc-100 flex items-center justify-between min-h-[48px]"
               >

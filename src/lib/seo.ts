@@ -20,6 +20,7 @@ export interface SeoMetadata {
     section: string;
   };
   customJsonLd?: Record<string, unknown>;
+  alternateLanguages?: Array<{ lang: string; href: string }>;
 }
 
 function setMetaTag(attribute: "name" | "property", key: string, content: string) {
@@ -40,6 +41,17 @@ function setCanonical(url: string) {
     document.head.appendChild(link);
   }
   link.setAttribute("href", url);
+}
+
+function setAlternateHreflang(lang: string, href: string) {
+  let link = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement | null;
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", "alternate");
+    link.setAttribute("hreflang", lang);
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", href);
 }
 
 function setRobots(noIndex?: boolean) {
@@ -81,10 +93,17 @@ export function updatePageSeo(meta: SeoMetadata) {
   // 3. Canonical Link
   setCanonical(meta.canonicalUrl);
 
-  // 4. Robots
+  // 4. Alternate Hreflang
+  if (meta.alternateLanguages && meta.alternateLanguages.length > 0) {
+    for (const alt of meta.alternateLanguages) {
+      setAlternateHreflang(alt.lang, alt.href);
+    }
+  }
+
+  // 5. Robots
   setRobots(meta.noIndex);
 
-  // 5. Open Graph
+  // 6. Open Graph
   const image = meta.ogImage
     ? meta.ogImage.startsWith("http")
       ? meta.ogImage
@@ -96,13 +115,14 @@ export function updatePageSeo(meta: SeoMetadata) {
   setMetaTag("property", "og:url", meta.canonicalUrl);
   setMetaTag("property", "og:image", image);
   setMetaTag("property", "og:type", meta.ogType || "website");
+  setMetaTag("property", "og:locale", meta.canonicalUrl.includes("/en") ? "en_US" : "de_DE");
 
-  // 6. Twitter Card
+  // 7. Twitter Card
   setMetaTag("name", "twitter:title", meta.title);
   setMetaTag("name", "twitter:description", meta.description);
   setMetaTag("name", "twitter:image", image);
 
-  // 7. Dynamic Breadcrumbs Schema
+  // 8. Dynamic Breadcrumbs Schema
   if (meta.breadcrumbs && meta.breadcrumbs.length > 0) {
     const breadcrumbData = {
       "@context": "https://schema.org",
@@ -119,7 +139,7 @@ export function updatePageSeo(meta: SeoMetadata) {
     setJsonLd("route-breadcrumb-schema", null);
   }
 
-  // 8. Custom JSON-LD (e.g. Article / CreativeWork)
+  // 9. Custom JSON-LD (e.g. Article / CreativeWork)
   if (meta.customJsonLd) {
     setJsonLd("route-detail-schema", meta.customJsonLd);
   } else {
@@ -129,9 +149,10 @@ export function updatePageSeo(meta: SeoMetadata) {
 
 export function getProjectSeo(project: Project, language: Language = "de"): SeoMetadata {
   const lang = language === "en" ? "en" : "de";
-  const title = `${project.title[lang]} — Referenz | Shams Consult`;
-  const description = `${project.categoryLabel[lang]}: ${project.subtitle[lang]} — Standort: ${project.location[lang]} (${project.year}).`;
-  const canonicalUrl = `${SITE_URL}/project/${project.slug || project.id}`;
+  const slug = project.slug || project.id;
+  const title = `${project.title[lang]} — ${lang === "en" ? "Reference" : "Referenz"} | Shams Consult`;
+  const description = `${project.categoryLabel[lang]}: ${project.subtitle[lang]} — ${lang === "en" ? "Location" : "Standort"}: ${project.location[lang]} (${project.year}).`;
+  const canonicalUrl = `${SITE_URL}${lang === "en" ? "/en" : ""}/project/${slug}`;
   const image = project.image.startsWith("http") ? project.image : `${SITE_URL}${project.image.startsWith("/") ? "" : "/"}${project.image}`;
 
   return {
@@ -141,9 +162,14 @@ export function getProjectSeo(project: Project, language: Language = "de"): SeoM
     ogImage: image,
     ogType: "article",
     breadcrumbs: [
-      { name: "Home", item: "/" },
-      { name: "Projekte", item: "/projects" },
-      { name: project.title[lang], item: `/project/${project.slug || project.id}` },
+      { name: lang === "en" ? "Home" : "Start", item: lang === "en" ? "/en" : "/" },
+      { name: lang === "en" ? "Projects" : "Projekte", item: lang === "en" ? "/en/projects" : "/projects" },
+      { name: project.title[lang], item: `${lang === "en" ? "/en" : ""}/project/${slug}` },
+    ],
+    alternateLanguages: [
+      { lang: "de", href: `${SITE_URL}/project/${slug}` },
+      { lang: "en", href: `${SITE_URL}/en/project/${slug}` },
+      { lang: "x-default", href: `${SITE_URL}/project/${slug}` },
     ],
     customJsonLd: {
       "@context": "https://schema.org",
@@ -167,9 +193,9 @@ export function getProjectSeo(project: Project, language: Language = "de"): SeoM
 
 export function getBlogPostSeo(post: BlogPost, language: Language = "de"): SeoMetadata {
   const lang = language === "en" ? "en" : "de";
-  const title = `${post.title[lang]} | Shams Consult Magazin`;
+  const title = `${post.title[lang]} | Shams Consult ${lang === "en" ? "Journal" : "Magazin"}`;
   const description = post.excerpt[lang];
-  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
+  const canonicalUrl = `${SITE_URL}${lang === "en" ? "/en" : ""}/blog/${post.slug}`;
   const image = post.image.startsWith("http") ? post.image : `${SITE_URL}${post.image.startsWith("/") ? "" : "/"}${post.image}`;
 
   return {
@@ -179,9 +205,14 @@ export function getBlogPostSeo(post: BlogPost, language: Language = "de"): SeoMe
     ogImage: image,
     ogType: "article",
     breadcrumbs: [
-      { name: "Home", item: "/" },
-      { name: "Magazin", item: "/blog" },
-      { name: post.title[lang], item: `/blog/${post.slug}` },
+      { name: lang === "en" ? "Home" : "Start", item: lang === "en" ? "/en" : "/" },
+      { name: lang === "en" ? "Journal" : "Magazin", item: lang === "en" ? "/en/blog" : "/blog" },
+      { name: post.title[lang], item: `${lang === "en" ? "/en" : ""}/blog/${post.slug}` },
+    ],
+    alternateLanguages: [
+      { lang: "de", href: `${SITE_URL}/blog/${post.slug}` },
+      { lang: "en", href: `${SITE_URL}/en/blog/${post.slug}` },
+      { lang: "x-default", href: `${SITE_URL}/blog/${post.slug}` },
     ],
     article: {
       publishedTime: post.isoDate,
@@ -203,8 +234,8 @@ export function getBlogPostSeo(post: BlogPost, language: Language = "de"): SeoMe
       author: {
         "@type": "Person",
         name: "Dipl.-Ing. Majeed Shams",
-        jobTitle: "Freier Architekt & Stadtplaner",
-        url: `${SITE_URL}/founder`,
+        jobTitle: lang === "en" ? "Licensed Architect & Urban Planner" : "Freier Architekt & Stadtplaner",
+        url: `${SITE_URL}${lang === "en" ? "/en" : ""}/founder`,
       },
       publisher: {
         "@type": "Organization",
@@ -220,9 +251,9 @@ export function getBlogPostSeo(post: BlogPost, language: Language = "de"): SeoMe
 
 export function getCaseStudySeo(caseStudy: CaseStudy, language: Language = "de"): SeoMetadata {
   const lang = language === "en" ? "en" : "de";
-  const title = `Fallstudie: ${caseStudy.projectTitle[lang]} | Shams Consult`;
-  const description = `${caseStudy.subtitle[lang]} — Erfolgreiche Begleitung mit ${caseStudy.rating}/5 Sternen von ${caseStudy.reviewerName}.`;
-  const canonicalUrl = `${SITE_URL}/case-study/${caseStudy.id}`;
+  const title = lang === "en" ? `Case Study: ${caseStudy.projectTitle.en} | Shams Consult` : `Fallstudie: ${caseStudy.projectTitle.de} | Shams Consult`;
+  const description = `${caseStudy.subtitle[lang]} — ${caseStudy.rating}/5 stars from ${caseStudy.reviewerName}.`;
+  const canonicalUrl = `${SITE_URL}${lang === "en" ? "/en" : ""}/case-study/${caseStudy.id}`;
 
   return {
     title,
@@ -231,9 +262,14 @@ export function getCaseStudySeo(caseStudy: CaseStudy, language: Language = "de")
     ogImage: DEFAULT_OG_IMAGE,
     ogType: "article",
     breadcrumbs: [
-      { name: "Home", item: "/" },
-      { name: "Referenzen", item: "/clients" },
-      { name: caseStudy.projectTitle[lang], item: `/case-study/${caseStudy.id}` },
+      { name: lang === "en" ? "Home" : "Start", item: lang === "en" ? "/en" : "/" },
+      { name: lang === "en" ? "References" : "Referenzen", item: lang === "en" ? "/en/clients" : "/clients" },
+      { name: caseStudy.projectTitle[lang], item: `${lang === "en" ? "/en" : ""}/case-study/${caseStudy.id}` },
+    ],
+    alternateLanguages: [
+      { lang: "de", href: `${SITE_URL}/case-study/${caseStudy.id}` },
+      { lang: "en", href: `${SITE_URL}/en/case-study/${caseStudy.id}` },
+      { lang: "x-default", href: `${SITE_URL}/case-study/${caseStudy.id}` },
     ],
     customJsonLd: {
       "@context": "https://schema.org",

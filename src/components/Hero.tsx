@@ -21,7 +21,7 @@ export function Hero({
 
       {/* Bold Architectural Crimson Circle Accent - Positioned at Right Section Edge */}
       <div
-        className="absolute -right-10 sm:right-4 lg:right-12 xl:right-24 top-1/3 -translate-y-1/2 pointer-events-none select-none z-0 hidden sm:flex items-center justify-center"
+        className="absolute xl:right-12 2xl:right-24 top-1/3 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
         aria-hidden="true"
       >
         <div className="relative flex items-center justify-center animate-couch-settle">

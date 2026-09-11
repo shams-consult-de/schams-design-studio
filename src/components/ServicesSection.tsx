@@ -67,7 +67,7 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
     <section id="services" className="py-20 lg:py-28 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 overflow-hidden relative">
       {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Space */}
       <div
-        className="absolute -right-10 sm:right-4 lg:right-8 top-28 pointer-events-none select-none z-0 hidden lg:flex items-center justify-center"
+        className="absolute xl:right-8 2xl:right-20 top-28 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
         aria-hidden="true"
       >
         <div className="relative flex items-center justify-center animate-couch-settle">

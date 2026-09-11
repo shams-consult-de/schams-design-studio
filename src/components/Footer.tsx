@@ -1,39 +1,47 @@
 import { MouseEvent } from "react";
 import { Icon } from "./icon";
 import { CONTACT } from "../lib/contact";
-import { Translations } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 import { openCookieSettings } from "../lib/analytics";
+import { getLocalizedPath } from "../lib/i18nRouting";
 
 interface FooterProps {
   t: Translations["footer"];
   navT: Translations["nav"];
   servicesT: Translations["services"];
+  language?: Language;
   onNavigate?: (path: string) => void;
 }
 
-export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
+export function Footer({ t, navT, servicesT, language = "de", onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const handleNav = (e: MouseEvent<HTMLAnchorElement>, path: string, sectionId?: string) => {
     e.preventDefault();
     if (sectionId) {
-      if (window.location.pathname === "/" || window.location.pathname === "") {
+      const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
+      if (isHome) {
         const el = document.getElementById(sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
         }
       } else {
         if (onNavigate) {
-          onNavigate(path);
+          onNavigate(language === "en" ? "/en" : "/");
+          setTimeout(() => {
+            const el = document.getElementById(sectionId);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+          }, 150);
         } else {
-          window.location.href = path;
+          window.location.href = language === "en" ? `/en#${sectionId}` : `/#${sectionId}`;
         }
       }
     } else {
+      const target = getLocalizedPath(path, language);
       if (onNavigate) {
-        onNavigate(path);
+        onNavigate(target);
       } else {
-        window.location.href = path;
+        window.location.href = target;
       }
     }
   };
@@ -49,13 +57,13 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
               {t.quickLinksTitle}
             </h4>
             <ul className="space-y-2 text-xs text-zinc-400">
-              <li><a href="/about" onClick={(e) => handleNav(e, "/about")} className="hover:text-white transition-colors">{navT.about}</a></li>
-              <li><a href="/services" onClick={(e) => handleNav(e, "/services", "services")} className="hover:text-white transition-colors">{navT.services}</a></li>
-              <li><a href="/projects" onClick={(e) => handleNav(e, "/projects")} className="hover:text-white transition-colors">{navT.projects}</a></li>
-              <li><a href="/vergleich" onClick={(e) => handleNav(e, "/vergleich")} className="hover:text-white text-[#DC2626] font-semibold transition-colors">Entscheidungshilfe & Vergleiche</a></li>
-              <li><a href="/research" onClick={(e) => handleNav(e, "/research")} className="hover:text-white transition-colors">Frankfurt UAS · Forschung & Thesen</a></li>
-              <li><a href="/blog" onClick={(e) => handleNav(e, "/blog")} className="hover:text-white transition-colors">{navT.blog}</a></li>
-              <li><a href="/contact" onClick={(e) => handleNav(e, "/contact", "contact")} className="hover:text-white transition-colors">{navT.contact}</a></li>
+              <li><a href={getLocalizedPath("/about", language)} onClick={(e) => handleNav(e, "/about")} className="hover:text-white transition-colors">{navT.about}</a></li>
+              <li><a href={language === "en" ? "/en#services" : "/#services"} onClick={(e) => handleNav(e, "/services", "services")} className="hover:text-white transition-colors">{navT.services}</a></li>
+              <li><a href={getLocalizedPath("/projects", language)} onClick={(e) => handleNav(e, "/projects")} className="hover:text-white transition-colors">{navT.projects}</a></li>
+              <li><a href={getLocalizedPath("/vergleich", language)} onClick={(e) => handleNav(e, "/vergleich")} className="hover:text-white text-[#DC2626] font-semibold transition-colors">Entscheidungshilfe & Vergleiche</a></li>
+              <li><a href={getLocalizedPath("/research", language)} onClick={(e) => handleNav(e, "/research")} className="hover:text-white transition-colors">Frankfurt UAS · Forschung & Thesen</a></li>
+              <li><a href={getLocalizedPath("/blog", language)} onClick={(e) => handleNav(e, "/blog")} className="hover:text-white transition-colors">{navT.blog}</a></li>
+              <li><a href={language === "en" ? "/en#contact" : "/#contact"} onClick={(e) => handleNav(e, "/contact", "contact")} className="hover:text-white transition-colors">{navT.contact}</a></li>
             </ul>
           </div>
 
@@ -81,14 +89,14 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
               Standorte & Regionen
             </h4>
             <ul className="space-y-2 text-xs text-zinc-400">
-              <li><a href="/architektur-frankfurt" onClick={(e) => handleNav(e, "/architektur-frankfurt")} className="hover:text-white transition-colors">Architektur Frankfurt</a></li>
-              <li><a href="/architektur-bad-homburg" onClick={(e) => handleNav(e, "/architektur-bad-homburg")} className="hover:text-white transition-colors">Architektur Bad Homburg & Taunus</a></li>
-              <li><a href="/architektur-wiesbaden" onClick={(e) => handleNav(e, "/architektur-wiesbaden")} className="hover:text-white transition-colors">Architektur Wiesbaden</a></li>
-              <li><a href="/architektur-darmstadt" onClick={(e) => handleNav(e, "/architektur-darmstadt")} className="hover:text-white transition-colors">Architektur Darmstadt & Südhessen</a></li>
-              <li><a href="/architektur-hanau" onClick={(e) => handleNav(e, "/architektur-hanau")} className="hover:text-white transition-colors">Architektur Hanau & Main-Kinzig</a></li>
-              <li><a href="/architektur-roedermark" onClick={(e) => handleNav(e, "/architektur-roedermark")} className="hover:text-white transition-colors">Architektur Rödermark & Offenbach</a></li>
-              <li><a href="/architektur-dreieich" onClick={(e) => handleNav(e, "/architektur-dreieich")} className="hover:text-white transition-colors">Architektur Dreieich</a></li>
-              <li><a href="/stadtplanung-hessen" onClick={(e) => handleNav(e, "/stadtplanung-hessen")} className="hover:text-white transition-colors">Bebauungsplan & Stadtplanung</a></li>
+              <li><a href={getLocalizedPath("/architektur-frankfurt", language)} onClick={(e) => handleNav(e, "/architektur-frankfurt")} className="hover:text-white transition-colors">Architektur Frankfurt</a></li>
+              <li><a href={getLocalizedPath("/architektur-bad-homburg", language)} onClick={(e) => handleNav(e, "/architektur-bad-homburg")} className="hover:text-white transition-colors">Architektur Bad Homburg & Taunus</a></li>
+              <li><a href={getLocalizedPath("/architektur-wiesbaden", language)} onClick={(e) => handleNav(e, "/architektur-wiesbaden")} className="hover:text-white transition-colors">Architektur Wiesbaden</a></li>
+              <li><a href={getLocalizedPath("/architektur-darmstadt", language)} onClick={(e) => handleNav(e, "/architektur-darmstadt")} className="hover:text-white transition-colors">Architektur Darmstadt & Südhessen</a></li>
+              <li><a href={getLocalizedPath("/architektur-hanau", language)} onClick={(e) => handleNav(e, "/architektur-hanau")} className="hover:text-white transition-colors">Architektur Hanau & Main-Kinzig</a></li>
+              <li><a href={getLocalizedPath("/architektur-roedermark", language)} onClick={(e) => handleNav(e, "/architektur-roedermark")} className="hover:text-white transition-colors">Architektur Rödermark & Offenbach</a></li>
+              <li><a href={getLocalizedPath("/architektur-dreieich", language)} onClick={(e) => handleNav(e, "/architektur-dreieich")} className="hover:text-white transition-colors">Architektur Dreieich</a></li>
+              <li><a href={getLocalizedPath("/stadtplanung-hessen", language)} onClick={(e) => handleNav(e, "/stadtplanung-hessen")} className="hover:text-white transition-colors">Bebauungsplan & Stadtplanung</a></li>
             </ul>
           </div>
 
@@ -161,7 +169,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <a
-              href="/impressum"
+              href={getLocalizedPath("/impressum", language)}
               onClick={(e) => handleNav(e, "/impressum")}
               className="hover:text-white underline transition-colors"
             >
@@ -169,7 +177,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
             </a>
             <span>•</span>
             <a
-              href="/datenschutz"
+              href={getLocalizedPath("/datenschutz", language)}
               onClick={(e) => handleNav(e, "/datenschutz")}
               className="hover:text-white underline transition-colors"
             >
@@ -177,7 +185,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
             </a>
             <span>•</span>
             <a
-              href="/barrierefreiheit"
+              href={getLocalizedPath("/barrierefreiheit", language)}
               onClick={(e) => handleNav(e, "/barrierefreiheit")}
               className="hover:text-white underline transition-colors"
             >
@@ -185,7 +193,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
             </a>
             <span>•</span>
             <a
-              href="/widerruf"
+              href={getLocalizedPath("/widerruf", language)}
               onClick={(e) => handleNav(e, "/widerruf")}
               className="hover:text-white underline transition-colors"
             >
@@ -207,7 +215,7 @@ export function Footer({ t, navT, servicesT, onNavigate }: FooterProps) {
       <div className="w-full pt-12 sm:pt-16 pb-6 overflow-hidden select-none border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-center">
           <a
-            href="/"
+            href={language === "en" ? "/en" : "/"}
             onClick={(e) => handleNav(e, "/")}
             className="group block transition-all duration-300 hover:scale-[1.015] focus:outline-none"
             aria-label="Shams Consult Startseite"
