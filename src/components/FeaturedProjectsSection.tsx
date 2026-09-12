@@ -53,8 +53,8 @@ export function FeaturedProjectsSection({
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
               {isDe
-                ? "Entdecken Sie unsere 12 realisierten Referenzprojekte — vom vorhabenbezogenen B-Plan bis zum energieeffizienten Gewerbe- und Wohnungsbau."
-                : "Explore our 12 realized reference projects — from project-based zoning statutes to energy-efficient residential and commercial hubs."}
+                ? `Entdecken Sie unsere ${projects.length} realisierten Referenzprojekte — vom vorhabenbezogenen B-Plan bis zum energieeffizienten Gewerbe- und Wohnungsbau.`
+                : `Explore our ${projects.length} realized reference projects — from project-based zoning statutes to energy-efficient residential and commercial hubs.`}
             </p>
           </div>
 

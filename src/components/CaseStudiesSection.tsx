@@ -129,13 +129,13 @@ export function CaseStudiesSection({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-100 pb-6">
           <div className="space-y-2 max-w-2xl">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626] block">
-              {isDe ? "VERIFIZIERTE FALLSTUDIEN" : "VERIFIED CASE STUDIES"}
+              {isDe ? "GOOGLE-BEWERTUNGEN IM DETAIL" : "GOOGLE REVIEWS IN DETAIL"}
             </span>
 
             <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
               {isDe
-                ? "Echte Bauherren. Echte Genehmigungserfolge."
-                : "Real Clients. Real Permitting Successes."}
+                ? "Echte Google-Rezensionen – die Geschichten dahinter"
+                : "Real Google Reviews – The Stories Behind Them"}
             </h2>
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">

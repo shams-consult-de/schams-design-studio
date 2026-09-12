@@ -7,6 +7,7 @@ export interface ProjectDocument {
 export interface Project {
   id: string;
   slug: string;
+  publishedDate: string;
   category: "urban-planning" | "architecture" | "residential" | "commercial" | "education" | "sustainability";
   categoryLabel: {
     de: string;
@@ -72,10 +73,71 @@ export interface Project {
   }>;
 }
 
-export const projects: Project[] = [
+export const rawProjects: Project[] = [
+  {
+    id: "neubau-buerogebaeude-adler-seeheim-jugenheim",
+    slug: "neubau-buerogebaeude-adler-seeheim-jugenheim",
+    publishedDate: "2026-09-12",
+    category: "commercial",
+    categoryLabel: {
+      de: "Gewerbebau & Fertigteilplanung",
+      en: "Commercial & Precast Engineering",
+    },
+    title: {
+      de: "Neubau Bürogebäude Adler in Seeheim-Jugenheim",
+      en: "New Adler Office Building in Seeheim-Jugenheim",
+    },
+    subtitle: {
+      de: "Integrale Vorplanung und serielle Betonfertigteile in enger Zusammenarbeit mit F.C. Nüdling Fertigteiltechnik",
+      en: "Integrated advance planning and serial precast concrete elements in close collaboration with F.C. Nüdling Fertigteiltechnik",
+    },
+    location: {
+      de: "Seeheim-Jugenheim, Hessen (Rhein-Main)",
+      en: "Seeheim-Jugenheim, Hesse (Rhine-Main)",
+    },
+    client: {
+      de: "Gewerblicher Bauherr in Kooperation mit F.C. Nüdling Fertigteiltechnik",
+      en: "Commercial Developer in Cooperation with F.C. Nüdling Fertigteiltechnik",
+    },
+    legalBasis: "HOAI LPH 1–5, DIN EN 13369 & serielle Werkplanung",
+    year: "2023–2024",
+    image: "/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg",
+    imageAlt: "Neubau Bürogebäude Adler in Seeheim-Jugenheim, Shams Consult mit F.C. Nüdling Fertigteiltechnik",
+    overview: {
+      de: "Beim Neubau des Bürogebäudes Adler in Seeheim-Jugenheim wurde die Ausführungsplanung, Statik und Baustellenlogistik eng mit dem Fertigteilwerk von F.C. Nüdling verzahnt. Durch den gezielten Einsatz industriell vorgefertigter Wand- und Deckenelemente konnte der Rohbau in Rekordzeit und mit höchster Maßhaltigkeit realisiert werden.",
+      en: "For the new construction of the Adler office building in Seeheim-Jugenheim, execution planning, structural engineering, and site logistics were tightly coordinated with the F.C. Nüdling precast plant. Systematic deployment of prefabricated wall and floor elements enabled rapid, millimeter-precise shell assembly.",
+    },
+    challenge: {
+      de: "Verkürzung der Rohbauphase zur Minimierung witterungsbedingter Verzögerungen sowie Vermeidung von Schnittstellenverlusten und Planungskollisionen zwischen Architektur, Statik und Vorfertigung.",
+      en: "Shortening the structural shell phase to minimize weather-induced delays while eliminating interface friction and clashes between design, structural analysis, and factory production.",
+    },
+    concept: {
+      de: "Frühzeitige Jour-Fixe-Abstimmung aller Sockel- und Anschlussdetails, statische Vorbemessung für industrielle Wand- und Deckenfertigteile sowie Just-in-Time-Baustellenlogistik.",
+      en: "Early regular coordination meetings for all foundation and connection details, pre-dimensioning for industrial precast walls and slabs, and just-in-time on-site delivery logistics.",
+    },
+    outcome: {
+      de: "Drastisch verkürzte Rohbauzeit durch sofortige Montage nach Baubeginn, fehlerfreie Schnittstellen ohne teure Nachträge sowie vollständige Kosten- und Terminsicherheit für die Bauherrschaft.",
+      en: "Drastically reduced structural build time via immediate post-groundbreaking assembly, zero costly change orders, and total cost and schedule certainty for the client.",
+    },
+    keyFacts: {
+      de: [
+        "Industriell vorgefertigte Wand- & Deckenelemente",
+        "Enge Kooperation mit F.C. Nüdling Fertigteiltechnik",
+        "Verkürzte Rohbauzeit & witterungsunabhängige Fertigung",
+        "Seeheim-Jugenheim (Rhein-Main)",
+      ],
+      en: [
+        "Industrial Precast Wall & Slab Elements",
+        "Close Partnership with F.C. Nüdling Fertigteiltechnik",
+        "Accelerated Shell Construction & Weatherproof Prefabrication",
+        "Seeheim-Jugenheim (Rhine-Main)",
+      ],
+    },
+  },
   {
     id: "regenwasser-rigole-wohnanlage",
     slug: "regenwasser-rigole-wohnanlage",
+    publishedDate: "2025-01-20",
     category: "sustainability",
     categoryLabel: {
       de: "Nachhaltiges Bauen & Außenanlagen",
@@ -190,6 +252,7 @@ export const projects: Project[] = [
   {
     id: "vep-maienweg-ulm",
     slug: "vep-maienweg-ulm",
+    publishedDate: "2023-11-10",
     category: "urban-planning",
     categoryLabel: {
       de: "Vorhabenbezogener Bebauungsplan",
@@ -273,6 +336,7 @@ export const projects: Project[] = [
   {
     id: "bebauungsplan-toepfenmuehle-gersfeld",
     slug: "bebauungsplan-toepfenmuehle-gersfeld",
+    publishedDate: "2023-08-15",
     category: "urban-planning",
     categoryLabel: {
       de: "Bauleitplanung",
@@ -332,6 +396,7 @@ export const projects: Project[] = [
   {
     id: "netto-supermarkt-muenster-hessen",
     slug: "netto-supermarkt-muenster-hessen",
+    publishedDate: "2023-03-20",
     category: "commercial",
     categoryLabel: {
       de: "Mischnutzung & Ausführungsplanung",
@@ -391,6 +456,7 @@ export const projects: Project[] = [
   {
     id: "mehrfamilienhaus-dreieich-goetzenhain",
     slug: "mehrfamilienhaus-dreieich-goetzenhain",
+    publishedDate: "2021-09-12",
     category: "residential",
     categoryLabel: {
       de: "Wohnungsbau",
@@ -450,6 +516,7 @@ export const projects: Project[] = [
   {
     id: "einfamilienhaus-lingen-ems",
     slug: "einfamilienhaus-lingen-ems",
+    publishedDate: "2021-05-18",
     category: "residential",
     categoryLabel: {
       de: "Individueller Wohnungsbau",
@@ -509,6 +576,7 @@ export const projects: Project[] = [
   {
     id: "kindergarten-schemmerhofen",
     slug: "kindergarten-schemmerhofen",
+    publishedDate: "2024-06-15",
     category: "education",
     categoryLabel: {
       de: "Bildungs- & Kommunalbau",
@@ -568,6 +636,7 @@ export const projects: Project[] = [
   {
     id: "bebauungsplan-neu-ulm-baufeld-5-ost",
     slug: "bebauungsplan-neu-ulm-baufeld-5-ost",
+    publishedDate: "2020-11-25",
     category: "urban-planning",
     categoryLabel: {
       de: "Bauleitplanung & Städtebau",
@@ -627,6 +696,7 @@ export const projects: Project[] = [
   {
     id: "vep-alten-und-pflegeheim-guenzburg",
     slug: "vep-alten-und-pflegeheim-guenzburg",
+    publishedDate: "2020-08-14",
     category: "urban-planning",
     categoryLabel: {
       de: "Vorhabenbezogener Bebauungsplan",
@@ -686,6 +756,7 @@ export const projects: Project[] = [
   {
     id: "vep-dillingerstrasse-guenzburg",
     slug: "vep-dillingerstrasse-guenzburg",
+    publishedDate: "2020-05-10",
     category: "urban-planning",
     categoryLabel: {
       de: "Vorhabenbezogener Bebauungsplan",
@@ -745,6 +816,7 @@ export const projects: Project[] = [
   {
     id: "machbarkeitsstudie-reutlingen",
     slug: "machbarkeitsstudie-reutlingen",
+    publishedDate: "2020-02-05",
     category: "urban-planning",
     categoryLabel: {
       de: "Städtebauliche Machbarkeitsstudie",
@@ -804,6 +876,7 @@ export const projects: Project[] = [
   {
     id: "lagerhalle-feinkost-fleischverarbeitung",
     slug: "lagerhalle-feinkost-fleischverarbeitung",
+    publishedDate: "2019-10-30",
     category: "commercial",
     categoryLabel: {
       de: "Gewerbebau & Logistik",
@@ -863,6 +936,7 @@ export const projects: Project[] = [
   {
     id: "qs-nachhaltiges-gebaeude-goetzenhain",
     slug: "qs-nachhaltiges-gebaeude-goetzenhain",
+    publishedDate: "2025-04-10",
     category: "sustainability",
     categoryLabel: {
       de: "Nachhaltigkeit & Zertifizierung",
@@ -920,3 +994,7 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const projects: Project[] = [...rawProjects].sort(
+  (a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+);
