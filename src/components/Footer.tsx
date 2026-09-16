@@ -60,6 +60,7 @@ export function Footer({ t, navT, servicesT, language = "de", onNavigate }: Foot
               <li><a href={getLocalizedPath("/about", language)} onClick={(e) => handleNav(e, "/about")} className="hover:text-white transition-colors">{navT.about}</a></li>
               <li><a href={language === "en" ? "/en#services" : "/#services"} onClick={(e) => handleNav(e, "/services", "services")} className="hover:text-white transition-colors">{navT.services}</a></li>
               <li><a href={getLocalizedPath("/projects", language)} onClick={(e) => handleNav(e, "/projects")} className="hover:text-white transition-colors">{navT.projects}</a></li>
+              <li><a href={getLocalizedPath("/bautraeger-investoren", language)} onClick={(e) => handleNav(e, "/bautraeger-investoren")} className="hover:text-white text-[#DC2626] font-semibold transition-colors">{language === "en" ? "B2B Developers & Investors" : "B2B Bauträger & Investoren"}</a></li>
               <li><a href={getLocalizedPath("/vergleich", language)} onClick={(e) => handleNav(e, "/vergleich")} className="hover:text-white text-[#DC2626] font-semibold transition-colors">Entscheidungshilfe & Vergleiche</a></li>
               <li><a href={getLocalizedPath("/research", language)} onClick={(e) => handleNav(e, "/research")} className="hover:text-white transition-colors">Frankfurt UAS · Forschung & Thesen</a></li>
               <li><a href={getLocalizedPath("/blog", language)} onClick={(e) => handleNav(e, "/blog")} className="hover:text-white transition-colors">{navT.blog}</a></li>

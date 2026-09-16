@@ -249,6 +249,18 @@ async function generateStaticRoutes() {
       changefreq: "monthly",
     },
     {
+      deRoute: "/bautraeger-investoren",
+      enRoute: "/en/bautraeger-investoren",
+      deTitle: "B2B Bauträger & Investoren — Architektur & Stadtplanung aus einer Hand | Shams Consult",
+      deDesc: "Spezialisierte Architektur- und Bauleitplanung für Bauträger und institutionelle Investoren in Frankfurt und Rhein-Main. BGF-Maximierung, B-Plan-Sicherheit und HOAI-Phasen 1–8.",
+      enTitle: "B2B Property Developers & Investors — Architecture & Urban Planning | Shams Consult",
+      enDesc: "Specialized architectural and statutory zoning services for commercial developers and investors in Frankfurt & Rhine-Main. Maximized floor area and full HOAI phases 1–8.",
+      deName: "Bauträger & Investoren",
+      enName: "Developers & Investors",
+      priority: "0.85",
+      changefreq: "monthly",
+    },
+    {
       deRoute: "/research",
       enRoute: "/en/research",
       deTitle: "Forschung, Thesen & Lehre | Shams Consult Architektur",
@@ -797,6 +809,8 @@ async function generateStaticRoutes() {
   const aliasMappings = [
     // About aliases
     { aliases: ["/ueber-uns", "/über-uns", "/wir-ueber-uns", "/buero", "/büro", "/team", "/profil", "/agentur"], canonical: "/about" },
+    // B2B & Developers aliases
+    { aliases: ["/bautraeger", "/bauträger", "/investoren", "/investors", "/developers", "/developers-investors", "/b2b", "/fcn-kundentag", "/kundentag", "/b2b-partner"], canonical: "/bautraeger-investoren" },
     // Projects aliases
     { aliases: ["/projekte", "/portfolio", "/bauten", "/arbeiten"], canonical: "/projects" },
     // Founder aliases

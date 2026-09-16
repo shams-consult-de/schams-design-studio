@@ -22,6 +22,7 @@ import { ClientsMovingSection } from "./components/ClientsMovingSection";
 import { ClientsPage } from "./components/ClientsPage";
 import { SiteVisitsMovingSection } from "./components/SiteVisitsMovingSection";
 import { SiteVisitsPage } from "./components/SiteVisitsPage";
+import { B2BPartnersPage } from "./components/B2BPartnersPage";
 import { FaqSection } from "./components/FaqSection";
 import { MobileStickyActionBar } from "./components/MobileStickyActionBar";
 import { DesktopStickyActionBar } from "./components/DesktopStickyActionBar";
@@ -60,6 +61,7 @@ export function App() {
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
+  const [isB2BPage, setIsB2BPage] = useState<boolean>(false);
   const [isComparisonPage, setIsComparisonPage] = useState<boolean>(false);
   const [activeComparisonTopicId, setActiveComparisonTopicId] = useState<string>("boutique-vs-grossbuero");
   const [isNotFound, setIsNotFound] = useState<boolean>(false);
@@ -76,6 +78,7 @@ export function App() {
     setRequestedPath(rawPath);
     trackPageView(rawPath);
     setActiveRegionalPage(null);
+    setIsB2BPage(false);
 
     // 0. Regional Hub-and-Spoke Landing Pages (/architektur-frankfurt, /architektur-roedermark, /architektur-dreieich, /stadtplanung-hessen)
     const regionalKey = path.replace(/^\//, "");
@@ -121,6 +124,39 @@ export function App() {
       }
       setIsComparisonPage(true);
       setActiveComparisonTopicId(topicId);
+      setIsAboutPage(false);
+      setIsFounderPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsSiteVisitsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      setActiveLegalPage(null);
+      setActiveRegionalPage(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // 0.2 B2B Bauträger, Investoren & FCN Kundentag
+    if (
+      path === "/bautraeger-investoren" ||
+      path === "/bautraeger" ||
+      path === "/bauträger" ||
+      path === "/investoren" ||
+      path === "/investors" ||
+      path === "/b2b" ||
+      path === "/developers" ||
+      path === "/developers-investors" ||
+      path === "/fcn-kundentag" ||
+      path === "/kundentag" ||
+      path === "/b2b-partner"
+    ) {
+      setIsB2BPage(true);
+      setIsComparisonPage(false);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
@@ -684,6 +720,30 @@ export function App() {
           { lang: "x-default", href: "https://shams-consult.de/founder" },
         ],
       });
+    } else if (isB2BPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "B2B Property Developers & Investors — Architecture & Master Planning | Shams Consult"
+            : "B2B Bauträger & Investoren — Architektur & Stadtplanung aus einer Hand | Shams Consult",
+        description:
+          language === "en"
+            ? "Specialized architectural and statutory zoning services for commercial developers and investors in Frankfurt & Rhine-Main. Maximized floor area, zero interface lag, and complete HOAI phases 1–8."
+            : "Spezialisierte Architektur- und Bauleitplanung für Bauträger und institutionelle Investoren in Frankfurt und Rhein-Main. BGF-Maximierung, B-Plan-Sicherheit und HOAI-Phasen 1–8 aus einer Hand.",
+        canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/bautraeger-investoren" : "/bautraeger-investoren"}`,
+        breadcrumbs: [
+          { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
+          {
+            name: language === "en" ? "Developers & Investors" : "Bauträger & Investoren",
+            item: language === "en" ? "/en/bautraeger-investoren" : "/bautraeger-investoren",
+          },
+        ],
+        alternateLanguages: [
+          { lang: "de", href: "https://shams-consult.de/bautraeger-investoren" },
+          { lang: "en", href: "https://shams-consult.de/en/bautraeger-investoren" },
+          { lang: "x-default", href: "https://shams-consult.de/bautraeger-investoren" },
+        ],
+      });
     } else if (isResearchPage) {
       updatePageSeo({
         title:
@@ -883,6 +943,7 @@ export function App() {
     isAboutPage,
     isFounderPage,
     isResearchPage,
+    isB2BPage,
     isClientsPage,
     isSiteVisitsPage,
     isComparisonPage,
@@ -1033,6 +1094,13 @@ export function App() {
             onBack={handleBackToHome}
             onNavigateFounder={handleNavigateFounder}
             onNavigateSiteVisits={() => navigateTo("/site-visits")}
+            onBookConsultation={handleBookConsultation}
+          />
+        ) : isB2BPage ? (
+          /* Dedicated B2B Partners, Developers & Kundentag Page */
+          <B2BPartnersPage
+            language={language}
+            onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
           />
         ) : isFounderPage ? (
