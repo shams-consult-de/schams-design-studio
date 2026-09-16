@@ -101,7 +101,7 @@ export const rawProjects: Project[] = [
     },
     legalBasis: "HOAI LPH 1–5, DIN EN 13369 & serielle Werkplanung",
     year: "2023–2024",
-    image: "/images/architektenleistung-leistungsphasen-1-9-hoai-.jpg",
+    image: "/images/b2b/Image.jpg",
     imageAlt: "Neubau Bürogebäude Adler in Seeheim-Jugenheim, Shams Consult mit F.C. Nüdling Fertigteiltechnik",
     overview: {
       de: "Beim Neubau des Bürogebäudes Adler in Seeheim-Jugenheim wurde die Ausführungsplanung, Statik und Baustellenlogistik eng mit dem Fertigteilwerk von F.C. Nüdling verzahnt. Durch den gezielten Einsatz industriell vorgefertigter Wand- und Deckenelemente konnte der Rohbau in Rekordzeit und mit höchster Maßhaltigkeit realisiert werden.",
