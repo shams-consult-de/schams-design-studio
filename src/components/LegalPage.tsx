@@ -81,7 +81,7 @@ export function LegalPage({ type, language = "de", onNavigateHome }: LegalPagePr
             <div className="space-y-8">
               <section className="space-y-2">
                 <h2 className="font-bold text-white text-base sm:text-lg">
-                  {isDe ? "Angaben gemäß § 5 TMG" : "Information pursuant to § 5 German Telemedia Act (TMG)"}
+                  {isDe ? "Angaben gemäß § 5 DDG" : "Information pursuant to § 5 German Digital Services Act (DDG)"}
                 </h2>
                 <p>
                   <strong className="text-white font-semibold">{CONTACT.legalName}</strong><br />

@@ -31,6 +31,8 @@ export interface BlogPost {
     de: string;
     en: string;
   };
+  video?: string;
+  videoPoster?: string;
   body: {
     de: string;
     en: string;
@@ -38,6 +40,125 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "ganz-oben-bei-google-was-dahintersteckt",
+    category: {
+      de: "Architektur & Praxis",
+      en: "Architecture & Practice",
+    },
+    date: {
+      de: "16. September 2026",
+      en: "September 16, 2026",
+    },
+    isoDate: "2026-09-16",
+    readTime: {
+      de: "3 Min. Lesezeit",
+      en: "3 min read",
+    },
+    title: {
+      de: "Ganz oben bei Google — aber was steckt wirklich dahinter?",
+      en: "At the Top of Google — But What's Actually Behind It?",
+    },
+    excerpt: {
+      de: "Wer bei Google nach einem Architekturbüro für Architektur, Stadtplanung und Projektentwicklung sucht, findet uns auf Platz 1. Aber eine Google-Platzierung entwirft kein Gebäude. Ein ehrlicher Blick hinter die Kulissen.",
+      en: "Search Google for architecture, urban planning and project development, and you will find us in position one. But a ranking doesn't design a building. A genuine look behind the scenes.",
+    },
+    image: "/images/ganz-oben-bei-google-poster.jpg",
+    imageAlt: {
+      de: "Google-Suchergebnis auf Platz 1 für SHAMS CONSULT Architekturbüro für Architektur, Stadtplanung und Projektentwicklung",
+      en: "Google search result at position 1 for SHAMS CONSULT architecture, urban planning, and project development",
+    },
+    video: "/videos/ganz-oben-bei-google.mp4",
+    videoPoster: "/images/ganz-oben-bei-google-poster.jpg",
+    body: {
+      de: `*Ein Blick hinter die Kulissen von SHAMS CONSULT*
+
+## Die Suche
+
+Wer bei Google nach **„Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** sucht, findet uns auf Platz 1.
+
+Das freut uns. Aber eine Google-Platzierung entwirft kein Gebäude. Sie löst kein Bebauungsplanproblem. Sie steht nicht mit dem Bauherrn auf der Baustelle, wenn eine Entscheidung getroffen werden muss.
+
+Deshalb wollten wir zeigen, was tatsächlich dahintersteckt.
+
+## Viel Arbeit
+
+Architektur, Stadtplanung und Projektentwicklung in Frankfurt am Main, Rödermark und Rhein-Main bedeuten in der Praxis vor allem eins: **Präsenz vor Ort**.
+
+Nicht am Schreibtisch. Sondern dort, wo gebaut wird.
+
+Das heißt konkret:
+- **Baustellenbegehungen**, bei denen Planung auf Realität trifft — und angepasst werden muss
+- **Direkte Gespräche mit Bauherren, Investoren und öffentlichen Auftraggebern**, ohne Zwischenebenen
+- **Abstimmung mit Ämtern und Fachplanern**, bevor aus einem kleinen Problem ein teures wird
+- **Entscheidungen im Projektverlauf**, die jemand treffen muss, der das Projekt wirklich kennt
+
+## Warum wir das zeigen
+
+Viele Architekturbüros präsentieren nur das fertige Ergebnis: die perfekte Visualisierung, das fotografierte Gebäude, die Hochglanzbroschüre.
+
+Das ist verständlich. Aber es sagt einem potenziellen Bauherren wenig darüber, wie im Projekt tatsächlich gearbeitet wird — und genau das entscheidet über Termine, Kosten und Nerven.
+
+Unser Ansatz: **öffentliche Auftraggeber, Investoren und private Bauherren in Frankfurt am Main, Rödermark und Rhein-Main** sollen sehen, wie wir arbeiten, bevor sie mit uns arbeiten.
+
+## Kein Zufall
+
+Die Platzierung bei Google ist nicht der Grund, uns zu beauftragen.
+
+Der Grund ist die Arbeit, die dahintersteckt.
+
+---
+
+**Sie planen ein Projekt in Frankfurt oder im Rhein-Main-Gebiet?**
+
+[Erstgespräch anfragen →](https://shams-consult.de)
+
+*Dipl.-Ing. Majeed Shams — Architekt, Stadtplanung und Projektentwicklung*`,
+      en: `*A look behind the scenes at SHAMS CONSULT*
+
+## The Search
+
+Search Google for **"Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** and you'll find us in position one.
+
+We're glad about that. But a Google ranking doesn't design a building. It doesn't solve a zoning problem. It isn't standing on the site with the client when a decision has to be made.
+
+So we wanted to show what's actually behind it.
+
+## A Lot of Work
+
+Architecture, urban planning and project development in Frankfurt am Main, Rödermark and the Rhein-Main region come down to one thing in practice: **being there in person**.
+
+Not at a desk. Where the building is going up.
+
+In concrete terms:
+- **Site visits** where the plan meets reality — and has to be adjusted
+- **Direct conversations with clients, investors and public authorities**, with no layers in between
+- **Coordination with building authorities and specialist planners** before a small problem becomes an expensive one
+- **Decisions made mid-project** by someone who actually knows the project
+
+## Why We're Showing This
+
+Most architecture firms show only the finished result: the perfect rendering, the photographed building, the glossy brochure.
+
+That's understandable. But it tells a prospective client very little about how the work actually gets done — and that's exactly what determines timelines, costs, and stress levels.
+
+Our approach: **public clients, investors and private developers in Frankfurt am Main, Rödermark and Rhein-Main** should see how we work before they work with us.
+
+## Not Luck
+
+The Google ranking isn't the reason to hire us.
+
+The work behind it is.
+
+---
+
+**Planning a project in Frankfurt or the Rhein-Main region?**
+
+[Request an initial consultation →](https://shams-consult.de)
+
+*Dipl.-Ing. Majeed Shams — Architect, Urban Planning and Project Development*`,
+    },
+  },
   {
     slug: "rechenzentrum-bebra-bauleitplanung",
     category: {

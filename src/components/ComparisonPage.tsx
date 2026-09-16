@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Language } from "../lib/i18n";
 import { comparisonTopics, ComparisonTopic } from "../data/comparisons";
+import { CONTACT } from "../lib/contact";
 import { Icon } from "./icon";
 
 interface ComparisonPageProps {
@@ -339,11 +340,11 @@ export function ComparisonPage({
               {isDe ? "Erstgespräch vereinbaren" : "Schedule Initial Consultation"}
             </button>
             <a
-              href="tel:+496974223777"
+              href={CONTACT.phoneFrankfurtHref}
               className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3.5 px-6 rounded-sm text-xs transition-colors cursor-pointer min-h-[44px] flex items-center gap-2 border border-white/15"
             >
               <Icon name="phone" />
-              <span>+49 (0) 69 74 22 3 777</span>
+              <span>+49 (0) 69 74223777-0</span>
             </a>
           </div>
         </div>

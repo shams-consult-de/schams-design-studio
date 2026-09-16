@@ -86,7 +86,7 @@ export function LegalModal({ type, language = "de", onClose }: LegalModalProps) 
             <>
               <div>
                 <h4 className="font-bold text-zinc-900 text-base mb-1">
-                  {isDe ? "Angaben gemäß § 5 TMG" : "Information pursuant to § 5 German Telemedia Act (TMG)"}
+                  {isDe ? "Angaben gemäß § 5 DDG" : "Information pursuant to § 5 German Digital Services Act (DDG)"}
                 </h4>
                 <p>
                   <strong>{CONTACT.legalName}</strong><br />

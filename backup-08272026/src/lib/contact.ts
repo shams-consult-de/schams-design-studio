@@ -4,7 +4,7 @@ export const LOGO_URL = "/images/logo.webp";
 export const CONTACT = {
   email: "office@shams-consult.de",
   phoneFrankfurt: "069 74 22 3 777",
-  phoneFrankfurtHref: "tel:+4969742237770",
+  phoneFrankfurtHref: "tel:+496974223777",
   phoneRoedermark: "060 74 23 98 782",
   phoneRoedermarkHref: "tel:+49607423987820",
   whatsappNumber: "+49 151 51864090",
@@ -18,7 +18,7 @@ export const CONTACT = {
       street: "Carl-von-Noorden-Platz 5",
       city: "60596 Frankfurt am Main",
       phone: "069 74 22 3 777",
-      phoneHref: "tel:+4969742237770",
+      phoneHref: "tel:+496974223777",
     },
     {
       name: "Büro Rödermark",

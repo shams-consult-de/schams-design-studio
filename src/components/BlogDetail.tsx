@@ -20,12 +20,54 @@ export function BlogDetail({
 }: BlogDetailProps) {
   const others = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  const renderInline = (str: string) => {
+    const parts = str.split(/(\[.*?\]\(.*?\)|\*\*.*?\*\*|\*[^*]+?\*)/g);
+    return parts.map((part, i) => {
+      if (!part) return null;
+      const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (linkMatch) {
+        const [, text, url] = linkMatch;
+        const isExternal = url.startsWith("http");
+        return (
+          <a
+            key={i}
+            href={url}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            className="font-bold text-[#DC2626] hover:underline inline-flex items-center gap-1"
+          >
+            {text}
+          </a>
+        );
+      }
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return (
+          <strong key={i} className="font-bold text-zinc-950">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      if (part.startsWith("*") && part.endsWith("*")) {
+        return (
+          <em key={i} className="italic text-zinc-700">
+            {part.slice(1, -1)}
+          </em>
+        );
+      }
+      return part;
+    });
+  };
+
   // Clean markdown-like paragraph / heading renderer
   const renderBody = (text: string) => {
     const sections = text.split("\n\n");
     return sections.map((section, idx) => {
       const trimmed = section.trim();
       if (!trimmed) return null;
+
+      if (trimmed === "---") {
+        return <hr key={idx} className="my-8 border-t border-zinc-200" />;
+      }
 
       if (trimmed.startsWith("## ")) {
         return (
@@ -55,7 +97,7 @@ export function BlogDetail({
           <ul key={idx} className="my-5 space-y-2.5 pl-5 list-disc text-zinc-700">
             {items.map((item, itemIdx) => (
               <li key={itemIdx} className="leading-relaxed">
-                {item}
+                {renderInline(item)}
               </li>
             ))}
           </ul>
@@ -76,7 +118,7 @@ export function BlogDetail({
 
       return (
         <p key={idx} className="my-5 text-base sm:text-lg text-zinc-700 leading-relaxed">
-          {trimmed}
+          {renderInline(trimmed)}
         </p>
       );
     });
@@ -142,15 +184,28 @@ export function BlogDetail({
           </div>
         </header>
 
-        {/* Featured Image */}
-        <div className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-900 shadow-sm aspect-[16/9]">
-          <img
-            src={post.image}
-            alt={post.imageAlt[language]}
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
-        </div>
+        {/* Featured Media: Video or Image */}
+        {post.video ? (
+          <div className="overflow-hidden rounded-xl border border-zinc-200 bg-black shadow-md aspect-[16/9] relative">
+            <video
+              src={post.video}
+              poster={post.videoPoster || post.image}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-contain bg-black"
+            />
+          </div>
+        ) : (
+          <div className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-900 shadow-sm aspect-[16/9]">
+            <img
+              src={post.image}
+              alt={post.imageAlt[language]}
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        )}
 
         {/* Main Article Content */}
         <div className="max-w-3xl mx-auto pt-4 pb-10 border-b border-zinc-200">
