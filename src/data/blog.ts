@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
 
 ## Die Suche
 
-Wer bei Google nach **„Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** sucht, findet uns auf Platz 1.
+Wer bei Google nach **„Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** sucht, findet uns auf Platz 1 (dank unserem Technologiepartner [Nordible Technologies](https://nordible.co)).
 
 Das freut uns. Aber eine Google-Platzierung entwirft kein Gebäude. Sie löst kein Bebauungsplanproblem. Sie steht nicht mit dem Bauherrn auf der Baustelle, wenn eine Entscheidung getroffen werden muss.
 
@@ -118,7 +118,7 @@ Der Grund ist die Arbeit, die dahintersteckt.
 
 ## The Search
 
-Search Google for **"Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** and you'll find us in position one.
+Search Google for **"Architekturbüro für Architektur, Stadtplanung und Projektentwicklung"** and you'll find us in position one (thanks to our technology partner [Nordible Technologies](https://nordible.co)).
 
 We're glad about that. But a Google ranking doesn't design a building. It doesn't solve a zoning problem. It isn't standing on the site with the client when a decision has to be made.
 
