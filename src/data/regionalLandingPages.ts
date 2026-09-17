@@ -286,7 +286,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         de: "60596 Frankfurt am Main",
         en: "60596 Frankfurt am Main, Germany",
       },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl:
         "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed",
@@ -1917,7 +1917,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         de: "60596 Frankfurt am Main",
         en: "60596 Frankfurt am Main, Germany",
       },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl:
         "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed",
@@ -2238,7 +2238,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         de: "65189 Wiesbaden & 60596 Frankfurt",
         en: "65189 Wiesbaden & 60596 Frankfurt",
       },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40995.38575027581!2d8.2045618!3d50.0820384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd99a8039c3629%3A0x422435029b0c600!2sWiesbaden!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde",
@@ -2764,7 +2764,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         de: "61348 Bad Homburg v. d. H. & 60596 Frankfurt",
         en: "61348 Bad Homburg v. d. H. & 60596 Frankfurt",
       },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40854.73307525357!2d8.5912448!3d50.2289656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd08c49e295a09%3A0x422435029b0c610!2sBad%20Homburg!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde",
@@ -3816,7 +3816,7 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         de: "63450 Hanau & 60596 Frankfurt",
         en: "63450 Hanau & 60596 Frankfurt",
       },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41031.54226180373!2d8.9056488!3d50.1328965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd134375b4f0b3%3A0x422435029b0c5e0!2sHanau!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde",

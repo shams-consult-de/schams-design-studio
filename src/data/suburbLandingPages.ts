@@ -235,7 +235,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -334,7 +334,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -433,7 +433,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -532,7 +532,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -631,7 +631,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -730,7 +730,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -829,7 +829,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -928,7 +928,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1027,7 +1027,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1126,7 +1126,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1225,7 +1225,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
       street: "Carl-Zeiss-Str. 43",
       city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-Zeiss-Str.+43,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1324,7 +1324,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
       street: "Carl-Zeiss-Str. 43",
       city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-Zeiss-Str.+43,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1423,7 +1423,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Planungsbüro Rödermark", en: "Design Studio Rödermark" },
       street: "Carl-Zeiss-Str. 43",
       city: { de: "63322 Rödermark", en: "63322 Rödermark, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-Zeiss-Str.+43,+63322+R%C3%B6dermark&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1522,7 +1522,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1621,7 +1621,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1720,7 +1720,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1819,7 +1819,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -1918,7 +1918,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2017,7 +2017,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2116,7 +2116,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2215,7 +2215,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2314,7 +2314,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2413,7 +2413,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2512,7 +2512,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2612,7 +2612,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2711,7 +2711,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -2810,7 +2810,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -3107,7 +3107,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
@@ -3206,7 +3206,7 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       name: { de: "Hauptsitz Frankfurt am Main", en: "Headquarters Frankfurt am Main" },
       street: "Carl-von-Noorden-Platz 5",
       city: { de: "60596 Frankfurt am Main", en: "60596 Frankfurt am Main, Germany" },
-      phone: "069 74223777-0",
+      phone: "069 74223777",
       phoneHref: "tel:+496974223777",
       mapEmbedUrl: "https://maps.google.com/maps?q=Carl-von-Noorden-Platz+5,+60596+Frankfurt+am+Main&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },

@@ -344,7 +344,7 @@ export function ComparisonPage({
               className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3.5 px-6 rounded-sm text-xs transition-colors cursor-pointer min-h-[44px] flex items-center gap-2 border border-white/15"
             >
               <Icon name="phone" />
-              <span>+49 (0) 69 74223777-0</span>
+              <span>+49 (0) 69 74223777</span>
             </a>
           </div>
         </div>
