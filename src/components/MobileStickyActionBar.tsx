@@ -1,5 +1,6 @@
 import { Translations } from "../lib/i18n";
 import { Icon } from "./icon";
+import { CONTACT, getWhatsappHref } from "../lib/contact";
 
 interface MobileStickyActionBarProps {
   t: Translations["mobileActionBar"];
@@ -12,10 +13,7 @@ export function MobileStickyActionBar({
   contactT,
   onBookConsultation,
 }: MobileStickyActionBarProps) {
-  const phone = "+4960748056262";
-  const whatsappUrl = `https://wa.me/4960748056262?text=${encodeURIComponent(
-    contactT.whatsappMessage
-  )}`;
+  const whatsappUrl = getWhatsappHref(contactT.whatsappMessage);
 
   return (
     <aside
@@ -24,7 +22,7 @@ export function MobileStickyActionBar({
     >
       <div className="flex items-center justify-between gap-2 max-w-md mx-auto">
         <a
-          href={`tel:${phone}`}
+          href={CONTACT.primaryPhoneHref}
           className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-white/10 hover:bg-white/15 active:scale-95 text-white font-medium text-xs border border-white/10 transition-all text-center select-none cursor-pointer"
           aria-label={t.call}
         >

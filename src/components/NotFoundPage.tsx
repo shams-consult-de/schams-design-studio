@@ -1,4 +1,5 @@
 import { Translations } from "../lib/i18n";
+import { CONTACT } from "../lib/contact";
 
 interface NotFoundPageProps {
   t: Translations["notFound"];
@@ -87,12 +88,12 @@ export function NotFoundPage({
         <div className="pt-6 border-t border-zinc-200 max-w-md mx-auto space-y-2 text-xs text-zinc-500">
           <p>{t.needAssistance}</p>
           <div className="flex items-center justify-center gap-4 text-xs font-mono font-medium text-zinc-700">
-            <a href="tel:+4960748056262" className="hover:text-[#DC2626] transition-colors">
-              📞 +49 (0) 6074 8056262
+            <a href={CONTACT.primaryPhoneHref} className="hover:text-[#DC2626] transition-colors">
+              📞 {CONTACT.primaryPhone}
             </a>
             <span>·</span>
-            <a href="mailto:info@shams-consult.de" className="hover:text-[#DC2626] transition-colors">
-              ✉️ info@shams-consult.de
+            <a href={`mailto:${CONTACT.email}`} className="hover:text-[#DC2626] transition-colors">
+              ✉️ {CONTACT.email}
             </a>
           </div>
         </div>

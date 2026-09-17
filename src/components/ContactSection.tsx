@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon } from "./icon";
-import { CONTACT } from "../lib/contact";
+import { CONTACT, getWhatsappHref } from "../lib/contact";
 import { Language, Translations } from "../lib/i18n";
 
 interface ContactSectionProps {
@@ -19,7 +19,7 @@ export function ContactSection({
   const activeOffice =
     CONTACT.offices.find((o) => o.id === selectedOfficeId) || CONTACT.offices[0];
 
-  const whatsappHref = `https://wa.me/4915151864090?text=${encodeURIComponent(t.whatsappMessage)}`;
+  const whatsappHref = getWhatsappHref(t.whatsappMessage);
   const mailtoSubject = encodeURIComponent("Projektanfrage / Architectural Inquiry — Shams Consult");
   const mailtoHref = `mailto:${CONTACT.email}?subject=${mailtoSubject}`;
 

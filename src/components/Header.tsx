@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Icon } from "./icon";
 import { Language, Translations } from "../lib/i18n";
 import { getLocalizedPath } from "../lib/i18nRouting";
+import { CONTACT, getWhatsappHref } from "../lib/contact";
 
 interface HeaderProps {
   t: Translations["nav"];
@@ -172,15 +173,15 @@ export function Header({
           {/* Direct Phone & WhatsApp subtle icon links for desktop */}
           <div className="hidden md:flex items-center gap-0.5">
             <a
-              href="tel:+4960748056262"
+              href={CONTACT.primaryPhoneHref}
               className="p-2 rounded-full hover:bg-zinc-100 text-zinc-600 hover:text-zinc-950 transition-colors"
-              title="Telefon: +49 (0) 6074 8056262"
+              title={`Telefon: ${CONTACT.primaryPhone}`}
               aria-label="Telefon"
             >
               <Icon name="phone" className="text-base" />
             </a>
             <a
-              href="https://wa.me/4960748056262"
+              href={getWhatsappHref()}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-zinc-100 text-[#25D366] transition-colors"
