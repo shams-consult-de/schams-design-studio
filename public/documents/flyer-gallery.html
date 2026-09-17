@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shams Consult – Fotogalerie & Portfolio Flyer (DIN Lang Z-Falz)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand-red: #d92323;
+      --brand-dark: #121417;
+      --brand-gray: #24272c;
+      --brand-light: #f8f9fa;
+      --brand-border: #e5e7eb;
+      --brand-muted: #6b7280;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: #4b515a;
+      color: var(--brand-dark);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .toolbar {
+      position: sticky;
+      top: 15px;
+      z-index: 1000;
+      background: rgba(18, 20, 23, 0.94);
+      backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .toolbar span { font-size: 13px; font-weight: 500; }
+    .btn-print {
+      background: var(--brand-red);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-print:hover { background: #b51c1c; }
+    .badge { background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 12px; font-size: 11px; }
+
+    .sheet {
+      width: 297mm;
+      height: 210mm;
+      background: #ffffff;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+    .panel {
+      width: 99mm;
+      height: 210mm;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px dashed rgba(0, 0, 0, 0.12);
+    }
+    .panel:last-child { border-right: none; }
+    .fold-marker {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9aa0a6;
+      pointer-events: none;
+    }
+
+    /* COVER PANEL */
+    .panel-cover {
+      padding: 9mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+    .logo-img { height: 16mm; object-fit: contain; margin-bottom: 2mm; display: block; }
+    .sub-brand { font-size: 8pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--brand-gray); }
+    .hero-title { font-size: 17pt; font-weight: 800; line-height: 1.18; color: var(--brand-dark); margin: 3mm 0 1.5mm 0; }
+    .hero-title span { color: var(--brand-red); }
+    .hero-desc { font-size: 8pt; line-height: 1.4; color: var(--brand-muted); margin-bottom: 3mm; }
+
+    .mosaic-cover {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+      height: 86mm;
+      margin-bottom: 2mm;
+    }
+    .mosaic-cover .item-large {
+      grid-column: span 2;
+      height: 48mm;
+      border-radius: 2mm;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2mm 5mm rgba(0,0,0,0.06);
+    }
+    .mosaic-cover .item-sm {
+      height: 36mm;
+      border-radius: 2mm;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2mm 5mm rgba(0,0,0,0.06);
+    }
+    .mosaic-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .cover-founder-badge {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 2mm;
+    }
+    .cover-founder-avatar {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #d1d5db;
+    }
+    .cover-founder-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    /* CENTER PANEL */
+    .panel-gallery {
+      background: #f8fafc;
+      padding: 8mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sec-eyebrow { font-size: 6.8pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--brand-red); }
+    .sec-title { font-size: 12.5pt; font-weight: 800; color: var(--brand-dark); line-height: 1.25; margin: 1mm 0 2.5mm 0; }
+    
+    .gallery-grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2.2mm;
+      height: 126mm;
+      margin-bottom: 2.5mm;
+    }
+    .g-card {
+      position: relative;
+      border-radius: 2mm;
+      overflow: hidden;
+      box-shadow: 0 2mm 5mm rgba(0,0,0,0.08);
+      background: #eaeef3;
+    }
+    .g-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .gallery-summary {
+      background: #fff;
+      border: 1px solid var(--brand-border);
+      border-radius: 2mm;
+      padding: 2.5mm 3mm;
+      font-size: 6.8pt;
+      line-height: 1.35;
+      color: var(--brand-gray);
+    }
+    .gallery-summary strong { color: var(--brand-dark); }
+
+    /* THIRD PANEL */
+    .panel-end {
+      padding: 8mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+    .featured-site-img {
+      width: 100%;
+      height: 48mm;
+      border-radius: 2mm;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 2.5mm;
+      box-shadow: 0 2mm 5mm rgba(0,0,0,0.08);
+    }
+    .featured-site-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8mm;
+      margin-bottom: 2.5mm;
+    }
+    .f-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2mm;
+      font-size: 6.8pt;
+      line-height: 1.35;
+      color: #374151;
+    }
+    .f-dot { width: 3mm; height: 3mm; border-radius: 50%; background: var(--brand-red); margin-top: 0.8mm; flex-shrink: 0; }
+
+    /* HUMANIZED CTA THUMB ZONE */
+    .tz-card {
+      background: var(--brand-dark);
+      color: #fff;
+      border-radius: 3mm;
+      padding: 3.5mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+    .tz-top { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1.2mm; }
+    .tz-top h4 { font-size: 8pt; font-weight: 700; color: #fff; }
+    .tz-body { display: flex; align-items: center; gap: 2.8mm; }
+    
+    .founder-avatar {
+      width: 16mm;
+      height: 20mm;
+      border-radius: 1.5mm;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .founder-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .qr-box { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; }
+    .qr-box img { width: 100%; height: 100%; object-fit: contain; }
+    .tz-info { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
+    .tz-info strong { color: #fff; }
+    .tz-tel { font-size: 8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; }
+    .tz-foot { font-size: 5.8pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1mm; }
+
+    @media print {
+      @page { size: 297mm 210mm; margin: 0; }
+      body { background: none; padding: 0; margin: 0; gap: 0; }
+      .toolbar, .fold-marker { display: none !important; }
+      .sheet { box-shadow: none; page-break-after: always; break-after: page; }
+      .panel { border-right: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <span><strong>Konzept 2: Fotogalerie-Fokus</strong> · DIN Lang Z-Falz (297 × 210 mm)</span>
+    <span class="badge">Inhaber-Porträt integriert</span>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+      Drucken / Als PDF speichern
+    </button>
+  </div>
+
+  <!-- SEITE 1: DEUTSCH -->
+  <div class="sheet" id="gallery-de">
+    <!-- PANEL 1: COVER MIT GRÜNDER-AVATAR -->
+    <div class="panel panel-cover">
+      <div class="fold-marker">Falz 1</div>
+      <div>
+        <img src="/logo.png" alt="Shams Consult" class="logo-img">
+        <div class="sub-brand">Architektur & Stadtplanung</div>
+        <h1 class="hero-title">Bauen im Bild.<br><span>Präzision in Beton.</span></h1>
+        <p class="hero-desc">Realisierte Referenzen mit FCN Systemrohbau & Liapor Wandelementen.</p>
+      </div>
+
+      <div class="mosaic-cover">
+        <div class="item-large">
+          <img src="/images/b2b/1.png" alt="Seeheim Jugenheim Doppelhaus">
+        </div>
+        <div class="item-sm">
+          <img src="/images/b2b/2.png" alt="Rohbau Seeheim">
+        </div>
+        <div class="item-sm">
+          <img src="/images/b2b/5.png" alt="Gartenansicht Seeheim">
+        </div>
+      </div>
+
+      <div class="cover-founder-badge">
+        <div class="cover-founder-avatar">
+          <img src="/images/team/Majeed-Shams.jpg" alt="Majeed Shams">
+        </div>
+        <div>
+          <div style="font-size: 7.2pt; font-weight: 700; color: #1f2937;">Dipl.-Ing. (FH) Majeed Shams M.Eng.</div>
+          <div style="font-size: 6pt; color: #6b7280;">Architekt & Stadtplaner · AKH Hessen Nr. 21886</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: 4-BILDER-SCHAU -->
+    <div class="panel panel-gallery">
+      <div class="fold-marker">Falz 2</div>
+      <div>
+        <span class="sec-eyebrow">Baustellen-Einblicke</span>
+        <h2 class="sec-title">Vom Kranhub zur bezugsfertigen Architektur</h2>
+      </div>
+
+      <div class="gallery-grid-4">
+        <div class="g-card">
+          <img src="/images/b2b/Image.jpg" alt="Kranmontage">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/4.png" alt="Liapor Rohbau">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/6.png" alt="Haus 3 im Bau">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/5.png" alt="Vollendetes Haus">
+        </div>
+      </div>
+
+      <div class="gallery-summary">
+        <strong>FCN-Systemvorteil in der Praxis:</strong> Höchste Maßhaltigkeit, optimierte Baustellenlogistik und signifikante Zeiteinsparung im Rohbau.
+      </div>
+    </div>
+
+    <!-- PANEL 3: HUMANISIERTE CTA -->
+    <div class="panel panel-end">
+      <div class="fold-marker">Außen</div>
+      <div>
+        <span class="sec-eyebrow">Generalplanung</span>
+        <h3 class="sec-title" style="font-size: 11.5pt; margin-bottom: 2mm;">Ihr Partner für anspruchsvollen Massivbau</h3>
+
+        <div class="featured-site-img">
+          <img src="/images/b2b/Image.jpg" alt="Baustellenbanner Shams Consult">
+        </div>
+
+        <div class="feature-list">
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>Entwurf & Genehmigung:</strong> Bauanträge & Bebauungsplanprüfung mit Fachkompetenz.</div>
+          </div>
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>FCN-Elementabstimmung:</strong> Statik- & Werkplanung passgenau für die Vorfertigung.</div>
+          </div>
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>Bauleitung LPH 8:</strong> Präsenz auf der Baustelle für Qualität und Termintreue.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tz-card">
+        <div class="tz-top">
+          <h4>Ihr persönlicher Architekt</h4>
+          <span style="font-size: 6pt; color: #ff8585;">Erstberatung kostenfrei</span>
+        </div>
+        <div class="tz-body">
+          <div class="founder-avatar">
+            <img src="/images/team/Majeed-Shams.jpg" alt="Dipl.-Ing. Majeed Shams">
+          </div>
+          <div class="tz-info" style="flex: 1;">
+            <div><strong>Majeed Shams</strong> M.Eng.</div>
+            <div style="font-size: 5.8pt; color: #9ca3af;">AKH Hessen 21886</div>
+            <div class="tz-tel">06074 2398782</div>
+            <div style="font-size: 6pt; color: #d1d5db;">office@shams-consult.de</div>
+          </div>
+          <div class="qr-box">
+            <img src="/qr-shams.svg" alt="QR-Code">
+          </div>
+        </div>
+        <div class="tz-foot">shams-consult.de · Jetzt QR-Code scannen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEITE 2: ENGLISH (TURNAROUND) -->
+  <div class="sheet" id="gallery-en">
+    <!-- PANEL 1: COVER EN -->
+    <div class="panel panel-cover">
+      <div class="fold-marker">Fold 1</div>
+      <div>
+        <img src="/logo.png" alt="Shams Consult" class="logo-img">
+        <div class="sub-brand">Architecture & Urban Planning</div>
+        <h1 class="hero-title">Built Proof.<br><span>Precast Precision.</span></h1>
+        <p class="hero-desc">Realized project showcases built with FCN precast components & Liapor.</p>
+      </div>
+
+      <div class="mosaic-cover">
+        <div class="item-large">
+          <img src="/images/b2b/1.png" alt="Seeheim Jugenheim Residence">
+        </div>
+        <div class="item-sm">
+          <img src="/images/b2b/4.png" alt="Precast Shell">
+        </div>
+        <div class="item-sm">
+          <img src="/images/b2b/5.png" alt="Finished Home">
+        </div>
+      </div>
+
+      <div class="cover-founder-badge">
+        <div class="cover-founder-avatar">
+          <img src="/images/team/Majeed-Shams.jpg" alt="Majeed Shams">
+        </div>
+        <div>
+          <div style="font-size: 7.2pt; font-weight: 700; color: #1f2937;">Dipl.-Ing. (FH) Majeed Shams M.Eng.</div>
+          <div style="font-size: 6pt; color: #6b7280;">Principal Architect · Chamber of Architects Hesse</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: 4-IMAGE GALLERY EN -->
+    <div class="panel panel-gallery">
+      <div class="fold-marker">Fold 2</div>
+      <div>
+        <span class="sec-eyebrow">On-Site Execution</span>
+        <h2 class="sec-title">From Precision Off-Site Assembly to Turnkey Living</h2>
+      </div>
+
+      <div class="gallery-grid-4">
+        <div class="g-card">
+          <img src="/images/b2b/Image.jpg" alt="Crane montage">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/2.png" alt="Liapor wall joints">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/6.png" alt="House 3 ongoing">
+        </div>
+        <div class="g-card">
+          <img src="/images/b2b/1.png" alt="Finished architecture">
+        </div>
+      </div>
+
+      <div class="gallery-summary">
+        <strong>FCN System Advantage:</strong> Unmatched dimensional accuracy, streamlined site logistics, and shortened construction timelines.
+      </div>
+    </div>
+
+    <!-- PANEL 3: HUMANIZED CTA EN -->
+    <div class="panel panel-end">
+      <div class="fold-marker">Outer Flap</div>
+      <div>
+        <span class="sec-eyebrow">General Planning</span>
+        <h3 class="sec-title" style="font-size: 11.5pt; margin-bottom: 2mm;">Architectural Excellence in Solid Precast Construction</h3>
+
+        <div class="featured-site-img">
+          <img src="/images/b2b/Image.jpg" alt="Construction Site Banner">
+        </div>
+
+        <div class="feature-list">
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>Design & Permitting:</strong> Full German zoning compliance and zoning approvals.</div>
+          </div>
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>FCN Precast Coordination:</strong> Factory-tailored structural and module engineering.</div>
+          </div>
+          <div class="f-item">
+            <span class="f-dot"></span>
+            <div><strong>Site Supervision HOAI 8:</strong> On-site leadership safeguarding schedule and budget.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tz-card">
+        <div class="tz-top">
+          <h4>Your Lead Architect</h4>
+          <span style="font-size: 6pt; color: #ff8585;">Complimentary Initial Call</span>
+        </div>
+        <div class="tz-body">
+          <div class="founder-avatar">
+            <img src="/images/team/Majeed-Shams.jpg" alt="Dipl.-Ing. Majeed Shams">
+          </div>
+          <div class="tz-info" style="flex: 1;">
+            <div><strong>Majeed Shams</strong> M.Eng.</div>
+            <div style="font-size: 5.8pt; color: #9ca3af;">Principal Architect</div>
+            <div class="tz-tel">+49 6074 2398782</div>
+            <div style="font-size: 6pt; color: #d1d5db;">office@shams-consult.de</div>
+          </div>
+          <div class="qr-box">
+            <img src="/qr-shams.svg" alt="QR-Code">
+          </div>
+        </div>
+        <div class="tz-foot">shams-consult.de · Scan QR Code to connect</div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    (function() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('print') === 'true') {
+          window.addEventListener('load', function() {
+            setTimeout(function() {
+              window.print();
+            }, 600);
+          });
+        }
+      } catch (e) {
+        console.warn('Auto-print script error:', e);
+      }
+    })();
+  </script>
+</body>
+</html>

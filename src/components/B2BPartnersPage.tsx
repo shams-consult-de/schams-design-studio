@@ -77,7 +77,7 @@ export function B2BPartnersPage({
       title: isDe ? "B2B Bauträger & Investoren" : "B2B Developers & Investors",
       subtitle: isDe ? "Flächeneffizienz, B-Plan-Sicherheit & BGF-Maximierung" : "GFA Optimization & Permitting Certainty",
       format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
-      downloadUrl: "/downloads/shams-consult-b2b-bautraeger-investoren.pdf",
+      downloadUrl: "/documents/flyer-b2b-developer.html?print=true",
       accent: "from-red-600 to-rose-700",
     },
     {
@@ -85,7 +85,7 @@ export function B2BPartnersPage({
       title: isDe ? "FCN Kundentag & Baustoff-Dialog" : "FCN Customer Day & Materials Dialogue",
       subtitle: isDe ? "Praxisnaher Schulterschluss mit Industrie & Betonherstellern" : "Direct Exchange with Manufacturers & Precast Concrete",
       format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
-      downloadUrl: "/downloads/shams-consult-fcn-kundentag.pdf",
+      downloadUrl: "/documents/flyer-din-lang.html?print=true",
       accent: "from-zinc-800 to-zinc-950",
     },
     {
@@ -93,7 +93,7 @@ export function B2BPartnersPage({
       title: isDe ? "Projektphasen & Bau-Story" : "Project Lifecycle & Build Story",
       subtitle: isDe ? "Vom Vorentwurf über den Rohbau bis zur Schlüsselübergabe" : "From Concept and Shell Construction to Handover",
       format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
-      downloadUrl: "/downloads/shams-consult-projektphasen-baustory.pdf",
+      downloadUrl: "/documents/flyer-casestudy.html?print=true",
       accent: "from-blue-700 to-slate-900",
     },
     {
@@ -101,7 +101,7 @@ export function B2BPartnersPage({
       title: isDe ? "Fotogalerie & Portfolio" : "Photo Gallery & Portfolio",
       subtitle: isDe ? "Echte Baustellenbegehungen & Referenzen in Rhein-Main" : "Authentic Site Inspections & Regional References",
       format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
-      downloadUrl: "/downloads/shams-consult-fotogalerie-portfolio.pdf",
+      downloadUrl: "/documents/flyer-gallery.html?print=true",
       accent: "from-amber-700 to-zinc-900",
     },
   ];
@@ -451,13 +451,14 @@ export function B2BPartnersPage({
                 <div className="pt-5 mt-4 border-t border-zinc-100 flex items-center justify-between">
                   <a
                     href={flyer.downloadUrl}
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white bg-[#DC2626] hover:bg-[#B91C1C] px-4 py-2.5 rounded-lg transition-colors cursor-pointer shadow-sm"
                   >
-                    <span>↓</span>
-                    <span>{isDe ? "PDF herunterladen" : "Download PDF"}</span>
+                    <span>🖨️</span>
+                    <span>{isDe ? "PDF generieren" : "Generate PDF"}</span>
                   </a>
-                  <span className="text-[11px] font-mono text-zinc-400">PDF · Druckoptimiert</span>
+                  <span className="text-[11px] font-mono text-zinc-400">PDF · On-Demand</span>
                 </div>
               </div>
             ))}

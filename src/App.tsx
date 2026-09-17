@@ -8,6 +8,7 @@ import { FeaturedProjectsSection } from "./components/FeaturedProjectsSection";
 import { ProjectsPage } from "./components/ProjectsPage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { FounderPage } from "./components/FounderPage";
+import { FounderPortalPage } from "./components/FounderPortalPage";
 import { AboutPage } from "./components/AboutPage";
 import { CaseStudyDetail } from "./components/CaseStudyDetail";
 import { BlogSection } from "./components/BlogSection";
@@ -56,6 +57,7 @@ export function App() {
   const [activeBlogPost, setActiveBlogPost] = useState<BlogPost | null>(null);
   const [isProjectsPage, setIsProjectsPage] = useState<boolean>(false);
   const [isFounderPage, setIsFounderPage] = useState<boolean>(false);
+  const [isFounderPortalPage, setIsFounderPortalPage] = useState<boolean>(false);
   const [isAboutPage, setIsAboutPage] = useState<boolean>(false);
   const [isClientsPage, setIsClientsPage] = useState<boolean>(false);
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
@@ -79,6 +81,7 @@ export function App() {
     trackPageView(rawPath);
     setActiveRegionalPage(null);
     setIsB2BPage(false);
+    setIsFounderPortalPage(false);
 
     // 0. Regional Hub-and-Spoke Landing Pages (/architektur-frankfurt, /architektur-roedermark, /architektur-dreieich, /stadtplanung-hessen)
     const regionalKey = path.replace(/^\//, "");
@@ -284,6 +287,32 @@ export function App() {
       path === "/architekt"
     ) {
       setIsFounderPage(true);
+      setIsFounderPortalPage(false);
+      setIsAboutPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      setActiveLegalPage(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // 5b. Founder Portal / Locked Flyers (/founder-portal, /gruender-portal, /portal, /intern, /flyers)
+    if (
+      path === "/founder-portal" ||
+      path === "/gruender-portal" ||
+      path === "/portal" ||
+      path === "/intern" ||
+      path === "/flyers" ||
+      path === "/flyer"
+    ) {
+      setIsFounderPortalPage(true);
+      setIsFounderPage(false);
       setIsAboutPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
@@ -699,6 +728,27 @@ export function App() {
           { lang: "x-default", href: "https://shams-consult.de/about" },
         ],
       });
+    } else if (isFounderPortalPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Founder Portal — Official Marketing & B2B Assets | Shams Consult"
+            : "Gründer-Portal — Offizielle Flyer & B2B-Unterlagen | Shams Consult",
+        description:
+          language === "en"
+            ? "Restricted Founder Portal for Dipl.-Ing. Majeed Shams. Access high-resolution brochures, LinkedIn PDFs, and partnership whitepapers."
+            : "Geschützter Inhaber-Bereich für Dipl.-Ing. Majeed Shams. Download hochauflösender Flyer, LinkedIn-Dokumente und B2B-Kooperationsunterlagen.",
+        canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/founder-portal" : "/founder-portal"}`,
+        breadcrumbs: [
+          { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
+          { name: language === "en" ? "Founder Portal" : "Gründer-Portal", item: language === "en" ? "/en/founder-portal" : "/founder-portal" },
+        ],
+        alternateLanguages: [
+          { lang: "de", href: "https://shams-consult.de/founder-portal" },
+          { lang: "en", href: "https://shams-consult.de/en/founder-portal" },
+          { lang: "x-default", href: "https://shams-consult.de/founder-portal" },
+        ],
+      });
     } else if (isFounderPage) {
       updatePageSeo({
         title:
@@ -942,6 +992,7 @@ export function App() {
     isBlogPage,
     isAboutPage,
     isFounderPage,
+    isFounderPortalPage,
     isResearchPage,
     isB2BPage,
     isClientsPage,
@@ -1099,6 +1150,13 @@ export function App() {
         ) : isB2BPage ? (
           /* Dedicated B2B Partners, Developers & Kundentag Page */
           <B2BPartnersPage
+            language={language}
+            onBack={handleBackToHome}
+            onBookConsultation={handleBookConsultation}
+          />
+        ) : isFounderPortalPage ? (
+          /* Dedicated Locked Founder Portal Page */
+          <FounderPortalPage
             language={language}
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}

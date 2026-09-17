@@ -41,9 +41,19 @@ export function FounderPage({
             <span>{isDe ? "Zurück zur Startseite" : "Back to Home"}</span>
           </button>
 
-          <span className="text-xs font-mono text-zinc-400">
-            Shams Consult · {isDe ? "Über den Gründer" : "About the Founder"}
-          </span>
+          <div className="flex items-center gap-3">
+            <a
+              href="/founder-portal"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-semibold border border-zinc-200 transition-colors"
+              title={isDe ? "Geschütztes Gründerportal für Unterlagen" : "Protected Founder Portal"}
+            >
+              <span>🔒</span>
+              <span>{isDe ? "Gründer-Portal" : "Founder Portal"}</span>
+            </a>
+            <span className="text-xs font-mono text-zinc-400">
+              Shams Consult · {isDe ? "Über den Gründer" : "About the Founder"}
+            </span>
+          </div>
         </div>
 
         {/* Header Block */}

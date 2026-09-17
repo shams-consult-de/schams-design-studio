@@ -65,6 +65,7 @@ export function Footer({ t, navT, servicesT, language = "de", onNavigate }: Foot
               <li><a href={getLocalizedPath("/research", language)} onClick={(e) => handleNav(e, "/research")} className="hover:text-white transition-colors">Frankfurt UAS · Forschung & Thesen</a></li>
               <li><a href={getLocalizedPath("/blog", language)} onClick={(e) => handleNav(e, "/blog")} className="hover:text-white transition-colors">{navT.blog}</a></li>
               <li><a href={language === "en" ? "/en#contact" : "/#contact"} onClick={(e) => handleNav(e, "/contact", "contact")} className="hover:text-white transition-colors">{navT.contact}</a></li>
+              <li><a href={getLocalizedPath("/founder-portal", language)} onClick={(e) => handleNav(e, "/founder-portal")} className="hover:text-white text-zinc-500 font-mono text-[11px] transition-colors">🔒 {language === "en" ? "Founder Portal (Internal)" : "Gründer-Portal (Intern)"}</a></li>
             </ul>
           </div>
 
