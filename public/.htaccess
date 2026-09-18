@@ -1,40 +1,53 @@
 # ==============================================================================
-# IONOS Apache Web Server Configuration - Shams Consult (Universal Static SPA)
+# IONOS Apache Web Server Configuration - Shams Consult (Pre-rendered Static Site)
 # ==============================================================================
 
 DirectoryIndex index.html
+
+# Prevent automatic directory listings and unwanted trailing-slash redirect chains
+Options -Indexes
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
+# Serve real HTTP 404 header and static page for non-existent routes (eliminates Soft 404s)
+ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # 1. Collapse multiple consecutive slashes (e.g. //über-uns -> /über-uns)
+  # 1. Collapse multiple consecutive slashes (e.g. //leistungen -> /leistungen)
   RewriteCond %{THE_REQUEST} ^[A-Z]+\s//+([^\s]*) [NC]
   RewriteRule ^ /%1 [R=301,L,NE]
 
-  # 2. Force HTTPS
+  # 2. Force HTTPS & Non-WWW (consolidates canonical host into a single 301 hop)
+  RewriteCond %{HTTP_HOST} ^www\.shams-consult\.de$ [NC,OR]
   RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^(.*)$ https://shams-consult.de/$1 [R=301,L]
 
-  # 3. Serve directory index.html if it exists
+  # 3. Strip trailing slash for pages (except root "/") to match canonical URLs and avoid redirect loops
+  RewriteCond %{REQUEST_URI} ^/(.+)/$
+  RewriteRule ^/(.+)/$ /$1 [R=301,L]
+
+  # 4. If exact file exists (assets, images, fonts, sitemap.xml, robots.txt), serve directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 5. If directory with index.html exists, internally rewrite to index.html
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.*)$ $1/index.html [L]
 
-  # 4. If exact file or directory exists, serve directly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # 6. Fallback for valid routes without physical directory slash (e.g. /services -> /services/index.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
 
-  # 5. Fallback to index.html for all client-side SPA routes
-  RewriteRule ^ index.html [L,QSA]
-</IfModule>
-
-# Universal Fallback for Apache 404s
-ErrorDocument 404 /index.html
-
-<IfModule mod_dir.c>
-  FallbackResource /index.html
+  # 7. Non-existent routes: trigger real HTTP 404 Not Found
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html !-f
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # Caching & Performance
@@ -44,6 +57,9 @@ ErrorDocument 404 /index.html
 
   # HTML pages - revalidate quickly
   ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
 
   # Static assets (JS, CSS, Images, Fonts) - long-term cache
   ExpiresByType text/css "access plus 1 year"

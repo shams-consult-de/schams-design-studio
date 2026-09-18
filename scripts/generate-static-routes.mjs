@@ -346,6 +346,7 @@ async function generateStaticRoutes() {
       changefreq: r.changefreq,
       lang: "de",
       alternateLanguages: hreflangs,
+      noIndex: Boolean(r.noIndex),
     });
     routeConfigs.set(r.enRoute, {
       title: r.enTitle,
@@ -356,6 +357,7 @@ async function generateStaticRoutes() {
       changefreq: r.changefreq,
       lang: "en",
       alternateLanguages: hreflangs,
+      noIndex: Boolean(r.noIndex),
     });
   }
 
@@ -938,7 +940,8 @@ async function generateStaticRoutes() {
     noIndex: true,
   };
   fs.writeFileSync(path.join(distDir, "404.html"), renderHtmlWithMeta(baseIndexHtml, notFoundMeta), "utf-8");
-  console.log("  ✓ Created optimized dist/404.html");
+  fs.writeFileSync(path.join(publicDir, "404.html"), renderHtmlWithMeta(baseIndexHtml, notFoundMeta), "utf-8");
+  console.log("  ✓ Created optimized 404.html in dist/ and public/");
 
   // 7. Generate XML Sitemap (Only canonical, non-alias, indexable URLs)
   console.log("\n🗺️ Generating XML Sitemap...");
