@@ -92,12 +92,12 @@ export function LegalModal({ type, language = "de", onClose }: LegalModalProps) 
                   <strong>{CONTACT.legalName}</strong><br />
                   {isDe ? "Inhaber" : "Managing Principal"}: {CONTACT.founder}<br />
                   {isDe ? "Freier Architekt & Stadtplaner" : "Independent Architect & Urban Planner"}<br />
-                  Carl-von-Noorden-Platz 5<br />
-                  60596 Frankfurt am Main<br />
-                  {isDe ? "Deutschland" : "Germany"}
+                  {CONTACT.primaryAddress.street}<br />
+                  {CONTACT.primaryAddress.city}<br />
+                  {isDe ? CONTACT.primaryAddress.country : CONTACT.primaryAddress.countryEn}
                 </p>
                 <p className="mt-2 text-zinc-600">
-                  {isDe ? "Zweigstelle" : "Branch Office"}: Carl-Zeiss-Str. 43, 63322 Rödermark
+                  {isDe ? "Zweigstelle" : "Branch Office"}: {CONTACT.branchAddress.full}
                 </p>
               </div>
 
@@ -183,7 +183,7 @@ export function LegalModal({ type, language = "de", onClose }: LegalModalProps) 
                 <p>
                   <strong>{CONTACT.legalName}</strong><br />
                   {isDe ? "Inhaber" : "Managing Principal"}: {CONTACT.founder}<br />
-                  Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main<br />
+                  {CONTACT.primaryAddress.full}<br />
                   E-Mail: <a href={`mailto:${CONTACT.email}`} className="text-[#DC2626] underline font-medium">{CONTACT.email}</a>
                 </p>
               </div>
@@ -307,8 +307,8 @@ export function LegalModal({ type, language = "de", onClose }: LegalModalProps) 
                 </p>
                 <p className="mt-2 text-zinc-600">
                   {isDe
-                    ? `Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (${CONTACT.legalName}, Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main, E-Mail: ${CONTACT.email}) mittels einer eindeutigen Erklärung über Ihren Entschluss informieren.`
-                    : `To exercise your right of withdrawal, you must notify us (${CONTACT.legalName}, Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main, Germany, Email: ${CONTACT.email}) by means of a clear statement regarding your decision.`}
+                    ? `Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (${CONTACT.legalName}, ${CONTACT.primaryAddress.full}, E-Mail: ${CONTACT.email}) mittels einer eindeutigen Erklärung über Ihren Entschluss informieren.`
+                    : `To exercise your right of withdrawal, you must notify us (${CONTACT.legalName}, ${CONTACT.primaryAddress.full}, ${CONTACT.primaryAddress.countryEn}, Email: ${CONTACT.email}) by means of a clear statement regarding your decision.`}
                 </p>
               </div>
             </>

@@ -427,6 +427,7 @@
         padding: 0;
         margin: 0;
         gap: 0;
+        display: block !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -437,6 +438,11 @@
         box-shadow: none;
         page-break-after: always;
         break-after: page;
+      }
+      .sheet:last-of-type,
+      .sheet:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
       }
       .panel {
         border-right: none !important;
@@ -574,8 +580,9 @@
           </div>
           <div class="contact-details" style="flex: 1;">
             <div class="contact-item"><strong>Majeed Shams</strong> M.Eng.</div>
-            <div class="contact-item" style="font-size: 5.8pt; color: #9ca3af;">Leitender Architekt · AKH 21886</div>
-            <div class="direct-phone">06074 2398782</div>
+            <div class="contact-item" style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · AKH 21886</div>
+            <div class="direct-phone">069 74 223 777</div>
+            <div class="contact-item" style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
             <div class="contact-item">office@shams-consult.de</div>
           </div>
           <div class="qr-frame">
@@ -706,8 +713,9 @@
           </div>
           <div class="contact-details" style="flex: 1;">
             <div class="contact-item"><strong>Majeed Shams</strong> M.Eng.</div>
-            <div class="contact-item" style="font-size: 5.8pt; color: #9ca3af;">Principal Architect</div>
-            <div class="direct-phone">+49 6074 2398782</div>
+            <div class="contact-item" style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · Hesse Chamber</div>
+            <div class="direct-phone">+49 69 74 223 777</div>
+            <div class="contact-item" style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
             <div class="contact-item">office@shams-consult.de</div>
           </div>
           <div class="qr-frame">

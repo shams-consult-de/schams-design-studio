@@ -1,6 +1,7 @@
 import { useState, useEffect, useId, useMemo } from "react";
 import { Language } from "../lib/i18n";
 import { portalClients, PortalClient, PortalFile } from "../data/flyers";
+import { FlyerViewerModal } from "./flyers";
 
 interface FounderPortalPageProps {
   language: Language;
@@ -33,6 +34,10 @@ export function FounderPortalPage({
   );
   const [mobileView, setMobileView] = useState<"clients" | "files">("clients");
 
+  // React Flyer Viewer Modal State
+  const [activeFlyerFile, setActiveFlyerFile] = useState<PortalFile | null>(null);
+  const [flyerAutoPrint, setFlyerAutoPrint] = useState<boolean>(false);
+
   // Restore session from sessionStorage if already authenticated
   useEffect(() => {
     try {
@@ -44,6 +49,25 @@ export function FounderPortalPage({
       // sessionStorage unavailable/sandboxed
     }
   }, []);
+
+  // Deep-link support for flyer preview: ?flyer=<id>&print=true
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    const params = new URLSearchParams(window.location.search);
+    const flyerId = params.get("flyer");
+    const autoPrintParam = params.get("print") === "true";
+    if (flyerId) {
+      for (const client of portalClients) {
+        const match = client.files.find((f) => f.id === flyerId);
+        if (match) {
+          setSelectedClientId(client.id);
+          setActiveFlyerFile(match);
+          setFlyerAutoPrint(autoPrintParam);
+          break;
+        }
+      }
+    }
+  }, [isAuthenticated]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -583,12 +607,14 @@ export function FounderPortalPage({
                               {/* Actions: Generate PDF & Preview */}
                               <div className="flex flex-wrap items-center gap-2 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-zinc-800/60">
                                 {/* Direct PDF Generator Button */}
-                                <a
-                                  href={`${file.documentUrl}?print=true`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setActiveFlyerFile(file);
+                                    setFlyerAutoPrint(true);
+                                  }}
                                   className="inline-flex items-center gap-2 py-2 px-3.5 rounded-xl bg-[#DC2626] hover:bg-[#B91C1C] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md shadow-red-950/30 cursor-pointer"
-                                  title={isDe ? "PDF direkt generieren & speichern" : "Generate & save PDF"}
+                                  title={isDe ? "PDF direkt generieren & drucken" : "Generate & print PDF"}
                                 >
                                   <svg
                                     className="w-3.5 h-3.5"
@@ -603,19 +629,21 @@ export function FounderPortalPage({
                                     <path d="M6 14h12v8H6z" />
                                   </svg>
                                   <span>{isDe ? "PDF generieren" : "Generate PDF"}</span>
-                                </a>
+                                </button>
 
                                 {/* Preview Button */}
-                                <a
-                                  href={file.documentUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1.5 py-2 px-3 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 hover:border-zinc-500 text-zinc-200 text-xs font-semibold transition-colors"
-                                  title={isDe ? "Vorschau im Browser" : "Preview in browser"}
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setActiveFlyerFile(file);
+                                    setFlyerAutoPrint(false);
+                                  }}
+                                  className="inline-flex items-center gap-1.5 py-2 px-3 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 hover:border-zinc-500 text-zinc-200 text-xs font-semibold transition-colors cursor-pointer"
+                                  title={isDe ? "Vorschau im Studio Viewer" : "Preview in Studio Viewer"}
                                 >
                                   <span>👁</span>
                                   <span>{isDe ? "Vorschau" : "Preview"}</span>
-                                </a>
+                                </button>
 
                                 {/* Copy Link */}
                                 <button
@@ -658,6 +686,15 @@ export function FounderPortalPage({
           </div>
         )}
       </div>
+
+      {/* React Flyer Viewer & Print Studio Modal */}
+      <FlyerViewerModal
+        file={activeFlyerFile}
+        isOpen={!!activeFlyerFile}
+        onClose={() => setActiveFlyerFile(null)}
+        autoPrint={flyerAutoPrint}
+        initialLanguage={language}
+      />
     </article>
   );
 }

@@ -18,6 +18,20 @@ export const CONTACT = {
   instagram: "https://www.instagram.com/shams_consult/",
   facebook: "https://www.facebook.com/profile.php?id=100057398741769",
   xing: "https://www.xing.com/profile/MajeedShams_FreierArchitektundStadtplaner",
+  primaryAddress: {
+    street: "Carl-von-Noorden-Platz 5",
+    city: "60596 Frankfurt am Main",
+    country: "Deutschland",
+    countryEn: "Germany",
+    full: "Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main",
+  },
+  branchAddress: {
+    street: "Carl-Zeiss-Str. 43",
+    city: "63322 Rödermark",
+    country: "Deutschland",
+    countryEn: "Germany",
+    full: "Carl-Zeiss-Str. 43, 63322 Rödermark",
+  },
   offices: [
     {
       id: "frankfurt",

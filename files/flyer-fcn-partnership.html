@@ -896,6 +896,7 @@
         padding: 0;
         margin: 0;
         gap: 0;
+        display: block !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -907,6 +908,11 @@
         margin: 0;
         page-break-after: always;
         break-after: page;
+      }
+      .sheet:last-of-type,
+      .sheet:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
       }
     }
   </style>
@@ -1344,7 +1350,7 @@
               <div class="profile-name">Dipl.-Ing. Majeed Shams M.Eng.</div>
               <div class="profile-title">Freier Architekt & Stadtplaner · Inhaber Shams Consult</div>
               <div class="contact-line">
-                <span>📍</span> Carl-Zeiss-Straße 3, 63322 Rödermark
+                <span>📍</span> Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main
               </div>
               <div class="contact-line">
                 <span>✉️</span> <strong>office@shams-consult.de</strong>
@@ -1353,7 +1359,7 @@
                 <span>🌐</span> <strong>shams-consult.de</strong>
               </div>
               <div class="hotline-highlight">
-                📞 +49 6074 2398782
+                📞 +49 69 74 223 777
               </div>
             </div>
 

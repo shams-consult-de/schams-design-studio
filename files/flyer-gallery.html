@@ -263,9 +263,18 @@
 
     @media print {
       @page { size: 297mm 210mm; margin: 0; }
-      body { background: none; padding: 0; margin: 0; gap: 0; }
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+        display: block !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
       .toolbar, .fold-marker { display: none !important; }
       .sheet { box-shadow: none; page-break-after: always; break-after: page; }
+      .sheet:last-of-type, .sheet:last-child { page-break-after: auto !important; break-after: auto !important; }
       .panel { border-right: none !important; }
     }
   </style>
@@ -382,9 +391,10 @@
           </div>
           <div class="tz-info" style="flex: 1;">
             <div><strong>Majeed Shams</strong> M.Eng.</div>
-            <div style="font-size: 5.8pt; color: #9ca3af;">AKH Hessen 21886</div>
-            <div class="tz-tel">06074 2398782</div>
-            <div style="font-size: 6pt; color: #d1d5db;">office@shams-consult.de</div>
+            <div style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · AKH 21886</div>
+            <div class="tz-tel">069 74 223 777</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;">office@shams-consult.de</div>
           </div>
           <div class="qr-box">
             <img src="./public/qr-shams.svg" alt="QR-Code">
@@ -496,9 +506,10 @@
           </div>
           <div class="tz-info" style="flex: 1;">
             <div><strong>Majeed Shams</strong> M.Eng.</div>
-            <div style="font-size: 5.8pt; color: #9ca3af;">Principal Architect</div>
-            <div class="tz-tel">+49 6074 2398782</div>
-            <div style="font-size: 6pt; color: #d1d5db;">office@shams-consult.de</div>
+            <div style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · Hesse Chamber</div>
+            <div class="tz-tel">+49 69 74 223 777</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;">office@shams-consult.de</div>
           </div>
           <div class="qr-box">
             <img src="./public/qr-shams.svg" alt="QR-Code">
