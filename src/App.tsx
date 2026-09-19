@@ -580,6 +580,13 @@ export function App() {
       setActiveBlogPost(null);
       setActiveCaseStudy(null);
       setActiveLegalPage(null);
+      if (window.location.hash) {
+        const hashId = window.location.hash.replace(/^#/, "");
+        setTimeout(() => {
+          const el = document.getElementById(hashId);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 120);
+      }
       return;
     }
 
@@ -603,7 +610,20 @@ export function App() {
   useEffect(() => {
     syncRoute();
     window.addEventListener("popstate", syncRoute);
-    return () => window.removeEventListener("popstate", syncRoute);
+    const handleHashChange = () => {
+      if (window.location.hash) {
+        const hashId = window.location.hash.replace(/^#/, "");
+        const el = document.getElementById(hashId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("popstate", syncRoute);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
   }, [syncRoute]);
 
   // Dynamic SEO meta tags and JSON-LD schema update on route or language change
@@ -1007,6 +1027,23 @@ export function App() {
 
   const navigateTo = (path: string) => {
     const localizedTarget = getLocalizedPath(path, language);
+    const [targetPathname, targetHash] = localizedTarget.split("#");
+    const currentPathname = window.location.pathname;
+
+    if (targetHash) {
+      if (currentPathname !== targetPathname) {
+        window.history.pushState(null, "", localizedTarget);
+        syncRoute();
+      } else {
+        window.history.pushState(null, "", `#${targetHash}`);
+      }
+      setTimeout(() => {
+        const el = document.getElementById(targetHash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+      return;
+    }
+
     if (window.location.pathname !== localizedTarget) {
       window.history.pushState(null, "", localizedTarget);
       syncRoute();
@@ -1066,17 +1103,12 @@ export function App() {
   const handleBookConsultation = () => {
     const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
     if (!isHome) {
-      navigateTo("/");
-      setTimeout(() => {
-        const contactEl = document.getElementById("contact");
-        if (contactEl) {
-          contactEl.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 150);
+      navigateTo(language === "en" ? "/en#contact" : "/#contact");
     } else {
       const contactEl = document.getElementById("contact");
       if (contactEl) {
         contactEl.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "#contact");
       }
     }
   };
@@ -1235,27 +1267,35 @@ export function App() {
           /* Full Homepage */
           <>
             {/* 1. Hero Section */}
-            <Hero
-              t={t.hero}
-              onBookConsultation={handleBookConsultation}
-              onNavigateProjects={() => navigateTo("/projects")}
-              onNavigateFounder={() => navigateTo("/founder")}
-            />
+            <div id="hero">
+              <Hero
+                t={t.hero}
+                onBookConsultation={handleBookConsultation}
+                onNavigateProjects={() => navigateTo("/projects")}
+                onNavigateFounder={() => navigateTo("/founder")}
+              />
+            </div>
 
             {/* 2. On-Site Visits & Field Proof Moving Photo Carousel */}
-            <SiteVisitsMovingSection
-              t={t.siteVisitsPage}
-              onNavigateSiteVisits={() => navigateTo("/site-visits")}
-            />
+            <div id="site-visits" className="scroll-mt-24">
+              <SiteVisitsMovingSection
+                t={t.siteVisitsPage}
+                onNavigateSiteVisits={() => navigateTo("/site-visits")}
+              />
+            </div>
 
             {/* 3. Metrics Strip */}
-            <MetricsBar t={t.metrics} />
+            <div id="metrics" className="scroll-mt-24">
+              <MetricsBar t={t.metrics} />
+            </div>
 
             {/* 4. Official AKH Hessen Chamber Registration Authority (Registered German Architect & Planner) */}
-            <AkhRegistrationSection t={t.akhRegistration} />
+            <div id="akh" className="scroll-mt-24">
+              <AkhRegistrationSection t={t.akhRegistration} />
+            </div>
 
             {/* 5. Selected Clients & Partners Moving Logos Track (Positioned above HOAI phases) */}
-            <div id="clients">
+            <div id="clients" className="scroll-mt-24">
               <ClientsMovingSection
                 t={t.clients}
                 language={language}
@@ -1264,59 +1304,69 @@ export function App() {
             </div>
 
             {/* 6. Unified Services & 9 HOAI Leistungsphasen Section */}
-            <div id="services">
+            <div id="services" className="scroll-mt-24">
               <ServicesSection t={t.services} processT={t.process} />
             </div>
 
             {/* 7. Dedicated Subtle VOB Compliance Section */}
-            <VobSection t={t.vob} />
+            <div id="vob" className="scroll-mt-24">
+              <VobSection t={t.vob} />
+            </div>
 
             {/* 8. Team of 16 Architecture Experts (Subtle Authority Section before case studies) */}
-            <TeamSection
-              t={t.team}
-              onNavigateAbout={() => navigateTo("/about")}
-            />
+            <div id="team" className="scroll-mt-24">
+              <TeamSection
+                t={t.team}
+                onNavigateAbout={() => navigateTo("/about")}
+              />
+            </div>
 
             {/* 9. Verified 5-Star Google Reviews & Moving Track */}
-            <div id="case-studies">
+            <div id="case-studies" className="scroll-mt-24">
               <CaseStudiesSection
                 language={language}
                 onSelectCaseStudy={handleSelectCaseStudy}
               />
             </div>
 
-            {/* 9. Featured Projects Section (Moving Track) */}
-            <FeaturedProjectsSection
-              t={t.projects}
-              language={language}
-              onSelectProject={handleSelectProject}
-              onViewAllProjects={() => navigateTo("/projects")}
-            />
+            {/* 10. Featured Projects Section (Moving Track) */}
+            <div id="projects" className="scroll-mt-24">
+              <FeaturedProjectsSection
+                t={t.projects}
+                language={language}
+                onSelectProject={handleSelectProject}
+                onViewAllProjects={() => navigateTo("/projects")}
+              />
+            </div>
 
-            {/* 6. Academic Research & Teaching (Frankfurt UAS Lecturer in Urban Architecture) */}
-            <div id="research">
+            {/* 11. Academic Research & Teaching (Frankfurt UAS Lecturer in Urban Architecture) */}
+            <div id="research" className="scroll-mt-24">
               <ResearchSection
                 t={t.research}
                 onNavigateResearch={handleNavigateResearch}
               />
             </div>
 
-            {/* 7. From The Blog / Magazin */}
-            <BlogSection
-              t={t.blog}
-              language={language}
-              onSelectPost={handleSelectBlogPost}
-              onViewAll={handleViewAllBlog}
-            />
+            {/* 12. From The Blog / Magazin */}
+            <div id="blog" className="scroll-mt-24">
+              <BlogSection
+                t={t.blog}
+                language={language}
+                onSelectPost={handleSelectBlogPost}
+                onViewAll={handleViewAllBlog}
+              />
+            </div>
 
-            {/* 8. Science-Backed FAQ Accordion Section with FAQPage Schema */}
-            <FaqSection
-              t={t.faqSection}
-              onBookConsultation={handleBookConsultation}
-            />
+            {/* 13. Science-Backed FAQ Accordion Section with FAQPage Schema */}
+            <div id="faq" className="scroll-mt-24">
+              <FaqSection
+                t={t.faqSection}
+                onBookConsultation={handleBookConsultation}
+              />
+            </div>
 
-            {/* 9. Contact & Consultation Booking Section */}
-            <div id="contact" className="bg-[#121316]">
+            {/* 14. Contact & Consultation Booking Section */}
+            <div id="contact" className="bg-[#121316] scroll-mt-24">
               <ContactSection t={t.contact} language={language} initialMessage={leadMessage} />
             </div>
           </>

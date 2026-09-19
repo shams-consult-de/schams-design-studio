@@ -20,20 +20,19 @@ export function Footer({ t, navT, servicesT, language = "de", onNavigate }: Foot
     e.preventDefault();
     if (sectionId) {
       const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
+      const hash = `#${sectionId}`;
       if (isHome) {
         const el = document.getElementById(sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", hash);
         }
       } else {
+        const targetHome = language === "en" ? `/en${hash}` : `/${hash}`;
         if (onNavigate) {
-          onNavigate(language === "en" ? "/en" : "/");
-          setTimeout(() => {
-            const el = document.getElementById(sectionId);
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }, 150);
+          onNavigate(targetHome);
         } else {
-          window.location.href = language === "en" ? `/en#${sectionId}` : `/#${sectionId}`;
+          window.location.href = targetHome;
         }
       }
     } else {

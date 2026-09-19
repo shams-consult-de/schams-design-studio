@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Translations } from "../lib/i18n";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface FaqSectionProps {
   t: Translations["faqSection"];
@@ -17,8 +18,9 @@ export function FaqSection({ t, onBookConsultation }: FaqSectionProps) {
           <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626] block">
             {t.badge}
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-            {t.heading}
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight flex items-center">
+            <span>{t.heading}</span>
+            <SectionAnchorLink sectionId="faq" />
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed max-w-3xl">
             {t.subtitle}

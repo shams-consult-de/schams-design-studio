@@ -53,18 +53,19 @@ export function Header({
 
     if (link.sectionId) {
       const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
+      const hash = `#${link.sectionId}`;
       if (isHome) {
         const el = document.getElementById(link.sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", hash);
         }
       } else {
+        const targetPath = language === "en" ? `/en${hash}` : `/${hash}`;
         if (onNavigate) {
-          onNavigate(language === "en" ? "/en" : "/");
-          setTimeout(() => {
-            const el = document.getElementById(link.sectionId!);
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }, 150);
+          onNavigate(targetPath);
+        } else {
+          window.location.href = targetPath;
         }
       }
     } else {
@@ -85,13 +86,12 @@ export function Header({
     const isHome = window.location.pathname === "/" || window.location.pathname === "/en";
     if (isHome) {
       const el = document.getElementById("contact");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "#contact");
+      }
     } else if (onNavigate) {
-      onNavigate(language === "en" ? "/en" : "/");
-      setTimeout(() => {
-        const el = document.getElementById("contact");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 150);
+      onNavigate(language === "en" ? "/en#contact" : "/#contact");
     }
   };
 

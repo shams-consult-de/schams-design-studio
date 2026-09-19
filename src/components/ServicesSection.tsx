@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Translations } from "../lib/i18n";
 import { Icon } from "./icon";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface ServicesSectionProps {
   t: Translations["services"];
@@ -86,8 +87,9 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
         <div className="space-y-10">
           {/* Section Header */}
           <div className="max-w-3xl space-y-2">
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-              {t.title}
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight leading-tight flex items-center">
+              <span>{t.title}</span>
+              <SectionAnchorLink sectionId="services" />
             </h2>
           </div>
 

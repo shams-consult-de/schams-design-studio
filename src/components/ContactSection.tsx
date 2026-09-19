@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Icon } from "./icon";
 import { CONTACT, getWhatsappHref } from "../lib/contact";
 import { Language, Translations } from "../lib/i18n";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface ContactSectionProps {
   t: Translations["contact"];
@@ -48,9 +49,12 @@ export function ContactSection({
             <Icon name="shield-check" /> <span>{t.badge}</span>
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            {t.headlinePart1}
-            <span className="font-normal text-red-400">{t.headlineHighlight}</span>.
+          <h2 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white inline-flex items-center justify-center">
+            <span>
+              {t.headlinePart1}
+              <span className="font-normal text-red-400">{t.headlineHighlight}</span>.
+            </span>
+            <SectionAnchorLink sectionId="contact" language={language} />
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-300 font-light leading-relaxed max-w-2xl mx-auto">

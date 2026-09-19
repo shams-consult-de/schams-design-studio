@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { projects, Project } from "../data/projects";
 import { Language, Translations } from "../lib/i18n";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface FeaturedProjectsSectionProps {
   t: Translations["projects"];
@@ -45,10 +46,13 @@ export function FeaturedProjectsSection({
               {t.badge}
             </span>
 
-            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-              {isDe
-                ? "Realisierte Bauvorhaben & Städtebau."
-                : "Completed Architecture & Master Plans."}
+            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight flex items-center">
+              <span>
+                {isDe
+                  ? "Realisierte Bauvorhaben & Städtebau."
+                  : "Completed Architecture & Master Plans."}
+              </span>
+              <SectionAnchorLink sectionId="projects" language={language} />
             </h2>
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">

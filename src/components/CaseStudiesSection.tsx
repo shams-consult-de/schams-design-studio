@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { caseStudies, CaseStudy, googleProfileUrl } from "../data/caseStudies";
 import { Language } from "../lib/i18n";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface CaseStudiesSectionProps {
   language: Language;
@@ -132,10 +133,13 @@ export function CaseStudiesSection({
               {isDe ? "GOOGLE-BEWERTUNGEN IM DETAIL" : "GOOGLE REVIEWS IN DETAIL"}
             </span>
 
-            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-              {isDe
-                ? "Echte Google-Rezensionen – die Geschichten dahinter"
-                : "Real Google Reviews – The Stories Behind Them"}
+            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight flex items-center">
+              <span>
+                {isDe
+                  ? "Echte Google-Rezensionen – die Geschichten dahinter"
+                  : "Real Google Reviews – The Stories Behind Them"}
+              </span>
+              <SectionAnchorLink sectionId="case-studies" language={language} />
             </h2>
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">

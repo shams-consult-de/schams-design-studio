@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Language, Translations } from "../lib/i18n";
 import { blogPosts, BlogPost } from "../data/blog";
+import { SectionAnchorLink } from "./SectionAnchorLink";
 
 interface BlogSectionProps {
   t: Translations["blog"];
@@ -44,8 +45,9 @@ export function BlogSection({
               {t.badge}
             </span>
 
-            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
-              {t.title}
+            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight flex items-center">
+              <span>{t.title}</span>
+              <SectionAnchorLink sectionId="blog" language={language} />
             </h2>
 
             <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
