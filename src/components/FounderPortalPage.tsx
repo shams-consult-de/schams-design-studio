@@ -228,8 +228,7 @@ export function FounderPortalPage({
               </div>
 
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626]" />
+                <div className="inline-block text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
                   {isDe
                     ? "STRENG VERTRAULICHER INHABER-BEREICH"
                     : "STRICTLY CONFIDENTIAL FOUNDER ACCESS"}
@@ -311,8 +310,7 @@ export function FounderPortalPage({
               
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
-                    <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-ping" />
+                  <div className="inline-block text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
                     <span>
                       {isDe
                         ? "VERTRAULICHE DATEIEN · INHABER-ZUGANG"

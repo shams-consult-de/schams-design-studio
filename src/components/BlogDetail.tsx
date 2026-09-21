@@ -146,7 +146,6 @@ export function BlogDetail({
         {/* Header Information */}
         <header className="space-y-4">
           <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {post.category[language]}
             </span>

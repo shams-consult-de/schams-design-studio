@@ -93,8 +93,7 @@ export function AboutPage({
 
         {/* Header Block: Firm Profile */}
         <div className="space-y-4 max-w-3xl">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+          <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {t.badge}
             </span>
@@ -289,8 +288,7 @@ export function AboutPage({
           <div className="p-6 sm:p-8 rounded-2xl bg-zinc-50 border border-zinc-200/90 space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200/80 pb-4">
               <div className="space-y-1 text-left">
-                <div className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
+                <div className="inline-block">
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#DC2626]">
                     {clientsT.networkBadge}
                   </span>

@@ -157,8 +157,7 @@ export function CaseStudyDetail({
           {/* Owner Response from Dipl.-Ing. Majeed Shams */}
           {caseStudy.ownerResponse && (
             <div className="bg-[#1a1b1f] p-5 rounded-xl border border-zinc-800 space-y-2 mt-4">
-              <div className="flex items-center gap-2 text-xs font-bold text-zinc-300">
-                <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+              <div className="text-xs font-bold text-zinc-300">
                 <span>
                   {isDe
                     ? "Antwort des Gründers"

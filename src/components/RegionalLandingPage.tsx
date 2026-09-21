@@ -80,26 +80,12 @@ export function RegionalLandingPage({
           aria-hidden="true"
         />
 
-        {/* Bold Architectural Crimson Circle Accent */}
-        <div
-          className="absolute xl:right-10 2xl:right-20 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-          aria-hidden="true"
-        >
-          <div className="relative flex items-center justify-center animate-couch-settle">
-            {/* Concentric Outer Accent Ring */}
-            <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
-
-            {/* Solid Bold Crimson Architectural Circle */}
-            <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-          </div>
-        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl space-y-6 text-left">
             {/* Eyebrow & Credential Badge */}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#DC2626] bg-red-50 border border-red-200/60 px-3 py-1 rounded-full">
-                <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+              <span className="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#DC2626] bg-red-50 border border-red-200/60 px-3 py-1 rounded-full">
                 {eyebrow}
               </span>
               <span className="text-xs font-semibold text-zinc-600 bg-zinc-100 border border-zinc-200 px-3 py-1 rounded-full">
@@ -386,8 +372,7 @@ export function RegionalLandingPage({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-zinc-100">
                   {/* Column 1: Architektonische Schwerpunkte */}
                   <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900 flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626]" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900">
                       {t.architecturalFocusHeading}
                     </h4>
                     <ul className="space-y-2 text-xs sm:text-sm text-zinc-700 font-light">
@@ -405,8 +390,7 @@ export function RegionalLandingPage({
 
                   {/* Column 2: Baurecht & Lokale Satzungen */}
                   <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900 flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-zinc-950" />
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900">
                       {t.zoningRequirementsHeading}
                     </h4>
                     <ul className="space-y-2 text-xs sm:text-sm text-zinc-700 font-light">
@@ -540,7 +524,7 @@ export function RegionalLandingPage({
                           const factText = fact[language] ?? fact.de;
                           return (
                             <li key={factText} className="flex items-start gap-2">
-                              <span className="text-[#DC2626] font-bold">•</span>
+                              <span className="text-zinc-400 font-bold">•</span>
                               <span>{factText}</span>
                             </li>
                           );

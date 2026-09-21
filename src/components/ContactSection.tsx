@@ -28,20 +28,6 @@ export function ContactSection({
     <section id="contact" className="py-20 lg:py-28 bg-[#0a0a0b] text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Margin */}
-      <div
-        className="absolute xl:right-10 2xl:right-20 top-20 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <div className="relative flex items-center justify-center animate-couch-settle">
-          {/* Concentric Outer Accent Ring */}
-          <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/35" />
-
-          {/* Solid Bold Crimson Architectural Circle */}
-          <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-        </div>
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">

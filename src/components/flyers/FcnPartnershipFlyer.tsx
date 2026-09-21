@@ -40,40 +40,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           padding: 14mm 16mm 12mm 16mm;
         }
 
-        .flyer-fcn .circle-standalone-slot {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          width: 36mm;
-          height: 36mm;
-          flex-shrink: 0;
-        }
-        .flyer-fcn .circle-outer-ring {
-          position: absolute;
-          width: 36mm;
-          height: 36mm;
-          border-radius: 50%;
-          border: 2px solid rgba(220, 38, 38, 0.35);
-        }
-        .flyer-fcn .circle-inner-solid {
-          width: 25mm;
-          height: 25mm;
-          border-radius: 50%;
-          background: var(--brand-red);
-          box-shadow: 0 10px 24px rgba(220, 38, 38, 0.38);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #ffffff;
-          font-size: 5.6pt;
-          font-weight: 800;
-          text-align: center;
-          line-height: 1.18;
-          letter-spacing: 0.6px;
-          text-transform: uppercase;
-        }
-
         .flyer-fcn .slide-header {
           position: relative;
           z-index: 10;
@@ -167,13 +133,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           color: var(--brand-red);
           margin-bottom: 2mm;
         }
-        .flyer-fcn .eyebrow-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: var(--brand-red);
-          display: inline-block;
-        }
         .flyer-fcn .slide-title {
           font-size: 20pt;
           font-weight: 900;
@@ -205,10 +164,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           padding: 6mm 0 2mm 0;
         }
         .flyer-fcn .cover-hero-layout {
-          display: grid;
-          grid-template-columns: 1fr 38mm;
-          gap: 5mm;
-          align-items: center;
+          display: block;
         }
         .flyer-fcn .cover-hero-text {
           display: flex;
@@ -747,6 +703,13 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           align-items: center;
           gap: 6px;
         }
+        .flyer-fcn a {
+          color: inherit;
+          text-decoration: none;
+        }
+        .flyer-fcn a:hover {
+          text-decoration: underline;
+        }
         .flyer-fcn .contact-line strong {
           color: #ffffff;
         }
@@ -756,6 +719,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           color: #f87171;
           letter-spacing: 0.4px;
           margin-top: 1mm;
+          display: block;
         }
         .flyer-fcn .qr-container {
           background: #ffffff;
@@ -830,7 +794,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           <div className="cover-hero-layout">
             <div className="cover-hero-text">
               <div className="eyebrow">
-                <span className="eyebrow-dot"></span>
                 B2B & Industrie-Partnerschaft Hessen / Rhein-Main
               </div>
               <h1 className="cover-hero-title">
@@ -840,13 +803,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
                 <strong>Schneller bauen. Präziser planen. Wirtschaftlicher realisieren.</strong><br />
                 Wie die integrale Zusammenarbeit zwischen <em>{CONTACT.companyName}</em> und <em>F.C. Nüdling Fertigteiltechnik</em> Bauherren und Investoren kalkulierbaren Projekterfolg sichert.
               </p>
-            </div>
-
-            <div className="circle-standalone-slot" aria-hidden="true">
-              <div className="circle-outer-ring"></div>
-              <div className="circle-inner-solid">
-                SHAMS<br />×<br />FCN
-              </div>
             </div>
           </div>
 
@@ -907,7 +863,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
         <main className="page-body">
           <div className="eyebrow">
-            <span className="eyebrow-dot"></span>
             Integrale Planung trifft serielle Fertigung
           </div>
           <h2 className="slide-title">
@@ -998,7 +953,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
         <main className="page-body">
           <div className="eyebrow">
-            <span className="eyebrow-dot"></span>
             Messbarer Mehrwert für Bauherren & Investoren
           </div>
           <h2 className="slide-title">
@@ -1077,7 +1031,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
         <main className="page-body">
           <div className="eyebrow">
-            <span className="eyebrow-dot"></span>
             Erfolgreich realisiert in Seeheim-Jugenheim
           </div>
           <h2 className="slide-title">
@@ -1167,7 +1120,6 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
         <main className="page-body">
           <div className="eyebrow">
-            <span className="eyebrow-dot"></span>
             Ihr Projekt mit System realisieren
           </div>
           <h2 className="slide-title">
@@ -1214,19 +1166,19 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
                     <span>📍</span> {CONTACT.primaryAddress.full}
                   </div>
                   <div className="contact-line">
-                    <span>✉️</span> <strong>{CONTACT.email}</strong>
+                    <span>✉️</span> <a href={`mailto:${CONTACT.email}`} title="E-Mail"><strong>{CONTACT.email}</strong></a>
                   </div>
                   <div className="contact-line">
-                    <span>🌐</span> <strong>shams-consult.de</strong>
+                    <span>🌐</span> <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" title="Website"><strong>shams-consult.de</strong></a>
                   </div>
-                  <div className="hotline-highlight">
+                  <a href={CONTACT.primaryPhoneHref} className="hotline-highlight" title="Telefon">
                     📞 +49 69 74 223 777
-                  </div>
+                  </a>
                 </div>
 
-                <div className="qr-container">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-container" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt={`QR-Code ${CONTACT.companyName}`} />
-                </div>
+                </a>
               </div>
 
               <div className="cta-card-bottom">
@@ -1241,7 +1193,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
             <strong>{CONTACT.companyName}</strong> · Architektur & Stadtplanung · Kooperation mit <strong>F.C. Nüdling</strong> Fertigteiltechnik
           </div>
           <div className="footer-right">
-            <span>shams-consult.de</span>
+            <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a>
           </div>
         </footer>
       </div>

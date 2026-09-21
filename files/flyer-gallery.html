@@ -215,14 +215,10 @@
       margin-bottom: 2.5mm;
     }
     .f-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 2mm;
       font-size: 6.8pt;
       line-height: 1.35;
       color: #374151;
     }
-    .f-dot { width: 3mm; height: 3mm; border-radius: 50%; background: var(--brand-red); margin-top: 0.8mm; flex-shrink: 0; }
 
     /* HUMANIZED CTA THUMB ZONE */
     .tz-card {
@@ -258,8 +254,11 @@
     .qr-box img { width: 100%; height: 100%; object-fit: contain; }
     .tz-info { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
     .tz-info strong { color: #fff; }
-    .tz-tel { font-size: 8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; }
+    .tz-tel { font-size: 8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: inline-block; }
     .tz-foot { font-size: 5.8pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1mm; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .tz-foot a { color: #cbd5e1; font-weight: 600; }
 
     @media print {
       @page { size: 297mm 210mm; margin: 0; }
@@ -366,15 +365,12 @@
 
         <div class="feature-list">
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>Entwurf & Genehmigung:</strong> Bauanträge & Bebauungsplanprüfung mit Fachkompetenz.</div>
           </div>
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>FCN-Elementabstimmung:</strong> Statik- & Werkplanung passgenau für die Vorfertigung.</div>
           </div>
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>Bauleitung LPH 8:</strong> Präsenz auf der Baustelle für Qualität und Termintreue.</div>
           </div>
         </div>
@@ -392,15 +388,15 @@
           <div class="tz-info" style="flex: 1;">
             <div><strong>Majeed Shams</strong> M.Eng.</div>
             <div style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · AKH 21886</div>
-            <div class="tz-tel">069 74 223 777</div>
+            <a href="tel:+496974223777" class="tz-tel">069 74 223 777</a>
             <div style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
-            <div style="font-size: 5.6pt; color: #d1d5db;">office@shams-consult.de</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;"><a href="mailto:office@shams-consult.de">office@shams-consult.de</a></div>
           </div>
-          <div class="qr-box">
+          <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" class="qr-box">
             <img src="./public/qr-shams.svg" alt="QR-Code">
-          </div>
+          </a>
         </div>
-        <div class="tz-foot">shams-consult.de · Jetzt QR-Code scannen</div>
+        <div class="tz-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Jetzt QR-Code scannen</div>
       </div>
     </div>
   </div>
@@ -481,15 +477,12 @@
 
         <div class="feature-list">
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>Design & Permitting:</strong> Full German zoning compliance and zoning approvals.</div>
           </div>
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>FCN Precast Coordination:</strong> Factory-tailored structural and module engineering.</div>
           </div>
           <div class="f-item">
-            <span class="f-dot"></span>
             <div><strong>Site Supervision HOAI 8:</strong> On-site leadership safeguarding schedule and budget.</div>
           </div>
         </div>
@@ -507,15 +500,15 @@
           <div class="tz-info" style="flex: 1;">
             <div><strong>Majeed Shams</strong> M.Eng.</div>
             <div style="font-size: 5.8pt; color: #9ca3af;">Frankfurt am Main · Hesse Chamber</div>
-            <div class="tz-tel">+49 69 74 223 777</div>
+            <a href="tel:+496974223777" class="tz-tel">+49 69 74 223 777</a>
             <div style="font-size: 5.6pt; color: #d1d5db;">Carl-von-Noorden-Platz 5</div>
-            <div style="font-size: 5.6pt; color: #d1d5db;">office@shams-consult.de</div>
+            <div style="font-size: 5.6pt; color: #d1d5db;"><a href="mailto:office@shams-consult.de">office@shams-consult.de</a></div>
           </div>
-          <div class="qr-box">
+          <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" class="qr-box">
             <img src="./public/qr-shams.svg" alt="QR-Code">
-          </div>
+          </a>
         </div>
-        <div class="tz-foot">shams-consult.de · Scan QR Code to connect</div>
+        <div class="tz-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Scan QR Code to connect</div>
       </div>
     </div>
   </div>

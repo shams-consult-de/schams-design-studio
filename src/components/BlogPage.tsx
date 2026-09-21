@@ -59,8 +59,7 @@ export function BlogPage({
 
         {/* Page Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+          <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {t.badge}
             </span>

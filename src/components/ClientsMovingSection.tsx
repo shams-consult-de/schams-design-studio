@@ -28,8 +28,7 @@ export function ClientsMovingSection({
     <section className="py-10 sm:py-12 bg-[#F8F9FA] text-zinc-900 border-b border-zinc-200 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+          <div>
             <h2 className="text-xs font-extrabold uppercase tracking-[0.2em] text-zinc-900">
               {t.badge}
             </h2>

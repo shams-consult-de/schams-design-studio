@@ -113,43 +113,6 @@
     }
 
     /* =========================================================
-       SIGNATURE ARCHITECTURAL RED CIRCLE ACCENTS (ISOLATED & NON-CONFLICTING)
-       ========================================================= */
-    .circle-standalone-slot {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 36mm;
-      height: 36mm;
-      flex-shrink: 0;
-    }
-    .circle-outer-ring {
-      position: absolute;
-      width: 36mm;
-      height: 36mm;
-      border-radius: 50%;
-      border: 2px solid rgba(220, 38, 38, 0.35);
-    }
-    .circle-inner-solid {
-      width: 25mm;
-      height: 25mm;
-      border-radius: 50%;
-      background: var(--brand-red);
-      box-shadow: 0 10px 24px rgba(220, 38, 38, 0.38);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 5.6pt;
-      font-weight: 800;
-      text-align: center;
-      line-height: 1.18;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    /* =========================================================
        HEADER & FOOTER (UNIFIED ACROSS SLIDES)
        ========================================================= */
     .slide-header {
@@ -248,13 +211,6 @@
       color: var(--brand-red);
       margin-bottom: 2mm;
     }
-    .eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--brand-red);
-      display: inline-block;
-    }
     .slide-title {
       font-size: 20pt;
       font-weight: 900;
@@ -288,10 +244,7 @@
       padding: 6mm 0 2mm 0;
     }
     .cover-hero-layout {
-      display: grid;
-      grid-template-columns: 1fr 38mm;
-      gap: 5mm;
-      align-items: center;
+      display: block;
     }
     .cover-hero-text {
       display: flex;
@@ -853,6 +806,14 @@
       color: #f87171;
       letter-spacing: 0.4px;
       margin-top: 1mm;
+      display: inline-block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
     .qr-container {
@@ -955,7 +916,6 @@
       <div class="cover-hero-layout">
         <div class="cover-hero-text">
           <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
             B2B & Industrie-Partnerschaft Hessen / Rhein-Main
           </div>
           <h1 class="cover-hero-title">
@@ -967,12 +927,6 @@
           </p>
         </div>
 
-        <div class="circle-standalone-slot" aria-hidden="true">
-          <div class="circle-outer-ring"></div>
-          <div class="circle-inner-solid">
-            SHAMS<br>×<br>FCN
-          </div>
-        </div>
       </div>
 
       <div class="cover-image-container">
@@ -1035,7 +989,6 @@
 
     <main class="page-body">
       <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
         Integrale Planung trifft serielle Fertigung
       </div>
       <h2 class="slide-title">
@@ -1130,7 +1083,6 @@
 
     <main class="page-body">
       <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
         Messbarer Mehrwert für Bauherren & Investoren
       </div>
       <h2 class="slide-title">
@@ -1211,7 +1163,6 @@
 
     <main class="page-body">
       <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
         Erfolgreich realisiert in Seeheim-Jugenheim
       </div>
       <h2 class="slide-title">
@@ -1305,7 +1256,6 @@
 
     <main class="page-body">
       <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
         Ihr Projekt mit System realisieren
       </div>
       <h2 class="slide-title">
@@ -1353,19 +1303,19 @@
                 <span>📍</span> Carl-von-Noorden-Platz 5, 60596 Frankfurt am Main
               </div>
               <div class="contact-line">
-                <span>✉️</span> <strong>office@shams-consult.de</strong>
+                <span>✉️</span> <strong><a href="mailto:office@shams-consult.de">office@shams-consult.de</a></strong>
               </div>
               <div class="contact-line">
-                <span>🌐</span> <strong>shams-consult.de</strong>
+                <span>🌐</span> <strong><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a></strong>
               </div>
-              <div class="hotline-highlight">
+              <a href="tel:+496974223777" class="hotline-highlight">
                 📞 +49 69 74 223 777
-              </div>
+              </a>
             </div>
 
-            <div class="qr-container">
+            <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" class="qr-container">
               <img src="../public/qr-shams.svg" alt="QR-Code Shams Consult">
-            </div>
+            </a>
           </div>
 
           <div class="cta-card-bottom">
@@ -1380,7 +1330,7 @@
         <strong>Shams Consult</strong> · Architektur & Stadtplanung · Kooperation mit <strong>F.C. Nüdling</strong> Fertigteiltechnik
       </div>
       <div class="footer-right">
-        <span>shams-consult.de</span>
+        <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a>
       </div>
     </footer>
   </div>

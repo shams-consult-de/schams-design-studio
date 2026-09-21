@@ -106,8 +106,7 @@ export function FeaturedProjectsSection({
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[10px] font-bold text-zinc-900 uppercase tracking-wider shadow-xs">
-                      <span className="text-[#DC2626]">●</span>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[10px] font-bold text-zinc-900 uppercase tracking-wider shadow-xs">
                       <span>{p.categoryLabel[language]}</span>
                     </span>
                   </div>

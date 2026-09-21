@@ -66,20 +66,6 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
 
   return (
     <section id="services" className="py-20 lg:py-28 bg-[#FFFFFF] text-zinc-900 border-b border-zinc-200 overflow-hidden relative">
-      {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Space */}
-      <div
-        className="absolute xl:right-8 2xl:right-20 top-28 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <div className="relative flex items-center justify-center animate-couch-settle">
-          {/* Concentric Outer Accent Ring */}
-          <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
-
-          {/* Solid Bold Crimson Architectural Circle */}
-          <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-        </div>
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
         {/* ================================================================= */}
         {/* PART 1: CORE SERVICES & DISCIPLINES                               */}
@@ -238,13 +224,12 @@ export function ServicesSection({ t, processT }: ServicesSectionProps) {
               <button
                 type="button"
                 onClick={() => { setActiveStage("all"); setSelectedStep(null); }}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                className={`inline-flex items-center px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
                   activeStage === "all"
                     ? "bg-white text-zinc-950 font-bold shadow-xs border border-zinc-200/80"
                     : "text-zinc-600 hover:text-zinc-950"
                 }`}
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626]" />
                 <span>Alle 9 Phasen</span>
               </button>
 

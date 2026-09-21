@@ -316,20 +316,25 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
           color: #ffffff;
           font-weight: 700;
         }
+        .flyer-din-lang a { color: inherit; text-decoration: none; }
+        .flyer-din-lang a:hover { text-decoration: underline; }
         .flyer-din-lang .direct-phone {
           font-size: 8pt;
           font-weight: 800;
           color: #ff6b6b;
           letter-spacing: 0.2px;
           margin-top: 0.5mm;
+          display: block;
         }
         .flyer-din-lang .tz-footer {
           font-size: 6.2pt;
           color: #9299a5;
           text-align: center;
           border-top: 1px solid rgba(255,255,255,0.1);
-          padding-top: 1.8mm;
+          padding-top: 1.2mm;
         }
+        .flyer-din-lang .tz-footer a { color: #d1d5db; font-weight: 600; }
+        .flyer-din-lang .tz-footer a:hover { color: #ffffff; }
 
         @media print {
           @page {
@@ -468,7 +473,7 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
             <div className="thumb-zone-card">
               <div className="tz-header">
                 <h4>Ihr persönlicher Architekt</h4>
-                <span style={{ fontSize: "6.5pt", color: "#ff6b6b", fontWeight: 700 }}>● Vor Ort in Fulda</span>
+                <span style={{ fontSize: "6.5pt", color: "#ff6b6b", fontWeight: 700 }}>Vor Ort in Fulda</span>
               </div>
               <div className="tz-content">
                 <div className="founder-avatar" style={{ width: "17mm", height: "21mm", borderRadius: "1.5mm", overflow: "hidden", flexShrink: 0, border: "1px solid rgba(255,255,255,0.25)" }}>
@@ -477,16 +482,16 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
                 <div className="contact-details" style={{ flex: 1 }}>
                   <div className="contact-item"><strong>Majeed Shams</strong> M.Eng.</div>
                   <div className="contact-item" style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · AKH 21886</div>
-                  <div className="direct-phone">{CONTACT.phoneFrankfurt}</div>
+                  <a href={CONTACT.primaryPhoneHref} className="direct-phone" title="Telefon">{CONTACT.phoneFrankfurt}</a>
                   <div className="contact-item" style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div className="contact-item">{CONTACT.email}</div>
+                  <div className="contact-item"><a href={`mailto:${CONTACT.email}`} title="E-Mail">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR Code Shams Consult" />
-                </div>
+                </a>
               </div>
               <div className="tz-footer">
-                QR-Code scannen für Projektportfolio & Terminvereinbarung · shams-consult.de
+                QR-Code scannen für Projektportfolio & Terminvereinbarung · <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a>
               </div>
             </div>
           </div>
@@ -597,7 +602,7 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
             <div className="thumb-zone-card">
               <div className="tz-header">
                 <h4>Your Lead Architect</h4>
-                <span style={{ fontSize: "6.5pt", color: "#ff6b6b", fontWeight: 700 }}>● Available in Fulda</span>
+                <span style={{ fontSize: "6.5pt", color: "#ff6b6b", fontWeight: 700 }}>Available in Fulda</span>
               </div>
               <div className="tz-content">
                 <div className="founder-avatar" style={{ width: "17mm", height: "21mm", borderRadius: "1.5mm", overflow: "hidden", flexShrink: 0, border: "1px solid rgba(255,255,255,0.25)" }}>
@@ -606,16 +611,16 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
                 <div className="contact-details" style={{ flex: 1 }}>
                   <div className="contact-item"><strong>Majeed Shams</strong> M.Eng.</div>
                   <div className="contact-item" style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · Hesse Chamber</div>
-                  <div className="direct-phone">+49 69 74 223 777</div>
+                  <a href={CONTACT.primaryPhoneHref} className="direct-phone" title="Phone">+49 69 74 223 777</a>
                   <div className="contact-item" style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div className="contact-item">{CONTACT.email}</div>
+                  <div className="contact-item"><a href={`mailto:${CONTACT.email}`} title="Email">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR Code Shams Consult" />
-                </div>
+                </a>
               </div>
               <div className="tz-footer">
-                Scan QR code for digital portfolio & direct meeting booking · shams-consult.de
+                Scan QR code for digital portfolio & direct meeting booking · <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a>
               </div>
             </div>
           </div>

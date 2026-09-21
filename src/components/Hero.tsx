@@ -19,28 +19,13 @@ export function Hero({
       {/* Architectural Line Art & Skyline Background */}
       <ArchitecturalHeroBackground />
 
-      {/* Bold Architectural Crimson Circle Accent - Positioned at Right Section Edge */}
-      <div
-        className="absolute xl:right-12 2xl:right-24 top-1/3 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <div className="relative flex items-center justify-center animate-couch-settle">
-          {/* Concentric Outer Accent Ring */}
-          <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
-
-          {/* Solid Bold Crimson Architectural Circle */}
-          <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-        </div>
-      </div>
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Column (7 cols): Main Value Proposition & Complete Philosophy */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-left">
             {/* Main Headline: Unified semantic H1 including targeted service triad & philosophy statement */}
             <h1 className="space-y-2.5">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#DC2626]">
-                <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+              <span className="inline-block text-xs font-bold uppercase tracking-[0.18em] text-[#DC2626]">
                 {t.eyebrow}
               </span>
               <span className="block font-sans text-2xl sm:text-4xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 uppercase leading-[1.15]">

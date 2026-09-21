@@ -251,11 +251,14 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         }
 
         .flyer-casestudy .tz-contacts { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
-        .flyer-casestudy .tz-contacts strong { color: #fff; }
-        .flyer-casestudy .tz-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; }
-        .flyer-casestudy .qr-frame { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; }
+        .flyer-casestudy a { color: inherit; text-decoration: none; }
+        .flyer-casestudy a:hover { text-decoration: underline; }
+        .flyer-casestudy .tz-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: block; }
+        .flyer-casestudy .qr-frame { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; display: block; }
         .flyer-casestudy .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
         .flyer-casestudy .tz-box-foot { font-size: 5.8pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1mm; }
+        .flyer-casestudy .tz-box-foot a { color: #d1d5db; font-weight: 600; }
+        .flyer-casestudy .tz-box-foot a:hover { color: #ffffff; }
 
         @media print {
           @page { size: 297mm 210mm; margin: 0; }
@@ -394,15 +397,15 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
                 <div className="tz-contacts" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · AKH 21886</div>
-                  <div className="tz-phone">{CONTACT.phoneFrankfurt}</div>
+                  <a href={CONTACT.primaryPhoneHref} className="tz-phone" title="Telefon">{CONTACT.phoneFrankfurt}</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="E-Mail">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR Code" />
-                </div>
+                </a>
               </div>
-              <div className="tz-box-foot">shams-consult.de · QR-Code scannen für Direktkontakt & Portfolio</div>
+              <div className="tz-box-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · QR-Code scannen für Direktkontakt & Portfolio</div>
             </div>
           </div>
         </div>
@@ -535,15 +538,15 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
                 <div className="tz-contacts" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · Hesse Chamber</div>
-                  <div className="tz-phone">+49 69 74 223 777</div>
+                  <a href={CONTACT.primaryPhoneHref} className="tz-phone" title="Phone">+49 69 74 223 777</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="Email">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR Code" />
-                </div>
+                </a>
               </div>
-              <div className="tz-box-foot">Scan QR code to connect & view portfolio · shams-consult.de</div>
+              <div className="tz-box-foot">Scan QR code to connect & view portfolio · <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a></div>
             </div>
           </div>
         </div>

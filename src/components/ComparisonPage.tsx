@@ -76,25 +76,11 @@ export function ComparisonPage({
           aria-hidden="true"
         />
 
-        {/* Bold Architectural Crimson Circle Accent in Far-Right Margin */}
-        <div
-          className="absolute xl:right-8 2xl:right-20 top-12 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-          aria-hidden="true"
-        >
-          <div className="relative flex items-center justify-center animate-couch-settle">
-            {/* Concentric Outer Accent Ring */}
-            <div className="absolute w-[240px] h-[240px] lg:w-[280px] lg:h-[280px] rounded-full border-2 border-[#DC2626]/30" />
-
-            {/* Solid Bold Crimson Architectural Circle */}
-            <div className="w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-          </div>
-        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl space-y-5 text-left">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#DC2626] bg-red-50 border border-red-200/60 px-3 py-1 rounded-full">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+            <div className="inline-block text-xs font-bold uppercase tracking-[0.18em] text-[#DC2626] bg-red-50 border border-red-200/60 px-3 py-1 rounded-full">
               <span>{activeTopic.badge[language] ?? activeTopic.badge.de}</span>
             </div>
 
@@ -197,8 +183,7 @@ export function ComparisonPage({
               <div className="col-span-4">
                 {isDe ? "Kriterium & Fragestellung" : "Criterion & Context"}
               </div>
-              <div className="col-span-4 text-[#DC2626] flex items-center gap-2 font-extrabold">
-                <span className="w-2 h-2 rounded-full bg-[#DC2626]" />
+              <div className="col-span-4 text-[#DC2626] flex items-center font-extrabold">
                 <span>{activeTopic.shamsLabel[language] ?? activeTopic.shamsLabel.de}</span>
               </div>
               <div className="col-span-4 text-zinc-600">
@@ -300,22 +285,8 @@ export function ComparisonPage({
 
       {/* 7. Bottom Conversion Banner */}
       <section className="py-16 bg-[#0e0f11] text-white relative overflow-hidden">
-        <div
-          className="absolute xl:left-8 2xl:left-20 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-          aria-hidden="true"
-        >
-          <div className="relative flex items-center justify-center animate-couch-settle">
-            {/* Concentric Outer Accent Ring */}
-            <div className="absolute w-[210px] h-[210px] lg:w-[240px] lg:h-[240px] rounded-full border-2 border-[#DC2626]/30" />
-
-            {/* Solid Bold Crimson Architectural Circle */}
-            <div className="w-[150px] h-[150px] lg:w-[170px] lg:h-[170px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-          </div>
-        </div>
-
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/60 text-red-400 text-xs font-bold uppercase tracking-wider border border-red-500/30">
-            <span className="h-1.5 w-1.5 rounded-full bg-red-400 animate-pulse" />
+          <span className="inline-block px-3 py-1 rounded-full bg-red-950/60 text-red-400 text-xs font-bold uppercase tracking-wider border border-red-500/30">
             {isDe ? "Persönliche Beratung" : "Personal Consultation"}
           </span>
 

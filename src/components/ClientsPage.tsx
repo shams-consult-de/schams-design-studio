@@ -37,8 +37,7 @@ export function ClientsPage({
 
         {/* Header Block with Minimal Text */}
         <div className="space-y-3 max-w-3xl">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+          <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {t.badge}
             </span>
@@ -143,8 +142,7 @@ export function ClientsPage({
         {/* On-Site Presence & Hands-On Client Partnership Spotlight */}
         <section className="p-8 sm:p-10 rounded-2xl bg-zinc-50 border border-zinc-200/90 space-y-8">
           <div className="space-y-2 max-w-3xl">
-            <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+            <div className="inline-block">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#DC2626]">
                 {t.siteVisitsBadge}
               </span>

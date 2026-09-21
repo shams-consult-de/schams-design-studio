@@ -166,8 +166,7 @@ export function B2BPartnersPage({
 
         {/* Hero Section */}
         <header className="space-y-6">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#DC2626]" />
+          <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {isDe ? "B2B-PROJEKTENTWICKLUNG & INVESTOREN" : "B2B PROJECT DEVELOPMENT & INVESTORS"}
             </span>
@@ -289,8 +288,7 @@ export function B2BPartnersPage({
         {/* Section 2: FCN Kundentag & Baustoff-Partnerschaften (Flyer 2 Knowledge) */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-zinc-200 rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-zinc-50 to-white">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+            <div className="inline-block">
               <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
                 {isDe ? "INDUSTRIE- & BAUSTOFF-PARTNERSCHAFTEN" : "INDUSTRY & MATERIAL PARTNERSHIPS"}
               </span>
@@ -468,8 +466,7 @@ export function B2BPartnersPage({
         {/* Section 6: Direct Consultation Call-to-Action */}
         <section className="rounded-3xl bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 text-white p-8 sm:p-12 space-y-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8 shadow-2xl">
           <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+            <div className="inline-block">
               <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
                 {isDe ? "UNVERBINDLICHES ERSTGESPRÄCH" : "INITIAL FEASIBILITY DIALOGUE"}
               </span>

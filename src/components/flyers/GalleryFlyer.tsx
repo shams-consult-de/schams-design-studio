@@ -184,14 +184,10 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
           margin-bottom: 2.5mm;
         }
         .flyer-gallery .f-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 2mm;
           font-size: 6.8pt;
           line-height: 1.35;
           color: #374151;
         }
-        .flyer-gallery .f-dot { width: 3mm; height: 3mm; border-radius: 50%; background: var(--brand-red); margin-top: 0.8mm; flex-shrink: 0; }
 
         /* HUMANIZED CTA THUMB ZONE */
         .flyer-gallery .tz-card {
@@ -223,12 +219,16 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
           display: block;
         }
 
-        .flyer-gallery .qr-box { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; }
-        .flyer-gallery .qr-box img { width: 100%; height: 100%; object-fit: contain; }
         .flyer-gallery .tz-info { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
         .flyer-gallery .tz-info strong { color: #fff; }
-        .flyer-gallery .tz-tel { font-size: 8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; }
+        .flyer-gallery a { color: inherit; text-decoration: none; }
+        .flyer-gallery a:hover { text-decoration: underline; }
+        .flyer-gallery .tz-tel { font-size: 8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: block; }
+        .flyer-gallery .qr-box { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; display: block; }
+        .flyer-gallery .qr-box img { width: 100%; height: 100%; object-fit: contain; }
         .flyer-gallery .tz-foot { font-size: 5.8pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1mm; }
+        .flyer-gallery .tz-foot a { color: #d1d5db; font-weight: 600; }
+        .flyer-gallery .tz-foot a:hover { color: #ffffff; }
 
         @media print {
           @page { size: 297mm 210mm; margin: 0; }
@@ -317,15 +317,12 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
 
               <div className="feature-list">
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>Entwurf & Genehmigung:</strong> Bauanträge & Bebauungsplanprüfung mit Fachkompetenz.</div>
                 </div>
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>FCN-Elementabstimmung:</strong> Statik- & Werkplanung passgenau für die Vorfertigung.</div>
                 </div>
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>Bauleitung LPH 8:</strong> Präsenz auf der Baustelle für Qualität und Termintreue.</div>
                 </div>
               </div>
@@ -343,15 +340,15 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
                 <div className="tz-info" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · AKH 21886</div>
-                  <div className="tz-tel">{CONTACT.phoneFrankfurt}</div>
+                  <a href={CONTACT.primaryPhoneHref} className="tz-tel" title="Telefon">{CONTACT.phoneFrankfurt}</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="E-Mail">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-box">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-box" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR-Code" />
-                </div>
+                </a>
               </div>
-              <div className="tz-foot">shams-consult.de · Jetzt QR-Code scannen</div>
+              <div className="tz-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Jetzt QR-Code scannen</div>
             </div>
           </div>
         </div>
@@ -434,15 +431,12 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
 
               <div className="feature-list">
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>Design & Permitting:</strong> Full German zoning compliance and zoning approvals.</div>
                 </div>
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>FCN Precast Coordination:</strong> Factory-tailored structural and module engineering.</div>
                 </div>
                 <div className="f-item">
-                  <span className="f-dot"></span>
                   <div><strong>Site Supervision HOAI 8:</strong> On-site leadership safeguarding schedule and budget.</div>
                 </div>
               </div>
@@ -460,15 +454,15 @@ export function GalleryFlyer({ language = "all", className = "" }: FlyerProps) {
                 <div className="tz-info" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · Hesse Chamber</div>
-                  <div className="tz-tel">+49 69 74 223 777</div>
+                  <a href={CONTACT.primaryPhoneHref} className="tz-tel" title="Phone">+49 69 74 223 777</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="Email">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-box">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-box" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR-Code" />
-                </div>
+                </a>
               </div>
-              <div className="tz-foot">shams-consult.de · Scan QR Code to connect</div>
+              <div className="tz-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Scan QR Code to connect</div>
             </div>
           </div>
         </div>

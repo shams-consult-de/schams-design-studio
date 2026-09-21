@@ -15,20 +15,6 @@ export function FounderPage({
 
   return (
     <article className="min-h-screen bg-[#FFFFFF] text-zinc-900 pt-28 pb-20 relative overflow-hidden">
-      {/* Bold Architectural Crimson Circle Accent in Far-Right Negative Margin */}
-      <div
-        className="absolute -right-12 xl:right-8 2xl:right-24 top-40 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <div className="relative flex items-center justify-center animate-couch-settle">
-          {/* Concentric Outer Accent Ring */}
-          <div className="absolute w-[210px] h-[210px] rounded-full border-2 border-[#DC2626]/30" />
-
-          {/* Solid Bold Crimson Architectural Circle */}
-          <div className="w-[150px] h-[150px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/40" />
-        </div>
-      </div>
-
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Top Back Navigation */}
         <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
@@ -58,8 +44,7 @@ export function FounderPage({
 
         {/* Header Block */}
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DC2626]" />
+          <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
               {isDe ? "DIE GESCHICHTE DES GRÜNDERS" : "THE FOUNDER'S STORY"}
             </span>

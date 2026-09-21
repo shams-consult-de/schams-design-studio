@@ -26,20 +26,6 @@ export function TeamSection({ t, onNavigateAbout }: TeamSectionProps) {
 
   return (
     <section className="py-7 lg:py-9 bg-[#F8F9FA] text-zinc-900 border-b border-zinc-200 relative overflow-hidden">
-      {/* Bold Architectural Crimson Circle Accent in Far-Left Negative Margin */}
-      <div
-        className="absolute xl:-left-12 2xl:left-6 top-1/2 -translate-y-1/2 pointer-events-none select-none z-0 hidden xl:flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <div className="relative flex items-center justify-center animate-couch-settle">
-          {/* Concentric Outer Accent Ring */}
-          <div className="absolute w-[210px] h-[210px] lg:w-[240px] lg:h-[240px] rounded-full border-2 border-[#DC2626]/30" />
-
-          {/* Solid Bold Crimson Architectural Circle */}
-          <div className="w-[150px] h-[150px] lg:w-[170px] lg:h-[170px] rounded-full bg-[#DC2626] shadow-2xl shadow-red-600/35" />
-        </div>
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="p-5 sm:p-7 rounded-2xl bg-white border border-zinc-200/90 hover:border-zinc-300 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 group">
           
@@ -72,9 +58,8 @@ export function TeamSection({ t, onNavigateAbout }: TeamSectionProps) {
 
             {/* Description & Core Details */}
             <div className="space-y-1 text-left max-w-2xl">
-              <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 tracking-tight flex items-center gap-2">
-                <span>{t.title}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-[#DC2626] animate-pulse" />
+              <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 tracking-tight">
+                {t.title}
               </h3>
 
               <p className="text-xs text-zinc-600 font-light leading-relaxed">

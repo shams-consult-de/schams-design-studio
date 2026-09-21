@@ -262,8 +262,12 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         .flyer-b2b .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
         .flyer-b2b .cta-txt { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
         .flyer-b2b .cta-txt strong { color: #fff; }
-        .flyer-b2b .cta-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; }
+        .flyer-b2b a { color: inherit; text-decoration: none; }
+        .flyer-b2b a:hover { text-decoration: underline; }
+        .flyer-b2b .cta-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: block; }
         .flyer-b2b .b2b-cta-foot { font-size: 5.6pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.8mm; }
+        .flyer-b2b .b2b-cta-foot a { color: #d1d5db; font-weight: 600; }
+        .flyer-b2b .b2b-cta-foot a:hover { color: #ffffff; }
 
         @media print {
           @page { size: 297mm 210mm; margin: 0; }
@@ -388,15 +392,15 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
                 <div className="cta-txt" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · AKH 21886</div>
-                  <div className="cta-phone">{CONTACT.phoneFrankfurt}</div>
+                  <a href={CONTACT.primaryPhoneHref} className="cta-phone" title="Telefon">{CONTACT.phoneFrankfurt}</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="E-Mail">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR-Code" />
-                </div>
+                </a>
               </div>
-              <div className="b2b-cta-foot">shams-consult.de · Jetzt QR-Code scannen für Direktkontakt</div>
+              <div className="b2b-cta-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Jetzt QR-Code scannen für Direktkontakt</div>
             </div>
           </div>
         </div>
@@ -515,15 +519,15 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
                 <div className="cta-txt" style={{ flex: 1 }}>
                   <div><strong>Majeed Shams</strong> M.Eng.</div>
                   <div style={{ fontSize: "5.8pt", color: "#9ca3af" }}>Frankfurt am Main · Hesse Chamber</div>
-                  <div className="cta-phone">+49 69 74 223 777</div>
+                  <a href={CONTACT.primaryPhoneHref} className="cta-phone" title="Phone">+49 69 74 223 777</a>
                   <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.primaryAddress.street}</div>
-                  <div style={{ fontSize: "5.6pt", color: "#d1d5db" }}>{CONTACT.email}</div>
+                  <div><a href={`mailto:${CONTACT.email}`} style={{ fontSize: "5.6pt", color: "#d1d5db" }} title="Email">{CONTACT.email}</a></div>
                 </div>
-                <div className="qr-frame">
+                <a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer" className="qr-frame" title="Website shams-consult.de">
                   <img src="/qr-shams.svg" alt="QR-Code" />
-                </div>
+                </a>
               </div>
-              <div className="b2b-cta-foot">shams-consult.de · Scan QR code for direct developer contact</div>
+              <div className="b2b-cta-foot"><a href="https://shams-consult.de" target="_blank" rel="noopener noreferrer">shams-consult.de</a> · Scan QR code for direct developer contact</div>
             </div>
           </div>
         </div>

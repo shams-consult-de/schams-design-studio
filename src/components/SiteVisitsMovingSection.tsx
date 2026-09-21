@@ -26,8 +26,7 @@ export function SiteVisitsMovingSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
+            <div className="inline-block">
               <h2 className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
                 {t.badge}
               </h2>

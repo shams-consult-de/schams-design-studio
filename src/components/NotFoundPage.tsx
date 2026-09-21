@@ -22,8 +22,7 @@ export function NotFoundPage({
     <article className="min-h-[80vh] flex items-center justify-center bg-white text-zinc-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl w-full text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200">
-          <span className="h-2 w-2 rounded-full bg-[#DC2626] animate-pulse" />
+        <div className="inline-block px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#DC2626]">
             {t.badge}
           </span>
