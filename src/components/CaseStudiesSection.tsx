@@ -166,70 +166,79 @@ export function CaseStudiesSection({
               animationPlayState: isPlaying ? "running" : "paused",
             }}
           >
-            {loopedCaseStudies.map((cs, idx) => (
-              <article
-                key={`${cs.id}-${idx}`}
-                onClick={() => onSelectCaseStudy(cs)}
-                className="w-[310px] sm:w-[370px] lg:w-[410px] shrink-0 bg-white rounded-2xl border border-zinc-200/90 hover:border-[#DC2626] p-6 sm:p-7 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-4 group cursor-pointer card-lift select-none"
-              >
-                <div className="space-y-3.5">
-                  {/* 5-Star Rating & Reviewer Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="h-9 w-9 rounded-full bg-zinc-900 text-white font-bold text-xs flex items-center justify-center border border-zinc-700 shadow-xs shrink-0">
-                        {cs.reviewerName.charAt(0)}
+            {loopedCaseStudies.map((cs, idx) => {
+              const caseStudyUrl = language === "en" ? `/en/case-study/${cs.id}` : `/case-study/${cs.id}`;
+              return (
+                <a
+                  key={`${cs.id}-${idx}`}
+                  href={caseStudyUrl}
+                  onClick={(e) => {
+                    if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                      e.preventDefault();
+                      onSelectCaseStudy(cs);
+                    }
+                  }}
+                  className="w-[310px] sm:w-[370px] lg:w-[410px] shrink-0 bg-white rounded-2xl border border-zinc-200/90 hover:border-[#DC2626] p-6 sm:p-7 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-4 group cursor-pointer card-lift select-none block text-left no-underline"
+                >
+                  <div className="space-y-3.5">
+                    {/* 5-Star Rating & Reviewer Header */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="h-9 w-9 rounded-full bg-zinc-900 text-white font-bold text-xs flex items-center justify-center border border-zinc-700 shadow-xs shrink-0">
+                          {cs.reviewerName.charAt(0)}
+                        </div>
+                        <div className="min-w-0">
+                          <strong className="text-xs font-bold text-zinc-950 block leading-tight truncate">
+                            {cs.reviewerName}
+                          </strong>
+                          <span className="text-[10px] text-zinc-500 font-mono">
+                            {cs.reviewerBadge || (isDe ? "Verifizierte Google-Bewertung" : "Google Verified Review")}
+                          </span>
+                        </div>
                       </div>
-                      <div className="min-w-0">
-                        <strong className="text-xs font-bold text-zinc-950 block leading-tight truncate">
-                          {cs.reviewerName}
-                        </strong>
-                        <span className="text-[10px] text-zinc-500 font-mono">
-                          {cs.reviewerBadge || (isDe ? "Verifizierte Google-Bewertung" : "Google Verified Review")}
-                        </span>
-                      </div>
+
+                      <span className="text-sm text-amber-500 tracking-wider font-bold shrink-0">
+                        ★★★★★
+                      </span>
                     </div>
 
-                    <span className="text-sm text-amber-500 tracking-wider font-bold shrink-0">
-                      ★★★★★
+                    {/* Case Study Title */}
+                    <h3 className="font-sans text-sm sm:text-base font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors leading-snug line-clamp-2">
+                      {cs.projectTitle[language]}
+                    </h3>
+
+                    {/* Original Google Review Excerpt */}
+                    <p className="text-xs text-zinc-600 font-light leading-relaxed line-clamp-4 italic border-l-2 border-zinc-200 pl-3">
+                      „{cs.reviewText}“
+                    </p>
+
+                    {/* Badges */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {cs.badges[language].slice(0, 2).map((badge, bIdx) => (
+                        <span
+                          key={bIdx}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-zinc-50 border border-zinc-200 text-[10px] font-semibold text-zinc-700"
+                        >
+                          <span className="text-[#DC2626]">✓</span>
+                          <span className="line-clamp-1">{badge}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Bottom Action Link */}
+                  <div className="pt-3 border-t border-zinc-100 flex items-center justify-between">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-zinc-500 line-clamp-1">
+                      {cs.location ? cs.location[language] : (isDe ? "Hessen / Deutschland" : "Hesse / Germany")}
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 shrink-0">
+                      <span>{isDe ? "Fallstudie lesen" : "Read Case Study"}</span>
+                      <span>→</span>
                     </span>
                   </div>
-
-                  {/* Case Study Title */}
-                  <h3 className="font-sans text-sm sm:text-base font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors leading-snug line-clamp-2">
-                    {cs.projectTitle[language]}
-                  </h3>
-
-                  {/* Original Google Review Excerpt */}
-                  <p className="text-xs text-zinc-600 font-light leading-relaxed line-clamp-4 italic border-l-2 border-zinc-200 pl-3">
-                    „{cs.reviewText}“
-                  </p>
-
-                  {/* Badges */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {cs.badges[language].slice(0, 2).map((badge, bIdx) => (
-                      <span
-                        key={bIdx}
-                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-zinc-50 border border-zinc-200 text-[10px] font-semibold text-zinc-700"
-                      >
-                        <span className="text-[#DC2626]">✓</span>
-                        <span className="line-clamp-1">{badge}</span>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Bottom Action Link */}
-                <div className="pt-3 border-t border-zinc-100 flex items-center justify-between">
-                  <span className="text-[10px] sm:text-[11px] font-semibold text-zinc-500 line-clamp-1">
-                    {cs.location ? cs.location[language] : (isDe ? "Hessen / Deutschland" : "Hesse / Germany")}
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 shrink-0">
-                    <span>{isDe ? "Fallstudie lesen" : "Read Case Study"}</span>
-                    <span>→</span>
-                  </span>
-                </div>
-              </article>
-            ))}
+                </a>
+              );
+            })}
           </div>
         </div>
 

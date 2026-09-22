@@ -69,9 +69,22 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/+(?:licht-als-entwurfspartner.*) [NC]
   RewriteRule ^ https://shams-consult.de/blog/licht-als-entwurfspartner [R=301,L]
 
-  # QNG / Qualitätssiegel Nachhaltiges Gebäude
-  RewriteCond %{REQUEST_URI} ^/+(?:qualit.*tssiegel-nachhaltiges-geb.*ude.*) [NC]
+  # Blog: Proportion, Rhythmus, Maßstab
+  RewriteCond %{REQUEST_URI} ^/+(?:proportion-rhythmus-ma.*stab.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/proportion-rhythmus-massstab [R=301,L]
+
+  # Blog: Was wir unter guter Gestaltung verstehen
+  RewriteCond %{REQUEST_URI} ^/+(?:was-wir-unter-guter-gestaltung.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/was-wir-unter-guter-gestaltung-verstehen [R=301,L]
+
+  # QNG / Qualitätssiegel Nachhaltiges Gebäude / Bauen
+  RewriteCond %{REQUEST_URI} ^/+(?:qualit.*tssiegel.*nachhaltiges.*) [NC]
   RewriteRule ^ https://shams-consult.de/project/qs-nachhaltiges-gebaeude-goetzenhain [R=301,L]
+
+  # Legacy app download files -> /contact
+  RewriteCond %{REQUEST_URI} ^/+(?:app/download/.*) [NC]
+  RewriteRule ^ https://shams-consult.de/contact [R=301,L]
+
 
   # Services: Digitalisierungsberatung
   RewriteCond %{REQUEST_URI} ^/+(?:digitalisierungsberatung.*) [NC]

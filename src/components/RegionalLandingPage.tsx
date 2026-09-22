@@ -302,14 +302,22 @@ export function RegionalLandingPage({
               {data.districts.map((district) => {
                 const isSelected = activeDistrict?.id === district.id;
                 const dName = district.name[language] ?? district.name.de;
+                const districtUrl = district.path
+                  ? (language === "en" ? `/en${district.path}` : district.path)
+                  : "#";
                 return (
-                  <button
+                  <a
                     key={district.id}
+                    href={districtUrl}
                     role="tab"
                     aria-selected={isSelected}
-                    type="button"
-                    onClick={() => setSelectedDistrictId(district.id)}
-                    className={`shrink-0 px-4 py-2.5 rounded-full text-xs font-bold transition-all min-h-[44px] cursor-pointer flex items-center gap-2 border ${
+                    onClick={(e) => {
+                      if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                        e.preventDefault();
+                        setSelectedDistrictId(district.id);
+                      }
+                    }}
+                    className={`shrink-0 px-4 py-2.5 rounded-full text-xs font-bold transition-all min-h-[44px] cursor-pointer inline-flex items-center gap-2 border no-underline ${
                       isSelected
                         ? "bg-zinc-950 text-white border-zinc-950 shadow-sm"
                         : "bg-white text-zinc-700 border-zinc-200 hover:bg-zinc-100 hover:text-zinc-950"
@@ -321,7 +329,7 @@ export function RegionalLandingPage({
                       }`}
                     />
                     <span>{dName}</span>
-                  </button>
+                  </a>
                 );
               })}
             </div>

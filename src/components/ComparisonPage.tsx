@@ -124,19 +124,25 @@ export function ComparisonPage({
             </span>
             {comparisonTopics.map((topic) => {
               const isActive = topic.id === activeTopic.id;
+              const topicUrl = language === "en" ? `/en/vergleich/${topic.slug}` : `/vergleich/${topic.slug}`;
               return (
-                <button
+                <a
                   key={topic.id}
-                  type="button"
-                  onClick={() => handleSelectTopic(topic)}
-                  className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  href={topicUrl}
+                  onClick={(e) => {
+                    if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                      e.preventDefault();
+                      handleSelectTopic(topic);
+                    }
+                  }}
+                  className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer inline-block no-underline ${
                     isActive
                       ? "bg-zinc-950 text-white shadow-sm ring-1 ring-zinc-950"
                       : "bg-zinc-100 hover:bg-zinc-200 text-zinc-700"
                   }`}
                 >
                   {topic.badge[language] ?? topic.badge.de}
-                </button>
+                </a>
               );
             })}
           </div>
