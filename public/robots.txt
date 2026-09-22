@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /founder-portal
+Disallow: /en/founder-portal
 
 # AI & LLM Search Crawlers (GEO Optimization)
 User-agent: GPTBot

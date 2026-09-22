@@ -26,6 +26,119 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://shams-consult.de/$1 [R=301,L]
 
+  # ----------------------------------------------------------------------------
+  # 2b. Legacy URLs 301 Redirects to Modern Canonical URLs (Single Hop UX)
+  # ----------------------------------------------------------------------------
+  # Blog: Tipps für die wirtschaftliche Umsetzung nachhaltiger Projekte
+  RewriteCond %{REQUEST_URI} ^/+(?:tipps.*wirtschaftliche.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/wirtschaftliche-umsetzung-nachhaltiger-projekte [R=301,L]
+
+  # Blog: Flächeneffizienz und soziale Nachhaltigkeit
+  RewriteCond %{REQUEST_URI} ^/+(?:fl.*cheneffizienz.*soziale.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/flaecheneffizienz-soziale-nachhaltigkeit [R=301,L]
+
+  # Blog: Nachhaltigkeit beginnt lange vor dem ersten Spatenstich
+  RewriteCond %{REQUEST_URI} ^/+(?:nachhaltigkeit-beginnt.*spatenstich.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/nachhaltigkeit-beginnt-vor-dem-spatenstich [R=301,L]
+
+  # Blog: Energieeffizienz in der Praxis – mehr als nur Dämmung
+  RewriteCond %{REQUEST_URI} ^/+(?:energieeffizienz-in-der-praxis.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/energieeffizienz-in-der-praxis [R=301,L]
+
+  # Blog: Materialien mit Verantwortung – Baustoffe der Zukunft
+  RewriteCond %{REQUEST_URI} ^/+(?:materialien-mit-verantwortung.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/materialien-mit-verantwortung [R=301,L]
+
+  # Blog: Reduktion in der Architektur – Klarheit, die wirkt
+  RewriteCond %{REQUEST_URI} ^/+(?:reduktion-in-der-architektur.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/reduktion-in-der-architektur [R=301,L]
+
+  # Blog: Wie Architektur Emotionen auslöst / Raum wirkt
+  RewriteCond %{REQUEST_URI} ^/+(?:wie-architektur-emotionen.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/raum-wirkt [R=301,L]
+
+  # Blog: Nachhaltig planen – der Schlüssel liegt im Entwurf
+  RewriteCond %{REQUEST_URI} ^/+(?:nachhaltig-planen.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/nachhaltig-planen [R=301,L]
+
+  # Blog: Material spricht, wenn man es lässt
+  RewriteCond %{REQUEST_URI} ^/+(?:material-spricht.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/material-spricht [R=301,L]
+
+  # Blog: Licht als Entwurfspartner
+  RewriteCond %{REQUEST_URI} ^/+(?:licht-als-entwurfspartner.*) [NC]
+  RewriteRule ^ https://shams-consult.de/blog/licht-als-entwurfspartner [R=301,L]
+
+  # QNG / Qualitätssiegel Nachhaltiges Gebäude
+  RewriteCond %{REQUEST_URI} ^/+(?:qualit.*tssiegel-nachhaltiges-geb.*ude.*) [NC]
+  RewriteRule ^ https://shams-consult.de/project/qs-nachhaltiges-gebaeude-goetzenhain [R=301,L]
+
+  # Services: Digitalisierungsberatung
+  RewriteCond %{REQUEST_URI} ^/+(?:digitalisierungsberatung.*) [NC]
+  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+
+  # Services: Stadtplanung & Städtebau (strictly matched to not interfere with /stadtplanung-hessen)
+  RewriteCond %{REQUEST_URI} ^/+(?:stadtplanung|stadtplanung-st[^\/]*tebau)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+
+  # Services: Vorhabenbezogene Bebauungspläne
+  RewriteCond %{REQUEST_URI} ^/+(?:vorhabenbezogene-bebauungspl.*) [NC]
+  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+
+  # Projects: Spital Günzburg
+  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-spital-guenzburg.*) [NC]
+  RewriteRule ^ https://shams-consult.de/project/vep-alten-und-pflegeheim-guenzburg [R=301,L]
+
+  # Projects: Töpfenmühle Gersfeld
+  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-toepfenmuehle-gersfeld.*) [NC]
+  RewriteRule ^ https://shams-consult.de/project/bebauungsplan-toepfenmuehle-gersfeld [R=301,L]
+
+  # Projects: Baufeld 5 Neu-Ulm
+  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-baufeld-5-neu-ulm.*) [NC]
+  RewriteRule ^ https://shams-consult.de/project/bebauungsplan-neu-ulm-baufeld-5-ost [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 2c. Primary German Aliases 301 Redirects to Canonical Routes (Single Hop)
+  # ----------------------------------------------------------------------------
+  # Contact: /kontakt -> /contact
+  RewriteCond %{REQUEST_URI} ^/+(?:kontakt)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/contact [R=301,L]
+
+  # Services: /leistungen -> /services
+  RewriteCond %{REQUEST_URI} ^/+(?:leistungen)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+
+  # Projects: /projekte -> /projects
+  RewriteCond %{REQUEST_URI} ^/+(?:projekte)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/projects [R=301,L]
+
+  # About aliases: /buero, /geschichte, /philosophie, /karriere, /kundenfeedback, /ueber-uns
+  RewriteCond %{REQUEST_URI} ^/+(?:buero|b[^\/]*ro|geschichte|philosophie|karriere|kundenfeedback|ueber-uns|[^\/]*ber-uns)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/about [R=301,L]
+
+  # Research: /forschung -> /research
+  RewriteCond %{REQUEST_URI} ^/+(?:forschung)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/research [R=301,L]
+
+  # Architecture generic alias -> /services (without impacting /architektur-frankfurt etc.)
+  RewriteCond %{REQUEST_URI} ^/+(?:architektur)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+
+  # Blog legacy categories & tags: /blog/design-und-ästhetik -> /blog
+  RewriteCond %{REQUEST_URI} ^/+(?:blog/design-und-[^\/]+)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/blog [R=301,L]
+
+  # Blog legacy slug: /blog/nachhaltiges-bauen -> /blog/was-bedeutet-nachhaltiges-bauen
+  RewriteCond %{REQUEST_URI} ^/+(?:blog/nachhaltiges-bauen)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/blog/was-bedeutet-nachhaltiges-bauen [R=301,L]
+
+  # Case studies plural alias -> /clients
+  RewriteCond %{REQUEST_URI} ^/+(?:case-studies)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/clients [R=301,L]
+
+
+
+
   # 3. Strip trailing slash for pages (except root "/") to match canonical URLs and avoid redirect loops
   RewriteCond %{REQUEST_URI} ^/(.+)/$
   RewriteRule ^/(.+)/$ /$1 [R=301,L]
