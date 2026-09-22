@@ -1,4 +1,5 @@
 import { Language } from "../lib/i18n";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 interface B2BPartnersPageProps {
   language: Language;
@@ -326,6 +327,27 @@ export function B2BPartnersPage({
               />
             </div>
           </div>
+        </section>
+
+        {/* Section 2.5: Interactive FCN Vorher-Nachher Transformation Showcase */}
+        <section className="space-y-6 pt-4">
+          <div className="space-y-2 max-w-3xl">
+            <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
+              {isDe ? "PRAXISBEWEIS IN BETON & AUSBAU" : "REAL-WORLD EVIDENCE IN PRECAST & FINISHES"}
+            </span>
+            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
+              {isDe
+                ? "FCN-Systembaustoffe in der Praxis: Der Vorher-Nachher-Vergleich"
+                : "FCN Systems in Action: Interactive Before-and-After Reveal"}
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+              {isDe
+                ? "Erleben Sie die direkte Transformation: Bewegen Sie den Schieberegler von links nach rechts, um den Übergang vom FCN Rohbau zur vollendeten Architektur sowie die anspruchsvolle Kernsanierung im Detail zu vergleichen."
+                : "Experience the real transformation: Move the slider from left to right to inspect the transition from FCN structural precast assembly to turnkey architectural completion."}
+            </p>
+          </div>
+
+          <BeforeAfterSlider language={language} />
         </section>
 
         {/* Section 3: HOAI Leistungsphasen 1–8 Bau-Story (Flyer 3 Knowledge) */}

@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTACT } from "../../lib/contact";
 import { FlyerProps } from "./types";
 
@@ -26,8 +25,8 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         }
 
         .flyer-din-lang .sheet {
-          width: 297mm;
-          height: 210mm;
+          width: 210mm;
+          height: 148mm;
           background: #ffffff;
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
           display: flex;
@@ -39,8 +38,8 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         }
 
         .flyer-din-lang .panel {
-          width: 99mm;
-          height: 210mm;
+          width: 70mm;
+          height: 148mm;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -53,72 +52,72 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
 
         .flyer-din-lang .fold-marker {
           position: absolute;
-          top: 4px;
-          right: 4px;
-          font-size: 8px;
+          top: 3px;
+          right: 3px;
+          font-size: 7px;
           text-transform: uppercase;
-          letter-spacing: 1px;
+          letter-spacing: 0.8px;
           color: #9aa0a6;
           pointer-events: none;
         }
 
         .flyer-din-lang .panel-header {
-          padding: 12mm 9mm 6mm 9mm;
+          padding: 4.5mm 5mm 2mm 5mm;
         }
         .flyer-din-lang .logo-img {
-          height: 18mm;
+          height: 10mm;
           width: auto;
           object-fit: contain;
           display: block;
-          margin-bottom: 3mm;
+          margin-bottom: 1.5mm;
         }
         .flyer-din-lang .sub-brand {
-          font-size: 8.5pt;
+          font-size: 5.5pt;
           font-weight: 700;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
           text-transform: uppercase;
           color: var(--brand-charcoal);
         }
         .flyer-din-lang .sub-brand-tag {
-          font-size: 6.8pt;
-          letter-spacing: 0.8px;
+          font-size: 4.8pt;
+          letter-spacing: 0.6px;
           color: var(--brand-text-muted);
-          margin-top: 1mm;
+          margin-top: 0.5mm;
         }
 
         .flyer-din-lang .cover-body {
-          padding: 0 9mm;
+          padding: 0 5mm;
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
         .flyer-din-lang .hero-title {
-          font-size: 19pt;
+          font-size: 11pt;
           font-weight: 800;
           line-height: 1.15;
-          letter-spacing: -0.5px;
+          letter-spacing: -0.3px;
           color: var(--brand-dark);
-          margin-top: 2mm;
+          margin-top: 1mm;
         }
         .flyer-din-lang .hero-title span {
           color: var(--brand-red);
         }
         .flyer-din-lang .hero-tagline {
-          font-size: 8.8pt;
-          line-height: 1.45;
+          font-size: 5.5pt;
+          line-height: 1.3;
           color: #3b4048;
-          margin-top: 3mm;
+          margin-top: 1.5mm;
           font-weight: 500;
         }
         .flyer-din-lang .hero-image-wrap {
           width: 100%;
-          height: 72mm;
-          margin-top: 4mm;
-          border-radius: 3mm;
+          height: 44mm;
+          margin-top: 2mm;
+          border-radius: 1.5mm;
           overflow: hidden;
           position: relative;
-          box-shadow: 0 4mm 10mm rgba(0,0,0,0.12);
+          box-shadow: 0 2mm 6mm rgba(0,0,0,0.12);
         }
         .flyer-din-lang .hero-image-wrap img {
           width: 100%;
@@ -128,56 +127,56 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         }
 
         .flyer-din-lang .cover-footer {
-          padding: 4mm 9mm 8mm 9mm;
+          padding: 2mm 5mm 3mm 5mm;
           border-top: 1px solid var(--brand-gray-border);
           background: var(--brand-gray-light);
         }
         .flyer-din-lang .founder-line {
-          font-size: 7.5pt;
+          font-size: 5.5pt;
           font-weight: 700;
           color: var(--brand-dark);
         }
         .flyer-din-lang .chamber-line {
-          font-size: 6.5pt;
+          font-size: 4.8pt;
           color: var(--brand-text-muted);
-          margin-top: 0.8mm;
+          margin-top: 0.4mm;
         }
 
         /* CENTER PANEL */
         .flyer-din-lang .panel-case-study {
           background: #fafbfc;
-          padding: 9mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
         .flyer-din-lang .section-eyebrow {
-          font-size: 7pt;
+          font-size: 5pt;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 1.2px;
+          letter-spacing: 1px;
           color: var(--brand-red);
         }
         .flyer-din-lang .section-heading {
-          font-size: 13pt;
+          font-size: 8.5pt;
           font-weight: 800;
           color: var(--brand-dark);
-          line-height: 1.25;
-          margin-top: 1mm;
+          line-height: 1.2;
+          margin-top: 0.6mm;
           letter-spacing: -0.2px;
         }
         .flyer-din-lang .comparison-grid {
           display: flex;
           flex-direction: column;
-          gap: 2.5mm;
-          margin: 3.5mm 0;
+          gap: 1.5mm;
+          margin: 2mm 0;
         }
         .flyer-din-lang .comp-item {
           position: relative;
-          border-radius: 2mm;
+          border-radius: 1.5mm;
           overflow: hidden;
-          height: 38mm;
-          box-shadow: 0 2mm 6mm rgba(0,0,0,0.08);
+          height: 25mm;
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-din-lang .comp-item img {
           width: 100%;
@@ -189,47 +188,47 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         .flyer-din-lang .usp-list {
           display: flex;
           flex-direction: column;
-          gap: 2mm;
-          margin-top: 1mm;
+          gap: 1.2mm;
+          margin-top: 0.8mm;
         }
         .flyer-din-lang .usp-box {
           display: flex;
           align-items: flex-start;
-          gap: 2.5mm;
+          gap: 1.5mm;
           background: #ffffff;
           border: 1px solid #eaedf1;
-          padding: 2mm 2.5mm;
-          border-radius: 2mm;
+          padding: 1.5mm 2mm;
+          border-radius: 1.2mm;
         }
         .flyer-din-lang .usp-num {
-          width: 4.5mm;
-          height: 4.5mm;
+          width: 3.2mm;
+          height: 3.2mm;
           border-radius: 50%;
           background: var(--brand-dark);
           color: #fff;
-          font-size: 6.5pt;
+          font-size: 4.8pt;
           font-weight: 700;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          margin-top: 0.3mm;
+          margin-top: 0.2mm;
         }
         .flyer-din-lang .usp-text h4 {
-          font-size: 7.5pt;
+          font-size: 5.8pt;
           font-weight: 700;
           color: var(--brand-dark);
         }
         .flyer-din-lang .usp-text p {
-          font-size: 6.5pt;
-          line-height: 1.35;
+          font-size: 4.8pt;
+          line-height: 1.2;
           color: var(--brand-text-muted);
-          margin-top: 0.4mm;
+          margin-top: 0.2mm;
         }
 
         /* RIGHT PANEL */
         .flyer-din-lang .panel-cta {
-          padding: 9mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -238,45 +237,45 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         .flyer-din-lang .services-stack {
           display: flex;
           flex-direction: column;
-          gap: 2.5mm;
-          margin: 3mm 0;
+          gap: 1.5mm;
+          margin: 2mm 0;
         }
         .flyer-din-lang .service-card {
-          border-left: 2.5px solid var(--brand-red);
-          padding-left: 2.5mm;
+          border-left: 2px solid var(--brand-red);
+          padding-left: 2mm;
         }
         .flyer-din-lang .service-card h5 {
-          font-size: 8pt;
+          font-size: 6pt;
           font-weight: 700;
           color: var(--brand-dark);
         }
         .flyer-din-lang .service-card p {
-          font-size: 6.6pt;
-          line-height: 1.35;
+          font-size: 4.8pt;
+          line-height: 1.2;
           color: var(--brand-text-muted);
-          margin-top: 0.5mm;
+          margin-top: 0.2mm;
         }
 
         /* THUMB ZONE CTA BOX */
         .flyer-din-lang .thumb-zone-card {
           background: var(--brand-dark);
           color: #ffffff;
-          border-radius: 3mm;
-          padding: 4mm;
+          border-radius: 2mm;
+          padding: 2mm 2.5mm;
           display: flex;
           flex-direction: column;
-          gap: 3mm;
-          box-shadow: 0 4mm 12mm rgba(22, 24, 27, 0.25);
+          gap: 1.5mm;
+          box-shadow: 0 2mm 6mm rgba(22, 24, 27, 0.25);
         }
         .flyer-din-lang .tz-header {
           display: flex;
           align-items: center;
           justify-content: space-between;
           border-bottom: 1px solid rgba(255,255,255,0.15);
-          padding-bottom: 2mm;
+          padding-bottom: 0.8mm;
         }
         .flyer-din-lang .tz-header h4 {
-          font-size: 8.5pt;
+          font-size: 6.2pt;
           font-weight: 700;
           color: #ffffff;
           letter-spacing: 0.2px;
@@ -284,14 +283,14 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         .flyer-din-lang .tz-content {
           display: flex;
           align-items: center;
-          gap: 3.5mm;
+          gap: 2mm;
         }
         .flyer-din-lang .qr-frame {
-          width: 20mm;
-          height: 20mm;
+          width: 12mm;
+          height: 12mm;
           background: #ffffff;
-          padding: 1.2mm;
-          border-radius: 1.5mm;
+          padding: 0.6mm;
+          border-radius: 1mm;
           flex-shrink: 0;
           display: flex;
           align-items: center;
@@ -305,11 +304,11 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         .flyer-din-lang .contact-details {
           display: flex;
           flex-direction: column;
-          gap: 1mm;
+          gap: 0.6mm;
         }
         .flyer-din-lang .contact-item {
-          font-size: 6.8pt;
-          line-height: 1.35;
+          font-size: 4.8pt;
+          line-height: 1.25;
           color: #c9ced6;
         }
         .flyer-din-lang .contact-item strong {
@@ -319,26 +318,26 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
         .flyer-din-lang a { color: inherit; text-decoration: none; }
         .flyer-din-lang a:hover { text-decoration: underline; }
         .flyer-din-lang .direct-phone {
-          font-size: 8pt;
+          font-size: 6.2pt;
           font-weight: 800;
           color: #ff6b6b;
           letter-spacing: 0.2px;
-          margin-top: 0.5mm;
+          margin-top: 0.3mm;
           display: block;
         }
         .flyer-din-lang .tz-footer {
-          font-size: 6.2pt;
+          font-size: 4.5pt;
           color: #9299a5;
           text-align: center;
           border-top: 1px solid rgba(255,255,255,0.1);
-          padding-top: 1.2mm;
+          padding-top: 0.6mm;
         }
         .flyer-din-lang .tz-footer a { color: #d1d5db; font-weight: 600; }
         .flyer-din-lang .tz-footer a:hover { color: #ffffff; }
 
         @media print {
           @page {
-            size: 297mm 210mm;
+            size: 210mm 148mm;
             margin: 0;
           }
           .flyer-din-lang {
@@ -414,10 +413,10 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
               
               <div className="comparison-grid">
                 <div className="comp-item">
-                  <img src="/images/b2b/2.png" alt="FCN Rohbau Seeheim-Jugenheim" />
+                  <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Rohbau Baustelle Mehrfamilienhaus" />
                 </div>
                 <div className="comp-item">
-                  <img src="/images/b2b/5.png" alt="Vollendete Doppelhaushälfte Seeheim-Jugenheim" />
+                  <img src="/images/before-after/fcn-exterior-after.jpg" alt="Vollendete Architektur Schlüsselfertig" />
                 </div>
               </div>
 
@@ -543,10 +542,10 @@ export function DinLangFlyer({ language = "all", className = "" }: FlyerProps) {
               
               <div className="comparison-grid">
                 <div className="comp-item">
-                  <img src="/images/b2b/4.png" alt="Precast Wall Assembly Seeheim-Jugenheim" />
+                  <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Precast Shell Assembly" />
                 </div>
                 <div className="comp-item">
-                  <img src="/images/b2b/1.png" alt="Completed Modern Turnkey Home" />
+                  <img src="/images/before-after/fcn-exterior-after.jpg" alt="Completed Modern Turnkey Home" />
                 </div>
               </div>
 

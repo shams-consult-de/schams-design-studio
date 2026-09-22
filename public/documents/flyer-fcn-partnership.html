@@ -95,13 +95,13 @@
     }
 
     /* =========================================================
-       A4 PORTRAIT SHEET (210mm x 297mm)
+       DIN A5 PORTRAIT SHEET (148mm x 210mm)
        ========================================================= */
     .sheet {
-      width: 210mm;
-      height: 297mm;
+      width: 148mm;
+      height: 210mm;
       background: #ffffff;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -109,7 +109,7 @@
       overflow: hidden;
       page-break-after: always;
       break-after: page;
-      padding: 14mm 16mm 12mm 16mm;
+      padding: 8mm 9mm 7mm 9mm;
     }
 
     /* =========================================================
@@ -121,47 +121,47 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 3.5mm;
+      padding-bottom: 2.2mm;
       border-bottom: 1px solid var(--brand-border);
     }
     .brand-duo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     .brand-logo-shams {
-      height: 9.5mm;
+      height: 7mm;
       width: auto;
       object-fit: contain;
     }
     .brand-separator {
-      font-size: 13pt;
+      font-size: 10pt;
       font-weight: 300;
       color: #94a3b8;
     }
     .brand-logo-fcn {
-      height: 7.5mm;
+      height: 5.5mm;
       width: auto;
       object-fit: contain;
     }
     .slide-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
     .meta-tag {
-      font-size: 6.8pt;
+      font-size: 5.5pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: var(--brand-muted);
     }
     .page-number-pill {
       background: var(--brand-dark);
       color: #ffffff;
-      font-size: 6.8pt;
+      font-size: 5.5pt;
       font-weight: 800;
-      padding: 2.5px 7px;
+      padding: 2px 5.5px;
       border-radius: 9999px;
       letter-spacing: 0.5px;
     }
@@ -172,9 +172,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 3.5mm;
+      padding-top: 2.2mm;
       border-top: 1px solid var(--brand-border);
-      font-size: 6.5pt;
+      font-size: 5.5pt;
       color: var(--brand-muted);
     }
     .footer-left strong {
@@ -184,17 +184,17 @@
     .footer-right {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       font-weight: 600;
     }
     .swipe-hint {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       color: var(--brand-red);
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.5px;
     }
 
     /* =========================================================
@@ -203,32 +203,32 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 7.2pt;
+      gap: 5px;
+      font-size: 5.8pt;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.2px;
       color: var(--brand-red);
-      margin-bottom: 2mm;
+      margin-bottom: 1.2mm;
     }
     .slide-title {
-      font-size: 20pt;
+      font-size: 14.5pt;
       font-weight: 900;
       line-height: 1.15;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.4px;
       color: var(--brand-dark);
-      margin-bottom: 2.5mm;
+      margin-bottom: 1.5mm;
       text-transform: uppercase;
     }
     .slide-title span {
       color: var(--brand-red);
     }
     .slide-subtitle {
-      font-size: 9.2pt;
-      line-height: 1.45;
+      font-size: 7.5pt;
+      line-height: 1.4;
       color: var(--brand-charcoal);
       font-weight: 400;
-      margin-bottom: 5mm;
+      margin-bottom: 3mm;
     }
 
     /* =========================================================
@@ -241,7 +241,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 6mm 0 2mm 0;
+      padding: 2mm 0 1mm 0;
     }
     .cover-hero-layout {
       display: block;
@@ -251,32 +251,32 @@
       flex-direction: column;
     }
     .cover-hero-title {
-      font-size: 24pt;
+      font-size: 16pt;
       font-weight: 900;
-      line-height: 1.12;
-      letter-spacing: -0.8px;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
       color: var(--brand-dark);
-      margin: 2.5mm 0 3.5mm 0;
+      margin: 1mm 0 1.5mm 0;
     }
     .cover-hero-title span {
       color: var(--brand-red);
       display: block;
     }
     .cover-lead {
-      font-size: 10pt;
-      line-height: 1.45;
+      font-size: 7.6pt;
+      line-height: 1.4;
       color: var(--brand-charcoal);
       font-weight: 500;
     }
     .cover-image-container {
       width: 100%;
-      height: 98mm;
-      border-radius: 4mm;
+      height: 70mm;
+      border-radius: 3mm;
       overflow: hidden;
       position: relative;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
       border: 1px solid var(--brand-border);
-      margin: 4mm 0;
+      margin: 3mm 0;
     }
     .cover-image-container img {
       width: 100%;
@@ -292,40 +292,40 @@
       right: 0;
       background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.4) 65%, transparent 100%);
       color: #ffffff;
-      padding: 6mm 6mm 3.5mm 6mm;
+      padding: 3.5mm 4mm 2.5mm 4mm;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
     .caption-title {
-      font-size: 8.8pt;
+      font-size: 7.5pt;
       font-weight: 800;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
     }
     .caption-sub {
-      font-size: 6.8pt;
+      font-size: 6pt;
       color: #cbd5e1;
-      margin-top: 0.5mm;
+      margin-top: 0.3mm;
     }
     .caption-badge {
       background: var(--brand-red);
       color: #ffffff;
-      padding: 3px 8px;
+      padding: 2.5px 7px;
       border-radius: 9999px;
-      font-size: 6.5pt;
+      font-size: 5.6pt;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
     }
 
     .cover-usp-bar {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 3mm;
+      gap: 2.5mm;
       background: var(--brand-light);
       border: 1px solid var(--brand-border);
-      border-radius: 3mm;
-      padding: 3.5mm 4mm;
+      border-radius: 2.5mm;
+      padding: 3mm 3mm;
     }
     .usp-item {
       display: flex;
@@ -335,13 +335,13 @@
       padding-left: 2.5mm;
     }
     .usp-item strong {
-      font-size: 7.2pt;
+      font-size: 6.6pt;
       font-weight: 800;
       color: var(--brand-dark);
       line-height: 1.2;
     }
     .usp-item span {
-      font-size: 6.2pt;
+      font-size: 5.5pt;
       color: var(--brand-muted);
       line-height: 1.25;
     }
@@ -355,17 +355,17 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      padding-top: 5mm;
+      padding-top: 2.5mm;
     }
     .synergy-intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5mm;
-      margin-bottom: 5mm;
+      gap: 3mm;
+      margin-bottom: 3mm;
     }
     .comparison-card {
-      border-radius: 3mm;
-      padding: 4.5mm;
+      border-radius: 2.5mm;
+      padding: 3.5mm;
       border: 1px solid var(--brand-border);
     }
     .comparison-card.bad {
@@ -377,14 +377,14 @@
       border-color: #fecaca;
     }
     .comparison-header {
-      font-size: 7.8pt;
+      font-size: 7pt;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 2.5mm;
+      letter-spacing: 0.6px;
+      margin-bottom: 2mm;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
     .comparison-card.bad .comparison-header { color: #64748b; }
     .comparison-card.good .comparison-header { color: var(--brand-red); }
@@ -394,13 +394,13 @@
       display: flex;
       flex-direction: column;
       gap: 2mm;
-      font-size: 7.2pt;
-      line-height: 1.35;
+      font-size: 6.2pt;
+      line-height: 1.4;
     }
     .comparison-list li {
       display: flex;
       align-items: flex-start;
-      gap: 6px;
+      gap: 5px;
     }
     .comparison-card.bad .comparison-list li { color: #475569; }
     .comparison-card.good .comparison-list li { color: var(--brand-dark); font-weight: 600; }
@@ -408,14 +408,14 @@
     .kpi-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 4mm;
-      margin: 4mm 0 6mm 0;
+      gap: 2.5mm;
+      margin: 2mm 0 3.5mm 0;
     }
     .kpi-box {
       background: var(--brand-dark);
       color: #ffffff;
-      border-radius: 3mm;
-      padding: 4.5mm 4mm;
+      border-radius: 2.5mm;
+      padding: 3mm 2mm;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -426,43 +426,51 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 2.5px;
       background: var(--brand-red);
     }
     .kpi-value {
-      font-size: 19pt;
+      font-size: 15pt;
       font-weight: 900;
       color: #ffffff;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.4px;
       line-height: 1.1;
     }
     .kpi-value span { color: #f87171; }
     .kpi-label {
-      font-size: 6.8pt;
+      font-size: 5.8pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       margin-top: 1mm;
       color: #94a3b8;
     }
 
     .synergy-visual-quote {
       display: grid;
-      grid-template-columns: 80mm 1fr;
-      gap: 5mm;
+      grid-template-columns: 56mm 1fr;
+      gap: 3.5mm;
       align-items: center;
       background: var(--brand-light);
       border: 1px solid var(--brand-border);
-      border-radius: 3mm;
-      padding: 4mm;
+      border-radius: 2.5mm;
+      padding: 3mm;
       margin-top: auto;
     }
-    .synergy-img-frame {
-      height: 48mm;
-      border-radius: 2.5mm;
-      overflow: hidden;
+    .synergy-dual-img-frame {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+      height: 38mm;
+      width: 100%;
     }
-    .synergy-img-frame img {
+    .synergy-img-box {
+      border-radius: 2mm;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--brand-border);
+    }
+    .synergy-img-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -471,26 +479,26 @@
     .synergy-quote-text {
       display: flex;
       flex-direction: column;
-      gap: 2mm;
+      gap: 1.5mm;
     }
     .quote-mark {
-      font-size: 26pt;
+      font-size: 20pt;
       line-height: 0.7;
       color: var(--brand-red);
       font-family: Georgia, serif;
     }
     .quote-content {
-      font-size: 7.8pt;
+      font-size: 6.8pt;
       font-style: italic;
       color: var(--brand-slate);
       line-height: 1.45;
     }
     .quote-author {
-      font-size: 6.8pt;
+      font-size: 6pt;
       font-weight: 800;
       color: var(--brand-dark);
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.5px;
     }
 
     /* =========================================================
@@ -499,18 +507,18 @@
     .pillar-stack {
       display: flex;
       flex-direction: column;
-      gap: 3.5mm;
+      gap: 3mm;
       margin-top: 2mm;
     }
     .pillar-card {
       display: grid;
-      grid-template-columns: 14mm 1fr;
-      gap: 3.5mm;
+      grid-template-columns: 12mm 1fr;
+      gap: 3mm;
       align-items: flex-start;
       background: #ffffff;
       border: 1px solid var(--brand-border);
-      border-radius: 3mm;
-      padding: 3.8mm 4.5mm;
+      border-radius: 2.5mm;
+      padding: 3.5mm 3.5mm;
       transition: all 0.2s;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
     }
@@ -518,40 +526,40 @@
       background: #fafafa;
     }
     .pillar-badge {
-      width: 12mm;
-      height: 12mm;
-      border-radius: 2.5mm;
+      width: 11.5mm;
+      height: 11.5mm;
+      border-radius: 2.2mm;
       background: var(--brand-dark);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11pt;
+      font-size: 10pt;
       font-weight: 900;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-      border-bottom: 2.5px solid var(--brand-red);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+      border-bottom: 2px solid var(--brand-red);
     }
     .pillar-content h4 {
-      font-size: 8.6pt;
+      font-size: 8pt;
       font-weight: 800;
       color: var(--brand-dark);
       margin-bottom: 1mm;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
     .pillar-content h4 span.tag {
-      font-size: 5.8pt;
+      font-size: 5.5pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       color: var(--brand-red);
       background: #fee2e2;
       padding: 1.5px 5px;
-      border-radius: 4px;
+      border-radius: 3px;
     }
     .pillar-content p {
-      font-size: 7.2pt;
+      font-size: 6.5pt;
       line-height: 1.42;
       color: var(--brand-charcoal);
     }
@@ -562,18 +570,18 @@
     .case-grid {
       display: flex;
       flex-direction: column;
-      gap: 5mm;
-      margin-top: 1mm;
+      gap: 3.5mm;
+      margin-top: 2mm;
     }
     .case-panel {
       border: 1px solid var(--brand-border);
-      border-radius: 3.5mm;
+      border-radius: 2.5mm;
       overflow: hidden;
       background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
     }
     .case-panel-header {
-      padding: 3mm 4.5mm;
+      padding: 2.5mm 3.5mm;
       background: var(--brand-light);
       border-bottom: 1px solid var(--brand-border);
       display: flex;
@@ -581,30 +589,31 @@
       align-items: center;
     }
     .case-panel-header h3 {
-      font-size: 8.8pt;
+      font-size: 8pt;
       font-weight: 800;
       color: var(--brand-dark);
     }
     .case-tag {
-      font-size: 6.2pt;
+      font-size: 5.6pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       color: var(--brand-red);
       background: #fee2e2;
-      padding: 2px 7px;
+      padding: 2px 6px;
       border-radius: 9999px;
     }
 
     .case-content-split {
-      display: grid;
-      grid-template-columns: 75mm 1fr;
-      gap: 4mm;
-      padding: 4mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2mm;
+      padding: 2.5mm;
     }
     .case-img-wrap {
-      height: 48mm;
-      border-radius: 2.5mm;
+      height: 38mm;
+      width: 100%;
+      border-radius: 2mm;
       overflow: hidden;
       border: 1px solid var(--brand-border);
     }
@@ -617,38 +626,42 @@
     .case-data {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      font-size: 7.2pt;
-      line-height: 1.4;
+      gap: 1.5mm;
+      font-size: 5.8pt;
+      line-height: 1.35;
       color: var(--brand-charcoal);
     }
     .case-bullet-list {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5mm;
-      margin-top: 2mm;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2mm;
+      margin-top: 1mm;
+      padding-top: 1.2mm;
+      border-top: 1px dashed var(--brand-border);
     }
     .case-bullet-list li {
       display: flex;
-      align-items: flex-start;
-      gap: 5px;
+      flex-direction: column;
+      gap: 1px;
       color: var(--brand-dark);
-      font-size: 6.8pt;
-      font-weight: 500;
+      font-size: 5.4pt;
+      line-height: 1.25;
     }
     .case-bullet-list li strong {
       color: var(--brand-red);
+      font-weight: 700;
     }
 
     .case-dual-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3mm;
-      height: 48mm;
+      gap: 2.5mm;
+      height: 36mm;
+      width: 100%;
     }
     .case-dual-images .img-box {
-      border-radius: 2.5mm;
+      border-radius: 2mm;
       overflow: hidden;
       position: relative;
       border: 1px solid var(--brand-border);
@@ -661,16 +674,16 @@
     }
     .img-label {
       position: absolute;
-      bottom: 2mm;
-      left: 2mm;
+      bottom: 1.5mm;
+      left: 1.5mm;
       background: rgba(15, 23, 42, 0.85);
       color: #fff;
-      font-size: 5.8pt;
+      font-size: 5.4pt;
       font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 2px 5px;
+      border-radius: 3px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
 
     /* =========================================================
@@ -679,30 +692,30 @@
     .cta-layout {
       display: flex;
       flex-direction: column;
-      gap: 5mm;
+      gap: 3.5mm;
       margin-top: 2mm;
     }
     .cta-service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 3.5mm;
+      gap: 2.5mm;
     }
     .cta-service-box {
       background: var(--brand-light);
       border: 1px solid var(--brand-border);
-      border-radius: 3mm;
-      padding: 3.5mm;
+      border-radius: 2mm;
+      padding: 2.8mm 2.5mm;
       display: flex;
       flex-direction: column;
       gap: 1.2mm;
     }
     .cta-service-box h5 {
-      font-size: 7.6pt;
+      font-size: 6.8pt;
       font-weight: 800;
       color: var(--brand-dark);
     }
     .cta-service-box p {
-      font-size: 6.5pt;
+      font-size: 5.6pt;
       line-height: 1.35;
       color: var(--brand-muted);
     }
@@ -710,13 +723,13 @@
     .cta-card-luxury {
       background: var(--brand-dark);
       color: #ffffff;
-      border-radius: 4mm;
-      padding: 6mm;
+      border-radius: 3mm;
+      padding: 4.5mm;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.35);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-top: 3.5px solid var(--brand-red);
+      border-top: 2.5px solid var(--brand-red);
     }
 
     .cta-card-header {
@@ -726,26 +739,26 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding-bottom: 3mm;
-      margin-bottom: 4mm;
+      padding-bottom: 2.2mm;
+      margin-bottom: 2.8mm;
     }
     .cta-card-header h4 {
-      font-size: 9pt;
+      font-size: 8.2pt;
       font-weight: 800;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
     }
     .availability-pill {
-      font-size: 6.5pt;
+      font-size: 6pt;
       color: #4ade80;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
     }
     .availability-dot {
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: #4ade80;
     }
@@ -754,17 +767,17 @@
       position: relative;
       z-index: 10;
       display: grid;
-      grid-template-columns: 24mm 1fr 24mm;
-      gap: 5mm;
+      grid-template-columns: 22mm 1fr 22mm;
+      gap: 3.5mm;
       align-items: center;
     }
     .profile-photo {
-      width: 24mm;
-      height: 30mm;
-      border-radius: 2.5mm;
+      width: 22mm;
+      height: 27mm;
+      border-radius: 2mm;
       overflow: hidden;
       border: 1.5px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
     .profile-photo img {
       width: 100%;
@@ -776,35 +789,35 @@
     .profile-info {
       display: flex;
       flex-direction: column;
-      gap: 1.2mm;
+      gap: 1mm;
     }
     .profile-name {
-      font-size: 10.5pt;
+      font-size: 9.5pt;
       font-weight: 900;
       color: #ffffff;
       letter-spacing: 0.2px;
     }
     .profile-title {
-      font-size: 6.8pt;
+      font-size: 6.2pt;
       color: #cbd5e1;
       font-weight: 500;
-      margin-bottom: 1.5mm;
+      margin-bottom: 1.2mm;
     }
     .contact-line {
-      font-size: 7.2pt;
+      font-size: 6.4pt;
       color: #e2e8f0;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
     .contact-line strong {
       color: #ffffff;
     }
     .hotline-highlight {
-      font-size: 9pt;
+      font-size: 8pt;
       font-weight: 900;
       color: #f87171;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
       margin-top: 1mm;
       display: inline-block;
     }
@@ -818,14 +831,14 @@
 
     .qr-container {
       background: #ffffff;
-      border-radius: 2.5mm;
+      border-radius: 2mm;
       padding: 2mm;
-      width: 24mm;
-      height: 24mm;
+      width: 22mm;
+      height: 22mm;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
     .qr-container img {
       width: 100%;
@@ -836,10 +849,10 @@
     .cta-card-bottom {
       position: relative;
       z-index: 10;
-      margin-top: 4mm;
-      padding-top: 3mm;
+      margin-top: 2.5mm;
+      padding-top: 2mm;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 6.5pt;
+      font-size: 5.8pt;
       color: #94a3b8;
       text-align: center;
     }
@@ -849,7 +862,7 @@
        ========================================================= */
     @media print {
       @page {
-        size: 210mm 297mm;
+        size: 148mm 210mm;
         margin: 0;
       }
       body {
@@ -885,7 +898,7 @@
        ========================================================= -->
   <div class="toolbar">
     <span class="toolbar-title">Shams Consult × F.C. Nüdling – LinkedIn Multi-Page Flyer</span>
-    <span class="badge-pill">5 Seiten · A4 / LinkedIn Dokument</span>
+    <span class="badge-pill">5 Seiten · A5 / LinkedIn Dokument</span>
     <button class="btn-print" onclick="window.print()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M6 9V2h12v7"></path>
@@ -1042,8 +1055,15 @@
       </div>
 
       <div class="synergy-visual-quote">
-        <div class="synergy-img-frame">
-          <img src="/images/b2b/4.png" alt="Liapor Rohbaumontage Seeheim-Jugenheim">
+        <div class="synergy-dual-img-frame">
+          <div class="synergy-img-box">
+            <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Rohbaumontage Baustelle">
+            <span class="img-label">Rohbau</span>
+          </div>
+          <div class="synergy-img-box">
+            <img src="/images/before-after/fcn-exterior-after.jpg" alt="Fertigstellung schlüsselfertig">
+            <span class="img-label">Vollendet</span>
+          </div>
         </div>
         <div class="synergy-quote-text">
           <div class="quote-mark">“</div>
@@ -1163,64 +1183,71 @@
 
     <main class="page-body">
       <div class="eyebrow">
-        Erfolgreich realisiert in Seeheim-Jugenheim
+        Gebaute Realität & Vorher-Nachher-Transformationen
       </div>
       <h2 class="slide-title">
-        Beweise in Beton: <span>Gewerbe- & Wohnbau.</span>
+        Beweise in Beton: <span>Vorher & Nachher.</span>
       </h2>
       <p class="slide-subtitle">
-        Theorie ist gut – gebaute Realität überzeugt. In Seeheim-Jugenheim (Hessen) belegen mehrere erfolgreich realisierte Objekte die Leistungsfähigkeit unserer Partnerschaft.
+        Theorie ist gut – gebaute Realität überzeugt. Anhand zweier konkreter Projekte zeigen wir die nahtlose Verwandlung vom Rohbau- und Rückbauzustand zur schlüsselfertigen Architektur.
       </p>
 
       <div class="case-grid">
-        <!-- PROJECT 1: ADLER BÜROGEBÄUDE -->
+        <!-- PROJECT 1: WOHNANLAGE FCN SYSTEMROHBAU -->
         <div class="case-panel">
           <div class="case-panel-header">
-            <h3>Neubau Bürogebäude Adler · Seeheim-Jugenheim</h3>
-            <span class="case-tag">Gewerbebau & Fertigteiltechnik</span>
+            <h3>Objektbau: Wohnanlage mit FCN Systemrohbau</h3>
+            <span class="case-tag">Vorher / Nachher · Rohbau bis Schlüsselfertig</span>
           </div>
           <div class="case-content-split">
-            <div class="case-img-wrap">
-              <img src="/images/b2b/Image.jpg" alt="Neubau Bürogebäude Adler Seeheim-Jugenheim Baustelle">
+            <div class="case-dual-images">
+              <div class="img-box">
+                <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Rohbau Baustelle Mehrfamilienhaus">
+                <span class="img-label">Vorher: FCN Rohbau</span>
+              </div>
+              <div class="img-box">
+                <img src="/images/before-after/fcn-exterior-after.jpg" alt="Fertigstellung Mehrfamilienhaus schlüsselfertig">
+                <span class="img-label">Nachher: Fertig</span>
+              </div>
             </div>
             <div class="case-data">
               <p>
-                Beim Neubau dieses modernen Bürogebäudes wurden Ausführungsplanung, Statik und Baustellenlogistik eng mit dem FCN-Werk verzahnt. Durch den Einsatz industriell vorgefertigter Wand- und Deckenelemente stand der Rohbau in Rekordzeit.
+                Vom präzisen FCN Liapor-Rohbau zur schlüsselfertigen Wohnanlage. Industriell vorgefertigte Wand- und Deckenelemente verkürzten die Rohbauzeit um über 50 % bei maximaler Maßhaltigkeit.
               </p>
               <ul class="case-bullet-list">
-                <li><span>•</span> <strong>HOAI LPH 1–5:</strong> Vollständige Entwurfs- und Werkplanung</li>
-                <li><span>•</span> <strong>Logistik:</strong> Just-in-Time-Montage per Mobilkran direkt ab LKW</li>
-                <li><span>•</span> <strong>Ergebnis:</strong> Maßhaltigkeit auf den Millimeter, null Baustopps</li>
+                <li><span>•</span> <strong>HOAI LPH 1–8:</strong> Durchgängige Betreuung von Entwurf bis Abnahme</li>
+                <li><span>•</span> <strong>Montagespeed:</strong> Just-in-Time-Montage per Mobilkran ohne Trocknungszeiten</li>
+                <li><span>•</span> <strong>Präzision:</strong> Millimetergenaue Werkplanung verzahnt mit FCN</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 2: WOHNBAUTEN SEEHEIM-JUGENHEIM -->
+        <!-- PROJECT 2: INNENARCHITEKTUR & KERNSANIERUNG -->
         <div class="case-panel">
           <div class="case-panel-header">
-            <h3>Mehrere Häuser & Doppelhaushälften · Seeheim-Jugenheim</h3>
-            <span class="case-tag">Wohnungsbau 2024</span>
+            <h3>Innenarchitektur: Kernsanierung & Ausbau</h3>
+            <span class="case-tag">Vorher / Nachher · Entkernung bis Vollendung</span>
           </div>
           <div class="case-content-split">
             <div class="case-dual-images">
               <div class="img-box">
-                <img src="/images/b2b/2.png" alt="Rohbau Seeheim-Jugenheim Doppelhaushälfte">
-                <span class="img-label">Rohbau</span>
+                <img src="/images/before-after/fcn-interior-before.jpg" alt="Entkernter Zustand Innenraum Kernsanierung">
+                <span class="img-label">Vorher: Entkernt</span>
               </div>
               <div class="img-box">
-                <img src="/images/b2b/1.png" alt="Fertigstellung Seeheim-Jugenheim 2024">
-                <span class="img-label">Fertiggestellt</span>
+                <img src="/images/before-after/fcn-interior-after.jpg" alt="Vollendeter offener Lebensraum schlüsselfertig">
+                <span class="img-label">Nachher: Ausgebaut</span>
               </div>
             </div>
             <div class="case-data">
               <p>
-                Neben Gewerbebauten wurden bereits mehrere Wohnhäuser und Doppelhaushälften gemeinsam realisiert (z. B. Haus Nr. 3 & Doppelhaushälften 2024). Das Zusammenspiel aus Liapor-Wandelementen und individueller Architektur überzeugt Eigentümer und Bauherren gleichermaßen.
+                Komplette Verwandlung einer kleinteiligen Bestandsstruktur in einen lichtdurchfluteten, offenen Lebensraum mit optimierter Statik, Wanddurchbrüchen und exklusiven Materialkompositionen.
               </p>
               <ul class="case-bullet-list">
-                <li><span>•</span> <strong>Seriell & Individuell:</strong> Keine Typenhäuser, sondern Maßarchitektur</li>
-                <li><span>•</span> <strong>Ökologie:</strong> Hervorragender Schall- und Wärmeschutz ab Werk</li>
-                <li><span>•</span> <strong>Zufriedenheit:</strong> Zügiger Innenausbau dank trockener Rohbausubstanz</li>
+                <li><span>•</span> <strong>Raumtransformation:</strong> Offener Grundriss statt massiver Trennwände</li>
+                <li><span>•</span> <strong>Materialharmonie:</strong> FCN-Systemestrich & unsichtbare TGA-Integration</li>
+                <li><span>•</span> <strong>Wertschöpfung:</strong> Höchste Rendite und Wohnqualität für Eigentümer</li>
               </ul>
             </div>
           </div>

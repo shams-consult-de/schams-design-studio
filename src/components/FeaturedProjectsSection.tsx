@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { projects, Project } from "../data/projects";
 import { Language, Translations } from "../lib/i18n";
 import { SectionAnchorLink } from "./SectionAnchorLink";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 interface FeaturedProjectsSectionProps {
   t: Translations["projects"];
@@ -188,6 +189,29 @@ export function FeaturedProjectsSection({
           >
             <span>›</span>
           </button>
+        </div>
+
+        {/* Interactive Vorher-Nachher Transformation Section */}
+        <div className="pt-10 border-t border-zinc-100 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="space-y-1 max-w-2xl">
+              <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
+                {isDe ? "INTERAKTIVER PRAXISVERGLEICH" : "INTERACTIVE REAL-WORLD COMPARISON"}
+              </span>
+              <h3 className="text-xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
+                {isDe
+                  ? "Vom Rohbau zur Vollendung: Die Vorher-Nachher-Transformation"
+                  : "From Structural Shell to Reality: The Before & After Reveal"}
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                {isDe
+                  ? "Erleben Sie realisierte Bauvorhaben mit FCN-Systembaustoffen und anspruchsvollem Innenausbau. Bewegen Sie den Schieberegler interaktiv nach links und rechts."
+                  : "Experience delivered projects featuring FCN structural components and interior design. Move the slider interactively left and right."}
+              </p>
+            </div>
+          </div>
+
+          <BeforeAfterSlider language={language} />
         </div>
       </div>
     </section>

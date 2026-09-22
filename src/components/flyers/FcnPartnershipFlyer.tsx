@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTACT } from "../../lib/contact";
 import { FlyerProps } from "./types";
 
@@ -26,10 +25,10 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         }
 
         .flyer-fcn .sheet {
-          width: 210mm;
-          height: 297mm;
+          width: 148mm;
+          height: 210mm;
           background: #ffffff;
-          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -37,7 +36,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           overflow: hidden;
           page-break-after: always;
           break-after: page;
-          padding: 14mm 16mm 12mm 16mm;
+          padding: 8mm 9mm 7mm 9mm;
         }
 
         .flyer-fcn .slide-header {
@@ -46,47 +45,47 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding-bottom: 3.5mm;
+          padding-bottom: 2.2mm;
           border-bottom: 1px solid var(--brand-border);
         }
         .flyer-fcn .brand-duo {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 8px;
         }
         .flyer-fcn .brand-logo-shams {
-          height: 9.5mm;
+          height: 7mm;
           width: auto;
           object-fit: contain;
         }
         .flyer-fcn .brand-separator {
-          font-size: 13pt;
+          font-size: 10pt;
           font-weight: 300;
           color: #94a3b8;
         }
         .flyer-fcn .brand-logo-fcn {
-          height: 7.5mm;
+          height: 5.5mm;
           width: auto;
           object-fit: contain;
         }
         .flyer-fcn .slide-meta {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 6px;
         }
         .flyer-fcn .meta-tag {
-          font-size: 6.8pt;
+          font-size: 5.5pt;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 1.2px;
+          letter-spacing: 1px;
           color: var(--brand-muted);
         }
         .flyer-fcn .page-number-pill {
           background: var(--brand-dark);
           color: #ffffff;
-          font-size: 6.8pt;
+          font-size: 5.5pt;
           font-weight: 800;
-          padding: 2.5px 7px;
+          padding: 2px 5.5px;
           border-radius: 9999px;
           letter-spacing: 0.5px;
         }
@@ -97,9 +96,9 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding-top: 3.5mm;
+          padding-top: 2.2mm;
           border-top: 1px solid var(--brand-border);
-          font-size: 6.5pt;
+          font-size: 5.5pt;
           color: var(--brand-muted);
         }
         .flyer-fcn .footer-left strong {
@@ -109,48 +108,48 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .footer-right {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 5px;
           font-weight: 600;
         }
         .flyer-fcn .swipe-hint {
           display: inline-flex;
           align-items: center;
-          gap: 4px;
+          gap: 3px;
           color: var(--brand-red);
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.6px;
+          letter-spacing: 0.5px;
         }
 
         .flyer-fcn .eyebrow {
           display: inline-flex;
           align-items: center;
-          gap: 6px;
-          font-size: 7.2pt;
+          gap: 5px;
+          font-size: 5.8pt;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 1.6px;
+          letter-spacing: 1.2px;
           color: var(--brand-red);
-          margin-bottom: 2mm;
+          margin-bottom: 1.2mm;
         }
         .flyer-fcn .slide-title {
-          font-size: 20pt;
+          font-size: 14.5pt;
           font-weight: 900;
           line-height: 1.15;
-          letter-spacing: -0.6px;
+          letter-spacing: -0.4px;
           color: var(--brand-dark);
-          margin-bottom: 2.5mm;
+          margin-bottom: 1.5mm;
           text-transform: uppercase;
         }
         .flyer-fcn .slide-title span {
           color: var(--brand-red);
         }
         .flyer-fcn .slide-subtitle {
-          font-size: 9.2pt;
-          line-height: 1.45;
+          font-size: 7.5pt;
+          line-height: 1.4;
           color: var(--brand-charcoal);
           font-weight: 400;
-          margin-bottom: 5mm;
+          margin-bottom: 3mm;
         }
 
         /* PAGE 1 */
@@ -161,7 +160,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 6mm 0 2mm 0;
+          padding: 2mm 0 1mm 0;
         }
         .flyer-fcn .cover-hero-layout {
           display: block;
@@ -171,32 +170,32 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           flex-direction: column;
         }
         .flyer-fcn .cover-hero-title {
-          font-size: 24pt;
+          font-size: 16pt;
           font-weight: 900;
-          line-height: 1.12;
-          letter-spacing: -0.8px;
+          line-height: 1.15;
+          letter-spacing: -0.5px;
           color: var(--brand-dark);
-          margin: 2.5mm 0 3.5mm 0;
+          margin: 1mm 0 1.5mm 0;
         }
         .flyer-fcn .cover-hero-title span {
           color: var(--brand-red);
           display: block;
         }
         .flyer-fcn .cover-lead {
-          font-size: 10pt;
-          line-height: 1.45;
+          font-size: 7.6pt;
+          line-height: 1.4;
           color: var(--brand-charcoal);
           font-weight: 500;
         }
         .flyer-fcn .cover-image-container {
           width: 100%;
-          height: 98mm;
-          border-radius: 4mm;
+          height: 70mm;
+          border-radius: 3mm;
           overflow: hidden;
           position: relative;
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
           border: 1px solid var(--brand-border);
-          margin: 4mm 0;
+          margin: 3mm 0;
         }
         .flyer-fcn .cover-image-container img {
           width: 100%;
@@ -212,40 +211,40 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           right: 0;
           background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.4) 65%, transparent 100%);
           color: #ffffff;
-          padding: 6mm 6mm 3.5mm 6mm;
+          padding: 3.5mm 4mm 2.5mm 4mm;
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
         }
         .flyer-fcn .caption-title {
-          font-size: 8.8pt;
+          font-size: 7.5pt;
           font-weight: 800;
-          letter-spacing: 0.3px;
+          letter-spacing: 0.2px;
         }
         .flyer-fcn .caption-sub {
-          font-size: 6.8pt;
+          font-size: 6pt;
           color: #cbd5e1;
-          margin-top: 0.5mm;
+          margin-top: 0.3mm;
         }
         .flyer-fcn .caption-badge {
           background: var(--brand-red);
           color: #ffffff;
-          padding: 3px 8px;
+          padding: 2.5px 7px;
           border-radius: 9999px;
-          font-size: 6.5pt;
+          font-size: 5.6pt;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.6px;
         }
 
         .flyer-fcn .cover-usp-bar {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 3mm;
+          gap: 2.5mm;
           background: var(--brand-light);
           border: 1px solid var(--brand-border);
-          border-radius: 3mm;
-          padding: 3.5mm 4mm;
+          border-radius: 2.5mm;
+          padding: 3mm 3mm;
         }
         .flyer-fcn .usp-item {
           display: flex;
@@ -255,13 +254,13 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           padding-left: 2.5mm;
         }
         .flyer-fcn .usp-item strong {
-          font-size: 7.2pt;
+          font-size: 6.6pt;
           font-weight: 800;
           color: var(--brand-dark);
           line-height: 1.2;
         }
         .flyer-fcn .usp-item span {
-          font-size: 6.2pt;
+          font-size: 5.5pt;
           color: var(--brand-muted);
           line-height: 1.25;
         }
@@ -273,17 +272,17 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           flex: 1;
           display: flex;
           flex-direction: column;
-          padding-top: 5mm;
+          padding-top: 2.5mm;
         }
         .flyer-fcn .synergy-intro-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 5mm;
-          margin-bottom: 5mm;
+          gap: 3mm;
+          margin-bottom: 3mm;
         }
         .flyer-fcn .comparison-card {
-          border-radius: 3mm;
-          padding: 4.5mm;
+          border-radius: 2.5mm;
+          padding: 3.5mm;
           border: 1px solid var(--brand-border);
         }
         .flyer-fcn .comparison-card.bad {
@@ -295,14 +294,14 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           border-color: #fecaca;
         }
         .flyer-fcn .comparison-header {
-          font-size: 7.8pt;
+          font-size: 7pt;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 0.8px;
-          margin-bottom: 2.5mm;
+          letter-spacing: 0.6px;
+          margin-bottom: 2mm;
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 5px;
         }
         .flyer-fcn .comparison-card.bad .comparison-header { color: #64748b; }
         .flyer-fcn .comparison-card.good .comparison-header { color: var(--brand-red); }
@@ -312,13 +311,13 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           display: flex;
           flex-direction: column;
           gap: 2mm;
-          font-size: 7.2pt;
-          line-height: 1.35;
+          font-size: 6.2pt;
+          line-height: 1.4;
         }
         .flyer-fcn .comparison-list li {
           display: flex;
           align-items: flex-start;
-          gap: 6px;
+          gap: 5px;
         }
         .flyer-fcn .comparison-card.bad .comparison-list li { color: #475569; }
         .flyer-fcn .comparison-card.good .comparison-list li { color: var(--brand-dark); font-weight: 600; }
@@ -326,14 +325,14 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .kpi-row {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 4mm;
-          margin: 4mm 0 6mm 0;
+          gap: 2.5mm;
+          margin: 2mm 0 3.5mm 0;
         }
         .flyer-fcn .kpi-box {
           background: var(--brand-dark);
           color: #ffffff;
-          border-radius: 3mm;
-          padding: 4.5mm 4mm;
+          border-radius: 2.5mm;
+          padding: 3mm 2mm;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -344,43 +343,51 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           top: 0;
           left: 0;
           right: 0;
-          height: 3px;
+          height: 2.5px;
           background: var(--brand-red);
         }
         .flyer-fcn .kpi-value {
-          font-size: 19pt;
+          font-size: 15pt;
           font-weight: 900;
           color: #ffffff;
-          letter-spacing: -0.5px;
+          letter-spacing: -0.4px;
           line-height: 1.1;
         }
         .flyer-fcn .kpi-value span { color: #f87171; }
         .flyer-fcn .kpi-label {
-          font-size: 6.8pt;
+          font-size: 5.8pt;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.6px;
           margin-top: 1mm;
           color: #94a3b8;
         }
 
         .flyer-fcn .synergy-visual-quote {
           display: grid;
-          grid-template-columns: 80mm 1fr;
-          gap: 5mm;
+          grid-template-columns: 56mm 1fr;
+          gap: 3.5mm;
           align-items: center;
           background: var(--brand-light);
           border: 1px solid var(--brand-border);
-          border-radius: 3mm;
-          padding: 4mm;
+          border-radius: 2.5mm;
+          padding: 3mm;
           margin-top: auto;
         }
-        .flyer-fcn .synergy-img-frame {
-          height: 48mm;
-          border-radius: 2.5mm;
-          overflow: hidden;
+        .flyer-fcn .synergy-dual-img-frame {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2mm;
+          height: 38mm;
+          width: 100%;
         }
-        .flyer-fcn .synergy-img-frame img {
+        .flyer-fcn .synergy-img-box {
+          border-radius: 2mm;
+          overflow: hidden;
+          position: relative;
+          border: 1px solid var(--brand-border);
+        }
+        .flyer-fcn .synergy-img-box img {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -389,84 +396,84 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .synergy-quote-text {
           display: flex;
           flex-direction: column;
-          gap: 2mm;
+          gap: 1.5mm;
         }
         .flyer-fcn .quote-mark {
-          font-size: 26pt;
+          font-size: 20pt;
           line-height: 0.7;
           color: var(--brand-red);
           font-family: Georgia, serif;
         }
         .flyer-fcn .quote-content {
-          font-size: 7.8pt;
+          font-size: 6.8pt;
           font-style: italic;
           color: var(--brand-slate);
           line-height: 1.45;
         }
         .flyer-fcn .quote-author {
-          font-size: 6.8pt;
+          font-size: 6pt;
           font-weight: 800;
           color: var(--brand-dark);
           text-transform: uppercase;
-          letter-spacing: 0.6px;
+          letter-spacing: 0.5px;
         }
 
         /* PAGE 3 */
         .flyer-fcn .pillar-stack {
           display: flex;
           flex-direction: column;
-          gap: 3.5mm;
+          gap: 3mm;
           margin-top: 2mm;
         }
         .flyer-fcn .pillar-card {
           display: grid;
-          grid-template-columns: 14mm 1fr;
-          gap: 3.5mm;
+          grid-template-columns: 12mm 1fr;
+          gap: 3mm;
           align-items: flex-start;
           background: #ffffff;
           border: 1px solid var(--brand-border);
-          border-radius: 3mm;
-          padding: 3.8mm 4.5mm;
+          border-radius: 2.5mm;
+          padding: 3.5mm 3.5mm;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
         }
         .flyer-fcn .pillar-card:nth-child(odd) {
           background: #fafafa;
         }
         .flyer-fcn .pillar-badge {
-          width: 12mm;
-          height: 12mm;
-          border-radius: 2.5mm;
+          width: 11.5mm;
+          height: 11.5mm;
+          border-radius: 2.2mm;
           background: var(--brand-dark);
           color: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 11pt;
+          font-size: 10pt;
           font-weight: 900;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-          border-bottom: 2.5px solid var(--brand-red);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+          border-bottom: 2px solid var(--brand-red);
         }
         .flyer-fcn .pillar-content h4 {
-          font-size: 8.6pt;
+          font-size: 8pt;
           font-weight: 800;
           color: var(--brand-dark);
           margin-bottom: 1mm;
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 5px;
         }
         .flyer-fcn .pillar-content h4 span.tag {
-          font-size: 5.8pt;
+          font-size: 5.5pt;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.6px;
           color: var(--brand-red);
           background: #fee2e2;
           padding: 1.5px 5px;
-          border-radius: 4px;
+          border-radius: 3px;
         }
         .flyer-fcn .pillar-content p {
-          font-size: 7.2pt;
+          font-size: 6.5pt;
           line-height: 1.42;
           color: var(--brand-charcoal);
         }
@@ -475,18 +482,18 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .case-grid {
           display: flex;
           flex-direction: column;
-          gap: 5mm;
-          margin-top: 1mm;
+          gap: 3.5mm;
+          margin-top: 2mm;
         }
         .flyer-fcn .case-panel {
           border: 1px solid var(--brand-border);
-          border-radius: 3.5mm;
+          border-radius: 2.5mm;
           overflow: hidden;
           background: #ffffff;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
         }
         .flyer-fcn .case-panel-header {
-          padding: 3mm 4.5mm;
+          padding: 2.5mm 3.5mm;
           background: var(--brand-light);
           border-bottom: 1px solid var(--brand-border);
           display: flex;
@@ -494,29 +501,30 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           align-items: center;
         }
         .flyer-fcn .case-panel-header h3 {
-          font-size: 8.8pt;
+          font-size: 8pt;
           font-weight: 800;
           color: var(--brand-dark);
         }
         .flyer-fcn .case-tag {
-          font-size: 6.2pt;
+          font-size: 5.6pt;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.6px;
           color: var(--brand-red);
           background: #fee2e2;
-          padding: 2px 7px;
+          padding: 2px 6px;
           border-radius: 9999px;
         }
         .flyer-fcn .case-content-split {
-          display: grid;
-          grid-template-columns: 75mm 1fr;
-          gap: 4mm;
-          padding: 4mm;
+          display: flex;
+          flex-direction: column;
+          gap: 2.2mm;
+          padding: 2.5mm;
         }
         .flyer-fcn .case-img-wrap {
-          height: 48mm;
-          border-radius: 2.5mm;
+          height: 38mm;
+          width: 100%;
+          border-radius: 2mm;
           overflow: hidden;
           border: 1px solid var(--brand-border);
         }
@@ -529,37 +537,41 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .case-data {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          font-size: 7.2pt;
-          line-height: 1.4;
+          gap: 1.5mm;
+          font-size: 5.8pt;
+          line-height: 1.35;
           color: var(--brand-charcoal);
         }
         .flyer-fcn .case-bullet-list {
           list-style: none;
-          display: flex;
-          flex-direction: column;
-          gap: 1.5mm;
-          margin-top: 2mm;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2mm;
+          margin-top: 1mm;
+          padding-top: 1.2mm;
+          border-top: 1px dashed var(--brand-border);
         }
         .flyer-fcn .case-bullet-list li {
           display: flex;
-          align-items: flex-start;
-          gap: 5px;
+          flex-direction: column;
+          gap: 1px;
           color: var(--brand-dark);
-          font-size: 6.8pt;
-          font-weight: 500;
+          font-size: 5.4pt;
+          line-height: 1.25;
         }
         .flyer-fcn .case-bullet-list li strong {
           color: var(--brand-red);
+          font-weight: 700;
         }
         .flyer-fcn .case-dual-images {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 3mm;
-          height: 48mm;
+          gap: 2.5mm;
+          height: 36mm;
+          width: 100%;
         }
         .flyer-fcn .case-dual-images .img-box {
-          border-radius: 2.5mm;
+          border-radius: 2mm;
           overflow: hidden;
           position: relative;
           border: 1px solid var(--brand-border);
@@ -572,59 +584,59 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         }
         .flyer-fcn .img-label {
           position: absolute;
-          bottom: 2mm;
-          left: 2mm;
+          bottom: 1.5mm;
+          left: 1.5mm;
           background: rgba(15, 23, 42, 0.85);
           color: #fff;
-          font-size: 5.8pt;
+          font-size: 5.4pt;
           font-weight: 700;
-          padding: 2px 6px;
-          border-radius: 4px;
+          padding: 2px 5px;
+          border-radius: 3px;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.4px;
         }
 
         /* PAGE 5 */
         .flyer-fcn .cta-layout {
           display: flex;
           flex-direction: column;
-          gap: 5mm;
+          gap: 3.5mm;
           margin-top: 2mm;
         }
         .flyer-fcn .cta-service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 3.5mm;
+          gap: 2.5mm;
         }
         .flyer-fcn .cta-service-box {
           background: var(--brand-light);
           border: 1px solid var(--brand-border);
-          border-radius: 3mm;
-          padding: 3.5mm;
+          border-radius: 2mm;
+          padding: 2.8mm 2.5mm;
           display: flex;
           flex-direction: column;
           gap: 1.2mm;
         }
         .flyer-fcn .cta-service-box h5 {
-          font-size: 7.6pt;
+          font-size: 6.8pt;
           font-weight: 800;
           color: var(--brand-dark);
         }
         .flyer-fcn .cta-service-box p {
-          font-size: 6.5pt;
+          font-size: 5.6pt;
           line-height: 1.35;
           color: var(--brand-muted);
         }
         .flyer-fcn .cta-card-luxury {
           background: var(--brand-dark);
           color: #ffffff;
-          border-radius: 4mm;
-          padding: 6mm;
+          border-radius: 3mm;
+          padding: 4.5mm;
           position: relative;
           overflow: hidden;
-          box-shadow: 0 16px 36px rgba(15, 23, 42, 0.35);
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-top: 3.5px solid var(--brand-red);
+          border-top: 2.5px solid var(--brand-red);
         }
         .flyer-fcn .cta-card-header {
           position: relative;
@@ -633,26 +645,26 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           justify-content: space-between;
           align-items: center;
           border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-          padding-bottom: 3mm;
-          margin-bottom: 4mm;
+          padding-bottom: 2.2mm;
+          margin-bottom: 2.8mm;
         }
         .flyer-fcn .cta-card-header h4 {
-          font-size: 9pt;
+          font-size: 8.2pt;
           font-weight: 800;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.4px;
           text-transform: uppercase;
         }
         .flyer-fcn .availability-pill {
-          font-size: 6.5pt;
+          font-size: 6pt;
           color: #4ade80;
           font-weight: 700;
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 4px;
         }
         .flyer-fcn .availability-dot {
-          width: 6px;
-          height: 6px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           background: #4ade80;
         }
@@ -660,17 +672,17 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           position: relative;
           z-index: 10;
           display: grid;
-          grid-template-columns: 24mm 1fr 24mm;
-          gap: 5mm;
+          grid-template-columns: 22mm 1fr 22mm;
+          gap: 3.5mm;
           align-items: center;
         }
         .flyer-fcn .profile-photo {
-          width: 24mm;
-          height: 30mm;
-          border-radius: 2.5mm;
+          width: 22mm;
+          height: 27mm;
+          border-radius: 2mm;
           overflow: hidden;
           border: 1.5px solid rgba(255, 255, 255, 0.3);
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
         .flyer-fcn .profile-photo img {
           width: 100%;
@@ -682,26 +694,26 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .profile-info {
           display: flex;
           flex-direction: column;
-          gap: 1.2mm;
+          gap: 1mm;
         }
         .flyer-fcn .profile-name {
-          font-size: 10.5pt;
+          font-size: 9.5pt;
           font-weight: 900;
           color: #ffffff;
           letter-spacing: 0.2px;
         }
         .flyer-fcn .profile-title {
-          font-size: 6.8pt;
+          font-size: 6.2pt;
           color: #cbd5e1;
           font-weight: 500;
-          margin-bottom: 1.5mm;
+          margin-bottom: 1.2mm;
         }
         .flyer-fcn .contact-line {
-          font-size: 7.2pt;
+          font-size: 6.4pt;
           color: #e2e8f0;
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 5px;
         }
         .flyer-fcn a {
           color: inherit;
@@ -714,23 +726,23 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           color: #ffffff;
         }
         .flyer-fcn .hotline-highlight {
-          font-size: 9pt;
+          font-size: 8pt;
           font-weight: 900;
           color: #f87171;
-          letter-spacing: 0.4px;
+          letter-spacing: 0.3px;
           margin-top: 1mm;
           display: block;
         }
         .flyer-fcn .qr-container {
           background: #ffffff;
-          border-radius: 2.5mm;
+          border-radius: 2mm;
           padding: 2mm;
-          width: 24mm;
-          height: 24mm;
+          width: 22mm;
+          height: 22mm;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .flyer-fcn .qr-container img {
           width: 100%;
@@ -740,17 +752,17 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
         .flyer-fcn .cta-card-bottom {
           position: relative;
           z-index: 10;
-          margin-top: 4mm;
-          padding-top: 3mm;
+          margin-top: 2.5mm;
+          padding-top: 2mm;
           border-top: 1px solid rgba(255, 255, 255, 0.1);
-          font-size: 6.5pt;
+          font-size: 5.8pt;
           color: #94a3b8;
           text-align: center;
         }
 
         @media print {
           @page {
-            size: 210mm 297mm;
+            size: 148mm 210mm;
             margin: 0;
           }
           .flyer-fcn {
@@ -914,8 +926,15 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
           </div>
 
           <div className="synergy-visual-quote">
-            <div className="synergy-img-frame">
-              <img src="/images/b2b/4.png" alt="Liapor Rohbaumontage Seeheim-Jugenheim" />
+            <div className="synergy-dual-img-frame">
+              <div className="synergy-img-box">
+                <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Rohbaumontage Baustelle" />
+                <span className="img-label">Rohbau</span>
+              </div>
+              <div className="synergy-img-box">
+                <img src="/images/before-after/fcn-exterior-after.jpg" alt="Fertigstellung schlüsselfertig" />
+                <span className="img-label">Vollendet</span>
+              </div>
             </div>
             <div className="synergy-quote-text">
               <div className="quote-mark">“</div>
@@ -1031,33 +1050,40 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
         <main className="page-body">
           <div className="eyebrow">
-            Erfolgreich realisiert in Seeheim-Jugenheim
+            Gebaute Realität & Vorher-Nachher-Transformationen
           </div>
           <h2 className="slide-title">
-            Beweise in Beton: <span>Gewerbe- & Wohnbau.</span>
+            Beweise in Beton: <span>Vorher & Nachher.</span>
           </h2>
           <p className="slide-subtitle">
-            Theorie ist gut – gebaute Realität überzeugt. In Seeheim-Jugenheim (Hessen) belegen mehrere erfolgreich realisierte Objekte die Leistungsfähigkeit unserer Partnerschaft.
+            Theorie ist gut – gebaute Realität überzeugt. Anhand zweier konkreter Projekte zeigen wir die nahtlose Verwandlung vom Rohbau- und Rückbauzustand zur schlüsselfertigen Architektur.
           </p>
 
           <div className="case-grid">
             <div className="case-panel">
               <div className="case-panel-header">
-                <h3>Neubau Bürogebäude Adler · Seeheim-Jugenheim</h3>
-                <span className="case-tag">Gewerbebau & Fertigteiltechnik</span>
+                <h3>Objektbau: Wohnanlage mit FCN Systemrohbau</h3>
+                <span className="case-tag">Vorher / Nachher · Rohbau bis Schlüsselfertig</span>
               </div>
               <div className="case-content-split">
-                <div className="case-img-wrap">
-                  <img src="/images/b2b/Image.jpg" alt="Neubau Bürogebäude Adler Seeheim-Jugenheim Baustelle" />
+                <div className="case-dual-images">
+                  <div className="img-box">
+                    <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Rohbau Baustelle Mehrfamilienhaus" />
+                    <span className="img-label">Vorher: FCN Rohbau</span>
+                  </div>
+                  <div className="img-box">
+                    <img src="/images/before-after/fcn-exterior-after.jpg" alt="Fertigstellung Mehrfamilienhaus schlüsselfertig" />
+                    <span className="img-label">Nachher: Fertig</span>
+                  </div>
                 </div>
                 <div className="case-data">
                   <p>
-                    Beim Neubau dieses modernen Bürogebäudes wurden Ausführungsplanung, Statik und Baustellenlogistik eng mit dem FCN-Werk verzahnt. Durch den Einsatz industriell vorgefertigter Wand- und Deckenelemente stand der Rohbau in Rekordzeit.
+                    Vom präzisen FCN Liapor-Rohbau zur schlüsselfertigen Wohnanlage. Industriell vorgefertigte Wand- und Deckenelemente verkürzten die Rohbauzeit um über 50 % bei maximaler Maßhaltigkeit.
                   </p>
                   <ul className="case-bullet-list">
-                    <li><span>•</span> <strong>HOAI LPH 1–5:</strong> Vollständige Entwurfs- und Werkplanung</li>
-                    <li><span>•</span> <strong>Logistik:</strong> Just-in-Time-Montage per Mobilkran direkt ab LKW</li>
-                    <li><span>•</span> <strong>Ergebnis:</strong> Maßhaltigkeit auf den Millimeter, null Baustopps</li>
+                    <li><span>•</span> <strong>HOAI LPH 1–8:</strong> Durchgängige Betreuung von Entwurf bis Abnahme</li>
+                    <li><span>•</span> <strong>Montagespeed:</strong> Just-in-Time-Montage per Mobilkran ohne Trocknungszeiten</li>
+                    <li><span>•</span> <strong>Präzision:</strong> Millimetergenaue Werkplanung verzahnt mit FCN</li>
                   </ul>
                 </div>
               </div>
@@ -1065,28 +1091,28 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
             <div className="case-panel">
               <div className="case-panel-header">
-                <h3>Mehrere Häuser & Doppelhaushälften · Seeheim-Jugenheim</h3>
-                <span className="case-tag">Wohnungsbau 2024</span>
+                <h3>Innenarchitektur: Kernsanierung & Ausbau</h3>
+                <span className="case-tag">Vorher / Nachher · Entkernung bis Vollendung</span>
               </div>
               <div className="case-content-split">
                 <div className="case-dual-images">
                   <div className="img-box">
-                    <img src="/images/b2b/2.png" alt="Rohbau Seeheim-Jugenheim Doppelhaushälfte" />
-                    <span className="img-label">Rohbau</span>
+                    <img src="/images/before-after/fcn-interior-before.jpg" alt="Entkernter Zustand Innenraum Kernsanierung" />
+                    <span className="img-label">Vorher: Entkernt</span>
                   </div>
                   <div className="img-box">
-                    <img src="/images/b2b/1.png" alt="Fertigstellung Seeheim-Jugenheim 2024" />
-                    <span className="img-label">Fertiggestellt</span>
+                    <img src="/images/before-after/fcn-interior-after.jpg" alt="Vollendeter offener Lebensraum schlüsselfertig" />
+                    <span className="img-label">Nachher: Ausgebaut</span>
                   </div>
                 </div>
                 <div className="case-data">
                   <p>
-                    Neben Gewerbebauten wurden bereits mehrere Wohnhäuser und Doppelhaushälften gemeinsam realisiert. Das Zusammenspiel aus Liapor-Wandelementen und individueller Architektur überzeugt Eigentümer und Bauherren gleichermaßen.
+                    Komplette Verwandlung einer kleinteiligen Bestandsstruktur in einen lichtdurchfluteten, offenen Lebensraum mit optimierter Statik, Wanddurchbrüchen und exklusiven Materialkompositionen.
                   </p>
                   <ul className="case-bullet-list">
-                    <li><span>•</span> <strong>Seriell & Individuell:</strong> Keine Typenhäuser, sondern Maßarchitektur</li>
-                    <li><span>•</span> <strong>Ökologie:</strong> Hervorragender Schall- und Wärmeschutz ab Werk</li>
-                    <li><span>•</span> <strong>Zufriedenheit:</strong> Zügiger Innenausbau dank trockener Rohbausubstanz</li>
+                    <li><span>•</span> <strong>Raumtransformation:</strong> Offener Grundriss statt massiver Trennwände</li>
+                    <li><span>•</span> <strong>Materialharmonie:</strong> FCN-Systemestrich & unsichtbare TGA-Integration</li>
+                    <li><span>•</span> <strong>Wertschöpfung:</strong> Höchste Rendite und Wohnqualität für Eigentümer</li>
                   </ul>
                 </div>
               </div>

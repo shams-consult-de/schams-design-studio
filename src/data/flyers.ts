@@ -63,7 +63,7 @@ export const portalClients: PortalClient[] = [
           de: "5-seitiges LinkedIn Multi-Page Whitepaper für Investoren & Entscheider mit Fokus auf Vorfertigung und Wirtschaftlichkeit.",
           en: "5-page LinkedIn multi-page whitepaper for investors and leaders highlighting prefabrication and cost efficiency.",
         },
-        format: "DIN A4 Portrait · 5 Seiten",
+        format: "DIN A5 Portrait · 5 Seiten",
         documentUrl: "/documents/flyer-fcn-partnership.html",
         badge: {
           de: "LINKEDIN WHITEPAPER",
@@ -82,7 +82,7 @@ export const portalClients: PortalClient[] = [
           de: "Vertriebsunterlage zur Bauzeitverkürzung, B-Plan-Sicherheit und Schnittstellenreduktion nach HOAI 1–8.",
           en: "Executive sales brief on construction compression, zoning code certainty, and unified HOAI execution.",
         },
-        format: "DIN Lang Z-Falz · 6 Seiten",
+        format: "DIN A5 Z-Falz · 6 Seiten",
         documentUrl: "/documents/flyer-b2b-developer.html",
         badge: {
           de: "B2B VERTRIEB",
@@ -101,7 +101,7 @@ export const portalClients: PortalClient[] = [
           de: "Technische Broschüre zu Liapor Leichtbeton, wetterunabhängiger Werksproduktion und nachhaltigem Rohbau.",
           en: "Technical compendium covering Liapor lightweight concrete, weather-independent manufacturing, and circular build.",
         },
-        format: "DIN Lang Z-Falz · 6 Seiten",
+        format: "DIN A5 Z-Falz · 6 Seiten",
         documentUrl: "/documents/flyer-din-lang.html",
         badge: {
           de: "BAUSTOFF-DIALOG",
@@ -120,7 +120,7 @@ export const portalClients: PortalClient[] = [
           de: "Visueller Nachweis realisierter FCN-Bauprojekte in Seeheim-Jugenheim und der Metropolregion Rhein-Main.",
           en: "Visual proof of completed FCN precast projects in Seeheim-Jugenheim and the Rhine-Main metropolitan area.",
         },
-        format: "DIN Lang Z-Falz · 6 Seiten",
+        format: "DIN A5 Z-Falz · 6 Seiten",
         documentUrl: "/documents/flyer-gallery.html",
         badge: {
           de: "PORTFOLIO",
@@ -139,7 +139,7 @@ export const portalClients: PortalClient[] = [
           de: "Chronologische Baudokumentation von der Genehmigungsplanung bis zur schlüsselfertigen Übergabe.",
           en: "Step-by-step case study tracing the construction progression from permit engineering to turnkey delivery.",
         },
-        format: "DIN Lang Z-Falz · 6 Seiten",
+        format: "DIN A5 Z-Falz · 6 Seiten",
         documentUrl: "/documents/flyer-casestudy.html",
         badge: {
           de: "CASE STUDY",

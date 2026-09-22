@@ -77,7 +77,8 @@ function syncContactWithConfig(content) {
     .replace(/(?:\.\.\/public|\.\/public)\/qr-shams\.svg/g, "/qr-shams.svg")
     .replace(/(?:\.\.\/public|\.\/public)\/images\//g, "/images/")
     .replace(/(?:\.\/files\/|\.\/)(Image\.jpg)/g, "/images/b2b/$1")
-    .replace(/(?:\.\/files\/|\.\/)([1-6]\.png)/g, "/images/b2b/$1");
+    .replace(/(?:\.\/files\/|\.\/)([1-6]\.png)/g, "/images/b2b/$1")
+    .replace(/(?:\.\/files\/|\.\/)(fcn-(?:exterior|interior)-(?:before|after)\.jpg)/g, "/images/before-after/$1");
 
   // 5. Inject auto-print script if not present
   if (!updated.includes("URLSearchParams") && updated.includes("</body>")) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { PortalFile } from "../../data/flyers";
 import { FcnPartnershipFlyer } from "./FcnPartnershipFlyer";
@@ -89,7 +89,7 @@ export function FlyerViewerModal({
       {/* Print isolation styles */}
       <style>{`
         @page {
-          size: ${isDinLang ? "297mm 210mm" : "210mm 297mm"};
+          size: ${isDinLang ? "210mm 148mm" : "148mm 210mm"};
           margin: 0;
         }
         @media print {
@@ -240,7 +240,7 @@ export function FlyerViewerModal({
             </div>
           ) : (
             <div className="text-xs text-zinc-400 font-medium px-2">
-              DIN A4 Whitepaper · 5 Seiten
+              DIN A5 Whitepaper · 5 Seiten
             </div>
           )}
 

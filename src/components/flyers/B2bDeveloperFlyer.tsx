@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTACT } from "../../lib/contact";
 import { FlyerProps } from "./types";
 
@@ -26,8 +25,8 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         }
 
         .flyer-b2b .sheet {
-          width: 297mm;
-          height: 210mm;
+          width: 210mm;
+          height: 148mm;
           background: #ffffff;
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
           display: flex;
@@ -38,8 +37,8 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         }
 
         .flyer-b2b .panel {
-          width: 99mm;
-          height: 210mm;
+          width: 70mm;
+          height: 148mm;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -49,11 +48,11 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         .flyer-b2b .panel:last-child { border-right: none; }
         .flyer-b2b .fold-marker {
           position: absolute;
-          top: 4px;
-          right: 4px;
-          font-size: 8px;
+          top: 3px;
+          right: 3px;
+          font-size: 7px;
           text-transform: uppercase;
-          letter-spacing: 1px;
+          letter-spacing: 0.8px;
           color: #9aa0a6;
           pointer-events: none;
         }
@@ -65,56 +64,56 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
           height: 100%;
           background: #ffffff;
         }
-        .flyer-b2b .cover-top { padding: 8mm 8mm 3mm 8mm; }
-        .flyer-b2b .logo-img { height: 15mm; object-fit: contain; margin-bottom: 2mm; display: block; }
+        .flyer-b2b .cover-top { padding: 4mm 5mm 2mm 5mm; }
+        .flyer-b2b .logo-img { height: 10mm; object-fit: contain; margin-bottom: 1.5mm; display: block; }
         .flyer-b2b .b2b-badge {
           display: inline-block;
           background: #eef2f6;
           color: var(--brand-dark);
-          font-size: 6.2pt;
+          font-size: 5pt;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 1px;
-          padding: 1mm 2.2mm;
-          border-radius: 1mm;
-          margin-bottom: 1.5mm;
+          letter-spacing: 0.8px;
+          padding: 0.8mm 1.8mm;
+          border-radius: 0.8mm;
+          margin-bottom: 1mm;
         }
         .flyer-b2b .b2b-title {
-          font-size: 16pt;
+          font-size: 11pt;
           font-weight: 800;
-          line-height: 1.18;
+          line-height: 1.15;
           color: var(--brand-dark);
           letter-spacing: -0.3px;
         }
         .flyer-b2b .b2b-title span { color: var(--brand-red); }
         .flyer-b2b .b2b-sub {
-          font-size: 7.6pt;
-          line-height: 1.35;
+          font-size: 5.5pt;
+          line-height: 1.3;
           color: var(--brand-muted);
-          margin-top: 1.5mm;
+          margin-top: 1mm;
         }
 
         .flyer-b2b .cover-hero-img {
           flex: 1;
           position: relative;
-          margin: 2mm 8mm;
-          border-radius: 2mm;
+          margin: 1.5mm 5mm;
+          border-radius: 1.5mm;
           overflow: hidden;
-          box-shadow: 0 2mm 6mm rgba(0,0,0,0.12);
+          box-shadow: 0 1.5mm 4mm rgba(0,0,0,0.12);
         }
         .flyer-b2b .cover-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .flyer-b2b .cover-founder-badge {
           display: flex;
           align-items: center;
-          gap: 2.5mm;
+          gap: 2mm;
           border-top: 1px solid var(--brand-border);
           background: #fafbfc;
-          padding: 2.5mm 8mm;
+          padding: 1.8mm 5mm;
         }
         .flyer-b2b .cover-founder-avatar {
-          width: 9mm;
-          height: 9mm;
+          width: 7mm;
+          height: 7mm;
           border-radius: 50%;
           overflow: hidden;
           flex-shrink: 0;
@@ -131,58 +130,58 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         /* CENTER PANEL */
         .flyer-b2b .b2b-center {
           background: #f8fafc;
-          padding: 7.5mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
-        .flyer-b2b .eyebrow { font-size: 6.5pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--brand-red); }
-        .flyer-b2b .sec-h2 { font-size: 12pt; font-weight: 800; color: var(--brand-dark); line-height: 1.25; margin: 1mm 0 2.5mm 0; }
+        .flyer-b2b .eyebrow { font-size: 5pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-red); }
+        .flyer-b2b .sec-h2 { font-size: 8.5pt; font-weight: 800; color: var(--brand-dark); line-height: 1.2; margin: 0.8mm 0 1.8mm 0; }
 
         .flyer-b2b .metrics-bar {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 1.5mm;
-          margin-bottom: 3mm;
+          gap: 1mm;
+          margin-bottom: 2mm;
         }
         .flyer-b2b .m-box {
           background: #ffffff;
           border: 1px solid var(--brand-border);
-          border-radius: 1.5mm;
-          padding: 2mm 1.5mm;
+          border-radius: 1.2mm;
+          padding: 1.2mm 1mm;
           text-align: center;
         }
-        .flyer-b2b .m-val { font-size: 11pt; font-weight: 800; color: var(--brand-red); }
-        .flyer-b2b .m-lbl { font-size: 5.5pt; font-weight: 600; color: var(--brand-muted); line-height: 1.2; margin-top: 0.5mm; }
+        .flyer-b2b .m-val { font-size: 8.5pt; font-weight: 800; color: var(--brand-red); }
+        .flyer-b2b .m-lbl { font-size: 4.5pt; font-weight: 600; color: var(--brand-muted); line-height: 1.15; margin-top: 0.3mm; }
 
         .flyer-b2b .portfolio-duo {
           display: flex;
           flex-direction: column;
-          gap: 2mm;
-          margin-bottom: 2.5mm;
+          gap: 1.5mm;
+          margin-bottom: 2mm;
         }
         .flyer-b2b .duo-card {
-          height: 38mm;
+          height: 25mm;
           position: relative;
-          border-radius: 2mm;
+          border-radius: 1.5mm;
           overflow: hidden;
-          box-shadow: 0 1.5mm 5mm rgba(0,0,0,0.08);
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-b2b .duo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .flyer-b2b .b2b-synergy-quote {
           background: #ffffff;
-          border-left: 3px solid var(--brand-red);
-          padding: 2mm 2.5mm;
-          border-radius: 0 1.5mm 1.5mm 0;
-          font-size: 6.2pt;
-          line-height: 1.35;
+          border-left: 2.5px solid var(--brand-red);
+          padding: 1.5mm 2mm;
+          border-radius: 0 1.2mm 1.2mm 0;
+          font-size: 5pt;
+          line-height: 1.3;
           color: #374151;
         }
 
         /* RIGHT PANEL */
         .flyer-b2b .b2b-right {
-          padding: 7.5mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -190,62 +189,62 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
         }
         .flyer-b2b .site-mini-img {
           width: 100%;
-          height: 44mm;
-          border-radius: 2mm;
+          height: 26mm;
+          border-radius: 1.5mm;
           overflow: hidden;
           position: relative;
-          margin-bottom: 2.5mm;
-          box-shadow: 0 1.5mm 5mm rgba(0,0,0,0.08);
+          margin-bottom: 1.8mm;
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-b2b .site-mini-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .flyer-b2b .services-b2b-list {
           display: flex;
           flex-direction: column;
-          gap: 2mm;
-          margin-bottom: 2mm;
+          gap: 1.2mm;
+          margin-bottom: 1.5mm;
         }
         .flyer-b2b .sb-item {
           display: flex;
-          gap: 2mm;
-          font-size: 6.6pt;
-          line-height: 1.35;
+          gap: 1.5mm;
+          font-size: 5pt;
+          line-height: 1.28;
         }
         .flyer-b2b .sb-icon {
-          width: 4.2mm;
-          height: 4.2mm;
-          border-radius: 1mm;
+          width: 3.2mm;
+          height: 3.2mm;
+          border-radius: 0.8mm;
           background: #f1f3f7;
           color: var(--brand-red);
-          font-size: 6pt;
+          font-size: 4.8pt;
           font-weight: 800;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          margin-top: 0.3mm;
+          margin-top: 0.2mm;
         }
         .flyer-b2b .sb-text strong { color: var(--brand-dark); }
-        .flyer-b2b .sb-text p { color: var(--brand-muted); margin-top: 0.2mm; }
+        .flyer-b2b .sb-text p { color: var(--brand-muted); margin-top: 0.1mm; }
 
         /* HUMANIZED B2B CTA */
         .flyer-b2b .b2b-cta-card {
           background: var(--brand-dark);
           color: #ffffff;
-          border-radius: 2.5mm;
-          padding: 3mm;
+          border-radius: 2mm;
+          padding: 2mm 2.5mm;
           display: flex;
           flex-direction: column;
-          gap: 1.8mm;
+          gap: 1.2mm;
         }
-        .flyer-b2b .b2b-cta-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1mm; }
-        .flyer-b2b .b2b-cta-head h4 { font-size: 7.8pt; font-weight: 700; color: #fff; }
-        .flyer-b2b .b2b-cta-body { display: flex; align-items: center; gap: 2.8mm; }
+        .flyer-b2b .b2b-cta-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.8mm; }
+        .flyer-b2b .b2b-cta-head h4 { font-size: 6.2pt; font-weight: 700; color: #fff; }
+        .flyer-b2b .b2b-cta-body { display: flex; align-items: center; gap: 2mm; }
         
         .flyer-b2b .founder-avatar {
-          width: 16mm;
-          height: 20mm;
-          border-radius: 1.5mm;
+          width: 11mm;
+          height: 14mm;
+          border-radius: 1.2mm;
           overflow: hidden;
           flex-shrink: 0;
           border: 1px solid rgba(255, 255, 255, 0.25);
@@ -258,19 +257,19 @@ export function B2bDeveloperFlyer({ language = "all", className = "" }: FlyerPro
           display: block;
         }
 
-        .flyer-b2b .qr-frame { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; }
+        .flyer-b2b .qr-frame { width: 12mm; height: 12mm; background: #fff; border-radius: 1.2mm; padding: 0.6mm; flex-shrink: 0; }
         .flyer-b2b .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
-        .flyer-b2b .cta-txt { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
+        .flyer-b2b .cta-txt { font-size: 4.8pt; line-height: 1.25; color: #d1d5db; }
         .flyer-b2b .cta-txt strong { color: #fff; }
         .flyer-b2b a { color: inherit; text-decoration: none; }
         .flyer-b2b a:hover { text-decoration: underline; }
-        .flyer-b2b .cta-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: block; }
-        .flyer-b2b .b2b-cta-foot { font-size: 5.6pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.8mm; }
+        .flyer-b2b .cta-phone { font-size: 6.2pt; font-weight: 800; color: #ff6b6b; margin-top: 0.3mm; display: block; }
+        .flyer-b2b .b2b-cta-foot { font-size: 4.5pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.6mm; }
         .flyer-b2b .b2b-cta-foot a { color: #d1d5db; font-weight: 600; }
         .flyer-b2b .b2b-cta-foot a:hover { color: #ffffff; }
 
         @media print {
-          @page { size: 297mm 210mm; margin: 0; }
+          @page { size: 210mm 148mm; margin: 0; }
           .flyer-b2b { background: none; padding: 0; margin: 0; gap: 0; display: block !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           .flyer-b2b .fold-marker { display: none !important; }
           .flyer-b2b .sheet { box-shadow: none; page-break-after: always; break-after: page; }

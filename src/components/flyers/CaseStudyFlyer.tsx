@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTACT } from "../../lib/contact";
 import { FlyerProps } from "./types";
 
@@ -26,8 +25,8 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         }
 
         .flyer-casestudy .sheet {
-          width: 297mm;
-          height: 210mm;
+          width: 210mm;
+          height: 148mm;
           background: #ffffff;
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
           display: flex;
@@ -38,8 +37,8 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         }
 
         .flyer-casestudy .panel {
-          width: 99mm;
-          height: 210mm;
+          width: 70mm;
+          height: 148mm;
           position: relative;
           overflow: hidden;
           display: flex;
@@ -49,42 +48,42 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         .flyer-casestudy .panel:last-child { border-right: none; }
         .flyer-casestudy .fold-marker {
           position: absolute;
-          top: 4px;
-          right: 4px;
-          font-size: 8px;
+          top: 3px;
+          right: 3px;
+          font-size: 7px;
           text-transform: uppercase;
-          letter-spacing: 1px;
+          letter-spacing: 0.8px;
           color: #9aa0a6;
           pointer-events: none;
         }
 
         /* PANEL 1: COVER */
         .flyer-casestudy .panel-story-cover {
-          padding: 8mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           background: #ffffff;
         }
-        .flyer-casestudy .logo-img { height: 16mm; object-fit: contain; margin-bottom: 2mm; display: block; }
-        .flyer-casestudy .sub-brand { font-size: 8pt; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #374151; }
-        .flyer-casestudy .story-hero-title { font-size: 17.5pt; font-weight: 800; line-height: 1.18; color: var(--brand-dark); margin: 3mm 0 1.5mm 0; }
+        .flyer-casestudy .logo-img { height: 10mm; object-fit: contain; margin-bottom: 1.5mm; display: block; }
+        .flyer-casestudy .sub-brand { font-size: 5.5pt; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #374151; }
+        .flyer-casestudy .story-hero-title { font-size: 11pt; font-weight: 800; line-height: 1.15; color: var(--brand-dark); margin: 1.5mm 0 1mm 0; }
         .flyer-casestudy .story-hero-title span { color: var(--brand-red); }
-        .flyer-casestudy .story-hero-desc { font-size: 8pt; line-height: 1.4; color: var(--brand-muted); margin-bottom: 2mm; }
+        .flyer-casestudy .story-hero-desc { font-size: 5.5pt; line-height: 1.3; color: var(--brand-muted); margin-bottom: 1.5mm; }
 
         .flyer-casestudy .hero-split-images {
           display: flex;
           flex-direction: column;
-          gap: 2.5mm;
-          height: 98mm;
-          margin-bottom: 2mm;
+          gap: 1.5mm;
+          height: 62mm;
+          margin-bottom: 1.5mm;
         }
         .flyer-casestudy .split-card {
-          height: 47mm;
-          border-radius: 2mm;
+          height: 30mm;
+          border-radius: 1.5mm;
           overflow: hidden;
           position: relative;
-          box-shadow: 0 2mm 5mm rgba(0,0,0,0.08);
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-casestudy .split-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
@@ -92,13 +91,13 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         .flyer-casestudy .cover-founder-badge {
           display: flex;
           align-items: center;
-          gap: 2.5mm;
+          gap: 2mm;
           border-top: 1px solid #e5e7eb;
-          padding-top: 2mm;
+          padding-top: 1.5mm;
         }
         .flyer-casestudy .cover-founder-avatar {
-          width: 9mm;
-          height: 9mm;
+          width: 7mm;
+          height: 7mm;
           border-radius: 50%;
           overflow: hidden;
           flex-shrink: 0;
@@ -115,57 +114,57 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         /* PANEL 2: TIMELINE */
         .flyer-casestudy .panel-timeline {
           background: #fafbfc;
-          padding: 8mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
-        .flyer-casestudy .eyebrow { font-size: 6.8pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--brand-red); }
-        .flyer-casestudy .panel-title { font-size: 12.5pt; font-weight: 800; color: var(--brand-dark); line-height: 1.25; margin: 1mm 0 3mm 0; }
+        .flyer-casestudy .eyebrow { font-size: 5pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-red); }
+        .flyer-casestudy .panel-title { font-size: 8.5pt; font-weight: 800; color: var(--brand-dark); line-height: 1.2; margin: 0.8mm 0 2mm 0; }
 
         .flyer-casestudy .timeline-spacious-stack {
           display: flex;
           flex-direction: column;
-          gap: 2.5mm;
+          gap: 1.5mm;
         }
         .flyer-casestudy .phase-card {
           background: #ffffff;
           border: 1px solid var(--brand-border);
-          border-radius: 2mm;
-          padding: 2.2mm 3mm;
-          box-shadow: 0 1mm 3mm rgba(0,0,0,0.03);
+          border-radius: 1.5mm;
+          padding: 1.5mm 2mm;
+          box-shadow: 0 0.8mm 2mm rgba(0,0,0,0.03);
         }
         .flyer-casestudy .phase-header-row {
           display: flex;
           align-items: baseline;
-          gap: 2mm;
-          margin-bottom: 0.8mm;
+          gap: 1.5mm;
+          margin-bottom: 0.5mm;
         }
         .flyer-casestudy .phase-tag {
-          font-size: 6.2pt;
+          font-size: 5pt;
           font-weight: 800;
           color: var(--brand-red);
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.4px;
         }
         .flyer-casestudy .phase-name {
-          font-size: 7.8pt;
+          font-size: 6.2pt;
           font-weight: 700;
           color: var(--brand-dark);
         }
         .flyer-casestudy .phase-desc {
-          font-size: 6.8pt;
-          line-height: 1.4;
+          font-size: 5.2pt;
+          line-height: 1.25;
           color: var(--brand-muted);
         }
 
         .flyer-casestudy .featured-progress-photo {
           width: 100%;
-          height: 38mm;
-          border-radius: 2mm;
+          height: 24mm;
+          border-radius: 1.5mm;
           overflow: hidden;
-          margin: 2mm 0;
-          box-shadow: 0 2mm 6mm rgba(0,0,0,0.08);
+          margin: 1.5mm 0;
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-casestudy .featured-progress-photo img {
           width: 100%;
@@ -177,17 +176,17 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         .flyer-casestudy .result-pill {
           background: #ffffff;
           border: 1px solid var(--brand-border);
-          border-left: 3px solid var(--brand-red);
-          padding: 2mm 3mm;
-          border-radius: 1.5mm;
-          font-size: 6.6pt;
-          line-height: 1.35;
+          border-left: 2.5px solid var(--brand-red);
+          padding: 1.5mm 2mm;
+          border-radius: 1.2mm;
+          font-size: 5.2pt;
+          line-height: 1.25;
           color: var(--brand-dark);
         }
 
         /* PANEL 3: B2B BENEFITS & HUMANIZED THUMB ZONE */
         .flyer-casestudy .panel-conclusion {
-          padding: 8mm;
+          padding: 4.5mm 5mm;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -195,49 +194,49 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
         }
         .flyer-casestudy .hero-banner-wrap {
           width: 100%;
-          height: 48mm;
-          border-radius: 2mm;
+          height: 30mm;
+          border-radius: 1.5mm;
           overflow: hidden;
           position: relative;
-          margin-bottom: 2.5mm;
-          box-shadow: 0 2mm 5mm rgba(0,0,0,0.08);
+          margin-bottom: 1.8mm;
+          box-shadow: 0 1mm 3mm rgba(0,0,0,0.08);
         }
         .flyer-casestudy .hero-banner-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .flyer-casestudy .key-facts {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 1.8mm;
-          margin-bottom: 2.5mm;
+          gap: 1.2mm;
+          margin-bottom: 1.8mm;
         }
         .flyer-casestudy .fact-card {
           background: var(--brand-light);
-          border-radius: 2mm;
-          padding: 2mm 2.5mm;
+          border-radius: 1.5mm;
+          padding: 1.5mm 2mm;
           border: 1px solid var(--brand-border);
         }
-        .flyer-casestudy .fact-card .fact-val { font-size: 10.5pt; font-weight: 800; color: var(--brand-red); }
-        .flyer-casestudy .fact-card .fact-lbl { font-size: 6pt; color: #4b5563; line-height: 1.25; margin-top: 0.3mm; }
+        .flyer-casestudy .fact-card .fact-val { font-size: 8.5pt; font-weight: 800; color: var(--brand-red); }
+        .flyer-casestudy .fact-card .fact-lbl { font-size: 4.8pt; color: #4b5563; line-height: 1.15; margin-top: 0.2mm; }
 
         /* HUMANIZED FOUNDER CTA CARD */
         .flyer-casestudy .tz-box {
           background: var(--brand-dark);
           color: #fff;
-          border-radius: 3mm;
-          padding: 3.5mm;
+          border-radius: 2mm;
+          padding: 2mm 2.5mm;
           display: flex;
           flex-direction: column;
-          gap: 2mm;
-          box-shadow: 0 3mm 8mm rgba(18,20,23,0.25);
+          gap: 1.2mm;
+          box-shadow: 0 2mm 5mm rgba(18,20,23,0.25);
         }
-        .flyer-casestudy .tz-box-top { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1.2mm; }
-        .flyer-casestudy .tz-box-top h4 { font-size: 7.8pt; font-weight: 700; color: #fff; }
-        .flyer-casestudy .tz-box-body { display: flex; align-items: center; gap: 2.8mm; }
+        .flyer-casestudy .tz-box-top { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.8mm; }
+        .flyer-casestudy .tz-box-top h4 { font-size: 6.2pt; font-weight: 700; color: #fff; }
+        .flyer-casestudy .tz-box-body { display: flex; align-items: center; gap: 2mm; }
         
         .flyer-casestudy .founder-avatar {
-          width: 16mm;
-          height: 20mm;
-          border-radius: 1.5mm;
+          width: 11mm;
+          height: 14mm;
+          border-radius: 1.2mm;
           overflow: hidden;
           flex-shrink: 0;
           border: 1px solid rgba(255, 255, 255, 0.25);
@@ -250,18 +249,18 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
           display: block;
         }
 
-        .flyer-casestudy .tz-contacts { font-size: 6.5pt; line-height: 1.35; color: #d1d5db; }
+        .flyer-casestudy .tz-contacts { font-size: 4.8pt; line-height: 1.25; color: #d1d5db; }
         .flyer-casestudy a { color: inherit; text-decoration: none; }
         .flyer-casestudy a:hover { text-decoration: underline; }
-        .flyer-casestudy .tz-phone { font-size: 7.8pt; font-weight: 800; color: #ff6b6b; margin-top: 0.4mm; display: block; }
-        .flyer-casestudy .qr-frame { width: 17mm; height: 17mm; background: #fff; border-radius: 1.5mm; padding: 0.8mm; flex-shrink: 0; display: block; }
+        .flyer-casestudy .tz-phone { font-size: 6.2pt; font-weight: 800; color: #ff6b6b; margin-top: 0.3mm; display: block; }
+        .flyer-casestudy .qr-frame { width: 12mm; height: 12mm; background: #fff; border-radius: 1.2mm; padding: 0.6mm; flex-shrink: 0; display: block; }
         .flyer-casestudy .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
-        .flyer-casestudy .tz-box-foot { font-size: 5.8pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1mm; }
+        .flyer-casestudy .tz-box-foot { font-size: 4.5pt; color: #9ca3af; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.6mm; }
         .flyer-casestudy .tz-box-foot a { color: #d1d5db; font-weight: 600; }
         .flyer-casestudy .tz-box-foot a:hover { color: #ffffff; }
 
         @media print {
-          @page { size: 297mm 210mm; margin: 0; }
+          @page { size: 210mm 148mm; margin: 0; }
           .flyer-casestudy { background: none; padding: 0; margin: 0; gap: 0; display: block !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           .flyer-casestudy .fold-marker { display: none !important; }
           .flyer-casestudy .sheet { box-shadow: none; page-break-after: always; break-after: page; }
@@ -285,10 +284,10 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
 
             <div className="hero-split-images">
               <div className="split-card">
-                <img src="/images/b2b/Image.jpg" alt="Montage vor Ort mit Kran" />
+                <img src="/images/before-after/fcn-exterior-before.jpg" alt="Montage vor Ort FCN Liapor Rohbau" />
               </div>
               <div className="split-card">
-                <img src="/images/b2b/1.png" alt="Vollendete Architektur Seeheim-Jugenheim" />
+                <img src="/images/before-after/fcn-exterior-after.jpg" alt="Vollendete schlüsselfertige Architektur" />
               </div>
             </div>
 
@@ -426,10 +425,10 @@ export function CaseStudyFlyer({ language = "all", className = "" }: FlyerProps)
 
             <div className="hero-split-images">
               <div className="split-card">
-                <img src="/images/b2b/Image.jpg" alt="Crane Montage with Precast Elements" />
+                <img src="/images/before-after/fcn-exterior-before.jpg" alt="FCN Precast Shell Assembly on Site" />
               </div>
               <div className="split-card">
-                <img src="/images/b2b/1.png" alt="Completed Modern Turnkey Residence" />
+                <img src="/images/before-after/fcn-exterior-after.jpg" alt="Completed Modern Turnkey Residence" />
               </div>
             </div>
 
