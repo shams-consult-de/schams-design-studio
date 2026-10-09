@@ -81,6 +81,14 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/+(?:qualit.*tssiegel.*nachhaltiges.*) [NC]
   RewriteRule ^ https://shams-consult.de/project/qs-nachhaltiges-gebaeude-goetzenhain [R=301,L]
 
+  # Legacy vCard file downloads
+  RewriteCond %{REQUEST_URI} ^/+(?:.*Planungsb.*ro.*Shams.*Consult.*\.vcf|.*majeed.*shams.*\.vcf|.*shams-consult\.vcf|app/download/12468669157/.*) [NC]
+  RewriteRule ^ https://shams-consult.de/majeed-shams.vcf [R=301,L]
+
+  # Digital Business Card & vCard Page Aliases
+  RewriteCond %{REQUEST_URI} ^/+(?:vcard|visitenkarte|kontaktkarte|contact-card)/?$ [NC]
+  RewriteRule ^ https://shams-consult.de/card [R=301,L]
+
   # Legacy app download files -> /contact
   RewriteCond %{REQUEST_URI} ^/+(?:app/download/.*) [NC]
   RewriteRule ^ https://shams-consult.de/contact [R=301,L]
@@ -98,89 +106,113 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/+(?:vorhabenbezogene-bebauungspl.*) [NC]
   RewriteRule ^ https://shams-consult.de/services [R=301,L]
 
-  # Projects: Spital Günzburg
-  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-spital-guenzburg.*) [NC]
+  # Projects: Spital Günzburg (matches with or without /project/)
+  RewriteCond %{REQUEST_URI} ^/+(?:project/)?vep-spital-guenzburg.* [NC]
   RewriteRule ^ https://shams-consult.de/project/vep-alten-und-pflegeheim-guenzburg [R=301,L]
 
-  # Projects: Töpfenmühle Gersfeld
-  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-toepfenmuehle-gersfeld.*) [NC]
+  # Projects: Töpfenmühle Gersfeld (matches with or without /project/)
+  RewriteCond %{REQUEST_URI} ^/+(?:project/)?vep-toepfenmuehle-gersfeld.* [NC]
   RewriteRule ^ https://shams-consult.de/project/bebauungsplan-toepfenmuehle-gersfeld [R=301,L]
 
-  # Projects: Baufeld 5 Neu-Ulm
-  RewriteCond %{REQUEST_URI} ^/+(?:project/vep-baufeld-5-neu-ulm.*) [NC]
+  # Projects: Baufeld 5 Neu-Ulm (matches with or without /project/)
+  RewriteCond %{REQUEST_URI} ^/+(?:project/)?vep-baufeld-5-neu-ulm.* [NC]
   RewriteRule ^ https://shams-consult.de/project/bebauungsplan-neu-ulm-baufeld-5-ost [R=301,L]
+
+  # Projects: Mehrfamilienhaus Dreieich-Götzenhain (without /project/)
+  RewriteCond %{REQUEST_URI} ^/+mehrfamilienhaus-dreieich-goetzenhain.* [NC]
+  RewriteRule ^ https://shams-consult.de/project/mehrfamilienhaus-dreieich-goetzenhain [R=301,L]
+
+  # Projects: Einfamilienhaus Lingen (Ems) (without /project/)
+  RewriteCond %{REQUEST_URI} ^/+einfamilienhaus-lingen-ems.* [NC]
+  RewriteRule ^ https://shams-consult.de/project/einfamilienhaus-lingen-ems [R=301,L]
+
+  # Projects: Kindergarten Schemmerhofen (without /project/)
+  RewriteCond %{REQUEST_URI} ^/+kindergarten-schemmerhofen.* [NC]
+  RewriteRule ^ https://shams-consult.de/project/kindergarten-schemmerhofen [R=301,L]
+
+  # Projects: QS Nachhaltiges Gebäude Götzenhain (without /project/)
+  RewriteCond %{REQUEST_URI} ^/+qs-nachhaltiges-gebaeude-goetzenhain.* [NC]
+  RewriteRule ^ https://shams-consult.de/project/qs-nachhaltiges-gebaeude-goetzenhain [R=301,L]
+
+  # Legacy CMS & Moderation routes
+  RewriteCond %{REQUEST_URI} ^/+(?:auth|moderation)(?:/.*)?$ [NC]
+  RewriteRule ^ https://shams-consult.de/founder-portal [R=301,L]
+
+  # Legacy taxonomy & blog categories
+  RewriteCond %{REQUEST_URI} ^/+(?:kategorie|category|tag|tags)(?:/.*)?$ [NC]
+  RewriteRule ^ https://shams-consult.de/blog [R=301,L]
 
   # ----------------------------------------------------------------------------
   # 2c. Complete 301 Redirects for Aliases to Canonical Routes (Single Hop UX)
   # ----------------------------------------------------------------------------
   # Contact aliases
-  RewriteRule ^en/(?:kontakt|beratung|termin)/?$ https://shams-consult.de/en/contact [R=301,L,NC]
-  RewriteRule ^(?:kontakt|beratung|termin)/?$ https://shams-consult.de/contact [R=301,L,NC]
+  RewriteRule ^en/(?:kontakt|beratung|termin)(?:\.html)?/?$ https://shams-consult.de/en/contact [R=301,L,NC]
+  RewriteRule ^(?:kontakt|beratung|termin)(?:\.html)?/?$ https://shams-consult.de/contact [R=301,L,NC]
 
   # Services aliases (strictly delimited to avoid affecting /architektur-frankfurt etc.)
-  RewriteRule ^en/(?:leistungen|hoai|architektur)/?$ https://shams-consult.de/en/services [R=301,L,NC]
-  RewriteRule ^(?:leistungen|hoai|architektur)/?$ https://shams-consult.de/services [R=301,L,NC]
+  RewriteRule ^en/(?:leistungen|hoai|architektur)(?:\.html)?/?$ https://shams-consult.de/en/services [R=301,L,NC]
+  RewriteRule ^(?:leistungen|hoai|architektur)(?:\.html)?/?$ https://shams-consult.de/services [R=301,L,NC]
 
   # Dynamic Projects aliases (/projekt/slug, /projekte/slug -> /project/slug)
   RewriteRule ^en/(?:projekt|projekte)/(.*)$ https://shams-consult.de/en/project/$1 [R=301,L,NC]
   RewriteRule ^(?:projekt|projekte)/(.*)$ https://shams-consult.de/project/$1 [R=301,L,NC]
 
   # Projects top-level aliases
-  RewriteRule ^en/(?:projekte|portfolio|bauten|arbeiten)/?$ https://shams-consult.de/en/projects [R=301,L,NC]
-  RewriteRule ^(?:projekte|portfolio|bauten|arbeiten)/?$ https://shams-consult.de/projects [R=301,L,NC]
+  RewriteRule ^en/(?:projekte|portfolio|bauten|arbeiten)(?:\.html)?/?$ https://shams-consult.de/en/projects [R=301,L,NC]
+  RewriteRule ^(?:projekte|portfolio|bauten|arbeiten)(?:\.html)?/?$ https://shams-consult.de/projects [R=301,L,NC]
 
   # About aliases
-  RewriteRule ^en/(?:buero|b[^\/]*ro|geschichte|philosophie|karriere|kundenfeedback|ueber-uns|[^\/]*ber-uns|wir-ueber-uns|team|profil|agentur)/?$ https://shams-consult.de/en/about [R=301,L,NC]
-  RewriteRule ^(?:buero|b[^\/]*ro|geschichte|philosophie|karriere|kundenfeedback|ueber-uns|[^\/]*ber-uns|wir-ueber-uns|team|profil|agentur)/?$ https://shams-consult.de/about [R=301,L,NC]
+  RewriteRule ^en/(?:buero|b[^\/]*ro|geschichte|philosophie|karriere|kundenfeedback|ueber-uns|[^\/]*ber-uns|wir-ueber-uns|team|profil|agentur)(?:\.html)?/?$ https://shams-consult.de/en/about [R=301,L,NC]
+  RewriteRule ^(?:buero|b[^\/]*ro|geschichte|philosophie|karriere|kundenfeedback|ueber-uns|[^\/]*ber-uns|wir-ueber-uns|team|profil|agentur)(?:\.html)?/?$ https://shams-consult.de/about [R=301,L,NC]
 
   # B2B & Developers aliases
-  RewriteRule ^en/(?:bautraeger|bautr[^\/]*ger|investoren|investors|developers|developers-investors|b2b|fcn-kundentag|kundentag|b2b-partner)/?$ https://shams-consult.de/en/bautraeger-investoren [R=301,L,NC]
-  RewriteRule ^(?:bautraeger|bautr[^\/]*ger|investoren|investors|developers|developers-investors|b2b|fcn-kundentag|kundentag|b2b-partner)/?$ https://shams-consult.de/bautraeger-investoren [R=301,L,NC]
+  RewriteRule ^en/(?:bautraeger|bautr[^\/]*ger|investoren|investors|developers|developers-investors|b2b|fcn-kundentag|kundentag|b2b-partner)(?:\.html)?/?$ https://shams-consult.de/en/bautraeger-investoren [R=301,L,NC]
+  RewriteRule ^(?:bautraeger|bautr[^\/]*ger|investoren|investors|developers|developers-investors|b2b|fcn-kundentag|kundentag|b2b-partner)(?:\.html)?/?$ https://shams-consult.de/bautraeger-investoren [R=301,L,NC]
 
   # Founder aliases
-  RewriteRule ^en/(?:gruender|gr[^\/]*nder|inhaber|vita|architekt)/?$ https://shams-consult.de/en/founder [R=301,L,NC]
-  RewriteRule ^(?:gruender|gr[^\/]*nder|inhaber|vita|architekt)/?$ https://shams-consult.de/founder [R=301,L,NC]
+  RewriteRule ^en/(?:gruender|gr[^\/]*nder|inhaber|vita|architekt)(?:\.html)?/?$ https://shams-consult.de/en/founder [R=301,L,NC]
+  RewriteRule ^(?:gruender|gr[^\/]*nder|inhaber|vita|architekt)(?:\.html)?/?$ https://shams-consult.de/founder [R=301,L,NC]
 
   # Research aliases
-  RewriteRule ^en/(?:forschung|lehre|thesen|publikationen)/?$ https://shams-consult.de/en/research [R=301,L,NC]
-  RewriteRule ^(?:forschung|lehre|thesen|publikationen)/?$ https://shams-consult.de/research [R=301,L,NC]
+  RewriteRule ^en/(?:forschung|lehre|thesen|publikationen)(?:\.html)?/?$ https://shams-consult.de/en/research [R=301,L,NC]
+  RewriteRule ^(?:forschung|lehre|thesen|publikationen)(?:\.html)?/?$ https://shams-consult.de/research [R=301,L,NC]
 
   # Dynamic Case Study aliases (/fallstudie/id, /referenz/id -> /case-study/id)
   RewriteRule ^en/(?:fallstudie|referenz)/(.*)$ https://shams-consult.de/en/case-study/$1 [R=301,L,NC]
   RewriteRule ^(?:fallstudie|referenz)/(.*)$ https://shams-consult.de/case-study/$1 [R=301,L,NC]
 
   # Clients & Case Studies top-level aliases
-  RewriteRule ^en/(?:kunden|partner|partners|referenzen|auftraggeber|case-studies)/?$ https://shams-consult.de/en/clients [R=301,L,NC]
-  RewriteRule ^(?:kunden|partner|partners|referenzen|auftraggeber|case-studies)/?$ https://shams-consult.de/clients [R=301,L,NC]
+  RewriteRule ^en/(?:kunden|partner|partners|referenzen|auftraggeber|case-studies)(?:\.html)?/?$ https://shams-consult.de/en/clients [R=301,L,NC]
+  RewriteRule ^(?:kunden|partner|partners|referenzen|auftraggeber|case-studies)(?:\.html)?/?$ https://shams-consult.de/clients [R=301,L,NC]
 
   # Site Visits aliases
-  RewriteRule ^en/(?:album|einblicke|vor-ort|baustellen)/?$ https://shams-consult.de/en/site-visits [R=301,L,NC]
-  RewriteRule ^(?:album|einblicke|vor-ort|baustellen)/?$ https://shams-consult.de/site-visits [R=301,L,NC]
+  RewriteRule ^en/(?:album|einblicke|vor-ort|baustellen)(?:\.html)?/?$ https://shams-consult.de/en/site-visits [R=301,L,NC]
+  RewriteRule ^(?:album|einblicke|vor-ort|baustellen)(?:\.html)?/?$ https://shams-consult.de/site-visits [R=301,L,NC]
 
   # Dynamic Blog aliases (/magazin/slug, /news/slug, /artikel/slug -> /blog/slug)
   RewriteRule ^en/(?:magazin|news|artikel)/(.*)$ https://shams-consult.de/en/blog/$1 [R=301,L,NC]
   RewriteRule ^(?:magazin|news|artikel)/(.*)$ https://shams-consult.de/blog/$1 [R=301,L,NC]
 
   # Blog top-level aliases
-  RewriteRule ^en/(?:magazin|news|aktuelles|artikel|beitraege)/?$ https://shams-consult.de/en/blog [R=301,L,NC]
-  RewriteRule ^(?:magazin|news|aktuelles|artikel|beitraege)/?$ https://shams-consult.de/blog [R=301,L,NC]
+  RewriteRule ^en/(?:magazin|news|aktuelles|artikel|beitraege)(?:\.html)?/?$ https://shams-consult.de/en/blog [R=301,L,NC]
+  RewriteRule ^(?:magazin|news|aktuelles|artikel|beitraege)(?:\.html)?/?$ https://shams-consult.de/blog [R=301,L,NC]
 
   # Comparison short slug aliases (/slug -> /vergleich/slug)
-  RewriteRule ^en/(boutique-vs-grossbuero|architekt-oder-bautraeger|vollarchitektur-vs-entwurf)/?$ https://shams-consult.de/en/vergleich/$1 [R=301,L,NC]
-  RewriteRule ^(boutique-vs-grossbuero|architekt-oder-bautraeger|vollarchitektur-vs-entwurf)/?$ https://shams-consult.de/vergleich/$1 [R=301,L,NC]
+  RewriteRule ^en/(boutique-vs-grossbuero|architekt-oder-bautraeger|vollarchitektur-vs-entwurf)(?:\.html)?/?$ https://shams-consult.de/en/vergleich/$1 [R=301,L,NC]
+  RewriteRule ^(boutique-vs-grossbuero|architekt-oder-bautraeger|vollarchitektur-vs-entwurf)(?:\.html)?/?$ https://shams-consult.de/vergleich/$1 [R=301,L,NC]
 
   # Legal aliases
-  RewriteRule ^en/imprint/?$ https://shams-consult.de/en/impressum [R=301,L,NC]
-  RewriteRule ^imprint/?$ https://shams-consult.de/impressum [R=301,L,NC]
+  RewriteRule ^en/imprint(?:\.html)?/?$ https://shams-consult.de/en/impressum [R=301,L,NC]
+  RewriteRule ^imprint(?:\.html)?/?$ https://shams-consult.de/impressum [R=301,L,NC]
 
-  RewriteRule ^en/(?:privacy|datenschutzerklaerung|datenschutzerkl[^\/]*rung)/?$ https://shams-consult.de/en/datenschutz [R=301,L,NC]
-  RewriteRule ^(?:privacy|datenschutzerklaerung|datenschutzerkl[^\/]*rung)/?$ https://shams-consult.de/datenschutz [R=301,L,NC]
+  RewriteRule ^en/(?:privacy|datenschutzerklaerung|datenschutzerkl[^\/]*rung)(?:\.html)?/?$ https://shams-consult.de/en/datenschutz [R=301,L,NC]
+  RewriteRule ^(?:privacy|datenschutzerklaerung|datenschutzerkl[^\/]*rung)(?:\.html)?/?$ https://shams-consult.de/datenschutz [R=301,L,NC]
 
-  RewriteRule ^en/widerrufsbelehrung/?$ https://shams-consult.de/en/widerruf [R=301,L,NC]
-  RewriteRule ^widerrufsbelehrung/?$ https://shams-consult.de/widerruf [R=301,L,NC]
+  RewriteRule ^en/widerrufsbelehrung(?:\.html)?/?$ https://shams-consult.de/en/widerruf [R=301,L,NC]
+  RewriteRule ^widerrufsbelehrung(?:\.html)?/?$ https://shams-consult.de/widerruf [R=301,L,NC]
 
-  RewriteRule ^en/accessibility/?$ https://shams-consult.de/en/barrierefreiheit [R=301,L,NC]
-  RewriteRule ^accessibility/?$ https://shams-consult.de/barrierefreiheit [R=301,L,NC]
+  RewriteRule ^en/accessibility(?:\.html)?/?$ https://shams-consult.de/en/barrierefreiheit [R=301,L,NC]
+  RewriteRule ^accessibility(?:\.html)?/?$ https://shams-consult.de/barrierefreiheit [R=301,L,NC]
 
   # Blog legacy categories & tags: /blog/design-und-ästhetik -> /blog
   RewriteCond %{REQUEST_URI} ^/+(?:blog/design-und-[^\/]+)/?$ [NC]
@@ -190,8 +222,14 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/+(?:blog/nachhaltiges-bauen)/?$ [NC]
   RewriteRule ^ https://shams-consult.de/blog/was-bedeutet-nachhaltiges-bauen [R=301,L]
 
+  # ----------------------------------------------------------------------------
+  # 2d. Generic .html Strip for Legacy Direct Requests (Single Hop UX)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} ^[A-Z]+\s/+(?:index)\.html[\s?] [NC]
+  RewriteRule ^ https://shams-consult.de/ [R=301,L]
 
-
+  RewriteCond %{THE_REQUEST} ^[A-Z]+\s/+(?!404\.html)(.+)\.html[\s?] [NC]
+  RewriteRule ^ https://shams-consult.de/%1 [R=301,L]
 
   # 3. Strip trailing slash for pages (except root "/") to match canonical URLs and avoid redirect loops
   RewriteCond %{REQUEST_URI} ^/(.+)/$
@@ -247,6 +285,15 @@ ErrorDocument 404 /404.html
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  <FilesMatch "\.vcf$">
+    Header set Content-Disposition "attachment; filename=\"Majeed-Shams-Architekt.vcf\""
+    Header set Content-Type "text/vcard; charset=utf-8"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType text/vcard .vcf
 </IfModule>
 
 # Gzip / Brotli Compression

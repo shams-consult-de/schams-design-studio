@@ -9,6 +9,7 @@ import { ProjectsPage } from "./components/ProjectsPage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { FounderPage } from "./components/FounderPage";
 import { FounderPortalPage } from "./components/FounderPortalPage";
+import { VCardPage } from "./components/VCardPage";
 import { AboutPage } from "./components/AboutPage";
 import { CaseStudyDetail } from "./components/CaseStudyDetail";
 import { BlogSection } from "./components/BlogSection";
@@ -58,6 +59,7 @@ export function App() {
   const [isProjectsPage, setIsProjectsPage] = useState<boolean>(false);
   const [isFounderPage, setIsFounderPage] = useState<boolean>(false);
   const [isFounderPortalPage, setIsFounderPortalPage] = useState<boolean>(false);
+  const [isVCardPage, setIsVCardPage] = useState<boolean>(false);
   const [isAboutPage, setIsAboutPage] = useState<boolean>(false);
   const [isClientsPage, setIsClientsPage] = useState<boolean>(false);
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
@@ -327,6 +329,35 @@ export function App() {
       return;
     }
 
+    // 5c. Digital Business Card & vCard (/card, /vcard, /visitenkarte, /kontaktkarte, /contact-card)
+    if (
+      path === "/card" ||
+      path === "/vcard" ||
+      path === "/visitenkarte" ||
+      path === "/kontaktkarte" ||
+      path === "/contact-card"
+    ) {
+      setIsVCardPage(true);
+      setIsFounderPortalPage(false);
+      setIsFounderPage(false);
+      setIsAboutPage(false);
+      setIsProjectsPage(false);
+      setIsClientsPage(false);
+      setIsBlogPage(false);
+      setIsResearchPage(false);
+      setIsComparisonPage(false);
+      setIsB2BPage(false);
+      setIsSiteVisitsPage(false);
+      setIsNotFound(false);
+      setActiveProject(null);
+      setActiveCaseStudy(null);
+      setActiveBlogPost(null);
+      setActiveLegalPage(null);
+      setActiveRegionalPage(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     // 6. Projects Overview
     if (
       path === "/projects" ||
@@ -570,6 +601,8 @@ export function App() {
       setIsComparisonPage(false);
       setIsAboutPage(false);
       setIsFounderPage(false);
+      setIsFounderPortalPage(false);
+      setIsVCardPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
       setIsSiteVisitsPage(false);
@@ -595,6 +628,8 @@ export function App() {
     setIsComparisonPage(false);
     setIsAboutPage(false);
     setIsFounderPage(false);
+    setIsFounderPortalPage(false);
+    setIsVCardPage(false);
     setIsProjectsPage(false);
     setIsClientsPage(false);
     setIsSiteVisitsPage(false);
@@ -789,6 +824,27 @@ export function App() {
           { lang: "de", href: "https://shams-consult.de/founder" },
           { lang: "en", href: "https://shams-consult.de/en/founder" },
           { lang: "x-default", href: "https://shams-consult.de/founder" },
+        ],
+      });
+    } else if (isVCardPage) {
+      updatePageSeo({
+        title:
+          language === "en"
+            ? "Dipl.-Ing. Majeed Shams — Digital Business Card & Contact (vCard)"
+            : "Dipl.-Ing. Majeed Shams — Digitale Visitenkarte & Kontakt (vCard) | Shams Consult",
+        description:
+          language === "en"
+            ? "Digital business card of Dipl.-Ing. (FH) Majeed Shams M.Eng. (AKH Hesse No. 21886). Save contact details directly to your phone address book."
+            : "Digitale Visitenkarte von Dipl.-Ing. (FH) Majeed Shams M.Eng. (AKH Hessen Nr. 21886). Kontaktdaten direkt als vCard im Smartphone-Adressbuch speichern.",
+        canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/card" : "/card"}`,
+        breadcrumbs: [
+          { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
+          { name: language === "en" ? "Business Card" : "Visitenkarte", item: language === "en" ? "/en/card" : "/card" },
+        ],
+        alternateLanguages: [
+          { lang: "de", href: "https://shams-consult.de/card" },
+          { lang: "en", href: "https://shams-consult.de/en/card" },
+          { lang: "x-default", href: "https://shams-consult.de/card" },
         ],
       });
     } else if (isB2BPage) {
@@ -1010,6 +1066,7 @@ export function App() {
     isAboutPage,
     isFounderPage,
     isFounderPortalPage,
+    isVCardPage,
     isResearchPage,
     isB2BPage,
     isClientsPage,
@@ -1193,6 +1250,15 @@ export function App() {
         ) : isFounderPage ? (
           /* Dedicated Founder Story Page */
           <FounderPage
+            t={t.founderPage}
+            language={language}
+            onBack={handleBackToHome}
+            onBookConsultation={handleBookConsultation}
+          />
+        ) : isVCardPage ? (
+          /* Dedicated Digital Business Card & vCard Page */
+          <VCardPage
+            t={t.vCard}
             language={language}
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
@@ -1383,21 +1449,26 @@ export function App() {
       <LegalModal type={legalModal} language={language} onClose={() => setLegalModal(null)} />
 
       {/* 10. Science-Backed Mobile Sticky Quick-Action Bar (Thumb Zone) */}
-      <MobileStickyActionBar
-        t={t.mobileActionBar}
-        contactT={t.contact}
-        onBookConsultation={handleBookConsultation}
-      />
+      {!isVCardPage && (
+        <MobileStickyActionBar
+          t={t.mobileActionBar}
+          contactT={t.contact}
+          onBookConsultation={handleBookConsultation}
+        />
+      )}
 
       {/* 11. Subtle Desktop Floating Quick-Action Dock (Zero Clutter, 1-Click Access) */}
-      <DesktopStickyActionBar
-        t={t.mobileActionBar}
-        contactT={t.contact}
-        onBookConsultation={handleBookConsultation}
-      />
+      {!isVCardPage && (
+        <DesktopStickyActionBar
+          t={t.mobileActionBar}
+          contactT={t.contact}
+          onBookConsultation={handleBookConsultation}
+        />
+      )}
 
       {/* 12. GDPR & TDDDG Compliant Cookie Banner */}
       <CookieBanner
+        t={t.cookieBanner}
         language={language}
         onOpenPrivacy={() => navigateTo("/datenschutz")}
         onOpenImpressum={() => navigateTo("/impressum")}

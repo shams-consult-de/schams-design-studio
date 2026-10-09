@@ -1,0 +1,23 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Architekturbüro Shams Consult//Digital Business Card 1.0//DE
+N:Shams;Majeed;;Dipl.-Ing. (FH);M.Eng.
+FN:Dipl.-Ing. (FH) Majeed Shams M.Eng.
+ORG:Architekturbüro Shams Consult
+TITLE:Freier Architekt & Stadtplaner, Büroinhaber
+ROLE:Architekt & Stadtplaner (AKH Hessen Nr. 21886)
+TEL;TYPE=WORK,VOICE,PREF:+496974223777
+TEL;TYPE=CELL,VOICE,MSG:+4915151864090
+TEL;TYPE=WORK,VOICE:+4960742398782
+EMAIL;TYPE=INTERNET,PREF,WORK:office@shams-consult.de
+URL;TYPE=WORK:https://shams-consult.de
+URL;TYPE=CALENDAR:https://outlook.office365.com/owa/calendar/TerminvereinbarungBauundPlanungsberatungmitShamsConsult@shams-consult.de/bookings/
+ADR;TYPE=WORK,PREF:;;Carl-von-Noorden-Platz 5;Frankfurt am Main;Hessen;60596;Deutschland
+LABEL;TYPE=WORK,PREF:Carl-von-Noorden-Platz 5\n60596 Frankfurt am Main\nDeutschland
+ADR;TYPE=WORK:;;Carl-Zeiss-Str. 43;Rödermark;Hessen;63322;Deutschland
+LABEL;TYPE=WORK:Carl-Zeiss-Str. 43\n63322 Rödermark\nDeutschland
+NOTE:Mitglied der Architekten- und Stadtplanerkammer Hessen (AKH Nr. 21886)\nDozent Frankfurt University of Applied Sciences.\nSpezialisierung: Genehmigungsplanung, Bauantrag, VOB, Wohnungs- & Gewerbebau.
+PHOTO;VALUE=URI:https://shams-consult.de/images/team/Image.jpg
+URL;TYPE=X-VCARD-PAGE:https://shams-consult.de/card
+REV:20261009T200000Z
+END:VCARD

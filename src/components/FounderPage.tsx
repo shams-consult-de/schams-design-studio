@@ -1,12 +1,14 @@
-import { Language } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 
 interface FounderPageProps {
+  t: Translations["founderPage"];
   language: Language;
   onBack: () => void;
   onBookConsultation: () => void;
 }
 
 export function FounderPage({
+  t,
   language,
   onBack,
   onBookConsultation,
@@ -24,7 +26,7 @@ export function FounderPage({
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-600 hover:text-[#DC2626] transition-colors cursor-pointer"
           >
             <span>←</span>
-            <span>{isDe ? "Zurück zur Startseite" : "Back to Home"}</span>
+            <span>{t.backToHome}</span>
           </button>
 
           <div className="flex items-center gap-3">
@@ -32,13 +34,13 @@ export function FounderPage({
               href="/founder-portal"
               rel="nofollow"
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-semibold border border-zinc-200 transition-colors"
-              title={isDe ? "Geschütztes Gründerportal für Unterlagen" : "Protected Founder Portal"}
+              title={t.portalTooltip}
             >
               <span>🔒</span>
-              <span>{isDe ? "Gründer-Portal" : "Founder Portal"}</span>
+              <span>{t.founderPortal}</span>
             </a>
             <span className="text-xs font-mono text-zinc-400">
-              Shams Consult · {isDe ? "Über den Gründer" : "About the Founder"}
+              Shams Consult · {t.pageSubtitle}
             </span>
           </div>
         </div>
@@ -47,20 +49,16 @@ export function FounderPage({
         <div className="space-y-4">
           <div className="inline-block">
             <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-              {isDe ? "DIE GESCHICHTE DES GRÜNDERS" : "THE FOUNDER'S STORY"}
+              {t.storyBadge}
             </span>
           </div>
 
           <h1 className="font-sans text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight leading-[1.12]">
-            {isDe
-              ? "Vom Traum zur Wirklichkeit: Die Reise unseres Gründers"
-              : "From a Dream to Reality: The Journey of Our Founder"}
+            {t.storyTitle}
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-600 font-light leading-relaxed">
-            {isDe
-              ? "Vertrauen, Hingabe und die Leidenschaft, durch Architektur und Städtebau bleibende Werte für Menschen und Städte zu schaffen."
-              : "Trust, dedication, and the passion to create enduring value for people and communities through architecture and urban planning."}
+            {t.storySubtitle}
           </p>
         </div>
 
@@ -82,7 +80,7 @@ export function FounderPage({
                   Dipl.-Ing. Majeed Shams
                 </span>
                 <span className="text-[11px] text-zinc-400">
-                  {isDe ? "Architekt · Stadtplaner · Dozent · Gründer" : "Architect · Urban Planner · Researcher · Founder"}
+                  {t.founderRole}
                 </span>
               </div>
             </div>
@@ -107,24 +105,24 @@ export function FounderPage({
 
             <div className="p-5 rounded-xl bg-zinc-50 border border-zinc-200 space-y-3 text-xs">
               <span className="text-zinc-400 uppercase tracking-wider font-bold block text-[10px]">
-                {isDe ? "Akademische Qualifikationen" : "Academic Credentials"}
+                {t.academicCredentials}
               </span>
               <ul className="space-y-2 text-zinc-800 font-medium">
                 <li className="flex items-start gap-2">
                   <span className="text-[#DC2626] font-bold">✓</span>
-                  <span><strong>Dipl.-Ing. (FH) Architektur</strong> — Hochschule Karlsruhe</span>
+                  <span>{t.degree1}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#DC2626] font-bold">✓</span>
-                  <span><strong>Master of Science (M.Sc.) Stadtplanung</strong> — HFT Stuttgart</span>
+                  <span>{t.degree2}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#DC2626] font-bold">✓</span>
-                  <span><strong>Mitglied der Architektenkammer</strong> (AKH Hessen & AKBW)</span>
+                  <span>{t.chamberMembership}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#DC2626] font-bold">✓</span>
-                  <span><strong>Lehrbeauftragter / Dozent</strong> für Baukonstruktion & Entwurf</span>
+                  <span>{t.lecturerRole}</span>
                 </li>
               </ul>
             </div>
@@ -235,12 +233,10 @@ export function FounderPage({
 
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#DC2626] font-bold block">
-                  {isDe ? "DANKBARKEIT & DEUTSCHES INGENIEURVERSPRECHEN" : "GRATITUDE & GERMAN ENGINEERING CALLING"}
+                  {t.gratitudeBadge}
                 </span>
                 <h3 className="font-sans text-base sm:text-lg font-bold text-white leading-snug">
-                  {isDe
-                    ? "Deutschland – Eine Heimat des Vertrauens und der neuen Lebenschancen"
-                    : "Germany – A Homeland of Trust, Education, and Life-Changing Opportunity"}
+                  {t.gratitudeTitle}
                 </h3>
               </div>
             </div>
@@ -251,9 +247,7 @@ export function FounderPage({
           </div>
 
           <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed italic">
-            {isDe
-              ? "„Als ich 2005 mit nichts als der Hoffnung auf Bildung nach Deutschland kam, schenkte mir diese Gesellschaft ihr Vertrauen. Heute ist es mein größtes Lebensanliegen, dieses Vertrauen durch redliche deutsche Planungsdisziplin, kompromisslose Zuverlässigkeit nach DIN & VOB und den Bau nachhaltiger Werte für Menschen und Städte von Herzen zurückzugeben.“"
-              : "“When I arrived in Germany in 2005 with nothing but the hope for education, this society placed its unconditional trust in me. Today, my highest life’s calling is to repay that trust through honest German planning discipline, uncompromising reliability under DIN & VOB, and building enduring architectural value for people and communities.”"}
+            {t.gratitudeQuote}
           </p>
 
           <div className="pt-2 flex items-center justify-between text-xs text-zinc-400">
@@ -261,7 +255,7 @@ export function FounderPage({
               – Dipl.-Ing. (FH) Majeed Shams M.Eng.
             </span>
             <span className="font-mono text-[11px] text-zinc-400">
-              {isDe ? "Dozent Frankfurt UAS · Gründer Shams Consult" : "Lecturer Frankfurt UAS · Founder Shams Consult"}
+              {t.lecturerTag}
             </span>
           </div>
         </section>
@@ -270,12 +264,10 @@ export function FounderPage({
         <section className="pt-6 space-y-4">
           <div className="space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626] block">
-              {isDe ? "HISTORISCHE DOKUMENTATION" : "HISTORICAL DOCUMENTATION"}
+              {t.pressBadge}
             </span>
             <h2 className="font-sans text-2xl font-bold text-zinc-950">
-              {isDe
-                ? "Rheinische Post, Ausgabe vom 30. August 2005"
-                : "Rheinische Post Newspaper, Edition August 30, 2005"}
+              {t.pressTitle}
             </h2>
           </div>
 
@@ -287,10 +279,8 @@ export function FounderPage({
               loading="lazy"
             />
             <figcaption className="p-4 sm:p-5 text-xs text-zinc-600 bg-zinc-50 border-t border-zinc-200 leading-relaxed">
-              <strong>{isDe ? "Historisches Zeitdokument:" : "Historical Press Record:"}</strong>{" "}
-              {isDe
-                ? "Rheinische Post, 30.08.2005 — Bericht über Majeed Shams' Ankunft am Düsseldorfer Flughafen und seine Vision: „From nobody to somebody, to help and share experiences with everybody.“"
-                : "Rheinische Post, August 30, 2005 — Article documenting Majeed Shams' arrival at Düsseldorf Airport and his guiding vision: 'From nobody to somebody, to help and share experiences with everybody.'"}
+              <strong>{t.pressCaptionPrefix}</strong>{" "}
+              {t.pressCaption}
             </figcaption>
           </figure>
         </section>
@@ -298,14 +288,10 @@ export function FounderPage({
         {/* Consultation Call to Action */}
         <div className="bg-[#111111] text-white rounded-2xl p-8 sm:p-12 text-center space-y-5 shadow-2xl">
           <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-white">
-            {isDe
-              ? "Möchten Sie Ihr Projekt persönlich mit Majeed Shams besprechen?"
-              : "Would You Like to Discuss Your Project with Majeed Shams?"}
+            {t.consultationHeading}
           </h2>
           <p className="text-xs sm:text-sm text-zinc-300 font-light max-w-xl mx-auto leading-relaxed">
-            {isDe
-              ? "Ob Wohnungsbau, städtebaulicher Bebauungsplan oder anspruchsvolles Genehmigungsverfahren — wir stehen Ihnen mit Erfahrung und vollem Engagement zur Seite."
-              : "Whether residential construction, urban master planning, or complex permit proceedings — we stand by your side with dedication and proven expertise."}
+            {t.consultationDesc}
           </p>
           <div className="pt-2 flex flex-wrap justify-center gap-4">
             <button
@@ -313,14 +299,14 @@ export function FounderPage({
               onClick={onBookConsultation}
               className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 cursor-pointer"
             >
-              {isDe ? "Persönliches Erstgespräch anfragen →" : "Request Consultation →"}
+              {t.consultationCta}
             </button>
             <button
               type="button"
               onClick={onBack}
               className="bg-transparent border border-zinc-600 hover:border-white text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
             >
-              {isDe ? "Zurück zur Startseite" : "Back to Home"}
+              {t.backToHome}
             </button>
           </div>
         </div>

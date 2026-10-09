@@ -434,6 +434,83 @@ export interface Translations {
       answer: string;
     }>;
   };
+  vCard: {
+    backToHome: string;
+    showQrCode: string;
+    pageSubtitle: string;
+    verified: string;
+    roleSubtitle: string;
+    subTitleDetail: string;
+    chamberTitle: string;
+    saveButtonText: string;
+    saveButtonSubtext: string;
+    downloadSuccessNotice: string;
+    quickActionsHeading: string;
+    frankfurtOffice: string;
+    roedermarkOffice: string;
+    whatsappTitle: string;
+    whatsappSubtitle: string;
+    emailTitle: string;
+    bookConsultationTitle: string;
+    bookConsultationSubtitle: string;
+    locationsHeading: string;
+    hqTitle: string;
+    branchTitle: string;
+    routeButton: string;
+    websiteText: string;
+    conferenceModalTag: string;
+    conferenceModalSubtitle: string;
+    directDownloadButton: string;
+    closeModal: string;
+    stickySaveText: string;
+    callButton: string;
+  };
+  founderPage: {
+    backToHome: string;
+    founderPortal: string;
+    portalTooltip: string;
+    pageSubtitle: string;
+    storyBadge: string;
+    storyTitle: string;
+    storySubtitle: string;
+    founderRole: string;
+    academicCredentials: string;
+    degree1: string;
+    degree2: string;
+    chamberMembership: string;
+    lecturerRole: string;
+    gratitudeBadge: string;
+    gratitudeTitle: string;
+    gratitudeQuote: string;
+    lecturerTag: string;
+    pressBadge: string;
+    pressTitle: string;
+    pressCaptionPrefix: string;
+    pressCaption: string;
+    consultationHeading: string;
+    consultationDesc: string;
+    consultationCta: string;
+  };
+  cookieBanner: {
+    ariaLabel: string;
+    badge: string;
+    title: string;
+    closeModal: string;
+    description: string;
+    essentialTitle: string;
+    alwaysActive: string;
+    essentialAria: string;
+    essentialDesc: string;
+    analyticsTitle: string;
+    analyticsDesc: string;
+    lessDetails: string;
+    customizeSettings: string;
+    privacy: string;
+    imprint: string;
+    saveSelection: string;
+    acceptAll: string;
+    acceptEssential: string;
+  };
 }
 
 export const content: Record<Language, Translations> = {
@@ -1044,6 +1121,83 @@ export const content: Record<Language, Translations> = {
         },
       ],
     },
+    vCard: {
+      backToHome: "Zurück zur Startseite",
+      showQrCode: "QR-Code vorzeigen",
+      pageSubtitle: "Digitale Visitenkarte",
+      verified: "Verifiziert",
+      roleSubtitle: "Freier Architekt & Stadtplaner · Büroinhaber",
+      subTitleDetail: "Frankfurt am Main & Rödermark",
+      chamberTitle: "Staatlich anerkannt & kammereingetragen",
+      saveButtonText: "Visitenkarte speichern (.vcf)",
+      saveButtonSubtext: "Direkt in Apple & Google Kontakte öffnen",
+      downloadSuccessNotice: "Download gestartet! Tippen Sie auf die Datei, um den Kontakt im Adressbuch zu sichern.",
+      quickActionsHeading: "SCHNELLKONTAKT",
+      frankfurtOffice: "Zentrale Frankfurt",
+      roedermarkOffice: "Büro Rödermark",
+      whatsappTitle: "WhatsApp Chat",
+      whatsappSubtitle: "Direktnachricht",
+      emailTitle: "E-Mail",
+      bookConsultationTitle: "Erstgespräch buchen",
+      bookConsultationSubtitle: "Kostenfreie 30-Minuten Bau- & Planungsberatung",
+      locationsHeading: "STANDORTE & ANFAHRT",
+      hqTitle: "Hauptsitz Frankfurt am Main",
+      branchTitle: "Zweigstelle Rödermark",
+      routeButton: "Route",
+      websiteText: "shams-consult.de",
+      conferenceModalTag: "KONFERENZ- & EVENT-MODUS",
+      conferenceModalSubtitle: "Mit dem Smartphone scannen, um die Visitenkarte direkt im Adressbuch zu sichern.",
+      directDownloadButton: "vCard direkt herunterladen",
+      closeModal: "Schließen",
+      stickySaveText: "Kontakt speichern",
+      callButton: "Anrufen",
+    },
+    founderPage: {
+      backToHome: "Zurück zur Startseite",
+      founderPortal: "Gründer-Portal",
+      portalTooltip: "Geschütztes Gründerportal für Unterlagen",
+      pageSubtitle: "Über den Gründer",
+      storyBadge: "DIE GESCHICHTE DES GRÜNDERS",
+      storyTitle: "Vom Traum zur Wirklichkeit: Die Reise unseres Gründers",
+      storySubtitle: "Vertrauen, Hingabe und die Leidenschaft, durch Architektur und Städtebau bleibende Werte für Menschen und Städte zu schaffen.",
+      founderRole: "Architekt · Stadtplaner · Dozent · Gründer",
+      academicCredentials: "Akademische Qualifikationen",
+      degree1: "Dipl.-Ing. (FH) Architektur — Hochschule Karlsruhe",
+      degree2: "Master of Science (M.Sc.) Stadtplanung — HFT Stuttgart",
+      chamberMembership: "Mitglied der Architektenkammer (AKH Hessen & AKBW)",
+      lecturerRole: "Lehrbeauftragter / Dozent für Baukonstruktion & Entwurf",
+      gratitudeBadge: "DANKBARKEIT & DEUTSCHES INGENIEURVERSPRECHEN",
+      gratitudeTitle: "Deutschland – Eine Heimat des Vertrauens und der neuen Lebenschancen",
+      gratitudeQuote: "„Als ich 2005 mit nichts als der Hoffnung auf Bildung nach Deutschland kam, schenkte mir diese Gesellschaft ihr Vertrauen. Heute ist es mein größtes Lebensanliegen, dieses Vertrauen durch redliche deutsche Planungsdisziplin, kompromisslose Zuverlässigkeit nach DIN & VOB und den Bau nachhaltiger Werte für Menschen und Städte von Herzen zurückzugeben.“",
+      lecturerTag: "Dozent Frankfurt UAS · Gründer Shams Consult",
+      pressBadge: "HISTORISCHE DOKUMENTATION",
+      pressTitle: "Rheinische Post, Ausgabe vom 30. August 2005",
+      pressCaptionPrefix: "Historisches Zeitdokument:",
+      pressCaption: "Rheinische Post, 30.08.2005 — Bericht über Majeed Shams' Ankunft am Düsseldorfer Flughafen und seine Vision: „From nobody to somebody, to help and share experiences with everybody.“",
+      consultationHeading: "Möchten Sie Ihr Projekt persönlich mit Majeed Shams besprechen?",
+      consultationDesc: "Ob Wohnungsbau, städtebaulicher Bebauungsplan oder anspruchsvolles Genehmigungsverfahren — wir stehen Ihnen mit Erfahrung und vollem Engagement zur Seite.",
+      consultationCta: "Persönliches Erstgespräch anfragen →",
+    },
+    cookieBanner: {
+      ariaLabel: "Cookie-Einwilligung",
+      badge: "Datenschutz & Transparenz",
+      title: "Cookie- und Datenschutzeinstellungen",
+      closeModal: "Schließen",
+      description: "Wir nutzen Cookies und ähnliche Technologien, um Ihnen eine optimale Nutzererfahrung auf unserer Website zu bieten, Funktionen bereitzustellen und Zugriffe anonymisiert auszuwerten.",
+      essentialTitle: "1. Technisch essenziell",
+      alwaysActive: "Immer aktiv",
+      essentialAria: "Technisch essenziell (aktiv)",
+      essentialDesc: "Erforderlich für grundlegende Website-Funktionen, Navigation, Sicherheit und Formularübermittlung.",
+      analyticsTitle: "2. Google Analytics 4 (Statistik & Analyse)",
+      analyticsDesc: "Hilft uns zu verstehen, wie Besucher mit unserer Website interagieren, um Inhalte und Performance kontinuierlich zu verbessern. Daten werden anonymisiert verarbeitet.",
+      lessDetails: "Weniger Details",
+      customizeSettings: "Einstellungen anpassen",
+      privacy: "Datenschutz",
+      imprint: "Impressum",
+      saveSelection: "Auswahl speichern",
+      acceptAll: "Alle akzeptieren",
+      acceptEssential: "Nur essenzielle",
+    },
   },
   en: {
     nav: {
@@ -1651,6 +1805,83 @@ export const content: Record<Language, Translations> = {
           answer: "Where an active master plan (B-Plan) exists, it strictly defines site occupancy (GRZ), floor area ratios (GFZ), eaves heights, and roof geometries. In areas without a B-Plan, Section 34 BauGB applies: new construction must blend harmoniously into the character of the immediate neighborhood. We clarify statutory zoning with local planning authorities.",
         },
       ],
+    },
+    vCard: {
+      backToHome: "Back to Home",
+      showQrCode: "Show QR Code",
+      pageSubtitle: "Digital Business Card",
+      verified: "Verified",
+      roleSubtitle: "Licensed Architect & Urban Planner · Managing Director",
+      subTitleDetail: "Frankfurt am Main & Rödermark",
+      chamberTitle: "Officially Licensed & Registered",
+      saveButtonText: "Save Contact to Phone (.vcf)",
+      saveButtonSubtext: "Opens native Apple & Google Contacts",
+      downloadSuccessNotice: "Download started! Tap the downloaded file to save the contact in your address book.",
+      quickActionsHeading: "QUICK ACTIONS",
+      frankfurtOffice: "Frankfurt Office",
+      roedermarkOffice: "Rödermark Office",
+      whatsappTitle: "WhatsApp Chat",
+      whatsappSubtitle: "Direct Message",
+      emailTitle: "Email",
+      bookConsultationTitle: "Book Consultation",
+      bookConsultationSubtitle: "Free 30-min architectural consultation",
+      locationsHeading: "OFFICE LOCATIONS",
+      hqTitle: "Headquarters Frankfurt am Main",
+      branchTitle: "Branch Office Rödermark",
+      routeButton: "Directions",
+      websiteText: "shams-consult.de",
+      conferenceModalTag: "CONFERENCE & EVENT MODE",
+      conferenceModalSubtitle: "Scan with your phone camera to instantly save contact to address book.",
+      directDownloadButton: "Download vCard directly",
+      closeModal: "Close",
+      stickySaveText: "Save Contact",
+      callButton: "Call",
+    },
+    founderPage: {
+      backToHome: "Back to Home",
+      founderPortal: "Founder Portal",
+      portalTooltip: "Protected Founder Portal for Collateral",
+      pageSubtitle: "About the Founder",
+      storyBadge: "THE FOUNDER'S STORY",
+      storyTitle: "From a Dream to Reality: The Journey of Our Founder",
+      storySubtitle: "Trust, dedication, and the passion to create enduring value for people and communities through architecture and urban planning.",
+      founderRole: "Architect · Urban Planner · Researcher · Founder",
+      academicCredentials: "Academic Credentials",
+      degree1: "Dipl.-Ing. (FH) Architecture — Karlsruhe University of Applied Sciences",
+      degree2: "Master of Science (M.Sc.) Urban Planning — HFT Stuttgart",
+      chamberMembership: "Member of the Chamber of Architects (AKH Hessen & AKBW)",
+      lecturerRole: "Lecturer for Building Construction & Architectural Design",
+      gratitudeBadge: "GRATITUDE & GERMAN ENGINEERING CALLING",
+      gratitudeTitle: "Germany – A Homeland of Trust, Education, and Life-Changing Opportunity",
+      gratitudeQuote: "“When I arrived in Germany in 2005 with nothing but the hope for education, this society placed its unconditional trust in me. Today, my highest life’s calling is to repay that trust through honest German planning discipline, uncompromising reliability under DIN & VOB, and building enduring architectural value for people and communities.”",
+      lecturerTag: "Lecturer Frankfurt UAS · Founder Shams Consult",
+      pressBadge: "HISTORICAL DOCUMENTATION",
+      pressTitle: "Rheinische Post Newspaper, Edition August 30, 2005",
+      pressCaptionPrefix: "Historical Press Record:",
+      pressCaption: "Rheinische Post, August 30, 2005 — Article documenting Majeed Shams' arrival at Düsseldorf Airport and his guiding vision: 'From nobody to somebody, to help and share experiences with everybody.'",
+      consultationHeading: "Would You Like to Discuss Your Project with Majeed Shams?",
+      consultationDesc: "Whether residential construction, urban master planning, or complex permit proceedings — we stand by your side with dedication and proven expertise.",
+      consultationCta: "Request Consultation →",
+    },
+    cookieBanner: {
+      ariaLabel: "Cookie Consent",
+      badge: "Privacy & Transparency",
+      title: "Cookie & Privacy Settings",
+      closeModal: "Close",
+      description: "We use cookies and similar technologies to ensure optimal performance, provide key functionality, and analyze anonymous site traffic.",
+      essentialTitle: "1. Strictly Necessary",
+      alwaysActive: "Always active",
+      essentialAria: "Strictly necessary (active)",
+      essentialDesc: "Required for basic website functions, page navigation, security, and contact form submission.",
+      analyticsTitle: "2. Google Analytics 4 (Analytics)",
+      analyticsDesc: "Helps us understand how visitors interact with our practice website to continuously improve content and user experience. Data is processed anonymously.",
+      lessDetails: "Fewer details",
+      customizeSettings: "Customize settings",
+      privacy: "Privacy Policy",
+      imprint: "Legal Notice",
+      saveSelection: "Save selection",
+      acceptAll: "Accept all",
+      acceptEssential: "Essential only",
     },
   },
 };

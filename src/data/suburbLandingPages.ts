@@ -241,30 +241,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Hessisches Denkmalschutzgesetz (HDSchG)", en: "Hessisches Denkmalschutzgesetz (HDSchG)" },
-        description: { de: "Erprobte Abstimmung für denkmalgeschützte Villen, Fassadensanierungen und steuerliche Denkmalabschreibungen.", en: "Erprobte Abstimmung für denkmalgeschützte Villen, Fassadensanierungen und steuerliche Denkmalabschreibungen." }
+        title: { de: "Hessisches Denkmalschutzgesetz (HDSchG)", en: "Hesse Monument Protection Act (HDSchG)" },
+        description: { de: "Erprobte Abstimmung für denkmalgeschützte Villen, Fassadensanierungen und steuerliche Denkmalabschreibungen.", en: "Proven coordination for listed historic villas, heritage facade restorations, and tax depreciation allowances." }
       },
       {
-        title: { de: "§ 34 BauGB (Einfügungsgebot)", en: "§ 34 BauGB (Einfügungsgebot)" },
-        description: { de: "Präzise Bemessung von First- und Traufhöhen sowie Grundflächenzahlen im dicht bebauten Gründerzeitbestand.", en: "Präzise Bemessung von First- und Traufhöhen sowie Grundflächenzahlen im dicht bebauten Gründerzeitbestand." }
+        title: { de: "§ 34 BauGB (Einfügungsgebot)", en: "§ 34 BauGB (Urban Infill Regulation)" },
+        description: { de: "Präzise Bemessung von First- und Traufhöhen sowie Grundflächenzahlen im dicht bebauten Gründerzeitbestand.", en: "Precise assessment of ridge and eaves heights as well as site occupancy indices within densely built Wilhelminian quarters." }
       },
       {
-        title: { de: "Baumschutzsatzung der Stadt Frankfurt", en: "Baumschutzsatzung der Stadt Frankfurt" },
-        description: { de: "Baumerhaltungs- und Ersatzpflanzungskonzepte bei Neubauten und Unterfangungen in alten Villengärten.", en: "Baumerhaltungs- und Ersatzpflanzungskonzepte bei Neubauten und Unterfangungen in alten Villengärten." }
+        title: { de: "Baumschutzsatzung der Stadt Frankfurt", en: "Frankfurt Municipal Tree Protection Statute" },
+        description: { de: "Baumerhaltungs- und Ersatzpflanzungskonzepte bei Neubauten und Unterfangungen in alten Villengärten.", en: "Tree preservation and compensatory planting concepts for new builds and basement underpinning in historic villa gardens." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Westend?", en: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Westend?" },
-        answer: { de: "Im Westend stehen zahlreiche Einzelobjekte und Ensembles unter Denkmalschutz. Veränderungen an Fenstern, Fassadengliederungen oder Dacheindeckungen bedürfen einer denkmalrechtlichen Genehmigung. Shams Consult stimmt alle Planungen vorab direkt mit dem Denkmalamt Frankfurt ab.", en: "Im Westend stehen zahlreiche Einzelobjekte und Ensembles unter Denkmalschutz. Veränderungen an Fenstern, Fassadengliederungen oder Dacheindeckungen bedürfen einer denkmalrechtlichen Genehmigung. Shams Consult stimmt alle Planungen vorab direkt mit dem Denkmalamt Frankfurt ab." }
+        question: { de: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Westend?", en: "What historic preservation requirements apply to renovations in Westend?" },
+        answer: { de: "Im Westend stehen zahlreiche Einzelobjekte und Ensembles unter Denkmalschutz. Veränderungen an Fenstern, Fassadengliederungen oder Dacheindeckungen bedürfen einer denkmalrechtlichen Genehmigung. Shams Consult stimmt alle Planungen vorab direkt mit dem Denkmalamt Frankfurt ab.", en: "In Westend, numerous individual buildings and architectural ensembles are listed. Modifications to windows, facade details, or roof coverings require heritage approval. Shams Consult coordinates all plans in advance directly with the Frankfurt Historic Monuments Office." }
       },
       {
-        question: { de: "Sind Dachgeschossausbauten und Gauben im Westend genehmigungsfähig?", en: "Sind Dachgeschossausbauten und Gauben im Westend genehmigungsfähig?" },
-        answer: { de: "Ja, sofern die Vorgaben der örtlichen Erhaltungssatzung und des § 34 BauGB eingehalten werden. Wir erstellen prüffähige Bauanträge mit millimetergenauen Abstandsflächen- und Brandschutznachweisen nach HBO.", en: "Ja, sofern die Vorgaben der örtlichen Erhaltungssatzung und des § 34 BauGB eingehalten werden. Wir erstellen prüffähige Bauanträge mit millimetergenauen Abstandsflächen- und Brandschutznachweisen nach HBO." }
+        question: { de: "Sind Dachgeschossausbauten und Gauben im Westend genehmigungsfähig?", en: "Can attic conversions and dormers be approved in Westend?" },
+        answer: { de: "Ja, sofern die Vorgaben der örtlichen Erhaltungssatzung und des § 34 BauGB eingehalten werden. Wir erstellen prüffähige Bauanträge mit millimetergenauen Abstandsflächen- und Brandschutznachweisen nach HBO.", en: "Yes, provided the requirements of the local preservation statute and § 34 BauGB are fulfilled. We prepare compliant building permit applications with millimeter-precise setback clearances and fire safety concepts according to HBO." }
       },
       {
-        question: { de: "Übernimmt Shams Consult auch Stadtplanung und B-Plan-Verfahren im Westend?", en: "Übernimmt Shams Consult auch Stadtplanung und B-Plan-Verfahren im Westend?" },
-        answer: { de: "Als eingetragene Stadtplaner in der AKH Hessen entwickeln wir städtebauliche Machbarkeitsstudien, Nutzungsänderungskonzepte und vorhabenbezogene Bebauungspläne für anspruchsvolle Liegenschaften.", en: "Als eingetragene Stadtplaner in der AKH Hessen entwickeln wir städtebauliche Machbarkeitsstudien, Nutzungsänderungskonzepte und vorhabenbezogene Bebauungspläne für anspruchsvolle Liegenschaften." }
+        question: { de: "Übernimmt Shams Consult auch Stadtplanung und B-Plan-Verfahren im Westend?", en: "Does Shams Consult handle urban planning and zoning plan procedures in Westend?" },
+        answer: { de: "Als eingetragene Stadtplaner in der AKH Hessen entwickeln wir städtebauliche Machbarkeitsstudien, Nutzungsänderungskonzepte und vorhabenbezogene Bebauungspläne für anspruchsvolle Liegenschaften.", en: "As registered urban planners with AKH Hessen, we develop urban feasibility studies, change-of-use concepts, and project-based development plans (B-Plans) for demanding prime properties." }
       }
     ]
   },
@@ -340,30 +340,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Erhaltungssatzung Sachsenhausen (§ 172 BauGB)", en: "Erhaltungssatzung Sachsenhausen (§ 172 BauGB)" },
-        description: { de: "Rechtssichere Antragsstellung zur Wahrung des historischen Ortsbildes und Schutz vor Zweckentfremdung.", en: "Rechtssichere Antragsstellung zur Wahrung des historischen Ortsbildes und Schutz vor Zweckentfremdung." }
+        title: { de: "Erhaltungssatzung Sachsenhausen (§ 172 BauGB)", en: "Sachsenhausen Preservation Statute (§ 172 BauGB)" },
+        description: { de: "Rechtssichere Antragsstellung zur Wahrung des historischen Ortsbildes und Schutz vor Zweckentfremdung.", en: "Compliant applications safeguarding the historic townscape and preventing unauthorized property conversions." }
       },
       {
-        title: { de: "HBO Abstandsflächenprüfung", en: "HBO Abstandsflächenprüfung" },
-        description: { de: "Genaue Berechnung reduzierter Abstandsflächen in historisch eng bebauten Blockrandstrukturen.", en: "Genaue Berechnung reduzierter Abstandsflächen in historisch eng bebauten Blockrandstrukturen." }
+        title: { de: "Stellplatzsatzung Frankfurt & Mobilitätskonzepte", en: "Frankfurt Parking Space Statute & Mobility Concepts" },
+        description: { de: "Optimierte Planung von Tiefgaragen, Doppelparkern und Fahrradabstellanlagen nach städtischem Schlüssel.", en: "Optimized planning of underground garages, duplex lift systems, and bicycle parking according to municipal quotas." }
       },
       {
-        title: { de: "Bauaufsichtsamt Frankfurt am Main", en: "Bauaufsichtsamt Frankfurt am Main" },
-        description: { de: "Direkter persönlicher Draht zu den zuständigen Bauprüfern für zügige Genehmigungsverfahren.", en: "Direkter persönlicher Draht zu den zuständigen Bauprüfern für zügige Genehmigungsverfahren." }
+        title: { de: "HBO Brandschutz & Abstandsflächennachweis", en: "HBO Fire Protection & Setback Clearance Calculations" },
+        description: { de: "Millimetergenaue Abstandsflächenpläne und Brandwand-Integration bei Blockrandbebauung.", en: "Millimeter-accurate clearance certificates and fire wall integration for dense perimeter block developments." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wo befindet sich das Büro von Shams Consult in Sachsenhausen?", en: "Wo befindet sich das Büro von Shams Consult in Sachsenhausen?" },
-        answer: { de: "Unser Hauptsitz liegt zentral am Carl-von-Noorden-Platz 5 in 60596 Frankfurt am Main-Sachsenhausen — unweit von Schweizer Straße und Mainufer.", en: "Unser Hauptsitz liegt zentral am Carl-von-Noorden-Platz 5 in 60596 Frankfurt am Main-Sachsenhausen — unweit von Schweizer Straße und Mainufer." }
+        question: { de: "Wo befindet sich das Büro von Shams Consult in Sachsenhausen?", en: "Where is Shams Consult's office located in Sachsenhausen?" },
+        answer: { de: "Unser Hauptsitz liegt zentral am Carl-von-Noorden-Platz 5 in 60596 Frankfurt am Main-Sachsenhausen — unweit von Schweizer Platz und Mainufer. Vereinbaren Sie gerne ein persönliches Erstgespräch.", en: "Our headquarters is centrally situated at Carl-von-Noorden-Platz 5 in 60596 Frankfurt am Main-Sachsenhausen — close to Schweizer Platz and the Main riverbank. You are welcome to arrange a consultation." }
       },
       {
-        question: { de: "Welche Bauanträge können in Sachsenhausen im vereinfachten Verfahren eingereicht werden?", en: "Welche Bauanträge können in Sachsenhausen im vereinfachten Verfahren eingereicht werden?" },
-        answer: { de: "Wohngebäude der Gebäudeklassen 1 bis 3 können nach § 65 HBO im vereinfachten Genehmigungsverfahren eingereicht werden. Für Sonderbauten und komplexe Mehrfamilienhäuser führen wir das Vollverfahren nach § 66 HBO durch.", en: "Wohngebäude der Gebäudeklassen 1 bis 3 können nach § 65 HBO im vereinfachten Genehmigungsverfahren eingereicht werden. Für Sonderbauten und komplexe Mehrfamilienhäuser führen wir das Vollverfahren nach § 66 HBO durch." }
+        question: { de: "Erhalten Sie Baugenehmigungen für Hangvillen am Lerchesberg?", en: "Can you obtain building permits for hillside villas on Lerchesberg?" },
+        answer: { de: "Ja, Hanglagen am Lerchesberg verlangen besondere statische und geotechnische Vorabstimmungen. Wir führen Hangsicherungen, Tiefgaragen und HBO-Bauanträge zum sicheren Genehmigungserfolg.", en: "Yes, hillside sites on Lerchesberg require specialized structural and geotechnical coordination. We handle slope stabilization, subterranean garages, and HBO building permit filings." }
       },
       {
-        question: { de: "Bieten Sie auch statische Vorprüfungen und Brandschutznachweise an?", en: "Bieten Sie auch statische Vorprüfungen und Brandschutznachweise an?" },
-        answer: { de: "Ja, im Rahmen unseres integralen Planungsansatzes koordinieren wir alle bauordnungsrechtlichen Nachweise (Brandschutz, Standsicherheit, Schallschutz) nahtlos.", en: "Ja, im Rahmen unseres integralen Planungsansatzes koordinieren wir alle bauordnungsrechtlichen Nachweise (Brandschutz, Standsicherheit, Schallschutz) nahtlos." }
+        question: { de: "Übernimmt Shams Consult auch die Bauüberwachung vor Ort in Sachsenhausen?", en: "Does Shams Consult also oversee on-site construction supervision in Sachsenhausen?" },
+        answer: { de: "Ja, wir betreuen alle 9 HOAI-Leistungsphasen lückenlos — inklusive täglicher Bauleitung, Qualitätskontrollen und Rechnungsprüfung vor Ort (LPH 8) bis zur schlüsselfertigen Übergabe.", en: "Yes, we provide seamless delivery through all 9 HOAI work phases, including daily on-site clerk of works and quality assurance (LPH 8) up to final building handover." }
       }
     ]
   },
@@ -439,30 +439,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Milieuschutzsatzungen Frankfurt am Main", en: "Milieuschutzsatzungen Frankfurt am Main" },
-        description: { de: "Fachgerechte Begründung von Modernisierungen und Grundrissänderungen im sozialen Erhaltungsgebiet.", en: "Fachgerechte Begründung von Modernisierungen und Grundrissänderungen im sozialen Erhaltungsgebiet." }
+        title: { de: "Milieuschutzsatzungen Frankfurt am Main", en: "Frankfurt Social Preservation Statutes (Milieuschutz)" },
+        description: { de: "Fachgerechte Begründung von Modernisierungen und Grundrissänderungen im sozialen Erhaltungsgebiet.", en: "Expert justification for modernizations, floor plan alterations, and building upgrades within social conservation districts." }
       },
       {
-        title: { de: "Stellplatzsatzung der Stadt Frankfurt", en: "Stellplatzsatzung der Stadt Frankfurt" },
-        description: { de: "Ablöseverfahren und innovative Mobilitätskonzepte (Fahrradabstellplätze, Car-Sharing) bei Innenhofbebauung.", en: "Ablöseverfahren und innovative Mobilitätskonzepte (Fahrradabstellplätze, Car-Sharing) bei Innenhofbebauung." }
+        title: { de: "Stellplatzsatzung Frankfurt & Innenhofbegrünung", en: "Frankfurt Parking Space Statute & Courtyard Infill" },
+        description: { de: "Ablöseverfahren und innovative Mobilitätskonzepte (Fahrradabstellplätze, Car-Sharing) bei Innenhofbebauung.", en: "Compensation procedures and innovative mobility concepts (cargo bike hubs, car-sharing) for inner courtyard developments." }
       },
       {
-        title: { de: "HBO Brandschutz bei Dachgeschossausbauten", en: "HBO Brandschutz bei Dachgeschossausbauten" },
-        description: { de: "Zweiter baulicher Rettungsweg und Feuerwiderstandsdauern für nachträglichen Wohnraumausbau.", en: "Zweiter baulicher Rettungsweg und Feuerwiderstandsdauern für nachträglichen Wohnraumausbau." }
+        title: { de: "HBO Brandschutz bei Dachgeschossausbauten", en: "HBO Fire Protection for Attic Conversions" },
+        description: { de: "Zweiter baulicher Rettungsweg und Feuerwiderstandsdauern für nachträglichen Wohnraumausbau.", en: "Second emergency escape route planning and structural fire resistance certification for residential loft additions." }
       }
     ],
     faqs: [
       {
-        question: { de: "Darf man im Nordend Altbauwohnungen zusammenlegen oder teilen?", en: "Darf man im Nordend Altbauwohnungen zusammenlegen oder teilen?" },
-        answer: { de: "In Gebieten mit sozialer Erhaltungssatzung (Milieuschutz) unterliegen Teilungen und Zusammenlegungen Genehmigungsvorbehalten. Wir prüfen die rechtlichen Chancen und führen das Antragsverfahren.", en: "In Gebieten mit sozialer Erhaltungssatzung (Milieuschutz) unterliegen Teilungen und Zusammenlegungen Genehmigungsvorbehalten. Wir prüfen die rechtlichen Chancen und führen das Antragsverfahren." }
+        question: { de: "Darf man im Nordend Altbauwohnungen zusammenlegen oder teilen?", en: "Is it permitted to merge or subdivide historic apartments in Nordend?" },
+        answer: { de: "In Gebieten mit sozialer Erhaltungssatzung (Milieuschutz) unterliegen Teilungen und Zusammenlegungen Genehmigungsvorbehalten. Wir prüfen die rechtlichen Chancen und führen das Antragsverfahren.", en: "In designated social preservation zones (Milieuschutz), merging or subdividing residential units is subject to municipal approval. We review legal feasibility and steer the application process." }
       },
       {
-        question: { de: "Wie gelingt ein Dachgeschossausbau im denkmalgeschützten Gründerzeithaus?", en: "Wie gelingt ein Dachgeschossausbau im denkmalgeschützten Gründerzeithaus?" },
-        answer: { de: "Mit detaillierten Werkplänen, historisch nachempfundenen Gaubenformen und maßgeschneiderten Brandschutzkonzepten führen wir das Projekt zum Genehmigungserfolg.", en: "Mit detaillierten Werkplänen, historisch nachempfundenen Gaubenformen und maßgeschneiderten Brandschutzkonzepten führen wir das Projekt zum Genehmigungserfolg." }
+        question: { de: "Wie gelingt ein Dachgeschossausbau im denkmalgeschützten Gründerzeithaus?", en: "How does an attic conversion succeed in a heritage-listed Wilhelminian building?" },
+        answer: { de: "Mit detaillierten Werkplänen, historisch nachempfundenen Gaubenformen und maßgeschneiderten Brandschutzkonzepten führen wir das Projekt zum Genehmigungserfolg.", en: "With detailed construction drawings, historically authentic dormer profiles, and customized fire safety concepts, we guide your attic conversion to swift permit approval." }
       },
       {
-        question: { de: "Erstellt Shams Consult auch Energieberatung und KfW-Förderanträge?", en: "Erstellt Shams Consult auch Energieberatung und KfW-Förderanträge?" },
-        answer: { de: "Ja, wir integrieren Fördermittelberatung (KfW 40, KfW 40 NH, Denkmal-Förderung) direkt in die Entwurfsphase.", en: "Ja, wir integrieren Fördermittelberatung (KfW 40, KfW 40 NH, Denkmal-Förderung) direkt in die Entwurfsphase." }
+        question: { de: "Erstellt Shams Consult auch Energieberatung und KfW-Förderanträge?", en: "Does Shams Consult provide energy consultancy and KfW grant applications?" },
+        answer: { de: "Ja, wir integrieren Fördermittelberatung (KfW 40, KfW 40 NH, Denkmal-Förderung) direkt in die Entwurfsphase.", en: "Yes, we integrate federal funding consulting (KfW Efficiency House 40, 40 NH, and Heritage Preservation Grants) directly into the conceptual design phase." }
       }
     ]
   },
@@ -538,30 +538,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bebauungspläne Europaviertel & Bockenheim", en: "Bebauungspläne Europaviertel & Bockenheim" },
-        description: { de: "Ausnutzung von GFZ und GRZ, Baumassenzahlen und Höhenentwicklung nach städtebaulichen Vorgaben.", en: "Ausnutzung von GFZ und GRZ, Baumassenzahlen und Höhenentwicklung nach städtebaulichen Vorgaben." }
+        title: { de: "Bebauungspläne Europaviertel & Bockenheim", en: "Europaviertel & Bockenheim Master Development Plans" },
+        description: { de: "Ausnutzung von GFZ und GRZ, Baumassenzahlen und Höhenentwicklung nach städtebaulichen Vorgaben.", en: "Maximizing floor space index (GFZ) and site occupancy (GRZ), building mass ratios, and height developments according to urban codes." }
       },
       {
-        title: { de: "HBO Sonderbauverordnung", en: "HBO Sonderbauverordnung" },
-        description: { de: "Genehmigungsplanung für Versammlungsstätten, Beherbergungsbetriebe und gewerblich genutzte Erdgeschosse.", en: "Genehmigungsplanung für Versammlungsstätten, Beherbergungsbetriebe und gewerblich genutzte Erdgeschosse." }
+        title: { de: "HBO Sonderbauverordnung", en: "HBO Special Structure Regulations (Sonderbauverordnung)" },
+        description: { de: "Genehmigungsplanung für Versammlungsstätten, Beherbergungsbetriebe und gewerblich genutzte Erdgeschosse.", en: "Permit planning for public assembly spaces, hotel developments, and mixed commercial ground-floor uses." }
       },
       {
-        title: { de: "Immissionsschutz & Lärmkontingentierung", en: "Immissionsschutz & Lärmkontingentierung" },
-        description: { de: "Schalltechnische Nachweise bei Wohnbebauung entlang hochfrequentierter Verkehrs- und Bahnachsen.", en: "Schalltechnische Nachweise bei Wohnbebauung entlang hochfrequentierter Verkehrs- und Bahnachsen." }
+        title: { de: "Immissionsschutz & Lärmkontingentierung", en: "Noise Abatement & Acoustic Zoning Allocations" },
+        description: { de: "Schalltechnische Nachweise bei Wohnbebauung entlang hochfrequentierter Verkehrs- und Bahnachsen.", en: "Acoustic insulation certification for residential developments along high-frequency transit and railway corridors." }
       }
     ],
     faqs: [
       {
-        question: { de: "Begleiten Sie gewerbliche Nutzungsänderungen in Bockenheim?", en: "Begleiten Sie gewerbliche Nutzungsänderungen in Bockenheim?" },
-        answer: { de: "Ja, wir planen und beantragen Nutzungsänderungen (z.B. von Büro zu Wohnen oder Gewerbe zu Gastronomie) bei der Bauaufsicht Frankfurt inklusive aller Stellplatz- und Brandschutznachweise.", en: "Ja, wir planen und beantragen Nutzungsänderungen (z.B. von Büro zu Wohnen oder Gewerbe zu Gastronomie) bei der Bauaufsicht Frankfurt inklusive aller Stellplatz- und Brandschutznachweise." }
+        question: { de: "Begleiten Sie gewerbliche Nutzungsänderungen in Bockenheim?", en: "Do you guide commercial change-of-use applications in Bockenheim?" },
+        answer: { de: "Ja, wir planen und beantragen Nutzungsänderungen (z.B. von Büro zu Wohnen oder Gewerbe zu Gastronomie) bei der Bauaufsicht Frankfurt inklusive aller Stellplatz- und Brandschutznachweise.", en: "Yes, we plan and submit change-of-use permits (e.g. office to residential or retail to gastronomy) to the Frankfurt Building Authority, including all required parking and fire safety filings." }
       },
       {
-        question: { de: "Können Sie vorhabenbezogene Bebauungspläne für Grundstücke im Gallus erstellen?", en: "Können Sie vorhabenbezogene Bebauungspläne für Grundstücke im Gallus erstellen?" },
-        answer: { de: "Ja, als freie Architekten und Stadtplaner erarbeiten wir städtebauliche Rahmenentwürfe und B-Plan-Entwürfe in Abstimmung mit dem Stadtplanungsamt Frankfurt.", en: "Ja, als freie Architekten und Stadtplaner erarbeiten wir städtebauliche Rahmenentwürfe und B-Plan-Entwürfe in Abstimmung mit dem Stadtplanungsamt Frankfurt." }
+        question: { de: "Können Sie vorhabenbezogene Bebauungspläne für Grundstücke im Gallus erstellen?", en: "Can you prepare project-based development plans (B-Plans) for properties in Gallus?" },
+        answer: { de: "Ja, als freie Architekten und Stadtplaner erarbeiten wir städtebauliche Rahmenentwürfe und B-Plan-Entwürfe in Abstimmung mit dem Stadtplanungsamt Frankfurt.", en: "Yes, as licensed independent architects and urban planners, we prepare urban framework schemes and binding development plans in close coordination with the Frankfurt City Planning Office." }
       },
       {
-        question: { de: "Welche HOAI-Leistungsphasen deckt Shams Consult ab?", en: "Welche HOAI-Leistungsphasen deckt Shams Consult ab?" },
-        answer: { de: "Wir bieten alle Phasen von der Grundlagenermittlung (LPH 1) bis zur Objektüberwachung und Mängelbeseitigung (LPH 9) lückenlos an.", en: "Wir bieten alle Phasen von der Grundlagenermittlung (LPH 1) bis zur Objektüberwachung und Mängelbeseitigung (LPH 9) lückenlos an." }
+        question: { de: "Welche HOAI-Leistungsphasen deckt Shams Consult ab?", en: "Which HOAI work phases does Shams Consult cover?" },
+        answer: { de: "Wir bieten alle Phasen von der Grundlagenermittlung (LPH 1) bis zur Objektüberwachung und Mängelbeseitigung (LPH 9) lückenlos an.", en: "We offer all phases without interruption from initial feasibility (Phase 1) through construction supervision to final defect liability management (Phase 9)." }
       }
     ]
   },
@@ -637,30 +637,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "B-Plan Riedberg Gestaltungsvorgaben", en: "B-Plan Riedberg Gestaltungsvorgaben" },
-        description: { de: "Flachdach- und Staffelgeschossregeln, Materialitätsfestsetzungen und Begrünungspflichten.", en: "Flachdach- und Staffelgeschossregeln, Materialitätsfestsetzungen und Begrünungspflichten." }
+        title: { de: "B-Plan Riedberg Gestaltungsvorgaben", en: "Riedberg Development Plan Design Guidelines" },
+        description: { de: "Flachdach- und Staffelgeschossregeln, Materialitätsfestsetzungen und Begrünungspflichten.", en: "Compliance with flat roof and setback-story rules, strict materiality regulations, and mandatory green roof standards." }
       },
       {
-        title: { de: "DWA-A 138 Regenwasserretention", en: "DWA-A 138 Regenwasserretention" },
-        description: { de: "Schwammstadt-Konzepte und Rigolenversickerung gemäß Frankfurter Entwässerungssatzung.", en: "Schwammstadt-Konzepte und Rigolenversickerung gemäß Frankfurter Entwässerungssatzung." }
+        title: { de: "DWA-A 138 Regenwasserretention", en: "DWA-A 138 Stormwater Retention & Infiltration" },
+        description: { de: "Schwammstadt-Konzepte und Rigolenversickerung gemäß Frankfurter Entwässerungssatzung.", en: "Sponge City concepts and underground retention rigoles conforming to Frankfurt municipal drainage regulations." }
       },
       {
-        title: { de: "Gebäudeenergiegesetz (GEG) & KfW 40", en: "Gebäudeenergiegesetz (GEG) & KfW 40" },
-        description: { de: "Zukunftssichere Wärmepumpen- und Photovoltaikintegration mit maximalen Tilgungszuschüssen.", en: "Zukunftssichere Wärmepumpen- und Photovoltaikintegration mit maximalen Tilgungszuschüssen." }
+        title: { de: "Gebäudeenergiegesetz (GEG) & KfW 40", en: "Building Energy Act (GEG) & KfW Efficiency House 40" },
+        description: { de: "Zukunftssichere Wärmepumpen- und Photovoltaikintegration mit maximalen Tilgungszuschüssen.", en: "Future-proof heat pump and photovoltaic integration delivering maximum federal repayment subsidies." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie lange dauert ein Bauantrag im Riedberg?", en: "Wie lange dauert ein Bauantrag im Riedberg?" },
-        answer: { de: "Im Geltungsbereich des qualifizierten Bebauungsplans greift bei vollständiger Konformität oft das Genehmigungsfreistellungsverfahren nach § 64 HBO, was die behördliche Vorlaufzeit auf unter einen Monat reduzieren kann.", en: "Im Geltungsbereich des qualifizierten Bebauungsplans greift bei vollständiger Konformität oft das Genehmigungsfreistellungsverfahren nach § 64 HBO, was die behördliche Vorlaufzeit auf unter einen Monat reduzieren kann." }
+        question: { de: "Wie lange dauert ein Bauantrag im Riedberg?", en: "How long does a building permit application take in Riedberg?" },
+        answer: { de: "Im Geltungsbereich des qualifizierten Bebauungsplans greift bei vollständiger Konformität oft das Genehmigungsfreistellungsverfahren nach § 64 HBO, was die behördliche Vorlaufzeit auf unter einen Monat reduzieren kann.", en: "Within the scope of the qualified development plan, fully conforming projects frequently qualify for the permit exemption procedure (§ 64 HBO), reducing administrative approval times to under one month." }
       },
       {
-        question: { de: "Planen Sie auch Retentionsdächer und Rigolen?", en: "Planen Sie auch Retentionsdächer und Rigolen?" },
-        answer: { de: "Ja, nachhaltige Regenwasserversickerung ist eine unserer technischen Kernkompetenzen, wie unsere Referenzprojekte im Rhein-Main-Gebiet belegen.", en: "Ja, nachhaltige Regenwasserversickerung ist eine unserer technischen Kernkompetenzen, wie unsere Referenzprojekte im Rhein-Main-Gebiet belegen." }
+        question: { de: "Planen Sie auch Retentionsdächer und Rigolen?", en: "Do you also design retention green roofs and infiltration rigoles?" },
+        answer: { de: "Ja, nachhaltige Regenwasserversickerung ist eine unserer technischen Kernkompetenzen, wie unsere Referenzprojekte im Rhein-Main-Gebiet belegen.", en: "Yes, sustainable stormwater management and infiltration systems represent one of our primary technical specialties, as shown in our regional portfolio." }
       },
       {
-        question: { de: "Übernehmen Sie auch die Bauleitung vor Ort im Riedberg?", en: "Übernehmen Sie auch die Bauleitung vor Ort im Riedberg?" },
-        answer: { de: "Ja, wir stellen erfahrene Bauleiter für LPH 8, die Qualität, Termine und Rechnungen vor Ort penibel überwachen.", en: "Ja, wir stellen erfahrene Bauleiter für LPH 8, die Qualität, Termine und Rechnungen vor Ort penibel überwachen." }
+        question: { de: "Übernehmen Sie auch die Bauleitung vor Ort im Riedberg?", en: "Do you provide on-site construction supervision in Riedberg?" },
+        answer: { de: "Ja, wir stellen erfahrene Bauleiter für LPH 8, die Qualität, Termine und Rechnungen vor Ort penibel überwachen.", en: "Yes, we assign seasoned project architects for Phase 8 who rigorously monitor craftsmanship, delivery timelines, and contractor billing on-site." }
       }
     ]
   },
@@ -736,30 +736,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Konversionsleitfaden Lyoner Quartier", en: "Konversionsleitfaden Lyoner Quartier" },
-        description: { de: "Baurechtliche Umnutzung von Bürohochhäusern zu Wohnungen und Micro-Apartments nach HBO.", en: "Baurechtliche Umnutzung von Bürohochhäusern zu Wohnungen und Micro-Apartments nach HBO." }
+        title: { de: "Konversionsleitfaden Lyoner Quartier", en: "Lyoner Quartier Urban Conversion Guidelines" },
+        description: { de: "Baurechtliche Umnutzung von Bürohochhäusern zu Wohnungen und Micro-Apartments nach HBO.", en: "Statutory change-of-use permits transforming commercial high-rises into contemporary apartments and micro-living units under HBO." }
       },
       {
-        title: { de: "HQ-100 Hochwasserschutz Mainufer", en: "HQ-100 Hochwasserschutz Mainufer" },
-        description: { de: "Wasserrechtliche Genehmigungen und druckwasserdichte Bauweisen im Überschwemmungsgebiet.", en: "Wasserrechtliche Genehmigungen und druckwasserdichte Bauweisen im Überschwemmungsgebiet." }
+        title: { de: "HQ-100 Hochwasserschutz Mainufer", en: "HQ-100 Flood Protection on the Main Riverbank" },
+        description: { de: "Wasserrechtliche Genehmigungen und druckwasserdichte Bauweisen im Überschwemmungsgebiet.", en: "Water management authority permits and pressure-watertight tanking systems within designated flood zones." }
       },
       {
-        title: { de: "Schallschutz nach DIN 4109", en: "Schallschutz nach DIN 4109" },
-        description: { de: "Akustische Entkopplung im Einflussbereich von Main-Neckar-Bahn und Flugkorridoren.", en: "Akustische Entkopplung im Einflussbereich von Main-Neckar-Bahn und Flugkorridoren." }
+        title: { de: "Schallschutz nach DIN 4109", en: "Acoustic Insulation according to DIN 4109" },
+        description: { de: "Akustische Entkopplung im Einflussbereich von Main-Neckar-Bahn und Flugkorridoren.", en: "Structural acoustic decoupling within the proximity of the Main-Neckar railway line and airport flight corridors." }
       }
     ],
     faqs: [
       {
-        question: { de: "Lohnt sich die Umnutzung eines Bürogebäudes zu Wohnungen?", en: "Lohnt sich die Umnutzung eines Bürogebäudes zu Wohnungen?" },
-        answer: { de: "Ja, insbesondere durch die Einsparung von Grauer Energie und verkürzte Rohbauzeiten. Wir prüfen im Rahmen einer Machbarkeitsstudie Tragstruktur, Fluchtwege und Wirtschaftlichkeit.", en: "Ja, insbesondere durch die Einsparung von Grauer Energie und verkürzte Rohbauzeiten. Wir prüfen im Rahmen einer Machbarkeitsstudie Tragstruktur, Fluchtwege und Wirtschaftlichkeit." }
+        question: { de: "Lohnt sich die Umnutzung eines Bürogebäudes zu Wohnungen?", en: "Is converting an office building into residential apartments worthwhile?" },
+        answer: { de: "Ja, insbesondere durch die Einsparung von Grauer Energie und verkürzte Rohbauzeiten. Wir prüfen im Rahmen einer Machbarkeitsstudie Tragstruktur, Fluchtwege und Wirtschaftlichkeit.", en: "Yes, particularly through significant embodied carbon savings and shortened structural construction timelines. We evaluate structural capacity, escape routes, and economic returns in a comprehensive feasibility study." }
       },
       {
-        question: { de: "Welche Abstände zum Main müssen in Oberrad eingehalten werden?", en: "Welche Abstände zum Main müssen in Oberrad eingehalten werden?" },
-        answer: { de: "Entscheidend sind die Hochwasserschutzgrenzen (HQ 100) des Regierungspräsidiums Darmstadt und die Frankfurter Grünanlagensatzung. Wir klären dies verbindlich vorab.", en: "Entscheidend sind die Hochwasserschutzgrenzen (HQ 100) des Regierungspräsidiums Darmstadt und die Frankfurter Grünanlagensatzung. Wir klären dies verbindlich vorab." }
+        question: { de: "Welche Abstände zum Main müssen in Oberrad eingehalten werden?", en: "What minimum distances to the Main riverbank must be maintained in Oberrad?" },
+        answer: { de: "Entscheidend sind die Hochwasserschutzgrenzen (HQ 100) des Regierungspräsidiums Darmstadt und die Frankfurter Grünanlagensatzung. Wir klären dies verbindlich vorab.", en: "Key constraints are set by the 100-year flood zone (HQ 100) established by the Regional Authority Darmstadt and municipal green belt statutes. We clarify these binding limits in advance." }
       },
       {
-        question: { de: "Arbeitet Shams Consult mit festen Fachplanern zusammen?", en: "Arbeitet Shams Consult mit festen Fachplanern zusammen?" },
-        answer: { de: "Wir arbeiten entweder mit Ihren bestehenden Fachplanern oder bringen ein bewährtes Netzwerk aus Statikern, TGA-Ingenieuren und Geotechnikern ein.", en: "Wir arbeiten entweder mit Ihren bestehenden Fachplanern oder bringen ein bewährtes Netzwerk aus Statikern, TGA-Ingenieuren und Geotechnikern ein." }
+        question: { de: "Arbeitet Shams Consult mit festen Fachplanern zusammen?", en: "Does Shams Consult work with established specialist engineers?" },
+        answer: { de: "Wir arbeiten entweder mit Ihren bestehenden Fachplanern oder bringen ein bewährtes Netzwerk aus Statikern, TGA-Ingenieuren und Geotechnikern ein.", en: "We collaborate seamlessly with your existing engineers or bring in our verified regional network of structural engineers, MEP consultants, and geotechnical specialists." }
       }
     ]
   },
@@ -835,30 +835,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Ensembleschutz Villenkolonie Buchschlag", en: "Ensembleschutz Villenkolonie Buchschlag" },
-        description: { de: "Einhaltung der verbindlichen Gestaltungs- und Erhaltungssatzung der Stadt Dreieich.", en: "Einhaltung der verbindlichen Gestaltungs- und Erhaltungssatzung der Stadt Dreieich." }
+        title: { de: "Ensembleschutz Villenkolonie Buchschlag", en: "Villenkolonie Buchschlag Architectural Ensemble Protection" },
+        description: { de: "Einhaltung der verbindlichen Gestaltungs- und Erhaltungssatzung der Stadt Dreieich.", en: "Adherence to the binding architectural design and preservation statute of the City of Dreieich." }
       },
       {
-        title: { de: "Denkmalrechtliche Genehmigungen (HDSchG)", en: "Denkmalrechtliche Genehmigungen (HDSchG)" },
-        description: { de: "Bauanträge und Detailabstimmungen mit dem Denkmalamt Kreis Offenbach in Dietzenbach.", en: "Bauanträge und Detailabstimmungen mit dem Denkmalamt Kreis Offenbach in Dietzenbach." }
+        title: { de: "Denkmalrechtliche Genehmigungen (HDSchG)", en: "Heritage Protection Approvals (HDSchG)" },
+        description: { de: "Bauanträge und Detailabstimmungen mit dem Denkmalamt Kreis Offenbach in Dietzenbach.", en: "Permit applications and detailed design clearance with the Offenbach District Heritage Authority in Dietzenbach." }
       },
       {
-        title: { de: "Wald- & Baumbestandssatzung Dreieich", en: "Wald- & Baumbestandssatzung Dreieich" },
-        description: { de: "Wurzelschutz und Abstandsflächen zu geschütztem Kiefern- und Eichenbestand.", en: "Wurzelschutz und Abstandsflächen zu geschütztem Kiefern- und Eichenbestand." }
+        title: { de: "Wald- & Baumbestandssatzung Dreieich", en: "Dreieich Woodland & Tree Protection Statute" },
+        description: { de: "Wurzelschutz und Abstandsflächen zu geschütztem Kiefern- und Eichenbestand.", en: "Root zone protection protocols and setback clearances respecting protected pine and oak groves." }
       }
     ],
     faqs: [
       {
-        question: { de: "Darf man in Buchschlag neu bauen?", en: "Darf man in Buchschlag neu bauen?" },
-        answer: { de: "Ja, Ersatz- und Neubauten sind möglich, müssen sich aber in Dachform, Materialität, Firsthöhe und Farbigkeit harmonisch in das denkmalgeschützte Ensemble einfügen. Wir entwickeln genehmigungsfähige Konzepte.", en: "Ja, Ersatz- und Neubauten sind möglich, müssen sich aber in Dachform, Materialität, Firsthöhe und Farbigkeit harmonisch in das denkmalgeschützte Ensemble einfügen. Wir entwickeln genehmigungsfähige Konzepte." }
+        question: { de: "Darf man in Buchschlag neu bauen?", en: "Is new construction permitted in Buchschlag?" },
+        answer: { de: "Ja, Ersatz- und Neubauten sind möglich, müssen sich aber in Dachform, Materialität, Firsthöhe und Farbigkeit harmonisch in das denkmalgeschützte Ensemble einfügen. Wir entwickeln genehmigungsfähige Konzepte.", en: "Yes, replacement and new buildings are possible, but their roof geometry, materials, ridge heights, and chromatic palette must blend harmoniously into the listed ensemble. We create fully approvable design schemes." }
       },
       {
-        question: { de: "Welche Fördermittel gibt es für Denkmalsanierungen in Buchschlag?", en: "Welche Fördermittel gibt es für Denkmalsanierungen in Buchschlag?" },
-        answer: { de: "Neben KfW-Förderungen für Effizienzhäuser Denkmal können Eigentümer erhebliche steuerliche Abschreibungen nach § 7i / § 10f EStG geltend machen. Wir unterstützen bei den Anträgen.", en: "Neben KfW-Förderungen für Effizienzhäuser Denkmal können Eigentümer erhebliche steuerliche Abschreibungen nach § 7i / § 10f EStG geltend machen. Wir unterstützen bei den Anträgen." }
+        question: { de: "Welche Fördermittel gibt es für Denkmalsanierungen in Buchschlag?", en: "What subsidies and grants are available for historic renovations in Buchschlag?" },
+        answer: { de: "Neben KfW-Förderungen für Effizienzhäuser Denkmal können Eigentümer erhebliche steuerliche Abschreibungen nach § 7i / § 10f EStG geltend machen. Wir unterstützen bei den Anträgen.", en: "Beyond KfW subsidies for listed heritage buildings, property owners can claim substantial tax write-offs under §§ 7i / 10f of the German Income Tax Act (EStG). We provide comprehensive application support." }
       },
       {
-        question: { de: "Wie weit ist Ihr Büro von Buchschlag entfernt?", en: "Wie weit ist Ihr Büro von Buchschlag entfernt?" },
-        answer: { de: "Unser Frankfurter Hauptsitz liegt nur ca. 12 Minuten Fahrtzeit entfernt. Wir sind regelmäßig vor Ort zur Begleitung unserer Bauvorhaben.", en: "Unser Frankfurter Hauptsitz liegt nur ca. 12 Minuten Fahrtzeit entfernt. Wir sind regelmäßig vor Ort zur Begleitung unserer Bauvorhaben." }
+        question: { de: "Wie weit ist Ihr Büro von Buchschlag entfernt?", en: "How far is your architectural office from Buchschlag?" },
+        answer: { de: "Unser Frankfurter Hauptsitz liegt nur ca. 12 Minuten Fahrtzeit entfernt. Wir sind regelmäßig vor Ort zur Begleitung unserer Bauvorhaben.", en: "Our Frankfurt headquarters is only about 12 minutes away by car. We are regularly on-site overseeing our ongoing projects." }
       }
     ]
   },
@@ -934,30 +934,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsicht Kreis Offenbach (Dietzenbach)", en: "Bauaufsicht Kreis Offenbach (Dietzenbach)" },
-        description: { de: "Etablierte Prüfungsabläufe für Baugenehmigungen im gesamten Stadtgebiet Dreieich.", en: "Etablierte Prüfungsabläufe für Baugenehmigungen im gesamten Stadtgebiet Dreieich." }
+        title: { de: "Bauaufsicht Kreis Offenbach (Dietzenbach)", en: "Offenbach District Building Authority (Dietzenbach)" },
+        description: { de: "Etablierte Prüfungsabläufe für Baugenehmigungen im gesamten Stadtgebiet Dreieich.", en: "Established administrative approval processes for building permits across the entire municipal territory of Dreieich." }
       },
       {
-        title: { de: "§ 34 BauGB Nachverdichtung", en: "§ 34 BauGB Nachverdichtung" },
-        description: { de: "Einfügungsprüfung zur optimalen Grundstücksausnutzung bei innerstädtischen Baulücken.", en: "Einfügungsprüfung zur optimalen Grundstücksausnutzung bei innerstädtischen Baulücken." }
+        title: { de: "§ 34 BauGB Nachverdichtung", en: "§ 34 BauGB Urban Infill & Densification" },
+        description: { de: "Einfügungsprüfung zur optimalen Grundstücksausnutzung bei innerstädtischen Baulücken.", en: "Neighborhood contextual analysis ensuring maximum floor area utilization on urban infill sites." }
       },
       {
-        title: { de: "HBO Stellplatznachweis Dreieich", en: "HBO Stellplatznachweis Dreieich" },
-        description: { de: "Rechtskonforme Planung von Tiefgaragen, Doppelparkern und oberirdischen Stellplätzen.", en: "Rechtskonforme Planung von Tiefgaragen, Doppelparkern und oberirdischen Stellplätzen." }
+        title: { de: "HBO Stellplatznachweis Dreieich", en: "Dreieich Municipal Parking Space Requirements" },
+        description: { de: "Rechtskonforme Planung von Tiefgaragen, Doppelparkern und oberirdischen Stellplätzen.", en: "Code-compliant planning of underground garages, mechanical duplex parkers, and surface parking bays." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie lange dauert eine Baugenehmigung in Dreieich?", en: "Wie lange dauert eine Baugenehmigung in Dreieich?" },
-        answer: { de: "Die Bauaufsicht des Kreises Offenbach bearbeitet vereinfachte Bauanträge nach § 65 HBO in der Regel innerhalb von 3 bis 4 Monaten. Wir sichern vollständige Unterlagen zur Vermeidung von Verzögerungen.", en: "Die Bauaufsicht des Kreises Offenbach bearbeitet vereinfachte Bauanträge nach § 65 HBO in der Regel innerhalb von 3 bis 4 Monaten. Wir sichern vollständige Unterlagen zur Vermeidung von Verzögerungen." }
+        question: { de: "Wie lange dauert eine Baugenehmigung in Dreieich?", en: "How long does a building permit take in Dreieich?" },
+        answer: { de: "Die Bauaufsicht des Kreises Offenbach bearbeitet vereinfachte Bauanträge nach § 65 HBO in der Regel innerhalb von 3 bis 4 Monaten. Wir sichern vollständige Unterlagen zur Vermeidung von Verzögerungen.", en: "The Offenbach District Building Authority typically processes simplified building applications under § 65 HBO within 3 to 4 months. We provide complete dossiers to prevent administrative delays." }
       },
       {
-        question: { de: "Planen Sie auch Gewerbeobjekte in Dreieich?", en: "Planen Sie auch Gewerbeobjekte in Dreieich?" },
-        answer: { de: "Ja, wir verfügen über umfangreiche Erfahrung in der Ausführungs- und Genehmigungsplanung von Gewerbebauten, Supermärkten und Bürogebäuden.", en: "Ja, wir verfügen über umfangreiche Erfahrung in der Ausführungs- und Genehmigungsplanung von Gewerbebauten, Supermärkten und Bürogebäuden." }
+        question: { de: "Planen Sie auch Gewerbeobjekte in Dreieich?", en: "Do you also design commercial buildings in Dreieich?" },
+        answer: { de: "Ja, wir verfügen über umfangreiche Erfahrung in der Ausführungs- und Genehmigungsplanung von Gewerbebauten, Supermärkten und Bürogebäuden.", en: "Yes, we possess extensive experience in construction design and statutory approvals for retail properties, supermarkets, and commercial office buildings." }
       },
       {
-        question: { de: "Können Sie vor dem Kauf eines Grundstücks eine Machbarkeitsstudie erstellen?", en: "Können Sie vor dem Kauf eines Grundstücks eine Machbarkeitsstudie erstellen?" },
-        answer: { de: "Ja, wir prüfen Baurecht, GRZ/GFZ, Erschließung und Altlasten vor Unterzeichnung des Notarvertrags.", en: "Ja, wir prüfen Baurecht, GRZ/GFZ, Erschließung und Altlasten vor Unterzeichnung des Notarvertrags." }
+        question: { de: "Können Sie vor dem Kauf eines Grundstücks eine Machbarkeitsstudie erstellen?", en: "Can you conduct a feasibility study prior to purchasing a plot of land?" },
+        answer: { de: "Ja, wir prüfen Baurecht, GRZ/GFZ, Erschließung und Altlasten vor Unterzeichnung des Notarvertrags.", en: "Yes, we examine zoning rights, building coverage ratios (GRZ/GFZ), utility connections, and potential soil contamination before you sign the notary contract." }
       }
     ]
   },
@@ -1033,30 +1033,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Fluglärmschutzgesetz Frankfurt Airport", en: "Fluglärmschutzgesetz Frankfurt Airport" },
-        description: { de: "Spezielle bauliche Schallschutzanforderungen nach DIN 4109 in Tag- und Nachtschutzrechten.", en: "Spezielle bauliche Schallschutzanforderungen nach DIN 4109 in Tag- und Nachtschutzrechten." }
+        title: { de: "Fluglärmschutzgesetz Frankfurt Airport", en: "Frankfurt Airport Noise Abatement Act" },
+        description: { de: "Schallschutztechnische Berechnungen und Vorgaben für Schallschutzfenster in Lärmschutzbereichen.", en: "Acoustic engineering calculations and certified window soundproofing specifications conforming to noise protection zone requirements." }
       },
       {
-        title: { de: "Gestaltungssatzung Hugenottenviertel", en: "Gestaltungssatzung Hugenottenviertel" },
-        description: { de: "Traditionsbewusste Dach- und Fassadengestaltung in der historischen Isenburger Altstadt.", en: "Traditionsbewusste Dach- und Fassadengestaltung in der historischen Isenburger Altstadt." }
+        title: { de: "Gestaltungssatzung Hugenottenviertel", en: "Hugenottenviertel Historic Design Statute" },
+        description: { de: "Erhaltung der städtebaulichen Identität bei Sanierungen und Anbauten im historischen Kern.", en: "Design alignment for renovations and extensions within the historic Huguenot settlement center." }
       },
       {
-        title: { de: "Bauaufsicht Kreis Offenbach", en: "Bauaufsicht Kreis Offenbach" },
-        description: { de: "Effiziente Einreichung und Begleitung von Bauvoranfragen und Baugenehmigungen.", en: "Effiziente Einreichung und Begleitung von Bauvoranfragen und Baugenehmigungen." }
+        title: { de: "Bauaufsicht Kreis Offenbach", en: "Offenbach District Building Department" },
+        description: { de: "Zügige Genehmigungsverfahren für gewerbliche und private Vorhaben.", en: "Fast-track building permit procedures for commercial and residential developments." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Schallschutzauflagen gelten in Neu-Isenburg?", en: "Welche Schallschutzauflagen gelten in Neu-Isenburg?" },
-        answer: { de: "Abhängig von der Lage im Lärmschutzbereich des Flughafens Frankfurt sind erhöhte Schalldämmmaße für Fenster, Lüftungsanlagen und Dachaufbauten erforderlich. Wir berechnen dies normgerecht.", en: "Abhängig von der Lage im Lärmschutzbereich des Flughafens Frankfurt sind erhöhte Schalldämmmaße für Fenster, Lüftungsanlagen und Dachaufbauten erforderlich. Wir berechnen dies normgerecht." }
+        question: { de: "Welche Schallschutzauflagen gelten in Neu-Isenburg?", en: "What acoustic regulations must be considered when building in Neu-Isenburg?" },
+        answer: { de: "Durch die Nähe zum Frankfurter Flughafen gelten besondere Anforderungen nach DIN 4109 und Fluglärmschutzgesetz. Wir erstellen die erforderlichen Schallschutznachweise.", en: "Due to proximity to Frankfurt Airport, specific acoustic standards under DIN 4109 and the Airport Noise Protection Act apply. We prepare the required acoustic compliance documentation." }
       },
       {
-        question: { de: "Übernimmt Shams Consult auch Projekte im Stadtteil Gravenbruch?", en: "Übernimmt Shams Consult auch Projekte im Stadtteil Gravenbruch?" },
-        answer: { de: "Ja, wir planen sowohl Modernisierungen von Bestandswohnungen als auch Neubauprojekte in Gravenbruch und Buchenbusch.", en: "Ja, wir planen sowohl Modernisierungen von Bestandswohnungen als auch Neubauprojekte in Gravenbruch und Buchenbusch." }
+        question: { de: "Sind Büro-zu-Wohnen-Umnutzungen in Neu-Isenburg möglich?", en: "Are commercial-to-residential conversions feasible in Neu-Isenburg?" },
+        answer: { de: "Ja, insbesondere im Umfeld des Bahnhofs und an Gewerberändern. Wir prüfen die planungsrechtliche Zulässigkeit und begleiten das Genehmigungsverfahren.", en: "Yes, particularly near the train station and commercial fringes. We verify zoning compatibility and coordinate change-of-use approvals with the planning office." }
       },
       {
-        question: { de: "Bieten Sie schlüsselfertige Architekturleistungen an?", en: "Bieten Sie schlüsselfertige Architekturleistungen an?" },
-        answer: { de: "Wir begleiten Sie als unabhängige Sachwalter des Bauherrn durch alle HOAI-Phasen bis zur bezugsfertigen Übergabe.", en: "Wir begleiten Sie als unabhängige Sachwalter des Bauherrn durch alle HOAI-Phasen bis zur bezugsfertigen Übergabe." }
+        question: { de: "Übernimmt Shams Consult die Kostenkontrolle nach DIN 276?", en: "Does Shams Consult manage cost control under DIN 276?" },
+        answer: { de: "Ja, Kostensicherheit ist ein elementarer Bestandteil unserer Arbeit von der ersten Schätzung bis zur finalen Abrechnung.", en: "Yes, cost certainty is a cornerstone of our practice. We track budgets rigorously across all stages from preliminary estimate to final invoice auditing." }
       }
     ]
   },
@@ -1132,30 +1132,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsicht Kreis Offenbach", en: "Bauaufsicht Kreis Offenbach" },
-        description: { de: "Genehmigungsmanagement nach Hessischer Bauordnung (HBO 2024).", en: "Genehmigungsmanagement nach Hessischer Bauordnung (HBO 2024)." }
+        title: { de: "§ 34 BauGB Einfügungsgebot", en: "§ 34 BauGB Contextual Infill in Residential Quarters" },
+        description: { de: "Harmonische Integration von Mehrfamilienhäusern in gewachsene Wohnsiedlungen.", en: "Harmonious integration of multi-family buildings into established neighborhood fabrics." }
       },
       {
-        title: { de: "§ 34 BauGB Einfügungsgebot", en: "§ 34 BauGB Einfügungsgebot" },
-        description: { de: "Optimierung von Geschossigkeit und Baukörperkubaturen im gewachsenen Wohnbestand.", en: "Optimierung von Geschossigkeit und Baukörperkubaturen im gewachsenen Wohnbestand." }
+        title: { de: "Klimaanpassung & Entsiegelung", en: "Climate Adaptation & Soil Desealing Directives" },
+        description: { de: "Umsetzung von versickerungsfähigen Pflasterflächen, Dachbegrünungen und Regenwasserzisternen.", en: "Implementation of unsealed permeable pavings, green roofs, and localized stormwater retention." }
       },
       {
-        title: { de: "Klimaanpassung & Entsiegelung", en: "Klimaanpassung & Entsiegelung" },
-        description: { de: "Extensive Gründächer und Retentionsrigolen zur Erfüllung lokaler Starkregenschutzvorgaben.", en: "Extensive Gründächer und Retentionsrigolen zur Erfüllung lokaler Starkregenschutzvorgaben." }
+        title: { de: "Bauaufsicht Kreis Offenbach", en: "Offenbach District Building Control (Dietzenbach)" },
+        description: { de: "Zuverlässige Einreichung von Bauanträgen und Bauvoranfragen nach HBO.", en: "Reliable building permit applications and pre-application filings under HBO." }
       }
     ],
     faqs: [
       {
-        question: { de: "Planen Sie auch in Nachbargemeinden wie Egelsbach oder Erzhausen?", en: "Planen Sie auch in Nachbargemeinden wie Egelsbach oder Erzhausen?" },
-        answer: { de: "Ja, unser Einzugsgebiet umfasst den gesamten Landkreis Offenbach sowie die angrenzenden Kreise Darmstadt-Dieburg und Groß-Gerau.", en: "Ja, unser Einzugsgebiet umfasst den gesamten Landkreis Offenbach sowie die angrenzenden Kreise Darmstadt-Dieburg und Groß-Gerau." }
+        question: { de: "Wie hoch darf in Langen im Wohngebiet gebaut werden?", en: "How high can multi-family buildings be built in Langen?" },
+        answer: { de: "Die Höhenentwicklung richtet sich nach dem Bebauungsplan oder der Umgebungsbebauung nach § 34 BauGB. Wir ermitteln das maximale Bauvolumen im Rahmen einer Ersteinschätzung.", en: "Building heights depend on the specific development plan or the immediate neighborhood context under § 34 BauGB. We determine maximum permissible volumes in an initial study." }
       },
       {
-        question: { de: "Was kostet eine erste Machbarkeitsprüfung für ein Grundstück in Langen?", en: "Was kostet eine erste Machbarkeitsprüfung für ein Grundstück in Langen?" },
-        answer: { de: "Wir bieten ein strukturiertes Erstgespräch an, in dem wir die bauplanungsrechtlichen Rahmenbedingungen vorab skizzieren.", en: "Wir bieten ein strukturiertes Erstgespräch an, in dem wir die bauplanungsrechtlichen Rahmenbedingungen vorab skizzieren." }
+        question: { de: "Was kostet eine erste Machbarkeitsprüfung für ein Grundstück in Langen?", en: "What does an initial feasibility check for a property in Langen cost?" },
+        answer: { de: "Wir bieten ein strukturiertes Erstgespräch an, in dem wir die bauplanungsrechtlichen Rahmenbedingungen vorab skizzieren.", en: "We offer a structured initial consultation where we outline the statutory planning and zoning framework for your parcel." }
       },
       {
-        question: { de: "Wie sichern Sie die Baukosten während der Ausführung ab?", en: "Wie sichern Sie die Baukosten während der Ausführung ab?" },
-        answer: { de: "Durch präzise Kostenberechnungen nach DIN 276, VOB-konforme Ausschreibungen mit Preisspiegel und kontinuierliche Rechnungsprüfung.", en: "Durch präzise Kostenberechnungen nach DIN 276, VOB-konforme Ausschreibungen mit Preisspiegel und kontinuierliche Rechnungsprüfung." }
+        question: { de: "Wie sichern Sie die Baukosten während der Ausführung ab?", en: "How do you secure construction costs during the build phase?" },
+        answer: { de: "Durch präzise Kostenberechnungen nach DIN 276, VOB-konforme Ausschreibungen mit Preisspiegel und kontinuierliche Rechnungsprüfung.", en: "Through precise DIN 276 cost calculations, VOB-compliant procurement with detailed tender comparisons, and continuous invoice verification." }
       }
     ]
   },
@@ -1231,30 +1231,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bebauungspläne Breidert & Ober-Roden", en: "Bebauungspläne Breidert & Ober-Roden" },
-        description: { de: "Rechtssichere Umsetzung von Dachneigungen, Kniestockhöhen und GRZ/GFZ-Kennwerten.", en: "Rechtssichere Umsetzung von Dachneigungen, Kniestockhöhen und GRZ/GFZ-Kennwerten." }
+        title: { de: "Bebauungspläne Breidert & Ober-Roden", en: "Breidert & Ober-Roden Development Plans" },
+        description: { de: "Rechtssichere Umsetzung von Dachneigungen, Kniestockhöhen und GRZ/GFZ-Kennwerten.", en: "Compliant implementation of permissible roof pitches, knee-wall heights, and site occupancy ratios (GRZ/GFZ)." }
       },
       {
-        title: { de: "Bauaufsichtsamt Kreis Offenbach", en: "Bauaufsichtsamt Kreis Offenbach" },
-        description: { de: "Kurze Behördenwege nach Dietzenbach für zügige Baugenehmigungsverfahren.", en: "Kurze Behördenwege nach Dietzenbach für zügige Baugenehmigungsverfahren." }
+        title: { de: "Bauaufsichtsamt Kreis Offenbach", en: "Offenbach District Building Department" },
+        description: { de: "Kurze Behördenwege nach Dietzenbach für zügige Baugenehmigungsverfahren.", en: "Short administrative communication channels to Dietzenbach ensuring swift permit delivery." }
       },
       {
-        title: { de: "KfW-Effizienzhaus & QNG-Standards", en: "KfW-Effizienzhaus & QNG-Standards" },
-        description: { de: "Zertifizierte Nachhaltigkeitsplanung für maximale Fördermittel nach hessischem Standard.", en: "Zertifizierte Nachhaltigkeitsplanung für maximale Fördermittel nach hessischem Standard." }
+        title: { de: "KfW-Effizienzhaus & QNG-Standards", en: "KfW Efficiency House & QNG Sustainability Standards" },
+        description: { de: "Zertifizierte Nachhaltigkeitsplanung für maximale Fördermittel nach hessischem Standard.", en: "Certified green building planning securing maximum federal and Hessian subsidies." }
       }
     ],
     faqs: [
       {
-        question: { de: "Kann ich ein Beratungsgespräch direkt in Rödermark wahrnehmen?", en: "Kann ich ein Beratungsgespräch direkt in Rödermark wahrnehmen?" },
-        answer: { de: "Selbstverständlich. Sie erreichen unser Büro in der Carl-Zeiss-Str. 43 nach kurzer Terminvereinbarung.", en: "Selbstverständlich. Sie erreichen unser Büro in der Carl-Zeiss-Str. 43 nach kurzer Terminvereinbarung." }
+        question: { de: "Kann ich ein Beratungsgespräch direkt in Rödermark wahrnehmen?", en: "Can I schedule an in-person consultation directly in Rödermark?" },
+        answer: { de: "Selbstverständlich. Sie erreichen unser Büro in der Carl-Zeiss-Str. 43 nach kurzer Terminvereinbarung.", en: "Certainly. You can visit our planning office at Carl-Zeiss-Str. 43 upon brief appointment." }
       },
       {
-        question: { de: "Bauen Sie im Breidert auch moderne Flachdachvillen?", en: "Bauen Sie im Breidert auch moderne Flachdachvillen?" },
-        answer: { de: "Sofern der maßgebliche Bebauungsplan dies zulässt oder über eine Befreiung nach § 31 BauGB genehmigt werden kann. Wir prüfen dies detailliert.", en: "Sofern der maßgebliche Bebauungsplan dies zulässt oder über eine Befreiung nach § 31 BauGB genehmigt werden kann. Wir prüfen dies detailliert." }
+        question: { de: "Bauen Sie im Breidert auch moderne Flachdachvillen?", en: "Do you design contemporary flat-roof villas in the Breidert district?" },
+        answer: { de: "Sofern der maßgebliche Bebauungsplan dies zulässt oder über eine Befreiung nach § 31 BauGB genehmigt werden kann. Wir prüfen dies detailliert.", en: "Provided the governing zoning plan allows it or an exemption under § 31 BauGB can be granted. We review the legal options in detail." }
       },
       {
-        question: { de: "Welche Referenzen hat Shams Consult direkt in Rödermark?", en: "Welche Referenzen hat Shams Consult direkt in Rödermark?" },
-        answer: { de: "Wir haben unter anderem eine prämierte moderne Stadtvilla mit Mehrfamilienhauscharakter und Erdwärmetechnik erfolgreich in Rödermark realisiert.", en: "Wir haben unter anderem eine prämierte moderne Stadtvilla mit Mehrfamilienhauscharakter und Erdwärmetechnik erfolgreich in Rödermark realisiert." }
+        question: { de: "Welche Referenzen hat Shams Consult direkt in Rödermark?", en: "What references does Shams Consult have directly in Rödermark?" },
+        answer: { de: "Wir haben unter anderem eine prämierte moderne Stadtvilla mit Mehrfamilienhauscharakter und Erdwärmetechnik erfolgreich in Rödermark realisiert.", en: "Among others, we successfully designed and realized an award-winning modern urban villa with multi-family character and geothermal energy in Rödermark." }
       }
     ]
   },
@@ -1330,30 +1330,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "§ 34 BauGB Einfügung im Waldacker", en: "§ 34 BauGB Einfügung im Waldacker" },
-        description: { de: "Wahrung des lockeren, waldnahen Siedlungscharakters bei Bauvoranfragen.", en: "Wahrung des lockeren, waldnahen Siedlungscharakters bei Bauvoranfragen." }
+        title: { de: "§ 34 BauGB Einfügung im Waldacker", en: "§ 34 BauGB Infill in Waldacker Settlement" },
+        description: { de: "Wahrung des lockeren, waldnahen Siedlungscharakters bei Bauvoranfragen.", en: "Preserving the loose, woodland-adjacent garden character in preliminary building inquiries." }
       },
       {
-        title: { de: "Grundwasser- & Versickerungsvorgaben", en: "Grundwasser- & Versickerungsvorgaben" },
-        description: { de: "Hydrogeologische Vorprüfungen und Rigolenplanung im Kreis Offenbach.", en: "Hydrogeologische Vorprüfungen und Rigolenplanung im Kreis Offenbach." }
+        title: { de: "Grundwasser- & Versickerungsvorgaben", en: "Groundwater & Infiltration Mandates" },
+        description: { de: "Hydrogeologische Vorprüfungen und Rigolenplanung im Kreis Offenbach.", en: "Hydrogeological preliminary assessments and retention rigole design within the Offenbach district." }
       },
       {
-        title: { de: "HBO Vereinfachtes Baugenehmigungsverfahren", en: "HBO Vereinfachtes Baugenehmigungsverfahren" },
-        description: { de: "Vollständige, prüffähige Bauanträge für Ein- und Zweifamilienhäuser.", en: "Vollständige, prüffähige Bauanträge für Ein- und Zweifamilienhäuser." }
+        title: { de: "HBO Vereinfachtes Baugenehmigungsverfahren", en: "HBO Simplified Building Permit Procedure" },
+        description: { de: "Vollständige, prüffähige Bauanträge für Ein- und Zweifamilienhäuser.", en: "Complete, audit-ready building permit dossiers for single- and two-family residences." }
       }
     ],
     faqs: [
       {
-        question: { de: "Sind Aufstockungen auf bestehenden Bungalows in Waldacker möglich?", en: "Sind Aufstockungen auf bestehenden Bungalows in Waldacker möglich?" },
-        answer: { de: "Ja, wir prüfen vorab die statischen Reserven der Tragstruktur und reichen eine Bauvoranfrage bezüglich der zulässigen Firsthöhe ein.", en: "Ja, wir prüfen vorab die statischen Reserven der Tragstruktur und reichen eine Bauvoranfrage bezüglich der zulässigen Firsthöhe ein." }
+        question: { de: "Sind Aufstockungen auf bestehenden Bungalows in Waldacker möglich?", en: "Are additional stories or roof conversions possible on existing bungalows in Waldacker?" },
+        answer: { de: "Ja, wir prüfen vorab die statischen Reserven der Tragstruktur und reichen eine Bauvoranfrage bezüglich der zulässigen Firsthöhe ein.", en: "Yes, we first evaluate the structural load-bearing capacity and submit a preliminary building inquiry regarding permissible ridge heights." }
       },
       {
-        question: { de: "Wie arbeitet Shams Consult mit lokalen Handwerkern zusammen?", en: "Wie arbeitet Shams Consult mit lokalen Handwerkern zusammen?" },
-        answer: { de: "Wir verfügen über hervorragende Kontakte zu regionalen Meisterbetrieben im Kreis Offenbach und vergeben alle Gewerke transparent nach VOB.", en: "Wir verfügen über hervorragende Kontakte zu regionalen Meisterbetrieben im Kreis Offenbach und vergeben alle Gewerke transparent nach VOB." }
+        question: { de: "Wie arbeitet Shams Consult mit lokalen Handwerkern zusammen?", en: "How does Shams Consult collaborate with regional craft trades?" },
+        answer: { de: "Wir verfügen über hervorragende Kontakte zu regionalen Meisterbetrieben im Kreis Offenbach und vergeben alle Gewerke transparent nach VOB.", en: "We maintain outstanding relationships with proven master craft firms in the Offenbach district and tender all work transparently under German VOB standards." }
       },
       {
-        question: { de: "Übernehmen Sie auch die energetische Sanierung von 70er-Jahre-Häusern?", en: "Übernehmen Sie auch die energetische Sanierung von 70er-Jahre-Häusern?" },
-        answer: { de: "Ja, energetische Kernsanierungen mit KfW-Fördermitteln gehören zu unseren festen Kernkompetenzen.", en: "Ja, energetische Kernsanierungen mit KfW-Fördermitteln gehören zu unseren festen Kernkompetenzen." }
+        question: { de: "Übernehmen Sie auch die energetische Sanierung von 70er-Jahre-Häusern?", en: "Do you also manage energy-efficiency retrofits for 1970s residences?" },
+        answer: { de: "Ja, energetische Kernsanierungen mit KfW-Fördermitteln gehören zu unseren festen Kernkompetenzen.", en: "Yes, deep energetic retrofits leveraging KfW subsidies are an established core competence of our studio." }
       }
     ]
   },
@@ -1429,30 +1429,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsichtsamt Dietzenbach", en: "Bauaufsichtsamt Dietzenbach" },
-        description: { de: "Effiziente Baugenehmigungen für Bauherren in Jügesheim, Dudenhofen und Nieder-Roden.", en: "Effiziente Baugenehmigungen für Bauherren in Jügesheim, Dudenhofen und Nieder-Roden." }
+        title: { de: "Bauaufsichtsamt Dietzenbach", en: "Dietzenbach District Building Authority" },
+        description: { de: "Effiziente Baugenehmigungen für Bauherren in Jügesheim, Dudenhofen und Nieder-Roden.", en: "Efficient building permit procedures for developers and owners in Jügesheim, Dudenhofen, and Nieder-Roden." }
       },
       {
-        title: { de: "Bebauungspläne Stadt Rodgau", en: "Bebauungspläne Stadt Rodgau" },
-        description: { de: "Konforme Ausnutzung der Festsetzungen zu Dachformen, Geschossflächen und Stellplätzen.", en: "Konforme Ausnutzung der Festsetzungen zu Dachformen, Geschossflächen und Stellplätzen." }
+        title: { de: "Bebauungspläne Stadt Rodgau", en: "City of Rodgau Master Development Plans" },
+        description: { de: "Konforme Ausnutzung der Festsetzungen zu Dachformen, Geschossflächen und Stellplätzen.", en: "Compliant utilization of zoning codes regarding roof geometry, floor areas, and parking facilities." }
       },
       {
-        title: { de: "HBO Freistellungsverfahren (§ 64 HBO)", en: "HBO Freistellungsverfahren (§ 64 HBO)" },
-        description: { de: "Schnellere Baufreigaben bei strikter Übereinstimmung mit qualifizierten B-Plänen.", en: "Schnellere Baufreigaben bei strikter Übereinstimmung mit qualifizierten B-Plänen." }
+        title: { de: "HBO Freistellungsverfahren (§ 64 HBO)", en: "HBO Building Permit Exemption (§ 64 HBO)" },
+        description: { de: "Schnellere Baufreigaben bei strikter Übereinstimmung mit qualifizierten B-Plänen.", en: "Accelerated approvals when proposals strictly adhere to qualified local development plans." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie schnell kann ein Bauantrag in Rodgau eingereicht werden?", en: "Wie schnell kann ein Bauantrag in Rodgau eingereicht werden?" },
-        answer: { de: "Nach Fertigstellung der Entwurfs- und Genehmigungsplanung (LPH 3–4) reichen wir die Unterlagen digital bei der Bauaufsicht Dietzenbach ein.", en: "Nach Fertigstellung der Entwurfs- und Genehmigungsplanung (LPH 3–4) reichen wir die Unterlagen digital bei der Bauaufsicht Dietzenbach ein." }
+        question: { de: "Wie schnell kann ein Bauantrag in Rodgau eingereicht werden?", en: "How quickly can a building permit application be submitted in Rodgau?" },
+        answer: { de: "Nach Fertigstellung der Entwurfs- und Genehmigungsplanung (LPH 3–4) reichen wir die Unterlagen digital bei der Bauaufsicht Dietzenbach ein.", en: "Upon completing the scheme design and permit documentation (Phases 3–4), we submit all documents digitally to the Dietzenbach Building Authority." }
       },
       {
-        question: { de: "Planen Sie auch Mehrfamilienhäuser zur Vermietung in Rodgau?", en: "Planen Sie auch Mehrfamilienhäuser zur Vermietung in Rodgau?" },
-        answer: { de: "Ja, wir optimieren Grundrisse und Wohnflächen für renditestarke, langlebige Mietwohnungsbauten.", en: "Ja, wir optimieren Grundrisse und Wohnflächen für renditestarke, langlebige Mietwohnungsbauten." }
+        question: { de: "Planen Sie auch Mehrfamilienhäuser zur Vermietung in Rodgau?", en: "Do you design multi-family apartment buildings for rent in Rodgau?" },
+        answer: { de: "Ja, wir optimieren Grundrisse und Wohnflächen für renditestarke, langlebige Mietwohnungsbauten.", en: "Yes, we optimize residential floor plans and net living areas for durable, high-yield rental housing." }
       },
       {
-        question: { de: "Ist Ihr Büro für Termine in Rodgau erreichbar?", en: "Ist Ihr Büro für Termine in Rodgau erreichbar?" },
-        answer: { de: "Unser Planungsstandort in Rödermark grenzt direkt an Rodgau (unter 5 Minuten Fahrtzeit nach Jügesheim).", en: "Unser Planungsstandort in Rödermark grenzt direkt an Rodgau (unter 5 Minuten Fahrtzeit nach Jügesheim)." }
+        question: { de: "Ist Ihr Büro für Termine in Rodgau erreichbar?", en: "Is your office easily accessible for appointments in Rodgau?" },
+        answer: { de: "Unser Planungsstandort in Rödermark grenzt direkt an Rodgau (unter 5 Minuten Fahrtzeit nach Jügesheim).", en: "Our Rödermark studio directly borders Rodgau (less than 5 minutes drive to Jügesheim)." }
       }
     ]
   },
@@ -1528,30 +1528,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Erhaltungssatzung Kurviertel & Hardtwald", en: "Erhaltungssatzung Kurviertel & Hardtwald" },
-        description: { de: "Sensible Einpassung in die historische Villenstruktur und Schutz prägender Grünstrukturen.", en: "Sensible Einpassung in die historische Villenstruktur und Schutz prägender Grünstrukturen." }
+        title: { de: "Erhaltungssatzung Kurviertel & Hardtwald", en: "Kurviertel & Hardtwald Preservation Statute" },
+        description: { de: "Sensible Einpassung in die historische Villenstruktur und Schutz prägender Grünstrukturen.", en: "Sensitive architectural integration into the historic villa fabric and protection of significant park vegetation." }
       },
       {
-        title: { de: "Denkmalschutzamt Bad Homburg vor der Höhe", en: "Denkmalschutzamt Bad Homburg vor der Höhe" },
-        description: { de: "Verhandlung denkmalrechtlicher Zustimmungen für anspruchsvolle Fassaden- und Dachumbauten.", en: "Verhandlung denkmalrechtlicher Zustimmungen für anspruchsvolle Fassaden- und Dachumbauten." }
+        title: { de: "Denkmalschutzamt Bad Homburg vor der Höhe", en: "Bad Homburg vor der Höhe Heritage Authority" },
+        description: { de: "Verhandlung denkmalrechtlicher Zustimmungen für anspruchsvolle Fassaden- und Dachumbauten.", en: "Negotiating statutory heritage consents for sophisticated facade restorations and roof conversions." }
       },
       {
-        title: { de: "Baumschutz & Tiefgaragenplanung", en: "Baumschutz & Tiefgaragenplanung" },
-        description: { de: "Wurzelschutzkonzepte bei Unterbauung weitläufiger Villengärten.", en: "Wurzelschutzkonzepte bei Unterbauung weitläufiger Villengärten." }
+        title: { de: "Baumschutz & Tiefgaragenplanung", en: "Tree Protection & Underground Garage Engineering" },
+        description: { de: "Wurzelschutzkonzepte bei Unterbauung weitläufiger Villengärten.", en: "Root preservation concepts when developing subterranean parking beneath expansive villa grounds." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche architektonischen Stile sind im Hardtwald genehmigungsfähig?", en: "Welche architektonischen Stile sind im Hardtwald genehmigungsfähig?" },
-        answer: { de: "Neben klassischer Villenarchitektur sind auch moderne Baukörper möglich, sofern Proportionen, Materialität und Firsthöhen mit der Erhaltungssatzung harmonieren.", en: "Neben klassischer Villenarchitektur sind auch moderne Baukörper möglich, sofern Proportionen, Materialität und Firsthöhen mit der Erhaltungssatzung harmonieren." }
+        question: { de: "Welche architektonischen Stile sind im Hardtwald genehmigungsfähig?", en: "What architectural styles can be approved in Hardtwald?" },
+        answer: { de: "Neben klassischer Villenarchitektur sind auch moderne Baukörper möglich, sofern Proportionen, Materialität und Firsthöhen mit der Erhaltungssatzung harmonieren.", en: "Alongside classical villa architecture, contemporary cubic designs are permissible, provided proportions, materials, and ridge heights harmonize with the preservation statute." }
       },
       {
-        question: { de: "Übernehmen Sie die gesamte Innenarchitektur und Lichtplanung?", en: "Übernehmen Sie die gesamte Innenarchitektur und Lichtplanung?" },
-        answer: { de: "Ja, wir integrieren hochwertige Innenarchitektur, Beleuchtungskonzepte und Smart-Home-Technik nahtlos in die Werkplanung.", en: "Ja, wir integrieren hochwertige Innenarchitektur, Beleuchtungskonzepte und Smart-Home-Technik nahtlos in die Werkplanung." }
+        question: { de: "Übernehmen Sie die gesamte Innenarchitektur und Lichtplanung?", en: "Do you handle complete interior design and lighting schemes?" },
+        answer: { de: "Ja, wir integrieren hochwertige Innenarchitektur, Beleuchtungskonzepte und Smart-Home-Technik nahtlos in die Werkplanung.", en: "Yes, we seamlessly integrate high-end interior architecture, architectural lighting, and smart-home technology into our working drawings." }
       },
       {
-        question: { de: "Wie begleiten Sie Bauherren während der Bauphase?", en: "Wie begleiten Sie Bauherren während der Bauphase?" },
-        answer: { de: "Mit intensiver Bauüberwachung vor Ort (LPH 8) durch erfahrene Architekten sichern wir höchste Handwerksqualität und Termintreue.", en: "Mit intensiver Bauüberwachung vor Ort (LPH 8) durch erfahrene Architekten sichern wir höchste Handwerksqualität und Termintreue." }
+        question: { de: "Wie begleiten Sie Bauherren während der Bauphase?", en: "How do you accompany clients during the construction phase?" },
+        answer: { de: "Mit intensiver Bauüberwachung vor Ort (LPH 8) durch erfahrene Architekten sichern wir höchste Handwerksqualität und Termintreue.", en: "Through intensive on-site clerk of works (Phase 8) by senior architects, we safeguard the highest standard of craftsmanship and milestone adherence." }
       }
     ]
   },
@@ -1627,30 +1627,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsicht Hochtaunuskreis (Bad Homburg)", en: "Bauaufsicht Hochtaunuskreis (Bad Homburg)" },
-        description: { de: "Erprobte Genehmigungsprozesse für Bauvorhaben im gesamten Stadtgebiet Oberursel.", en: "Erprobte Genehmigungsprozesse für Bauvorhaben im gesamten Stadtgebiet Oberursel." }
+        title: { de: "Bauaufsicht Hochtaunuskreis (Bad Homburg)", en: "Hochtaunuskreis Building Control (Bad Homburg)" },
+        description: { de: "Erprobte Genehmigungsprozesse für Bauvorhaben im gesamten Stadtgebiet Oberursel.", en: "Proven approval workflows for construction projects across the municipal area of Oberursel." }
       },
       {
-        title: { de: "Hangbebauung & Baugrundgutachten", en: "Hangbebauung & Baugrundgutachten" },
-        description: { de: "Geotechnische Abstimmung zur Hangsicherung, Kellerabdichtung und Stützmauern.", en: "Geotechnische Abstimmung zur Hangsicherung, Kellerabdichtung und Stützmauern." }
+        title: { de: "Hangbebauung & Baugrundgutachten", en: "Hillside Construction & Geotechnical Reports" },
+        description: { de: "Geotechnische Abstimmung zur Hangsicherung, Kellerabdichtung und Stützmauern.", en: "Specialist geotechnical coordination for slope retention, basement waterproofing, and retaining walls." }
       },
       {
-        title: { de: "B-Plan Festsetzungen Taunushänge", en: "B-Plan Festsetzungen Taunushänge" },
-        description: { de: "Einhaltung maximaler Traufhöhen und Geländeveränderungen im Außenbereich.", en: "Einhaltung maximaler Traufhöhen und Geländeveränderungen im Außenbereich." }
+        title: { de: "B-Plan Festsetzungen Taunushänge", en: "Taunus Slope Development Plan Codes" },
+        description: { de: "Einhaltung maximaler Traufhöhen und Geländeveränderungen im Außenbereich.", en: "Adherence to maximum eaves heights, terrain re-profiling, and green space conservation." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie baut man wirtschaftlich an Hanglagen in Oberursel?", en: "Wie baut man wirtschaftlich an Hanglagen in Oberursel?" },
-        answer: { de: "Durch eine intelligente Grundrissorganisation, die das Hanggeschoss als vollwertigen Wohn- oder Wellnessbereich nutzt und teure Erdbewegungen minimiert.", en: "Durch eine intelligente Grundrissorganisation, die das Hanggeschoss als vollwertigen Wohn- oder Wellnessbereich nutzt und teure Erdbewegungen minimiert." }
+        question: { de: "Wie baut man wirtschaftlich an Hanglagen in Oberursel?", en: "How do you build cost-effectively on sloping sites in Oberursel?" },
+        answer: { de: "Durch eine intelligente Grundrissorganisation, die das Hanggeschoss als vollwertigen Wohn- oder Wellnessbereich nutzt und teure Erdbewegungen minimiert.", en: "Through intelligent floor plan layouts that utilize the walkout basement as premium living or wellness space, minimizing expensive earth removal." }
       },
       {
-        question: { de: "Übernimmt Shams Consult auch die Bauüberwachung vor Ort in Oberursel?", en: "Übernimmt Shams Consult auch die Bauüberwachung vor Ort in Oberursel?" },
-        answer: { de: "Ja, wir sind regelmäßig im Hochtaunuskreis vor Ort und steuern alle ausführenden Gewerke.", en: "Ja, wir sind regelmäßig im Hochtaunuskreis vor Ort und steuern alle ausführenden Gewerke." }
+        question: { de: "Übernimmt Shams Consult auch die Bauüberwachung vor Ort in Oberursel?", en: "Does Shams Consult also provide on-site supervision in Oberursel?" },
+        answer: { de: "Ja, wir sind regelmäßig im Hochtaunuskreis vor Ort und steuern alle ausführenden Gewerke.", en: "Yes, we are frequently on-site throughout the Hochtaunus district, actively coordinating all construction trades." }
       },
       {
-        question: { de: "Können Sie denkmalgeschützte Fachwerkhäuser in Oberursel sanieren?", en: "Können Sie denkmalgeschützte Fachwerkhäuser in Oberursel sanieren?" },
-        answer: { de: "Ja, wir besitzen fundierte Erfahrung in der denkmalgerechten Sanierung historischer Fachwerkkonstruktionen.", en: "Ja, wir besitzen fundierte Erfahrung in der denkmalgerechten Sanierung historischer Fachwerkkonstruktionen." }
+        question: { de: "Können Sie denkmalgeschützte Fachwerkhäuser in Oberursel sanieren?", en: "Can you restore heritage timber-framed buildings in Oberursel?" },
+        answer: { de: "Ja, wir besitzen fundierte Erfahrung in der denkmalgerechten Sanierung historischer Fachwerkkonstruktionen.", en: "Yes, we possess solid experience in the conservation and structural restoration of historic half-timbered buildings." }
       }
     ]
   },
@@ -1726,30 +1726,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Denkmalbereich Kronberg Altstadt", en: "Denkmalbereich Kronberg Altstadt" },
-        description: { de: "Strikte Abstimmung mit der Denkmalfachbehörde bei Sanierungen und Anbauten.", en: "Strikte Abstimmung mit der Denkmalfachbehörde bei Sanierungen und Anbauten." }
+        title: { de: "Denkmalbereich Kronberg Altstadt", en: "Kronberg Old Town Heritage Protection Zone" },
+        description: { de: "Strikte Abstimmung mit der Denkmalfachbehörde bei Sanierungen und Anbauten.", en: "Rigorous alignment with the monument preservation office for historic renovations and additions." }
       },
       {
-        title: { de: "Erhaltungssatzungen Schönberg & Kronberg", en: "Erhaltungssatzungen Schönberg & Kronberg" },
-        description: { de: "Einhaltung der Villengebietscharakteristika und Grundstücksbegrünung.", en: "Einhaltung der Villengebietscharakteristika und Grundstücksbegrünung." }
+        title: { de: "Erhaltungssatzungen Schönberg & Kronberg", en: "Schönberg & Kronberg Villa Preservation Statutes" },
+        description: { de: "Einhaltung der Villengebietscharakteristika und Grundstücksbegrünung.", en: "Compliance with villa quarter characteristics, generous open spaces, and green site coverage." }
       },
       {
-        title: { de: "Bauaufsicht Hochtaunuskreis", en: "Bauaufsicht Hochtaunuskreis" },
-        description: { de: "Rechtssichere Bauanträge nach Hessischer Bauordnung (HBO).", en: "Rechtssichere Bauanträge nach Hessischer Bauordnung (HBO)." }
+        title: { de: "Bauaufsicht Hochtaunuskreis", en: "Hochtaunuskreis Building Authority" },
+        description: { de: "Rechtssichere Bauanträge nach Hessischer Bauordnung (HBO).", en: "Statutorily secure building applications under the Hesse Building Code (HBO)." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Auflagen gelten beim Bauen in Hanglagen in Schönberg?", en: "Welche Auflagen gelten beim Bauen in Hanglagen in Schönberg?" },
-        answer: { de: "Hanganschnitte, Firsthöhenbegrenzungen und der Schutz alter Baumbestände müssen sorgfältig eingereicht werden. Wir berechnen alle Schnittprofile vorab.", en: "Hanganschnitte, Firsthöhenbegrenzungen und der Schutz alter Baumbestände müssen sorgfältig eingereicht werden. Wir berechnen alle Schnittprofile vorab." }
+        question: { de: "Welche Auflagen gelten beim Bauen in Hanglagen in Schönberg?", en: "What regulations apply to hillside building in Schönberg?" },
+        answer: { de: "Hanganschnitte, Firsthöhenbegrenzungen und der Schutz alter Baumbestände müssen sorgfältig eingereicht werden. Wir berechnen alle Schnittprofile vorab.", en: "Slope cuts, ridge height ceilings, and the protection of mature tree stands must be meticulously documented. We calculate all cross-sectional profiles in advance." }
       },
       {
-        question: { de: "Entwerfen Sie auch minimalistische Bauhaus-Villen in Kronberg?", en: "Entwerfen Sie auch minimalistische Bauhaus-Villen in Kronberg?" },
-        answer: { de: "Ja, moderne, kubische Architekturformen mit raumhohen Verglasungen setzen wir gekonnt im Einklang mit dem Baurecht um.", en: "Ja, moderne, kubische Architekturformen mit raumhohen Verglasungen setzen wir gekonnt im Einklang mit dem Baurecht um." }
+        question: { de: "Entwerfen Sie auch minimalistische Bauhaus-Villen in Kronberg?", en: "Do you design minimalist Bauhaus-inspired villas in Kronberg?" },
+        answer: { de: "Ja, moderne, kubische Architekturformen mit raumhohen Verglasungen setzen wir gekonnt im Einklang mit dem Baurecht um.", en: "Yes, we expertly implement contemporary cubic architecture with floor-to-ceiling glass in full compliance with local building regulations." }
       },
       {
-        question: { de: "Wie unterstützt Shams Consult bei der Bauvergabe?", en: "Wie unterstützt Shams Consult bei der Bauvergabe?" },
-        answer: { de: "Wir erstellen detaillierte Leistungsverzeichnisse und prüfen Angebote neutral, um die besten Preise und Qualitäten zu sichern.", en: "Wir erstellen detaillierte Leistungsverzeichnisse und prüfen Angebote neutral, um die besten Preise und Qualitäten zu sichern." }
+        question: { de: "Wie unterstützt Shams Consult bei der Bauvergabe?", en: "How does Shams Consult assist with contractor procurement?" },
+        answer: { de: "Wir erstellen detaillierte Leistungsverzeichnisse und prüfen Angebote neutral, um die besten Preise und Qualitäten zu sichern.", en: "We compile comprehensive bills of quantities and evaluate competitive bids objectively to secure the best prices and quality." }
       }
     ]
   },
@@ -1825,30 +1825,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Topografische Geländemodellierung", en: "Topografische Geländemodellierung" },
-        description: { de: "Präzise Festlegung des natürlichen Geländes als Bezugspunkt für Höhenbeschränkungen.", en: "Präzise Festlegung des natürlichen Geländes als Bezugspunkt für Höhenbeschränkungen." }
+        title: { de: "Topografische Geländemodellierung", en: "Topographic Terrain Modeling & Hillside Statics" },
+        description: { de: "Präzise Hangsicherungen, Stützmauern und Terrassenplanungen mit Panoramablick auf die Frankfurter Skyline.", en: "Structural stability engineering, basement retaining systems, and cantilevered terraces overlooking Frankfurt." }
       },
       {
-        title: { de: "Bauamt Hochtaunuskreis", en: "Bauamt Hochtaunuskreis" },
-        description: { de: "Genehmigungsverfahren für hochwertige Sonder- und Wohnbauten.", en: "Genehmigungsverfahren für hochwertige Sonder- und Wohnbauten." }
+        title: { de: "Bauamt Hochtaunuskreis", en: "Hochtaunuskreis Building Department" },
+        description: { de: "Baugenehmigungen und Befreiungen (§ 31 BauGB) für Luxusanwesen in Falkenstein und Königstein.", en: "Permit applications and variances (§ 31 BauGB) for luxury residences in Falkenstein and Königstein." }
       },
       {
-        title: { de: "Ökologische Bauweise & Geothermie", en: "Ökologische Bauweise & Geothermie" },
-        description: { de: "Integration von Erdsonden und hocheffizienten regenerativen Energiekonzepten.", en: "Integration von Erdsonden und hocheffizienten regenerativen Energiekonzepten." }
+        title: { de: "Ökologische Bauweise & Geothermie", en: "Eco-Building & Geothermal Energy" },
+        description: { de: "Geothermische Bohrungen, Erdwärmenutzung und hocheffiziente Gebäudehüllen nach GEG-Standard.", en: "Integration of geothermal probes and energy-efficient building envelopes under GEG and KfW standards." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie lange dauert eine Baugenehmigung in Königstein?", en: "Wie lange dauert eine Baugenehmigung in Königstein?" },
-        answer: { de: "Beim Hochtaunuskreis liegt die Bearbeitungsdauer für komplexe Villenbauten meist zwischen 3 und 5 Monaten. Wir sichern vollständige Akten zur Vermeidung von Rückfragen.", en: "Beim Hochtaunuskreis liegt die Bearbeitungsdauer für komplexe Villenbauten meist zwischen 3 und 5 Monaten. Wir sichern vollständige Akten zur Vermeidung von Rückfragen." }
+        question: { de: "Welche Herausforderungen stellen Hanglagen in Königstein dar?", en: "What challenges arise when building on slopes in Königstein?" },
+        answer: { de: "Hanglagen verlangen anspruchsvolle statische Berechnungen, solide Hangsicherungen und durchdachte Zufahrtslösungen. Wir nutzen das Gelände optimal zur Wertsteigerung der Immobilie.", en: "Sloping terrain requires sophisticated earthwork calculations, solid slope retention, and smart multi-level access. We optimize the site to turn challenging topography into architectural value." }
       },
       {
-        question: { de: "Planen Sie auch Schwimmbäder und Wellnessbereiche in Königstein?", en: "Planen Sie auch Schwimmbäder und Wellnessbereiche in Königstein?" },
-        answer: { de: "Ja, Indoor- und Outdoor-Pools, Wellnesszonen und unterirdische Garagen integrieren wir regelmäßig in unsere High-End-Entwürfe.", en: "Ja, Indoor- und Outdoor-Pools, Wellnesszonen und unterirdische Garagen integrieren wir regelmäßig in unsere High-End-Entwürfe." }
+        question: { de: "Wie wird der Panoramablick auf Frankfurt architektonisch maximiert?", en: "How are panoramic skyline views maximized in the design?" },
+        answer: { de: "Durch raumhohe Verglasungen, großzügige Terrassenstaffelungen und auskragende Baukörper, die den Ausblick optimal inszenieren.", en: "Through tailored structural floor plans with wide spans, expansive glazing, and stepped terraces that capture the Frankfurt skyline perfectly." }
       },
       {
-        question: { de: "Ist Shams Consult im Hochtaunuskreis bauvorlageberechtigt?", en: "Ist Shams Consult im Hochtaunuskreis bauvorlageberechtigt?" },
-        answer: { de: "Ja, Dipl.-Ing. Majeed Shams besitzt die uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886) für alle Bauklassen.", en: "Ja, Dipl.-Ing. Majeed Shams besitzt die uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886) für alle Bauklassen." }
+        question: { de: "Koordiniert Shams Consult alle Fachplaner für einen Villenneubau?", en: "Can Shams Consult coordinate all specialist engineers for a villa build?" },
+        answer: { de: "Ja, wir leiten das gesamte Planungs- und Fachplanerteam von Geotechnik und Statik bis hin zu TGA, Lichtdesign und Außenanlagen.", en: "Yes, we lead and coordinate the entire planning team, from geotechnical and structural engineers to HVAC, lighting, and landscape designers." }
       }
     ]
   },
@@ -1924,30 +1924,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "UNESCO-Pufferzonen-Satzung", en: "UNESCO-Pufferzonen-Satzung" },
-        description: { de: "Strikte Vorgaben zu Dachformen, Farbigkeit, Materialität und Sichtachsen zur Künstlerkolonie.", en: "Strikte Vorgaben zu Dachformen, Farbigkeit, Materialität und Sichtachsen zur Künstlerkolonie." }
+        title: { de: "UNESCO-Pufferzonen-Satzung", en: "UNESCO World Heritage Buffer Zone Statute" },
+        description: { de: "Strenge gestalterische Vorgaben für Baumassen, Fassadengliederungen und Dachformen nahe der Welterbestätte.", en: "Stringent design criteria for building mass, facade rhythm, and roof geometry near the Mathildenhöhe ensemble." }
       },
       {
-        title: { de: "Denkmalschutzamt Darmstadt", en: "Denkmalschutzamt Darmstadt" },
-        description: { de: "Denkmalrechtliche Genehmigungen für Jugendstil-, Jugendstil-Reform- und Gründerzeitbauten.", en: "Denkmalrechtliche Genehmigungen für Jugendstil-, Jugendstil-Reform- und Gründerzeitbauten." }
+        title: { de: "Denkmalschutzamt Darmstadt", en: "Darmstadt City Monument Authority" },
+        description: { de: "Konsensuale Abstimmungsprozesse für denkmalgeschützte Jugendstilvillen und historische Anbauten.", en: "Consensus-driven negotiations for listed Jugendstil villas and historical additions." }
       },
       {
-        title: { de: "Gestaltungshandbuch der Stadt Darmstadt", en: "Gestaltungshandbuch der Stadt Darmstadt" },
-        description: { de: "Fassaden- und Gaubenvorgaben für denkmalgeschützte Gesamtanlagen.", en: "Fassaden- und Gaubenvorgaben für denkmalgeschützte Gesamtanlagen." }
+        title: { de: "Gestaltungshandbuch der Stadt Darmstadt", en: "Darmstadt Urban Design Manual" },
+        description: { de: "Einhaltung städtischer Farb- und Materialkataloge für schützenswerte Quartiere.", en: "Compliance with material palettes, fenestration proportions, and historic enclosure walls." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Beschränkungen gelten in der UNESCO-Pufferzone?", en: "Welche Beschränkungen gelten in der UNESCO-Pufferzone?" },
-        answer: { de: "Sämtliche äußeren baulichen Veränderungen (auch Solaranlagen oder Dachfenster) müssen auf Sichtachsen und Denkmalverträglichkeit geprüft werden. Wir führen diesen Dialog erfolgreich.", en: "Sämtliche äußeren baulichen Veränderungen (auch Solaranlagen oder Dachfenster) müssen auf Sichtachsen und Denkmalverträglichkeit geprüft werden. Wir führen diesen Dialog erfolgreich." }
+        question: { de: "Welche Auflagen gelten in der Pufferzone der Mathildenhöhe?", en: "What restrictions apply in the Mathildenhöhe buffer zone?" },
+        answer: { de: "Vorhaben dürfen den historischen Gesamteindruck und wichtige Sichtachsen nicht beeinträchtigen. Wir entwickeln Entwürfe, die die Kriterien des Gestaltungsbeirats erfüllen.", en: "Projects within the buffer zone must not compromise the integrity or view corridors of the World Heritage site. We formulate compelling architectural designs that meet the criteria of the heritage council." }
       },
       {
-        question: { de: "Können historische Villen im Paulusviertel energetisch saniert werden?", en: "Können historische Villen im Paulusviertel energetisch saniert werden?" },
-        answer: { de: "Ja, durch Innendämmungen, denkmalkonforme Kastenfenster und moderne Wärmepumpentechnik erreichen wir hohe Effizienz bei vollem Substanzerhalt.", en: "Ja, durch Innendämmungen, denkmalkonforme Kastenfenster und moderne Wärmepumpentechnik erreichen wir hohe Effizienz bei vollem Substanzerhalt." }
+        question: { de: "Können historische Villen im Paulusviertel energetisch saniert werden?", en: "Can historic villas in Paulusviertel undergo deep energetic retrofits?" },
+        answer: { de: "Ja, durch Innendämmungen, denkmalkonforme Kastenfenster und moderne Wärmepumpentechnik erreichen wir hohe Effizienz bei vollem Substanzerhalt.", en: "Yes, through interior insulation systems, heritage-compliant box-type windows, and modern heat pump systems, we achieve superior energy efficiency while conserving historic fabric." }
       },
       {
-        question: { de: "Wie weit ist Darmstadt von Ihrem Büro entfernt?", en: "Wie weit ist Darmstadt von Ihrem Büro entfernt?" },
-        answer: { de: "Von unserem Frankfurter Hauptsitz bzw. unserem Standort Rödermark sind wir in 20 bis 25 Minuten direkt in Darmstadt vor Ort.", en: "Von unserem Frankfurter Hauptsitz bzw. unserem Standort Rödermark sind wir in 20 bis 25 Minuten direkt in Darmstadt vor Ort." }
+        question: { de: "Wie weit ist Darmstadt von Ihrem Büro entfernt?", en: "How far is Darmstadt from your practice?" },
+        answer: { de: "Von unserem Frankfurter Hauptsitz bzw. unserem Standort Rödermark sind wir in 20 bis 25 Minuten direkt in Darmstadt vor Ort.", en: "From our Frankfurt headquarters and our Rödermark studio, we reach Darmstadt in just 20 to 25 minutes." }
       }
     ]
   },
@@ -2023,30 +2023,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Erhaltungssatzung Bessungen", en: "Erhaltungssatzung Bessungen" },
-        description: { de: "Wahrung des ortstypischen Erscheinungsbildes bei Umbauten und Dachausbauten.", en: "Wahrung des ortstypischen Erscheinungsbildes bei Umbauten und Dachausbauten." }
+        title: { de: "Erhaltungssatzung Bessungen", en: "Bessungen Preservation Statute" },
+        description: { de: "Wahrung des ortstypischen Erscheinungsbildes bei Umbauten und Dachausbauten.", en: "Preserving the characteristic quarter ambiance during remodeling, extensions, and roof conversions." }
       },
       {
-        title: { de: "Bauaufsichtsamt Darmstadt", en: "Bauaufsichtsamt Darmstadt" },
-        description: { de: "Zügige Antragsstellung nach HBO und Begleitung aller Fachbehörden.", en: "Zügige Antragsstellung nach HBO und Begleitung aller Fachbehörden." }
+        title: { de: "Bauaufsichtsamt Darmstadt", en: "Darmstadt Building Control Office" },
+        description: { de: "Zügige Antragsstellung nach HBO und Begleitung aller Fachbehörden.", en: "Prompt application filing under HBO and complete inter-agency coordination." }
       },
       {
-        title: { de: "§ 34 BauGB in Villenlagen Eberstadt", en: "§ 34 BauGB in Villenlagen Eberstadt" },
-        description: { de: "Harmonische Einfügung moderner Baukörper in gewachsene Gartenstadtstrukturen.", en: "Harmonische Einfügung moderner Baukörper in gewachsene Gartenstadtstrukturen." }
+        title: { de: "§ 34 BauGB in Villenlagen Eberstadt", en: "§ 34 BauGB Infill in Eberstadt Villa Quarters" },
+        description: { de: "Harmonische Einfügung moderner Baukörper in gewachsene Gartenstadtstrukturen.", en: "Harmonious integration of contemporary volumes into established garden city environments." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie unterstützt Shams Consult bei der Bauvoranfrage in Bessungen?", en: "Wie unterstützt Shams Consult bei der Bauvoranfrage in Bessungen?" },
-        answer: { de: "Wir formulieren präzise baurechtliche Fragen zur Bebaubarkeit und sichern Ihr Baurecht vor Beginn der Ausführungsplanung rechtssicher ab.", en: "Wir formulieren präzise baurechtliche Fragen zur Bebaubarkeit und sichern Ihr Baurecht vor Beginn der Ausführungsplanung rechtssicher ab." }
+        question: { de: "Wie unterstützt Shams Consult bei der Bauvoranfrage in Bessungen?", en: "How does Shams Consult support preliminary building inquiries in Bessungen?" },
+        answer: { de: "Wir formulieren präzise baurechtliche Fragen zur Bebaubarkeit und sichern Ihr Baurecht vor Beginn der Ausführungsplanung rechtssicher ab.", en: "We formulate precise legal questions regarding buildability and secure your development rights before costly detailed design begins." }
       },
       {
-        question: { de: "Planen Sie auch studentisches Wohnen oder Micro-Apartments in Darmstadt?", en: "Planen Sie auch studentisches Wohnen oder Micro-Apartments in Darmstadt?" },
-        answer: { de: "Ja, für Investoren in der Wissenschaftsstadt Darmstadt entwerfen wir flächenoptimierte, wirtschaftliche Wohnkonzepte.", en: "Ja, für Investoren in der Wissenschaftsstadt Darmstadt entwerfen wir flächenoptimierte, wirtschaftliche Wohnkonzepte." }
+        question: { de: "Planen Sie auch studentisches Wohnen oder Micro-Apartments in Darmstadt?", en: "Do you design student housing or micro-apartment buildings in Darmstadt?" },
+        answer: { de: "Ja, für Investoren in der Wissenschaftsstadt Darmstadt entwerfen wir flächenoptimierte, wirtschaftliche Wohnkonzepte.", en: "Yes, for investors in the City of Science Darmstadt, we design area-optimized, highly cost-effective residential concepts." }
       },
       {
-        question: { de: "Bietet Shams Consult auch Bauleitung vor Ort in Darmstadt an?", en: "Bietet Shams Consult auch Bauleitung vor Ort in Darmstadt an?" },
-        answer: { de: "Ja, wir übernehmen die vollständige Bauüberwachung (LPH 8) mit lückenloser Dokumentation.", en: "Ja, wir übernehmen die vollständige Bauüberwachung (LPH 8) mit lückenloser Dokumentation." }
+        question: { de: "Bietet Shams Consult auch Bauleitung vor Ort in Darmstadt an?", en: "Does Shams Consult offer on-site construction supervision in Darmstadt?" },
+        answer: { de: "Ja, wir übernehmen die vollständige Bauüberwachung (LPH 8) mit lückenloser Dokumentation.", en: "Yes, we undertake complete on-site supervision (Phase 8) with rigorous quality tracking and documentation." }
       }
     ]
   },
@@ -2122,30 +2122,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Ensembleschutz Historismus Wiesbaden", en: "Ensembleschutz Historismus Wiesbaden" },
-        description: { de: "Erhaltung der historischen Stadtgrundrisse und streng geschützten Villenensembles.", en: "Erhaltung der historischen Stadtgrundrisse und streng geschützten Villenensembles." }
+        title: { de: "Ensembleschutz Historismus Wiesbaden", en: "Wiesbaden Historicism Ensemble Protection" },
+        description: { de: "Erhaltung der historischen Stadtgrundrisse und streng geschützten Villenensembles.", en: "Preserving historical street layouts and strictly protected Wilhelminian and neoclassical villa ensembles." }
       },
       {
-        title: { de: "Bauaufsichtsamt Landeshauptstadt Wiesbaden", en: "Bauaufsichtsamt Landeshauptstadt Wiesbaden" },
-        description: { de: "Bauantragsstellung nach HBO und Vorabstimmung bei komplexen Vorhaben.", en: "Bauantragsstellung nach HBO und Vorabstimmung bei komplexen Vorhaben." }
+        title: { de: "Bauaufsichtsamt Landeshauptstadt Wiesbaden", en: "State Capital Wiesbaden Building Authority" },
+        description: { de: "Bauantragsstellung nach HBO und Vorabstimmung bei komplexen Vorhaben.", en: "Permit applications under HBO and early consultations for complex hillside developments." }
       },
       {
-        title: { de: "Hangbebauung & Baugrundgutachten", en: "Hangbebauung & Baugrundgutachten" },
-        description: { de: "Geotechnische Absicherung bei Hanglagen am Neroberg und im Dambachtal.", en: "Geotechnische Absicherung bei Hanglagen am Neroberg und im Dambachtal." }
+        title: { de: "Hangbebauung & Baugrundgutachten", en: "Hillside Development & Geotechnical Surveys" },
+        description: { de: "Geotechnische Absicherung bei Hanglagen am Neroberg und im Dambachtal.", en: "Geotechnical stabilization and structural engineering for hillside plots on Neroberg and in Dambachtal." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie streng sind die Denkmalschutzvorgaben in Wiesbaden-Sonnenberg?", en: "Wie streng sind die Denkmalschutzvorgaben in Wiesbaden-Sonnenberg?" },
-        answer: { de: "Sehr streng, da Wiesbaden als 'Nizza des Nordens' ein einzigartiges Historismus-Ensemble bewahrt. Wir führen die Verhandlungen mit der Unteren Denkmalschutzbehörde partnerschaftlich und zielorientiert.", en: "Sehr streng, da Wiesbaden als 'Nizza des Nordens' ein einzigartiges Historismus-Ensemble bewahrt. Wir führen die Verhandlungen mit der Unteren Denkmalschutzbehörde partnerschaftlich und zielorientiert." }
+        question: { de: "Wie streng sind die Denkmalschutzvorgaben in Wiesbaden-Sonnenberg?", en: "How strict are historic preservation mandates in Wiesbaden-Sonnenberg?" },
+        answer: { de: "Sehr streng, da Wiesbaden als 'Nizza des Nordens' ein einzigartiges Historismus-Ensemble bewahrt. Wir führen die Verhandlungen mit der Unteren Denkmalschutzbehörde partnerschaftlich und zielorientiert.", en: "Very strict, as Wiesbaden preserves an internationally renowned historicist ensemble. We conduct negotiations with the Lower Heritage Authority constructively and with technical authority." }
       },
       {
-        question: { de: "Können Sie auch moderne Architekturformen am Neroberg genehmigen lassen?", en: "Können Sie auch moderne Architekturformen am Neroberg genehmigen lassen?" },
-        answer: { de: "Ja, moderne Villen mit klarer Formensprache und edlen Naturstein- oder Putzfassaden lassen sich bei stimmigen Proportionen hervorragend einfügen.", en: "Ja, moderne Villen mit klarer Formensprache und edlen Naturstein- oder Putzfassaden lassen sich bei stimmigen Proportionen hervorragend einfügen." }
+        question: { de: "Können Sie auch moderne Architekturformen am Neroberg genehmigen lassen?", en: "Can modern architectural expressions be approved on Neroberg?" },
+        answer: { de: "Ja, moderne Villen mit klarer Formensprache und edlen Naturstein- oder Putzfassaden lassen sich bei stimmigen Proportionen hervorragend einfügen.", en: "Yes, contemporary villas with clean geometric lines, premium natural stone, and mineral render harmonize superbly when proportions are carefully calibrated." }
       },
       {
-        question: { de: "Begleitet Shams Consult den gesamten Bauablauf in Wiesbaden?", en: "Begleitet Shams Consult den gesamten Bauablauf in Wiesbaden?" },
-        answer: { de: "Ja, wir steuern alle 9 HOAI-Leistungsphasen von der ersten Skizze bis zur finalen Bauabnahme.", en: "Ja, wir steuern alle 9 HOAI-Leistungsphasen von der ersten Skizze bis zur finalen Bauabnahme." }
+        question: { de: "Begleitet Shams Consult den gesamten Bauablauf in Wiesbaden?", en: "Does Shams Consult manage the complete construction process in Wiesbaden?" },
+        answer: { de: "Ja, wir steuern alle 9 HOAI-Leistungsphasen von der ersten Skizze bis zur finalen Bauabnahme.", en: "Yes, we direct all 9 HOAI work phases from initial sketch to final occupancy sign-off." }
       }
     ]
   },
@@ -2221,30 +2221,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "HQ-100 Hochwasserschutz Rhein", en: "HQ-100 Hochwasserschutz Rhein" },
-        description: { de: "Planung wasserdichter 'Weiße Wanne'-Konstruktionen und Hochwasserschutz-Genehmigungen.", en: "Planung wasserdichter 'Weiße Wanne'-Konstruktionen und Hochwasserschutz-Genehmigungen." }
+        title: { de: "HQ-100 Hochwasserschutz Rhein", en: "HQ-100 Rhine River Flood Protection" },
+        description: { de: "Planung wasserdichter 'Weiße Wanne'-Konstruktionen und Hochwasserschutz-Genehmigungen.", en: "Engineering watertight 'white tank' concrete basements and securing statutory flood defense permits." }
       },
       {
-        title: { de: "Denkmalbereich Schlosspark Biebrich", en: "Denkmalbereich Schlosspark Biebrich" },
-        description: { de: "Sichtachsen- und Höhenabstimmungen im direkten Umfeld des Barockschlosses.", en: "Sichtachsen- und Höhenabstimmungen im direkten Umfeld des Barockschlosses." }
+        title: { de: "Denkmalbereich Schlosspark Biebrich", en: "Biebrich Palace Park Monument Zone" },
+        description: { de: "Sichtachsen- und Höhenabstimmungen im direkten Umfeld des Barockschlosses.", en: "Sightline and building height alignments within the direct sphere of the Baroque palace." }
       },
       {
-        title: { de: "Bauaufsichtsamt Wiesbaden", en: "Bauaufsichtsamt Wiesbaden" },
-        description: { de: "Rechtssichere Bauanträge für Geschosswohnungsbau und Konversionen nach HBO.", en: "Rechtssichere Bauanträge für Geschosswohnungsbau und Konversionen nach HBO." }
+        title: { de: "Bauaufsichtsamt Wiesbaden", en: "Wiesbaden Building Control Department" },
+        description: { de: "Rechtssichere Bauanträge für Geschosswohnungsbau und Konversionen nach HBO.", en: "Permit applications for multi-family apartment complexes and commercial conversions under HBO." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Auflagen gelten für Tiefgaragen am Rheinufer in Biebrich?", en: "Welche Auflagen gelten für Tiefgaragen am Rheinufer in Biebrich?" },
-        answer: { de: "Tiefgaragen müssen gegen drückendes Grundwasser nach DIN EN 1992-3 bemessen und gegen Auftrieb gesichert werden. Wir integrieren die Fachstatik nahtlos.", en: "Tiefgaragen müssen gegen drückendes Grundwasser nach DIN EN 1992-3 bemessen und gegen Auftrieb gesichert werden. Wir integrieren die Fachstatik nahtlos." }
+        question: { de: "Welche Auflagen gelten für Tiefgaragen am Rheinufer in Biebrich?", en: "What rules apply to underground garages along the Rhine riverbank in Biebrich?" },
+        answer: { de: "Tiefgaragen müssen gegen drückendes Grundwasser nach DIN EN 1992-3 bemessen und gegen Auftrieb gesichert werden. Wir integrieren die Fachstatik nahtlos.", en: "Underground garages must be engineered against hydrostatic groundwater pressure according to DIN EN 1992-3 and anchored against buoyancy. We incorporate structural engineering seamlessly." }
       },
       {
-        question: { de: "Planen Sie auch Projekte im Schiersteiner Hafen?", en: "Planen Sie auch Projekte im Schiersteiner Hafen?" },
-        answer: { de: "Ja, wir entwickeln hochwertige Wohn- und Bürokonzepte für maritime Lagen im Rhein-Main-Gebiet.", en: "Ja, wir entwickeln hochwertige Wohn- und Bürokonzepte für maritime Lagen im Rhein-Main-Gebiet." }
+        question: { de: "Planen Sie auch Projekte im Schiersteiner Hafen?", en: "Do you plan projects in Schierstein Marina?" },
+        answer: { de: "Ja, wir entwickeln hochwertige Wohn- und Bürokonzepte für maritime Lagen im Rhein-Main-Gebiet.", en: "Yes, we develop high-caliber residential and office schemes for waterfront locations in the Rhine-Main region." }
       },
       {
-        question: { de: "Welche HOAI-Leistungen bietet Shams Consult an?", en: "Welche HOAI-Leistungen bietet Shams Consult an?" },
-        answer: { de: "Wir decken alle Leistungsphasen 1 bis 9 lückenlos ab.", en: "Wir decken alle Leistungsphasen 1 bis 9 lückenlos ab." }
+        question: { de: "Welche HOAI-Leistungen bietet Shams Consult an?", en: "What HOAI phases does Shams Consult deliver?" },
+        answer: { de: "Wir decken alle Leistungsphasen 1 bis 9 lückenlos ab.", en: "We cover all work phases 1 through 9 comprehensively." }
       }
     ]
   },
@@ -2320,30 +2320,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Schutzbereich Staatspark Wilhelmsbad", en: "Schutzbereich Staatspark Wilhelmsbad" },
-        description: { de: "Erhaltung historischer Sichtachsen und parkgerechte architektonische Fassadengestaltung.", en: "Erhaltung historischer Sichtachsen und parkgerechte architektonische Fassadengestaltung." }
+        title: { de: "Schutzbereich Staatspark Wilhelmsbad", en: "State Park Wilhelmsbad Protected Zone" },
+        description: { de: "Erhaltung historischer Sichtachsen und parkgerechte architektonische Fassadengestaltung.", en: "Preserving historic view corridors and designing architectural facades compatible with the historic park." }
       },
       {
-        title: { de: "Bauaufsichtsamt Stadt Hanau", en: "Bauaufsichtsamt Stadt Hanau" },
-        description: { de: "Schnelle Genehmigungsprozesse für Bauherren und Investoren in Kesselstadt und Wilhelmsbad.", en: "Schnelle Genehmigungsprozesse für Bauherren und Investoren in Kesselstadt und Wilhelmsbad." }
+        title: { de: "Bauaufsichtsamt Stadt Hanau", en: "City of Hanau Building Authority" },
+        description: { de: "Schnelle Genehmigungsprozesse für Bauherren und Investoren in Kesselstadt und Wilhelmsbad.", en: "Swift permit processing for homeowners and developers in Kesselstadt and Wilhelmsbad." }
       },
       {
-        title: { de: "Baumschutzsatzung Stadt Hanau", en: "Baumschutzsatzung Stadt Hanau" },
-        description: { de: "Schutz wertvoller alter Gehölze bei Neubaugründungen und Außenanlagen.", en: "Schutz wertvoller alter Gehölze bei Neubaugründungen und Außenanlagen." }
+        title: { de: "Baumschutzsatzung Stadt Hanau", en: "Hanau Municipal Tree Protection Statute" },
+        description: { de: "Schutz wertvoller alter Gehölze bei Neubaugründungen und Außenanlagen.", en: "Safeguarding valuable mature trees during foundation engineering and landscape planning." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie lange dauert ein Bauantrag in Hanau-Wilhelmsbad?", en: "Wie lange dauert ein Bauantrag in Hanau-Wilhelmsbad?" },
-        answer: { de: "Im vereinfachten Verfahren nach § 65 HBO dauert die Bearbeitung bei der Stadt Hanau in der Regel 3 bis 4 Monate. Durch vollständige Antragsakten vermeiden wir zeitintensive Nachforderungen.", en: "Im vereinfachten Verfahren nach § 65 HBO dauert die Bearbeitung bei der Stadt Hanau in der Regel 3 bis 4 Monate. Durch vollständige Antragsakten vermeiden wir zeitintensive Nachforderungen." }
+        question: { de: "Wie lange dauert ein Bauantrag in Hanau-Wilhelmsbad?", en: "How long does a building permit take in Hanau-Wilhelmsbad?" },
+        answer: { de: "Im vereinfachten Verfahren nach § 65 HBO dauert die Bearbeitung bei der Stadt Hanau in der Regel 3 bis 4 Monate. Durch vollständige Antragsakten vermeiden wir zeitintensive Nachforderungen.", en: "In the simplified procedure under § 65 HBO, processing by the City of Hanau typically takes 3 to 4 months. By submitting complete dossiers, we avoid time-consuming requests for additional data." }
       },
       {
-        question: { de: "Entwirft Shams Consult auch moderne Villen im Umfeld von Wilhelmsbad?", en: "Entwirft Shams Consult auch moderne Villen im Umfeld von Wilhelmsbad?" },
-        answer: { de: "Ja, wir verbinden zeitgenössische Ästhetik mit den Vorgaben des Denkmalschutzes zu harmonischen Gesamtwerken.", en: "Ja, wir verbinden zeitgenössische Ästhetik mit den Vorgaben des Denkmalschutzes zu harmonischen Gesamtwerken." }
+        question: { de: "Entwirft Shams Consult auch moderne Villen im Umfeld von Wilhelmsbad?", en: "Does Shams Consult design contemporary villas near Wilhelmsbad?" },
+        answer: { de: "Ja, wir verbinden zeitgenössische Ästhetik mit den Vorgaben des Denkmalschutzes zu harmonischen Gesamtwerken.", en: "Yes, we merge contemporary aesthetic standards with historic preservation parameters into harmonious architectural works." }
       },
       {
-        question: { de: "Welche Standorte hat Shams Consult in der Region?", en: "Welche Standorte hat Shams Consult in der Region?" },
-        answer: { de: "Unser Hauptsitz in Frankfurt und unser Standort Rödermark gewährleisten schnelle Erreichbarkeit in ganz Hanau und dem Main-Kinzig-Kreis.", en: "Unser Hauptsitz in Frankfurt und unser Standort Rödermark gewährleisten schnelle Erreichbarkeit in ganz Hanau und dem Main-Kinzig-Kreis." }
+        question: { de: "Welche Standorte hat Shams Consult in der Region?", en: "Where are Shams Consult's offices located in the region?" },
+        answer: { de: "Unser Hauptsitz in Frankfurt und unser Standort Rödermark gewährleisten schnelle Erreichbarkeit in ganz Hanau und dem Main-Kinzig-Kreis.", en: "Our Frankfurt headquarters and our Rödermark studio ensure rapid reach across Hanau and the Main-Kinzig district." }
       }
     ]
   },
@@ -2419,30 +2419,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Altstadtsatzung Hanau-Steinheim", en: "Altstadtsatzung Hanau-Steinheim" },
-        description: { de: "Schutz historischer Dachformen, Fachwerkfreilegungen und ortsbildprägender Details.", en: "Schutz historischer Dachformen, Fachwerkfreilegungen und ortsbildprägender Details." }
+        title: { de: "Altstadtsatzung Hanau-Steinheim", en: "Hanau-Steinheim Old Town Statute" },
+        description: { de: "Schutz historischer Dachformen, Fachwerkfreilegungen und ortsbildprägender Details.", en: "Protection of historic roof geometries, timber frame preservation, and quarter-defining details." }
       },
       {
-        title: { de: "Hochwasserschutz Mainufer", en: "Hochwasserschutz Mainufer" },
-        description: { de: "Wasserrechtliche Nachweise und baulicher Flutschutz bei mainnahen Grundstücken.", en: "Wasserrechtliche Nachweise und baulicher Flutschutz bei mainnahen Grundstücken." }
+        title: { de: "Hochwasserschutz Mainufer", en: "Main Riverbank Flood Protection" },
+        description: { de: "Wasserrechtliche Nachweise und baulicher Flutschutz bei mainnahen Grundstücken.", en: "Water management certifications and flood-resilient construction for riverside properties." }
       },
       {
-        title: { de: "Bauaufsichtsamt Hanau", en: "Bauaufsichtsamt Hanau" },
-        description: { de: "Fachgerechte Bauantragseinreichung nach HBO 2024.", en: "Fachgerechte Bauantragseinreichung nach HBO 2024." }
+        title: { de: "Bauaufsichtsamt Hanau", en: "Hanau Building Authority" },
+        description: { de: "Fachgerechte Bauantragseinreichung nach HBO 2024.", en: "Professional building permit applications under HBO 2024." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Förderungen gibt es für Fachwerksanierungen in Steinheim?", en: "Welche Förderungen gibt es für Fachwerksanierungen in Steinheim?" },
-        answer: { de: "Neben KfW-Effizienzhaus-Mitteln können Sanierungsförderungen der Städtebauförderung und steuerliche Denkmalabschreibungen genutzt werden.", en: "Neben KfW-Effizienzhaus-Mitteln können Sanierungsförderungen der Städtebauförderung und steuerliche Denkmalabschreibungen genutzt werden." }
+        question: { de: "Welche Förderungen gibt es für Fachwerksanierungen in Steinheim?", en: "What grants exist for timber-frame renovations in Steinheim?" },
+        answer: { de: "Neben KfW-Effizienzhaus-Mitteln können Sanierungsförderungen der Städtebauförderung und steuerliche Denkmalabschreibungen genutzt werden.", en: "Beyond KfW Efficiency House funds, urban regeneration subsidies and tax depreciation for historic monuments (§ 7i EStG) can be utilized." }
       },
       {
-        question: { de: "Planen Sie auch moderne Wohnanlagen in Großauheim?", en: "Planen Sie auch moderne Wohnanlagen in Großauheim?" },
-        answer: { de: "Ja, in Großauheim und Klein-Auheim planen wir moderne Ein- und Mehrfamilienhäuser sowie Konversionen ehemaliger Gewerbeflächen.", en: "Ja, in Großauheim und Klein-Auheim planen wir moderne Ein- und Mehrfamilienhäuser sowie Konversionen ehemaliger Gewerbeflächen." }
+        question: { de: "Planen Sie auch moderne Wohnanlagen in Großauheim?", en: "Do you also design contemporary housing developments in Großauheim?" },
+        answer: { de: "Ja, in Großauheim und Klein-Auheim planen wir moderne Ein- und Mehrfamilienhäuser sowie Konversionen ehemaliger Gewerbeflächen.", en: "Yes, in Großauheim and Klein-Auheim, we design modern single- and multi-family residences as well as brownfield conversions." }
       },
       {
-        question: { de: "Übernehmen Sie auch die Bauüberwachung bis zur Endabnahme?", en: "Übernehmen Sie auch die Bauüberwachung bis zur Endabnahme?" },
-        answer: { de: "Ja, LPH 8 und 9 (Bauüberwachung und Gewährleistungsmanagement) sind elementare Bestandteile unseres ganzheitlichen Planungsangebots.", en: "Ja, LPH 8 und 9 (Bauüberwachung und Gewährleistungsmanagement) sind elementare Bestandteile unseres ganzheitlichen Planungsangebots." }
+        question: { de: "Übernehmen Sie auch die Bauüberwachung bis zur Endabnahme?", en: "Do you provide construction supervision through to final sign-off?" },
+        answer: { de: "Ja, LPH 8 und 9 (Bauüberwachung und Gewährleistungsmanagement) sind elementare Bestandteile unseres ganzheitlichen Planungsangebots.", en: "Yes, Phases 8 and 9 (construction management and warranty supervision) are essential elements of our holistic architectural service." }
       }
     ]
   },
@@ -2518,30 +2518,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsichtsamt Stadt Offenbach", en: "Bauaufsichtsamt Stadt Offenbach" },
-        description: { de: "Rechtssichere Genehmigungsanträge nach HBO für Geschosswohnungsbau und Sonderbauten.", en: "Rechtssichere Genehmigungsanträge nach HBO für Geschosswohnungsbau und Sonderbauten." }
+        title: { de: "Bauaufsichtsamt Stadt Offenbach", en: "City of Offenbach Building Department" },
+        description: { de: "Rechtssichere Genehmigungsanträge nach HBO für Geschosswohnungsbau und Sonderbauten.", en: "Legally robust HBO permit applications for multi-story residential buildings and special structures." }
       },
       {
-        title: { de: "B-Pläne Hafen Offenbach & Kaiserlei", en: "B-Pläne Hafen Offenbach & Kaiserlei" },
-        description: { de: "Ausschöpfung städtebaulicher Kennzahlen (GFZ/GRZ) und Höhenvorgaben am Mainufer.", en: "Ausschöpfung städtebaulicher Kennzahlen (GFZ/GRZ) und Höhenvorgaben am Mainufer." }
+        title: { de: "B-Pläne Hafen Offenbach & Kaiserlei", en: "Hafen Offenbach & Kaiserlei Master Plans" },
+        description: { de: "Ausschöpfung städtebaulicher Kennzahlen (GFZ/GRZ) und Höhenvorgaben am Mainufer.", en: "Optimizing urban planning parameters (GFZ/GRZ) and building height allowances along the Main waterfront." }
       },
       {
-        title: { de: "Erhaltungs- und Milieuschutzsatzungen", en: "Erhaltungs- und Milieuschutzsatzungen" },
-        description: { de: "Prüffähige Begründungen für Modernisierungen im Offenbacher Westend und Senefelderquartier.", en: "Prüffähige Begründungen für Modernisierungen im Offenbacher Westend und Senefelderquartier." }
+        title: { de: "Erhaltungs- und Milieuschutzsatzungen", en: "Preservation and Milieuschutz Statutes" },
+        description: { de: "Prüffähige Begründungen für Modernisierungen im Offenbacher Westend und Senefelderquartier.", en: "Substantiated applications for modernizations in the Offenbach Westend and Senefelder quarters." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie lange dauert ein Baugenehmigungsverfahren bei der Stadt Offenbach?", en: "Wie lange dauert ein Baugenehmigungsverfahren bei der Stadt Offenbach?" },
-        answer: { de: "Bei vollständigen und prüffähigen Bauantragsunterlagen nach HBO liegt die Bearbeitungsdauer im vereinfachten Verfahren meist bei 3 bis 4 Monaten.", en: "Bei vollständigen und prüffähigen Bauantragsunterlagen nach HBO liegt die Bearbeitungsdauer im vereinfachten Verfahren meist bei 3 bis 4 Monaten." }
+        question: { de: "Wie lange dauert ein Baugenehmigungsverfahren bei der Stadt Offenbach?", en: "How long does a building permit application take with the City of Offenbach?" },
+        answer: { de: "Bei vollständigen und prüffähigen Bauantragsunterlagen nach HBO liegt die Bearbeitungsdauer im vereinfachten Verfahren meist bei 3 bis 4 Monaten.", en: "With complete and audit-ready building documents under HBO, processing in the simplified procedure generally takes 3 to 4 months." }
       },
       {
-        question: { de: "Planen Sie auch Bürokonversionen oder Mischnutzungen in Offenbach?", en: "Planen Sie auch Bürokonversionen oder Mischnutzungen in Offenbach?" },
-        answer: { de: "Ja, Konversionen von Gewerbeflächen zu hochwertigem Wohnraum gehören zu unseren zentralen städtebaulichen Schwerpunkten.", en: "Ja, Konversionen von Gewerbeflächen zu hochwertigem Wohnraum gehören zu unseren zentralen städtebaulichen Schwerpunkten." }
+        question: { de: "Planen Sie auch Bürokonversionen oder Mischnutzungen in Offenbach?", en: "Do you plan office-to-residential conversions or mixed-use projects in Offenbach?" },
+        answer: { de: "Ja, Konversionen von Gewerbeflächen zu hochwertigem Wohnraum gehören zu unseren zentralen städtebaulichen Schwerpunkten.", en: "Yes, converting commercial spaces into superior residential accommodation is one of our central urban planning specializations." }
       },
       {
-        question: { de: "Wie nah ist Shams Consult an Offenbach?", en: "Wie nah ist Shams Consult an Offenbach?" },
-        answer: { de: "Unser Büro am Frankfurter Carl-von-Noorden-Platz liegt nur wenige Minuten von Offenbach entfernt — wir sind extrem schnell vor Ort.", en: "Unser Büro am Frankfurter Carl-von-Noorden-Platz liegt nur wenige Minuten von Offenbach entfernt — wir sind extrem schnell vor Ort." }
+        question: { de: "Wie nah ist Shams Consult an Offenbach?", en: "How close is Shams Consult to Offenbach?" },
+        answer: { de: "Unser Büro am Frankfurter Carl-von-Noorden-Platz liegt nur wenige Minuten von Offenbach entfernt — wir sind extrem schnell vor Ort.", en: "Our office at Frankfurt's Carl-von-Noorden-Platz is just minutes from Offenbach — we are on-site swiftly." }
       }
     ]
   }
@@ -2618,30 +2618,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Ensembleschutz nach § 2 HDSchG", en: "Ensembleschutz nach § 2 HDSchG" },
-        description: { de: "Rechtssichere Abstimmung von Fassadensanierungen, Fensterteilungen und Dachgauben im geschützten Ensemblebereich.", en: "Rechtssichere Abstimmung von Fassadensanierungen, Fensterteilungen und Dachgauben im geschützten Ensemblebereich." }
+        title: { de: "Ensembleschutz nach § 2 HDSchG", en: "Ensemble Protection under § 2 HDSchG" },
+        description: { de: "Wiederherstellung historischer Stuckfassaden, Fensterteilungen und Mansarddachaufbauten im Einklang mit dem Denkmalamt.", en: "Restoration of historic stucco facades, window proportions, and mansard roof structures in compliance with heritage law." }
       },
       {
-        title: { de: "Gestaltungssatzung Innenstadt & Kurviertel", en: "Gestaltungssatzung Innenstadt & Kurviertel" },
-        description: { de: "Exakte Einhaltung der Vorgaben zu Materialität, Farbkonzepten und historischen Schmuckelementen.", en: "Exakte Einhaltung der Vorgaben zu Materialität, Farbkonzepten und historischen Schmuckelementen." }
+        title: { de: "Örtliche Bauvorschriften & Milieuschutz", en: "Wiesbaden Local Building Statutes & Milieuschutz" },
+        description: { de: "Abstimmung von Balkonanbauten, Terrassen und Aufzugsnachrüstungen in den historischen Innenhöfen.", en: "Coordination of balconies, terraces, and elevator retrofits in the historic courtyard zones." }
       },
       {
-        title: { de: "Stellplatzablösesatzung Wiesbaden", en: "Stellplatzablösesatzung Wiesbaden" },
-        description: { de: "Pragmatische Lösungen und Ablöseverhandlungen bei Nachverdichtungen und Dachausbauten ohne Hofstellplätze.", en: "Pragmatische Lösungen und Ablöseverhandlungen bei Nachverdichtungen und Dachausbauten ohne Hofstellplätze." }
+        title: { de: "HBO Brandschutz im denkmalgeschützten Altbau", en: "HBO Fire Protection in Listed Altbau Buildings" },
+        description: { de: "Zweite Rettungswege und Brandschutzertüchtigungen bei exklusiven Dachgeschossausbauten.", en: "Engineered second escape routes and fire-rated compartmentation for luxury roof conversions." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Kurviertel?", en: "Welche Denkmalschutzauflagen gelten bei Sanierungen im Kurviertel?" },
-        answer: { de: "Im Kurviertel stehen die meisten Gebäude unter Ensembleschutz oder sind Einzelkulturdenkmäler. Alle Maßnahmen an Fassade, Fenstern oder Dächern müssen vorab genehmigt werden. Wir führen die Abstimmung direkt mit dem Denkmalamt Wiesbaden.", en: "Im Kurviertel stehen die meisten Gebäude unter Ensembleschutz oder sind Einzelkulturdenkmäler. Alle Maßnahmen an Fassade, Fenstern oder Dächern müssen vorab genehmigt werden. Wir führen die Abstimmung direkt mit dem Denkmalamt Wiesbaden." }
+        question: { de: "Können Aufzugsanlagen im historischen Kurviertel nachgerüstet werden?", en: "Can passenger elevators be retrofitted in historic Kurviertel apartment buildings?" },
+        answer: { de: "Ja, entweder im innenliegenden Treppenauge oder unauffällig an der Hoffassade. Wir stimmen die statischen und denkmalrechtlichen Voraussetzungen direkt mit der Bauaufsicht ab.", en: "Yes, either in the interior stairwell eye or discreetly in the rear courtyard. We prepare permit drawings and heritage clearances with the building authority." }
       },
       {
-        question: { de: "Sind Dachgeschossausbauten im Kurviertel realisierbar?", en: "Sind Dachgeschossausbauten im Kurviertel realisierbar?" },
-        answer: { de: "Ja. Bei denkmalgerechter Gaubengestaltung und schlüssigem Brandschutzkonzept (2. Rettungsweg nach HBO) erwirken wir verlässliche Baugenehmigungen.", en: "Ja. Bei denkmalgerechter Gaubengestaltung und schlüssigem Brandschutzkonzept (2. Rettungsweg nach HBO) erwirken wir verlässliche Baugenehmigungen." }
+        question: { de: "Welche Vorgaben gelten für Dachausbauten an der Wilhelmstraße?", en: "What requirements apply to roof conversions on Wilhelmstraße or in Dambachtal?" },
+        answer: { de: "Gaubenformen, Dacheinschnitte und Ziegelmaterialien müssen denkmalfachlich abgestimmt werden. Wir entwickeln maßgeschneiderte Konzepte zur optimalen Wohnflächengewinnung.", en: "Dormer designs, terrace cutouts, and roof materials must be submitted to the heritage department. We develop tailored solutions that maximize living space while preserving the historical silhouette." }
       },
       {
-        question: { de: "Wie gelingt die energetische Sanierung historischer Altbauten?", en: "Wie gelingt die energetische Sanierung historischer Altbauten?" },
-        answer: { de: "Wir kombinieren hocheffiziente Innendämmungen, denkmalgerechte Kasten- oder Isolierglasfenster und moderne Wärmepumpenkonzepte mit steuerlicher Denkmal-AfA (§ 7i EStG).", en: "Wir kombinieren hocheffiziente Innendämmungen, denkmalgerechte Kasten- oder Isolierglasfenster und moderne Wärmepumpenkonzepte mit steuerlicher Denkmal-AfA (§ 7i EStG)." }
+        question: { de: "Betreut Shams Consult auch historische Fassadensanierungen?", en: "Does Shams Consult manage historical facade restorations?" },
+        answer: { de: "Ja, wir erstellen detaillierte Werkpläne für Stuck-, Naturstein- und Putzrestaurierungen und überwachen die Ausführung vor Ort.", en: "Yes, we draft detailed work plans for masonry, natural stone, and stucco restoration, handling tenders and on-site craftsman supervision." }
       }
     ]
   },
@@ -2717,30 +2717,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bebauungspläne Kohlheck & Dotzheim", en: "Bebauungspläne Kohlheck & Dotzheim" },
-        description: { de: "Konforme Umsetzung von Festsetzungen zu Dachneigungen, Traufhöhen und Baugrenzen.", en: "Konforme Umsetzung von Festsetzungen zu Dachneigungen, Traufhöhen und Baugrenzen." }
+        title: { de: "§ 34 BauGB Nachverdichtung im Kohlheck & Dotzheim", en: "§ 34 BauGB Infill in Kohlheck & Dotzheim" },
+        description: { de: "Optimale Ausnutzung von Grundstücksreserven in gartenstädtisch geprägten Hanglagen.", en: "Optimal spatial utilization in garden suburb locations with steep terrain." }
       },
       {
-        title: { de: "§ 34 BauGB Nachverdichtung & Einfügung", en: "§ 34 BauGB Nachverdichtung & Einfügung" },
-        description: { de: "Ausschöpfung maximaler Baurechte bei Grundstücksteilungen und Gartenbebauungen.", en: "Ausschöpfung maximaler Baurechte bei Grundstücksteilungen und Gartenbebauungen." }
+        title: { de: "Topografische Hangsicherung & Stützwände", en: "Topographic Slope Stability & Retaining Walls" },
+        description: { de: "Statische Bemessung von Hangbebauungen, Terrassierungen und sicheren Zufahrtsrampen.", en: "Structural design of stepped multi-family buildings and secure hillside access." }
       },
       {
-        title: { de: "Versickerungssatzung Wiesbaden", en: "Versickerungssatzung Wiesbaden" },
-        description: { de: "Planung modularer Rigolen und Retentionszisternen zur Vermeidung von Einleitungsgebühren.", en: "Planung modularer Rigolen und Retentionszisternen zur Vermeidung von Einleitungsgebühren." }
+        title: { de: "Baumschutz- & Entwässerungssatzung Wiesbaden", en: "Wiesbaden Tree Protection & Drainage Statutes" },
+        description: { de: "Hydraulischer Nachweis von Retentionszisternen und Schutz gewachsenen Baumbestands.", en: "Engineered stormwater retention and preservation of established park trees." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Herausforderungen stellen Hanggrundstücke in Kohlheck?", en: "Welche Herausforderungen stellen Hanggrundstücke in Kohlheck?" },
-        answer: { de: "Hanglagen erfordern fundierte geotechnische Berechnungen, wirtschaftliche Stützwandkonstruktionen und intelligente Grundrisse mit hangseitiger Belichtung. Wir optimieren Aushub und Rohbaukosten gezielt.", en: "Hanglagen erfordern fundierte geotechnische Berechnungen, wirtschaftliche Stützwandkonstruktionen und intelligente Grundrisse mit hangseitiger Belichtung. Wir optimieren Aushub und Rohbaukosten gezielt." }
+        question: { de: "Welche Bauvorhaben sind in Dotzheim und Kohlheck typisch?", en: "What building types are most popular in Dotzheim and Kohlheck?" },
+        answer: { de: "Vor allem moderne Hangvillen, barrierefreie Mehrfamilienhäuser mit Tiefgaragen sowie energieeffiziente Nachverdichtungen auf großzügigen Bestandsgrundstücken.", en: "Modern hillside residences, barrier-free multi-family apartment buildings with underground parking, and high-efficiency timber or masonry construction." }
       },
       {
-        question: { de: "Wie lange dauert ein Bauantrag bei der Bauaufsicht Wiesbaden?", en: "Wie lange dauert ein Bauantrag bei der Bauaufsicht Wiesbaden?" },
-        answer: { de: "Im vereinfachten Verfahren nach § 65 HBO dauert die Genehmigung bei vollständigen Unterlagen im Schnitt 3 Monate. Wir verhindern Rückfragen durch vollständige Einreichung.", en: "Im vereinfachten Verfahren nach § 65 HBO dauert die Genehmigung bei vollständigen Unterlagen im Schnitt 3 Monate. Wir verhindern Rückfragen durch vollständige Einreichung." }
+        question: { de: "Wie wird die Hangentwässerung in Dotzheim baurechtlich gelöst?", en: "How is hillside drainage resolved in Dotzheim?" },
+        answer: { de: "Über kaskadierte Versickerungsanlagen und Retentionszisternen nach DWA-A 138 in Abstimmung mit den Entsorgungsbetrieben der Landeshauptstadt Wiesbaden (ELW).", en: "Via cascading infiltration basins and retention cisterns in accordance with Wiesbaden municipal drainage regulations." }
       },
       {
-        question: { de: "Lohnt sich die KfW-Effizienzhaus-40-Förderung bei Neubauten?", en: "Lohnt sich die KfW-Effizienzhaus-40-Förderung bei Neubauten?" },
-        answer: { de: "Ja, zinsgünstige KfW-Kredite und QNG-Nachhaltigkeitszertifikate senken die Finanzierungskosten spürbar. Wir binden die Fördermittel direkt in die Entwurfsplanung ein.", en: "Ja, zinsgünstige KfW-Kredite und QNG-Nachhaltigkeitszertifikate senken die Finanzierungskosten spürbar. Wir binden die Fördermittel direkt in die Entwurfsplanung ein." }
+        question: { de: "Übernimmt Shams Consult auch die Bauüberwachung vor Ort?", en: "Can Shams Consult manage the complete construction process on-site?" },
+        answer: { de: "Ja, wir sind als Bauleiter (LPH 8) regelmäßig vor Ort auf der Baustelle, um Ausführungsqualität, Baukosten und Termine lückenlos zu sichern.", en: "Yes, our experienced site managers (Phase 8) inspect execution daily or weekly to ensure flawless craftsmanship and strict budget compliance." }
       }
     ]
   },
@@ -2816,30 +2816,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Erhaltungssatzung Ortskern Kirdorf", en: "Erhaltungssatzung Ortskern Kirdorf" },
-        description: { de: "Behutsame Einpassung in historische Gassen und Abstimmung von Fassaden- und Dachformen.", en: "Behutsame Einpassung in historische Gassen und Abstimmung von Fassaden- und Dachformen." }
+        title: { de: "Ortskernsatzung Kirdorf & Gonzenheim", en: "Old Village Core Preservation Statute (Kirdorf & Gonzenheim)" },
+        description: { de: "Behutsame Einpassung in historische Gassen und Abstimmung von Fassaden- und Dachformen.", en: "Sensitive integration into historic village lanes and harmonious facade and roof alignment." }
       },
       {
-        title: { de: "Bebauungspläne Bad Homburg Süd & Gonzenheim", en: "Bebauungspläne Bad Homburg Süd & Gonzenheim" },
-        description: { de: "Verbindliche Umsetzung von Vorgaben zu Firsthöhen, Vollgeschossen und Baulinien.", en: "Verbindliche Umsetzung von Vorgaben zu Firsthöhen, Vollgeschossen und Baulinien." }
+        title: { de: "Bebauungspläne Bad Homburg Süd & Gonzenheim", en: "Bad Homburg South & Gonzenheim Master Plans" },
+        description: { de: "Verbindliche Umsetzung von Vorgaben zu Firsthöhen, Vollgeschossen und Baulinien.", en: "Binding implementation of codes regarding ridge heights, full storeys, and building setbacks." }
       },
       {
-        title: { de: "Baumschutzsatzung der Stadt Bad Homburg", en: "Baumschutzsatzung der Stadt Bad Homburg" },
-        description: { de: "Schonung prägender Solitärbäume und Erstellung qualifizierter Freiflächengestaltungspläne.", en: "Schonung prägender Solitärbäume und Erstellung qualifizierter Freiflächengestaltungspläne." }
+        title: { de: "Baumschutzsatzung der Stadt Bad Homburg", en: "Bad Homburg Tree Protection Statute" },
+        description: { de: "Schonung prägender Solitärbäume und Erstellung qualifizierter Freiflächengestaltungspläne.", en: "Preserving landmark specimen trees and preparing qualified open space landscape plans." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wer entscheidet über Bauanträge in Gonzenheim und Kirdorf?", en: "Wer entscheidet über Bauanträge in Gonzenheim und Kirdorf?" },
-        answer: { de: "Zuständig ist die Bauaufsicht der Stadt Bad Homburg v. d. Höhe bzw. des Hochtaunuskreises. Durch unsere langjährige regionale Präsenz pflegen wir lösungsorientierte Kontakte zu den Baubehörden.", en: "Zuständig ist die Bauaufsicht der Stadt Bad Homburg v. d. Höhe bzw. des Hochtaunuskreises. Durch unsere langjährige regionale Präsenz pflegen wir lösungsorientierte Kontakte zu den Baubehörden." }
+        question: { de: "Wer entscheidet über Bauanträge in Gonzenheim und Kirdorf?", en: "Who decides on building permits in Gonzenheim and Kirdorf?" },
+        answer: { de: "Zuständig ist die Bauaufsicht der Stadt Bad Homburg v. d. Höhe bzw. des Hochtaunuskreises. Durch unsere langjährige regionale Präsenz pflegen wir lösungsorientierte Kontakte zu den Baubehörden.", en: "The Building Authority of the City of Bad Homburg v. d. Höhe and the Hochtaunus District is responsible. Through our regional standing, we maintain productive working relationships with the authorities." }
       },
       {
-        question: { de: "Welche Bauten sind in Gonzenheim besonders gefragt?", en: "Welche Bauten sind in Gonzenheim besonders gefragt?" },
-        answer: { de: "Gefragt sind moderne Bauhaus-Stadtvillen, energieeffiziente KfW-40-Einfamilienhäuser sowie anspruchsvolle Mehrfamilienhäuser mit Tiefgaragen für Investoren.", en: "Gefragt sind moderne Bauhaus-Stadtvillen, energieeffiziente KfW-40-Einfamilienhäuser sowie anspruchsvolle Mehrfamilienhäuser mit Tiefgaragen für Investoren." }
+        question: { de: "Welche Bauten sind in Gonzenheim besonders gefragt?", en: "What project typologies are in high demand in Gonzenheim?" },
+        answer: { de: "Gefragt sind moderne Bauhaus-Stadtvillen, energieeffiziente KfW-40-Einfamilienhäuser sowie anspruchsvolle Mehrfamilienhäuser mit Tiefgaragen für Investoren.", en: "Contemporary Bauhaus urban villas, energy-efficient KfW 40 single-family houses, and upscale multi-family apartment complexes with underground parking for investors." }
       },
       {
-        question: { de: "Übernehmen Sie auch die Bauleitung (LPH 8) vor Ort?", en: "Übernehmen Sie auch die Bauleitung (LPH 8) vor Ort?" },
-        answer: { de: "Ja, wir stellen durch tägliche oder engmaschige Baustellenpräsenz höchste Ausführungsqualität nach VOB sicher und wahren Termine und Budgets.", en: "Ja, wir stellen durch tägliche oder engmaschige Baustellenpräsenz höchste Ausführungsqualität nach VOB sicher und wahren Termine und Budgets." }
+        question: { de: "Übernehmen Sie auch die Bauleitung (LPH 8) vor Ort?", en: "Do you also provide on-site clerk of works (Phase 8)?" },
+        answer: { de: "Ja, wir stellen durch tägliche oder engmaschige Baustellenpräsenz höchste Ausführungsqualität nach VOB sicher und wahren Termine und Budgets.", en: "Yes, through rigorous site presence, we ensure premier construction quality under VOB, safeguarding timelines and budgets." }
       }
     ]
   },
@@ -2915,30 +2915,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "§ 34 BauGB Einfügungsgebot im Martinsviertel", en: "§ 34 BauGB Einfügungsgebot im Martinsviertel" },
-        description: { de: "Harmonische Einfügung in historische Fluchtlinien, Geschoßhöhen und Hofbebauungsstrukturen.", en: "Harmonische Einfügung in historische Fluchtlinien, Geschoßhöhen und Hofbebauungsstrukturen." }
+        title: { de: "§ 34 BauGB Einfügungsgebot im Martinsviertel", en: "§ 34 BauGB Infill in Martinsviertel" },
+        description: { de: "Harmonische Einfügung in historische Fluchtlinien, Geschoßhöhen und Hofbebauungsstrukturen.", en: "Harmonious alignment with historic building lines, storey heights, and courtyard development fabrics." }
       },
       {
-        title: { de: "Bebauungspläne Arheilgen & Kranichstein", en: "Bebauungspläne Arheilgen & Kranichstein" },
-        description: { de: "Präzise Berücksichtigung von GFZ/GRZ und Grünordnungsplänen.", en: "Präzise Berücksichtigung von GFZ/GRZ und Grünordnungsplänen." }
+        title: { de: "Bebauungspläne Arheilgen & Kranichstein", en: "Arheilgen & Kranichstein Development Plans" },
+        description: { de: "Präzise Berücksichtigung von GFZ/GRZ und Grünordnungsplänen.", en: "Precise integration of floor space ratios (GFZ/GRZ) and landscape greening mandates." }
       },
       {
-        title: { de: "Baumschutz- und Stellplatzsatzung Darmstadt", en: "Baumschutz- und Stellplatzsatzung Darmstadt" },
-        description: { de: "Erstellung prüffähiger Nachweise zu KFZ- und Fahrradabstellplätzen nach städtischem Schlüssel.", en: "Erstellung prüffähiger Nachweise zu KFZ- und Fahrradabstellplätzen nach städtischem Schlüssel." }
+        title: { de: "Baumschutz- und Stellplatzsatzung Darmstadt", en: "Darmstadt Tree Protection & Parking Space Statutes" },
+        description: { de: "Erstellung prüffähiger Nachweise zu KFZ- und Fahrradabstellplätzen nach städtischem Schlüssel.", en: "Compliant calculation of vehicle and bicycle parking bays according to municipal keys." }
       }
     ],
     faqs: [
       {
-        question: { de: "Wie werden Baulücken im Martinsviertel genehmigt?", en: "Wie werden Baulücken im Martinsviertel genehmigt?" },
-        answer: { de: "Über das Einfügungsgebot nach § 34 BauGB. Wir berechnen die maßgebliche Umgebungsbebauung exakt und sichern die Planung über eine qualifizierte Bauvoranfrage ab.", en: "Über das Einfügungsgebot nach § 34 BauGB. Wir berechnen die maßgebliche Umgebungsbebauung exakt und sichern die Planung über eine qualifizierte Bauvoranfrage ab." }
+        question: { de: "Wie werden Baulücken im Martinsviertel genehmigt?", en: "How are infill plots approved in Martinsviertel?" },
+        answer: { de: "Über das Einfügungsgebot nach § 34 BauGB. Wir berechnen die maßgebliche Umgebungsbebauung exakt und sichern die Planung über eine qualifizierte Bauvoranfrage ab.", en: "Through the infill rule under § 34 BauGB. We calculate the prevailing neighborhood context precisely and secure approvals through a preliminary inquiry." }
       },
       {
-        question: { de: "Bauen Sie auch energieeffiziente KfW-40-Häuser in Arheilgen?", en: "Bauen Sie auch energieeffiziente KfW-40-Häuser in Arheilgen?" },
-        answer: { de: "Ja, wir planen standardmäßig nach KfW-Effizienzhaus-40-Standards mit Geothermie, Luft-Wasser-Wärmepumpen und Photovoltaik.", en: "Ja, wir planen standardmäßig nach KfW-Effizienzhaus-40-Standards mit Geothermie, Luft-Wasser-Wärmepumpen und Photovoltaik." }
+        question: { de: "Bauen Sie auch energieeffiziente KfW-40-Häuser in Arheilgen?", en: "Do you design energy-efficient KfW 40 houses in Arheilgen?" },
+        answer: { de: "Ja, wir planen standardmäßig nach KfW-Effizienzhaus-40-Standards mit Geothermie, Luft-Wasser-Wärmepumpen und Photovoltaik.", en: "Yes, we design as standard to KfW Efficiency House 40 specifications with geothermal systems, air-to-water heat pumps, and solar photovoltaics." }
       },
       {
-        question: { de: "Wie lange dauert ein Bauantrag bei der Wissenschaftsstadt Darmstadt?", en: "Wie lange dauert ein Bauantrag bei der Wissenschaftsstadt Darmstadt?" },
-        answer: { de: "In der Regel zwischen 3 und 4 Monaten. Durch vollständige statische und brandschutztechnische Vorprüfung vermeiden wir zeitintensive Nachforderungen.", en: "In der Regel zwischen 3 und 4 Monaten. Durch vollständige statische und brandschutztechnische Vorprüfung vermeiden wir zeitintensive Nachforderungen." }
+        question: { de: "Wie lange dauert ein Bauantrag bei der Wissenschaftsstadt Darmstadt?", en: "How long does a building permit take in the City of Science Darmstadt?" },
+        answer: { de: "In der Regel zwischen 3 und 4 Monaten. Durch vollständige statische und brandschutztechnische Vorprüfung vermeiden wir zeitintensive Nachforderungen.", en: "Typically between 3 and 4 months. By conducting thorough structural and fire protection pre-checks, we eliminate lengthy administrative queries." }
       }
     ]
   },
@@ -3014,30 +3014,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsicht Landkreis Darmstadt-Dieburg", en: "Bauaufsicht Landkreis Darmstadt-Dieburg" },
-        description: { de: "Erprobte Genehmigungsbegleitung im Kreishaus Dieburg für Vorhaben im Kreisgebiet.", en: "Erprobte Genehmigungsbegleitung im Kreishaus Dieburg für Vorhaben im Kreisgebiet." }
+        title: { de: "Bauaufsicht Landkreis Darmstadt-Dieburg", en: "Darmstadt-Dieburg District Building Authority" },
+        description: { de: "Erprobte Genehmigungsbegleitung im Kreishaus Dieburg für Vorhaben im Kreisgebiet.", en: "Proven permit guidance at the Dieburg district building office for commercial and residential schemes." }
       },
       {
-        title: { de: "Gewerbegebietsfestsetzungen nach BauNVO", en: "Gewerbegebietsfestsetzungen nach BauNVO" },
-        description: { de: "Einhaltung von Emissionskontingenten nach DIN 45691 und TA Lärm.", en: "Einhaltung von Emissionskontingenten nach DIN 45691 und TA Lärm." }
+        title: { de: "Gewerbegebietsfestsetzungen nach BauNVO", en: "Commercial Zone Regulations under BauNVO" },
+        description: { de: "Einhaltung von Emissionskontingenten nach DIN 45691 und TA Lärm.", en: "Compliance with acoustic emission quotas according to DIN 45691 and German Technical Instructions on Noise (TA Lärm)." }
       },
       {
-        title: { de: "Regenwasserretention & Löschwasserversorgung", en: "Regenwasserretention & Löschwasserversorgung" },
-        description: { de: "Ingenieurmäßige Berechnung von Retentionsräumen und Brandschutznachweisen für Hallenbauten.", en: "Ingenieurmäßige Berechnung von Retentionsräumen und Brandschutznachweisen für Hallenbauten." }
+        title: { de: "Regenwasserretention & Löschwasserversorgung", en: "Stormwater Retention & Firefighting Water Infrastructure" },
+        description: { de: "Ingenieurmäßige Berechnung von Retentionsräumen und Brandschutznachweisen für Hallenbauten.", en: "Engineering calculation of retention volumes and fire protection certificates for commercial halls." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Bauämter sind in Weiterstadt und Griesheim zuständig?", en: "Welche Bauämter sind in Weiterstadt und Griesheim zuständig?" },
-        answer: { de: "Zuständig ist die Untere Bauaufsicht des Landkreises Darmstadt-Dieburg mit Sitz in Dieburg. Wir kennen die behördlichen Anforderungen im Landkreis seit vielen Jahren.", en: "Zuständig ist die Untere Bauaufsicht des Landkreises Darmstadt-Dieburg mit Sitz in Dieburg. Wir kennen die behördlichen Anforderungen im Landkreis seit vielen Jahren." }
+        question: { de: "Welche Bauämter sind in Weiterstadt und Griesheim zuständig?", en: "Which building authorities are responsible in Weiterstadt and Griesheim?" },
+        answer: { de: "Zuständig ist die Untere Bauaufsicht des Landkreises Darmstadt-Dieburg mit Sitz in Dieburg. Wir kennen die behördlichen Anforderungen im Landkreis seit vielen Jahren.", en: "The Lower Building Control Authority of the Darmstadt-Dieburg District, based in Dieburg, is responsible. We have navigated district requirements for many years." }
       },
       {
-        question: { de: "Planen Sie auch Gewerbehallen und Bürokomplexe?", en: "Planen Sie auch Gewerbehallen und Bürokomplexe?" },
-        answer: { de: "Ja, wir planen schlüsselfertige Hallenbauten, Logistikstützpunkte, Werkstätten und moderne Bürogebäude nach VOB und HOAI 1–9.", en: "Ja, wir planen schlüsselfertige Hallenbauten, Logistikstützpunkte, Werkstätten und moderne Bürogebäude nach VOB und HOAI 1–9." }
+        question: { de: "Planen Sie auch Gewerbehallen und Bürokomplexe?", en: "Do you design commercial halls and office complexes?" },
+        answer: { de: "Ja, wir planen schlüsselfertige Hallenbauten, Logistikstützpunkte, Werkstätten und moderne Bürogebäude nach VOB und HOAI 1–9.", en: "Yes, we design turnkey warehouse facilities, logistics hubs, workshops, and contemporary office buildings under VOB and HOAI 1–9." }
       },
       {
-        question: { de: "Können Sie Bebauungspläne für Investoren aufstellen?", en: "Können Sie Bebauungspläne für Investoren aufstellen?" },
-        answer: { de: "Als eingetragene Stadtplaner in der AKH Hessen begleiten wir vorhabenbezogene Bebauungspläne (§ 12 BauGB) und städtebauliche Verträge mit den Kommunen.", en: "Als eingetragene Stadtplaner in der AKH Hessen begleiten wir vorhabenbezogene Bebauungspläne (§ 12 BauGB) und städtebauliche Verträge mit den Kommunen." }
+        question: { de: "Können Sie Bebauungspläne für Investoren aufstellen?", en: "Can you prepare binding development plans (B-Plans) for investors?" },
+        answer: { de: "Als eingetragene Stadtplaner in der AKH Hessen begleiten wir vorhabenbezogene Bebauungspläne (§ 12 BauGB) und städtebauliche Verträge mit den Kommunen.", en: "As registered urban planners with AKH Hessen, we formulate project-based development plans (§ 12 BauGB) and urban contracts with local municipalities." }
       }
     ]
   },
@@ -3113,30 +3113,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bebauungspläne Pioneer Park & Lamboy", en: "Bebauungspläne Pioneer Park & Lamboy" },
-        description: { de: "Konforme Auslegung moderner Quartiersbebauungspläne mit hohen Nachhaltigkeitskriterien.", en: "Konforme Auslegung moderner Quartiersbebauungspläne mit hohen Nachhaltigkeitskriterien." }
+        title: { de: "Bebauungspläne Pioneer Park & Lamboy", en: "Pioneer Park & Lamboy Master Development Plans" },
+        description: { de: "Konforme Auslegung moderner Quartiersbebauungspläne mit hohen Nachhaltigkeitskriterien.", en: "Compliant implementation of modern neighborhood master plans featuring rigorous sustainability standards." }
       },
       {
-        title: { de: "Mobilitätssatzung der Stadt Hanau", en: "Mobilitätssatzung der Stadt Hanau" },
-        description: { de: "Integrierte Mobilitätskonzepte zur Stellplatzreduktion durch Car-Sharing und Bike-Infrastruktur.", en: "Integrierte Mobilitätskonzepte zur Stellplatzreduktion durch Car-Sharing und Bike-Infrastruktur." }
+        title: { de: "Mobilitätssatzung der Stadt Hanau", en: "Hanau Municipal Mobility Statute" },
+        description: { de: "Integrierte Mobilitätskonzepte zur Stellplatzreduktion durch Car-Sharing und Bike-Infrastruktur.", en: "Integrated mobility concepts allowing parking space reductions through car-sharing hubs and cycling infrastructure." }
       },
       {
-        title: { de: "Immissionsschutz & Lärmkontingentierung", en: "Immissionsschutz & Lärmkontingentierung" },
-        description: { de: "Schalltechnische Dimensionierung von Wohnfassaden an Bahntrassen und Hauptachsen.", en: "Schalltechnische Dimensionierung von Wohnfassaden an Bahntrassen und Hauptachsen." }
+        title: { de: "Immissionsschutz & Lärmkontingentierung", en: "Noise Abatement & Acoustic Quota Allocations" },
+        description: { de: "Schalltechnische Dimensionierung von Wohnfassaden an Bahntrassen und Hauptachsen.", en: "Acoustic dimensioning of residential facades adjacent to railway lines and arterial roads." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Bauweisen eignen sich für Neubauten im Pioneer Park?", en: "Welche Bauweisen eignen sich für Neubauten im Pioneer Park?" },
-        answer: { de: "Vor allem ressourcenschonende Holz-Hybrid- und Massivbauten mit KfW-40-Standard, begrünten Dächern und dezentralen Nahwärmeanschlüssen.", en: "Vor allem ressourcenschonende Holz-Hybrid- und Massivbauten mit KfW-40-Standard, begrünten Dächern und dezentralen Nahwärmeanschlüssen." }
+        question: { de: "Welche Bauweisen eignen sich für Neubauten im Pioneer Park?", en: "Which construction methods are best suited for new buildings in Pioneer Park?" },
+        answer: { de: "Vor allem ressourcenschonende Holz-Hybrid- und Massivbauten mit KfW-40-Standard, begrünten Dächern und dezentralen Nahwärmeanschlüssen.", en: "Primarily resource-saving timber-hybrid and solid mineral construction with KfW 40 rating, green roofs, and district heating connections." }
       },
       {
-        question: { de: "Wie schnell erteilt die Bauaufsicht Hanau Genehmigungen?", en: "Wie schnell erteilt die Bauaufsicht Hanau Genehmigungen?" },
-        answer: { de: "Im vereinfachten Verfahren nach HBO liegt die Bearbeitungszeit bei rund 3 bis 4 Monaten. Durch digitale und vollständige Einreichung sichern wir termingerechte Freigaben.", en: "Im vereinfachten Verfahren nach HBO liegt die Bearbeitungszeit bei rund 3 bis 4 Monaten. Durch digitale und vollständige Einreichung sichern wir termingerechte Freigaben." }
+        question: { de: "Wie schnell erteilt die Bauaufsicht Hanau Genehmigungen?", en: "How fast does the Hanau Building Authority issue permits?" },
+        answer: { de: "Im vereinfachten Verfahren nach HBO liegt die Bearbeitungszeit bei rund 3 bis 4 Monaten. Durch digitale und vollständige Einreichung sichern wir termingerechte Freigaben.", en: "In the simplified HBO procedure, processing takes around 3 to 4 months. Through digital and complete filings, we secure timely approvals." }
       },
       {
-        question: { de: "Begleiten Sie auch Konversionsprojekte für Investoren?", en: "Begleiten Sie auch Konversionsprojekte für Investoren?" },
-        answer: { de: "Ja, als freie Stadtplaner (AKH Hessen) erstellen wir Machbarkeitsstudien, Nutzungskonzepte und begleiten städtebauliche Rahmenverhandlungen.", en: "Ja, als freie Stadtplaner (AKH Hessen) erstellen wir Machbarkeitsstudien, Nutzungskonzepte und begleiten städtebauliche Rahmenverhandlungen." }
+        question: { de: "Begleiten Sie auch Konversionsprojekte für Investoren?", en: "Do you guide conversion projects for property developers?" },
+        answer: { de: "Ja, als freie Stadtplaner (AKH Hessen) erstellen wir Machbarkeitsstudien, Nutzungskonzepte und begleiten städtebauliche Rahmenverhandlungen.", en: "Yes, as licensed urban planners (AKH Hessen), we deliver feasibility studies, mixed-use concepts, and lead urban framework negotiations." }
       }
     ]
   },
@@ -3212,30 +3212,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Bauaufsichten Main-Kinzig & Stadt Maintal", en: "Bauaufsichten Main-Kinzig & Stadt Maintal" },
-        description: { de: "Erprobte Bauantragskoordination vor den zuständigen Bauaufsichtsämtern.", en: "Erprobte Bauantragskoordination vor den zuständigen Bauaufsichtsämtern." }
+        title: { de: "Bauaufsichten Main-Kinzig & Stadt Maintal", en: "Main-Kinzig & City of Maintal Building Control" },
+        description: { de: "Erprobte Bauantragskoordination vor den zuständigen Bauaufsichtsämtern.", en: "Established building application coordination before the relevant municipal and district authorities." }
       },
       {
-        title: { de: "Hochwasserschutzverordnungen am Main (HQ 100)", en: "Hochwasserschutzverordnungen am Main (HQ 100)" },
-        description: { de: "Druckwasserdichte Wannenkonstruktionen und Retentionsnachweise in Mainnähe.", en: "Druckwasserdichte Wannenkonstruktionen und Retentionsnachweise in Mainnähe." }
+        title: { de: "Hochwasserschutzverordnungen am Main (HQ 100)", en: "Main River Flood Protection Statutes (HQ 100)" },
+        description: { de: "Druckwasserdichte Wannenkonstruktionen und Retentionsnachweise in Mainnähe.", en: "Pressure-watertight basement tanking and water retention calculations for plots near the Main." }
       },
       {
-        title: { de: "Kommunale Entwässerungssatzungen", en: "Kommunale Entwässerungssatzungen" },
-        description: { de: "Hydraulische Berechnung von Rigolensystemen und Zisternen nach DWA-A 138.", en: "Hydraulische Berechnung von Rigolensystemen und Zisternen nach DWA-A 138." }
+        title: { de: "Kommunale Entwässerungssatzungen", en: "Municipal Drainage By-Laws" },
+        description: { de: "Hydraulische Berechnung von Rigolensystemen und Zisternen nach DWA-A 138.", en: "Hydraulic calculation of rigole infiltration systems and cisterns conforming to DWA-A 138." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welche Bauprojekte betreuen Sie in Maintal und Bruchköbel?", en: "Welche Bauprojekte betreuen Sie in Maintal und Bruchköbel?" },
-        answer: { de: "Vom modernen Einfamilien- und Doppelhaus über Mehrfamilienhausanlagen bis hin zu Handwerksbetrieben und Logistikhallen.", en: "Vom modernen Einfamilien- und Doppelhaus über Mehrfamilienhausanlagen bis hin zu Handwerksbetrieben und Logistikhallen." }
+        question: { de: "Welche Bauprojekte betreuen Sie in Maintal und Bruchköbel?", en: "What building projects do you handle in Maintal and Bruchköbel?" },
+        answer: { de: "Vom modernen Einfamilien- und Doppelhaus über Mehrfamilienhausanlagen bis hin zu Handwerksbetrieben und Logistikhallen.", en: "From contemporary single- and two-family homes to apartment complexes, artisanal workshops, and commercial logistics buildings." }
       },
       {
-        question: { de: "Sind Bauanträge im Mainuferbereich von Maintal-Dörnigheim komplexer?", en: "Sind Bauanträge im Mainuferbereich von Maintal-Dörnigheim komplexer?" },
-        answer: { de: "Ja, wegen des Hochwasserschutzes. Wir erstellen alle Nachweise zur Auftriebssicherheit und wasserdichten Ausführung direkt mit den Behörden.", en: "Ja, wegen des Hochwasserschutzes. Wir erstellen alle Nachweise zur Auftriebssicherheit und wasserdichten Ausführung direkt mit den Behörden." }
+        question: { de: "Sind Bauanträge im Mainuferbereich von Maintal-Dörnigheim komplexer?", en: "Are building applications along the Main in Maintal-Dörnigheim more complex?" },
+        answer: { de: "Ja, wegen des Hochwasserschutzes. Wir erstellen alle Nachweise zur Auftriebssicherheit und wasserdichten Ausführung direkt mit den Behörden.", en: "Yes, owing to statutory flood risk zones. We coordinate all buoyancy safety verifications and waterproof specifications directly with the water authorities." }
       },
       {
-        question: { de: "Übernehmen Sie die Ausschreibung und Vergabe nach VOB?", en: "Übernehmen Sie die Ausschreibung und Vergabe nach VOB?" },
-        answer: { de: "Ja, in den Leistungsphasen 6 und 7 erstellen wir detaillierte Leistungsverzeichnisse, holen Handwerkerangebote ein und verhandeln Festpreise.", en: "Ja, in den Leistungsphasen 6 und 7 erstellen wir detaillierte Leistungsverzeichnisse, holen Handwerkerangebote ein und verhandeln Festpreise." }
+        question: { de: "Übernehmen Sie die Ausschreibung und Vergabe nach VOB?", en: "Do you manage tendering and procurement under VOB?" },
+        answer: { de: "Ja, in den Leistungsphasen 6 und 7 erstellen wir detaillierte Leistungsverzeichnisse, holen Handwerkerangebote ein und verhandeln Festpreise.", en: "Yes, in work phases 6 and 7 we prepare detailed bills of quantities, solicit trade tenders, and negotiate fixed contractor pricing." }
       }
     ]
   },
@@ -3311,30 +3311,30 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     localRegulations: [
       {
-        title: { de: "Untere Bauaufsichtsbehörde Kreis Offenbach", en: "Untere Bauaufsichtsbehörde Kreis Offenbach" },
-        description: { de: "Direkte persönliche Abstimmung im Kreishaus Dietzenbach zur Verkürzung der Genehmigungsfristen.", en: "Direkte persönliche Abstimmung im Kreishaus Dietzenbach zur Verkürzung der Genehmigungsfristen." }
+        title: { de: "Untere Bauaufsichtsbehörde Kreis Offenbach", en: "Offenbach District Lower Building Control Authority" },
+        description: { de: "Direkte persönliche Abstimmung im Kreishaus Dietzenbach zur Verkürzung der Genehmigungsfristen.", en: "Direct personal liaison at the Dietzenbach district hall to accelerate approval timeframes." }
       },
       {
-        title: { de: "Bebauungspläne Dietzenbach-Steinberg & Gewerbe", en: "Bebauungspläne Dietzenbach-Steinberg & Gewerbe" },
-        description: { de: "Optimale Ausnutzung von Geschossflächen- und Grundflächenzahlen (GFZ/GRZ).", en: "Optimale Ausnutzung von Geschossflächen- und Grundflächenzahlen (GFZ/GRZ)." }
+        title: { de: "Bebauungspläne Dietzenbach-Steinberg & Gewerbe", en: "Dietzenbach-Steinberg & Commercial Development Plans" },
+        description: { de: "Optimale Ausnutzung von Geschossflächen- und Grundflächenzahlen (GFZ/GRZ).", en: "Optimal utilization of floor space ratios and site coverage indices (GFZ/GRZ)." }
       },
       {
-        title: { de: "Stellplatzsatzung der Kreisstadt Dietzenbach", en: "Stellplatzsatzung der Kreisstadt Dietzenbach" },
-        description: { de: "Prüffähige Nachweise für Tiefgaragen, Carports und oberirdische Kundenstellplätze.", en: "Prüffähige Nachweise für Tiefgaragen, Carports und oberirdische Kundenstellplätze." }
+        title: { de: "Stellplatzsatzung der Kreisstadt Dietzenbach", en: "City of Dietzenbach Parking Space Statute" },
+        description: { de: "Prüffähige Nachweise für Tiefgaragen, Carports und oberirdische Kundenstellplätze.", en: "Audit-ready planning of underground garages, carports, and above-ground customer parking." }
       }
     ],
     faqs: [
       {
-        question: { de: "Welchen Vorteil hat die Nähe von Shams Consult zu Dietzenbach?", en: "Welchen Vorteil hat die Nähe von Shams Consult zu Dietzenbach?" },
-        answer: { de: "Unser Rödermarker Standort liegt unmittelbar neben Dietzenbach. Wir kennen die Sachbearbeiter und Prüfingenieure im Kreishaus persönlich, was Abstimmungen und Voranfragen deutlich beschleunigt.", en: "Unser Rödermarker Standort liegt unmittelbar neben Dietzenbach. Wir kennen die Sachbearbeiter und Prüfingenieure im Kreishaus persönlich, was Abstimmungen und Voranfragen deutlich beschleunigt." }
+        question: { de: "Welchen Vorteil hat die Nähe von Shams Consult zu Dietzenbach?", en: "What is the advantage of Shams Consult's proximity to Dietzenbach?" },
+        answer: { de: "Unser Rödermarker Standort liegt unmittelbar neben Dietzenbach. Wir kennen die Sachbearbeiter und Prüfingenieure im Kreishaus persönlich, was Abstimmungen und Voranfragen deutlich beschleunigt.", en: "Our Rödermark location is directly adjacent to Dietzenbach. We personally know the case officers and review engineers at the district hall, expediting consultations and preliminary inquiries significantly." }
       },
       {
-        question: { de: "Planen Sie auch Gewerbehallen und Betriebsstätten in Dietzenbach?", en: "Planen Sie auch Gewerbehallen und Betriebsstätten in Dietzenbach?" },
-        answer: { de: "Ja, wir betreuen mittelständische Unternehmen bei Neubau, Erweiterung und Nutzungsänderung gewerblicher Hallen und Büros im Gewerbegebiet Dietzenbach.", en: "Ja, wir betreuen mittelständische Unternehmen bei Neubau, Erweiterung und Nutzungsänderung gewerblicher Hallen und Büros im Gewerbegebiet Dietzenbach." }
+        question: { de: "Planen Sie auch Gewerbehallen und Betriebsstätten in Dietzenbach?", en: "Do you design commercial halls and production facilities in Dietzenbach?" },
+        answer: { de: "Ja, wir betreuen mittelständische Unternehmen bei Neubau, Erweiterung und Nutzungsänderung gewerblicher Hallen und Büros im Gewerbegebiet Dietzenbach.", en: "Yes, we support medium-sized enterprises with new builds, expansions, and change-of-use permits for commercial warehouses and offices in Dietzenbach's industrial estates." }
       },
       {
-        question: { de: "Unterstützen Sie private Bauherren am Steinberg oder Hexenberg?", en: "Unterstützen Sie private Bauherren am Steinberg oder Hexenberg?" },
-        answer: { de: "Ja, wir planen individuelle Einfamilienvillen, Doppelhäuser sowie energetische Kernsanierungen mit KfW-Förderbegleitung.", en: "Ja, wir planen individuelle Einfamilienvillen, Doppelhäuser sowie energetische Kernsanierungen mit KfW-Förderbegleitung." }
+        question: { de: "Unterstützen Sie private Bauherren am Steinberg oder Hexenberg?", en: "Do you assist private clients on Steinberg or Hexenberg?" },
+        answer: { de: "Ja, wir planen individuelle Einfamilienvillen, Doppelhäuser sowie energetische Kernsanierungen mit KfW-Förderbegleitung.", en: "Yes, we design bespoke residential villas, semi-detached homes, and deep energetic retrofits with full KfW grant support." }
       }
     ]
   }

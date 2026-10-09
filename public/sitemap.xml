@@ -62,6 +62,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://shams-consult.de/card</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shams-consult.de/en/card</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://shams-consult.de/bautraeger-investoren</loc>
     <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>

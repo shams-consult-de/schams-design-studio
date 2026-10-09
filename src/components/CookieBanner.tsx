@@ -5,20 +5,22 @@ import {
   setConsent,
   CookieConsent,
 } from "../lib/analytics";
-import { Language } from "../lib/i18n";
+import { Language, Translations, content } from "../lib/i18n";
 
 interface CookieBannerProps {
+  t?: Translations["cookieBanner"];
   language?: Language;
   onOpenPrivacy?: () => void;
   onOpenImpressum?: () => void;
 }
 
 export function CookieBanner({
+  t: propT,
   language = "de",
   onOpenPrivacy,
   onOpenImpressum,
 }: CookieBannerProps) {
-  const isDe = language === "de";
+  const t = propT || content[language].cookieBanner;
   const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
@@ -80,7 +82,7 @@ export function CookieBanner({
   return (
     <div
       role="region"
-      aria-label={isDe ? "Cookie-Einwilligung" : "Cookie Consent"}
+      aria-label={t.ariaLabel}
       className="fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4 md:p-6 pointer-events-none flex justify-center animate-fadeIn"
     >
       <div className="pointer-events-auto w-full max-w-2xl bg-[#121316]/95 backdrop-blur-2xl border border-white/15 rounded-3xl shadow-2xl text-white p-5 sm:p-6 space-y-4">
@@ -92,10 +94,10 @@ export function CookieBanner({
             </div>
             <div>
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#DC2626]">
-                {isDe ? "Datenschutz & Transparenz" : "Privacy & Transparency"}
+                {t.badge}
               </span>
               <h3 className="font-sans font-bold text-base sm:text-lg text-white">
-                {isDe ? "Cookie- und Datenschutzeinstellungen" : "Cookie & Privacy Settings"}
+                {t.title}
               </h3>
             </div>
           </div>
@@ -113,7 +115,7 @@ export function CookieBanner({
                 }
               }}
               className="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20 text-zinc-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-              aria-label={isDe ? "Schließen" : "Close"}
+              aria-label={t.closeModal}
             >
               <Icon name="xmark" className="text-sm" />
             </button>
@@ -122,15 +124,7 @@ export function CookieBanner({
 
         {/* Banner Description */}
         <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
-          {isDe ? (
-            <>
-              Wir setzen technisch essenzielle Cookies ein, um die Funktionsfähigkeit dieser Website sicherzustellen. Mit Ihrer Einwilligung nutzen wir zusätzlich <strong>Google Analytics 4</strong> (mit IP-Anonymisierung), um Nutzungsstatistiken zu erheben und unsere Architekturpräsentation kontinuierlich zu optimieren. Sie können Ihre Einwilligung jederzeit widerrufen.
-            </>
-          ) : (
-            <>
-              We use strictly necessary technical cookies to ensure this website functions securely. With your consent, we also use <strong>Google Analytics 4</strong> (with IP anonymization) to analyze site usage and improve our services. You can adjust or revoke your consent at any time.
-            </>
-          )}
+          {t.description}
         </p>
 
         {/* Detailed Options Drawer */}
@@ -141,16 +135,14 @@ export function CookieBanner({
               <div className="space-y-0.5 pr-3">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-white">
-                    {isDe ? "1. Technisch essenziell" : "1. Strictly Necessary"}
+                    {t.essentialTitle}
                   </span>
                   <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                    {isDe ? "Immer aktiv" : "Always active"}
+                    {t.alwaysActive}
                   </span>
                 </div>
                 <p className="text-[11px] text-zinc-400 font-light leading-tight">
-                  {isDe
-                    ? "Erforderlich für Navigation, Sicherheitsfeatures und Speicherung Ihrer Präferenzen."
-                    : "Required for core site operation, security, and consent preference storage."}
+                  {t.essentialDesc}
                 </p>
               </div>
               <input
@@ -158,7 +150,7 @@ export function CookieBanner({
                 checked={true}
                 disabled={true}
                 className="accent-emerald-500 h-4 w-4 rounded cursor-not-allowed opacity-80"
-                aria-label={isDe ? "Technisch essenziell (aktiv)" : "Strictly necessary (active)"}
+                aria-label={t.essentialAria}
               />
             </div>
 
@@ -167,13 +159,11 @@ export function CookieBanner({
               <div className="space-y-0.5 pr-3">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-white">
-                    {isDe ? "2. Google Analytics 4 (Statistik & Analyse)" : "2. Google Analytics 4 (Analytics)"}
+                    {t.analyticsTitle}
                   </span>
                 </div>
                 <p className="text-[11px] text-zinc-400 font-light leading-tight">
-                  {isDe
-                    ? "Anonyme statistische Auswertung zur Verbesserung von Navigation, Ladezeiten und Inhalten (G-X68PRZMTEE)."
-                    : "Anonymous analytics to optimize page navigation, load performance, and architectural portfolio discovery (G-X68PRZMTEE)."}
+                  {t.analyticsDesc}
                 </p>
               </div>
               <label className="relative inline-flex items-center cursor-pointer">
@@ -198,9 +188,7 @@ export function CookieBanner({
               onClick={() => setShowDetails(!showDetails)}
               className="text-zinc-300 hover:text-white underline decoration-zinc-500 hover:decoration-white transition-colors cursor-pointer py-1"
             >
-              {showDetails
-                ? (isDe ? "Weniger Details" : "Fewer details")
-                : (isDe ? "Einstellungen anpassen" : "Customize settings")}
+              {showDetails ? t.lessDetails : t.customizeSettings}
             </button>
             <span>•</span>
             <button
@@ -208,7 +196,7 @@ export function CookieBanner({
               onClick={onOpenPrivacy}
               className="text-zinc-300 hover:text-white underline decoration-zinc-500 hover:decoration-white transition-colors cursor-pointer py-1"
             >
-              {isDe ? "Datenschutz" : "Privacy"}
+              {t.privacy}
             </button>
             <span>•</span>
             <button
@@ -216,7 +204,7 @@ export function CookieBanner({
               onClick={onOpenImpressum}
               className="text-zinc-300 hover:text-white underline decoration-zinc-500 hover:decoration-white transition-colors cursor-pointer py-1"
             >
-              {isDe ? "Impressum" : "Imprint"}
+              {t.imprint}
             </button>
           </div>
 
@@ -228,14 +216,14 @@ export function CookieBanner({
                   onClick={handleSaveCustom}
                   className="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white font-semibold text-xs border border-white/20 transition-all cursor-pointer text-center"
                 >
-                  {isDe ? "Auswahl speichern" : "Save selection"}
+                  {t.saveSelection}
                 </button>
                 <button
                   type="button"
                   onClick={handleAcceptAll}
                   className="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-[#DC2626] hover:bg-[#B91C1C] active:scale-95 text-white font-bold text-xs shadow-lg shadow-red-950/40 transition-all cursor-pointer text-center"
                 >
-                  {isDe ? "Alle akzeptieren" : "Accept all"}
+                  {t.acceptAll}
                 </button>
               </>
             ) : (
@@ -245,14 +233,14 @@ export function CookieBanner({
                   onClick={handleAcceptEssential}
                   className="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-zinc-200 hover:text-white font-semibold text-xs border border-white/15 transition-all cursor-pointer text-center"
                 >
-                  {isDe ? "Nur essenzielle" : "Essential only"}
+                  {t.acceptEssential}
                 </button>
                 <button
                   type="button"
                   onClick={handleAcceptAll}
                   className="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-[#DC2626] hover:bg-[#B91C1C] active:scale-95 text-white font-bold text-xs shadow-lg shadow-red-950/40 transition-all cursor-pointer text-center"
                 >
-                  {isDe ? "Alle akzeptieren" : "Accept all"}
+                  {t.acceptAll}
                 </button>
               </>
             )}
