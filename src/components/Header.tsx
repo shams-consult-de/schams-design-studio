@@ -170,7 +170,7 @@ export function Header({
             </button>
           </div>
 
-          {/* Direct Phone & WhatsApp subtle icon links for desktop */}
+          {/* Direct Phone, WhatsApp & Email subtle icon links for desktop */}
           <div className="hidden md:flex items-center gap-0.5">
             <a
               href={CONTACT.primaryPhoneHref}
@@ -189,6 +189,14 @@ export function Header({
               aria-label="WhatsApp"
             >
               <Icon name="whatsapp" className="text-xl" />
+            </a>
+            <a
+              href={`mailto:${CONTACT.email}`}
+              className="p-2 rounded-full hover:bg-zinc-100 text-zinc-600 hover:text-zinc-950 transition-colors"
+              title={`E-Mail: ${CONTACT.email}`}
+              aria-label="E-Mail"
+            >
+              <Icon name="envelope" className="text-base" />
             </a>
           </div>
 

@@ -317,6 +317,7 @@ export interface Translations {
   mobileActionBar: {
     call: string;
     whatsapp: string;
+    email: string;
     book: string;
   };
   legal: {
@@ -890,6 +891,7 @@ export const content: Record<Language, Translations> = {
     mobileActionBar: {
       call: "Anrufen",
       whatsapp: "WhatsApp",
+      email: "E-Mail",
       book: "Termin buchen",
     },
     legal: {
@@ -1497,6 +1499,7 @@ export const content: Record<Language, Translations> = {
     mobileActionBar: {
       call: "Call",
       whatsapp: "WhatsApp",
+      email: "Email",
       book: "Book Consultation",
     },
     legal: {

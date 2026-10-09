@@ -40,6 +40,15 @@ export function DesktopStickyActionBar({
         <Icon name="whatsapp" className="text-xl" />
       </a>
 
+      <a
+        href={`mailto:${CONTACT.email}`}
+        className="p-2.5 rounded-full hover:bg-white/15 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+        title={`${t.email}: ${CONTACT.email}`}
+        aria-label={t.email}
+      >
+        <Icon name="envelope" className="text-base" />
+      </a>
+
       <span className="h-4 w-px bg-white/20 my-auto" />
 
       <button
