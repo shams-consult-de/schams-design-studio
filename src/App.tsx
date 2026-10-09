@@ -759,6 +759,7 @@ export function App() {
             ? "Restricted Founder Portal for Dipl.-Ing. Majeed Shams. Access high-resolution brochures, LinkedIn PDFs, and partnership whitepapers."
             : "Geschützter Inhaber-Bereich für Dipl.-Ing. Majeed Shams. Download hochauflösender Flyer, LinkedIn-Dokumente und B2B-Kooperationsunterlagen.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/founder-portal" : "/founder-portal"}`,
+        noIndex: true,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
           { name: language === "en" ? "Founder Portal" : "Gründer-Portal", item: language === "en" ? "/en/founder-portal" : "/founder-portal" },
@@ -882,7 +883,6 @@ export function App() {
         title: language === "en" ? "Legal Notice & Regulatory Details | Shams Consult" : "Impressum & Rechtliche Angaben | Shams Consult",
         description: "Impressum und berufsrechtliche Angaben des Architekturbüros Shams Consult in Frankfurt am Main.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/impressum" : "/impressum"}`,
-        noIndex: true,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
           { name: language === "en" ? "Legal Notice" : "Impressum", item: language === "en" ? "/en/impressum" : "/impressum" },
@@ -898,7 +898,6 @@ export function App() {
         title: language === "en" ? "Privacy Policy | Shams Consult" : "Datenschutzerklärung | Shams Consult",
         description: "Datenschutzerklärung der Shams Consult gemäß DSGVO.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/datenschutz" : "/datenschutz"}`,
-        noIndex: true,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
           { name: language === "en" ? "Privacy Policy" : "Datenschutz", item: language === "en" ? "/en/datenschutz" : "/datenschutz" },
@@ -914,7 +913,6 @@ export function App() {
         title: language === "en" ? "Right of Withdrawal | Shams Consult" : "Widerrufsbelehrung | Shams Consult",
         description: "Widerrufsbelehrung für Verbraucher gemäß Fernabsatzrecht.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/widerruf" : "/widerruf"}`,
-        noIndex: true,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
           { name: language === "en" ? "Right of Withdrawal" : "Widerruf", item: language === "en" ? "/en/widerruf" : "/widerruf" },
@@ -930,7 +928,6 @@ export function App() {
         title: language === "en" ? "Accessibility Statement | Shams Consult" : "Erklärung zur Barrierefreiheit | Shams Consult",
         description: "Erklärung zur digitalen Barrierefreiheit gemäß BITV 2.0 und WCAG 2.1 AA.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/barrierefreiheit" : "/barrierefreiheit"}`,
-        noIndex: true,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },
           { name: language === "en" ? "Accessibility" : "Barrierefreiheit", item: language === "en" ? "/en/barrierefreiheit" : "/barrierefreiheit" },

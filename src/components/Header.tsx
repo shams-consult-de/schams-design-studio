@@ -42,7 +42,7 @@ export function Header({
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
     { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
-    { label: t.caseStudies, path: "/case-studies", sectionId: "case-studies" },
+    { label: t.caseStudies, path: "/clients", sectionId: "case-studies" },
     { label: t.blog, path: "/blog", sectionId: undefined },
     { label: t.contact, path: "/contact", sectionId: "contact" },
   ];

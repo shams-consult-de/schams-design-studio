@@ -415,9 +415,9 @@ async function generateStaticRoutes() {
       alternateLanguages: hreflangs,
     };
     routeConfigs.set(`/vergleich/${comp.slug}`, metaDe);
-    routeConfigs.set(`/${comp.slug}`, metaDe);
+    routeConfigs.set(`/${comp.slug}`, { ...metaDe, isAlias: true });
     routeConfigs.set(`/en/vergleich/${comp.slug}`, metaEn);
-    routeConfigs.set(`/en/${comp.slug}`, metaEn);
+    routeConfigs.set(`/en/${comp.slug}`, { ...metaEn, isAlias: true });
   }
 
   // 1.1 City-Specific Hub-and-Spoke Regional Landing Pages (DE + EN)
@@ -912,6 +912,11 @@ async function generateStaticRoutes() {
   let count = 0;
   for (const [route, meta] of routeConfigs.entries()) {
     try {
+      if (meta.isAlias) {
+        // Aliases are redirected directly via HTTP 301 in .htaccess
+        // Do not generate duplicate HTML files to avoid Google canonical conflicts
+        continue;
+      }
       if (route === "/") {
         const customizedHtml = renderHtmlWithMeta(baseIndexHtml, meta);
         fs.writeFileSync(path.join(distDir, "index.html"), customizedHtml, "utf-8");

@@ -30,6 +30,7 @@ export function FounderPage({
           <div className="flex items-center gap-3">
             <a
               href="/founder-portal"
+              rel="nofollow"
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-semibold border border-zinc-200 transition-colors"
               title={isDe ? "Geschütztes Gründerportal für Unterlagen" : "Protected Founder Portal"}
             >
