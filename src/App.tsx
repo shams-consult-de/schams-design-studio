@@ -810,11 +810,11 @@ export function App() {
         title:
           language === "en"
             ? "Dipl.-Ing. Majeed Shams — Architect & Urban Planner"
-            : "Dipl.-Ing. Majeed Shams — Freier Architekt & Stadtplaner | Shams Consult",
+            : "Dipl.-Ing. Majeed Shams — Architekt & Stadtplaner | Shams Consult",
         description:
           language === "en"
             ? "Professional profile of Dipl.-Ing. (FH) Majeed Shams M.Eng.: Licensed German Architect & Urban Planner, AKH Hesse Member No. 21886."
-            : "Profil von Dipl.-Ing. (FH) Majeed Shams M.Eng.: Freier Architekt & Stadtplaner, AKH Hessen Mitglied (Nr. 21886), 15+ Jahre Planungserfahrung.",
+            : "Profil von Dipl.-Ing. (FH) Majeed Shams M.Eng.: Architekt & Stadtplaner, AKH Hessen Mitglied (Nr. 21886), 15+ Jahre Planungserfahrung.",
         canonicalUrl: `https://shams-consult.de${language === "en" ? "/en/founder" : "/founder"}`,
         breadcrumbs: [
           { name: language === "en" ? "Home" : "Start", item: language === "en" ? "/en" : "/" },

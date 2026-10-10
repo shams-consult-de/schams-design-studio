@@ -465,6 +465,8 @@ export interface Translations {
     closeModal: string;
     stickySaveText: string;
     callButton: string;
+    qrSectionTitle: string;
+    qrSectionSubtitle: string;
   };
   founderPage: {
     backToHome: string;
@@ -1128,7 +1130,7 @@ export const content: Record<Language, Translations> = {
       showQrCode: "QR-Code vorzeigen",
       pageSubtitle: "Digitale Visitenkarte",
       verified: "Verifiziert",
-      roleSubtitle: "Freier Architekt & Stadtplaner · Büroinhaber",
+      roleSubtitle: "Architekt & Stadtplaner · Büroinhaber & Geschäftsführer",
       subTitleDetail: "Frankfurt am Main & Rödermark",
       chamberTitle: "Staatlich anerkannt & kammereingetragen",
       saveButtonText: "Visitenkarte speichern (.vcf)",
@@ -1153,6 +1155,8 @@ export const content: Record<Language, Translations> = {
       closeModal: "Schließen",
       stickySaveText: "Kontakt speichern",
       callButton: "Anrufen",
+      qrSectionTitle: "QR-Code zum Scannen",
+      qrSectionSubtitle: "Mit der Smartphone-Kamera scannen, um die Visitenkarte direkt im Adressbuch zu sichern.",
     },
     founderPage: {
       backToHome: "Zurück zur Startseite",
@@ -1814,7 +1818,7 @@ export const content: Record<Language, Translations> = {
       showQrCode: "Show QR Code",
       pageSubtitle: "Digital Business Card",
       verified: "Verified",
-      roleSubtitle: "Licensed Architect & Urban Planner · Managing Director",
+      roleSubtitle: "Architect & Urban Planner · Founder & Managing Director",
       subTitleDetail: "Frankfurt am Main & Rödermark",
       chamberTitle: "Officially Licensed & Registered",
       saveButtonText: "Save Contact to Phone (.vcf)",
@@ -1839,6 +1843,8 @@ export const content: Record<Language, Translations> = {
       closeModal: "Close",
       stickySaveText: "Save Contact",
       callButton: "Call",
+      qrSectionTitle: "QR Code to Scan",
+      qrSectionSubtitle: "Scan with your smartphone camera to save the contact directly to your address book.",
     },
     founderPage: {
       backToHome: "Back to Home",

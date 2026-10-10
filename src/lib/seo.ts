@@ -234,7 +234,7 @@ export function getBlogPostSeo(post: BlogPost, language: Language = "de"): SeoMe
       author: {
         "@type": "Person",
         name: "Dipl.-Ing. Majeed Shams",
-        jobTitle: lang === "en" ? "Licensed Architect & Urban Planner" : "Freier Architekt & Stadtplaner",
+        jobTitle: lang === "en" ? "Architect & Urban Planner · Managing Director" : "Architekt & Stadtplaner · Büroinhaber & Geschäftsführer",
         url: `${SITE_URL}${lang === "en" ? "/en" : ""}/founder`,
       },
       publisher: {

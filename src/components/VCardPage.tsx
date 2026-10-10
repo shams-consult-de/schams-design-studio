@@ -166,6 +166,32 @@ export function VCardPage({
               )}
             </div>
 
+            {/* Direct Scannable QR Code Section */}
+            <div className="mt-6 p-5 rounded-2xl bg-zinc-50 border border-zinc-200/90 text-center space-y-3">
+              <div className="flex items-center justify-center gap-2 text-zinc-700 text-xs font-bold uppercase tracking-wider">
+                <Icon name="qrcode" className="text-[#DC2626]" />
+                <span>{t.qrSectionTitle}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowQrModal(true)}
+                className="mx-auto block p-3 bg-white rounded-2xl border border-zinc-200 shadow-2xs hover:shadow-md hover:border-red-300 transition-all cursor-pointer group"
+                title={t.showQrCode}
+              >
+                <img
+                  src="/images/qr-card.svg"
+                  alt="QR-Code Digitale Visitenkarte"
+                  className="w-44 h-44 sm:w-48 sm:h-48 object-contain transition-transform group-hover:scale-[1.02]"
+                  loading="eager"
+                  width="192"
+                  height="192"
+                />
+              </button>
+              <p className="text-[11px] text-zinc-500 max-w-xs mx-auto leading-relaxed">
+                {t.qrSectionSubtitle}
+              </p>
+            </div>
+
             {/* Quick Action Matrix (1-Tap Direct Touch) */}
             <div className="mt-6 space-y-2">
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-zinc-400 block px-1">

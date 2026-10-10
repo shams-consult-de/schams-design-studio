@@ -1187,7 +1187,7 @@ export function FcnPartnershipFlyer({ className = "" }: FlyerProps) {
 
                 <div className="profile-info">
                   <div className="profile-name">{CONTACT.founder}</div>
-                  <div className="profile-title">Freier Architekt & Stadtplaner · Inhaber {CONTACT.companyName}</div>
+                  <div className="profile-title">Architekt & Stadtplaner · Inhaber {CONTACT.companyName}</div>
                   <div className="contact-line">
                     <span>📍</span> {CONTACT.primaryAddress.full}
                   </div>

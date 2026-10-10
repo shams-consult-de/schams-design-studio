@@ -86,7 +86,7 @@ export function LegalPage({ type, language = "de", onNavigateHome }: LegalPagePr
                 <p>
                   <strong className="text-white font-semibold">{CONTACT.legalName}</strong><br />
                   {isDe ? "Inhaber" : "Managing Principal"}: {CONTACT.founder}<br />
-                  {isDe ? "Freier Architekt & Stadtplaner" : "Independent Architect & Urban Planner"}<br />
+                  {isDe ? "Architekt & Stadtplaner · Büroinhaber" : "Architect & Urban Planner · Managing Principal"}<br />
                   {CONTACT.primaryAddress.street}<br />
                   {CONTACT.primaryAddress.city}<br />
                   {isDe ? CONTACT.primaryAddress.country : CONTACT.primaryAddress.countryEn}
