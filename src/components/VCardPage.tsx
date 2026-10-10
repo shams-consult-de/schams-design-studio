@@ -77,12 +77,12 @@ export function VCardPage({
         {/* Digital Business Card Main Container */}
         <div className="bg-white rounded-3xl shadow-xl border border-zinc-200/80 overflow-hidden">
           {/* Top Brand Banner */}
-          <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 px-6 pt-8 pb-14 text-white relative">
+          <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 px-6 pt-6 pb-16 text-white relative">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono tracking-widest uppercase text-red-400 font-semibold">
                 {CONTACT.companyName} · {t.pageSubtitle}
               </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-medium text-emerald-300">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-medium text-emerald-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 {t.verified}
               </span>
@@ -90,38 +90,41 @@ export function VCardPage({
           </div>
 
           {/* Profile Header Overlapping Banner */}
-          <div className="px-6 pb-6 pt-0 -mt-10 relative">
-            <div className="flex flex-col sm:flex-row items-center sm:items-end gap-5 text-center sm:text-left">
+          <div className="px-6 pb-6 pt-0 relative">
+            <div className="flex flex-col items-center text-center -mt-14 relative mb-2">
               {/* Founder Avatar */}
-              <div className="relative group shrink-0">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden ring-4 ring-white shadow-xl bg-zinc-100 border border-zinc-200">
+              <div className="relative group shrink-0 mb-3">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden ring-4 ring-white shadow-xl bg-zinc-100 border border-zinc-200">
                   <img
                     src="/images/team/Image.jpg"
                     alt={CONTACT.founder}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="absolute -bottom-1.5 -right-1.5 bg-[#DC2626] text-white p-1.5 rounded-xl shadow-md border-2 border-white" title="AKH Hessen">
-                  <AkhLogo className="h-4 w-auto fill-white" />
+                <div
+                  className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-[#DC2626] text-white flex items-center justify-center shadow-md ring-2 ring-white"
+                  title="AKH Hessen verifiziert"
+                >
+                  <Icon name="check" className="text-xs text-white" />
                 </div>
               </div>
 
               {/* Title & Organization */}
-              <div className="space-y-1 sm:pb-1">
+              <div className="space-y-1 max-w-md">
                 <h1 className="text-xl sm:text-2xl font-extrabold text-zinc-950 tracking-tight leading-snug">
                   {CONTACT.founder}
                 </h1>
                 <p className="text-xs sm:text-sm font-semibold text-[#DC2626]">
                   {t.roleSubtitle}
                 </p>
-                <p className="text-[11px] text-zinc-500 font-medium">
+                <p className="text-[11px] sm:text-xs text-zinc-500 font-medium">
                   {CONTACT.legalName} · {t.subTitleDetail}
                 </p>
               </div>
             </div>
 
             {/* Statutory Chamber Accreditation Tag */}
-            <div className="mt-5 p-3 rounded-xl bg-zinc-50 border border-zinc-200/90 flex items-center gap-3">
+            <div className="mt-4 p-3 rounded-xl bg-zinc-50 border border-zinc-200/90 flex items-center gap-3">
               <div className="p-2 rounded-lg bg-white border border-zinc-200 shrink-0">
                 <AkhLogo className="h-5 w-auto" />
               </div>

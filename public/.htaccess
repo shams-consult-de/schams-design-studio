@@ -81,8 +81,9 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/+(?:qualit.*tssiegel.*nachhaltiges.*) [NC]
   RewriteRule ^ https://shams-consult.de/project/qs-nachhaltiges-gebaeude-goetzenhain [R=301,L]
 
-  # Legacy vCard file downloads
-  RewriteCond %{REQUEST_URI} ^/+(?:.*Planungsb.*ro.*Shams.*Consult.*\.vcf|.*majeed.*shams.*\.vcf|.*shams-consult\.vcf|app/download/12468669157/.*) [NC]
+  # Legacy vCard file downloads (redirects legacy Jimdo & aliases to canonical majeed-shams.vcf)
+  RewriteCond %{REQUEST_URI} !^/+majeed-shams\.vcf$ [NC]
+  RewriteCond %{REQUEST_URI} ^/+(?:.*Planungsb.*ro.*Shams.*Consult.*\.vcf|.*shams-consult\.vcf|app/download/12468669157/.*) [NC]
   RewriteRule ^ https://shams-consult.de/majeed-shams.vcf [R=301,L]
 
   # Digital Business Card & vCard Page Aliases

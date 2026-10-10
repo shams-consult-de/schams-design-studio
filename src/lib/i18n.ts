@@ -348,6 +348,7 @@ export interface Translations {
     cookieSettings: string;
     developedBy: string;
     rights: string;
+    vCardLink: string;
   };
   notFound: {
     badge: string;
@@ -1000,6 +1001,7 @@ export const content: Record<Language, Translations> = {
       cookieSettings: "Cookie-Einstellungen",
       developedBy: "Mit ❤️ in Deutschland entwickelt von",
       rights: "Alle Rechte vorbehalten.",
+      vCardLink: "Digitale Visitenkarte (.vcf)",
     },
     notFound: {
       badge: "404 Fehler",
@@ -1685,6 +1687,7 @@ export const content: Record<Language, Translations> = {
       cookieSettings: "Cookie Settings",
       developedBy: "Developed with ❤️ in Germany by",
       rights: "All rights reserved.",
+      vCardLink: "Digital Business Card (.vcf)",
     },
     notFound: {
       badge: "404 Error",
