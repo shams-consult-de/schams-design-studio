@@ -44,18 +44,12 @@ export function SiteVisitsPage({
           </button>
 
           <span className="text-xs font-mono text-zinc-400">
-            Shams Consult · {t.badge}
+            Shams Consult · {t.title}
           </span>
         </div>
 
         {/* Header Block */}
         <div className="space-y-4 max-w-3xl">
-          <div className="inline-block">
-            <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#DC2626]">
-              {t.badge}
-            </span>
-          </div>
-
           <h1 className="font-sans text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight leading-[1.12]">
             {t.title}
           </h1>

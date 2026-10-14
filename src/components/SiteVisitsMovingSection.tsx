@@ -25,15 +25,10 @@ export function SiteVisitsMovingSection({
     <section className="py-12 sm:py-16 bg-[#F8F9FA] text-zinc-900 border-b border-zinc-200 overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="space-y-1">
-            <div className="inline-block">
-              <h2 className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
-                {t.badge}
-              </h2>
-            </div>
-            <p className="font-sans text-lg sm:text-xl font-bold text-zinc-950 tracking-tight">
+          <div>
+            <h2 className="font-sans text-lg sm:text-xl font-bold text-zinc-950 tracking-tight">
               {t.title}
-            </p>
+            </h2>
           </div>
 
           <a
