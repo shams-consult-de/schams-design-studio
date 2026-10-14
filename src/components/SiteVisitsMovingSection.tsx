@@ -67,6 +67,9 @@ export function SiteVisitsMovingSection({
                   alt={item.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
+                  width="320"
+                  height="200"
                 />
                 
                 {/* Tag & Phase Badge */}

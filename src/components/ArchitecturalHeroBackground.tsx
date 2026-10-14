@@ -8,14 +8,18 @@ export function ArchitecturalHeroBackground({
   return (
     <div className={className} aria-hidden="true">
       {/* Complete Frankfurt Architectural Skyline Sketch with prominent Commerzbank Tower */}
-      <img
-        src="/images/frankfurt-skyline-sketch.png"
-        alt=""
-        className="absolute top-0 h-full w-[112%] max-w-none left-[-2%] sm:left-[0%] lg:left-[1%] object-cover object-[50%_top] opacity-40 lg:opacity-50 filter contrast-125 select-none"
-        loading="eager"
-        width="3189"
-        height="1450"
-      />
+      <picture>
+        <source srcSet="/images/frankfurt-skyline-sketch.webp" type="image/webp" />
+        <img
+          src="/images/frankfurt-skyline-sketch.png"
+          alt=""
+          className="absolute top-0 h-full w-[112%] max-w-none left-[-2%] sm:left-[0%] lg:left-[1%] object-cover object-[50%_top] opacity-40 lg:opacity-50 filter contrast-125 select-none"
+          loading="eager"
+          fetchPriority="high"
+          width="1920"
+          height="873"
+        />
+      </picture>
 
       {/* Horizontal Gradient: solid white on text column (WCAG AAA contrast), fading to reveal the Commerzbank Tower & skyline */}
       <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-36% sm:via-38% lg:via-36% to-transparent" />

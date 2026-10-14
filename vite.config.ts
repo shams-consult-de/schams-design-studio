@@ -17,6 +17,18 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+          if (id.includes("suburbLandingPages") || id.includes("regionalLandingPages")) {
+            return "seo-locations";
+          }
+        },
+      },
+    },
   },
 });
 

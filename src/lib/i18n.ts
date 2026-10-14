@@ -814,7 +814,7 @@ export const content: Record<Language, Translations> = {
     siteVisitsPage: {
       backToHome: "Zurück zur Startseite",
       badge: "BAUSTELLENEINBLICKE",
-      title: "Baustelleneinblicke & Vor-Ort-Nachweise",
+      title: "Baustelleneinblicke",
       subtitle:
         "Architektur erfordert echte Vor-Ort-Präsenz. Sehen Sie hier ungestellte Eindrücke aus der täglichen Planungspraxis: von der Bestandsaufnahme bis zur Bauüberwachung nach HOAI.",
       proofNotice: "Unbearbeitete Originalaufnahmen aus laufenden Projekten und Ortsterminen.",
@@ -831,7 +831,7 @@ export const content: Record<Language, Translations> = {
       items: [
         {
           id: "datacenter-bebra-ecology",
-          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.webp",
           tag: "Rechenzentrum & Ökologie",
           phase: "HOAI Phase 1–3: Nachhaltigkeitskonzept & Artenschutz",
           title: "Fachabstimmung Rechenzentrum Bebra: Artenschutz & Abwärmenutzung",
@@ -839,7 +839,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "residential-excavation",
-          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
+          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.webp",
           tag: "Wohnungsbau",
           phase: "HOAI Phase 8: Objektüberwachung & Außenanlagen",
           title: "Außenanlagen & Objektüberwachung im Wohnungsbau",
@@ -847,7 +847,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "client-dialogue",
-          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.webp",
           tag: "Vor-Ort-Beratung",
           phase: "HOAI Phase 1",
           title: "Persönliche Bauherrenberatung & Vertrauensaufbau",
@@ -855,7 +855,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "industrial-safety",
-          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.webp",
           tag: "Gewerbebau",
           phase: "HOAI Phase 8: Bauüberwachung & Bestandsanalyse",
           title: "Gewerbehalle: Technische Bestandsanalyse & Arbeitssicherheit",
@@ -863,7 +863,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "building-survey",
-          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.webp",
           tag: "Bestandsaufnahme",
           phase: "HOAI Phase 1: Grundlagenermittlung",
           title: "Technisches Bauaufmaß & Laser-Vermessung",
@@ -871,7 +871,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "project-strategy",
-          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.webp",
           tag: "Strategiegespräch",
           phase: "HOAI Phase 2 & 3: Entwurfsplanung",
           title: "Projektbesprechung & Planprüfung im Team",
@@ -879,7 +879,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "commercial-handshake",
-          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.png",
+          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.webp",
           tag: "Gewerbebau",
           phase: "HOAI Phase 1 & 8",
           title: "Vertrauensvoller Handschlag vor Gewerbeliegenschaft",
@@ -887,7 +887,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "site-supervision",
-          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.png",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.webp",
           tag: "Objektüberwachung",
           phase: "HOAI Phase 8: Bauüberwachung & VOB",
           title: "Baustellenbegehung mit Sicherheitsausrüstung",
@@ -895,7 +895,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "ground-measurement",
-          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.webp",
           tag: "Außenanlagen & Erdarbeiten",
           phase: "HOAI Phase 8: Bauüberwachung",
           title: "Präzise Höhenkontrolle & Vermessung der Hofflächen",
@@ -903,7 +903,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "site-coordination-residential",
-          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.webp",
           tag: "Wohnungsbau & Koordination",
           phase: "HOAI Phase 8: Objektüberwachung",
           title: "Baustellenkoordination & Bauherrenabstimmung im Wohnungsbau",
@@ -1502,7 +1502,7 @@ export const content: Record<Language, Translations> = {
     siteVisitsPage: {
       backToHome: "Back to Home",
       badge: "FIELD VISITS",
-      title: "Authentic Site Visits & Real-World Documentation",
+      title: "Authentic Site Visits",
       subtitle:
         "Architecture requires true on-site presence. Explore unedited photographic records from our daily practice—from initial building surveys to HOAI site supervision.",
       proofNotice: "Unedited original field photographs from ongoing building sites and client walkthroughs.",
@@ -1519,7 +1519,7 @@ export const content: Record<Language, Translations> = {
       items: [
         {
           id: "datacenter-bebra-ecology",
-          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+          image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.webp",
           tag: "Data Center & Ecology",
           phase: "HOAI Phase 1–3: Sustainability & Wildlife Protection",
           title: "Data Center Bebra Consultation: Wildlife Protection & Heat Recovery",
@@ -1527,7 +1527,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "residential-excavation",
-          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.png",
+          image: "/images/partners/site-visits/shams-vor-ort-aussenanlagen-bauleitung-wohnungsbau.webp",
           tag: "Residential Complex",
           phase: "HOAI Phase 8: Site Supervision & Landscape",
           title: "Site Supervision & Landscape Works for Housing Complex",
@@ -1535,7 +1535,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "client-dialogue",
-          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-bauherrenberatung.webp",
           tag: "On-Site Consultation",
           phase: "HOAI Phase 1",
           title: "Personal Client Dialogue & Trust Building",
@@ -1543,7 +1543,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "industrial-safety",
-          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-gewerbehalle-begutachtung-helm.webp",
           tag: "Commercial Project",
           phase: "HOAI Phase 8: Site Supervision & Structural Survey",
           title: "Commercial Facility: Technical Survey & Safety Inspection",
@@ -1551,7 +1551,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "building-survey",
-          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.webp",
           tag: "Building Survey",
           phase: "HOAI Phase 1: Inception & Briefing",
           title: "Technical Building Survey & Laser Measurement",
@@ -1559,7 +1559,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "project-strategy",
-          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-projektbesprechung-plaene.webp",
           tag: "Project Strategy",
           phase: "HOAI Phase 2 & 3: Developed Design",
           title: "Project Consultation & Plan Review",
@@ -1567,7 +1567,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "commercial-handshake",
-          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.png",
+          image: "/images/partners/site-visits/shams-vor-ort-handschlag-gewerbebau.webp",
           tag: "Commercial Project",
           phase: "HOAI Phase 1 & 8",
           title: "Trusted Handshake at Commercial Facility",
@@ -1575,7 +1575,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "site-supervision",
-          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.png",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenbegehung-sicherheitsweste.webp",
           tag: "Site Supervision",
           phase: "HOAI Phase 8: Site Supervision & VOB",
           title: "On-Site Inspection with Safety Equipment",
@@ -1583,7 +1583,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "ground-measurement",
-          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-asphaltierung-hoehung-messung.webp",
           tag: "Site Works & Paving",
           phase: "HOAI Phase 8: Site Supervision",
           title: "Precision Level Inspection & Courtyard Paving Survey",
@@ -1591,7 +1591,7 @@ export const content: Record<Language, Translations> = {
         },
         {
           id: "site-coordination-residential",
-          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.jpg",
+          image: "/images/partners/site-visits/shams-vor-ort-baustellenkoordination-wohnungsbau.webp",
           tag: "Residential Coordination",
           phase: "HOAI Phase 8: Site Supervision",
           title: "On-Site Construction Coordination for Housing Complex",

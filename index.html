@@ -8,13 +8,22 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X68PRZMTEE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-X68PRZMTEE');
+      window.gtag = gtag;
+      if (
+        window.location.hostname !== "localhost" &&
+        window.location.hostname !== "127.0.0.1" &&
+        !window.location.hostname.endsWith(".local")
+      ) {
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-X68PRZMTEE";
+        document.head.appendChild(s);
+        gtag("js", new Date());
+        gtag("config", "G-X68PRZMTEE");
+      }
     </script>
 
     <title>Shams Consult — Architekturbüro für Architektur, Stadtplanung & Projektentwicklung | Frankfurt & Rödermark</title>
@@ -59,12 +68,19 @@
     <link rel="shortcut icon" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
-    <!-- Preload LCP Hero Image -->
+    <!-- Preload LCP Hero Elements -->
     <link
       rel="preload"
       as="image"
-      href="/images/team/shams-majeed-main-image.png"
-      type="image/png"
+      href="/images/frankfurt-skyline-sketch.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/team/majeed-shams-authentic.webp"
+      type="image/webp"
       fetchpriority="high"
     />
 
@@ -79,9 +95,17 @@
       crossorigin
     />
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      />
+    </noscript>
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
