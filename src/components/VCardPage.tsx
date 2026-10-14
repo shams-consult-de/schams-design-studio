@@ -450,7 +450,7 @@ export function VCardPage({
                 <span>{t.directDownloadButton}</span>
               </a>
               <span className="text-[10px] font-mono text-zinc-400">
-                shams-consult.de/card
+                shams-consult.de/majeed-shams.vcf
               </span>
             </div>
           </div>
