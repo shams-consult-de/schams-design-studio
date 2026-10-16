@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects, Project } from "../data/projects";
 import { Language, Translations } from "../lib/i18n";
 import { Icon } from "./icon";
@@ -9,6 +9,7 @@ interface ProjectsPageProps {
   onSelectProject: (project: Project) => void;
   onBack: () => void;
   onBookConsultation: () => void;
+  initialCategory?: string;
 }
 
 export function ProjectsPage({
@@ -17,9 +18,37 @@ export function ProjectsPage({
   onSelectProject,
   onBack,
   onBookConsultation,
+  initialCategory,
 }: ProjectsPageProps) {
   const isDe = language === "de";
-  const [activeCategory, setActiveCategory] = useState<string>("all");
+
+  const getCategoryFromUrl = () => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get("category");
+      if (
+        cat &&
+        ["urban-planning", "residential", "commercial", "education", "sustainability"].includes(cat)
+      ) {
+        return cat;
+      }
+    }
+    return initialCategory || "all";
+  };
+
+  const [activeCategory, setActiveCategory] = useState<string>(getCategoryFromUrl);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setActiveCategory(getCategoryFromUrl());
+    };
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("routechange", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("routechange", handlePopState);
+    };
+  }, []);
 
   const categories = [
     { id: "all", label: t.filterAll },
@@ -77,7 +106,18 @@ export function ProjectsPage({
             <button
               key={cat.id}
               type="button"
-              onClick={() => setActiveCategory(cat.id)}
+              onClick={() => {
+                setActiveCategory(cat.id);
+                if (typeof window !== "undefined") {
+                  const url = new URL(window.location.href);
+                  if (cat.id === "all") {
+                    url.searchParams.delete("category");
+                  } else {
+                    url.searchParams.set("category", cat.id);
+                  }
+                  window.history.replaceState(null, "", url.toString());
+                }
+              }}
               className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? "bg-zinc-950 text-white shadow-xs"

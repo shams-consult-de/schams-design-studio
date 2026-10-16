@@ -1,14 +1,20 @@
-import { Translations } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
+import { Icon } from "./icon";
 
 interface SiteVisitsMovingSectionProps {
   t: Translations["siteVisitsPage"];
+  language?: Language;
   onNavigateSiteVisits?: () => void;
+  onNavigate?: (path: string) => void;
 }
 
 export function SiteVisitsMovingSection({
   t,
+  language = "de",
   onNavigateSiteVisits,
+  onNavigate,
 }: SiteVisitsMovingSectionProps) {
+  const isDe = language === "de";
   const handleAlbumClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigateSiteVisits) {
@@ -89,6 +95,98 @@ export function SiteVisitsMovingSection({
               </div>
             </a>
           ))}
+        </div>
+      </div>
+
+      {/* 3 Audience Navigation Paths (Direct, Clean, Without Eyebrow/Header text) */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-10 pt-8 border-t border-zinc-200/80">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Card 1: Privatkunden */}
+          <div
+            onClick={() => (onNavigate ? onNavigate("/projects?category=residential") : undefined)}
+            className="group relative bg-white hover:bg-zinc-50/80 border border-zinc-200 hover:border-[#DC2626] rounded-xl p-5 transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col justify-between"
+          >
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-lg bg-red-50 text-[#DC2626] flex items-center justify-center font-bold text-sm group-hover:scale-110 transition-transform">
+                  <Icon name="house" />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 group-hover:text-[#DC2626] transition-colors">
+                  {isDe ? "Bauherren" : "Homeowners"}
+                </span>
+              </div>
+              <h3 className="text-sm sm:text-base font-extrabold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                {isDe ? "Privatbau & Sanierung" : "Private Residential"}
+              </h3>
+              <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                {isDe
+                  ? "Stadtvillen, Wohnhäuser, Aufstockung, Sanierung & anspruchsvolle Innenarchitektur."
+                  : "Villas, modern family homes, extensions, and high-end residential interiors."}
+              </p>
+            </div>
+            <div className="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-bold text-zinc-900 group-hover:text-[#DC2626]">
+              <span>{isDe ? "Wohnprojekte ansehen" : "Explore Residential"}</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
+
+          {/* Card 2: Gewerbe */}
+          <div
+            onClick={() => (onNavigate ? onNavigate("/projects?category=commercial") : undefined)}
+            className="group relative bg-white hover:bg-zinc-50/80 border border-zinc-200 hover:border-[#DC2626] rounded-xl p-5 transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col justify-between"
+          >
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-lg bg-zinc-100 text-zinc-900 flex items-center justify-center font-bold text-sm group-hover:scale-110 transition-transform">
+                  <Icon name="building" />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 group-hover:text-[#DC2626] transition-colors">
+                  {isDe ? "Gewerbebau" : "Commercial"}
+                </span>
+              </div>
+              <h3 className="text-sm sm:text-base font-extrabold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                {isDe ? "Gewerbe & Sonderbauten" : "Business & Commercial"}
+              </h3>
+              <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                {isDe
+                  ? "Bürogebäude, Gewerbehallen, Baurecht (§ 34 BauGB), Nutzungsänderungen & B-Pläne."
+                  : "Office spaces, commercial facilities, building law & master zoning plans (§ 34 BauGB)."}
+              </p>
+            </div>
+            <div className="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-bold text-zinc-900 group-hover:text-[#DC2626]">
+              <span>{isDe ? "Gewerbeprojekte ansehen" : "Explore Commercial"}</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
+
+          {/* Card 3: B2B-Partner & Bauträger */}
+          <div
+            onClick={() => (onNavigate ? onNavigate("/b2b") : undefined)}
+            className="group relative bg-white hover:bg-zinc-50/80 border border-zinc-200 hover:border-[#DC2626] rounded-xl p-5 transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col justify-between"
+          >
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="w-9 h-9 rounded-lg bg-zinc-100 text-zinc-900 flex items-center justify-center font-bold text-sm group-hover:scale-110 transition-transform">
+                  <Icon name="handshake" />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 group-hover:text-[#DC2626] transition-colors">
+                  {isDe ? "B2B-Partner" : "Partners & B2B"}
+                </span>
+              </div>
+              <h3 className="text-sm sm:text-base font-extrabold text-zinc-950 group-hover:text-[#DC2626] transition-colors">
+                {isDe ? "Bauträger & Fachplaner" : "Developers & Partners"}
+              </h3>
+              <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                {isDe
+                  ? "HOAI LP 1–9, Ausführungs- & Detailplanung (LP 5), Ausschreibung & Bauüberwachung."
+                  : "HOAI LP 1–9 execution planning, site supervision, tendering & legal certainty."}
+              </p>
+            </div>
+            <div className="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-bold text-zinc-900 group-hover:text-[#DC2626]">
+              <span>{isDe ? "B2B-Partner Portal" : "B2B Partner Portal"}</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

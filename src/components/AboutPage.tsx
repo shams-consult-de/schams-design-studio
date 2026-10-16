@@ -128,7 +128,7 @@ export function AboutPage({
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-200/80">
             <div className="p-4 rounded-xl bg-white border border-zinc-200 shadow-2xs">
               <span className="font-sans text-xl sm:text-2xl font-bold text-zinc-950 block">
-                15+
+                17+
               </span>
               <span className="text-[11px] text-zinc-500 font-medium">
                 {isDe ? "Jahre Büroerfahrung" : "Years Experience"}

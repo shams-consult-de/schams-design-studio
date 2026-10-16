@@ -59,8 +59,8 @@ export const comparisonTopics: ComparisonTopic[] = [
       en: "Large Corporate Planning Firm",
     },
     summary: {
-      de: "Bei Shams Consult betreut Dipl.-Ing. Majeed Shams Ihr Vorhaben persönlich als Chefaufgabe. Keine Delegation an unerfahrene Praktikanten, keine bürokratischen Reibungsverluste – dafür direkte Haftung, 15+ Jahre gewachsene hessische Behördenkontakte und absolute Kostendisziplin.",
-      en: "At Shams Consult, Dipl.-Ing. Majeed Shams leads your project personally as a priority. No delegation to inexperienced trainees, no bureaucratic delays—just direct accountability, 15+ years of established municipal relationships, and rigorous cost discipline.",
+      de: "Bei Shams Consult betreut Dipl.-Ing. Majeed Shams Ihr Vorhaben persönlich als Chefaufgabe. Keine Delegation an unerfahrene Praktikanten, keine bürokratischen Reibungsverluste – dafür direkte Haftung, 17+ Jahre gewachsene hessische Behördenkontakte und absolute Kostendisziplin.",
+      en: "At Shams Consult, Dipl.-Ing. Majeed Shams leads your project personally as a priority. No delegation to inexperienced trainees, no bureaucratic delays—just direct accountability, 17+ years of established municipal relationships, and rigorous cost discipline.",
     },
     criteria: [
       {

@@ -169,7 +169,7 @@ export const networkStats = {
   projectsCompleted: "100+",
   budgetRange: "10.000 € – 13,5 Mio. €",
   yearsExperience: {
-    de: "15+ Jahre",
-    en: "15+ Years",
+    de: "17+ Jahre",
+    en: "17+ Years",
   },
 };

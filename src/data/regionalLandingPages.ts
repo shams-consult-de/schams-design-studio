@@ -118,8 +118,8 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
         en: "Full building permit filing authorization (AKH Hesse No. 21886)",
       },
       {
-        de: "15+ Jahre Planungserfahrung & über 100 geprüfte Bauanträge",
-        en: "15+ years of design experience & over 100 approved building applications",
+        de: "17+ Jahre Planungserfahrung & über 100 geprüfte Bauanträge",
+        en: "17+ years of design experience & over 100 approved building applications",
       },
       {
         de: "Komplettbetreuung von Machbarkeit bis Schlüsselübergabe (HOAI LPH 1–9)",

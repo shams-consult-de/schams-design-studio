@@ -156,8 +156,6 @@ export function App() {
       path === "/b2b" ||
       path === "/developers" ||
       path === "/developers-investors" ||
-      path === "/fcn-kundentag" ||
-      path === "/kundentag" ||
       path === "/b2b-partner"
     ) {
       setIsB2BPage(true);
@@ -1085,7 +1083,7 @@ export function App() {
     const currentPathname = window.location.pathname;
 
     if (targetHash) {
-      if (currentPathname !== targetPathname) {
+      if (currentPathname !== targetPathname.split("?")[0]) {
         window.history.pushState(null, "", localizedTarget);
         syncRoute();
       } else {
@@ -1098,9 +1096,11 @@ export function App() {
       return;
     }
 
-    if (window.location.pathname !== localizedTarget) {
+    const currentFull = window.location.pathname + window.location.search;
+    if (currentFull !== localizedTarget) {
       window.history.pushState(null, "", localizedTarget);
       syncRoute();
+      window.dispatchEvent(new Event("routechange"));
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -1239,6 +1239,7 @@ export function App() {
             language={language}
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
+            onSelectProject={handleSelectProjectById}
           />
         ) : isFounderPortalPage ? (
           /* Dedicated Locked Founder Portal Page */
@@ -1343,7 +1344,9 @@ export function App() {
             <div id="site-visits" className="scroll-mt-24">
               <SiteVisitsMovingSection
                 t={t.siteVisitsPage}
+                language={language}
                 onNavigateSiteVisits={() => navigateTo("/site-visits")}
+                onNavigate={navigateTo}
               />
             </div>
 
@@ -1453,7 +1456,9 @@ export function App() {
         <MobileStickyActionBar
           t={t.mobileActionBar}
           contactT={t.contact}
+          language={language}
           onBookConsultation={handleBookConsultation}
+          onNavigate={navigateTo}
         />
       )}
 

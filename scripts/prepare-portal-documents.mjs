@@ -16,7 +16,6 @@ if (!fs.existsSync(publicDestDir)) {
 }
 
 const htmlFiles = [
-  "flyer-fcn-partnership.html",
   "flyer-b2b-developer.html",
   "flyer-casestudy.html",
   "flyer-din-lang.html",

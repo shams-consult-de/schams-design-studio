@@ -224,7 +224,49 @@ export function Header({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/40 backdrop-blur-xl border-t border-white/20 px-6 py-6 space-y-5 animate-fadeIn shadow-2xl">
+        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-zinc-200 px-5 py-5 space-y-4 animate-fadeIn shadow-2xl">
+          {/* Target Audience Quick Selector (3 Paths) in Mobile Drawer */}
+          <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-3 space-y-2">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-zinc-500 block">
+              {language === "de" ? "Zielgruppe wählen (3 Wege)" : "Select Profile (3 Paths)"}
+            </span>
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate("/projects?category=residential");
+                }}
+                className="py-2 px-1 rounded-lg bg-white border border-zinc-200 hover:border-[#DC2626] text-zinc-900 font-bold text-xs transition-all cursor-pointer shadow-2xs active:scale-95 flex flex-col items-center justify-center gap-1"
+              >
+                <Icon name="house" className="text-xs text-[#DC2626]" />
+                <span className="text-[11px] leading-tight font-extrabold">{language === "de" ? "Privat" : "Residential"}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate("/projects?category=commercial");
+                }}
+                className="py-2 px-1 rounded-lg bg-white border border-zinc-200 hover:border-[#DC2626] text-zinc-900 font-bold text-xs transition-all cursor-pointer shadow-2xs active:scale-95 flex flex-col items-center justify-center gap-1"
+              >
+                <Icon name="building" className="text-xs text-zinc-700" />
+                <span className="text-[11px] leading-tight font-extrabold">{language === "de" ? "Gewerbe" : "Commercial"}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate("/b2b");
+                }}
+                className="py-2 px-1 rounded-lg bg-white border border-zinc-200 hover:border-[#DC2626] text-zinc-900 font-bold text-xs transition-all cursor-pointer shadow-2xs active:scale-95 flex flex-col items-center justify-center gap-1"
+              >
+                <Icon name="handshake" className="text-xs text-zinc-700" />
+                <span className="text-[11px] leading-tight font-extrabold">{language === "de" ? "Partner" : "Partners"}</span>
+              </button>
+            </div>
+          </div>
+
           <div className="flex flex-col space-y-1">
             {mobileNavLinks.map((link) => (
               <a

@@ -205,8 +205,8 @@ export function FeaturedProjectsSection({
               </h3>
               <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
                 {isDe
-                  ? "Erleben Sie realisierte Bauvorhaben mit FCN-Systembaustoffen und anspruchsvollem Innenausbau. Bewegen Sie den Schieberegler interaktiv nach links und rechts."
-                  : "Experience delivered projects featuring FCN structural components and interior design. Move the slider interactively left and right."}
+                  ? "Erleben Sie realisierte Bauvorhaben im massiven Systemrohbau und anspruchsvollem Innenausbau. Bewegen Sie den Schieberegler interaktiv nach links und rechts."
+                  : "Experience delivered projects featuring precision structural components and interior design. Move the slider interactively left and right."}
               </p>
             </div>
           </div>

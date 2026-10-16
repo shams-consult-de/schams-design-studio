@@ -5,12 +5,14 @@ interface B2BPartnersPageProps {
   language: Language;
   onBack: () => void;
   onBookConsultation: () => void;
+  onSelectProject?: (projectId: string) => void;
 }
 
 export function B2BPartnersPage({
   language,
   onBack,
   onBookConsultation,
+  onSelectProject,
 }: B2BPartnersPageProps) {
   const isDe = language === "de";
 
@@ -31,7 +33,7 @@ export function B2BPartnersPage({
       sub: isDe ? "Wohnbau, Gewerbe & B-Pläne" : "Residential, Commercial & Master Plans",
     },
     {
-      value: "20+ Jahre",
+      value: "17+ Jahre",
       label: isDe ? "Praxiserfahrung" : "Hands-on Experience",
       sub: isDe ? "Mitglied AKH Nr. 21886" : "AKH Chamber Member #21886",
     },
@@ -80,14 +82,6 @@ export function B2BPartnersPage({
       format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
       downloadUrl: "/documents/flyer-b2b-developer.html?print=true",
       accent: "from-red-600 to-rose-700",
-    },
-    {
-      id: "fcn",
-      title: isDe ? "FCN Kundentag & Baustoff-Dialog" : "FCN Customer Day & Materials Dialogue",
-      subtitle: isDe ? "Praxisnaher Schulterschluss mit Industrie & Betonherstellern" : "Direct Exchange with Manufacturers & Precast Concrete",
-      format: isDe ? "DIN Lang Z-Falz (6 Seiten)" : "DIN Lang Z-Fold (6 Pages)",
-      downloadUrl: "/documents/flyer-din-lang.html?print=true",
-      accent: "from-zinc-800 to-zinc-950",
     },
     {
       id: "casestudy",
@@ -286,50 +280,144 @@ export function B2BPartnersPage({
           </div>
         </section>
 
-        {/* Section 2: FCN Kundentag & Baustoff-Partnerschaften (Flyer 2 Knowledge) */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-zinc-200 rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-zinc-50 to-white">
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-block">
+        {/* Section 2: Flagship Infrastructure Project - Rechenzentrum Bebra & F&P Immobau */}
+        <section className="rounded-3xl bg-white border border-zinc-200 p-6 sm:p-10 shadow-sm space-y-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-100 pb-6">
+            <div className="space-y-2 max-w-3xl">
               <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
-                {isDe ? "INDUSTRIE- & BAUSTOFF-PARTNERSCHAFTEN" : "INDUSTRY & MATERIAL PARTNERSHIPS"}
+                {isDe ? "B2B-LEUCHTTURMPROJEKT · KRITISCHE INFRASTRUKTUR & STÄDTEBAU" : "B2B FLAGSHIP PROJECT · CRITICAL INFRASTRUCTURE & ZONING"}
               </span>
+              <h2 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-950 tracking-tight">
+                {isDe
+                  ? "Bebauungsplan Nr. 18.1 „Rechenzentrum Robert-Bunsen-Straße“, Bebra"
+                  : "Zoning Plan No. 18.1 'Robert-Bunsen-Straße Data Center', Bebra"}
+              </h2>
+              <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+                {isDe
+                  ? "Entwicklung eines zukunftsweisenden Tier 3/4 Industrie- und Infrastrukturstandorts (>50 MW IT-Last) auf rund 56.000 m² mit kreislaufwirtschaftlicher Gewächshaus-Abwärmenutzung und Klärwasser-Kühlung in partnerschaftlicher Kooperation mit F&P Immobau und der Stadt Bebra."
+                  : "Development of a future-proof Tier 3/4 industrial and critical infrastructure hub (>50 MW IT load) spanning 56,000 m² featuring circular greenhouse waste-heat recovery and reclaimed wastewater cooling in close partnership with F&P Immobau and the City of Bebra."}
+              </p>
             </div>
 
-            <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
-              {isDe
-                ? "FCN Kundentag: Zukunftsfähiges Bauen durch direkte Industrie-Kooperation"
-                : "FCN Customer Day: Future-Proof Architecture via Direct Manufacturer Dialogue"}
-            </h2>
-
-            <p className="text-base sm:text-lg text-zinc-600 font-light leading-relaxed">
-              {isDe
-                ? "Gute Architektur entsteht nicht im Elfenbeinturm, sondern im engen Schulterschluss mit führenden Baustoffherstellern und Fachingenieuren. Auf Veranstaltungen wie dem FCN Kundentag von F.C. Nüdling vertiefen wir technische Innovationen: Von nachhaltigen Betonelementen und CO₂-reduzierten Pflastersystemen bis hin zu langlebigen Außenanlagenkonzepten."
-                : "Enduring architecture isn't conceived in isolation—it flourishes through active collaboration with premier material manufacturers. At partner events such as the FCN Customer Day by F.C. Nüdling, we examine modern material science: from circular precast concrete elements to eco-paving and climate-resilient stormwater landscaping."}
-            </p>
-
-            <blockquote className="border-l-4 border-[#DC2626] pl-4 italic text-zinc-800 text-sm sm:text-base">
-              {isDe
-                ? "„Wer bereits in der Entwurfsphase modernste Baustofftechnologien mitdenkt, spart in der Bauausführung wertvolle Wochen und sichert nachhaltige Wirtschaftlichkeit für den Investor.“"
-                : "“Integrating cutting-edge material technologies at the conceptual design phase prevents costly on-site delays and safeguards long-term commercial returns for investors.”"}
-              <footer className="mt-2 text-xs font-bold text-zinc-500 not-italic">
-                — Dipl.-Ing. Majeed Shams
-              </footer>
-            </blockquote>
+            <div className="shrink-0 flex items-center gap-3 bg-zinc-50 border border-zinc-200 px-4 py-2.5 rounded-2xl">
+              <div className="text-right">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 block">
+                  {isDe ? "Projektpartner" : "Project Partner"}
+                </span>
+                <a
+                  href="https://fup-immobau.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-zinc-900 hover:text-[#DC2626] transition-colors inline-flex items-center gap-1"
+                >
+                  <span>F&P Immobau</span>
+                  <span className="text-zinc-400">↗</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-zinc-200 bg-zinc-900">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Visual: Real Satellite Location Map */}
+            <div className="lg:col-span-5 relative group rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-900 shadow-sm aspect-[4/3] sm:aspect-[16/10] lg:aspect-square">
               <img
-                src="/images/b2b/Image.jpg"
-                alt="FCN Kundentag und Baustoff-Dialog"
-                className="w-full h-full object-cover"
+                src="/images/projects/rechenzentrum-bebra.jpg"
+                alt={isDe ? "Bebauungsplan Rechenzentrum Bebra Robert-Bunsen-Straße Luftbild" : "Bebra Data Center Master Plan Aerial Map"}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 text-white text-xs space-y-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-red-600/90 text-[11px] font-mono font-bold uppercase tracking-wider">
+                  <span>📍</span>
+                  <span>Bebra · Industriegebiet West</span>
+                </div>
+                <div className="text-[11px] text-zinc-300 font-mono">
+                  {isDe ? "56.000 m² Plangebiet gem. § 2 & § 3 BauGB" : "56,000 m² Site under German BauGB"}
+                </div>
+              </div>
+            </div>
+
+            {/* Technical Highlights & Actions */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 space-y-1">
+                  <div className="text-xs font-mono font-bold text-[#DC2626] uppercase">
+                    {isDe ? "IT-Kapazität & Redundanz" : "IT Load & Redundancy"}
+                  </div>
+                  <div className="text-sm font-bold text-zinc-900">&gt;50 MW IT-Last · Tier 3/4</div>
+                  <div className="text-xs text-zinc-500">
+                    {isDe ? "2N-Redundanz, 99,99% Verfügbarkeit" : "2N redundancy, 99.99% uptime"}
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 space-y-1">
+                  <div className="text-xs font-mono font-bold text-[#DC2626] uppercase">
+                    {isDe ? "Energieinfrastruktur" : "Power Grid Infrastructure"}
+                  </div>
+                  <div className="text-sm font-bold text-zinc-900">110 kV / 380 kV Umspannwerk</div>
+                  <div className="text-xs text-zinc-500">
+                    {isDe ? "10.000 m² Batteriespeicher am Standort" : "10,000 m² on-site battery storage"}
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 space-y-1">
+                  <div className="text-xs font-mono font-bold text-[#DC2626] uppercase">
+                    {isDe ? "Kreislaufwirtschaft" : "Circular Waste Heat"}
+                  </div>
+                  <div className="text-sm font-bold text-zinc-900">
+                    {isDe ? "20.000 m² Gewächshäuser" : "20,000 m² Greenhouses"}
+                  </div>
+                  <div className="text-xs text-zinc-500">
+                    {isDe ? "100% Abwärmenutzung & Nahwärmenetz" : "Full waste heat reuse & district heating"}
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 space-y-1">
+                  <div className="text-xs font-mono font-bold text-[#DC2626] uppercase">
+                    {isDe ? "Wasserschonung" : "Water Conservation"}
+                  </div>
+                  <div className="text-sm font-bold text-zinc-900">
+                    {isDe ? "Städtisches Klärwasser" : "Municipal Effluent Cooling"}
+                  </div>
+                  <div className="text-xs text-zinc-500">
+                    {isDe ? "Gereinigtes Brauchwasser zur Kühlung" : "Treated water preserves drinking water"}
+                  </div>
+                </div>
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (onSelectProject) {
+                      onSelectProject("rechenzentrum-bebra");
+                    } else if (typeof window !== "undefined") {
+                      window.location.href = "/project/rechenzentrum-bebra";
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-950 text-white hover:bg-zinc-800 text-xs font-extrabold uppercase tracking-wider transition-colors cursor-pointer shadow-sm"
+                >
+                  <span>{isDe ? "Zum vollständigen Projektdossier" : "View Full Project Dossier"}</span>
+                  <span>→</span>
+                </button>
+
+                <a
+                  href="https://fup-immobau.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-zinc-300 text-zinc-800 hover:text-[#DC2626] hover:border-zinc-400 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  <span>{isDe ? "Partner F&P Immobau besuchen" : "Visit Partner F&P Immobau"}</span>
+                  <span className="text-zinc-400">↗</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Section 2.5: Interactive FCN Vorher-Nachher Transformation Showcase */}
+        {/* Section 3: Interactive Vorher-Nachher Transformation Showcase */}
         <section className="space-y-6 pt-4">
           <div className="space-y-2 max-w-3xl">
             <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
@@ -337,13 +425,13 @@ export function B2BPartnersPage({
             </span>
             <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
               {isDe
-                ? "FCN-Systembaustoffe in der Praxis: Der Vorher-Nachher-Vergleich"
-                : "FCN Systems in Action: Interactive Before-and-After Reveal"}
+                ? "Architektur & Rohbau in der Praxis: Der Vorher-Nachher-Vergleich"
+                : "Architecture & Construction in Action: Interactive Before-and-After Reveal"}
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
               {isDe
-                ? "Erleben Sie die direkte Transformation: Bewegen Sie den Schieberegler von links nach rechts, um den Übergang vom FCN Rohbau zur vollendeten Architektur sowie die anspruchsvolle Kernsanierung im Detail zu vergleichen."
-                : "Experience the real transformation: Move the slider from left to right to inspect the transition from FCN structural precast assembly to turnkey architectural completion."}
+                ? "Erleben Sie die direkte Transformation: Bewegen Sie den Schieberegler von links nach rechts, um den Übergang vom Rohbau zur vollendeten Architektur sowie die anspruchsvolle Kernsanierung im Detail zu vergleichen."
+                : "Experience the real transformation: Move the slider from left to right to inspect the transition from structural shell assembly to turnkey architectural completion."}
             </p>
           </div>
 
@@ -436,7 +524,7 @@ export function B2BPartnersPage({
           </div>
         </section>
 
-        {/* Section 5: Download Hub for All 4 DIN-Lang PDF Flyers */}
+        {/* Section 5: Download Hub for All 3 DIN-Lang PDF Flyers */}
         <section className="rounded-3xl bg-zinc-50 border border-zinc-200 p-8 sm:p-12 space-y-8">
           <div className="space-y-3">
             <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#DC2626]">
@@ -444,8 +532,8 @@ export function B2BPartnersPage({
             </span>
             <h2 className="font-sans text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
               {isDe
-                ? "Die 4 gedruckten DIN-Lang Z-Falz Flyer als PDF herunterladen"
-                : "Download All 4 DIN-Lang Z-Fold Flyers as High-Res PDFs"}
+                ? "Die 3 gedruckten DIN-Lang Z-Falz Flyer als PDF herunterladen"
+                : "Download All 3 DIN-Lang Z-Fold Flyers as High-Res PDFs"}
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 max-w-3xl">
               {isDe

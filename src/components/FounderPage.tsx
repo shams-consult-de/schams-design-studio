@@ -154,7 +154,7 @@ export function FounderPage({
                 </p>
 
                 <p>
-                  Mit über 15 Jahren praktischer Erfahrung als Architekt und Stadtplaner stehe ich heute da — dankbar, diesem Land und seinen Menschen mit jedem Entwurf, jedem Bebauungsplan und jedem Bauantrag etwas von Herzen zurückzugeben.
+                  Mit über 17 Jahren praktischer Erfahrung als Architekt und Stadtplaner stehe ich heute da — dankbar, diesem Land und seinen Menschen mit jedem Entwurf, jedem Bebauungsplan und jedem Bauantrag etwas von Herzen zurückzugeben.
                 </p>
 
                 <h3 className="font-sans text-lg font-bold text-zinc-950 pt-3">
@@ -193,7 +193,7 @@ export function FounderPage({
                 </p>
 
                 <p>
-                  With over 15 years of professional practice as a licensed architect and urban planner, I stand today deeply grateful to give back to this society and its people through every design, master plan, and building approval.
+                  With over 17 years of professional practice as a licensed architect and urban planner, I stand today deeply grateful to give back to this society and its people through every design, master plan, and building approval.
                 </p>
 
                 <h3 className="font-sans text-lg font-bold text-zinc-950 pt-3">

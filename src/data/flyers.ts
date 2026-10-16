@@ -92,25 +92,6 @@ export const portalClients: PortalClient[] = [
         classification: "STRENG VERTRAULICH",
       },
       {
-        id: "fcn-kundentag-flyer",
-        title: {
-          de: "FCN Kundentag & Baustoff-Dialog Flyer",
-          en: "FCN Customer Day & Materials Dialogue Flyer",
-        },
-        description: {
-          de: "Technische Broschüre zu Liapor Leichtbeton, wetterunabhängiger Werksproduktion und nachhaltigem Rohbau.",
-          en: "Technical compendium covering Liapor lightweight concrete, weather-independent manufacturing, and circular build.",
-        },
-        format: "DIN A5 Z-Falz · 6 Seiten",
-        documentUrl: "/documents/flyer-din-lang.html",
-        badge: {
-          de: "BAUSTOFF-DIALOG",
-          en: "MATERIALS DIALOGUE",
-        },
-        isSecret: false,
-        classification: "VERTRAULICH",
-      },
-      {
         id: "portfolio-gallery-flyer",
         title: {
           de: "Fotogalerie & Referenzbauten Flyer",

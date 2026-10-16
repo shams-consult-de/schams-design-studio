@@ -34,6 +34,33 @@ export interface PartnerItem {
 
 export const partnersData: PartnerItem[] = [
   {
+    id: "fup-immobau",
+    name: "F&P Immobau",
+    logo: "/images/partners/fup-immobau.svg",
+    websiteUrl: "https://fup-immobau.de/",
+    tagline: {
+      de: "Projektentwicklung & Großbauvorhaben",
+      en: "Project Development & Major Infrastructure",
+    },
+    title: {
+      de: "F&P Immobau – Ganzheitliche Projektentwicklung & Baukompetenz",
+      en: "F&P Immobau – Holistic Project Development & Construction",
+    },
+    description: {
+      de: "F&P Immobau steht für maßgeschneiderte Lösungen im Industrie-, Hoch- und Ingenieurbau, effiziente Prozessoptimierung und zukunftsweisende Bauprojekte.",
+      en: "F&P Immobau delivers tailored engineering and building solutions, efficient project management, and future-ready development across Germany.",
+    },
+    jointProject: {
+      de: "Städtebauliches Konzept und Bauleitplanung (Bebauungsplan Nr. 18.1) für ein nachhaltiges Tier 3/4 Rechenzentrum (>50 MW) mit Gewächshaus-Abwärmenutzung und Klärwasser-Kreislaufkühlung in Bebra.",
+      en: "Master planning and zoning framework (Bebauungsplan No. 18.1) for a sustainable Tier 3/4 data center (>50 MW) with greenhouse waste heat recovery and circular wastewater cooling in Bebra.",
+    },
+    projectSlug: "rechenzentrum-bebra",
+    location: {
+      de: "Bebra / Hessen",
+      en: "Bebra / Hesse",
+    },
+  },
+  {
     id: "netto",
     name: "Netto Marken-Discount",
     logo: "/images/partners/netto.svg",

@@ -242,7 +242,7 @@ function BeforeAfterCard({
           <div className="text-right">
             <span className="inline-flex items-center gap-1.5 text-xs text-zinc-400">
               <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626]" />
-              <strong className="text-zinc-200">FCN-Komponente:</strong>{" "}
+              <strong className="text-zinc-200">{isDe ? "System-Komponente:" : "Structural System:"}</strong>{" "}
               {project.fcnHighlight[isDe ? "de" : "en"]}
             </span>
           </div>

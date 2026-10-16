@@ -75,6 +75,79 @@ export interface Project {
 
 export const rawProjects: Project[] = [
   {
+    id: "rechenzentrum-bebra",
+    slug: "rechenzentrum-bebra",
+    publishedDate: "2026-10-15",
+    category: "urban-planning",
+    categoryLabel: {
+      de: "Bauleitplanung & Infrastruktur",
+      en: "Urban Master Planning & Infrastructure",
+    },
+    title: {
+      de: "Bebauungsplan Nr. 18.1 „Rechenzentrum – Robert-Bunsen-Straße“, Bebra",
+      en: "Zoning Plan No. 18.1 'Data Center – Robert-Bunsen-Straße', Bebra",
+    },
+    subtitle: {
+      de: "Städtebauliches Konzept für ein nachhaltiges Tier 3/4 Rechenzentrum (>50 MW) mit Gewächshaus-Abwärmenutzung & Kreislaufkühlung in Kooperation mit F&P Immobau",
+      en: "Urban master plan for a sustainable Tier 3/4 data center (>50 MW) with greenhouse waste heat recovery & circular water cooling in cooperation with F&P Immobau",
+    },
+    location: {
+      de: "Bebra (Industriegebiet West), Hessen",
+      en: "Bebra (Industrial Area West), Hesse",
+    },
+    client: {
+      de: "F&P Immobau & Stadt Bebra (in Kooperation mit Shams Consult)",
+      en: "F&P Immobau & City of Bebra (in cooperation with Shams Consult)",
+    },
+    legalBasis: "Bebauungsplan Nr. 18.1 gem. § 2 Abs. 1 & § 3 Abs. 1 BauGB (Stand: Mai 2026)",
+    year: "2026",
+    image: "/images/projects/rechenzentrum-bebra.jpg",
+    imageAlt: "Bebauungsplan Rechenzentrum Robert-Bunsen-Straße Bebra, Luftbild Shams Consult und F&P Immobau",
+    overview: {
+      de: "Entwicklung eines modernen, hochleistungsfähigen und nachhaltigen Industrie- und Infrastrukturstandorts auf rund 56.000 m² im Industriegebiet West der Stadt Bebra. Das Plangebiet schließt Teilflächen des Bebauungsplans Nr. 18 von 1969 sowie unbeplante Erweiterungsflächen ein. Das städtebauliche Konzept verbindet digitale Spitzeninfrastruktur (Tier 3 bis Tier 4, >50 MW IT-Last), eine vorgelagerte Energieinfrastruktur (110 kV / 380 kV Umspannwerk mit 10.000 m² Batteriespeichern) sowie eine kreislaufwirtschaftliche Abwärme- und Brauchwassernutzung in enger Zusammenarbeit mit F&P Immobau und der Stadt Bebra.",
+      en: "Development of a modern, high-performance, and sustainable industrial infrastructure hub spanning approximately 56,000 m² in the West Industrial Area of Bebra. The site consolidates portions of the 1969 zoning plan No. 18 with previously unzoned industrial expansion parcels. The master plan integrates mission-critical digital infrastructure (Tier 3 to Tier 4, >50 MW IT load), dedicated power infrastructure (110 kV / 380 kV substation with 10,000 m² battery storage), and a circular waste-heat and reclaimed water cooling system in close collaboration with F&P Immobau and the City of Bebra.",
+    },
+    challenge: {
+      de: "Funktionale Neuordnung und Erweiterung eines bestehenden Industriegebiets zur Aufnahme einer extrem energieintensiven kritischen Infrastruktur mit über 50 MW IT-Last. Sicherstellung eines leistungsfähigen Anschlusses an das Hoch- und Höchstspannungsnetz (110 kV / 380 kV) bei gleichzeitiger Einhaltung strengster Immissionsschutz-, Lärm-, Wasserrechts- und Artenschutzanforderungen.",
+      en: "Functional restructuring and expansion of an existing industrial estate to accommodate high-density critical infrastructure with over 50 MW IT load. Securing high- and extra-high-voltage grid connectivity (110 kV / 380 kV) while strictly satisfying stringent noise abatement, immission, water-right, and species protection bylaws.",
+    },
+    concept: {
+      de: "Kompakte, funktional gegliederte Campusstruktur: 20.000 m² Rechenzentrum im Zentrum, 10.000 m² Umspannwerk und 10.000 m² Batteriespeicher räumlich vorgelagert für kurze Leitungswege und minimale Energieverluste. Konsequente Ausrichtung auf das Energieeffizienzgesetz: 100%ige Nutzung der entstehenden Abwärme zur ganzjährigen Beheizung von 20.000 m² angeschlossenen Gewächshausflächen sowie zur potenziellen Einspeisung in ein kommunales Nahwärmenetz. Ressourcenschonende Kühlung über gereinigtes Brauchwasser aus der städtischen Kläranlage, Photovoltaik-Dachanlagen und extensive Fassadenbegrünung.",
+      en: "Compact, functionally zoned campus master plan: 20,000 m² data center at the core, with an upfront 10,000 m² substation and 10,000 m² battery storage for minimal line transmission loss. Fully aligned with Germany's Energy Efficiency Act: 100% waste-heat recovery feeding 20,000 m² of year-round agricultural greenhouses and potential municipal district heating. Sustainable cooling via treated effluent from the municipal wastewater plant, rooftop solar PV, and living green facades.",
+    },
+    outcome: {
+      de: "Rechtssichere städtebauliche Baurechtschaffung gemäß § 2 Abs. 1 und § 3 Abs. 1 BauGB. Bebra positioniert sich als zukunftsfähiger Technologiestandort mit regionaler Wertschöpfung, stabiler Gewerbesteuerbasis, neuen Arbeitsplätzen und einem ökologischen Vorzeigeprojekt für die Kopplung von digitaler Infrastruktur, Agrarwirtschaft und erneuerbaren Energien.",
+      en: "Legally sound zoning enacted under BauGB § 2 (1) and § 3 (1). Positions Bebra as an innovative technological hub delivering regional economic value, robust commercial tax base, local jobs, and an ecological flagship combining digital infrastructure, agriculture, and renewable energy.",
+    },
+    keyFacts: {
+      de: [
+        "56.000 m² Gesamtareal (Bebauungsplan Nr. 18.1)",
+        "20.000 m² Rechenzentrum (Tier 3 / Tier 4, 99,99% Verfügbarkeit)",
+        ">50 MW IT-Last mit 110 kV / 380 kV Netzanbindung",
+        "10.000 m² Umspannwerk & 10.000 m² Batteriespeicher",
+        "20.000 m² Gewächshäuser mit 100% Abwärmenutzung",
+        "Wasserschonende Kühlung mit städtischem Kläranlagen-Brauchwasser",
+        "Photovoltaik-Dachflächen, Fassadenbegrünung & Lärmschutz",
+        "In Kooperation mit F&P Immobau (fup-immobau.de) & Stadt Bebra",
+      ],
+      en: [
+        "56,000 m² Master Site (Zoning Plan No. 18.1)",
+        "20,000 m² Data Center (Tier 3 / Tier 4, 99.99% Availability)",
+        ">50 MW IT Load with 110 kV / 380 kV Grid Integration",
+        "10,000 m² Substation & 10,000 m² Battery Storage Facility",
+        "20,000 m² Greenhouses with 100% Waste Heat Recovery",
+        "Water-Conserving Cooling via Treated Municipal Effluent",
+        "Rooftop Solar PV, Living Green Facades & Noise Abatement",
+        "In Collaboration with F&P Immobau (fup-immobau.de) & City of Bebra",
+      ],
+    },
+    externalReferenceUrl: "https://fup-immobau.de/",
+    externalReferenceTitle: {
+      de: "Projektpartner: F&P Immobau (fup-immobau.de)",
+      en: "Project Partner: F&P Immobau (fup-immobau.de)",
+    },
+  },
+  {
     id: "neubau-buerogebaeude-adler-seeheim-jugenheim",
     slug: "neubau-buerogebaeude-adler-seeheim-jugenheim",
     publishedDate: "2026-09-12",
