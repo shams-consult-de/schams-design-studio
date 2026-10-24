@@ -84,8 +84,8 @@ export const rawProjects: Project[] = [
       en: "Urban Master Planning & Infrastructure",
     },
     title: {
-      de: "Bebauungsplan Nr. 18.1 „Rechenzentrum – Robert-Bunsen-Straße“, Bebra",
-      en: "Zoning Plan No. 18.1 'Data Center – Robert-Bunsen-Straße', Bebra",
+      de: "Rechenzentrum Bebra (>50 MW) — Bauleitplanung & B-Plan",
+      en: "Data Center Bebra (>50 MW) — Master Plan & Zoning",
     },
     subtitle: {
       de: "Städtebauliches Konzept für ein nachhaltiges Tier 3/4 Rechenzentrum (>50 MW) mit Gewächshaus-Abwärmenutzung & Kreislaufkühlung in Kooperation mit F&P Immobau",

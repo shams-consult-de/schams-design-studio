@@ -961,7 +961,7 @@ async function generateStaticRoutes() {
       pageType: "project",
       projectData: proj,
       h1: proj.title.de,
-      title: `${proj.title.de} — Referenz | Shams Consult`,
+      title: `${proj.title.de} | Shams Consult`,
       description: `${proj.categoryLabel.de}: ${proj.subtitle.de} — Standort: ${proj.location.de} (${proj.year}).`,
       canonicalUrl: `${SITE_URL}/project/${slug}`,
       lastmod: projLastmod,
@@ -999,7 +999,7 @@ async function generateStaticRoutes() {
       pageType: "project",
       projectData: proj,
       h1: proj.title.en,
-      title: `${proj.title.en} — Reference | Shams Consult`,
+      title: `${proj.title.en} | Shams Consult`,
       description: `${proj.categoryLabel.en}: ${proj.subtitle.en} — Location: ${proj.location.en} (${proj.year}).`,
       canonicalUrl: `${SITE_URL}/en/project/${slug}`,
       lastmod: projLastmod,
@@ -1147,13 +1147,23 @@ async function generateStaticRoutes() {
   for (const cs of caseStudies) {
     const hreflangs = getHreflangs(`/case-study/${cs.id}`, `/en/case-study/${cs.id}`);
     const csLastmod = "2026-09-01";
+    const rawTitleDe = typeof cs.projectTitle === "object" ? (cs.projectTitle.de || cs.projectTitle) : cs.projectTitle;
+    const rawTitleEn = typeof cs.projectTitle === "object" ? (cs.projectTitle.en || cs.projectTitle.de) : cs.projectTitle;
+    let cleanDe = rawTitleDe.replace(/^100%\s*Weiterempfehlung:\s*/i, "").replace(/^Ausgezeichnete\s*/i, "").trim();
+    if (cleanDe.length > 33) {
+      cleanDe = cleanDe.slice(0, 31).replace(/[\s,.-]+$/, "") + "…";
+    }
+    let cleanEn = rawTitleEn.replace(/^100%\s*Recommendation:\s*/i, "").trim();
+    if (cleanEn.length > 33) {
+      cleanEn = cleanEn.slice(0, 31).replace(/[\s,.-]+$/, "") + "…";
+    }
 
     const metaDe = {
       pageType: "case-study",
       caseStudyData: cs,
       h1: cs.projectTitle.de,
-      title: `Fallstudie: ${cs.projectTitle.de} | Shams Consult`,
-      description: `${cs.subtitle.de} — Erfolgreiche Begleitung mit ${cs.rating}/5 Sternen von ${cs.reviewerName}.`,
+      title: `★★★★★ ${cleanDe} — Fallstudie | Shams Consult`,
+      description: `${cs.subtitle.de} — Verifizierte 5-Sterne-Bewertung von ${cs.reviewerName} für Shams Consult.`,
       canonicalUrl: `${SITE_URL}/case-study/${cs.id}`,
       lastmod: csLastmod,
       ogImage: DEFAULT_IMAGE,
@@ -1194,8 +1204,8 @@ async function generateStaticRoutes() {
       pageType: "case-study",
       caseStudyData: cs,
       h1: cs.projectTitle.en,
-      title: `Case Study: ${cs.projectTitle.en} | Shams Consult`,
-      description: `${cs.subtitle.en} — ${cs.rating}/5 stars rating from ${cs.reviewerName}.`,
+      title: `★★★★★ ${cleanEn} — Case Study | Shams Consult`,
+      description: `${cs.subtitle.en} — Verified 5-star review by ${cs.reviewerName} for Shams Consult.`,
       canonicalUrl: `${SITE_URL}/en/case-study/${cs.id}`,
       lastmod: csLastmod,
       ogImage: DEFAULT_IMAGE,
