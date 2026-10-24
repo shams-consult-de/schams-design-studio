@@ -2466,6 +2466,9 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
     },
     targetKeywords: [
       "Architekt Offenbach am Main",
+      "Architekturbüro Offenbach am Main",
+      "Micro Apartments Offenbach",
+      "Nutzungsänderung Offenbach",
       "Stadtplanung Offenbach am Main",
       "Bauantrag Offenbach am Main",
       "Baugenehmigung Offenbach am Main",
@@ -2473,11 +2476,11 @@ export const suburbLandingPages: Record<string, RegionalLandingPageData> = {
       "Architekturbüro Offenbach am Main"
     ],
     metaTitle: {
-      de: "Architektur, Stadtplanung & Bauantrag in Offenbach am Main | Shams Consult",
+      de: "Architekt & Architekturbüro Offenbach am Main — Bauantrag & Planung | Shams Consult",
       en: "Architecture, Urban Planning & Permits in Offenbach am Main | Shams Consult"
     },
     metaDescription: {
-      de: "Staatlich anerkanntes Planungsbüro (AKH Nr. 21886) für Offenbach am Main. Vollarchitektur HOAI 1–9, Stadtplanung, B-Pläne und rechtssichere Bauanträge nach HBO.",
+      de: "Ihr Architekturbüro für Offenbach am Main (AKH Nr. 21886): Bauanträge beim Bauamt Offenbach, Micro Apartments, Wohnbau, Gewerbe & HOAI 1–9. Jetzt anfragen!",
       en: "State-recognized studio (AKH No. 21886) for Offenbach am Main. Full architecture HOAI 1–9, urban master planning, and fast-track HBO building permits."
     },
     heroHighlights: [

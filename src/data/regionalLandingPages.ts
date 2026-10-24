@@ -90,6 +90,8 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
     targetKeywords: [
       "Architekturbüro Frankfurt am Main",
       "Architekt Frankfurt",
+      "Stadtplaner Frankfurt",
+      "Nutzungsänderung Frankfurt",
       "Bauantrag Frankfurt",
       "HOAI Leistungsphasen Frankfurt",
       "Nachverdichtung Frankfurt",
@@ -101,11 +103,11 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       "Baugenehmigung Frankfurt Stadtteile",
     ],
     metaTitle: {
-      de: "Architekturbüro Frankfurt am Main — Architekt & Bauantrag | Shams Consult",
+      de: "Architekturbüro & Stadtplaner Frankfurt am Main | Shams Consult",
       en: "Architectural Practice Frankfurt am Main — Permits & Design | Shams Consult",
     },
     metaDescription: {
-      de: "Staatlich anerkanntes Architekturbüro in Frankfurt am Main (AKH Nr. 21886). Ganzheitliche Hochbauplanung, rechtssichere Bauanträge nach HBO und HOAI 1–9. Jetzt Erstgespräch vereinbaren.",
+      de: "Architekt & Stadtplaner in Frankfurt am Main (AKH Nr. 21886): Ganzheitliche Hochbauplanung, Nutzungsänderungen & Bauanträge nach HBO (HOAI 1–9). Jetzt anfragen!",
       en: "State-recognized architecture studio in Frankfurt am Main (AKH No. 21886). Integrated building design, HBO building permits, and full HOAI phases 1–9. Book your consultation today.",
     },
     heroHighlights: [
@@ -786,11 +788,11 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       "Hausbau Rödermark Ober-Roden",
     ],
     metaTitle: {
-      de: "Architekt Rödermark — Planungsbüro Kreis Offenbach | Shams Consult",
+      de: "Architekt Rödermark — Bauantrag & Bauamt Kreis Offenbach | Shams Consult",
       en: "Architect Rödermark — Planning Practice District of Offenbach | Shams Consult",
     },
     metaDescription: {
-      de: "Architekt in Rödermark (Carl-Zeiss-Str. 43) für Neubau, Mehrfamilienhäuser & Gewerbebau im Kreis Offenbach. AKH Hessen Mitglied. Jetzt Erstgespräch anfragen.",
+      de: "Architekturbüro vor Ort in Rödermark (Carl-Zeiss-Str. 43): Schnelle Bauanträge beim Bauamt Kreis Offenbach, Neubau & HOAI 1–9. AKH Hessen. Erstgespräch sichern!",
       en: "Architect in Rödermark (Carl-Zeiss-Str. 43) for new developments, residential buildings & commercial property. AKH Hesse member. Inquire today.",
     },
     heroHighlights: [
@@ -1732,11 +1734,11 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       "Städtebauliche Machbarkeitsstudie Hessen",
     ],
     metaTitle: {
-      de: "Bebauungsplan erstellen Hessen — Bauleitplanung & VEP | Shams Consult",
+      de: "Stadtplanung & Bauleitplanung Hessen — B-Plan & VEP | Shams Consult",
       en: "Urban Master Plans Hesse — Zoning & Urban Planning | Shams Consult",
     },
     metaDescription: {
-      de: "Stadtplanung & Bauleitplanung in Hessen: Bebauungspläne (B-Plan), Vorhaben- und Erschließungspläne (VEP), Machbarkeitsstudien. AKH Stadtplaner Dipl.-Ing. Majeed Shams.",
+      de: "Staatlich anerkannte Stadtplanung in Hessen: Bebauungspläne (B-Plan), VEP & Machbarkeitsstudien. AKH Hessen Nr. 21886. Jetzt unverbindlich beraten lassen!",
       en: "Urban & master planning in Hesse: statutory zoning plans (B-Plan), project development plans (VEP), and feasibility studies. AKH planner Dipl.-Ing. Majeed Shams.",
     },
     heroHighlights: [
@@ -3065,11 +3067,11 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       "Mehrfamilienhaus Darmstadt planen",
     ],
     metaTitle: {
-      de: "Architekturbüro Darmstadt — Architekt & Bauantrag | Shams Consult",
+      de: "Architekturbüro Darmstadt — Bauantrag & Bauaufsichtsamt | Shams Consult",
       en: "Architectural Practice Darmstadt — Design & Permits | Shams Consult",
     },
     metaDescription: {
-      de: "Staatlich anerkanntes Architekturbüro für Darmstadt & Südhessen (AKH Hessen). Hochwertiger Wohnbau, KfW 40, HOAI Phasen 1–9. Erstgespräch vereinbaren.",
+      de: "Architekturbüro für Darmstadt & Südhessen: Rechtssichere Bauanträge beim Bauamt Darmstadt, KfW 40, Wohnungs- & Gewerbebau (HOAI 1–9). AKH. Jetzt beraten lassen!",
       en: "State-recognized architecture practice for Darmstadt & South Hesse (AKH Hesse). Premium residential, KfW 40, HOAI 1–9. Schedule a consultation.",
     },
     heroHighlights: [
@@ -3591,11 +3593,11 @@ const baseRegionalLandingPages: Record<string, RegionalLandingPageData> = {
       "Projektentwicklung Hanau",
     ],
     metaTitle: {
-      de: "Architekturbüro Hanau — Architekt & Bauantrag | Shams Consult",
+      de: "Architekt & Architekturbüro Hanau — Bauantrag & Neubau | Shams Consult",
       en: "Architectural Practice Hanau — Design & Permits | Shams Consult",
     },
     metaDescription: {
-      de: "Staatlich anerkanntes Architekturbüro für Hanau & Main-Kinzig (AKH Hessen). Wohnungsbau, Gewerbe, Bauantrag nach HBO, HOAI LPH 1–9. Jetzt anfragen.",
+      de: "Ihr Architekt in Hanau & Main-Kinzig: Rechtssichere Bauanträge nach HBO, Neubau, Sanierung & HOAI 1–9. AKH Hessen Nr. 21886. Jetzt Erstgespräch vereinbaren!",
       en: "State-recognized architecture practice for Hanau & Main-Kinzig (AKH Hesse). Residential, commercial, HBO building permits, full HOAI 1–9. Contact us.",
     },
     heroHighlights: [

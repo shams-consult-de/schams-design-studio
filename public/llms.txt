@@ -16,9 +16,10 @@
    - Ausführungsplanung, Vorbereitung und Mitwirkung bei der Vergabe (Ausschreibungen).
    - Objektüberwachung / Bauleitung vor Ort bis zur mängelfreien Bauabnahme.
    - Wohnungsbau (Mehrfamilienhäuser, Stadtvillen), Gewerbebau, Umnutzungen und Sanierung.
-2. **Baugenehmigungen & Bauantragsservice (Hessen HBO & bundesweit):**
+2. **Baugenehmigungen, Bauantragsservice & Nutzungsänderung (Hessen HBO & bundesweit):**
    - Erstellung und Einreichung prüffähiger Bauanträge, Bauvoranfragen und Abweichungsanträge.
-   - Direkte behördliche Abstimmung mit Bauaufsichtsämtern (z.B. Bauaufsicht Frankfurt am Main).
+   - Spezialisierung auf Nutzungsänderungen & Umnutzungen (z.B. Büro- und Gewerbeflächen zu Wohnraum oder Micro-Apartments).
+   - Direkte behördliche Abstimmung mit Bauaufsichtsämtern (z.B. Bauaufsicht Frankfurt am Main, Darmstadt, Wiesbaden, Hanau, Offenbach).
    - Schnelle Klärung von Baurecht (§ 34 BauGB Nachbarbebauung, § 35 BauGB Außenbereich, Bebauungspläne).
 3. **Stadt- & Bauleitplanung:**
    - Erstellung und Begleitung rechtskräftiger Bebauungspläne (B-Plan) und Flächennutzungspläne.
@@ -53,9 +54,24 @@
 - **Öffnungszeiten:** Montag bis Freitag: 08:30 – 18:00 Uhr
 
 ## Wichtige Website-Ressourcen
+
+### Zentrale Büroseiten
 - [Startseite & Übersicht](https://shams-consult.de): Architekturbüro für Frankfurt & Rhein-Main
-- [Architekturleistungen & HOAI](https://shams-consult.de/services): HOAI Leistungsphasen 1–9, Hochbau & Genehmigungsplanung
-- [Realisierte Projekte & Referenzen](https://shams-consult.de/projects): Mehrfamilienhäuser, Gewerbe- & Wohnbauten
-- [Fallstudien & Machbarkeiten](https://shams-consult.de/clients): Projektentwicklungen, Baurecht & Machbarkeitsstudien
-- [Über das Büro & Inhaber Dipl.-Ing. Majeed Shams](https://shams-consult.de/founder): Werdegang, Philosophie & Auszeichnungen
-- [Direkter Erstberatungstermin](https://shams-consult.de/contact): Kostenlose Erstberatung anfragen
+- [Architekturleistungen & HOAI](https://shams-consult.de/services): HOAI Leistungsphasen 1–9, Bauanträge, Nutzungsänderung & Genehmigungsplanung
+- [Realisierte Projekte & Portfolio](https://shams-consult.de/projects): Mehrfamilienhäuser, Gewerbebauten & Stadtvillen
+- [Bauträger & Investoren (B2B)](https://shams-consult.de/bautraeger-investoren): Architektur- & Bauleitplanung für professionelle Entwickler
+- [Entscheidungshilfe & Vergleich](https://shams-consult.de/vergleich): Boutique-Architekturbüro vs. Großbüro, Freier Architekt vs. Bauträger
+- [Fallstudien & Klienten](https://shams-consult.de/clients): Projektentwicklungen, Baurecht & verifizierte Kundenbewertungen
+- [Über Dipl.-Ing. Majeed Shams](https://shams-consult.de/founder): Freier Architekt & Stadtplaner, AKH Hessen Nr. 21886
+- [Fachmagazin & Baurecht (Blog)](https://shams-consult.de/blog): Fachartikel zu HBO, BauGB, Denkmalschutz & Nachhaltigkeit
+- [Kontakt & Beratungstermin](https://shams-consult.de/contact): Unverbindliche Erstberatung vereinbaren
+
+### Regionale Planungs- & Architektur-Hubs (Hessen & Rhein-Main)
+- [Architekturbüro & Stadtplaner Frankfurt](https://shams-consult.de/architektur-frankfurt): Hochbau, Bauanträge, Nutzungsänderung & Nachverdichtung in Frankfurt am Main
+- [Stadtplanung & Bauleitplanung Hessen](https://shams-consult.de/stadtplanung-hessen): Bebauungspläne (B-Plan), Vorhaben- und Erschließungspläne (VEP) & Machbarkeitsstudien
+- [Architekturbüro Darmstadt & Südhessen](https://shams-consult.de/architektur-darmstadt): Wohnungsbau, KfW-Effizienzhäuser & Genehmigungen Bauamt Darmstadt
+- [Architekturbüro Wiesbaden & Rheingau](https://shams-consult.de/architektur-wiesbaden): Villenbau, Sanierung & Bauanträge Bauaufsicht Wiesbaden
+- [Architekturbüro Hanau & Main-Kinzig](https://shams-consult.de/architektur-hanau): Wohnungsbau, Gewerbekonversionen & Bauanträge Hanau
+- [Architekturbüro Rödermark & Kreis Offenbach](https://shams-consult.de/architektur-roedermark): Vor-Ort-Planungsbüro für Rödermark, Dietzenbach & Kreis Offenbach
+- [Architektur & Stadtplanung Offenbach](https://shams-consult.de/architektur-offenbach): Kaiserlei, Hafen Offenbach, Micro Apartments & Wohnbau
+- [Architektur Bad Homburg & Vordertaunus](https://shams-consult.de/architektur-bad-homburg): Exklusiver Wohn- und Villenbau im Hochtaunuskreis

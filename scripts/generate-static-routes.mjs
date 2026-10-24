@@ -658,6 +658,7 @@ async function generateStaticRoutes() {
 
   for (const r of topRoutes) {
     const hreflangs = getHreflangs(r.deRoute, r.enRoute);
+    const lastmod = r.lastmod || "2026-10-15";
     routeConfigs.set(r.deRoute, {
       title: r.deTitle,
       description: r.deDesc,
@@ -665,6 +666,7 @@ async function generateStaticRoutes() {
       breadcrumbs: [{ name: "Home", item: "/" }, { name: r.deName, item: r.deRoute }],
       priority: r.priority,
       changefreq: r.changefreq,
+      lastmod,
       lang: "de",
       alternateLanguages: hreflangs,
       noIndex: Boolean(r.noIndex),
@@ -677,6 +679,7 @@ async function generateStaticRoutes() {
       breadcrumbs: [{ name: "Home", item: "/en" }, { name: r.enName, item: r.enRoute }],
       priority: r.priority,
       changefreq: r.changefreq,
+      lastmod,
       lang: "en",
       alternateLanguages: hreflangs,
       noIndex: Boolean(r.noIndex),
@@ -693,6 +696,7 @@ async function generateStaticRoutes() {
     breadcrumbs: [{ name: "Home", item: "/" }, { name: "Vergleiche", item: "/vergleich" }],
     priority: "0.8",
     changefreq: "monthly",
+    lastmod: "2026-09-23",
     lang: "de",
     alternateLanguages: compHreflangs,
   });
@@ -703,6 +707,7 @@ async function generateStaticRoutes() {
     breadcrumbs: [{ name: "Home", item: "/en" }, { name: "Comparisons", item: "/en/vergleich" }],
     priority: "0.8",
     changefreq: "monthly",
+    lastmod: "2026-09-23",
     lang: "en",
     alternateLanguages: compHreflangs,
   });
@@ -713,6 +718,7 @@ async function generateStaticRoutes() {
       title: comp.metaTitle.de,
       description: comp.metaDescription.de,
       canonicalUrl: `${SITE_URL}/vergleich/${comp.slug}`,
+      lastmod: "2026-09-23",
       breadcrumbs: [
         { name: "Home", item: "/" },
         { name: "Vergleiche", item: "/vergleich" },
@@ -727,6 +733,7 @@ async function generateStaticRoutes() {
       title: comp.metaTitle.en || comp.metaTitle.de,
       description: comp.metaDescription.en || comp.metaDescription.de,
       canonicalUrl: `${SITE_URL}/en/vergleich/${comp.slug}`,
+      lastmod: "2026-09-23",
       breadcrumbs: [
         { name: "Home", item: "/en" },
         { name: "Comparisons", item: "/en/vergleich" },
@@ -758,7 +765,17 @@ async function generateStaticRoutes() {
     const cityNameDe = typeof page.office?.city === "string" ? page.office.city : (page.office?.city?.de || "");
     const cityNameEn = typeof page.office?.city === "object" ? (page.office?.city?.en || cityNameDe) : cityNameDe;
 
-    const hreflangs = getHreflangs(page.path, `/en${page.path}`);
+    const isSuburb = Boolean(page.parentPath);
+    const parentPathEn = page.parentPath ? `/en${page.parentPath}` : `/en${page.path}`;
+    const enCanonical = isSuburb ? `${SITE_URL}${parentPathEn}` : `${SITE_URL}/en${page.path}`;
+
+    const hreflangs = isSuburb
+      ? [
+          { lang: "de", href: `${SITE_URL}${page.path}` },
+          { lang: "en", href: enCanonical },
+          { lang: "x-default", href: `${SITE_URL}${page.path}` },
+        ]
+      : getHreflangs(page.path, `/en${page.path}`);
 
     const localBusinessSchemaDe = {
       "@type": ["LocalBusiness", "ProfessionalService", "ArchitecturalService"],
@@ -795,7 +812,7 @@ async function generateStaticRoutes() {
       "@type": ["LocalBusiness", "ProfessionalService", "ArchitecturalService"],
       name: `Shams Consult — ${h1En}`,
       description: metaDescriptionEn,
-      url: `${SITE_URL}/en${page.path}`,
+      url: enCanonical,
       telephone: page.office.phoneHref.replace("tel:", ""),
       address: {
         "@type": "PostalAddress",
@@ -835,8 +852,9 @@ async function generateStaticRoutes() {
         { name: "Home", item: "/" },
         { name: eyebrowDe, item: page.path },
       ],
-      priority: "0.9",
+      priority: isSuburb ? "0.75" : "0.9",
       changefreq: "weekly",
+      lastmod: "2026-10-09",
       lang: "de",
       alternateLanguages: hreflangs,
       customJsonLd: {
@@ -853,13 +871,14 @@ async function generateStaticRoutes() {
       eyebrow: eyebrowEn,
       title: metaTitleEn,
       description: metaDescriptionEn,
-      canonicalUrl: `${SITE_URL}/en${page.path}`,
+      canonicalUrl: enCanonical,
       breadcrumbs: [
         { name: "Home", item: "/en" },
-        { name: eyebrowEn, item: `/en${page.path}` },
+        { name: eyebrowEn, item: isSuburb ? parentPathEn : `/en${page.path}` },
       ],
-      priority: "0.9",
+      priority: isSuburb ? "0.7" : "0.9",
       changefreq: "weekly",
+      lastmod: "2026-10-09",
       lang: "en",
       alternateLanguages: hreflangs,
       customJsonLd: {
@@ -913,6 +932,7 @@ async function generateStaticRoutes() {
       canonicalUrl: `${SITE_URL}${legal.deRoute}`,
       priority: "0.4",
       changefreq: "yearly",
+      lastmod: "2026-10-10",
       lang: "de",
       alternateLanguages: hreflangs,
     });
@@ -922,6 +942,7 @@ async function generateStaticRoutes() {
       canonicalUrl: `${SITE_URL}${legal.enRoute}`,
       priority: "0.4",
       changefreq: "yearly",
+      lastmod: "2026-10-10",
       lang: "en",
       alternateLanguages: hreflangs,
     });
@@ -932,6 +953,9 @@ async function generateStaticRoutes() {
     const slug = proj.slug || proj.id;
     const projImg = proj.image.startsWith("http") ? proj.image : `${SITE_URL}${proj.image.startsWith("/") ? "" : "/"}${proj.image}`;
     const hreflangs = getHreflangs(`/project/${slug}`, `/en/project/${slug}`);
+    const yearMatch = String(proj.year || "").match(/\d{4}/g);
+    const latestYear = yearMatch ? yearMatch[yearMatch.length - 1] : "2026";
+    const projLastmod = `${latestYear}-06-01`;
 
     const metaDe = {
       pageType: "project",
@@ -940,6 +964,7 @@ async function generateStaticRoutes() {
       title: `${proj.title.de} — Referenz | Shams Consult`,
       description: `${proj.categoryLabel.de}: ${proj.subtitle.de} — Standort: ${proj.location.de} (${proj.year}).`,
       canonicalUrl: `${SITE_URL}/project/${slug}`,
+      lastmod: projLastmod,
       ogImage: projImg,
       ogType: "article",
       breadcrumbs: [
@@ -977,6 +1002,7 @@ async function generateStaticRoutes() {
       title: `${proj.title.en} — Reference | Shams Consult`,
       description: `${proj.categoryLabel.en}: ${proj.subtitle.en} — Location: ${proj.location.en} (${proj.year}).`,
       canonicalUrl: `${SITE_URL}/en/project/${slug}`,
+      lastmod: projLastmod,
       ogImage: projImg,
       ogType: "article",
       breadcrumbs: [
@@ -1015,6 +1041,7 @@ async function generateStaticRoutes() {
   for (const post of blogPosts) {
     const postImg = post.image.startsWith("http") ? post.image : `${SITE_URL}${post.image.startsWith("/") ? "" : "/"}${post.image}`;
     const hreflangs = getHreflangs(`/blog/${post.slug}`, `/en/blog/${post.slug}`);
+    const blogLastmod = post.isoDate || "2026-09-16";
 
     const metaDe = {
       pageType: "blog",
@@ -1023,6 +1050,7 @@ async function generateStaticRoutes() {
       title: `${post.title.de} | Shams Consult Magazin`,
       description: post.excerpt.de,
       canonicalUrl: `${SITE_URL}/blog/${post.slug}`,
+      lastmod: blogLastmod,
       ogImage: postImg,
       ogType: "article",
       breadcrumbs: [
@@ -1070,6 +1098,7 @@ async function generateStaticRoutes() {
       title: `${post.title.en} | Shams Consult Journal`,
       description: post.excerpt.en,
       canonicalUrl: `${SITE_URL}/en/blog/${post.slug}`,
+      lastmod: blogLastmod,
       ogImage: postImg,
       ogType: "article",
       breadcrumbs: [
@@ -1117,6 +1146,7 @@ async function generateStaticRoutes() {
   // 4. Dynamic Case Studies (DE + EN)
   for (const cs of caseStudies) {
     const hreflangs = getHreflangs(`/case-study/${cs.id}`, `/en/case-study/${cs.id}`);
+    const csLastmod = "2026-09-01";
 
     const metaDe = {
       pageType: "case-study",
@@ -1125,6 +1155,7 @@ async function generateStaticRoutes() {
       title: `Fallstudie: ${cs.projectTitle.de} | Shams Consult`,
       description: `${cs.subtitle.de} — Erfolgreiche Begleitung mit ${cs.rating}/5 Sternen von ${cs.reviewerName}.`,
       canonicalUrl: `${SITE_URL}/case-study/${cs.id}`,
+      lastmod: csLastmod,
       ogImage: DEFAULT_IMAGE,
       ogType: "article",
       breadcrumbs: [
@@ -1166,6 +1197,7 @@ async function generateStaticRoutes() {
       title: `Case Study: ${cs.projectTitle.en} | Shams Consult`,
       description: `${cs.subtitle.en} — ${cs.rating}/5 stars rating from ${cs.reviewerName}.`,
       canonicalUrl: `${SITE_URL}/en/case-study/${cs.id}`,
+      lastmod: csLastmod,
       ogImage: DEFAULT_IMAGE,
       ogType: "article",
       breadcrumbs: [
@@ -1351,8 +1383,9 @@ async function generateStaticRoutes() {
   ];
 
   for (const [route, meta] of routeConfigs.entries()) {
-    // Only include canonical pages that are not aliases and not noIndex
-    if (!meta.isAlias && !meta.noIndex && route !== "/") {
+    // Only include canonical pages that are not aliases, not noIndex, and strictly self-canonical
+    const expectedCanonical = `${SITE_URL}${route}`;
+    if (!meta.isAlias && !meta.noIndex && route !== "/" && meta.canonicalUrl === expectedCanonical) {
       if (!seenUrls.has(meta.canonicalUrl)) {
         seenUrls.add(meta.canonicalUrl);
         sitemapUrls.push({

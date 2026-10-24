@@ -631,8 +631,8 @@ export const content: Record<Language, Translations> = {
           desc: "Minimierung von Investitionsrisiken durch strategische Baurechts- und Kostensteuerung.",
         },
         {
-          title: "Due Diligence & Baurecht",
-          desc: "Fundierte baurechtliche Prüfungen für fundierte und sichere Immobilienentscheidungen.",
+          title: "Baurecht & Nutzungsänderung",
+          desc: "Rechtssichere Bauanträge, Nutzungsänderungen (Gewerbe zu Wohnen) und bauordnungsrechtliche Due Diligence nach HBO.",
         },
       ],
     },
@@ -1083,6 +1083,7 @@ export const content: Record<Language, Translations> = {
       pillar3Desc: "Uneingeschränkte Bauvorlageberechtigung (AKH Hessen Nr. 21886). Wir erstellen prüffähige Bauanträge, Bauvoranfragen zur Absicherung von Baurecht und erwirken Befreiungen bei der Bauaufsicht.",
       pillar3Bullets: [
         "Rechtskonforme Bauanträge nach HBO",
+        "Nutzungsänderungen (Gewerbe zu Wohnen)",
         "Bauvoranfragen (§ 34 BauGB Einfügung)",
         "Abstimmung Denkmalamt & Umweltamt",
       ],
@@ -1122,6 +1123,10 @@ export const content: Record<Language, Translations> = {
         {
           question: "Was ist der Unterschied zwischen einem Bebauungsplan (B-Plan) und § 34 BauGB (Innenbereich)?",
           answer: "Liegt ein qualifizierter Bebauungsplan (B-Plan) vor, regelt dieser detailliert Geschossflächenzahl (GFZ), Grundflächenzahl (GRZ), Dachformen und Bauhöhen. Gibt es keinen B-Plan, greift § 34 BauGB: Das Bauvorhaben muss sich nach Art und Maß der baulichen Nutzung, der Bauweise und der Grundstücksfläche harmonisch in die Eigenart der näheren Umgebung einfügen. Wir klären das Baurecht vorab verlässlich mit der zuständigen Bauaufsicht.",
+        },
+        {
+          question: "Benötige ich für eine Nutzungsänderung in Hessen einen bauvorlageberechtigten Architekten?",
+          answer: "Ja. Nach der Hessischen Bauordnung (HBO) ist eine Nutzungsänderung (z.B. Umwandlung von Gewerbeflächen in Wohnungen oder Büros) genehmigungspflichtig, sobald brandschutz-, stellplatz- oder baurechtliche Anforderungen berührt werden. Als eingetragene Architekten (AKH Hessen Nr. 21886) erstellen wir den prüffähigen Bauantrag auf Nutzungsänderung und begleiten die zügige Genehmigung durch die Bauaufsicht.",
         },
       ],
     },
@@ -1319,8 +1324,8 @@ export const content: Record<Language, Translations> = {
           desc: "Minimizing investment risk through strategic statutory planning and cost management.",
         },
         {
-          title: "Due Diligence & Building Law",
-          desc: "Sound statutory building law appraisals for reliable, risk-free property investments.",
+          title: "Permits, Zoning & Change of Use",
+          desc: "Code-compliant building applications, statutory change of use (commercial to residential), and architectural due diligence.",
         },
       ],
     },
@@ -1771,6 +1776,7 @@ export const content: Record<Language, Translations> = {
       pillar3Desc: "Full unrestricted building permit filing privileges (AKH Hesse No. 21886). We prepare bulletproof applications, preliminary permit queries, and negotiate statutory variances.",
       pillar3Bullets: [
         "Legally compliant HBO applications",
+        "Change-of-use permits (commercial to residential)",
         "Preliminary permit inquiries (§ 34 BauGB)",
         "Heritage & environmental clearance",
       ],
@@ -1810,6 +1816,10 @@ export const content: Record<Language, Translations> = {
         {
           question: "What is the difference between a municipal master plan (B-Plan) and § 34 BauGB infill?",
           answer: "Where an active master plan (B-Plan) exists, it strictly defines site occupancy (GRZ), floor area ratios (GFZ), eaves heights, and roof geometries. In areas without a B-Plan, Section 34 BauGB applies: new construction must blend harmoniously into the character of the immediate neighborhood. We clarify statutory zoning with local planning authorities.",
+        },
+        {
+          question: "Do I need a licensed architect for a change of use (e.g., commercial to residential)?",
+          answer: "Yes. Under German building law (HBO), a change of use (Nutzungsänderung) requires a formal building permit whenever statutory requirements such as fire safety, parking ratios, emergency egress, or acoustic standards are impacted. With unlimited filing authorization (AKH Hesse No. 21886), we prepare compliant change-of-use permit applications and coordinate swift approvals with municipal building authorities.",
         },
       ],
     },
