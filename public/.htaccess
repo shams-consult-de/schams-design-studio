@@ -101,7 +101,7 @@ ErrorDocument 404 /404.html
 
   # Services: Stadtplanung & Städtebau (strictly matched to not interfere with /stadtplanung-hessen)
   RewriteCond %{REQUEST_URI} ^/+(?:stadtplanung|stadtplanung-st[^\/]*tebau)/?$ [NC]
-  RewriteRule ^ https://shams-consult.de/services [R=301,L]
+  RewriteRule ^ https://shams-consult.de/stadtplanung-hessen [R=301,L]
 
   # Services: Vorhabenbezogene Bebauungspläne
   RewriteCond %{REQUEST_URI} ^/+(?:vorhabenbezogene-bebauungspl.*) [NC]
@@ -118,6 +118,10 @@ ErrorDocument 404 /404.html
   # Projects: Baufeld 5 Neu-Ulm (matches with or without /project/)
   RewriteCond %{REQUEST_URI} ^/+(?:project/)?vep-baufeld-5-neu-ulm.* [NC]
   RewriteRule ^ https://shams-consult.de/project/bebauungsplan-neu-ulm-baufeld-5-ost [R=301,L]
+
+  # Projects: Supermarkt Münster (matches with or without /project/)
+  RewriteCond %{REQUEST_URI} ^/+(?:project/)?supermarkt-muenster.* [NC]
+  RewriteRule ^ https://shams-consult.de/project/netto-supermarkt-muenster-hessen [R=301,L]
 
   # Projects: Mehrfamilienhaus Dreieich-Götzenhain (without /project/)
   RewriteCond %{REQUEST_URI} ^/+mehrfamilienhaus-dreieich-goetzenhain.* [NC]
