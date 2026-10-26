@@ -103,6 +103,29 @@ export function ProjectDetail({
               <span className="font-semibold text-zinc-900 mt-1 block">
                 {project.client[language]}
               </span>
+              {project.partnerLogo && (
+                <div className="mt-2.5 pt-2 border-t border-zinc-200/80 flex items-center gap-2">
+                  <img
+                    src="/logo.png"
+                    alt="Shams Consult"
+                    className="h-5 sm:h-6 w-auto object-contain"
+                  />
+                  <span className="text-zinc-400 font-semibold text-xs">×</span>
+                  <a
+                    href={project.partnerUrl || "https://www.fcn-systemrohbau.de"}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-block group"
+                    title="F. C. Nüdling Fertigteiltechnik (FCN Systemrohbau)"
+                  >
+                    <img
+                      src={project.partnerLogo}
+                      alt="FCN Systemrohbau"
+                      className="h-5 sm:h-6 w-auto object-contain transition-transform group-hover:scale-105"
+                    />
+                  </a>
+                </div>
+              )}
             </div>
 
             {project.legalBasis && (
@@ -140,9 +163,39 @@ export function ProjectDetail({
 
         {/* Project Overview */}
         <div className="p-8 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-4">
-          <h2 className="font-sans text-xl font-bold text-zinc-950">
-            {t.scopeLabel}
-          </h2>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <h2 className="font-sans text-xl font-bold text-zinc-950">
+              {t.scopeLabel}
+            </h2>
+            {project.partnerLogo && (
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-white border border-zinc-200 shadow-2xs shrink-0">
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider font-semibold">
+                  {language === "de" ? "Kooperation" : "Partnership"}
+                </span>
+                <span className="text-zinc-300">|</span>
+                <img
+                  src="/logo.png"
+                  alt="Shams Consult"
+                  className="h-5 sm:h-6 w-auto object-contain"
+                />
+                <span className="text-zinc-400 font-semibold text-xs">×</span>
+                <a
+                  href={project.partnerUrl || "https://www.fcn-systemrohbau.de"}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-1 group"
+                  title="F. C. Nüdling Fertigteiltechnik (FCN Systemrohbau)"
+                >
+                  <img
+                    src={project.partnerLogo}
+                    alt="FCN Systemrohbau"
+                    className="h-5 sm:h-6 w-auto object-contain transition-transform group-hover:scale-105"
+                  />
+                  <span className="text-zinc-400 text-xs group-hover:text-[#DC2626]">↗</span>
+                </a>
+              </div>
+            )}
+          </div>
           <p className="font-sans text-sm sm:text-base text-zinc-700 font-light leading-relaxed">
             {renderTextWithLinks(project.overview[language])}
           </p>

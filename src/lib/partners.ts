@@ -469,7 +469,8 @@ export const partnersData: PartnerItem[] = [
   {
     id: "fcn-nuedling",
     name: "F. C. Nüdling Fertigteiltechnik (FCN Systemrohbau)",
-    logo: "/images/partners/fcn-systemrohbau.png",
+    logo: "/images/partners/fcn-systemrohbau.jpg",
+    projectSlug: "neubau-buerogebaeude-adler-seeheim-jugenheim",
     websiteUrl: "https://www.fcn-systemrohbau.de",
     tagline: {
       de: "FCN Systemrohbau & serielle Betonfertigteile",

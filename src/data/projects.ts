@@ -53,6 +53,8 @@ export interface Project {
     de: string[];
     en: string[];
   };
+  partnerLogo?: string;
+  partnerUrl?: string;
   documents?: ProjectDocument[];
   externalReferenceUrl?: string;
   externalReferenceTitle?: {
@@ -206,6 +208,8 @@ export const rawProjects: Project[] = [
         "Seeheim-Jugenheim (Rhine-Main)",
       ],
     },
+    partnerLogo: "/images/partners/fcn-systemrohbau.jpg",
+    partnerUrl: "https://www.fcn-systemrohbau.de",
     blogSlug: "wirtschaftliche-umsetzung-nachhaltiger-projekte",
   },
   {

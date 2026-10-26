@@ -69,6 +69,64 @@ export function BlogDetail({
       const trimmed = section.trim();
       if (!trimmed) return null;
 
+      const linkedImgMatch = trimmed.match(/^\[!\[(.*?)\]\((.*?)\)\]\((.*?)\)$/);
+      if (linkedImgMatch) {
+        const [, alt, src, href] = linkedImgMatch;
+        const isExternal = href.startsWith("http");
+        return (
+          <div
+            key={idx}
+            className="my-8 p-5 sm:p-6 rounded-2xl bg-zinc-50 border border-zinc-200/90 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
+          >
+            <div className="flex items-center gap-3 sm:gap-5">
+              {/* Shams Consult Logo */}
+              <div className="h-12 w-32 sm:w-36 flex items-center justify-center p-2 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+                <img
+                  src="/logo.png"
+                  alt="Shams Consult"
+                  className="max-h-8 sm:max-h-9 w-auto object-contain"
+                />
+              </div>
+
+              {/* Collaboration Symbol */}
+              <span className="text-zinc-400 font-semibold text-lg sm:text-xl">×</span>
+
+              {/* Partner Logo */}
+              <div className="h-12 w-32 sm:w-36 flex items-center justify-center p-2 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+                <a
+                  href={href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener" : undefined}
+                  className="flex items-center justify-center w-full h-full group"
+                  title={alt}
+                >
+                  <img
+                    src={src}
+                    alt={alt}
+                    className="max-h-8 sm:max-h-9 w-auto object-contain transition-transform group-hover:scale-105"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div className="border-t sm:border-t-0 sm:border-l border-zinc-200 pt-3 sm:pt-0 sm:pl-5 text-left">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#DC2626] font-bold block">
+                {language === "de" ? "Planungskooperation" : "Planning Partnership"}
+              </span>
+              <a
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener" : undefined}
+                className="text-xs font-bold text-zinc-900 hover:text-[#DC2626] transition-colors inline-flex items-center gap-1 mt-0.5"
+              >
+                <span>FCN Systemrohbau</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        );
+      }
+
       if (trimmed === "---") {
         return <hr key={idx} className="my-8 border-t border-zinc-200" />;
       }

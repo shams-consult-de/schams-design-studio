@@ -508,6 +508,8 @@ Shams Consult unterstützt Sie ab der ersten Idee: Als qualifizierte Nachweisber
 
 ## 2. Praxis-Fallstudie: Serieller Systemrohbau mit F. C. Nüdling Fertigteiltechnik
 
+[![FCN Systemrohbau – F. C. Nüdling Fertigteiltechnik](/images/partners/fcn-systemrohbau.jpg)](https://www.fcn-systemrohbau.de)
+
 Wie wirtschaftliches und nachhaltiges Bauen in der Realität gelingt, demonstriert das Neubau-Bürogebäude Adler in Seeheim-Jugenheim. Hier hat Shams Consult die Ausführungsplanung, Statik und Baustellenlogistik in partnerschaftlicher Kooperation eng mit der [F. C. Nüdling Fertigteiltechnik GmbH + Co. KG](https://www.fcn-systemrohbau.de) verzahnt.
 
 ### Typische Probleme auf der Baustelle
@@ -545,6 +547,8 @@ Integrating structural and environmental parameters at the earliest stage elimin
 Shams Consult guides clients from initial feasibility: As officially recognized certification specialists for the German Sustainable Building Seal (QNG), we lead developers through all technical verifications and subsidies.
 
 ## 2. Field Case Study: Serial Precast Construction with F. C. Nüdling Fertigteiltechnik
+
+[![FCN Systemrohbau – F. C. Nüdling Fertigteiltechnik](/images/partners/fcn-systemrohbau.jpg)](https://www.fcn-systemrohbau.de)
 
 The real-world execution of cost-effective commercial construction is exemplified by the Adler office building in Seeheim-Jugenheim. Shams Consult coordinated execution planning, structural engineering, and delivery logistics in close partnership with [F. C. Nüdling Fertigteiltechnik GmbH + Co. KG](https://www.fcn-systemrohbau.de).
 
