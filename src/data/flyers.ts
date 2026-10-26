@@ -39,9 +39,9 @@ export interface PortalClient {
 export const portalClients: PortalClient[] = [
   {
     id: "fcn",
-    name: "F.C. Nüdling Fertigteiltechnik GmbH & Co. KG",
-    shortName: "F.C. Nüdling (FCN)",
-    logo: "/images/partners/fcn-nuedling.svg",
+    name: "F. C. Nüdling Fertigteiltechnik GmbH + Co. KG",
+    shortName: "FCN Systemrohbau",
+    logo: "/images/partners/fcn-systemrohbau.png",
     location: "Fulda & Seeheim-Jugenheim",
     industry: {
       de: "Industrielle Fertigteiltechnik & Liapor Leichtbeton",

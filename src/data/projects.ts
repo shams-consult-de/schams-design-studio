@@ -177,8 +177,8 @@ export const rawProjects: Project[] = [
     image: "/images/b2b/Image.jpg",
     imageAlt: "Neubau Bürogebäude Adler in Seeheim-Jugenheim, Shams Consult mit F.C. Nüdling Fertigteiltechnik",
     overview: {
-      de: "Beim Neubau des Bürogebäudes Adler in Seeheim-Jugenheim wurde die Ausführungsplanung, Statik und Baustellenlogistik eng mit dem Fertigteilwerk von F.C. Nüdling verzahnt. Durch den gezielten Einsatz industriell vorgefertigter Wand- und Deckenelemente konnte der Rohbau in Rekordzeit und mit höchster Maßhaltigkeit realisiert werden.",
-      en: "For the new construction of the Adler office building in Seeheim-Jugenheim, execution planning, structural engineering, and site logistics were tightly coordinated with the F.C. Nüdling precast plant. Systematic deployment of prefabricated wall and floor elements enabled rapid, millimeter-precise shell assembly.",
+      de: "Beim Neubau des Bürogebäudes Adler in Seeheim-Jugenheim wurde die Ausführungsplanung, Statik und Baustellenlogistik eng mit dem Fertigteilwerk von F.C. Nüdling verzahnt. Durch den gezielten Einsatz industriell vorgefertigter Wand- und Deckenelemente konnte der Rohbau in Rekordzeit und mit höchster Maßhaltigkeit realisiert werden. Für dieses Projekt wurden Fertigteil-Komponenten der [F. C. Nüdling Fertigteiltechnik GmbH + Co. KG](https://www.fcn-systemrohbau.de) eingesetzt.",
+      en: "For the new construction of the Adler office building in Seeheim-Jugenheim, execution planning, structural engineering, and site logistics were tightly coordinated with the F.C. Nüdling precast plant. Systematic deployment of prefabricated wall and floor elements enabled rapid, millimeter-precise shell assembly. Precast components manufactured by [F. C. Nüdling Fertigteiltechnik GmbH + Co. KG](https://www.fcn-systemrohbau.de) were deployed for this project.",
     },
     challenge: {
       de: "Verkürzung der Rohbauphase zur Minimierung witterungsbedingter Verzögerungen sowie Vermeidung von Schnittstellenverlusten und Planungskollisionen zwischen Architektur, Statik und Vorfertigung.",
@@ -206,6 +206,7 @@ export const rawProjects: Project[] = [
         "Seeheim-Jugenheim (Rhine-Main)",
       ],
     },
+    blogSlug: "wirtschaftliche-umsetzung-nachhaltiger-projekte",
   },
   {
     id: "regenwasser-rigole-wohnanlage",

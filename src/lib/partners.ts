@@ -468,24 +468,24 @@ export const partnersData: PartnerItem[] = [
   },
   {
     id: "fcn-nuedling",
-    name: "F. C. Nüdling (FCN)",
-    logo: "/images/partners/fcn-nuedling.svg",
-    websiteUrl: "https://www.nuedling.de/",
+    name: "F. C. Nüdling Fertigteiltechnik (FCN Systemrohbau)",
+    logo: "/images/partners/fcn-systemrohbau.png",
+    websiteUrl: "https://www.fcn-systemrohbau.de",
     tagline: {
-      de: "Betonelemente, Baustoffe & Recycling",
-      en: "Precast Concrete, Materials & Circular Systems",
+      de: "FCN Systemrohbau & serielle Betonfertigteile",
+      en: "FCN System Structural Construction & Precast Elements",
     },
     title: {
-      de: "F. C. Nüdling – Zukunftsweisende Baustoffe & Betonsysteme",
-      en: "F. C. Nüdling – Advanced Concrete Systems & Building Materials",
+      de: "F. C. Nüdling Fertigteiltechnik – FCN Systemrohbau",
+      en: "F. C. Nüdling Fertigteiltechnik – FCN System Structural Construction",
     },
     description: {
-      de: "Die FCN-Unternehmensgruppe mit Hauptsitz in Fulda ist ein führender deutscher Hersteller für hochwertige Betonelemente, Pflastersysteme und nachhaltige Baustoffe.",
-      en: "The FCN Group, headquartered in Fulda, is a premier German manufacturer of advanced concrete components, paving systems, and sustainable building materials.",
+      de: "F. C. Nüdling Fertigteiltechnik GmbH + Co. KG mit Hauptsitz in Fulda ist spezialisiert auf rationellen FCN Systemrohbau, serielle Wand- und Deckenelemente sowie maßgeschneiderte Betonfertigteile.",
+      en: "F. C. Nüdling Fertigteiltechnik GmbH + Co. KG, headquartered in Fulda, specializes in rational FCN Systemrohbau, serial precast wall and slab components, and customized prefabricated concrete systems.",
     },
     jointProject: {
-      de: "Fachliche Kooperation und Planungsintegration für modulare Betonsysteme, ressourceneffiziente Baustoffe und Außenanlagenkonzepte.",
-      en: "Technical collaboration and design integration for modular concrete structures, resource-efficient materials, and landscape concepts.",
+      de: "Integrale Vorplanung, Tragwerksoptimierung und Bauleitung im FCN-Rastermaß für Büro- und Wohnungsbau (z. B. Bürogebäude Adler Seeheim-Jugenheim).",
+      en: "Integrated pre-planning, structural optimization, and construction supervision in the FCN grid standard for commercial and residential buildings.",
     },
     location: {
       de: "Fulda (Hessen)",

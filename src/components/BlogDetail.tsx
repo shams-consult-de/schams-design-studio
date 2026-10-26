@@ -33,7 +33,7 @@ export function BlogDetail({
             key={i}
             href={url}
             target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener noreferrer" : undefined}
+            rel={isExternal ? "noopener" : undefined}
             className="font-bold text-[#DC2626] hover:underline inline-flex items-center gap-1"
           >
             {text}
@@ -60,7 +60,11 @@ export function BlogDetail({
 
   // Clean markdown-like paragraph / heading renderer
   const renderBody = (text: string) => {
-    const sections = text.split("\n\n");
+    // Normalize newlines and ensure headings directly preceding lists/text are isolated
+    const normalized = text
+      .replace(/\r\n/g, "\n")
+      .replace(/^(#{2,3}\s+[^\n]+)\n(?=[^\n])/gm, "$1\n\n");
+    const sections = normalized.split("\n\n");
     return sections.map((section, idx) => {
       const trimmed = section.trim();
       if (!trimmed) return null;
@@ -70,24 +74,30 @@ export function BlogDetail({
       }
 
       if (trimmed.startsWith("## ")) {
+        const lines = trimmed.split("\n");
+        const heading = lines[0].replace(/^##\s+/, "").trim();
+        const rest = lines.slice(1).join("\n").trim();
         return (
-          <h2
-            key={idx}
-            className="font-sans text-2xl sm:text-3xl font-extrabold text-zinc-950 mt-10 mb-4 tracking-tight leading-snug"
-          >
-            {trimmed.replace(/^##\s+/, "")}
-          </h2>
+          <div key={idx}>
+            <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-zinc-950 mt-10 mb-4 tracking-tight leading-snug">
+              {heading}
+            </h2>
+            {rest && renderBody(rest)}
+          </div>
         );
       }
 
       if (trimmed.startsWith("### ")) {
+        const lines = trimmed.split("\n");
+        const heading = lines[0].replace(/^###\s+/, "").trim();
+        const rest = lines.slice(1).join("\n").trim();
         return (
-          <h3
-            key={idx}
-            className="font-sans text-xl sm:text-2xl font-bold text-zinc-900 mt-8 mb-3 tracking-tight"
-          >
-            {trimmed.replace(/^###\s+/, "")}
-          </h3>
+          <div key={idx}>
+            <h3 className="font-sans text-xl sm:text-2xl font-bold text-zinc-900 mt-8 mb-3 tracking-tight">
+              {heading}
+            </h3>
+            {rest && renderBody(rest)}
+          </div>
         );
       }
 

@@ -469,7 +469,7 @@ export function RegionalLandingPage({
               const projCategory = project.category[language] ?? project.category.de;
               const projLocation = project.location[language] ?? project.location.de;
               const projImageAlt = project.imageAlt[language] ?? project.imageAlt.de;
-              const projOverview = project.overview[language] ?? project.overview.de;
+              const projOverview = (project.overview[language] ?? project.overview.de).replace(/\[(.*?)\]\(.*?\)/g, "$1");
 
               return (
                 <div

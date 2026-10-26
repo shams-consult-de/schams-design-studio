@@ -10,6 +10,39 @@ interface ProjectDetailProps {
   onBookConsultation: () => void;
 }
 
+
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(\[.*?\]\(.*?\)|\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (!part) return null;
+    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+    if (linkMatch) {
+      const [, label, url] = linkMatch;
+      const isExternal = url.startsWith("http");
+      return (
+        <a
+          key={i}
+          href={url}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener" : undefined}
+          className="text-[#DC2626] font-semibold hover:underline"
+        >
+          {label}
+        </a>
+      );
+    }
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-bold text-zinc-950">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
+
 export function ProjectDetail({
   project,
   t,
@@ -111,7 +144,7 @@ export function ProjectDetail({
             {t.scopeLabel}
           </h2>
           <p className="font-sans text-sm sm:text-base text-zinc-700 font-light leading-relaxed">
-            {project.overview[language]}
+            {renderTextWithLinks(project.overview[language])}
           </p>
         </div>
 

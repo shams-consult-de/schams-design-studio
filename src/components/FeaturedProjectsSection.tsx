@@ -127,7 +127,7 @@ export function FeaturedProjectsSection({
                       {p.title[language]}
                     </h3>
                     <p className="text-xs text-zinc-600 font-light leading-relaxed line-clamp-3">
-                      {p.overview[language]}
+                      {p.overview[language].replace(/\[(.*?)\]\(.*?\)/g, "$1")}
                     </p>
                   </div>
 
