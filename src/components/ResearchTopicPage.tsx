@@ -28,8 +28,42 @@ export function ResearchTopicPage({
       : `Dear Mr. Shams,\n\nI am writing to express my interest in the thesis topic "${topic.title}" (${topic.number}).\n\nPlease find attached my brief cover letter, CV, and current transcript of records.\n\nI look forward to discussing the potential collaboration.\n\nBest regards,\n`
   )}`;
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    name: topic.title,
+    headline: topic.subtitle,
+    description: topic.teaser,
+    url: `https://shams-consult.de${language === "en" ? `/en/research/${topic.slug}` : `/forschung/${topic.slug}`}`,
+    funder: {
+      "@type": "EducationalOrganization",
+      name: "Frankfurt University of Applied Sciences",
+      alternateName: "Frankfurt UAS",
+      department: "Fachbereich 1: Architektur, Bauingenieurwesen, Geomatik",
+    },
+    provider: {
+      "@type": "ProfessionalService",
+      name: "Shams Consult — Architektur & Stadtplanung",
+      url: "https://shams-consult.de",
+      founder: {
+        "@type": "Person",
+        name: "Dipl.-Ing. (FH) Majeed Shams M.Eng.",
+        jobTitle: "Architekt, Stadtplaner & Dozent",
+      },
+    },
+    educationalCredentialAwarded: topic.degrees,
+    about: topic.disciplines.map((d) => ({
+      "@type": "Thing",
+      name: d,
+    })),
+  };
+
   return (
     <article className="min-h-screen bg-[#FFFFFF] text-zinc-900 pt-28 pb-28 md:pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Top Navigation */}
         <div className="flex items-center justify-between border-b border-zinc-200 pb-5">

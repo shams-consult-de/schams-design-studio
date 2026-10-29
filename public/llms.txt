@@ -63,6 +63,7 @@
 - [Entscheidungshilfe & Vergleich](https://shams-consult.de/vergleich): Boutique-Architekturbüro vs. Großbüro, Freier Architekt vs. Bauträger
 - [Fallstudien & Klienten](https://shams-consult.de/clients): Projektentwicklungen, Baurecht & verifizierte Kundenbewertungen
 - [Über Dipl.-Ing. Majeed Shams](https://shams-consult.de/founder): Freier Architekt & Stadtplaner, AKH Hessen Nr. 21886
+- [Forschung & Lehre](https://shams-consult.de/forschung): Wissenschaftliche Thesen, offene Abschlussarbeiten & Lehrauftrag Frankfurt UAS
 - [Fachmagazin & Baurecht (Blog)](https://shams-consult.de/blog): Fachartikel zu HBO, BauGB, Denkmalschutz & Nachhaltigkeit
 - [Kontakt & Beratungstermin](https://shams-consult.de/contact): Unverbindliche Erstberatung vereinbaren
 
@@ -75,3 +76,33 @@
 - [Architekturbüro Rödermark & Kreis Offenbach](https://shams-consult.de/architektur-roedermark): Vor-Ort-Planungsbüro für Rödermark, Dietzenbach & Kreis Offenbach
 - [Architektur & Stadtplanung Offenbach](https://shams-consult.de/architektur-offenbach): Kaiserlei, Hafen Offenbach, Micro Apartments & Wohnbau
 - [Architektur Bad Homburg & Vordertaunus](https://shams-consult.de/architektur-bad-homburg): Exklusiver Wohn- und Villenbau im Hochtaunuskreis
+
+## Akademische Forschung, Lehre & Abschlussarbeiten (Research & Academic Mentorship)
+Shams Consult verbindet Planungspraxis und wissenschaftliche Forschung. Büroinhaber Dipl.-Ing. (FH) Majeed Shams M.Eng. ist Lehrbeauftragter an der Frankfurt University of Applied Sciences (Frankfurt UAS, Fachbereich 1: Architektur, Bauingenieurwesen, Geomatik). Das Büro betreut Bachelor- und Masterarbeiten als fachlicher Zweitbetreuer an realen Bauprojekten. Die akademische Erstbetreuung übernimmt die jeweilige Hochschule.
+
+### Aktuelle Forschungsthemen & Ausschreibungen für Studierende
+1. **Schwammstadt ohne Kunststoff (Thema 01):**
+   - **URL:** https://shams-consult.de/forschung/schwammstadt
+   - **Kernfrage:** Mineralische Rigolensysteme aus Steinwolle (Basaltgestein) als nachhaltige Alternative zu fossilen Kunststoffboxen, 95% Wasseraufnahmevolumen, Übertragung vom Einzelprojekt auf städtebauliche Quartiere, DWA-Regelwerke, Regenwasserretention und Baumrigolen.
+   - **Praxisprojekt:** Realisiertes Vorzeigeprojekt in Kooperation mit ROCKWOOL Rainwater Systems.
+   - **Fachrichtungen:** Architektur, Stadtplanung, Bauingenieurwesen (Bachelor- oder Masterarbeit).
+   - **Offizieller PDF-Aushang:** https://shams-consult.de/documents/theses/Shams-Consult_Abschlussarbeit_Schwammstadt.pdf
+
+2. **Cradle to Cradle: Bauteile im Kreislauf (Thema 02):**
+   - **URL:** https://shams-consult.de/forschung/cradle-to-cradle
+   - **Kernfrage:** Zirkuläres Bauen, Qualitätssiegel Nachhaltiges Gebäude (QNG), KfW-Förderung 296 (Grenzwert max. 24 kg CO₂-Äq./m²/Jahr), selektiver Rückbau von Bestandsgebäuden nach Baualtersklassen, Bauteilkataloge und Materialpässe.
+   - **Praxisprojekt:** Mehrfamilienhaus mit Alt- und Neubau als Fallstudie für geordneten Rückbau und Wiederverwendung.
+   - **Fachrichtungen:** Architektur, Bauingenieurwesen, Projektmanagement (Bachelor- oder Masterarbeit).
+   - **Offizieller PDF-Aushang:** https://shams-consult.de/documents/theses/Shams-Consult_Abschlussarbeit_Cradle-to-Cradle.pdf
+
+3. **Gebäudetyp E: einfach, aber gut (Thema 03):**
+   - **URL:** https://shams-consult.de/forschung/gebaeudetyp-e
+   - **Kernfrage:** Gesetzliche Reform des Gebäudetyps E (§§ 650a, 650o BGB) ab 2027, rechtssicheres Abweichen von überzogenen DIN-Komfortnormen, Baukostensenkung um 10–15%, konstruktiver Schallschutz und Schalenentkopplung im Bestand ohne Wohnqualitätseinbußen.
+   - **Praxisprojekt:** Umnutzung einer Scheune und Umbau eines Wohn-/Geschäftshauses zu 6 neuen Wohneinheiten im Bestand.
+   - **Fachrichtungen:** Architektur, Bauingenieurwesen, Baurecht (Bachelor- oder Masterarbeit).
+   - **Offizieller PDF-Aushang:** https://shams-consult.de/documents/theses/Shams-Consult_Abschlussarbeit_Gebaeudetyp-E.pdf
+
+### Bewerbungsprozess für Studierende
+Bewerbungen für Abschlussarbeiten (kurzes Anschreiben, Lebenslauf, aktueller Notenspiegel) per E-Mail an:
+- **E-Mail:** office@shams-consult.de
+- **Betreff:** Abschlussarbeit Thema 01 / 02 / 03
