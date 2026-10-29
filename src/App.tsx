@@ -1303,6 +1303,7 @@ export function App() {
           /* Dedicated Open Thesis Topic Landing Page */
           <ResearchTopicPage
             topic={activeResearchTopic}
+            t={t.researchTopicPage}
             language={language}
             onBack={() => navigateTo(language === "en" ? "/en/research" : "/forschung")}
             onNavigateTopic={(slug) => navigateTo(language === "en" ? `/en/research/${slug}` : `/forschung/${slug}`)}

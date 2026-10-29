@@ -246,8 +246,7 @@ export function AboutPage({
                   }}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors group cursor-pointer"
                 >
-                  <span>{isDe ? "Forschungsbeiträge ansehen" : "View Research Contributions"}</span>
-                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                  <span>{t.viewResearchContributions}</span>
                 </a>
               </div>
             </div>

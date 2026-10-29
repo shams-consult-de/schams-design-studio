@@ -199,6 +199,15 @@ export interface Translations {
     ctaTitle: string;
     ctaSubtitle: string;
     ctaButton: string;
+    openThesesBadge: string;
+    openThesesTitle: string;
+    openThesesSubtitle: string;
+    viewDetails: string;
+    downloadFlyerTitle: string;
+    archiveBadge: string;
+    archiveTitle: string;
+    supervisionLabel: string;
+    announcementBadge: string;
   };
   founder: {
     badge: string;
@@ -239,6 +248,7 @@ export interface Translations {
     founderStoryTitle: string;
     founderStoryDesc: string;
     founderStoryButton: string;
+    viewResearchContributions: string;
   };
   siteVisitsPage: {
     backToHome: string;
@@ -496,6 +506,41 @@ export interface Translations {
     consultationHeading: string;
     consultationDesc: string;
     consultationCta: string;
+  };
+  researchTopicPage: {
+    backToHub: string;
+    departmentLabel: string;
+    overviewLabel: string;
+    caseStudyBadge: string;
+    factsHeading: string;
+    problemHeading: string;
+    objectivesHeading: string;
+    researchQuestionsHeading: string;
+    frameworkBadge: string;
+    frameworkHeading: string;
+    sourcesHeading: string;
+    faqBadge: string;
+    faqHeading: string;
+    faqSubtitle: string;
+    ctaBadge: string;
+    ctaTitle: string;
+    ctaDescription: string;
+    trustMentor: string;
+    trustData: string;
+    trustCredit: string;
+    pdfFlyerButton: string;
+    applyEmailButton: string;
+    otherTopicsHeading: string;
+    mobileApplyButton: string;
+    emailGreeting: string;
+    emailBodyInterest: string;
+    emailBodyAttachment: string;
+    emailBodyMeeting: string;
+    emailClosing: string;
+    faqs: Array<{
+      question: string;
+      answer: string;
+    }>;
   };
   cookieBanner: {
     ariaLabel: string;
@@ -773,6 +818,15 @@ export const content: Record<Language, Translations> = {
       ctaTitle: "Interesse an einer wissenschaftlichen Kooperation?",
       ctaSubtitle: "Wir vergeben praxisnahe Forschungsthemen und begleiten anspruchsvolle Abschlussarbeiten in Kooperation mit der Frankfurt UAS.",
       ctaButton: "Kontakt für Forschungskooperationen →",
+      openThesesBadge: "AKTUELLE AUSSCHREIBUNGEN (ABSCHLUSSARBEITEN)",
+      openThesesTitle: "Praxis trifft Wissenschaft: Jetzt Abschlussarbeit schreiben",
+      openThesesSubtitle: "Shams Consult arbeitet seit Jahren mit Hochschulen zusammen und betreut Bachelor- und Masterarbeiten als Zweitbetreuer an realen Bauprojekten unseres Büros. Die Erstbetreuung übernimmt Ihre Hochschule.",
+      viewDetails: "Details ansehen",
+      downloadFlyerTitle: "PDF Flyer herunterladen",
+      archiveBadge: "Abgeschlossene Arbeiten & Referenzen",
+      archiveTitle: "Wissenschaftliches Archiv & Fachpublikationen",
+      supervisionLabel: "Akademische Betreuung:",
+      announcementBadge: "3 Offene Abschlussarbeiten (Ausschreibungen)",
     },
     founder: {
       badge: "Büroinhaber",
@@ -816,6 +870,7 @@ export const content: Record<Language, Translations> = {
       founderStoryTitle: "Möchten Sie den persönlichen Lebensweg von Majeed Shams erfahren?",
       founderStoryDesc: "Vom Geflüchteten zum erfolgreichen Architekten, Stadtplaner und Hochschuldozenten in Deutschland.",
       founderStoryButton: "Gründer-Biografie lesen →",
+      viewResearchContributions: "Forschungsbeiträge ansehen →",
     },
     siteVisitsPage: {
       backToHome: "Zurück zur Startseite",
@@ -1203,6 +1258,59 @@ export const content: Record<Language, Translations> = {
       consultationDesc: "Ob Wohnungsbau, städtebaulicher Bebauungsplan oder anspruchsvolles Genehmigungsverfahren — wir stehen Ihnen mit Erfahrung und vollem Engagement zur Seite.",
       consultationCta: "Persönliches Erstgespräch anfragen →",
     },
+    researchTopicPage: {
+      backToHub: "Zurück zur Übersicht",
+      departmentLabel: "Frankfurt UAS · Fachbereich 1",
+      overviewLabel: "Kurzübersicht:",
+      caseStudyBadge: "Reales Praxisprojekt als Fallstudie",
+      factsHeading: "Zahlen & Daten zum Thema",
+      problemHeading: "Ausgangslage & Problemstellung",
+      objectivesHeading: "Ziele der Abschlussarbeit",
+      researchQuestionsHeading: "Zentrale Leitfragen der Arbeit",
+      frameworkBadge: "Rahmenbedingungen",
+      frameworkHeading: "Wissenschaft trifft Praxis: So läuft die Betreuung",
+      sourcesHeading: "Quellen & Grundlagen",
+      faqBadge: "Häufige Fragen (FAQ)",
+      faqHeading: "Fragen zur Bewerbung & Betreuung",
+      faqSubtitle: "Die wichtigsten Antworten für Studierende der Architektur, des Bauingenieurwesens und der Stadtplanung.",
+      ctaBadge: "Interesse an diesem Thema?",
+      ctaTitle: "Jetzt für dieses Thema bewerben",
+      ctaDescription: "Senden Sie uns ein kurzes Anschreiben, Ihren Lebenslauf und Notenspiegel direkt per E-Mail an office@shams-consult.de.",
+      trustMentor: "1:1 Dozenten-Mentoring",
+      trustData: "Reale Projektdaten",
+      trustCredit: "Zweitbetreuung anerkannt",
+      pdfFlyerButton: "PDF Flyer",
+      applyEmailButton: "Per E-Mail bewerben",
+      otherTopicsHeading: "Weitere offene Forschungsthemen",
+      mobileApplyButton: "Jetzt bewerben",
+      emailGreeting: "Sehr geehrter Herr Shams,",
+      emailBodyInterest: "ich interessiere mich für die ausgeschriebene Abschlussarbeit",
+      emailBodyAttachment: "Im Anhang finden Sie mein kurzes Anschreiben, meinen Lebenslauf sowie meinen aktuellen Notenspiegel.",
+      emailBodyMeeting: "Ich freue mich über ein kurzes Kennenlerngespräch.",
+      emailClosing: "Mit freundlichen Grüßen,",
+      faqs: [
+        {
+          question: "Wer kann sich für diese Abschlussarbeit bewerben?",
+          answer: "Studierende der Fachrichtungen Architektur, Bauingenieurwesen, Stadtplanung oder verwandter Studiengänge (Bachelor- oder Masterstudium) an jeder staatlichen oder staatlich anerkannten Hochschule.",
+        },
+        {
+          question: "Wie läuft die Betreuung durch Shams Consult ab?",
+          answer: "Sie profitieren von kontinuierlichem 1:1-Mentoring durch Dipl.-Ing. Majeed Shams (Lehrbeauftragter an der Frankfurt UAS), uneingeschränktem Einblick in reale Ausführungs- und Genehmigungsplanungen unseres Büros sowie gezielter Begleitung bei wissenschaftlicher Methodik, BIM und KI-gestützten Analysewerkzeugen.",
+        },
+        {
+          question: "Wird die externe Betreuung von meiner Hochschule anerkannt?",
+          answer: "Ja, absolut. Die akademische Erstbetreuung und offizielle Themenanmeldung erfolgt regulär über Ihre Professur. Shams Consult fungiert als fachlicher Praxisbetreuer und übernimmt auf Wunsch gern die offizielle Zweitkorrektur (Zweitprüfer) in Abstimmung mit Ihrer Hochschule.",
+        },
+        {
+          question: "Wann ist ein Einstieg möglich und wie flexibel sind die Fristen?",
+          answer: "Der Beginn ist ganzjährig und flexibel möglich. Der Zeitplan richtet sich vollständig nach Ihrer individuellen Studien- und Prüfungsordnung (in der Regel 3 bis 6 Monate Bearbeitungszeit).",
+        },
+        {
+          question: "Welche Unterlagen werden für die Bewerbung benötigt?",
+          answer: "Der Prozess ist unkompliziert: Senden Sie ein kurzes Motivationsschreiben mit Angabe des gewünschten Starttermins, Ihren Lebenslauf und einen aktuellen Notenspiegel direkt per E-Mail an office@shams-consult.de. Wir melden uns innerhalb weniger Tage für ein unverbindliches Kennenlernen.",
+        },
+      ],
+    },
     cookieBanner: {
       ariaLabel: "Cookie-Einwilligung",
       badge: "Datenschutz & Transparenz",
@@ -1477,6 +1585,15 @@ export const content: Record<Language, Translations> = {
       ctaTitle: "Interested in Academic Research Cooperation?",
       ctaSubtitle: "We supervise practical research topics and thesis projects in partnership with Frankfurt UAS.",
       ctaButton: "Contact for Research Cooperation →",
+      openThesesBadge: "OPEN THESIS VACANCIES",
+      openThesesTitle: "Science Meets Practice: Write Your Thesis With Us",
+      openThesesSubtitle: "Shams Consult supervises Bachelor's and Master's theses as industry co-advisor on built projects. Primary academic grading is provided by your university.",
+      viewDetails: "View Details",
+      downloadFlyerTitle: "Download PDF Flyer",
+      archiveBadge: "Completed Theses & Archive",
+      archiveTitle: "Academic Archive & Publications",
+      supervisionLabel: "Supervision:",
+      announcementBadge: "3 Open Thesis Topics (Applications Open)",
     },
     founder: {
       badge: "Practice Principal",
@@ -1520,6 +1637,7 @@ export const content: Record<Language, Translations> = {
       founderStoryTitle: "Would you like to read Majeed Shams' personal story?",
       founderStoryDesc: "From refugee to successful architect, urban planner, and university lecturer in Germany.",
       founderStoryButton: "Read Founder Biography →",
+      viewResearchContributions: "View Research Contributions →",
     },
     siteVisitsPage: {
       backToHome: "Back to Home",
@@ -1906,6 +2024,59 @@ export const content: Record<Language, Translations> = {
       consultationHeading: "Would You Like to Discuss Your Project with Majeed Shams?",
       consultationDesc: "Whether residential construction, urban master planning, or complex permit proceedings — we stand by your side with dedication and proven expertise.",
       consultationCta: "Request Consultation →",
+    },
+    researchTopicPage: {
+      backToHub: "Back to Research Hub",
+      departmentLabel: "Frankfurt UAS · Faculty 1",
+      overviewLabel: "Overview:",
+      caseStudyBadge: "Built Case Study",
+      factsHeading: "Key Facts & Data",
+      problemHeading: "Context & Problem Statement",
+      objectivesHeading: "Thesis Objectives",
+      researchQuestionsHeading: "Key Research Questions",
+      frameworkBadge: "Framework & Mentorship",
+      frameworkHeading: "Science Meets Practice: Supervision Details",
+      sourcesHeading: "Key Sources & Literature",
+      faqBadge: "Frequently Asked Questions",
+      faqHeading: "Questions on Application & Mentorship",
+      faqSubtitle: "Key answers for students of architecture, civil engineering, and urban planning.",
+      ctaBadge: "Interested in this Topic?",
+      ctaTitle: "Apply for this Thesis Topic",
+      ctaDescription: "Send a brief cover letter, your CV, and your transcript of records directly to office@shams-consult.de.",
+      trustMentor: "1:1 Faculty Mentoring",
+      trustData: "Built Project Data",
+      trustCredit: "Co-Supervision Recognized",
+      pdfFlyerButton: "PDF Flyer",
+      applyEmailButton: "Apply via Email",
+      otherTopicsHeading: "Other Open Research Topics",
+      mobileApplyButton: "Apply Now",
+      emailGreeting: "Dear Mr. Shams,",
+      emailBodyInterest: "I am writing to express my interest in the thesis topic",
+      emailBodyAttachment: "Please find attached my brief cover letter, CV, and current transcript of records.",
+      emailBodyMeeting: "I look forward to discussing the potential collaboration.",
+      emailClosing: "Best regards,",
+      faqs: [
+        {
+          question: "Who can apply for this thesis topic?",
+          answer: "Students enrolled in Architecture, Civil Engineering, Urban Planning, or related degree programs (Bachelor's or Master's) at any recognized university or university of applied sciences.",
+        },
+        {
+          question: "What does thesis supervision at Shams Consult look like?",
+          answer: "You benefit from continuous 1:1 mentoring by Dipl.-Ing. Majeed Shams (Lecturer at Frankfurt UAS), full access to real-world built projects and permit files, and support with academic methodology, BIM, and AI analysis tools.",
+        },
+        {
+          question: "Is external supervision recognized by my university?",
+          answer: "Yes, absolutely. Primary academic evaluation remains with your university professor. Shams Consult serves as your industry practice mentor and gladly acts as official secondary examiner upon departmental agreement.",
+        },
+        {
+          question: "When can I start and how flexible are the deadlines?",
+          answer: "Start dates are flexible year-round. The timeline adapts completely to your academic schedule and examination regulations (typically 3 to 6 months).",
+        },
+        {
+          question: "What application documents do I need to submit?",
+          answer: "The process is straightforward: email a brief letter of motivation with your intended start date, your CV, and your current transcript of records to office@shams-consult.de. We will reply promptly for an informal conversation.",
+        },
+      ],
     },
     cookieBanner: {
       ariaLabel: "Cookie Consent",

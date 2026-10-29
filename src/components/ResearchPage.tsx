@@ -113,15 +113,13 @@ export function ResearchPage({
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[#DC2626] text-xs font-mono font-bold tracking-wider">
               <span>●</span>
-              <span>{isDe ? "AKTUELLE AUSSCHREIBUNGEN (ABSCHLUSSARBEITEN)" : "OPEN THESIS VACANCIES"}</span>
+              <span>{t.openThesesBadge}</span>
             </div>
             <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
-              {isDe ? "Praxis trifft Wissenschaft: Jetzt Abschlussarbeit schreiben" : "Science Meets Practice: Write Your Thesis With Us"}
+              {t.openThesesTitle}
             </h2>
             <p className="text-xs sm:text-sm text-zinc-600 font-light max-w-3xl leading-relaxed">
-              {isDe
-                ? "Shams Consult arbeitet seit Jahren mit Hochschulen zusammen und betreut Bachelor- und Masterarbeiten als Zweitbetreuer an realen Bauprojekten unseres Büros. Die Erstbetreuung übernimmt Ihre Hochschule."
-                : "Shams Consult supervises Bachelor's and Master's theses as industry co-advisor on built projects. Primary academic grading is provided by your university."}
+              {t.openThesesSubtitle}
             </p>
           </div>
 
@@ -129,7 +127,18 @@ export function ResearchPage({
             {openTopics.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl border border-zinc-200 hover:border-[#DC2626] transition-all duration-300 shadow-xs hover:shadow-xl p-6 flex flex-col justify-between group"
+                role="button"
+                tabIndex={0}
+                onClick={() => {
+                  if (onNavigateTopic) onNavigateTopic(item.slug);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    if (onNavigateTopic) onNavigateTopic(item.slug);
+                  }
+                }}
+                className="bg-white rounded-2xl border border-zinc-200 hover:border-[#DC2626] transition-all duration-300 shadow-xs hover:shadow-xl p-6 flex flex-col justify-between group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -159,22 +168,17 @@ export function ResearchPage({
                 </div>
 
                 <div className="pt-6 border-t border-zinc-100 mt-4 flex items-center justify-between gap-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (onNavigateTopic) onNavigateTopic(item.slug);
-                    }}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-[#DC2626] transition-colors cursor-pointer"
-                  >
-                    <span>{isDe ? "Details ansehen" : "View Details"}</span>
-                    <span>→</span>
-                  </button>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-[#DC2626] transition-colors">
+                    <span>{t.viewDetails}</span>
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </div>
 
                   <a
                     href={item.pdfDownloadUrl}
                     download={item.pdfFileName}
+                    onClick={(e) => e.stopPropagation()}
                     className="p-2 rounded-lg hover:bg-zinc-100 text-zinc-500 hover:text-[#DC2626] transition-colors"
-                    title={isDe ? "PDF Flyer herunterladen" : "Download PDF Flyer"}
+                    title={t.downloadFlyerTitle}
                   >
                     <Icon name="file-pdf" className="text-base" />
                   </a>
@@ -187,10 +191,10 @@ export function ResearchPage({
         {/* Section Divider & Past Archive Heading */}
         <div className="pt-8 border-t border-zinc-200 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block">
-            {isDe ? "Abgeschlossene Arbeiten & Referenzen" : "Completed Theses & Archive"}
+            {t.archiveBadge}
           </span>
           <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950">
-            {isDe ? "Wissenschaftliches Archiv & Fachpublikationen" : "Academic Archive & Publications"}
+            {t.archiveTitle}
           </h2>
         </div>
 
@@ -336,7 +340,7 @@ export function ResearchPage({
                     </div>
                     <div>
                       <strong className="font-semibold text-zinc-900">
-                        {isDe ? "Akademische Betreuung:" : "Supervision:"}
+                        {t.supervisionLabel}
                       </strong>{" "}
                       {item.supervisors}
                     </div>
