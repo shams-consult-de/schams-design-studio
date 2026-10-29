@@ -182,7 +182,7 @@ The work behind it is.
       de: "5,6 Hektar, Rechenzentrum, Umspannwerk, Großbatteriespeicher und Abwärme-Gewächshäuser: Warum Fachbehörden Angebotsbebauungspläne zunehmend wie vorhabenbezogene Pläne behandeln – und wie die Bündelung von Hochbau und Stadtplanung Planungssicherheit garantiert.",
       en: "5.6 hectares, data center, substation, battery storage, and waste-heat greenhouses: Why authorities treat framework zoning like project-specific plans—and how uniting architecture with urban planning guarantees permitting certainty.",
     },
-    image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+    image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.webp",
     imageAlt: {
       de: "Fachgespräch und Bauleitplanung zum Rechenzentrum Bebra bei Shams Consult mit Projektbeteiligten",
       en: "Technical consultation and statutory zoning planning for the Bebra data center at Shams Consult",
@@ -315,7 +315,7 @@ Secure statutory certainty and eliminate permitting delays from day one. Schedul
       de: "Wie zukunftssichere Infrastruktur aussieht: Abwärmenutzung für Gewächshäuser, CO₂-neutrale Energiekonzepte und lokaler Artenschutz im direkten Dialog mit der Betreiberseite.",
       en: "Future-proof infrastructure in action: Greenhouse waste-heat recovery, carbon-neutral energy concepts, and local wildlife protection in direct operator dialogue.",
     },
-    image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.png",
+    image: "/images/partners/site-visits/shams-fachgespraech-rechenzentrum-bebra-artenschutz.webp",
     imageAlt: {
       de: "Fachabstimmung in den Räumen von Shams Consult zwischen Dipl.-Ing. Majeed Shams und Dipl.-Ing. Eigenbrodt zum nachhaltigen Rechenzentrum Bebra.",
       en: "Technical consultation at Shams Consult offices between Dipl.-Ing. Majeed Shams and Dipl.-Ing. Eigenbrodt regarding the sustainable Bebra data center.",

@@ -160,7 +160,7 @@ export function ClientsPage({
             <div className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
               <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
                 <img
-                  src="/images/partners/site-visits/shams-vor-ort-bauherrenberatung.jpg"
+                  src="/images/partners/site-visits/shams-vor-ort-bauherrenberatung.webp"
                   alt={t.siteVisit1Title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -180,7 +180,7 @@ export function ClientsPage({
             <div className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
               <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
                 <img
-                  src="/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.jpg"
+                  src="/images/partners/site-visits/shams-vor-ort-bestandsaufnahme-messung.webp"
                   alt={t.siteVisit2Title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
