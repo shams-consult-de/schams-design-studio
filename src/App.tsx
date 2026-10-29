@@ -17,6 +17,8 @@ import { BlogPage } from "./components/BlogPage";
 import { BlogDetail } from "./components/BlogDetail";
 import { ResearchSection } from "./components/ResearchSection";
 import { ResearchPage } from "./components/ResearchPage";
+import { ResearchTopicPage } from "./components/ResearchTopicPage";
+import { openThesesData, OpenThesisTopic } from "./lib/openTheses";
 import { AkhRegistrationSection } from "./components/AkhRegistrationSection";
 import { TeamSection } from "./components/TeamSection";
 import { VobSection } from "./components/VobSection";
@@ -65,6 +67,7 @@ export function App() {
   const [isSiteVisitsPage, setIsSiteVisitsPage] = useState<boolean>(false);
   const [isBlogPage, setIsBlogPage] = useState<boolean>(false);
   const [isResearchPage, setIsResearchPage] = useState<boolean>(false);
+  const [activeResearchTopic, setActiveResearchTopic] = useState<OpenThesisTopic | null>(null);
   const [isB2BPage, setIsB2BPage] = useState<boolean>(false);
   const [isComparisonPage, setIsComparisonPage] = useState<boolean>(false);
   const [activeComparisonTopicId, setActiveComparisonTopicId] = useState<string>("boutique-vs-grossbuero");
@@ -84,6 +87,7 @@ export function App() {
     setActiveRegionalPage(null);
     setIsB2BPage(false);
     setIsFounderPortalPage(false);
+    setActiveResearchTopic(null);
 
     // 0. Regional Hub-and-Spoke Landing Pages (/architektur-frankfurt, /architektur-roedermark, /architektur-dreieich, /stadtplanung-hessen)
     const regionalKey = path.replace(/^\//, "");
@@ -226,6 +230,31 @@ export function App() {
       return;
     }
 
+    // 2.9 Dedicated Open Thesis Topic (/forschung/schwammstadt, /forschung/cradle-to-cradle, /forschung/gebaeudetyp-e)
+    const researchTopicMatch = path.match(/^\/(?:forschung|research)\/([a-z0-9-]+)$/);
+    if (researchTopicMatch) {
+      const slug = researchTopicMatch[1];
+      const foundTopic =
+        openThesesData[detectedLang]?.find((t) => t.slug === slug || t.id === slug) ||
+        openThesesData.de.find((t) => t.slug === slug || t.id === slug);
+      if (foundTopic) {
+        setActiveResearchTopic(foundTopic);
+        setIsResearchPage(true);
+        setIsAboutPage(false);
+        setIsFounderPage(false);
+        setIsProjectsPage(false);
+        setIsClientsPage(false);
+        setIsBlogPage(false);
+        setIsNotFound(false);
+        setActiveProject(null);
+        setActiveCaseStudy(null);
+        setActiveBlogPost(null);
+        setActiveLegalPage(null);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+    }
+
     // 3. Research / Forschung & Lehre
     if (
       path === "/research" ||
@@ -235,6 +264,7 @@ export function App() {
       path === "/publikationen"
     ) {
       setIsResearchPage(true);
+      setActiveResearchTopic(null);
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsProjectsPage(false);
@@ -288,6 +318,7 @@ export function App() {
     ) {
       setIsFounderPage(true);
       setIsFounderPortalPage(false);
+    setActiveResearchTopic(null);
       setIsAboutPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
@@ -337,6 +368,7 @@ export function App() {
     ) {
       setIsVCardPage(true);
       setIsFounderPortalPage(false);
+    setActiveResearchTopic(null);
       setIsFounderPage(false);
       setIsAboutPage(false);
       setIsProjectsPage(false);
@@ -600,6 +632,7 @@ export function App() {
       setIsAboutPage(false);
       setIsFounderPage(false);
       setIsFounderPortalPage(false);
+    setActiveResearchTopic(null);
       setIsVCardPage(false);
       setIsProjectsPage(false);
       setIsClientsPage(false);
@@ -627,6 +660,7 @@ export function App() {
     setIsAboutPage(false);
     setIsFounderPage(false);
     setIsFounderPortalPage(false);
+    setActiveResearchTopic(null);
     setIsVCardPage(false);
     setIsProjectsPage(false);
     setIsClientsPage(false);
@@ -1231,6 +1265,7 @@ export function App() {
             onBack={handleBackToHome}
             onNavigateFounder={handleNavigateFounder}
             onNavigateSiteVisits={() => navigateTo("/site-visits")}
+            onNavigateResearch={handleNavigateResearch}
             onBookConsultation={handleBookConsultation}
           />
         ) : isB2BPage ? (
@@ -1264,12 +1299,21 @@ export function App() {
             onBack={handleBackToHome}
             onBookConsultation={handleBookConsultation}
           />
+        ) : isResearchPage && activeResearchTopic ? (
+          /* Dedicated Open Thesis Topic Landing Page */
+          <ResearchTopicPage
+            topic={activeResearchTopic}
+            language={language}
+            onBack={() => navigateTo(language === "en" ? "/en/research" : "/forschung")}
+            onNavigateTopic={(slug) => navigateTo(language === "en" ? `/en/research/${slug}` : `/forschung/${slug}`)}
+          />
         ) : isResearchPage ? (
           /* Dedicated Research & Theses Page */
           <ResearchPage
             t={t.research}
             language={language}
             onBack={handleBackToHome}
+            onNavigateTopic={(slug) => navigateTo(language === "en" ? `/en/research/${slug}` : `/forschung/${slug}`)}
             onBookConsultation={handleBookConsultation}
           />
         ) : activeBlogPost ? (
@@ -1409,6 +1453,7 @@ export function App() {
             <div id="research" className="scroll-mt-24">
               <ResearchSection
                 t={t.research}
+                language={language}
                 onNavigateResearch={handleNavigateResearch}
               />
             </div>

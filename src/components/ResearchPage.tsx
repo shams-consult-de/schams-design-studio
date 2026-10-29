@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Language, Translations } from "../lib/i18n";
 import { thesesAndResearch, ThesisItem } from "../lib/theses";
 import { FrankfurtUasLogo } from "./FrankfurtUasLogo";
+import { Icon } from "./icon";
+import { openThesesData } from "../lib/openTheses";
 
 interface ResearchPageProps {
   t: Translations["research"];
   language: Language;
   onBack: () => void;
   onBookConsultation: () => void;
+  onNavigateTopic?: (slug: string) => void;
 }
 
 type FilterType = "all" | "Fachpublikation" | "Masterarbeit" | "Bachelorarbeit";
@@ -17,8 +20,10 @@ export function ResearchPage({
   language,
   onBack,
   onBookConsultation,
+  onNavigateTopic,
 }: ResearchPageProps) {
   const isDe = language === "de";
+  const openTopics = openThesesData[language] || openThesesData.de;
   const [selectedType, setSelectedType] = useState<FilterType>("all");
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
 
@@ -103,8 +108,94 @@ export function ResearchPage({
           </div>
         </div>
 
+        {/* Aktuelle Ausschreibungen für Studierende (Open Theses) */}
+        <section className="space-y-6 pt-4 border-t border-zinc-200">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[#DC2626] text-xs font-mono font-bold tracking-wider">
+              <span>●</span>
+              <span>{isDe ? "AKTUELLE AUSSCHREIBUNGEN (ABSCHLUSSARBEITEN)" : "OPEN THESIS VACANCIES"}</span>
+            </div>
+            <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
+              {isDe ? "Praxis trifft Wissenschaft: Jetzt Abschlussarbeit schreiben" : "Science Meets Practice: Write Your Thesis With Us"}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-600 font-light max-w-3xl leading-relaxed">
+              {isDe
+                ? "Shams Consult arbeitet seit Jahren mit Hochschulen zusammen und betreut Bachelor- und Masterarbeiten als Zweitbetreuer an realen Bauprojekten unseres Büros. Die Erstbetreuung übernimmt Ihre Hochschule."
+                : "Shams Consult supervises Bachelor's and Master's theses as industry co-advisor on built projects. Primary academic grading is provided by your university."}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {openTopics.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-2xl border border-zinc-200 hover:border-[#DC2626] transition-all duration-300 shadow-xs hover:shadow-xl p-6 flex flex-col justify-between group"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-extrabold uppercase px-2 py-0.5 bg-red-100 text-[#DC2626] rounded">
+                      {item.number}
+                    </span>
+                    <span className="text-[11px] font-mono text-zinc-500">
+                      {item.degrees}
+                    </span>
+                  </div>
+
+                  <h3 className="font-sans text-lg font-bold text-zinc-950 group-hover:text-[#DC2626] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-xs text-zinc-600 line-clamp-3 font-light leading-relaxed">
+                    {item.teaser}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {item.disciplines.map((d) => (
+                      <span key={d} className="px-2 py-0.5 rounded bg-zinc-100 text-[10px] font-mono text-zinc-700">
+                        {d}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-zinc-100 mt-4 flex items-center justify-between gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (onNavigateTopic) onNavigateTopic(item.slug);
+                    }}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-[#DC2626] transition-colors cursor-pointer"
+                  >
+                    <span>{isDe ? "Details ansehen" : "View Details"}</span>
+                    <span>→</span>
+                  </button>
+
+                  <a
+                    href={item.pdfDownloadUrl}
+                    download={item.pdfFileName}
+                    className="p-2 rounded-lg hover:bg-zinc-100 text-zinc-500 hover:text-[#DC2626] transition-colors"
+                    title={isDe ? "PDF Flyer herunterladen" : "Download PDF Flyer"}
+                  >
+                    <Icon name="file-pdf" className="text-base" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section Divider & Past Archive Heading */}
+        <div className="pt-8 border-t border-zinc-200 space-y-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block">
+            {isDe ? "Abgeschlossene Arbeiten & Referenzen" : "Completed Theses & Archive"}
+          </span>
+          <h2 className="font-sans text-xl sm:text-2xl font-bold text-zinc-950">
+            {isDe ? "Wissenschaftliches Archiv & Fachpublikationen" : "Academic Archive & Publications"}
+          </h2>
+        </div>
+
         {/* Filter Controls Bar */}
-        <div className="space-y-4 pt-4 border-t border-zinc-200">
+        <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"

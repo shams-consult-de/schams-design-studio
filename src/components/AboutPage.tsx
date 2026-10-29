@@ -7,6 +7,7 @@ interface AboutPageProps {
   onBack: () => void;
   onNavigateFounder: () => void;
   onNavigateSiteVisits?: () => void;
+  onNavigateResearch?: () => void;
   onBookConsultation: () => void;
 }
 
@@ -17,6 +18,7 @@ export function AboutPage({
   onBack,
   onNavigateFounder,
   onNavigateSiteVisits,
+  onNavigateResearch,
   onBookConsultation,
 }: AboutPageProps) {
   const isDe = language === "de";
@@ -224,13 +226,30 @@ export function AboutPage({
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-2.5">
-              <h3 className="font-sans text-base font-bold text-zinc-950">
-                {t.academiaTitle}
-              </h3>
-              <p className="text-xs text-zinc-600 font-light leading-relaxed">
-                {t.academiaDesc}
-              </p>
+            <div className="p-6 rounded-xl bg-white border border-zinc-200 shadow-xs space-y-3 flex flex-col justify-between">
+              <div className="space-y-2.5">
+                <h3 className="font-sans text-base font-bold text-zinc-950">
+                  {t.academiaTitle}
+                </h3>
+                <p className="text-xs text-zinc-600 font-light leading-relaxed">
+                  {t.academiaDesc}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-zinc-100">
+                <a
+                  href={language === "en" ? "/en/research" : "/research"}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigateResearch) onNavigateResearch();
+                    else window.location.href = language === "en" ? "/en/research" : "/research";
+                  }}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-[#B91C1C] transition-colors group cursor-pointer"
+                >
+                  <span>{isDe ? "Forschungsbeiträge ansehen" : "View Research Contributions"}</span>
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

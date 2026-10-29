@@ -1,15 +1,19 @@
-import { Translations } from "../lib/i18n";
+import { Language, Translations } from "../lib/i18n";
 import { FrankfurtUasLogo } from "./FrankfurtUasLogo";
 
 interface ResearchSectionProps {
   t: Translations["research"];
+  language?: Language;
   onNavigateResearch?: () => void;
 }
 
 export function ResearchSection({
   t,
+  language = "de",
   onNavigateResearch,
 }: ResearchSectionProps) {
+  const isDe = language === "de";
+
   const handleCtaClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigateResearch) {
@@ -44,6 +48,11 @@ export function ResearchSection({
             </div>
 
             <div className="space-y-1 text-left max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/30 text-[#DC2626] text-[11px] font-mono font-bold tracking-wide mb-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626] animate-pulse" />
+                <span>{isDe ? "3 Offene Abschlussarbeiten (Ausschreibungen)" : "3 Open Thesis Topics (Applications Open)"}</span>
+              </div>
+
               <h2 className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">
                 {t.title}
               </h2>

@@ -13,6 +13,9 @@ export interface Translations {
     blog: string;
     contact: string;
     bookConsultation: string;
+    research: string;
+    founder: string;
+    aboutOffice: string;
   };
   hero: {
     eyebrow: string;
@@ -530,6 +533,9 @@ export const content: Record<Language, Translations> = {
       blog: "Magazin",
       contact: "Kontakt",
       bookConsultation: "Erstgespräch anfragen",
+      research: "Forschung & Lehre",
+      founder: "Gründer",
+      aboutOffice: "Über das Büro",
     },
     hero: {
       eyebrow: "Architekturbüro für Architektur, Stadtplanung & Projektentwicklung",
@@ -909,6 +915,14 @@ export const content: Record<Language, Translations> = {
           title: "Baustellenkoordination & Bauherrenabstimmung im Wohnungsbau",
           desc: "Direkte Abstimmung der Ausführungsdetails und Erdbaumaßnahmen vor dem Mehrfamilienhaus mit dem Bauherrn und den Erdbau-Teams vor Ort.",
         },
+        {
+          id: "courtyard-inspection",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsbegehung-innenhof.webp",
+          tag: "Bestandsbegutachtung",
+          phase: "HOAI Phase 1–2: Vor-Ort-Analyse & Bauherrenabstimmung",
+          title: "Vor-Ort-Bestandsaufnahme & Fachabstimmung im Innenhof",
+          desc: "Persönliche Begehung vor Ort durch Dipl.-Ing. Majeed Shams: Direkte Fachabstimmung zur Gebäudestruktur, Fassade und Sanierungs- bzw. Umnutzungspotenzialen im direkten Dialog mit den Beteiligten.",
+        },
       ],
     },
     blog: {
@@ -1223,6 +1237,9 @@ export const content: Record<Language, Translations> = {
       blog: "Magazine",
       contact: "Contact",
       bookConsultation: "Book Consultation",
+      research: "Research & Teaching",
+      founder: "Founder",
+      aboutOffice: "About the Practice",
     },
     hero: {
       eyebrow: "Architectural Practice for Architecture, Urban Planning & Project Development",
@@ -1601,6 +1618,14 @@ export const content: Record<Language, Translations> = {
           phase: "HOAI Phase 8: Site Supervision",
           title: "On-Site Construction Coordination for Housing Complex",
           desc: "Direct technical coordination of construction sequencing and earthworks on-site in front of the multi-family apartment building.",
+        },
+        {
+          id: "courtyard-inspection",
+          image: "/images/partners/site-visits/shams-vor-ort-bestandsbegehung-innenhof.webp",
+          tag: "Existing Building Survey",
+          phase: "HOAI Phase 1–2: Site Assessment & Client Coordination",
+          title: "On-Site Structural Inspection & Courtyard Consultation",
+          desc: "Direct on-site inspection by Dipl.-Ing. Majeed Shams: Direct technical consultation on building structure, façade condition, and refurbishment or conversion potentials.",
         },
       ],
     },

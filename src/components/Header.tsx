@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Icon } from "./icon";
 import { Language, Translations } from "../lib/i18n";
 import { getLocalizedPath } from "../lib/i18nRouting";
@@ -30,18 +30,53 @@ export function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const dropdownCloseTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setAboutDropdownOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const handleDropdownEnter = () => {
+    if (dropdownCloseTimeoutRef.current) {
+      clearTimeout(dropdownCloseTimeoutRef.current);
+      dropdownCloseTimeoutRef.current = null;
+    }
+    setAboutDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownCloseTimeoutRef.current = window.setTimeout(() => {
+      setAboutDropdownOpen(false);
+    }, 150);
+  };
+
+  const aboutDropdownItems = [
+    { label: t.aboutOffice, path: "/about" },
+    { label: t.siteVisits, path: "/site-visits" },
+    { label: t.research, path: "/research" },
+    { label: t.founder, path: "/founder" },
+  ];
+
   const navLinks = [
     { label: t.about, path: "/about", sectionId: undefined },
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
-    { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
   ];
 
   const mobileNavLinks = [
     { label: t.about, path: "/about", sectionId: undefined },
+    { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
+    { label: t.research, path: "/research", sectionId: undefined },
+    { label: t.founder, path: "/founder", sectionId: undefined },
     { label: t.services, path: "/services", sectionId: "services" },
     { label: t.projects, path: "/projects", sectionId: undefined },
-    { label: t.siteVisits, path: "/site-visits", sectionId: undefined },
     { label: t.caseStudies, path: "/clients", sectionId: "case-studies" },
     { label: t.blog, path: "/blog", sectionId: undefined },
     { label: t.contact, path: "/contact", sectionId: "contact" },
@@ -127,7 +162,61 @@ export function Header({
 
         {/* Center Navigation Links */}
         <nav className="hidden lg:flex items-center gap-7 text-xs font-bold tracking-[0.12em] text-zinc-700">
-          {navLinks.map((link) => (
+          {/* Über uns with Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <a
+              href={getLocalizedPath("/about", language)}
+              onClick={(e) => handleLinkClick(e, { label: t.about, path: "/about", sectionId: undefined })}
+              className="inline-flex items-center gap-1.5 hover:text-[#DC2626] transition-colors uppercase relative py-1 text-zinc-600 focus:outline-none"
+              aria-expanded={aboutDropdownOpen}
+              aria-haspopup="true"
+            >
+              <span>{t.about}</span>
+              <Icon
+                name="chevron-down"
+                className={`text-[9px] transition-transform duration-200 text-zinc-400 ${
+                  aboutDropdownOpen ? "rotate-180 text-[#DC2626]" : ""
+                }`}
+              />
+            </a>
+
+            {/* Minimalist Dropdown Menu */}
+            <div
+              className={`absolute top-full left-0 pt-2 w-56 transition-all duration-150 z-50 ${
+                aboutDropdownOpen
+                  ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                  : "opacity-0 invisible -translate-y-1 pointer-events-none"
+              }`}
+            >
+              <div className="bg-white border border-zinc-200 rounded-lg shadow-lg py-1 px-1">
+                {aboutDropdownItems.map((item) => (
+                  <a
+                    key={item.path}
+                    href={getLocalizedPath(item.path, language)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setAboutDropdownOpen(false);
+                      if (onNavigate) {
+                        onNavigate(getLocalizedPath(item.path, language));
+                      } else {
+                        window.location.href = getLocalizedPath(item.path, language);
+                      }
+                    }}
+                    className="block px-3.5 py-2.5 text-[11px] font-bold uppercase tracking-[0.12em] text-zinc-600 hover:text-[#DC2626] hover:bg-zinc-50 rounded transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Remaining Top-Level Links */}
+          {navLinks.slice(1).map((link) => (
             <a
               key={link.label}
               href={link.sectionId ? (language === "en" ? `/en#${link.sectionId}` : `/#${link.sectionId}`) : getLocalizedPath(link.path, language)}
