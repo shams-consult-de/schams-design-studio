@@ -45,37 +45,37 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         description: "Einbau einer mineralischen Steinwolle-Rigole im Wohnungsbau als nachhaltige Alternative zu fossilen Kunststoffboxen."
       },
       problemStatement: [
-        "Die zunehmende Versiegelung verändert den natürlichen Wasserhaushalt grundlegend: Rund 45 Prozent der Siedlungs- und Verkehrsflächen in Deutschland sind versiegelt, und täglich kommen im Mittel etwa 52 Hektar neue Fläche hinzu. Niederschlag kann kaum noch versickern oder verdunsten; er fließt oberflächlich ab und überlastet die Kanalnetze.",
-        "Der Klimawandel verschärft die Lage drastisch. Kurze, heftige Starkregen verursachten zwischen 2002 und 2021 an Wohngebäuden Schäden von rund 12,6 Milliarden Euro. Zugleich fehlen in Sommern Hitze- und Trockenperioden gespeicherte Wasserreserven. Das Leitbild der Schwammstadt setzt hier an: Regenwasser dezentral zurückhalten, versickern und verdunsten.",
-        "In der Praxis erfolgt die Versickerung fast ausschließlich mit Rigolen aus Kunststoff, die jahrzehntelang im Erdreich verbleiben und deren Recycling ungeklärt ist. Shams Consult hat gemeinsam mit einem Bauherrn und der Firma ROCKWOOL ein mineralisches Vorzeigeprojekt aus recycelbarem Basaltgestein realisiert.",
-        "Es fehlen jedoch systematische Vergleichsdaten zu Leistungsfähigkeit, CO₂-Bilanz, Lebensdauer und Kosten sowie städtebauliche Planungsgrundlagen zur Übertragung auf Quartiere und Stadtteile."
+        "Die zunehmende Versiegelung verändert den natürlichen Wasserhaushalt grundlegend: Rund 45 Prozent der Siedlungs- und Verkehrsflächen in Deutschland sind versiegelt, und täglich kommen im Mittel etwa 52 Hektar neue Siedlungs- und Verkehrsfläche hinzu. Niederschlag kann auf diesen Flächen kaum noch versickern oder verdunsten; er fließt oberflächlich ab und belastet Kanalnetze und Gewässer.",
+        "Der Klimawandel verschärft diese Lage. Kurze, heftige Starkregen verursachten zwischen 2002 und 2021 an Wohngebäuden Schäden von rund 12,6 Milliarden Euro; statistisch war jedes zehnte Haus betroffen. Zugleich nehmen Hitze- und Trockenperioden zu, in denen gespeichertes Wasser fehlt. Das Leitbild der Schwammstadt setzt hier an: Regenwasser soll dezentral zurückgehalten, versickert und verdunstet werden.",
+        "In der Praxis wird die dezentrale Versickerung überwiegend mit Rigolen aus Kunststoff umgesetzt. Diese Bauteile verbleiben für Jahrzehnte im Untergrund; ihre Herstellung beruht auf fossilen Rohstoffen, und Fragen zu Alterung, Rückbau und Recycling sind weitgehend offen. Damit steht ausgerechnet ein Baustein klimaangepasster Stadtentwicklung im Widerspruch zum Ziel nachhaltigen Bauens.",
+        "Mineralische Alternativen wie Steinwolle, die bis zu 95 Prozent ihres Volumens an Wasser aufnehmen kann, sind marktverfügbar und in Einzelprojekten erprobt. Shams Consult hat gemeinsam mit einem Bauherrn und der Firma ROCKWOOL ein solches Vorzeigeprojekt realisiert. Es fehlen jedoch systematische Vergleichsdaten zu Leistungsfähigkeit, CO₂-Bilanz, Lebensdauer und Kosten sowie Planungsgrundlagen, die eine Übertragung vom Einzelgrundstück auf Quartiere und Stadtteile erlauben."
       ],
       objectives: [
-        "Untersuchung der Übertragbarkeit mineralischer Rigolensysteme auf die Quartiers- und Stadtteilebene.",
-        "Systematischer Kriterienvergleich von Kunststoff-, Kies- und Steinwollerigolen hinsichtlich Sickerleistung, Flächenbedarf, CO₂-Bilanz, Rückbaubarkeit und Lebenszykluskosten.",
-        "Kombination und Optimierung verschiedener Modelle (Retention, Verdunstung, Baumrigolen, Gründächer) für ein Modellquartier.",
-        "Entwicklung eines übertragbaren Planungsleitfadens für Kommunen, Planende und Bauherren."
+        "Ziel der Arbeit ist es, ausgehend vom realisierten Pilotprojekt die Übertragbarkeit mineralischer Rigolensysteme auf die Quartiers- und Stadtteilebene zu untersuchen und daraus ein städtebauliches Schwammstadt-Konzept abzuleiten.",
+        "Systematischer Kriterienvergleich von Kunststoff-, Kies- und Steinwollerigolen sowie weiteren mineralischen oder recycelten Materialien (Speicher- und Sickerleistung, Flächenbedarf, CO₂-Bilanz, Lebensdauer, Rückbaubarkeit und Kosten).",
+        "Kombination und Optimierung verschiedener Modelle der Regenwasserbewirtschaftung (Versickerung, Retention, Verdunstung, Baumrigolen, Gründächer) für ein Modellquartier.",
+        "Ergebnis ist ein übertragbarer Planungsleitfaden, der Kommunen, Planenden und Bauherren Entscheidungsgrundlagen für eine kunststofffreie, klimaangepasste Regenwasserbewirtschaftung bietet."
       ],
       researchQuestions: [
         { title: "Skalierung", desc: "Wie lässt sich das Pilotprojekt auf ein Quartier oder einen Stadtteil übertragen (Flächenbedarf, Speichervolumen, Bemessung z. B. nach DWA-Regelwerk)?" },
-        { title: "Materialforschung", desc: "Welche mineralischen oder recycelten Materialien eignen sich als Alternative zu Kunststoffrigolen, und wie schneiden sie ökologisch und wirtschaftlich ab?" },
-        { title: "Bewirtschaftungsmodelle", desc: "Wie lassen sich Versickerung, Retention und Verdunstung (z. B. Baumrigolen, Gründächer) städtebaulich kombinieren und optimieren?" },
-        { title: "Leitfaden", desc: "Welche Planungsschritte, Kennwerte und Kriterien gehören in einen praxistauglichen Planungsleitfaden für Kommunen und Planungsbüros?" }
+        { title: "Materialforschung", desc: "Welche mineralischen oder recycelten Materialien eignen sich als Alternative zu Kunststoff, und wie schneiden sie im Vergleich ab?" },
+        { title: "Bewirtschaftungsmodelle", desc: "Wie lassen sich Versickerung, Retention und Verdunstung im Quartier sinnvoll kombinieren und optimieren?" },
+        { title: "Konzept & Leitfaden", desc: "Welche Planungsschritte und Kriterien gehören in einen übertragbaren Leitfaden für Kommunen?" }
       ],
       framework: [
         "Erstbetreuung durch die Hochschule der Bewerberin bzw. des Bewerbers",
         "Zweitbetreuung durch Shams Consult (Dipl.-Ing. Majeed Shams M.Eng.)",
-        "Bachelor- oder Masterarbeit, auch als interdisziplinäre Teamarbeit möglich",
+        "Bachelor- oder Masterarbeit, auch als Teamarbeit möglich",
         "Realisiertes Praxisprojekt als Fallstudie, Beginn nach Absprache"
       ],
       sources: [
         "Umweltbundesamt: Bebauung und Versiegelung; Siedlungs- und Verkehrsfläche (umweltbundesamt.de).",
-        "Statistisches Bundesamt / Umweltbundesamt: Anstieg der Siedlungs- und Verkehrsfläche, Nationale Nachhaltigkeitsstrategie (2024).",
-        "GDV – Gesamtverband der Deutschen Versicherungswirtschaft: Starkregenbilanz 2002–2021 (gdv.de).",
-        "ROCKWOOL Rainwater Systems: Merkblatt Wasseraufnahme und -abgabe (Rockflow); Hoogheemraadschap Hollands Noorderkwartier (HHNK)."
+        "Statistisches Bundesamt / Umweltbundesamt: Anstieg der Siedlungs- und Verkehrsfläche 2019–2022; Ziele der Deutschen Nachhaltigkeitsstrategie.",
+        "GDV – Gesamtverband der Deutschen Versicherungswirtschaft: Starkregenbilanz 2002–2021.",
+        "ROCKWOOL Rainwater Systems: Merkblatt Wasseraufnahme und -abgabe (Rockflow); Hoogheemraadschap Hollands Noorderkwartier: Steenwolblokken."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Schwammstadt.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Schwammstadt.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-01_Schwammstadt.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-01_Schwammstadt.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Abschlussarbeit Thema 01 – Schwammstadt"
     },
@@ -87,33 +87,33 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
       subtitle: "Werkzeuge für nachhaltige Mehrfamilienhäuser nach dem Qualitätssiegel Nachhaltiges Gebäude (QNG) – vom Rückbau bis zur Wiederverwendung",
       degrees: "Bachelor- oder Masterarbeit",
       disciplines: ["Architektur", "Bauingenieurwesen", "Projektmanagement"],
-      teaser: "Wer heute nachhaltig baut, muss die CO₂-Bilanz eines Gebäudes über den gesamten Lebenszyklus nachweisen. Für jedes Projekt beginnen Planende oft von vorn. Die Arbeit zeigt am Beispiel eines Mehrfamilienhauses, wie Bauteile schonend ausgebaut, im Neubau wiederverwendet und mit digitalen Werkzeugen erfasst werden.",
+      teaser: "Nachhaltige Neubauten müssen ihre CO₂-Bilanz über den gesamten Lebenszyklus nachweisen – und beim Abriss alter Gebäude landen wertvolle Bauteile auf der Deponie. Die Arbeit entwickelt Werkzeuge und einen Leitfaden, mit denen Planende beides systematisch lösen: QNG-gerechte Mehrfamilienhäuser und die Wiederverwendung von Bauteilen aus dem Bestand.",
       stats: [
-        { value: "198,8 Mio. t", label: "Bau- und Abbruchabfälle 2023 in Deutschland – 52 % des gesamten Abfallaufkommens" },
+        { value: "198,8 Mio. t", label: "Bau- und Abbruchabfälle 2023 in Deutschland – mehr als die Hälfte des gesamten Abfallaufkommens" },
         { value: "≈ 28 %", label: "der deutschen Treibhausgasemissionen gehen auf den Gebäudebetrieb zurück" },
         { value: "24 kg", label: "CO₂-Äq. je m² und Jahr: Lebenszyklus-Grenzwert für geförderte klimafreundliche Wohngebäude (KfW 296)" },
-        { value: "QNG", label: "Geforderte Qualitätssiegel-Kriterien für Neubau und Sanierung" }
+        { value: "QNG", label: "Qualitätssiegel Nachhaltiges Gebäude als Qualitäts- und Fördermaßstab" }
       ],
       pilotProject: {
         title: "Mehrfamilienhaus mit Alt- und Neubau",
         description: "Reales Projekt von Shams Consult: Schonender Rückbau im Bestand als Rohstoffquelle für den zirkulären Neubau."
       },
       problemStatement: [
-        "Der Bausektor ist für mehr als die Hälfte des deutschen Abfallaufkommens verantwortlich: 2023 fielen rund 198,8 Millionen Tonnen Bau- und Abbruchabfälle an. Rund 28 Prozent der Treibhausgasemissionen entstehen im Betrieb von Gebäuden; Herstellung, Bau und Entsorgung kommen hinzu.",
-        "Förderprogramme wie das KfW-Programm 296 knüpfen zinsgünstige Kredite an strenge Treibhausgas-Grenzwerte von max. 24 kg CO₂-Äquivalent je Quadratmeter und Jahr über den Lebenszyklus sowie das Qualitätssiegel Nachhaltiges Gebäude (QNG).",
-        "In der Planungspraxis fehlt es jedoch an standardisierten Werkzeugen. Jedes Projekt startet die Ökobilanzierung und Nachweisführung aufwendig von vorn. Gleichzeitig landen beim Abriss von Altbauten hochwertige Baustoffe auf der Deponie, statt nach Cradle-to-Cradle-Prinzipien weitergenutzt zu werden."
+        "Der Gebäudesektor ist einer der größten Hebel für den Klimaschutz: Allein der Betrieb von Gebäuden ist nach dem Verursacherprinzip für rund 28 Prozent der deutschen Treibhausgasemissionen verantwortlich. Je effizienter Gebäude im Betrieb werden, desto stärker rücken die sogenannten grauen Emissionen aus Herstellung, Bau und Rückbau in den Fokus.",
+        "Förderprogramme und das Qualitätssiegel Nachhaltiges Gebäude (QNG) verlangen deshalb eine Ökobilanz über den gesamten Lebenszyklus. Für geförderte klimafreundliche Wohngebäude gilt beispielsweise ein Grenzwert von 24 kg CO₂-Äquivalent je Quadratmeter und Jahr. In der Planungspraxis beginnt die Nachweisführung jedoch bei jedem Projekt nahezu von vorn: Standardisierte Vorlagen, Bauteilkataloge und abgestimmte Arbeitsabläufe fehlen, Erfahrungen aus früheren Projekten fließen kaum systematisch ein.",
+        "Gleichzeitig ist das Bauwesen der größte Abfallverursacher: 2023 fielen in Deutschland rund 198,8 Millionen Tonnen Bau- und Abbruchabfälle an – mehr als die Hälfte des gesamten Abfallaufkommens. Bauteile, die noch funktionsfähig wären, werden meist zerkleinert, minderwertig verwertet oder deponiert. Eine Wiederverwendung im Sinne von Cradle to Cradle scheitert bislang an fehlender Datenerfassung im Bestand, an Fragen zu Schadstoffen, Normen und Gewährleistung sowie an Logistik, Zwischenlagerung und Kosten."
       ],
       objectives: [
-        "Entwicklung übertragbarer Vorlagen, Checklisten und Bemessungshilfen für die QNG-Kriterien am Mehrfamilienhaus.",
-        "Variantenvergleich von Konstruktionen und Baustoffen zur maximalen Reduktion der Treibhausgasemissionen.",
-        "Erstellung eines praxisorientierten Leitfadens für den selektiven Rückbau und die Wiederverwendung von Bauteilen nach Baualtersklassen.",
-        "Strukturierung der Datenerfassung: Bauteilkatalog, Materialpass, Logistik und Kosten für die Wiederverwendung."
+        "Ziel der Arbeit ist ein übertragbares Rahmenwerk, das Planungsbüros erlaubt, Nachhaltigkeitskriterien und CO₂-Bilanzierung für Mehrfamilienhäuser auf geprüfte Vorlagen, Checklisten und Bauteilvarianten zu stützen, sodass mehrere Projekte parallel nach demselben Schema bearbeitet werden können.",
+        "Entwicklung eines praxisorientierten Leitfadens zum ressourcenschonenden Rückbau im Bestand: Schonender Ausbau und Wiederverwendung je Baualtersklasse.",
+        "Strukturierung der Datenerfassung: Bauteilkatalog, Materialpass, BIM, Sortierung, Zwischenlagerung und Wiedereinbau sowie Vermeidung unnötiger Kosten.",
+        "Erprobung und Bewertung der Werkzeuge und des Leitfadens am Fallbeispiel eines Projekts mit Altbau und Neubau von Shams Consult zur öffentlichen Zugänglichmachung."
       ],
       researchQuestions: [
-        { title: "Systematik Neubau", desc: "Welche Vorlagen, Checklisten und Werkzeuge vereinfachen die Nachweisführung für das Qualitätssiegel Nachhaltiges Gebäude (QNG) bei Mehrfamilienhäusern?" },
-        { title: "Bauteiloptimierung", desc: "Welche Konstruktionen, Baustoffe und technischen Systeme senken Treibhausgasemissionen und Primärenergiebedarf am stärksten?" },
-        { title: "Rückbau im Bestand", desc: "Welche Bauteile lassen sich bei Altbauten geordnet rückbauen und wiederverwenden? Wie werden Schadstoffe, Normen und Gewährleistung gehandhabt?" },
-        { title: "Prozess & Logistik", desc: "Wie lässt sich die Kette von Erfassung (Bauteilkatalog, Materialpass), Sortierung, Zwischenlagerung und Wiedereinbau effizient organisieren?" }
+        { title: "Systematik Neubau", desc: "Welche Vorlagen, Checklisten und Werkzeuge erleichtern die QNG-Nachweisführung für Mehrfamilienhäuser?" },
+        { title: "Bauteiloptimierung", desc: "Welche Konstruktionen und Systeme senken die CO₂-Bilanz am stärksten?" },
+        { title: "Rückbau im Bestand", desc: "Welche Bauteile sind je Baualtersklasse wiederverwendbar, und welche rechtlichen und technischen Hürden bestehen?" },
+        { title: "Prozess und Daten", desc: "Wie lassen sich Erfassung, Sortierung, Zwischenlagerung und Wiedereinbau effizient organisieren?" }
       ],
       framework: [
         "Erstbetreuung durch die Hochschule der Bewerberin bzw. des Bewerbers",
@@ -123,12 +123,12 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
       ],
       sources: [
         "Umweltbundesamt: Abfallaufkommen, Daten 2023 (umweltbundesamt.de).",
-        "Bierwirth, A.; Kaselofsky, J.: Klimaneutrale Gebäude. Bundeszentrale für politische Bildung (bpb 2025).",
+        "Bierwirth, A.; Kaselofsky, J.: Klimaneutrale Gebäude. Bundeszentrale für politische Bildung, Dossier Klimawandel, 2025 (nach Daten des Umweltbundesamts).",
         "KfW: Merkblatt 296 – Klimafreundlicher Neubau im Niedrigpreissegment, Technische Mindestanforderungen.",
         "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen: Qualitätssiegel Nachhaltiges Gebäude (QNG)."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Cradle-to-Cradle.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Cradle-to-Cradle.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-02_Cradle-to-Cradle.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-02_Cradle-to-Cradle.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Abschlussarbeit Thema 02 – Cradle to Cradle"
     },
@@ -140,7 +140,7 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
       subtitle: "Mehr Wohnraum im Bestand ohne Qualitätsverlust – ein Best-Practice-Modell für Umbau und Nutzungsänderung",
       degrees: "Bachelor- oder Masterarbeit",
       disciplines: ["Architektur", "Bauingenieurwesen", "Baurecht"],
-      teaser: "Mit dem neuen Gebäudetyp E sollen Bauherren künftig rechtssicher auf nicht-sicherheitsrelevante Komfortstandards verzichten dürfen. Die Arbeit zeigt an einem realen Umbauprojekt von Shams Consult, wie einfaches Bauen gelingt, ohne dass die Wohnqualität – etwa beim Schallschutz – darunter leidet.",
+      teaser: "Mit dem Gebäudetyp E sollen Bauherren künftig auf Komfortstandards verzichten dürfen, um schneller und günstiger Wohnraum zu schaffen. Die Arbeit zeigt an einem realen Umbauprojekt, wie einfaches Bauen gelingt, ohne dass die Wohnqualität – etwa beim Schallschutz – darunter leidet.",
       stats: [
         { value: "10–15 %", label: "geringere Baukosten am Gebäude zeigen ausgewertete Pilotprojekte des BMWSB" },
         { value: "169.400", label: "genehmigte Wohnungen Jan.–Aug. 2026 – trotz Erholung fehlen Hunderttausende" },
@@ -152,21 +152,21 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         description: "Umbau eines ehemaligen Wohn- und Geschäftshauses zu 6 Wohneinheiten sowie die Umnutzung einer Scheune zu einem neuen Wohngebäude."
       },
       problemStatement: [
-        "In Deutschland fehlen mehrere Hunderttausend Wohnungen. Hohe Baukosten und eine dichte Normenlandschaft bremsen den Wohnungsneubau und Bestandsumbau massiv. Viele DIN-Normen gelten als anerkannte Regeln der Technik – wer von ihnen abweicht, trug bisher ein extremes Haftungsrisiko.",
-        "Mit dem Gebäudetyp E hat die Bundesregierung Ende Oktober 2026 einen Gesetzentwurf zur Reform des BGB vorgelegt: Planende und Bauherren können vertraglich von reinen Komfortstandards (Raumhöhen, Steckdosenanzahl, Trittschallstandards) abweichen, während Brandschutz, Standsicherheit und gesunde Wohnverhältnisse unangetastet bleiben.",
-        "Gerade bei Umnutzungen im Bestand bietet das enorme Chancen, wirft aber bauphysikalische Fragen auf: Wie lässt sich guter Schallschutz zwischen Wohnungen kostengünstig ohne überzogene Normvorgaben realisieren? Ohne praxiserprobte Konstruktionen drohen Kostensenkungen zulasten der Wohnqualität."
+        "In Deutschland fehlen mehrere Hunderttausend Wohnungen. Zwar stieg die Zahl der Baugenehmigungen zuletzt wieder an – von Januar bis August 2026 wurden rund 169.400 Wohnungen genehmigt –, doch hohe Baukosten und eine dichte Normenlandschaft bremsen den Wohnungsbau weiterhin. Viele Normen gelten als anerkannte Regeln der Technik; wer von ihnen abweicht, trägt ein erhebliches Haftungsrisiko, auch wenn die Abweichung nur Komfort- oder Ausstattungsmerkmale betrifft.",
+        "Mit dem Gebäudetyp E will der Gesetzgeber hier ansetzen. Ende Oktober 2026 haben Bundesbau- und Bundesjustizministerium einen neuen Entwurf vorgelegt: Bauherren und Planende sollen vertraglich von Komfortstandards abweichen können – etwa bei Raumhöhen, der Zahl der Steckdosen oder dem Trittschallschutz –, während Brandschutz, Standsicherheit, Belüftung und Belichtung unangetastet bleiben. Ausgewertete Pilotprojekte zeigen Kosteneinsparungen von 10 bis 15 Prozent; das Gesetz soll frühestens Mitte 2027 in Kraft treten.",
+        "Gerade bei Umbauten und Nutzungsänderungen im Bestand bietet der Gebäudetyp E großes Potenzial, wirft aber auch Fragen auf: Welche Standards können entfallen, ohne dass Bewohnerinnen und Bewohner Einbußen spüren? Wie lässt sich insbesondere der Schallschutz zwischen neu geschaffenen Wohneinheiten sichern? Und wie verhalten sich die neuen zivilrechtlichen Spielräume zu den Anforderungen der Landesbauordnungen? Ohne praxiserprobte Antworten droht Kostensenkung zulasten der Wohnqualität."
       ],
       objectives: [
-        "Systematische Einordnung des rechtlichen Rahmens von Gebäudetyp E und Landesbauordnung bei Umbau und Umnutzung.",
-        "Prüfung von Komfortstandards: Wo lässt sich sparen, ohne dass Bewohner es spüren?",
-        "Entwicklung robuster, kostengünstiger Konstruktionsdetails (zweischalige Wohnungstrennwände, Schalenentkopplung, Vorsatzschalen, schwimmende Estriche im Bestand).",
-        "Ableitung eines übertragbaren Best-Practice-Leitfadens für Bauherren und Architekten."
+        "Ziel der Arbeit ist ein Best-Practice-Modell, das zeigt, wie der Gebäudetyp E bei Umbau und Nutzungsänderung angewendet werden kann, ohne die Wohnqualität zu mindern (anhand des Umbaus eines Wohn- und Geschäftshauses zu 6 Wohneinheiten und Scheunenumnutzung von Shams Consult).",
+        "Systematische Prüfung, auf welche Komfort- und Ausstattungsstandards rechtssicher verzichtet werden kann.",
+        "Entwicklung konstruktiver Details zur kostengünstigen Qualitätssicherung im Bestand (zweischalige Wohnungstrennwände, Schalenentkopplung, Vorsatzschalen, schwimmende Estriche).",
+        "Ergebnis ist ein übertragbarer Leitfaden für Planende und Bauherren, der – kombiniert mit Ansätzen zu Rückbau und Wiederverwendung von Bauteilen – zeigt, wie mehr Wohnraum im Bestand schneller und günstiger entstehen kann."
       ],
       researchQuestions: [
-        { title: "Rechtsrahmen", desc: "Was erlauben der neue Gebäudetyp E und die Landesbauordnung bei Umbau und Nutzungsänderung im Bestand – und wo liegen rechtliche Grenzen?" },
-        { title: "Standards prüfen", desc: "Auf welche Komfortstandards (z. B. Raumhöhe, Ausstattungsdichte, Treppenhausbreiten) lässt sich ohne spürbaren Qualitätsverlust verzichten?" },
-        { title: "Schallschutz ohne Verzicht", desc: "Welche bauphysikalischen Konstruktionen sichern verlässlichen Schallschutz im Bestand zu vertretbaren Kosten?" },
-        { title: "Leitfaden & Modell", desc: "Wie lässt sich das Vorgehen systematisch auf andere Bestands- und Konversionsprojekte übertragen?" }
+        { title: "Rechtsrahmen", desc: "Was erlauben Gebäudetyp E und Landesbauordnung bei Umbau und Nutzungsänderung – und was nicht?" },
+        { title: "Standards prüfen", desc: "Auf welche Komfortstandards (Raumhöhe, Ausstattung, Treppenhaus) lässt sich ohne spürbaren Qualitätsverlust verzichten?" },
+        { title: "Schallschutz ohne Verzicht", desc: "Welche Konstruktionen sichern guten Schallschutz im Bestand zu vertretbaren Kosten?" },
+        { title: "Modell und Leitfaden", desc: "Wie lässt sich das Vorgehen auf andere Umbau- und Umnutzungsprojekte übertragen?" }
       ],
       framework: [
         "Erstbetreuung durch die Hochschule der Bewerberin bzw. des Bewerbers",
@@ -175,12 +175,12 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         "Laufendes Umbauprojekt mit Bauantrag als Fallstudie, Beginn nach Absprache"
       ],
       sources: [
-        "Haufe Immobilien: Gebäudetyp E – Weniger Baustandards und Haftungsrisiken, Oktober 2026 (BMWSB, BMJV, Destatis).",
+        "Haufe Immobilien: Gebäudetyp E – Weniger Baustandards und Haftungsrisiken, Oktober 2026 (nach Angaben von BMWSB, BMJV und Statistischem Bundesamt).",
         "Bundesingenieurkammer: Bundeskabinett beschließt geänderte Fassung des Gebäudetyp-E-Gesetzes (Änderung §§ 650a, 650o BGB).",
         "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen (BMWSB): Leitlinie Einfaches Bauen."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Gebaeudetyp-E.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Gebaeudetyp-E.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-03_Gebaeudetyp-E.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-03_Gebaeudetyp-E.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Abschlussarbeit Thema 03 – Gebäudetyp E"
     }
@@ -234,8 +234,8 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         "German Insurance Association (GDV): Heavy Rainfall Damages 2002–2021.",
         "ROCKWOOL Rainwater Systems: Rockflow Water Infiltration Data."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Schwammstadt.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Schwammstadt.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-01_Schwammstadt.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-01_Schwammstadt.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Thesis Application Topic 01 – Sponge City"
     },
@@ -247,7 +247,7 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
       subtitle: "Tools for sustainable multi-family housing under the QNG sustainability seal – from gentle deconstruction to reuse",
       degrees: "Bachelor's or Master's Thesis",
       disciplines: ["Architecture", "Civil Engineering", "Project Management"],
-      teaser: "Sustainable construction demands lifecycle CO₂ proof. Yet design studios start from scratch on every project. This research develops actionable templates, deconstruction catalogs, and circular workflows based on a real multi-family housing project.",
+      teaser: "Sustainable new buildings must demonstrate their carbon footprint across the entire life cycle – and during demolition, valuable materials end up in landfills. This research develops tools and guidelines for designers to solve both systematically: QNG-compliant multi-family housing and circular component reuse.",
       stats: [
         { value: "198.8M t", label: "construction and demolition waste in Germany 2023 – 52% of total waste" },
         { value: "≈ 28%", label: "of German greenhouse gas emissions stem from building operations" },
@@ -286,8 +286,8 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         "Federal Ministry for Housing (BMWSB): Quality Seal Sustainable Buildings (QNG).",
         "KfW Bank: Technical Bulletin 296 – Climate-Friendly Construction."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Cradle-to-Cradle.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Cradle-to-Cradle.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-02_Cradle-to-Cradle.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-02_Cradle-to-Cradle.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Thesis Application Topic 02 – Cradle to Cradle"
     },
@@ -338,8 +338,8 @@ export const openThesesData: Record<"de" | "en", OpenThesisTopic[]> = {
         "Federal Chamber of Engineers (BBIK): Building Type E Reform (§ 650a BGB).",
         "Federal Ministry for Housing (BMWSB): Guidelines for Simple Building."
       ],
-      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Gebaeudetyp-E.pdf",
-      pdfFileName: "Shams-Consult_Abschlussarbeit_Gebaeudetyp-E.pdf",
+      pdfDownloadUrl: "/documents/theses/Shams-Consult_Abschlussarbeit_Thema-03_Gebaeudetyp-E.pdf",
+      pdfFileName: "Shams-Consult_Abschlussarbeit_Thema-03_Gebaeudetyp-E.pdf",
       applicationEmail: "office@shams-consult.de",
       applicationSubject: "Thesis Application Topic 03 – Building Type E"
     }

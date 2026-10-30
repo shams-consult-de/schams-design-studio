@@ -202,6 +202,8 @@ export interface Translations {
     openThesesBadge: string;
     openThesesTitle: string;
     openThesesSubtitle: string;
+    openThesesParagraph2: string;
+    openThesesApplyHint: string;
     viewDetails: string;
     downloadFlyerTitle: string;
     archiveBadge: string;
@@ -820,7 +822,9 @@ export const content: Record<Language, Translations> = {
       ctaButton: "Kontakt für Forschungskooperationen →",
       openThesesBadge: "AKTUELLE AUSSCHREIBUNGEN (ABSCHLUSSARBEITEN)",
       openThesesTitle: "Praxis trifft Wissenschaft: Jetzt Abschlussarbeit schreiben",
-      openThesesSubtitle: "Shams Consult arbeitet seit Jahren mit Hochschulen zusammen und betreut Bachelor- und Masterarbeiten als Zweitbetreuer an realen Bauprojekten unseres Büros. Die Erstbetreuung übernimmt Ihre Hochschule.",
+      openThesesSubtitle: "Shams Consult arbeitet seit Jahren mit Hochschulen zusammen und betreut Bachelor- und Masterarbeiten als Zweitbetreuer. Mit unseren aktuellen Forschungsthemen möchten wir Fragen aus der täglichen Planungspraxis wissenschaftlich vertiefen – Fragen, die für Gesellschaft, Architektur und Bauwesen heute besonders relevant sind: der Umgang mit Regenwasser in der klimaangepassten Stadt, das Bauen im Kreislauf und die Schaffung von bezahlbarem Wohnraum.",
+      openThesesParagraph2: "Studierende bearbeiten ihre Abschlussarbeit an realen Projekten unseres Büros, erhalten Einblick in Planung, Genehmigung und Ausführung und werden fachlich von uns begleitet. Die Erstbetreuung übernimmt die jeweilige Hochschule. So entsteht eine Win-win-Situation: Die Studierenden sammeln praxisnahe Erfahrung in einem gefragten Berufsfeld, und das gewonnene Grundlagenwissen fließt zurück in die Praxis – und über veröffentlichte Ergebnisse auch an die Allgemeinheit.",
+      openThesesApplyHint: "Bewerbung: Senden Sie ein kurzes Anschreiben, Ihren Lebenslauf und einen aktuellen Notenspiegel per E-Mail an office@shams-consult.de (Betreff: z. B. „Abschlussarbeit Thema 01 – Schwammstadt“).",
       viewDetails: "Details ansehen",
       downloadFlyerTitle: "PDF Flyer herunterladen",
       archiveBadge: "Abgeschlossene Arbeiten & Referenzen",
@@ -1587,7 +1591,9 @@ export const content: Record<Language, Translations> = {
       ctaButton: "Contact for Research Cooperation →",
       openThesesBadge: "OPEN THESIS VACANCIES",
       openThesesTitle: "Science Meets Practice: Write Your Thesis With Us",
-      openThesesSubtitle: "Shams Consult supervises Bachelor's and Master's theses as industry co-advisor on built projects. Primary academic grading is provided by your university.",
+      openThesesSubtitle: "Shams Consult has collaborated with universities for years, supervising Bachelor's and Master's theses as secondary advisor. With our current research topics, we scientifically examine urgent questions from architectural practice: climate-resilient sponge city concepts, circular construction, and affordable housing.",
+      openThesesParagraph2: "Students write their thesis on real projects from our practice, gaining hands-on insight into planning, approvals, and construction oversight. Primary academic supervision is provided by your university. This fosters a true win-win: students gain practical career experience while research insights feed back into practice and public knowledge.",
+      openThesesApplyHint: "Application: Please send a brief cover letter, your CV, and transcript of records by email to office@shams-consult.de (Subject: e.g. 'Thesis Application Topic 01 – Sponge City').",
       viewDetails: "View Details",
       downloadFlyerTitle: "Download PDF Flyer",
       archiveBadge: "Completed Theses & Archive",

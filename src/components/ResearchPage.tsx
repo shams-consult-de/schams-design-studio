@@ -118,9 +118,21 @@ export function ResearchPage({
             <h2 className="font-sans text-2xl sm:text-3xl font-bold text-zinc-950">
               {t.openThesesTitle}
             </h2>
-            <p className="text-xs sm:text-sm text-zinc-600 font-light max-w-3xl leading-relaxed">
-              {t.openThesesSubtitle}
-            </p>
+            <div className="space-y-3 max-w-3xl">
+              <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                {t.openThesesSubtitle}
+              </p>
+              {t.openThesesParagraph2 && (
+                <p className="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                  {t.openThesesParagraph2}
+                </p>
+              )}
+              {t.openThesesApplyHint && (
+                <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-700 leading-relaxed font-light">
+                  <span className="font-semibold text-zinc-950">✉️ {t.openThesesApplyHint}</span>
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
